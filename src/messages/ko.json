@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "about": "소개",
+    "experience": "경험",
+    "certified": "자격·수상",
+    "speaking": "발표·커뮤니티",
+    "projects": "프로젝트",
+    "contact": "연락처",
+    "career-highlights": "포트폴리오"
+  },
+  "hero": {
+    "greeting": "안녕하십니까",
+    "name": "신상현",
+    "title": "Aspiring PM/PO",
+    "subtitle": "기획·디자인·개발을 아우르며 사용자 문제를 해결하는 PM/PO를 꿈꿉니다",
+    "cta_resume": "포트폴리오",
+    "cta_contact": "연락하기"
+  },
+  "about": {
+    "heading": "About",
+    "description_1": "PM/PO가 되기 위해 노력 중인 신상현입니다. 보이지 않는 세상의 속도와 변화에 적응하기 위해 다양한 경험을 쌓아가며 성장하고 있습니다.",
+    "description_2": "한국외국어대학교에서 Global Business & Technology와 AI 융합전공을 복수전공하며, 데이터 분석·프론트엔드 개발·프로젝트 관리 역량을 키우고 있습니다. 전체 평점 4.14/4.5를 유지하며 학업과 실전 프로젝트를 병행하고 있습니다.",
+    "description_3": "멋쟁이사자처럼 13기 운영진, 교내외 해커톤 및 창업 프로그램 참여, 풍생고등학교 코딩 교육 봉사 등 다양한 활동을 통해 기획부터 개발까지 전과정을 경험했습니다. 교내외 대회에서 9회 수상하며 아이디어를 실제 서비스로 만드는 역량을 검증받았습니다.",
+    "keywords": ["PM/PO", "기획", "프론트엔드", "데이터 분석", "AI 서비스", "창업"]
+  },
+  "experience": {
+    "heading": "Experience"
+  },
+  "certified": {
+    "heading": "Certified",
+    "certifications": "자격증",
+    "awards": "수상"
+  },
+  "speaking": {
+    "heading": "Speaking & Community",
+    "talks": "발표·강의",
+    "community": "커뮤니티"
+  },
+  "projects": {
+    "heading": "Projects"
+  },
+  "contact": {
+    "heading": "Contact",
+    "description": "협업, 프로젝트, 채용 등 편하게 연락 주세요.",
+    "email": "이메일",
+    "blog": "블로그",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "© 2026 신상현. All rights reserved.",
+    "built_with": "Built with Awesome Portfolio Template"
+  },
+  "common": {
+    "present": "현재",
+    "goal": "목표",
+    "content": "내용",
+    "result": "성과",
+    "view_more": "가이드라인 바로가기",
+    "view_slides": "발표 자료",
+    "view_video": "영상 보기",
+    "featured": "Featured",
+    "active": "활동 중"
+  },
+  "career_highlights": {
+    "heading": "Portfolio",
+    "overview_label": "개요",
+    "achievements_label": "주요 성과",
+    "competencies_label": "핵심 역량",
+    "cta_title": "더 자세히 알아보기",
+    "cta_description": "각 프로젝트의 배경, 수행 역할, 성과와 교훈을 확인하세요.",
+    "cta_button": "상세 보기",
+    "self_developed_tools_label": "자체 개발 서비스"
+  },
+  "career_story": {
+    "title": "포트폴리오",
+    "subtitle": "각 성과의 배경, 역할, 결과와 교훈을 상세히 소개합니다.",
+    "back": "뒤로가기",
+    "background": "배경",
+    "role": "역할",
+    "results": "결과 & 임팩트",
+    "lessons": "Lessons Learned",
+    "toc": "목차"
+  }
+}

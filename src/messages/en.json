@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "certified": "Certified",
+    "speaking": "Speaking",
+    "projects": "Projects",
+    "contact": "Contact",
+    "career-highlights": "Portfolio"
+  },
+  "hero": {
+    "greeting": "Hello",
+    "name": "Sanghyeon Shin",
+    "title": "Aspiring PM/PO",
+    "subtitle": "Dreaming of becoming a PM/PO who solves user problems through planning, design, and development",
+    "cta_resume": "View Portfolio",
+    "cta_contact": "Get in Touch"
+  },
+  "about": {
+    "heading": "About",
+    "description_1": "I'm Sanghyeon Shin, aspiring to become a PM/PO. I'm growing by gaining diverse experiences to adapt to the ever-changing pace of the world.",
+    "description_2": "At Hankuk University of Foreign Studies (HUFS), I double-major in Global Business & Technology and Software & AI, building skills in data analysis, frontend development, and project management. I maintain a GPA of 4.14/4.5 while balancing academics with real-world projects.",
+    "description_3": "Through activities such as serving as a Likelion 13th cohort staff organizer, participating in campus and external hackathons and startup programs, and volunteering as a coding instructor at Pungsaeng High School, I have experienced the full cycle from planning to development. With 9 awards at competitions, I have validated my ability to turn ideas into real services.",
+    "keywords": ["PM/PO", "Product Planning", "Frontend", "Data Analysis", "AI Services", "Startup"]
+  },
+  "experience": {
+    "heading": "Experience"
+  },
+  "certified": {
+    "heading": "Certified",
+    "certifications": "Certifications",
+    "awards": "Awards"
+  },
+  "speaking": {
+    "heading": "Speaking & Community",
+    "talks": "Talks & Lectures",
+    "community": "Community"
+  },
+  "projects": {
+    "heading": "Projects"
+  },
+  "contact": {
+    "heading": "Contact",
+    "description": "Feel free to reach out for collaboration, projects, or opportunities.",
+    "email": "Email",
+    "blog": "Blog",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "© 2026 Sanghyeon Shin. All rights reserved.",
+    "built_with": "Built with Awesome Portfolio Template"
+  },
+  "common": {
+    "present": "Present",
+    "goal": "Goal",
+    "content": "Content",
+    "result": "Result",
+    "view_more": "View Guideline",
+    "view_slides": "Slides",
+    "view_video": "Watch Video",
+    "featured": "Featured",
+    "active": "Active"
+  },
+  "career_highlights": {
+    "heading": "Portfolio",
+    "overview_label": "Overview",
+    "achievements_label": "Key Achievements",
+    "competencies_label": "Core Competencies",
+    "cta_title": "See the Full Story",
+    "cta_description": "Explore the background, role, results and lessons behind each project.",
+    "cta_button": "View Details",
+    "self_developed_tools_label": "Self-Developed Services"
+  },
+  "career_story": {
+    "title": "Portfolio",
+    "subtitle": "Detailed background, role, results and lessons behind each achievement.",
+    "back": "Go Back",
+    "background": "Background",
+    "role": "Role",
+    "results": "Results & Impact",
+    "lessons": "Lessons Learned",
+    "toc": "Table of Contents"
+  }
+}
