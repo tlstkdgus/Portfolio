@@ -8,6 +8,7 @@ export const profile = {
     en: "Aspiring PM/PO",
   },
   birth: "2001",
+  phone: "010-9194-5840",
   links: {
     email: "tlstkdgus9@naver.com",
     blog: "",
@@ -22,7 +23,7 @@ export const profile = {
       majorEn: "Global Business & Technology / Software & AI Track (Double Major)",
       degree: "재학",
       degreeEn: "Enrolled",
-      date: "2020.03. ~ 현재",
+      date: "2020.03. ~ 2026.02.",
     },
     {
       school: "경남외국어고등학교",

@@ -25,6 +25,7 @@ export function Header() {
   const isSubPage = pathname.includes("/career");
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

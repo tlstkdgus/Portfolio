@@ -8,7 +8,7 @@ const socialLinks = [
   { href: siteConfig.social.blog, icon: BookOpen, label: "Blog" },
   { href: siteConfig.social.github, icon: Github, label: "GitHub" },
   { href: siteConfig.social.linkedin, icon: Linkedin, label: "LinkedIn" },
-];
+].filter((link) => Boolean(link.href));
 
 export function Footer() {
   const t = useTranslations("footer");

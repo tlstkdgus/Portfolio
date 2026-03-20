@@ -29,14 +29,14 @@ export const careerHighlights: CareerHighlight[] = [
     title: "수상 및 성과",
     titleEn: "Awards & Achievements",
     items: [
-      "교내외 대회 9회 수상 (최우수상·대상 다수 포함)",
-      "G-RISE 2025 창업 비즈니스 모델 경진대회 대상 수상",
-      "2025 창업캠프 IR 피칭 경진대회 최우수상, HUFS H-UP 진리상[최우수상]",
+      "교내외 대회 11회 수상 (최우수상·대상 다수 포함)",
+      "G-RISE 2025 창업 비즈니스 모델 경진대회 대상, 제 1회 G-RISE 창업경진대회 최우수상",
+      "2025 창업캠프 IR 피칭 경진대회 최우수상, HUFS H-UP 진리상[최우수상], Bring Your Own Ideas 최우수상",
     ],
     itemsEn: [
-      "9 awards at campus and external competitions (including multiple Grand Prizes)",
-      "Grand Prize at G-RISE 2025 Startup Business Model Competition",
-      "Grand Prize at 2025 HUFS Startup Camp IR Pitching, Grand Prize at HUFS H-UP",
+      "11 awards at campus and external competitions (including multiple Grand Prizes)",
+      "Grand Prize at G-RISE 2025 Startup BM Competition, Grand Prize at 1st G-RISE Startup Competition",
+      "Grand Prize at 2025 HUFS Startup Camp IR Pitching, Grand Prize at HUFS H-UP, Grand Prize at 12th BYOI",
     ],
   },
   {

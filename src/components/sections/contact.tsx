@@ -2,11 +2,16 @@
 
 import { useTranslations } from "next-intl";
 import { m } from "framer-motion";
-import { Github, Linkedin, BookOpen, Mail } from "lucide-react";
+import { Github, Linkedin, BookOpen, Mail, Phone } from "lucide-react";
 import { profile } from "@/data/profile";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const links = [
+  {
+    key: "phone",
+    href: `tel:${profile.phone}`,
+    icon: Phone,
+  },
   {
     key: "linkedin",
     href: profile.links.linkedin,
@@ -62,11 +67,17 @@ export function Contact() {
           transition={{ duration: 0.45, delay: 0.2 }}
           className="flex flex-wrap items-center justify-center gap-4"
         >
-          {links.map(({ key, href, icon: Icon }, i) => (
+          {links
+            .filter((l) => l.href)
+            .map(({ key, href, icon: Icon }, i) => (
             <m.a
               key={key}
               href={href}
-              {...(key !== "email" && { target: "_blank", rel: "noopener noreferrer" })}
+              {...(key !== "email" &&
+                key !== "phone" && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}

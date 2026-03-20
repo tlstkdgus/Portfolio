@@ -18,10 +18,20 @@
   },
   "about": {
     "heading": "About",
-    "description_1": "I'm Sanghyeon Shin, aspiring to become a PM/PO. I'm growing by gaining diverse experiences to adapt to the ever-changing pace of the world.",
-    "description_2": "At Hankuk University of Foreign Studies (HUFS), I double-major in Global Business & Technology and Software & AI, building skills in data analysis, frontend development, and project management. I maintain a GPA of 4.14/4.5 while balancing academics with real-world projects.",
-    "description_3": "Through activities such as serving as a Likelion 13th cohort staff organizer, participating in campus and external hackathons and startup programs, and volunteering as a coding instructor at Pungsaeng High School, I have experienced the full cycle from planning to development. With 9 awards at competitions, I have validated my ability to turn ideas into real services.",
-    "keywords": ["PM/PO", "Product Planning", "Frontend", "Data Analysis", "AI Services", "Startup"]
+    "description_1": "Hello, I'm Sanghyeon Shin. I adapt to the changing pace of the world by developing my skills across planning, design, and development.",
+    "description_2": "At HUFS, I double-major in Global Business & Technology and Software & AI (AI Fusion). I maintain an overall GPA of 4.14/4.5 (Major 4.25, Double major 4.1).",
+    "description_3": "I’m comfortable with MS Office for reports, proposals, presentations, and automation. I also build insights through data analysis with Python, SQL, and Excel. On the frontend, I create user-centered interfaces with Figma, React, TypeScript, Tailwind CSS, and Next.js, and I run documentation and collaboration with Notion, Slack, and GitHub.",
+    "keywords": [
+      "PM/PO",
+      "Planning",
+      "Data Analysis",
+      "Python·SQL·Excel",
+      "Frontend",
+      "React·Next.js",
+      "Figma",
+      "MS Office",
+      "Project Management"
+    ]
   },
   "experience": {
     "heading": "Experience"
@@ -42,6 +52,7 @@
   "contact": {
     "heading": "Contact",
     "description": "Feel free to reach out for collaboration, projects, or opportunities.",
+    "phone": "Phone",
     "email": "Email",
     "blog": "Blog",
     "github": "GitHub",

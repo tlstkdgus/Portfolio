@@ -15,6 +15,68 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "TCP — AI 기반 약관 및 위험 알림 서비스",
+    titleEn: "TCP — AI-Based Terms of Service Analysis Service",
+    period: "2025.01. ~ 2025.12.",
+    periodEn: "Jan 2025 — Dec 2025",
+    goals: [
+      "93%가 약관을 제대로 읽지 않는 문제를 해결하는 AI 기반 실시간 약관 분석 서비스 개발",
+      "스크린 오버레이 기술로 백그라운드에서 자동 약관 감지 및 위험 조항 알림",
+    ],
+    goalsEn: [
+      "Develop an AI-based real-time ToS analysis service addressing the fact that 93% skip reading terms",
+      "Auto-detect ToS in the background via screen overlay and alert users to risky clauses",
+    ],
+    contents: [
+      "BERT·GPT 기반 NLP 모델을 법률 특화 데이터셋으로 미세조정하여 핵심 조항·위험 요소 자동 추출 설계",
+      "복잡한 약관을 쉬운 언어로 요약하고 잠재적 위험 조항을 시각적으로 강조하는 시스템 기획",
+      "프리미엄 구독, 기업용 API, 파트너십 등 5가지 수익원 구조화 및 글로벌 리걸테크 시장 분석",
+    ],
+    contentsEn: [
+      "Designed auto-extraction of key clauses and risk terms using BERT/GPT models fine-tuned on legal datasets",
+      "Planned a system to summarize complex ToS in plain language and visually highlight risky clauses",
+      "Structured 5 revenue streams and analyzed the global legaltech market ($3.03B, CAGR 7.6–8.7%)",
+    ],
+    results: [
+      "교내 아이디어톤 최우수상 수상",
+      "전국 해커톤 2차 예선 진출",
+    ],
+    resultsEn: [
+      "Won campus Ideathon Grand Prize",
+      "Advanced to 2nd round of national hackathon",
+    ],
+    tags: ["AI", "NLP", "BERT", "GPT", "Planning"],
+  },
+  {
+    title: "Y:Wave — AI 기반 경기도 지역화폐 가맹점 추천 서비스",
+    titleEn: "Y:Wave — AI-Powered Gyeonggi Local Currency Store Recommendation",
+    period: "2025.01. ~ 2025.12.",
+    periodEn: "Jan 2025 — Dec 2025",
+    goals: [
+      "경기도 지역화폐 사용자에게 AI 기반 맞춤형 가맹점을 추천하여 지역 경제 활성화 기여",
+    ],
+    goalsEn: [
+      "Contribute to local economic vitality by providing AI-powered personalized store recommendations for Gyeonggi local currency users",
+    ],
+    contents: [
+      "총괄 기획·디자인·개발 담당",
+      "사용자 위치 및 소비 패턴 기반 AI 가맹점 추천 기능 설계 및 구현",
+      "React + TypeScript + Tailwind CSS 기반 반응형 UI 개발",
+    ],
+    contentsEn: [
+      "Led overall planning, design, and development",
+      "Designed and implemented AI-powered store recommendation based on user location and spending patterns",
+      "Built responsive UI with React + TypeScript + Tailwind CSS",
+    ],
+    results: [
+      "전국 해커톤 2차 예선 진출 (247팀 중 상위 12%)",
+    ],
+    resultsEn: [
+      "Advanced to 2nd round of national hackathon (top 12% of 247 teams)",
+    ],
+    tags: ["React", "TypeScript", "Tailwind CSS", "AI", "Figma"],
+  },
+  {
     title: "16P!ay — MBTI 기반 소통 커뮤니티",
     titleEn: "16P!ay — MBTI-Based Community Platform",
     period: "2025.01. ~ 2025.12.",
@@ -164,4 +226,5 @@ export const projects: Project[] = [
     ],
     tags: ["React", "TypeScript", "AI", "Figma"],
   },
+  
 ];

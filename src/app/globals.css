@@ -54,6 +54,12 @@ html {
 }
 
 /* Custom scrollbar */
+
+/* Selection color (fixed) */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
 ::-webkit-scrollbar {
   width: 6px;
 }

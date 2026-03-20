@@ -100,68 +100,62 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
   },
   {
-    id: "ywave",
-    title: "AI 기반 경기도 지역화폐 가맹점 추천 서비스 — Y:Wave",
-    titleEn: "AI-Based Local Currency Store Recommendation — Y:Wave",
+    id: "rzi",
+    title: "AI 기반 알뜰 지출관리 플랫폼 — RZi(알뜰하게 지출관리하기)",
+    titleEn: "AI-Powered Smart Expense Manager — RZi",
     background: [
       {
-        text: "경기도 지역화폐 사용자들이 가맹점 정보를 찾기 어렵고, 결제 가능한 가맹점을 효율적으로 탐색하는 수단이 부족하다는 문제를 발견했습니다.",
+        text: "전통시장 이용률을 높이기 위해서는 대형마트 대비 가격을 빠르게 비교하고, 원하는 상품을 쉽게 찾을 수 있어야 한다는 문제의식을 발견했습니다.",
         textEn:
-          "Identified that Gyeonggi-do local currency users struggled to find store information and lacked efficient tools to discover participating merchants.",
+          "Identified that increasing traditional market usage requires quick price comparison and an easy way to discover desired products.",
       },
       {
-        text: "지역화폐 활성화를 위해 사용자의 위치와 소비 패턴에 맞는 맞춤형 가맹점 추천이 필요하다고 판단했습니다.",
+        text: "K-HTML 해커톤의 과제를 해결하며, 실사용이 가능한 형태로 사용자 경험 중심의 기능을 설계하는 것이 핵심이라고 정리했습니다.",
         textEn:
-          "Determined that personalized store recommendations based on user location and spending patterns were needed to promote local currency usage.",
+          "During the K-HTML hackathon, I concluded that the key is designing UX-centered features that work in real life.",
       },
     ],
     role: [
       {
-        title: "총괄 기획 및 PM",
-        titleEn: "Overall Planning & PM",
+        title: "총괄 기획 및 개발",
+        titleEn: "Overall Planning & Development",
         items: [
           {
-            text: "사용자 리서치를 바탕으로 서비스 컨셉과 핵심 기능(위치 기반 추천, AI 개인화, 지도 연동)을 정의했습니다.",
+            text: "OCR 기술과 AI 추천을 결합한 쇼핑 도우미 PWA의 전체 흐름을 기획하고 설계했습니다.",
             textEn:
-              "Defined the service concept and core features (location-based recommendations, AI personalization, map integration) through user research.",
+              "Planned the full product flow for a shopping assistant PWA that combines OCR and AI recommendations.",
           },
           {
-            text: "B2C 개인 사용자 → 경기도 지자체 B2B 협력 확장 비즈니스 모델을 설계했습니다.",
+            text: "실시간 가격비교, OCR 스캔, Google Maps 경로안내, AI 상품추천 기능을 핵심 경험으로 구현했습니다.",
             textEn:
-              "Designed a business model expanding from B2C individual users to B2B collaboration with Gyeonggi-do local government.",
+              "Implemented real-time price comparison, OCR scanning, Google Maps navigation, and AI product recommendations as core experiences.",
           },
         ],
       },
       {
-        title: "디자인 및 개발",
-        titleEn: "Design & Development",
+        title: "아키텍처 설계 및 구현",
+        titleEn: "Architecture & Implementation",
         items: [
           {
-            text: "Figma로 전체 UI/UX를 설계하고, Next.js 기반으로 프론트엔드를 개발했습니다.",
+            text: "Next.js 15 + React 19 기반의 PWA 아키텍처를 설계하고 개발을 총괄했습니다.",
             textEn:
-              "Designed full UI/UX in Figma and developed the frontend using Next.js.",
-            subItems: [
-              {
-                text: "AI 가맹점 추천 알고리즘과 지도 API를 연동하여 위치 기반 탐색 기능을 구현했습니다.",
-                textEn:
-                  "Integrated AI store recommendation algorithm with map API to build location-based discovery.",
-              },
-            ],
+              "Designed and led development of a Next.js 15 + React 19-based PWA architecture.",
           },
         ],
       },
     ],
     results: [
       {
-        text: "멋쟁이사자처럼 전국 해커톤 2차 예선 진출 (247팀 중 상위 12%).",
-        textEn: "Advanced to 2nd round of the national Likelion hackathon (top 12% of 247 teams).",
+        text: "K-HTML 해커톤을 수료하며, 실용적인 지역사회 문제 해결 서비스 완성까지 경험했습니다.",
+        textEn:
+          "Completed the K-HTML hackathon and delivered a practical service that solves a real community problem.",
       },
     ],
     lessons: [
       {
-        text: "지역사회 문제를 해결하는 프로덕트를 만들 때는 실제 사용자(지역 주민)와 이해관계자(지자체)의 니즈를 동시에 고려해야 함을 배웠습니다. B2B 전환 전략을 초기에 설계하는 것이 서비스의 지속 가능성을 높인다는 점도 깨달았습니다.",
+        text: "문제를 '사용자의 행동 흐름(비교/탐색/구매)' 관점으로 정의하면, 필요한 기능이 자연스럽게 UX 가치로 연결된다는 점을 배웠습니다.",
         textEn:
-          "Learned that building a product for community problems requires simultaneously addressing the needs of end users (residents) and stakeholders (local government). Planning a B2B pivot strategy early improves long-term sustainability.",
+          "Learned that when you frame a problem as a user's behavior flow (compare/discover/purchase), features naturally map to UX value.",
       },
     ],
   },
