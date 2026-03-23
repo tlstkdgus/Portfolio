@@ -96,7 +96,7 @@ export function Header() {
               aria-label="Back to top"
             >
               <span className="text-sm font-bold text-foreground tracking-tight">
-                Sanghyeon Portfolio
+                Sanghyeon&apos;s Portfolio
               </span>
             </button>
 
