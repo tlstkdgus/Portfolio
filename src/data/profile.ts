@@ -21,8 +21,8 @@ export const profile = {
       schoolEn: "Hankuk University of Foreign Studies (HUFS)",
       major: "경상대학 Global Business & Technology 학부 / AI 융합전공 Software & AI 트랙 (복수전공)",
       majorEn: "Global Business & Technology / Software & AI Track (Double Major)",
-      degree: "재학",
-      degreeEn: "Enrolled",
+      degree: "졸업",
+      degreeEn: "Graduated",
       date: "2020.03. ~ 2026.02.",
     },
     {
