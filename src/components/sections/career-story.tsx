@@ -9,6 +9,7 @@ import { careerDetailSections } from "@/data/career-detail";
 import { cn } from "@/lib/utils";
 import { DetailItem } from "@/components/sections/career-story/detail-item";
 import { RoleAccordion } from "@/components/sections/career-story/role-accordion";
+import { ImageCarousel } from "@/components/ui/image-carousel";
 
 export function CareerStoryContent() {
   const t = useTranslations("career_story");
@@ -143,6 +144,16 @@ export function CareerStoryContent() {
                   </h2>
                   <div aria-hidden="true" className="mt-3 h-1 w-16 rounded-full bg-accent" />
                 </div>
+
+                {/* Image Carousel */}
+                {section.images && section.images.length > 0 && (
+                  <div className="mb-10">
+                    <ImageCarousel
+                      images={section.images}
+                      alt={isKo ? section.title : section.titleEn}
+                    />
+                  </div>
+                )}
 
                 {/* Background */}
                 <div className="mb-10">

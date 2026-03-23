@@ -18,19 +18,18 @@
   },
   "about": {
     "heading": "About",
-    "description_1": "Hello, I'm Sanghyeon Shin. I adapt to the changing pace of the world by developing my skills across planning, design, and development.",
-    "description_2": "At HUFS, I double-major in Global Business & Technology and Software & AI (AI Fusion). I maintain an overall GPA of 4.14/4.5 (Major 4.25, Double major 4.1).",
-    "description_3": "I’m comfortable with MS Office for reports, proposals, presentations, and automation. I also build insights through data analysis with Python, SQL, and Excel. On the frontend, I create user-centered interfaces with Figma, React, TypeScript, Tailwind CSS, and Next.js, and I run documentation and collaboration with Notion, Slack, and GitHub.",
+    "description_1": "I plan, build, and pitch. I’m a PM who grows by owning the entire journey — from the moment a problem is discovered to the moment it ships. From the first user interview to standing on an IR stage, I take responsibility for both ends.",
+    "description_2": "HUFS Global Business & Technology × AI Convergence (GPA 4.14/4.5). I define problems with data, design in Figma, and ship in React. Hackathon wins and live deployments — built through practice, not theory.",
+    "description_3": "The harder the problem, the more interesting it gets. Finding the best intersection between users, business, and technology is what I do best.",
     "keywords": [
       "PM/PO",
-      "Planning",
+      "Product Planning",
       "Data Analysis",
-      "Python·SQL·Excel",
-      "Frontend",
-      "React·Next.js",
+      "IR Pitching",
+      "React · Next.js",
       "Figma",
-      "MS Office",
-      "Project Management"
+      "Python · SQL",
+      "Project Lead"
     ]
   },
   "experience": {

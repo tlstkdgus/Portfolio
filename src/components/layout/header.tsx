@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useTheme } from "next-themes";
 import { usePathname, useRouter } from "next/navigation";
 import { m, AnimatePresence } from "framer-motion";
-import { Shield, Sun, Moon, Menu, X, Globe } from "lucide-react";
+import { Sun, Moon, Menu, X, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { MobileDrawer } from "@/components/layout/mobile-drawer";
@@ -95,7 +95,9 @@ export function Header() {
               className="group flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-muted/50"
               aria-label="Back to top"
             >
-              <Shield className="h-5 w-5 text-accent transition-transform group-hover:scale-110" />
+              <span className="text-sm font-bold text-foreground tracking-tight">
+                Sanghyeon Portfolio
+              </span>
             </button>
 
             {/* Desktop Nav */}

@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { m, AnimatePresence } from "framer-motion";
 import { ChevronDown, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Badge } from "@/components/ui/badge";
+import { ImageCarousel } from "@/components/ui/image-carousel";
 import { cn } from "@/lib/utils";
 
 export function Projects() {
@@ -47,8 +49,20 @@ export function Projects() {
                   className="flex w-full items-start justify-between gap-4 p-5 text-left"
                 >
                   <div className="flex min-w-0 items-start gap-4">
-                    {/* Subtle left gradient bar on collapsed */}
-                    <div aria-hidden="true" className="hidden h-12 w-1 shrink-0 rounded-full bg-gradient-to-b from-accent to-accent-secondary/60 sm:block" />
+                    {/* Thumbnail or gradient bar */}
+                    {project.image ? (
+                      <div className="relative hidden h-12 w-12 shrink-0 overflow-hidden rounded-lg sm:block">
+                        <Image
+                          src={project.image}
+                          alt={isKo ? project.title : project.titleEn}
+                          fill
+                          className="object-cover"
+                          sizes="48px"
+                        />
+                      </div>
+                    ) : (
+                      <div aria-hidden="true" className="hidden h-12 w-1 shrink-0 rounded-full bg-gradient-to-b from-accent to-accent-secondary/60 sm:block" />
+                    )}
                     <div className="min-w-0">
                       <h3 id={`project-heading-${i}`} className="text-base font-semibold text-foreground">
                         {isKo ? project.title : project.titleEn}
@@ -160,6 +174,20 @@ export function Projects() {
                             ))}
                           </ul>
                         </div>
+
+                        {/* Image Carousel */}
+                        {project.images && project.images.length > 0 && (
+                          <div>
+                            <h4 className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                              <span aria-hidden="true" className="h-px w-4 bg-border" />
+                              Screenshots
+                            </h4>
+                            <ImageCarousel
+                              images={project.images}
+                              alt={isKo ? project.title : project.titleEn}
+                            />
+                          </div>
+                        )}
 
                         {/* Link */}
                         {project.url && (

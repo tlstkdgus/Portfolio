@@ -18,19 +18,18 @@
   },
   "about": {
     "heading": "About",
-    "description_1": "안녕하십니까, 신상현입니다. 보이지 않는 세상의 속도와 변화에 적응하며 기획·디자인·개발 역량을 함께 키우고 있습니다.",
-    "description_2": "한국외국어대학교에서 Global Business & Technology와 AI 융합전공을 복수전공하며, 전체 평점 4.14/4.5(1전공 4.25, 복수전공 4.1)를 유지하고 있습니다.",
-    "description_3": "MS Office로 문서 작성/제안서/프레젠테이션 제작과 자동화까지 수행하고, Python·SQL·Excel 기반 데이터 분석으로 인사이트를 도출합니다. 또한 Figma·React·TypeScript·Tailwind CSS·Next.js로 사용자 중심 프론트엔드를 구현하며, Notion·Slack·GitHub로 프로젝트 문서화와 협업을 운영합니다.",
+    "description_1": "기획하고, 만들고, 설득합니다. 아이디어가 실제 서비스가 되는 전 과정을 직접 경험하며 성장하는 PM입니다. 문제를 발견하는 순간부터 IR 무대에 서는 순간까지, 처음과 끝을 책임집니다.",
+    "description_2": "한국외국어대학교 글로벌비즈니스기술학부 × AI 융합전공 (GPA 4.14/4.5). 데이터로 문제를 정의하고, Figma로 그리고, React로 만들어냅니다. 해커톤 우승부터 실제 서비스 배포까지 — 이론이 아닌 실전으로 쌓았습니다.",
+    "description_3": "정답 없는 문제일수록 더 흥미롭습니다. 사용자·비즈니스·기술, 세 축 사이에서 최선의 접점을 찾는 것이 제가 가장 잘하는 일입니다.",
     "keywords": [
       "PM/PO",
-      "기획",
+      "서비스 기획",
       "데이터 분석",
-      "Python·SQL·Excel",
-      "프론트엔드",
-      "React·Next.js",
+      "IR 피칭",
+      "React · Next.js",
       "Figma",
-      "MS Office",
-      "프로젝트 관리"
+      "Python · SQL",
+      "프로젝트 리드"
     ]
   },
   "experience": {
