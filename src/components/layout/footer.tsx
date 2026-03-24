@@ -23,16 +23,6 @@ export function Footer() {
             <span>{t("copyright")}</span>
           </div>
 
-          {/* Center: Template credit */}
-          <a
-            href="https://github.com/zer0-kr/awesome-portfolio-template"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-          >
-            {t("built_with")}
-          </a>
-
           {/* Right: Social links */}
           <div className="flex items-center gap-4">
             {socialLinks.map(({ href, icon: Icon, label }) => (

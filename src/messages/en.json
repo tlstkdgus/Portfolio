@@ -9,7 +9,6 @@
     "career-highlights": "Portfolio"
   },
   "hero": {
-    "greeting": "Hello",
     "name": "Sanghyeon Shin",
     "title": "Aspiring PM/PO",
     "subtitle": "Dreaming of becoming a PM/PO who solves user problems through planning, design, and development",
@@ -59,14 +58,13 @@
   },
   "footer": {
     "copyright": "© 2026 Sanghyeon Shin. All rights reserved.",
-    "built_with": "Built with Awesome Portfolio Template"
+    "built_with": "Sanghyeon Shin Portfolio"
   },
   "common": {
     "present": "Present",
     "goal": "Goal",
     "content": "Content",
     "result": "Result",
-    "view_more": "View Guideline",
     "view_slides": "Slides",
     "view_video": "Watch Video",
     "featured": "Featured",

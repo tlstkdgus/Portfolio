@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { m, AnimatePresence } from "framer-motion";
-import { ChevronDown, ExternalLink } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { projects } from "@/data/projects";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -190,19 +190,6 @@ export function Projects() {
                         )}
 
                         {/* Link */}
-                        {project.url && (
-                          <div className="pt-1">
-                            <a
-                              href={project.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-accent/40 hover:text-foreground"
-                            >
-                              <ExternalLink className="h-3 w-3" />
-                              {tc("view_more")}
-                            </a>
-                          </div>
-                        )}
 
                         {/* Tags */}
                         <div className="flex flex-wrap gap-1.5 pt-1">

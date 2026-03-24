@@ -16,7 +16,7 @@ export function JsonLd() {
       profile.links.github,
       profile.links.linkedin,
       profile.links.blog,
-    ],
+    ].filter(Boolean),
     knowsAbout: siteConfig.seo.keywords,
     alumniOf: profile.education.map((edu) => ({
       "@type": "EducationalOrganization",

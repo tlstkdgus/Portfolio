@@ -9,7 +9,6 @@
     "career-highlights": "포트폴리오"
   },
   "hero": {
-    "greeting": "안녕하십니까",
     "name": "신상현",
     "title": "Aspiring PM/PO",
     "subtitle": "기획·디자인·개발을 아우르며 사용자 문제를 해결하는 PM/PO를 꿈꿉니다",
@@ -59,14 +58,13 @@
   },
   "footer": {
     "copyright": "© 2026 신상현. All rights reserved.",
-    "built_with": "Built with Awesome Portfolio Template"
+    "built_with": "신상현 포트폴리오"
   },
   "common": {
     "present": "현재",
     "goal": "목표",
     "content": "내용",
     "result": "성과",
-    "view_more": "가이드라인 바로가기",
     "view_slides": "발표 자료",
     "view_video": "영상 보기",
     "featured": "Featured",
