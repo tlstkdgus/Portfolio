@@ -92,7 +92,7 @@ export function Header() {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }
               }}
-              className="group flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-muted/50"
+              className="group flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-muted/50 cursor-pointer"
               aria-label="Back to top"
             >
               <span className="text-sm font-bold text-foreground tracking-tight">
@@ -107,7 +107,7 @@ export function Header() {
                   <button
                     key={key}
                     onClick={() => scrollTo(key)}
-                    className="px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground rounded-lg hover:bg-muted/50"
+                    className="px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground rounded-lg hover:bg-muted/50 cursor-pointer"
                   >
                     {t(key)}
                   </button>
@@ -120,7 +120,7 @@ export function Header() {
               {/* Lang Switcher */}
               <button
                 onClick={switchLocale}
-                className="flex items-center gap-1.5 rounded-lg border border-transparent px-2.5 py-2 text-sm text-muted-foreground transition-all hover:border-accent/30 hover:text-foreground hover:bg-muted/50"
+                className="flex items-center gap-1.5 rounded-lg border border-transparent px-2.5 py-2 text-sm text-muted-foreground transition-all hover:border-accent/30 hover:text-foreground hover:bg-muted/50 cursor-pointer"
                 aria-label="Switch language"
               >
                 <Globe className="h-4 w-4" />
@@ -132,7 +132,7 @@ export function Header() {
               {/* Theme Toggle */}
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="rounded-lg p-2 text-muted-foreground transition-colors hover:text-foreground hover:bg-muted/50"
+                className="rounded-lg p-2 text-muted-foreground transition-colors hover:text-foreground hover:bg-muted/50 cursor-pointer"
                 aria-label="Toggle theme"
               >
                 {mounted ? (
@@ -150,7 +150,7 @@ export function Header() {
               
                 <button
                   onClick={() => setMobileOpen(!mobileOpen)}
-                  className="rounded-lg p-2 text-muted-foreground transition-colors hover:text-foreground hover:bg-muted/50 md:hidden"
+                  className="rounded-lg p-2 text-muted-foreground transition-colors hover:text-foreground hover:bg-muted/50 md:hidden cursor-pointer"
                   aria-label="Toggle menu"
                 >
                   {mobileOpen ? (

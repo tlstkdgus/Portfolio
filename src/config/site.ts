@@ -50,9 +50,9 @@ export const siteConfig = {
       "프론트엔드 개발",
       "신상현",
       "SSAFY",
+      "신상현 포트폴리오"
     ],
   },
-
   // Google Search Console 등록 후 메타 태그의 content 값을 여기에 입력
   // 등록 방법: https://search.google.com/search-console → 속성 추가 → HTML 태그 방식
   googleVerification: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "",
