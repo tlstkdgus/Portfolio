@@ -1,26 +1,43 @@
+export interface ProjectStat {
+  label: string;
+  labelEn: string;
+  value: string;
+}
+
 export interface Project {
   title: string;
   titleEn: string;
+  subtitle?: string;
+  subtitleEn?: string;
   period: string;
   periodEn: string;
   goals: string[];
   goalsEn: string[];
   contents: string[];
   contentsEn: string[];
+  decisions?: string[];
+  decisionsEn?: string[];
   results: string[];
   resultsEn: string[];
   tags: string[];
   url?: string;
   image?: string;
   images?: string[];
+  stats?: ProjectStat[];
+  roles?: string[];
+  rolesEn?: string[];
 }
 
 export const projects: Project[] = [
   {
-    title: "FlowPay — 무기명 법인카드 지출·회계 자동화 B2B SaaS",
-    titleEn: "FlowPay — Anonymous Corporate Card Expense Automation B2B SaaS",
+    title: "FlowPay",
+    titleEn: "FlowPay",
+    subtitle: "무기명 법인카드 지출·회계 자동화 B2B SaaS",
+    subtitleEn: "Anonymous Corporate Card Expense Automation B2B SaaS",
     period: "2025.06. ~ 2025.08.",
     periodEn: "Jun 2025 — Aug 2025",
+    roles: ["PM", "프론트엔드"],
+    rolesEn: ["PM", "Frontend"],
     goals: [
       "직원 1인당 지출보고서 작성 20분, 회계담당자 월 100건 처리로 연간 약 1,000시간·8천만 원 손실을 일으키는 무기명 법인카드 관리 비효율 문제 해결",
       "Flow ID 기반 익명 태깅과 FIDO2 생체인증으로 업무 프로세스를 8단계 → 3단계로 단축하는 B2B SaaS 설계",
@@ -41,6 +58,14 @@ export const projects: Project[] = [
       "Built real-time dashboard with React and integrated FIDO2 biometric payment (frontend)",
       "Analyzed 3 addressable markets totaling ₩1.62T; led FINNECT IR pitch (business strategy)",
     ],
+    decisions: [
+      "가명토큰 vs 실명인증 방식 비교 후, 무기명 카드의 익명성 유지를 위해 Flow ID 기반 가명토큰 방식을 채택",
+      "회계 자동화 범위를 전체 ERP 연동에서 지출보고서 자동 생성으로 축소하여 MVP 스코프 확정",
+    ],
+    decisionsEn: [
+      "Compared pseudonymous token vs. real-name auth; adopted Flow ID–based pseudonymous tokens to preserve anonymity for corporate cards",
+      "Reduced accounting automation scope from full ERP integration to auto expense reports to fix MVP scope",
+    ],
     results: [
       "FINNECT 챌린지 장려상 수상 (5등/102팀)",
       "3인팀 PM + 프론트엔드 + IR 피칭 전 역할 수행",
@@ -48,6 +73,11 @@ export const projects: Project[] = [
     resultsEn: [
       "Won Encouragement Prize at FINNECT Challenge (5th out of 102 teams)",
       "Served as PM + frontend developer + IR presenter in a 3-person team",
+    ],
+    stats: [
+      { label: "프로세스", labelEn: "Process", value: "8→3단계" },
+      { label: "순위", labelEn: "Rank", value: "102팀 중 5위" },
+      { label: "TAM 합산", labelEn: "TAM (sum)", value: "1조 6,200억 원" },
     ],
     tags: ["React", "TypeScript", "FIDO2", "B2B SaaS", "Figma", "기획", "IR피칭"],
     image: "/projects/flowpay/01.png",
@@ -63,31 +93,50 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Y:Wave — AI 기반 경기도 지역화폐 가맹점 추천 서비스",
-    titleEn: "Y:Wave — AI-Powered Gyeonggi Local Currency Store Recommendation",
+    title: "Y:Wave",
+    titleEn: "Y:Wave",
+    subtitle: "AI 기반 경기도 지역화폐 가맹점 추천 서비스",
+    subtitleEn: "AI-Powered Gyeonggi Local Currency Store Recommendation",
     period: "2025.03. ~ 2025.05.",
     periodEn: "Mar 2025 — May 2025",
+    roles: ["PM", "프론트엔드", "디자인"],
+    rolesEn: ["PM", "Frontend", "Design"],
     goals: [
-      "경기도 지역화폐 사용자에게 AI 기반 맞춤형 가맹점을 추천하여 지역 경제 활성화 기여",
+      "경기도 39만 건 가맹점 데이터를 바탕으로 AI 맞춤 추천으로 지역 경제 활성화에 기여",
+      "직접 설문 결과 응답자 53%가 가맹점 탐색에 어려움을 느낀다는 점을 근거로 문제를 정의",
     ],
     goalsEn: [
-      "Contribute to local economic vitality by providing AI-powered personalized store recommendations for Gyeonggi local currency users",
+      "Contribute to local economic vitality using AI recommendations grounded in ~390K Gyeonggi merchant records",
+      "Defined the problem from primary research: 53% of respondents reported difficulty discovering merchants",
     ],
     contents: [
-      "총괄 기획·디자인·개발 담당",
-      "사용자 위치 및 소비 패턴 기반 AI 가맹점 추천 기능 설계 및 구현",
-      "React + TypeScript + Tailwind CSS 기반 반응형 UI 개발",
+      "직접 설문(응답자 53% '탐색 어려움')으로 문제를 정의하고, 경기도 39만 건 가맹점 데이터 전수 분석으로 추천 알고리즘 방향 확정",
+      "사용자 위치 반경 + 소비 카테고리 기반 AI 가맹점 추천 기능 설계 및 구현, 지도 중심 UI → 추천 리스트 중심 UI로 UX 재설계",
+      "React + TypeScript + Tailwind CSS 기반 반응형 UI 개발 (위치 기반 지도, AI 추천 리스트, 카테고리 필터)",
     ],
     contentsEn: [
-      "Led overall planning, design, and development",
-      "Designed and implemented AI-powered store recommendation based on user location and spending patterns",
-      "Built responsive UI with React + TypeScript + Tailwind CSS",
+      "Defined the problem from primary survey (53% 'hard to find merchants'); confirmed recommendation direction after analyzing ~390K Gyeonggi merchant records",
+      "Designed and built AI store recommendation based on user radius + spending category; pivoted UX from map-first to recommendation-list-first",
+      "Built responsive UI with React + TypeScript + Tailwind CSS (location map, AI recommendation list, category filters)",
+    ],
+    decisions: [
+      "39만 건 가맹점 데이터를 전수 분석한 뒤, 사용자 위치 반경 + 소비 카테고리 기반 추천 알고리즘으로 방향 확정",
+      "설문 53% '탐색 어려움' 결과를 근거로 지도 중심 UI에서 추천 리스트 중심 UI로 전환",
+    ],
+    decisionsEn: [
+      "After analyzing ~390K merchant records, aligned on radius + spending-category–based recommendation",
+      "Shifted from map-first UI to recommendation-list UI based on 53% 'hard to discover' survey signal",
     ],
     results: [
       "전국 해커톤 2차 예선 진출 (247팀 중 상위 12%)",
     ],
     resultsEn: [
       "Advanced to 2nd round of national hackathon (top 12% of 247 teams)",
+    ],
+    stats: [
+      { label: "데이터", labelEn: "Data", value: "39만 건" },
+      { label: "해커톤", labelEn: "Hackathon", value: "상위 12%" },
+      { label: "탐색 어려움", labelEn: "Hard to discover", value: "53%" },
     ],
     tags: ["React", "TypeScript", "Tailwind CSS", "AI", "Figma"],
     image: "/projects/ywave/01.png",
@@ -101,46 +150,14 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "hai — AI 기반 개인 맞춤형 커리어 멘토링 서비스",
-    titleEn: "hai — AI-Powered Personalized Career Mentoring Service",
-    period: "2025.06.",
-    periodEn: "Jun 2025",
-    goals: [
-      "AI를 활용한 개인 맞춤형 커리어 멘토링 서비스로 취업 준비생의 커리어 방향 설정을 지원",
-    ],
-    goalsEn: [
-      "Support job seekers in setting career direction with AI-powered personalized mentoring",
-    ],
-    contents: [
-      "CHALLKATHON(한국외국어대학교 컴퓨터공학부 × UMC 공동 주최) 참가",
-      "커리어 멘토링 AI 서비스 총괄 기획 및 프론트엔드 개발",
-    ],
-    contentsEn: [
-      "Participated in CHALLKATHON (HUFS CS Dept × UMC joint hackathon)",
-      "Led overall planning and frontend development of AI career mentoring service",
-    ],
-    results: [
-      "CHALLKATHON 수료 및 서비스 완성",
-    ],
-    resultsEn: [
-      "Completed CHALLKATHON and delivered working service",
-    ],
-    tags: ["React", "TypeScript", "AI", "Figma"],
-    image: "/projects/hai/01.png",
-    images: [
-      "/projects/hai/01.png",
-      "/projects/hai/02.png",
-      "/projects/hai/03.png",
-      "/projects/hai/04.png",
-      "/projects/hai/05.png",
-      "/projects/hai/06.png",
-    ],
-  },
-  {
-    title: "NeuroSight — AI 기반 마취 시술 보조 서비스",
-    titleEn: "NeuroSight — AI-Assisted Anesthesia Guidance System",
+    title: "NeuroSight",
+    titleEn: "NeuroSight",
+    subtitle: "AI 기반 마취 시술 보조 서비스",
+    subtitleEn: "AI-Assisted Anesthesia Guidance System",
     period: "2025.07.22. ~ 2025.07.25. (4일)",
     periodEn: "Jul 22–25, 2025 (4 days)",
+    roles: ["기획", "IR", "사업전략"],
+    rolesEn: ["Planning", "IR", "Strategy"],
     goals: [
       "마취 사고의 78.1%가 사망으로 이어지며 92.3%가 비전문의에 의해 발생하는 구조적 문제 해결",
       "배럴아이의 정량적 초음파(QUS) 기술을 기반으로 실시간 조직 분석·니들 트래킹·3D 마취제 확산 예측 기능 컨셉 설계",
@@ -160,6 +177,14 @@ export const projects: Project[] = [
       "Designed hybrid B2B SaaS + OEM partnership revenue model with phased roadmap targeting 3% market share in 3 years",
       "Researched multimodal AI architecture (CNN + PINN + Transformer) and defined medical personnel persona",
       "Produced pitch deck and led idea pitching (6-person team, GRAFFITI 2025: AI Startup by KAIST ICISTS)",
+    ],
+    decisions: [
+      "마취 보조 시스템의 타겟을 전문 마취과의에서 비전문의(92.3%)로 재설정하여 시장 규모 확대",
+      "B2B SaaS 단독 모델에서 OEM 파트너십 하이브리드 모델로 전환하여 의료기기 규제 리스크 분산",
+    ],
+    decisionsEn: [
+      "Refocused the assist system target from specialist anesthesiologists to non-specialists (92.3%) to expand addressable need",
+      "Moved from B2B SaaS–only to a hybrid OEM partnership model to spread medical-device regulatory risk",
     ],
     results: [
       "GRAFFITI 2025 AI Startup 해커톤 참가 (KAIST ICISTS 주최)",
@@ -182,10 +207,14 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "TCP — AI 기반 약관 및 위험 알림 서비스",
-    titleEn: "TCP — AI-Based Terms of Service Analysis Service",
+    title: "TCP",
+    titleEn: "TCP",
+    subtitle: "AI 기반 약관 및 위험 알림 서비스",
+    subtitleEn: "AI-Based Terms of Service Analysis Service",
     period: "2025.04. ~ 2025.05.",
     periodEn: "Apr 2025 — May 2025",
+    roles: ["총괄 기획"],
+    rolesEn: ["Lead Planner"],
     goals: [
       "131명 설문조사 결과 93%가 약관을 제대로 읽지 않는 문제를 해결하는 AI 기반 실시간 약관 분석 서비스 기획",
       "스크린 오버레이 기술로 백그라운드에서 자동 약관 감지 및 위험 조항 알림 시스템 설계",
@@ -226,10 +255,284 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "손글 (SonGeul) — 시니어를 위한 AI-OCR 모바일 뱅킹",
-    titleEn: "SonGeul — AI-OCR Mobile Banking for Seniors",
+    title: "hai",
+    titleEn: "hai",
+    subtitle: "AI 기반 개인 맞춤형 커리어 멘토링 서비스",
+    subtitleEn: "AI-Powered Personalized Career Mentoring Service",
+    period: "2025.06.",
+    periodEn: "Jun 2025",
+    roles: ["기획", "프론트엔드"],
+    rolesEn: ["Planning", "Frontend"],
+    goals: [
+      "취업 준비생이 겪는 '직무 선택의 불확실성'을 AI가 구조적으로 해소하는 맞춤형 커리어 멘토링 서비스 기획",
+      "강점·경험·목표를 입력하면 AI가 직무별 적합도를 분석하고 커리어 로드맵을 제시하는 대화형 흐름 설계",
+    ],
+    goalsEn: [
+      "Planned an AI-powered career mentoring service that structurally resolves 'job direction uncertainty' for job seekers",
+      "Designed a conversational flow where AI analyzes user strengths, experience, and goals to present a personalized career roadmap",
+    ],
+    contents: [
+      "커리어 탐색 과정을 '자기 이해 → 직무 매칭 → 로드맵 수립' 3단계로 구조화하고 AI 대화 흐름 기획",
+      "React + TypeScript 기반 대화형 UI 개발 및 AI 추천 결과 시각화 구현",
+      "기획·프론트엔드 개발 총괄 (CHALLKATHON, 한국외국어대학교 컴퓨터공학부 × UMC 공동 주최)",
+    ],
+    contentsEn: [
+      "Structured career exploration into 3 phases (self-understanding → job matching → roadmap building) and planned the AI conversation flow",
+      "Developed conversational UI with React + TypeScript and implemented AI recommendation visualization",
+      "Led planning and frontend development (CHALLKATHON, co-hosted by HUFS CS Dept × UMC)",
+    ],
+    results: [
+      "해커톤 기간 내 기획부터 배포까지 전 과정 완성",
+      "AI 기반 커리어 추천 흐름 MVP 구현 성공",
+    ],
+    resultsEn: [
+      "Completed the full pipeline from planning to deployment within the hackathon period",
+      "Successfully implemented AI-powered career recommendation MVP",
+    ],
+    tags: ["React", "TypeScript", "AI", "Figma"],
+    image: "/projects/hai/01.png",
+    images: [
+      "/projects/hai/01.png",
+      "/projects/hai/02.png",
+      "/projects/hai/03.png",
+      "/projects/hai/04.png",
+      "/projects/hai/05.png",
+      "/projects/hai/06.png",
+    ],
+  },
+  {
+    title: "AInterview",
+    titleEn: "AInterview",
+    subtitle: "AI 기반 모의 면접 서비스",
+    subtitleEn: "AI-Powered Mock Interview App",
+    period: "2024.07. ~ 2024.11.",
+    periodEn: "Jul 2024 — Nov 2024",
+    roles: ["기획", "프론트엔드"],
+    rolesEn: ["Planning", "Frontend"],
+    goals: [
+      "취업 준비생 46%가 면접을 가장 어려워한다는 문제 확인, 실전 연습 기회 부족 해결",
+      "음성 인식과 GPT Fine-tuning을 결합한 AI 기반 실시간 모의 면접 서비스 개발",
+    ],
+    goalsEn: [
+      "Addressed the problem that 46% of job seekers find interviews most difficult with insufficient practice opportunities",
+      "Developed an AI-based real-time mock interview service combining voice recognition and GPT fine-tuning",
+    ],
+    contents: [
+      "Azure Speech Service 활용 음성-텍스트 변환(STT/TTS) 처리 시스템 구현",
+      "Fine-tuned GPT-4o-mini 기반 직무별 맞춤 면접 질문 자동 생성",
+      "React 기반 인터랙티브 UI 설계 및 Spring Boot 백엔드 연동",
+      "기획·디자인·프론트엔드 개발 총괄 (멋쟁이사자처럼 12기 최종 프로젝트)",
+    ],
+    contentsEn: [
+      "Implemented voice-to-text (STT/TTS) processing with Azure Speech Service",
+      "Built auto job-specific question generation using fine-tuned GPT-4o-mini",
+      "Designed interactive React UI and integrated with Spring Boot backend",
+      "Led planning, design, and frontend development (Likelion 12th cohort final project)",
+    ],
+    results: [
+      "멋쟁이사자처럼 12기 최종 프로젝트 발표 완료",
+      "음성 인식 기반 AI 면접 플로우 구현 성공",
+    ],
+    resultsEn: [
+      "Presented as the 12th Likelion cohort's final project",
+      "Successfully implemented voice-based AI interview flow",
+    ],
+    tags: ["React", "Spring Boot", "Azure Speech", "GPT-4o", "AI", "기획", "Figma"],
+    image: "/projects/ainterview/01.png",
+    images: [
+      "/projects/ainterview/01.png",
+      "/projects/ainterview/02.png",
+      "/projects/ainterview/03.png",
+      "/projects/ainterview/04.png",
+      "/projects/ainterview/05.png",
+    ],
+  },
+  {
+    title: "RZi",
+    titleEn: "RZi",
+    subtitle: "AI 기반 알뜰 지출관리 플랫폼",
+    subtitleEn: "AI-Powered Smart Expense Manager",
+    period: "2025.07. ~ 2025.08.",
+    periodEn: "Jul 2025 — Aug 2025",
+    roles: ["기획", "풀스택"],
+    rolesEn: ["Planning", "Full-stack"],
+    goals: [
+      "동대문구 청년층 전통시장 이용률(8.2%) 저조 문제를 전통시장·대형마트 실시간 가격 비교로 해결",
+      "K-HTML 해커톤(서울시 동대문구청 × 경희대) 과제 해결",
+    ],
+    goalsEn: [
+      "Address low traditional market usage (8.2%) among youth in Dongdaemun-gu through real-time price comparison with large marts",
+      "Address the challenge set by K-HTML Hackathon (Dongdaemun-gu × KHU)",
+    ],
+    contents: [
+      "OCR 기술 + AI 추천을 결합한 종합 쇼핑 도우미 PWA 개발",
+      "실시간 가격비교, OCR 스캔, Google Maps 경로안내, AI 상품추천 핵심 기능 구현",
+      "Next.js 15 + React 19 기반 PWA 아키텍처 설계 및 개발 총괄",
+    ],
+    contentsEn: [
+      "Built a comprehensive shopping assistant PWA combining OCR and AI recommendations",
+      "Implemented real-time price comparison, OCR scanning, Google Maps navigation, and AI product recommendations",
+      "Led PWA architecture design and development on Next.js 15 + React 19",
+    ],
+    results: [
+      "Next.js 15 + PWA 기반 종합 쇼핑 도우미 서비스 해커톤 기간 내 완성 배포",
+      "OCR·AI 추천·Google Maps 경로안내를 단일 앱으로 통합한 실사용 MVP 완성 (K-HTML 해커톤 수료)",
+    ],
+    resultsEn: [
+      "Shipped a comprehensive Next.js 15 PWA shopping assistant within the hackathon period",
+      "Delivered a working MVP integrating OCR, AI recommendation, and Google Maps navigation in one app (K-HTML Hackathon completed)",
+    ],
+    tags: ["Next.js", "React", "PWA", "OCR", "Google Maps API", "AI"],
+    image: "/projects/rzi/01.png",
+    images: [
+      "/projects/rzi/01.png",
+      "/projects/rzi/02.png",
+      "/projects/rzi/03.png",
+      "/projects/rzi/04.png",
+      "/projects/rzi/05.png",
+      "/projects/rzi/06.png",
+    ],
+  },
+  {
+    title: "ARtliving",
+    titleEn: "ARtliving",
+    subtitle: "AR 기반 가구 추천 플랫폼",
+    subtitleEn: "AR-Powered Furniture Recommendation Platform",
+    period: "2024.12. ~ 2025.06.",
+    periodEn: "Dec 2024 — Jun 2025",
+    roles: ["기획"],
+    rolesEn: ["Planning"],
+    goals: [
+      "가구 구매 후 '실제 공간과의 불일치'로 발생하는 반품·실패 경험을 AR 시뮬레이션으로 사전에 해결하는 플랫폼 기획",
+      "사용자의 공간 치수·취향 데이터를 AI가 분석해 개인화 추천까지 이어지는 통합 UX 설계",
+    ],
+    goalsEn: [
+      "Planned an AR simulation platform to solve post-purchase disappointment caused by size/style mismatches before buying",
+      "Designed an integrated UX where AI analyzes user space dimensions and preferences to deliver personalized recommendations",
+    ],
+    contents: [
+      "AR 기반 실공간 가구 시각화 기능 설계 (공간 치수 인식 → 3D 가구 배치 → 색상·소재 커스터마이징) 및 서비스 IA 구성",
+      "사용자 공간·취향 데이터 기반 AI 추천 알고리즘 기획 및 추천 결과 화면 설계",
+      "HUFS H-UP 진로탐색학점제 총괄 기획 담당 — 문제 정의부터 프로덕트 설계까지 전 과정 주도",
+    ],
+    contentsEn: [
+      "Designed AR furniture visualization (space measurement → 3D placement → color/material customization) and structured the service IA",
+      "Planned AI recommendation algorithm based on user space/preference data and designed recommendation result UI",
+      "Led overall planning for HUFS H-UP Career Exploration Program — directed from problem definition to product design",
+    ],
+    results: [
+      "2025 HUFS H-UP 진로탐색학점제 진리상 [최우수상] 수상",
+    ],
+    resultsEn: [
+      "Won Grand Prize (Truth Award) at 2025 HUFS H-UP Career Exploration Program",
+    ],
+    tags: ["AR", "React", "AI", "Figma"],
+  },
+  {
+    title: "Meal당",
+    titleEn: "Meal당",
+    subtitle: "당뇨병 환자를 위한 AI 식단 관리 서비스",
+    subtitleEn: "AI Diet Management Service for Diabetics",
+    period: "2024.07. ~ 2024.08.",
+    periodEn: "Jul 2024 — Aug 2024",
+    roles: ["기획", "프론트엔드"],
+    rolesEn: ["Planning", "Frontend"],
+    goals: [
+      "예측보다 30년 빠르게 600만 명을 돌파한 국내 당뇨 인구의 가장 큰 어려움인 식단 관리(44%) 문제 해결",
+      "대한당뇨병학회 식품교환표 기반 개인 맞춤 권장 칼로리 계산 및 ChatGPT 활용 식단 자동 생성",
+    ],
+    goalsEn: [
+      "Address the #1 difficulty (diet management, 44%) for Korea's diabetic population of 6M, 30 years ahead of projections",
+      "Calculate personalized recommended calories using the Korean Diabetes Association's food exchange table and auto-generate meal plans via ChatGPT",
+    ],
+    contents: [
+      "식품교환표 기반 맞춤 칼로리 계산 알고리즘 설계 및 ChatGPT 연동 개인화 식단 생성 기능 개발",
+      "혈당 모니터링, 당뇨 친화 식당 지도 등 핵심 기능 포함한 React 기반 웹 애플리케이션 개발",
+      "프리미엄 구독, 데이터 판매, 당뇨 관련 제품 쇼핑몰 등 다각적 비즈니스 모델 구축",
+      "서비스 기획·UI/UX 디자인·프론트엔드 개발 전 과정 총괄 (멋쟁이사자처럼 12기)",
+    ],
+    contentsEn: [
+      "Designed food-exchange-table calorie algorithm and developed ChatGPT-integrated personalized meal generation",
+      "Built React web app including blood glucose monitoring and diabetes-friendly restaurant map",
+      "Established multi-channel business model: premium subscription, data sales, and diabetic product store",
+      "Led entire process from planning to UI/UX design to frontend development (Likelion 12th cohort)",
+    ],
+    results: [
+      "서비스 배포 완료 (mealdang.vercel.app)",
+      "멋쟁이사자처럼 12기 프로젝트 완성",
+    ],
+    resultsEn: [
+      "Service deployed (mealdang.vercel.app)",
+      "Completed as Likelion 12th cohort project",
+    ],
+    tags: ["React", "ChatGPT", "AI", "Healthcare", "Figma"],
+    url: "https://mealdang.vercel.app",
+    image: "/projects/mealdang/01.png",
+    images: [
+      "/projects/mealdang/01.png",
+      "/projects/mealdang/02.png",
+      "/projects/mealdang/03.png",
+      "/projects/mealdang/04.png",
+      "/projects/mealdang/05.png",
+      "/projects/mealdang/06.png",
+    ],
+  },
+  {
+    title: "허리UP!",
+    titleEn: "HuriUP!",
+    subtitle: "웹캠 기반 자세 교정 서비스",
+    subtitleEn: "Webcam-Based Posture Correction Service",
+    period: "2024.05.01. ~ 2024.05.16.",
+    periodEn: "May 1 — May 16, 2024",
+    roles: ["PM"],
+    rolesEn: ["PM"],
+    goals: [
+      "20~40대 젊은 층 허리디스크 환자 급증 문제를 해결하는 웹캠 기반 실시간 자세 분석·교정 서비스 기획",
+      "IT 직장인 및 대기업 HR을 타겟으로 한 B2C → B2B 구독 모델 서비스 전략 수립",
+    ],
+    goalsEn: [
+      "Planned a webcam-based real-time posture analysis and correction service to address the surge in back disc problems among people in their 20s–40s",
+      "Established B2C → B2B subscription model strategy targeting IT workers and corporate HR departments",
+    ],
+    contents: [
+      "건강보험심사평가원 통계 기반 시장 조사 및 Pain Point 도출",
+      "웹캠 자세 분석, 실시간 가이드라인 비교, 경고 알림, 웨어러블 연동 핵심 기능 설계",
+      "체험 마케팅, 웨비나, 숏폼 콘텐츠 중심 마케팅 전략 기획",
+      "UI/UX 설계 및 프로토타입 제작 완료 (PM 역할, 6인팀, 멋쟁이사자처럼 12기)",
+    ],
+    contentsEn: [
+      "Conducted market research based on Health Insurance Review & Assessment Service statistics and identified Pain Points",
+      "Designed core features: webcam posture analysis, real-time guideline overlay, warning alerts, and wearable integration",
+      "Planned marketing strategy centered on experiential marketing, webinars, and short-form content",
+      "Completed UI/UX design and prototype (PM role, 6-person team, Likelion 12th cohort)",
+    ],
+    results: [
+      "B2C → B2B 구독 수익 모델 전략 및 핵심 기능 PoC 완성 (웹캠 자세 분석·알림·웨어러블 연동)",
+      "6인팀 PM으로서 문제 정의·솔루션 설계·UI/UX 프로토타입 전 과정 주도 (멋쟁이사자처럼 12기 아이디어톤)",
+    ],
+    resultsEn: [
+      "Completed B2C → B2B subscription model strategy and core PoC (webcam posture analysis, alerts, wearable integration)",
+      "Led a 6-person team as PM through the full process: problem definition, solution design, and UI/UX prototype (Likelion 12th Ideathon)",
+    ],
+    tags: ["Figma", "Planning", "UX/UI", "Healthcare"],
+    image: "/projects/huriup/01.png",
+    images: [
+      "/projects/huriup/01.png",
+      "/projects/huriup/02.png",
+      "/projects/huriup/03.png",
+      "/projects/huriup/04.png",
+      "/projects/huriup/05.png",
+    ],
+  },
+  {
+    title: "손글 (SonGeul)",
+    titleEn: "SonGeul",
+    subtitle: "시니어를 위한 AI-OCR 모바일 뱅킹",
+    subtitleEn: "AI-OCR Mobile Banking for Seniors",
     period: "2025",
     periodEn: "2025",
+    roles: ["기획", "프론트엔드"],
+    rolesEn: ["Planning", "Frontend"],
     goals: [
       "65세 이상 고령층 모바일뱅킹 이용률 53.4% vs 비고령층 95% — 41.2%p 격차 해소",
       "손으로 쓴 메모지를 촬영하면 AI-OCR이 자동 인식해 가족 2단계 승인 후 송금 완료하는 초간편 뱅킹 서비스 설계",
@@ -270,10 +573,14 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "커넥트 — 은둔형 청년 지원 플랫폼",
-    titleEn: "Connect — Support Platform for Socially Isolated Youth",
+    title: "커넥트",
+    titleEn: "Connect",
+    subtitle: "은둔형 청년 지원 플랫폼",
+    subtitleEn: "Support Platform for Socially Isolated Youth",
     period: "2024.09. ~ 2024.12.",
     periodEn: "Sep 2024 — Dec 2024",
+    roles: ["PM", "프론트엔드"],
+    rolesEn: ["PM", "Frontend"],
     goals: [
       "국내 은둔형 청년 54만 명 중 80% 이상이 극복 의지 있으나 지원 부족 문제를 해결",
       "전 과정 비대면·익명 기반 AI 활용 사회 적응 학습 플랫폼 기획 및 개발",
@@ -320,203 +627,71 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "허리UP! — 웹캠 기반 자세 교정 서비스",
-    titleEn: "HuriUP! — Webcam-Based Posture Correction Service",
-    period: "2024.05.01. ~ 2024.05.16.",
-    periodEn: "May 1 — May 16, 2024",
+    title: "dotori",
+    titleEn: "dotori",
+    subtitle: "시각장애인 점자 교육 플랫폼",
+    subtitleEn: "Braille Education Platform for the Visually Impaired",
+    period: "2025.06.",
+    periodEn: "Jun 2025",
+    roles: ["기획", "IR"],
+    rolesEn: ["Planning", "IR"],
     goals: [
-      "20~40대 젊은 층 허리디스크 환자 급증 문제를 해결하는 웹캠 기반 실시간 자세 분석·교정 서비스 기획",
-      "IT 직장인 및 대기업 HR을 타겟으로 한 B2C → B2B 구독 모델 서비스 전략 수립",
+      "시각장애인의 점자 교육 콘텐츠 접근성 부재 문제를 IT 플랫폼으로 해소하는 서비스 기획",
+      "소셜 임팩트와 비즈니스 실현 가능성을 함께 설득하는 IR 피칭 전략 수립",
     ],
     goalsEn: [
-      "Planned a webcam-based real-time posture analysis and correction service to address the surge in back disc problems among people in their 20s–40s",
-      "Established B2C → B2B subscription model strategy targeting IT workers and corporate HR departments",
+      "Planned a platform to solve the lack of accessible Braille educational content for the visually impaired",
+      "Built an IR pitching strategy that convinces on both social impact and business viability simultaneously",
     ],
     contents: [
-      "건강보험심사평가원 통계 기반 시장 조사 및 Pain Point 도출",
-      "웹캠 자세 분석, 실시간 가이드라인 비교, 경고 알림, 웨어러블 연동 핵심 기능 설계",
-      "체험 마케팅, 웨비나, 숏폼 콘텐츠 중심 마케팅 전략 기획",
-      "UI/UX 설계 및 프로토타입 제작 완료 (PM 역할, 6인팀, 멋쟁이사자처럼 12기)",
+      "시각장애인 점자 교육 문제 구조 분석, 학습 단계별 콘텐츠 설계 및 수익 모델 수립 (구독·기관 파트너십 기반)",
+      "HUFS 창업캠프 IR 피칭 경진대회 발표 담당 — 사업성·임팩트·기술 실현 가능성 3축 중심으로 스토리 구성",
     ],
     contentsEn: [
-      "Conducted market research based on Health Insurance Review & Assessment Service statistics and identified Pain Points",
-      "Designed core features: webcam posture analysis, real-time guideline overlay, warning alerts, and wearable integration",
-      "Planned marketing strategy centered on experiential marketing, webinars, and short-form content",
-      "Completed UI/UX design and prototype (PM role, 6-person team, Likelion 12th cohort)",
+      "Analyzed Braille education problem structure; designed step-by-step learning content and revenue model (subscription + institutional partnership)",
+      "Delivered IR pitch at HUFS Startup Camp competition — structured narrative around 3 axes: business viability, social impact, and technical feasibility",
     ],
     results: [
-      "UI/UX 설계 및 프로토타입 제작 완료",
-      "멋쟁이사자처럼 12기 아이디어톤 참가",
+      "IR 피칭 경진대회 최우수상",
+      "G-RISE 창업 아이디어 경진대회 대상",
     ],
     resultsEn: [
-      "Completed UI/UX design and prototype",
-      "Participated in Likelion 12th cohort Ideathon",
+      "Grand Prize at IR Pitching Competition",
+      "Grand Prize at G-RISE Startup Idea Competition",
     ],
-    tags: ["Figma", "Planning", "UX/UI", "Healthcare"],
-    image: "/projects/huriup/01.png",
-    images: [
-      "/projects/huriup/01.png",
-      "/projects/huriup/02.png",
-      "/projects/huriup/03.png",
-      "/projects/huriup/04.png",
-      "/projects/huriup/05.png",
-    ],
+    tags: ["Startup", "IR피칭", "기획", "Social Impact"],
   },
   {
-    title: "Meal당 — 당뇨병 환자를 위한 AI 식단 관리 서비스",
-    titleEn: "Meal당 — AI Diet Management Service for Diabetics",
-    period: "2024.07. ~ 2024.08.",
-    periodEn: "Jul 2024 — Aug 2024",
+    title: "16P!ay",
+    titleEn: "16P!ay",
+    subtitle: "MBTI 커뮤니티",
+    subtitleEn: "MBTI Community Service",
+    period: "2025",
+    periodEn: "2025",
+    roles: ["기획", "디자인", "개발"],
+    rolesEn: ["Planning", "Design", "Development"],
     goals: [
-      "예측보다 30년 빠르게 600만 명을 돌파한 국내 당뇨 인구의 가장 큰 어려움인 식단 관리(44%) 문제 해결",
-      "대한당뇨병학회 식품교환표 기반 개인 맞춤 권장 칼로리 계산 및 ChatGPT 활용 식단 자동 생성",
+      "MBTI 16가지 성격 유형을 기반으로, 같은 유형끼리는 공감·소통하고 다른 유형과는 차이를 탐색하는 커뮤니티 서비스 기획",
+      "멋쟁이사자처럼 13기 운영진 활동과 병행하여 단독으로 기획·디자인·개발까지 완성",
     ],
     goalsEn: [
-      "Address the #1 difficulty (diet management, 44%) for Korea's diabetic population of 6M, 30 years ahead of projections",
-      "Calculate personalized recommended calories using the Korean Diabetes Association's food exchange table and auto-generate meal plans via ChatGPT",
+      "Planned a community service where same MBTI types connect over shared traits while exploring differences with other types",
+      "Completed solo — planning, design, and development — while serving as 13th cohort staff",
     ],
     contents: [
-      "식품교환표 기반 맞춤 칼로리 계산 알고리즘 설계 및 ChatGPT 연동 개인화 식단 생성 기능 개발",
-      "혈당 모니터링, 당뇨 친화 식당 지도 등 핵심 기능 포함한 React 기반 웹 애플리케이션 개발",
-      "프리미엄 구독, 데이터 판매, 당뇨 관련 제품 쇼핑몰 등 다각적 비즈니스 모델 구축",
-      "서비스 기획·UI/UX 디자인·프론트엔드 개발 전 과정 총괄 (멋쟁이사자처럼 12기)",
+      "16가지 MBTI 유형별 전용 게시판, 유형 간 교류 공간, MBTI 성격 분석 콘텐츠 등 서비스 구조 설계",
+      "React 기반 UI 기획·Figma 와이어프레임 제작·프론트엔드 개발 전 과정 단독 수행",
     ],
     contentsEn: [
-      "Designed food-exchange-table calorie algorithm and developed ChatGPT-integrated personalized meal generation",
-      "Built React web app including blood glucose monitoring and diabetes-friendly restaurant map",
-      "Established multi-channel business model: premium subscription, data sales, and diabetic product store",
-      "Led entire process from planning to UI/UX design to frontend development (Likelion 12th cohort)",
+      "Designed service structure: type-specific boards, cross-type interaction spaces, and MBTI personality analysis content",
+      "Handled solo: UI planning, Figma wireframing, and full React frontend development",
     ],
     results: [
-      "서비스 배포 완료 (mealdang.vercel.app)",
-      "멋쟁이사자처럼 12기 프로젝트 완성",
+      "멋쟁이사자처럼 13기 미니프로젝트 최우수상",
     ],
     resultsEn: [
-      "Service deployed (mealdang.vercel.app)",
-      "Completed as Likelion 12th cohort project",
+      "Won Grand Prize in Likelion 13th cohort mini project",
     ],
-    tags: ["React", "ChatGPT", "AI", "Healthcare", "Figma"],
-    url: "https://mealdang.vercel.app",
-    image: "/projects/mealdang/01.png",
-    images: [
-      "/projects/mealdang/01.png",
-      "/projects/mealdang/02.png",
-      "/projects/mealdang/03.png",
-      "/projects/mealdang/04.png",
-      "/projects/mealdang/05.png",
-      "/projects/mealdang/06.png",
-    ],
-  },
-  {
-    title: "AInterview — AI 기반 모의 면접 서비스",
-    titleEn: "AInterview — AI-Powered Mock Interview App",
-    period: "2024.07. ~ 2024.11.",
-    periodEn: "Jul 2024 — Nov 2024",
-    goals: [
-      "취업 준비생 46%가 면접을 가장 어려워한다는 문제 확인, 실전 연습 기회 부족 해결",
-      "음성 인식과 GPT Fine-tuning을 결합한 AI 기반 실시간 모의 면접 서비스 개발",
-    ],
-    goalsEn: [
-      "Addressed the problem that 46% of job seekers find interviews most difficult with insufficient practice opportunities",
-      "Developed an AI-based real-time mock interview service combining voice recognition and GPT fine-tuning",
-    ],
-    contents: [
-      "Azure Speech Service 활용 음성-텍스트 변환(STT/TTS) 처리 시스템 구현",
-      "Fine-tuned GPT-4o-mini 기반 직무별 맞춤 면접 질문 자동 생성",
-      "React 기반 인터랙티브 UI 설계 및 Spring Boot 백엔드 연동",
-      "기획·디자인·프론트엔드 개발 총괄 (멋쟁이사자처럼 12기 최종 프로젝트)",
-    ],
-    contentsEn: [
-      "Implemented voice-to-text (STT/TTS) processing with Azure Speech Service",
-      "Built auto job-specific question generation using fine-tuned GPT-4o-mini",
-      "Designed interactive React UI and integrated with Spring Boot backend",
-      "Led planning, design, and frontend development (Likelion 12th cohort final project)",
-    ],
-    results: [
-      "멋쟁이사자처럼 12기 최종 프로젝트 발표 완료",
-      "음성 인식 기반 AI 면접 플로우 구현 성공",
-    ],
-    resultsEn: [
-      "Presented as the 12th Likelion cohort's final project",
-      "Successfully implemented voice-based AI interview flow",
-    ],
-    tags: ["React", "Spring Boot", "Azure Speech", "GPT-4o", "AI"],
-    image: "/projects/ainterview/01.png",
-    images: [
-      "/projects/ainterview/01.png",
-      "/projects/ainterview/02.png",
-      "/projects/ainterview/03.png",
-      "/projects/ainterview/04.png",
-      "/projects/ainterview/05.png",
-    ],
-  },
-  {
-    title: "RZi — AI 기반 알뜰 지출관리 플랫폼",
-    titleEn: "RZi — AI-Powered Smart Expense Manager",
-    period: "2025.07. ~ 2025.08.",
-    periodEn: "Jul 2025 — Aug 2025",
-    goals: [
-      "동대문구 청년층 전통시장 이용률(8.2%) 저조 문제를 전통시장·대형마트 실시간 가격 비교로 해결",
-      "K-HTML 해커톤(서울시 동대문구청 × 경희대) 과제 해결",
-    ],
-    goalsEn: [
-      "Address low traditional market usage (8.2%) among youth in Dongdaemun-gu through real-time price comparison with large marts",
-      "Address the challenge set by K-HTML Hackathon (Dongdaemun-gu × KHU)",
-    ],
-    contents: [
-      "OCR 기술 + AI 추천을 결합한 종합 쇼핑 도우미 PWA 개발",
-      "실시간 가격비교, OCR 스캔, Google Maps 경로안내, AI 상품추천 핵심 기능 구현",
-      "Next.js 15 + React 19 기반 PWA 아키텍처 설계 및 개발 총괄",
-    ],
-    contentsEn: [
-      "Built a comprehensive shopping assistant PWA combining OCR and AI recommendations",
-      "Implemented real-time price comparison, OCR scanning, Google Maps navigation, and AI product recommendations",
-      "Led PWA architecture design and development on Next.js 15 + React 19",
-    ],
-    results: [
-      "K-HTML 해커톤 수료 및 실용적인 지역사회 문제 해결 서비스 완성",
-    ],
-    resultsEn: [
-      "Completed K-HTML Hackathon and delivered a practical community problem-solving service",
-    ],
-    tags: ["Next.js", "React", "PWA", "OCR", "Google Maps API", "AI"],
-    image: "/projects/rzi/01.png",
-    images: [
-      "/projects/rzi/01.png",
-      "/projects/rzi/02.png",
-      "/projects/rzi/03.png",
-      "/projects/rzi/04.png",
-      "/projects/rzi/05.png",
-      "/projects/rzi/06.png",
-    ],
-  },
-  {
-    title: "ARtliving — AR 기반 가구 추천 플랫폼",
-    titleEn: "ARtliving — AR-Powered Furniture Recommendation Platform",
-    period: "2024.12. ~ 2025.06.",
-    periodEn: "Dec 2024 — Jun 2025",
-    goals: [
-      "증강현실(AR) 기술을 활용하여 가구 구매 전 사용자가 실제 공간에 가상으로 배치해볼 수 있는 플랫폼 개발",
-    ],
-    goalsEn: [
-      "Build a platform using AR technology to let users virtually place furniture in their real space before purchasing",
-    ],
-    contents: [
-      "AR 기반 가구 시각화 및 맞춤 추천 기능 기획·개발",
-      "사용자 공간 데이터와 AI 추천 알고리즘 결합",
-      "HUFS H-UP 진로탐색학점제 참가 프로젝트 총괄 기획",
-    ],
-    contentsEn: [
-      "Planned and developed AR-based furniture visualization and personalized recommendation",
-      "Combined user space data with AI recommendation algorithm",
-      "Led overall planning as HUFS H-UP Career Exploration Program project",
-    ],
-    results: [
-      "2025 HUFS H-UP 진로탐색학점제 진리상 [최우수상] 수상",
-    ],
-    resultsEn: [
-      "Won Grand Prize (Truth Award) at 2025 HUFS H-UP Career Exploration Program",
-    ],
-    tags: ["AR", "React", "AI", "Figma"],
+    tags: ["React", "TypeScript", "Community", "기획", "Figma"],
   },
 ];

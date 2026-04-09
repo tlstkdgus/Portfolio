@@ -1,18 +1,12 @@
 > [한국어로 보기](README.md)
 
-<div align="center">
-
 # Sanghyeon Shin Portfolio
 
 **Portfolio of Sanghyeon Shin, aspiring PM/PO.**
 
-<br>
-
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
-
-</div>
+[Next.js](https://nextjs.org/)
+[TypeScript](https://www.typescriptlang.org/)
+[Tailwind CSS](https://tailwindcss.com/)
 
 ---
 
@@ -29,13 +23,15 @@ I'm growing through diverse experiences to keep up with the invisible pace and c
 
 ## Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| [Next.js 16](https://nextjs.org/) | React framework with App Router |
-| [TypeScript](https://www.typescriptlang.org/) | Type safety |
-| [Tailwind CSS v4](https://tailwindcss.com/) | Utility-first styling |
-| [next-intl](https://next-intl-docs.vercel.app/) | Korean/English i18n |
-| [Framer Motion](https://www.framer.com/motion/) | Animations |
+
+| Technology                                      | Purpose                         |
+| ----------------------------------------------- | ------------------------------- |
+| [Next.js 16](https://nextjs.org/)               | React framework with App Router |
+| [TypeScript](https://www.typescriptlang.org/)   | Type safety                     |
+| [Tailwind CSS v4](https://tailwindcss.com/)     | Utility-first styling           |
+| [next-intl](https://next-intl-docs.vercel.app/) | Korean/English i18n             |
+| [Framer Motion](https://www.framer.com/motion/) | Animations                      |
+
 
 ---
 
@@ -46,7 +42,7 @@ npm install
 npm run dev
 ```
 
-Visit http://localhost:3000 to preview.
+Visit [http://localhost:3000](http://localhost:3000) to preview.
 
 ---
 

@@ -10,25 +10,25 @@
   },
   "hero": {
     "name": "Sanghyeon Shin",
-    "title": "Aspiring PM/PO",
-    "subtitle": "Dreaming of becoming a PM/PO who solves user problems through planning, design, and development",
+    "title": "IT Planner Who Defines Problems with Data and Builds the Solution",
+    "subtitle": "Growing through diverse experiences to adapt to the pace and changes of an ever-evolving world.",
     "cta_resume": "View Portfolio",
     "cta_contact": "Get in Touch"
   },
   "about": {
     "heading": "About",
-    "description_1": "10+ awards across startup IR pitching and hackathons. 10+ products planned, designed, and shipped end-to-end. I’m a PM who owns every step from raw idea to real users.",
-    "description_2": "HUFS GBT × AI Convergence (GPA 4.14/4.5) · SQLD · ADsP certified. I define problems with data, design in Figma, and build in React & Next.js — handling planning, design, and development all on my own.",
-    "description_3": "Currently deepening my engineering skills at SSAFY 15th cohort. My goal: ship products people actually use, make decisions backed by data, and grow teams in the process.",
+    "description_1": "From startup IR pitching to hackathons — 11 awards and 15 services planned, built, and shipped. Working toward becoming a planner who leads every step from idea to real users.",
+    "description_2": "I define problems with data, design screens in Figma, and build frontends with React, TypeScript, and Next.js. Currently at SSAFY 15th cohort (Non-CS Java track) to fill gaps in exception handling, QA, and database design.",
+    "description_3": "My goal: a PM who simultaneously ships products people actually use, makes decisions backed by data, and builds teams that grow together.",
     "keywords": [
       "PM/PO",
-      "Product Planning",
-      "Data Analysis",
-      "IR Pitching",
-      "React · Next.js",
-      "Figma",
-      "Python · SQL",
-      "Project Lead"
+      "Data-Driven Problem Definition",
+      "User Research & Survey Design",
+      "IR Pitching & BM Design",
+      "React · Next.js · TypeScript",
+      "Figma Wireframing",
+      "ADsP · SQLD",
+      "Project Lead (7+)"
     ]
   },
   "experience": {
@@ -64,6 +64,7 @@
     "present": "Present",
     "goal": "Goal",
     "content": "Content",
+    "decision": "Key Decisions",
     "result": "Result",
     "view_slides": "Slides",
     "view_video": "Watch Video",

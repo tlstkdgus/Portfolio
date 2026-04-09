@@ -6,8 +6,8 @@ export interface CareerHighlight {
 }
 
 export const careerOverview = {
-  ko: "PM/PO를 목표로 기획·디자인·개발을 아우르는 풀사이클 경험을 쌓아가고 있습니다. 한국외국어대학교에서 Global Business & Technology와 AI 융합전공을 복수전공하며, 멋쟁이사자처럼 운영진, 교내외 해커톤, 창업 프로그램 등 다양한 활동을 통해 사용자 문제를 발견하고 데이터 기반으로 해결하는 역량을 키우고 있습니다.",
-  en: "Aspiring PM/PO building full-cycle experience across planning, design, and development. Double-majoring in Global Business & Technology and Software & AI at HUFS, I develop user-centered problem-solving and data-driven decision-making skills through Likelion operations, hackathons, and startup programs.",
+  ko: "데이터로 문제를 정의하고, Figma로 설계하고, React로 직접 구현하는 IT 기획자입니다. HUFS GBT × AI 융합전공 (GPA 4.14/4.5)을 배경으로, 멋쟁이사자처럼 운영진·해커톤·창업 프로그램을 통해 15개 프로젝트를 기획·개발했고, 11회 수상으로 결과를 증명했습니다.",
+  en: "I define problems with data, design in Figma, and build with React — owning the full product cycle. With a HUFS GBT × AI Convergence background (GPA 4.14/4.5), I've shipped 15 projects across Likelion staff roles, hackathons, and startup programs, validated by 11 competition awards.",
 };
 
 export const careerHighlights: CareerHighlight[] = [
@@ -15,12 +15,12 @@ export const careerHighlights: CareerHighlight[] = [
     title: "서비스 기획 & 프로덕트 리드",
     titleEn: "Product Planning & Project Lead",
     items: [
-      "7개 이상의 프로젝트에서 PM 역할 수행: 문제 정의부터 기획·디자인·개발까지 전과정 총괄",
+      "15개 프로젝트에서 PM·프로덕트 리드 역할: 문제 정의부터 기획·디자인·개발까지 전과정 총괄",
       "시장 조사 및 사용자 리서치 기반 비즈니스 모델 설계 경험 다수",
       "Figma를 활용한 와이어프레임·프로토타입 제작 및 사용자 중심 UI/UX 설계",
     ],
     itemsEn: [
-      "Served as PM on 7+ projects: led from problem definition through planning, design, and development",
+      "Served as PM / product lead on 15 projects: led from problem definition through planning, design, and development",
       "Conducted market research and user research to design business models",
       "Created wireframes and prototypes in Figma; designed user-centered UI/UX",
     ],

@@ -23,6 +23,12 @@ export function Projects() {
     setExpandedIndex(expandedIndex === i ? null : i);
   };
 
+  const headingLabel = (project: (typeof projects)[number]) => {
+    const main = isKo ? project.title : project.titleEn;
+    const sub = isKo ? project.subtitle : project.subtitleEn;
+    return sub ? `${main} — ${sub}` : main;
+  };
+
   return (
     <section id="projects" className="bg-section-alt py-20 md:py-28">
       <div className={cn("mx-auto px-4 sm:px-6 lg:px-8", isSingle ? "max-w-3xl" : "max-w-4xl")}>
@@ -31,46 +37,71 @@ export function Projects() {
         <div className="space-y-4">
           {projects.map((project, i) => {
             const isOpen = expandedIndex === i;
+            const displayTitle = isKo ? project.title : project.titleEn;
+            const displaySubtitle = isKo ? project.subtitle : project.subtitleEn;
+            const roleList = isKo ? project.roles : project.rolesEn;
+
             return (
               <m.div
-                key={project.title}
+                key={`${project.title}-${i}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
                 className="group overflow-hidden rounded-xl border border-border bg-card transition-colors transition-shadow hover:border-accent/20"
               >
-                {/* Header (clickable) */}
                 <button
                   onClick={() => toggle(i)}
                   aria-expanded={isOpen}
                   aria-controls={`project-panel-${i}`}
-                  aria-label={`${isKo ? project.title : project.titleEn} — ${isOpen ? "collapse" : "expand"}`}
+                  aria-label={`${headingLabel(project)} — ${isOpen ? "collapse" : "expand"}`}
                   className="flex w-full items-start justify-between gap-4 p-5 text-left"
                 >
                   <div className="flex min-w-0 items-start gap-4">
-                    {/* Thumbnail or gradient bar */}
                     {project.image ? (
                       <div className="relative hidden h-12 w-12 shrink-0 overflow-hidden rounded-lg sm:block">
                         <Image
                           src={project.image}
-                          alt={isKo ? project.title : project.titleEn}
+                          alt={headingLabel(project)}
                           fill
                           className="object-cover"
                           sizes="48px"
                         />
                       </div>
                     ) : (
-                      <div aria-hidden="true" className="hidden h-12 w-1 shrink-0 rounded-full bg-gradient-to-b from-accent to-accent-secondary/60 sm:block" />
+                      <div
+                        aria-hidden="true"
+                        className="hidden h-12 w-1 shrink-0 rounded-full bg-gradient-to-b from-accent to-accent-secondary/60 sm:block"
+                      />
                     )}
                     <div className="min-w-0">
-                      <h3 id={`project-heading-${i}`} className="text-base font-semibold text-foreground">
-                        {isKo ? project.title : project.titleEn}
+                      <h3
+                        id={`project-heading-${i}`}
+                        className="text-base font-semibold leading-snug text-foreground"
+                      >
+                        {displayTitle}
                       </h3>
+                      {displaySubtitle ? (
+                        <p className="mt-0.5 line-clamp-2 text-sm text-muted-foreground sm:line-clamp-1">
+                          {displaySubtitle}
+                        </p>
+                      ) : null}
                       <p className="mt-1 text-xs text-muted-foreground">
                         {isKo ? project.period : project.periodEn}
                       </p>
-                      {/* Tags on collapsed view */}
+                      {roleList && roleList.length > 0 ? (
+                        <div className="mt-2 flex flex-wrap gap-1.5">
+                          {roleList.map((role) => (
+                            <Badge
+                              key={role}
+                              variant="outline"
+                              className="border-accent/40 text-[11px] font-medium text-accent"
+                            >
+                              {role}
+                            </Badge>
+                          ))}
+                        </div>
+                      ) : null}
                       {!isOpen && (
                         <div className="mt-2 flex flex-wrap gap-1.5">
                           {project.tags.slice(0, 5).map((tag) => (
@@ -95,7 +126,6 @@ export function Projects() {
                   />
                 </button>
 
-                {/* Expandable detail */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <m.div
@@ -108,74 +138,112 @@ export function Projects() {
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="border-t border-border px-5 pb-5 pt-4 space-y-5">
-                        {/* Goals */}
+                      <div className="space-y-5 border-t border-border px-5 pb-5 pt-4">
+                        {project.stats && project.stats.length > 0 ? (
+                          <div className="-mx-1 overflow-x-auto pb-1">
+                            <div className="flex min-w-0 gap-2 px-1">
+                              {project.stats.map((stat, si) => (
+                                <div
+                                  key={si}
+                                  className="shrink-0 rounded-lg bg-accent/10 px-3 py-1.5 font-mono text-sm text-accent"
+                                >
+                                  <span className="text-muted-foreground">
+                                    {isKo ? stat.label : stat.labelEn}
+                                  </span>
+                                  <span className="mx-1.5 text-border">·</span>
+                                  <span className="font-semibold text-foreground">{stat.value}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null}
+
                         <div>
                           <h4 className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent">
                             <span aria-hidden="true" className="h-px w-4 bg-accent/40" />
                             {tc("goal")}
                           </h4>
                           <ul className="space-y-1">
-                            {(isKo
-                              ? project.goals
-                              : project.goalsEn
-                            ).map((item, j) => (
+                            {(isKo ? project.goals : project.goalsEn).map((item, j) => (
                               <li
                                 key={j}
                                 className="flex items-start gap-2 text-sm text-foreground/80"
                               >
-                                <span aria-hidden="true" className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent/60" />
+                                <span
+                                  aria-hidden="true"
+                                  className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent/60"
+                                />
                                 {item}
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        {/* Contents */}
                         <div>
                           <h4 className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent">
                             <span aria-hidden="true" className="h-px w-4 bg-accent/40" />
                             {tc("content")}
                           </h4>
                           <ul className="space-y-1">
-                            {(isKo
-                              ? project.contents
-                              : project.contentsEn
-                            ).map((item, j) => (
+                            {(isKo ? project.contents : project.contentsEn).map((item, j) => (
                               <li
                                 key={j}
                                 className="flex items-start gap-2 text-sm text-foreground/80"
                               >
-                                <span aria-hidden="true" className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent/60" />
+                                <span
+                                  aria-hidden="true"
+                                  className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent/60"
+                                />
                                 {item}
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        {/* Results */}
+                        {project.decisions && project.decisions.length > 0 ? (
+                          <div>
+                            <h4 className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent">
+                              <span aria-hidden="true" className="h-px w-4 bg-accent/40" />
+                              {tc("decision")}
+                            </h4>
+                            <ul className="space-y-1">
+                              {(isKo ? project.decisions : project.decisionsEn)?.map((item, j) => (
+                                <li
+                                  key={j}
+                                  className="flex items-start gap-2 text-sm text-foreground/80"
+                                >
+                                  <span
+                                    aria-hidden="true"
+                                    className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent/60"
+                                  />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ) : null}
+
                         <div>
                           <h4 className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent-secondary">
                             <span aria-hidden="true" className="h-px w-4 bg-accent-secondary/40" />
                             {tc("result")}
                           </h4>
                           <ul className="space-y-1">
-                            {(isKo
-                              ? project.results
-                              : project.resultsEn
-                            ).map((item, j) => (
+                            {(isKo ? project.results : project.resultsEn).map((item, j) => (
                               <li
                                 key={j}
                                 className="flex items-start gap-2 text-sm text-foreground/80"
                               >
-                                <span aria-hidden="true" className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent-secondary/60" />
+                                <span
+                                  aria-hidden="true"
+                                  className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent-secondary/60"
+                                />
                                 {item}
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        {/* Image Carousel */}
                         {project.images && project.images.length > 0 && (
                           <div>
                             <h4 className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -184,14 +252,11 @@ export function Projects() {
                             </h4>
                             <ImageCarousel
                               images={project.images}
-                              alt={isKo ? project.title : project.titleEn}
+                              alt={headingLabel(project)}
                             />
                           </div>
                         )}
 
-                        {/* Link */}
-
-                        {/* Tags */}
                         <div className="flex flex-wrap gap-1.5 pt-1">
                           {project.tags.map((tag) => (
                             <Badge key={tag} variant="accent">

@@ -22,7 +22,7 @@ export interface CareerDetailSection {
 }
 
 export const careerDetailSections: CareerDetailSection[] = [
-  // ── 1. FlowPay ──────────────────────────────────────────────────────────
+// ── 1. FlowPay ──────────────────────────────────────────────────────────
   {
     id: "flowpay",
     title: "무기명 법인카드 지출·회계 자동화 B2B SaaS — FlowPay",
@@ -133,7 +133,8 @@ export const careerDetailSections: CareerDetailSection[] = [
       },
     ],
   },
-  // ── 2. Y:Wave ────────────────────────────────────────────────────────────
+
+// ── 2. Y:Wave ────────────────────────────────────────────────────────────
   {
     id: "ywave",
     title: "AI 기반 경기도 지역화폐 가맹점 추천 서비스 — Y:Wave",
@@ -209,74 +210,8 @@ export const careerDetailSections: CareerDetailSection[] = [
       },
     ],
   },
-  // ── 3. hai ───────────────────────────────────────────────────────────────
-  {
-    id: "hai",
-    title: "AI 기반 개인 맞춤형 커리어 멘토링 서비스 — hai",
-    titleEn: "AI-Powered Personalized Career Mentoring Service — hai",
-    images: [
-      "/projects/hai/01.png",
-      "/projects/hai/02.png",
-      "/projects/hai/03.png",
-      "/projects/hai/04.png",
-      "/projects/hai/05.png",
-      "/projects/hai/06.png",
-    ],
-    background: [
-      {
-        text: "취업 준비생들이 자신의 강점과 적합한 직무를 파악하지 못한 채 무분별하게 지원하는 문제, 그리고 1:1 커리어 멘토링을 받기 어려운 비용·접근성 문제를 확인했습니다.",
-        textEn:
-          "Identified that job seekers often apply indiscriminately without knowing their strengths or best-fit roles, and face cost and accessibility barriers to 1:1 career mentoring.",
-        subItems: [
-          {
-            text: "CHALLKATHON(한국외국어대학교 컴퓨터공학부 × UMC 공동 주최 해커톤)에서 기획·개발한 프로젝트입니다. 제한된 시간 안에 빠르게 기획하고 구현하는 능력이 요구되는 환경이었습니다.",
-            textEn:
-              "Planned and developed at CHALLKATHON (joint hackathon by HUFS CS Dept × UMC). An environment requiring rapid planning and implementation within a constrained timeframe.",
-          },
-        ],
-      },
-    ],
-    role: [
-      {
-        title: "총괄 기획 및 프론트엔드 개발",
-        titleEn: "Overall Planning & Frontend Development",
-        items: [
-          {
-            text: "사용자의 경험·역량·관심사를 입력받아 AI가 맞춤형 커리어 로드맵과 취업 전략을 제안하는 서비스 구조를 기획했습니다.",
-            textEn:
-              "Planned a service structure where AI proposes personalized career roadmaps and job strategies based on user-inputted experience, competencies, and interests.",
-            subItems: [
-              {
-                text: "AI 멘토와의 대화형 인터페이스를 설계하여 딱딱한 분석 결과가 아닌 자연스러운 멘토링 경험을 제공하는 UX를 기획했습니다.",
-                textEn:
-                  "Designed a conversational interface with an AI mentor to provide a natural mentoring experience rather than rigid analytical outputs.",
-              },
-            ],
-          },
-          {
-            text: "해커톤의 시간 제약 안에서 기획·설계·개발 우선순위를 빠르게 결정하고 팀 전체의 방향을 이끌었습니다.",
-            textEn:
-              "Quickly prioritized planning, design, and development within hackathon time constraints and led the overall team direction.",
-          },
-        ],
-      },
-    ],
-    results: [
-      {
-        text: "CHALLKATHON을 수료하고 동작 가능한 AI 커리어 멘토링 서비스를 완성했습니다.",
-        textEn:
-          "Completed CHALLKATHON and delivered a working AI career mentoring service.",
-      },
-    ],
-    lessons: [
-      {
-        text: "짧은 해커톤 기간 내에 '완벽한 기능'보다 '핵심 가치를 전달하는 최소 기능'에 집중하는 것이 완성도 높은 결과물로 이어진다는 것을 경험했습니다. MVP 사고방식의 중요성을 체감했습니다.",
-        textEn:
-          "Experienced that focusing on 'minimum features that deliver core value' rather than 'perfect features' within a short hackathon timeframe leads to a higher-quality deliverable. Felt the importance of MVP thinking.",
-      },
-    ],
-  },
-  // ── 4. NeuroSight ────────────────────────────────────────────────────────
+
+// ── 4. NeuroSight ────────────────────────────────────────────────────────
   {
     id: "neurosight",
     title: "AI 기반 마취 시술 보조 서비스 — NeuroSight",
@@ -376,7 +311,8 @@ export const careerDetailSections: CareerDetailSection[] = [
       },
     ],
   },
-  // ── 5. TCP ───────────────────────────────────────────────────────────────
+
+// ── 5. TCP ───────────────────────────────────────────────────────────────
   {
     id: "tcp",
     images: [
@@ -479,111 +415,76 @@ export const careerDetailSections: CareerDetailSection[] = [
       },
     ],
   },
-  // ── 6. SonGeul ───────────────────────────────────────────────────────────
+
+// ── 3. hai ───────────────────────────────────────────────────────────────
   {
-    id: "songeul",
-    title: "시니어를 위한 AI-OCR 모바일 뱅킹 — 손글 (SonGeul)",
-    titleEn: "AI-OCR Mobile Banking for Seniors — SonGeul",
+    id: "hai",
+    title: "AI 기반 개인 맞춤형 커리어 멘토링 서비스 — hai",
+    titleEn: "AI-Powered Personalized Career Mentoring Service — hai",
     images: [
-      "/projects/songeul/01.png",
-      "/projects/songeul/02.png",
-      "/projects/songeul/03.png",
-      "/projects/songeul/04.png",
-      "/projects/songeul/05.png",
-      "/projects/songeul/06.png",
+      "/projects/hai/01.png",
+      "/projects/hai/02.png",
+      "/projects/hai/03.png",
+      "/projects/hai/04.png",
+      "/projects/hai/05.png",
+      "/projects/hai/06.png",
     ],
     background: [
       {
-        text: "65세 이상 고령층의 모바일뱅킹 이용률은 53.4%로, 비고령층(95%) 대비 41.2%p 낮습니다. 2030년에는 65세 이상 인구가 1,000만 명을 넘어설 전망이며(통계청 2024), 71.6%의 고령층이 금융 업무를 가족에 의존하고 있습니다.",
+        text: "취업 준비생들이 자신의 강점과 적합한 직무를 파악하지 못한 채 무분별하게 지원하는 문제, 그리고 1:1 커리어 멘토링을 받기 어려운 비용·접근성 문제를 확인했습니다.",
         textEn:
-          "Mobile banking usage among seniors 65+ is 53.4% — 41.2%p below non-seniors (95%). Senior population is expected to exceed 10M by 2030 (Statistics Korea 2024), and 71.6% rely on family for financial tasks.",
+          "Identified that job seekers often apply indiscriminately without knowing their strengths or best-fit roles, and face cost and accessibility barriers to 1:1 career mentoring.",
         subItems: [
           {
-            text: "은행 점포 폐쇄와 ATM 축소로 지방 소도시 금융 접근성이 급락했고, 착오송금의 주요 원인은 '계좌번호 입력 오류'입니다. 기존 앱은 인증 절차 복잡·보안 불안감으로 고령층 진입 장벽이 높습니다.",
+            text: "CHALLKATHON(한국외국어대학교 컴퓨터공학부 × UMC 공동 주최 해커톤)에서 기획·개발한 프로젝트입니다. 제한된 시간 안에 빠르게 기획하고 구현하는 능력이 요구되는 환경이었습니다.",
             textEn:
-              "Bank branch closures and ATM reductions have devastated rural financial access. The leading cause of erroneous transfers is 'account number input error.' Existing apps have high barriers for seniors due to complex authentication and security anxiety.",
+              "Planned and developed at CHALLKATHON (joint hackathon by HUFS CS Dept × UMC). An environment requiring rapid planning and implementation within a constrained timeframe.",
           },
         ],
-      },
-      {
-        text: "2025 한국정보기술전략혁신학회(KIITI) 동계 학술대회 아이디어 및 앱 개발 콘테스트 출품 작품으로, 기획·AI 설계·프론트엔드 개발까지 전 과정을 혼자 수행한 개인 프로젝트입니다.",
-        textEn:
-          "Submitted to the 2025 KIITI Winter Academic Conference App Development Contest — a solo project covering all phases: planning, AI architecture, and frontend development.",
       },
     ],
     role: [
       {
-        title: "서비스 기획 및 UX 설계",
-        titleEn: "Product Planning & UX Design",
+        title: "총괄 기획 및 프론트엔드 개발",
+        titleEn: "Overall Planning & Frontend Development",
         items: [
           {
-            text: "'입력 제거' 개념의 UX 플로우를 설계했습니다: 촬영(손글씨 메모) → 확인(AI-OCR 인식 결과) → 승인(가족 2단계 인증) 3단계로 단순화.",
+            text: "사용자의 경험·역량·관심사를 입력받아 AI가 맞춤형 커리어 로드맵과 취업 전략을 제안하는 서비스 구조를 기획했습니다.",
             textEn:
-              "Designed an 'eliminate input' UX flow: capture (handwritten memo) → confirm (AI-OCR result) → approve (family 2-step auth) — simplified to 3 steps.",
+              "Planned a service structure where AI proposes personalized career roadmaps and job strategies based on user-inputted experience, competencies, and interests.",
             subItems: [
               {
-                text: "SAFE 프레임워크(Security·Assets·Family Connect·Education) 기반 부가 기능 체계화 및 가족 연동 안전망 구조 설계.",
+                text: "AI 멘토와의 대화형 인터페이스를 설계하여 딱딱한 분석 결과가 아닌 자연스러운 멘토링 경험을 제공하는 UX를 기획했습니다.",
                 textEn:
-                  "Systematized supporting features under SAFE framework (Security · Assets · Family Connect · Education) and designed family-linked safety net structure.",
+                  "Designed a conversational interface with an AI mentor to provide a natural mentoring experience rather than rigid analytical outputs.",
               },
             ],
           },
-        ],
-      },
-      {
-        title: "AI 시스템 설계",
-        titleEn: "AI System Design",
-        items: [
           {
-            text: "CLOVA OCR + Google Vision + 자체 파인튜닝 모델 앙상블(가중 투표 방식)을 설계하여 OCR 인식률의 한계를 보완했습니다. 3단계 이상 패턴 감지 로드맵(Rule → 통계 → ML·Isolation Forest·LSTM)을 수립했습니다.",
+            text: "해커톤의 시간 제약 안에서 기획·설계·개발 우선순위를 빠르게 결정하고 팀 전체의 방향을 이끌었습니다.",
             textEn:
-              "Designed a CLOVA OCR + Google Vision + fine-tuned model ensemble (weighted voting) to compensate for OCR accuracy limitations. Established a 3-stage anomaly detection roadmap (Rule → Statistical → ML: Isolation Forest, LSTM).",
-          },
-          {
-            text: "LLM 역할을 NLU(텍스트 의미 구조화)와 XAI(위험 설명)로 분리 설계하고, 사용자 수정 데이터를 자동 학습하는 피드백 루프를 포함했습니다.",
-            textEn:
-              "Separated LLM roles into NLU (text semantic structuring) and XAI (risk explanation), and included a feedback loop for auto-learning from user correction data.",
-          },
-        ],
-      },
-      {
-        title: "비즈니스 모델 설계",
-        titleEn: "Business Model Design",
-        items: [
-          {
-            text: "TAM 455만 명 → SAM 150~180만 명으로 시장 규모를 산정하고, 4개 수익원을 설계했습니다: B2C 구독 / B2B 라이선싱(금감원 고령자 서비스 의무화 규제 활용) / Financial Brokerage / Government Grants.",
-            textEn:
-              "Sized the market at TAM 4.55M → SAM 1.5–1.8M and designed 4 revenue streams: B2C subscription / B2B licensing (leveraging FSS senior service mandate) / financial brokerage / government grants.",
+              "Quickly prioritized planning, design, and development within hackathon time constraints and led the overall team direction.",
           },
         ],
       },
     ],
     results: [
       {
-        text: "2025 KIITI 동계 학술대회 아이디어 및 앱 개발 콘테스트 우수상 수상.",
+        text: "CHALLKATHON을 수료하고 동작 가능한 AI 커리어 멘토링 서비스를 완성했습니다.",
         textEn:
-          "Won Excellence Award at the 2025 KIITI Winter Academic Conference App Development Contest.",
-      },
-      {
-        text: "개인 프로젝트로 기획·AI 아키텍처 설계·프론트엔드 개발 전 과정 완수.",
-        textEn:
-          "Completed the full pipeline as a solo project: planning, AI architecture, and frontend development.",
+          "Completed CHALLKATHON and delivered a working AI career mentoring service.",
       },
     ],
     lessons: [
       {
-        text: "사용자의 기존 행동(손글씨 메모)을 그대로 인터페이스로 가져온 것이 차별화의 핵심이었습니다. 취약 계층을 위한 서비스일수록 기술의 완성도보다 '사용자가 틀릴 수 없는 구조'를 만드는 것이 중요합니다.",
+        text: "짧은 해커톤 기간 내에 '완벽한 기능'보다 '핵심 가치를 전달하는 최소 기능'에 집중하는 것이 완성도 높은 결과물로 이어진다는 것을 경험했습니다. MVP 사고방식의 중요성을 체감했습니다.",
         textEn:
-          "Taking the user's existing behavior (handwritten memo) directly as the interface was the key differentiator. For services targeting vulnerable populations, creating a 'structure where users can't make mistakes' matters more than technical completeness.",
-      },
-      {
-        text: "OCR 인식률 한계를 인정하고 앙상블 방식과 사용자 검증 UI로 보완한 것처럼, 기술 한계를 UX로 보완하는 설계 사고가 금융 수준의 신뢰성 확보로 이어졌습니다. 규제(금감원 의무화)를 B2B 수익원으로 전환한 것도 같은 맥락입니다.",
-        textEn:
-          "Just as OCR limitations were compensated with ensemble methods and user verification UI, design thinking that compensates for technical limits through UX led to financial-grade trustworthiness. Turning regulation (FSS mandate) into a B2B revenue stream follows the same logic.",
+          "Experienced that focusing on 'minimum features that deliver core value' rather than 'perfect features' within a short hackathon timeframe leads to a higher-quality deliverable. Felt the importance of MVP thinking.",
       },
     ],
   },
-  // ── 7. AInterview ────────────────────────────────────────────────────────
+
+// ── 7. AInterview ────────────────────────────────────────────────────────
   {
     id: "ainterview",
     title: "AI 기반 모의 면접 서비스 — AInterview",
@@ -687,7 +588,156 @@ export const careerDetailSections: CareerDetailSection[] = [
       },
     ],
   },
-  {
+
+{
+    id: "rzi",
+    title: "AI 기반 알뜰 지출관리 플랫폼 — RZi",
+    titleEn: "AI-Powered Smart Expense Manager — RZi",
+    images: [
+      "/projects/rzi/01.png",
+      "/projects/rzi/02.png",
+      "/projects/rzi/03.png",
+      "/projects/rzi/04.png",
+      "/projects/rzi/05.png",
+      "/projects/rzi/06.png",
+    ],
+    background: [
+      {
+        text: "K-HTML 해커톤(서울시 동대문구청 × 경희대학교 공동 주최)의 과제로 시작했습니다. 동대문구에 21,343명의 인구가 신규 유입될 것으로 예상되지만, 청년층의 전통시장 이용률은 8.2%에 불과함을 데이터로 확인했습니다.",
+        textEn:
+          "Initiated as a challenge for the K-HTML Hackathon (co-hosted by Seoul Dongdaemun-gu and KHU). Data confirmed that while 21,343 new residents are expected to move into Dongdaemun-gu, traditional market usage among youth stands at just 8.2%.",
+        subItems: [
+          {
+            text: "전통시장 6대 불편 요소를 분석했습니다: 가격 불투명, 복잡한 동선, 현금결제 의존, 재고 정보 부재, 디지털 검색 불가, 주차 불편. 이 중 '가격 불투명'과 '상품 탐색 어려움'이 핵심 진입 장벽임을 파악했습니다.",
+            textEn:
+              "Analyzed 6 major pain points of traditional markets: price opacity, complex layout, cash-only payment, no inventory info, unsearchable online, poor parking. Identified 'price opacity' and 'product discovery difficulty' as the core entry barriers.",
+          },
+        ],
+      },
+      {
+        text: "B2C 개인 사용자 → B2G 지자체 협력 모델로 확장하는 3단계 전략을 수립했습니다. 전통시장 상인회와의 파트너십을 통해 데이터를 축적하고, 지자체에 지역 경제 활성화 인사이트를 제공하는 모델을 구상했습니다.",
+        textEn:
+          "Established a 3-phase expansion strategy: B2C individual users → B2G local government partnership. Conceived a model to accumulate data through merchant association partnerships and provide local economic revitalization insights to local governments.",
+      },
+    ],
+    role: [
+      {
+        title: "총괄 기획 및 프로덕트 설계",
+        titleEn: "Overall Planning & Product Design",
+        items: [
+          {
+            text: "OCR 기술과 AI 추천을 결합한 종합 쇼핑 도우미 PWA의 전체 서비스 플로우를 기획했습니다.",
+            textEn:
+              "Planned the complete service flow of a comprehensive shopping assistant PWA combining OCR technology and AI recommendations.",
+            subItems: [
+              {
+                text: "실시간 가격비교(전통시장 vs 대형마트), OCR 영수증 스캔, Google Maps 연동 경로안내, AI 상품 대체 추천 등 4가지 핵심 기능을 정의했습니다.",
+                textEn:
+                  "Defined 4 core features: real-time price comparison (traditional market vs. large mart), OCR receipt scanning, Google Maps-integrated navigation, and AI alternative product recommendations.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "아키텍처 설계 및 개발 총괄",
+        titleEn: "Architecture Design & Development Lead",
+        items: [
+          {
+            text: "Next.js 15 + React 19 기반 PWA 아키텍처를 설계하여 오프라인 지원, 홈 화면 추가, 빠른 로딩 등 PWA 핵심 기능을 구현했습니다.",
+            textEn:
+              "Designed a Next.js 15 + React 19-based PWA architecture and implemented core PWA features: offline support, home screen installation, and fast loading.",
+          },
+          {
+            text: "팀 전체 기획부터 개발, 디자인, 팀 관리까지 프로젝트 리드 역할을 수행했습니다.",
+            textEn:
+              "Served as project lead covering the entire team — from planning and development to design and team management.",
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "K-HTML 해커톤(2025.07.16 ~ 2025.08.30)을 수료하고, OCR+AI+Google Maps가 통합된 실용적인 지역사회 문제 해결 서비스를 완성했습니다.",
+        textEn:
+          "Completed K-HTML Hackathon (Jul 16 – Aug 30, 2025) and delivered a practical community service integrating OCR, AI, and Google Maps.",
+      },
+    ],
+    lessons: [
+      {
+        text: "문제를 '사용자의 행동 흐름(가격 비교 → 탐색 → 구매)' 관점으로 정의하면, 필요한 기능이 자연스럽게 UX 가치로 연결된다는 점을 배웠습니다. 기술(OCR, AI)은 이 흐름을 원활하게 하는 수단이어야 합니다.",
+        textEn:
+          "Learned that framing a problem as a user's behavior flow (price compare → discover → purchase) naturally maps features to UX value. Technology (OCR, AI) should be a means to smooth this flow.",
+      },
+      {
+        text: "지자체·전통시장·소비자 세 이해관계자의 니즈를 동시에 충족시키는 서비스를 설계하는 과정에서 멀티 스테이크홀더 기획 역량을 키웠습니다.",
+        textEn:
+          "Developed multi-stakeholder planning capabilities through designing a service that simultaneously meets the needs of three parties: local government, traditional market merchants, and consumers.",
+      },
+    ],
+  },
+
+{
+    id: "artliving",
+    title: "AR 기반 가구 추천 플랫폼 — ARtliving",
+    titleEn: "AR-Powered Furniture Recommendation Platform — ARtliving",
+    background: [
+      {
+        text: "가구 구매 시 '실제 내 공간에 놓으면 어떻게 보일까'를 미리 확인할 수 없다는 불편함이 반품률 증가와 구매 결정 지연의 주요 원인임을 확인했습니다.",
+        textEn:
+          "Confirmed that the inability to preview 'how will this look in my actual space' before buying furniture is a primary cause of high return rates and delayed purchase decisions.",
+        subItems: [
+          {
+            text: "2025학년도 1학기 HUFS H-UP 진로탐색학점제 참가 프로젝트로, 배럴아이(인공지능 기반 정량적 초음파 진단 소프트웨어 개발 기업)와의 협업을 통해 AI 기술 적용 방향을 수립했습니다.",
+            textEn:
+              "As a 2025 Spring HUFS H-UP Career Exploration Program project, collaborated with Barrel Eye (AI-based quantitative ultrasound diagnostic software company) to establish the AI technology application direction.",
+          },
+        ],
+      },
+    ],
+    role: [
+      {
+        title: "총괄 기획",
+        titleEn: "Overall Product Planning",
+        items: [
+          {
+            text: "AR 기술을 활용해 사용자가 스마트폰 카메라로 실제 공간을 비추면 가상 가구가 실시간으로 배치되는 서비스 컨셉을 기획했습니다.",
+            textEn:
+              "Planned a service concept where users point their smartphone camera at their actual space and virtual furniture is placed in real time using AR technology.",
+            subItems: [
+              {
+                text: "사용자의 인테리어 취향, 공간 크기, 예산 데이터를 결합한 AI 맞춤 가구 추천 알고리즘 기획을 설계했습니다.",
+                textEn:
+                  "Designed an AI personalized furniture recommendation algorithm that combines user interior preferences, space dimensions, and budget data.",
+              },
+              {
+                text: "B2C 직접 판매 → 가구 브랜드 B2B 파트너십으로 확장하는 비즈니스 모델을 수립했습니다.",
+                textEn:
+                  "Established a business model expanding from B2C direct sales to B2B furniture brand partnerships.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "2025 HUFS H-UP 진로탐색학점제에서 진리상(최우수상)을 수상했습니다. AR과 AI 추천의 결합이 실질적인 소비자 문제를 해결한다는 점을 심사위원에게 인정받았습니다.",
+        textEn:
+          "Won the Grand Prize (Truth Award) at the 2025 HUFS H-UP Career Exploration Program. Judges recognized that the combination of AR and AI recommendation addresses a real consumer problem.",
+      },
+    ],
+    lessons: [
+      {
+        text: "기술의 참신함(AR)보다 그 기술이 해결하는 사용자 문제(구매 전 공간 시각화)가 핵심 가치임을 배웠습니다. 기술은 솔루션의 수단이지 목적이 아닙니다.",
+        textEn:
+          "Learned that the user problem solved by technology (space visualization before purchase) is more valuable than the novelty of the technology (AR) itself. Technology is a means, not the end goal.",
+      },
+     
+    ],
+  },
+
+{
     id: "mealdang",
     title: "당뇨병 환자를 위한 AI 식단 관리 서비스 — Meal당",
     titleEn: "AI Diet Management Service for Diabetics — Meal당",
@@ -779,94 +829,200 @@ export const careerDetailSections: CareerDetailSection[] = [
       },
     ],
   },
-  {
-    id: "rzi",
-    title: "AI 기반 알뜰 지출관리 플랫폼 — RZi",
-    titleEn: "AI-Powered Smart Expense Manager — RZi",
+
+{
+    id: "huriup",
+    title: "웹캠 기반 자세 교정 서비스 — 허리UP!",
+    titleEn: "Webcam-Based Posture Correction Service — HuriUP!",
     images: [
-      "/projects/rzi/01.png",
-      "/projects/rzi/02.png",
-      "/projects/rzi/03.png",
-      "/projects/rzi/04.png",
-      "/projects/rzi/05.png",
-      "/projects/rzi/06.png",
+      "/projects/huriup/01.png",
+      "/projects/huriup/02.png",
+      "/projects/huriup/03.png",
+      "/projects/huriup/04.png",
+      "/projects/huriup/05.png",
     ],
     background: [
       {
-        text: "K-HTML 해커톤(서울시 동대문구청 × 경희대학교 공동 주최)의 과제로 시작했습니다. 동대문구에 21,343명의 인구가 신규 유입될 것으로 예상되지만, 청년층의 전통시장 이용률은 8.2%에 불과함을 데이터로 확인했습니다.",
+        text: "건강보험심사평가원 통계를 통해 20~40대 젊은 층의 허리디스크 및 척추 질환 환자가 급증하고 있음을 확인했습니다. 재택·원격근무 확산으로 장시간 앉아 있는 시간이 늘어나 문제가 심화되고 있었습니다.",
         textEn:
-          "Initiated as a challenge for the K-HTML Hackathon (co-hosted by Seoul Dongdaemun-gu and KHU). Data confirmed that while 21,343 new residents are expected to move into Dongdaemun-gu, traditional market usage among youth stands at just 8.2%.",
+          "HIRA statistics confirmed a surge in back disc and spinal disease patients among people in their 20s–40s, worsened by expanded remote work increasing sedentary time.",
         subItems: [
           {
-            text: "전통시장 6대 불편 요소를 분석했습니다: 가격 불투명, 복잡한 동선, 현금결제 의존, 재고 정보 부재, 디지털 검색 불가, 주차 불편. 이 중 '가격 불투명'과 '상품 탐색 어려움'이 핵심 진입 장벽임을 파악했습니다.",
+            text: "도수 치료(10~50만원/회), 수술 등 기존 해결책은 비용이 높고 사후 치료 중심이었습니다. 일상에서 지속적으로 자세를 교정하는 저비용 IT 솔루션이 없다는 점에 주목했습니다.",
             textEn:
-              "Analyzed 6 major pain points of traditional markets: price opacity, complex layout, cash-only payment, no inventory info, unsearchable online, poor parking. Identified 'price opacity' and 'product discovery difficulty' as the core entry barriers.",
+              "Existing solutions like manual therapy (₩300,000–500,000/session) and surgery were expensive and reactive. Identified the absence of a low-cost IT solution for continuous daily posture correction.",
           },
         ],
       },
       {
-        text: "B2C 개인 사용자 → B2G 지자체 협력 모델로 확장하는 3단계 전략을 수립했습니다. 전통시장 상인회와의 파트너십을 통해 데이터를 축적하고, 지자체에 지역 경제 활성화 인사이트를 제공하는 모델을 구상했습니다.",
+        text: "멋쟁이사자처럼 12기 아이디어톤 프로젝트로, 6인 팀에서 PM을 맡아 문제 정의부터 비즈니스 모델 수립, 마케팅 전략, UI/UX 프로토타입까지 전과정을 총괄했습니다. (2024.05.01 ~ 2024.05.16, 16일)",
         textEn:
-          "Established a 3-phase expansion strategy: B2C individual users → B2G local government partnership. Conceived a model to accumulate data through merchant association partnerships and provide local economic revitalization insights to local governments.",
+          "As a Likelion 12th cohort ideathon project, served as PM in a 6-person team leading the entire process from problem definition to business model, marketing strategy, and UI/UX prototype. (May 1–16, 2024, 16 days)",
       },
     ],
     role: [
       {
-        title: "총괄 기획 및 프로덕트 설계",
-        titleEn: "Overall Planning & Product Design",
+        title: "서비스 기획 및 PM",
+        titleEn: "Product Planning & PM",
         items: [
           {
-            text: "OCR 기술과 AI 추천을 결합한 종합 쇼핑 도우미 PWA의 전체 서비스 플로우를 기획했습니다.",
+            text: "웹캠 기반 실시간 자세 분석·교정 서비스의 핵심 기능을 기획했습니다: 모션 캡처로 자세 분석, 올바른 자세 가이드라인 오버레이 비교, 잘못된 자세 시 경고 알림, 웨어러블 기기 연동.",
             textEn:
-              "Planned the complete service flow of a comprehensive shopping assistant PWA combining OCR technology and AI recommendations.",
-            subItems: [
-              {
-                text: "실시간 가격비교(전통시장 vs 대형마트), OCR 영수증 스캔, Google Maps 연동 경로안내, AI 상품 대체 추천 등 4가지 핵심 기능을 정의했습니다.",
-                textEn:
-                  "Defined 4 core features: real-time price comparison (traditional market vs. large mart), OCR receipt scanning, Google Maps-integrated navigation, and AI alternative product recommendations.",
-              },
-            ],
+              "Planned core features for a webcam-based real-time posture analysis and correction service: motion capture posture analysis, correct posture guideline overlay comparison, bad posture warning alerts, and wearable device integration.",
+          },
+          {
+            text: "IT 직장인(B2C) → 대기업 HR·복지 담당부서(B2B)로 확장하는 2단계 비즈니스 전략을 수립했습니다. 초기 B2C 크라우드펀딩으로 제품을 검증한 후 B2B 구독 계약으로 매출을 안정화하는 모델입니다.",
+            textEn:
+              "Established a 2-phase business strategy: IT workers (B2C) → corporate HR/welfare departments (B2B). A model to validate the product through B2C crowdfunding, then stabilize revenue through B2B subscription contracts.",
           },
         ],
       },
       {
-        title: "아키텍처 설계 및 개발 총괄",
-        titleEn: "Architecture Design & Development Lead",
+        title: "마케팅 전략 기획",
+        titleEn: "Marketing Strategy Planning",
         items: [
           {
-            text: "Next.js 15 + React 19 기반 PWA 아키텍처를 설계하여 오프라인 지원, 홈 화면 추가, 빠른 로딩 등 PWA 핵심 기능을 구현했습니다.",
+            text: "체험 마케팅(오피스 투어·웨비나에서 직접 자세 분석 시연), 숏폼 콘텐츠(자세 교정 전후 비교 영상), 피트니스 센터 파트너십 등 단계별 인지도 확보 전략을 수립했습니다.",
             textEn:
-              "Designed a Next.js 15 + React 19-based PWA architecture and implemented core PWA features: offline support, home screen installation, and fast loading.",
+              "Established a step-by-step awareness strategy: experiential marketing (posture analysis demos at office tours/webinars), short-form content (before/after posture correction videos), and fitness center partnerships.",
           },
+        ],
+      },
+      {
+        title: "UI/UX 설계 및 프로토타입",
+        titleEn: "UI/UX Design & Prototype",
+        items: [
           {
-            text: "팀 전체 기획부터 개발, 디자인, 팀 관리까지 프로젝트 리드 역할을 수행했습니다.",
+            text: "Figma로 실시간 웹캠 자세 분석 화면, 사용자 자세 리포트, 교정 히스토리 대시보드 등 핵심 화면의 UI/UX를 설계하고 인터랙티브 프로토타입을 제작했습니다.",
             textEn:
-              "Served as project lead covering the entire team — from planning and development to design and team management.",
+              "Designed UI/UX and built an interactive prototype in Figma for core screens: real-time webcam posture analysis, user posture report, and correction history dashboard.",
           },
         ],
       },
     ],
     results: [
       {
-        text: "K-HTML 해커톤(2025.07.16 ~ 2025.08.30)을 수료하고, OCR+AI+Google Maps가 통합된 실용적인 지역사회 문제 해결 서비스를 완성했습니다.",
+        text: "16일의 짧은 기간 안에 시장 조사, 비즈니스 모델, 마케팅 전략, UI/UX 프로토타입을 완성하여 멋쟁이사자처럼 12기 아이디어톤에 참가했습니다.",
         textEn:
-          "Completed K-HTML Hackathon (Jul 16 – Aug 30, 2025) and delivered a practical community service integrating OCR, AI, and Google Maps.",
+          "Completed market research, business model, marketing strategy, and UI/UX prototype within 16 days and participated in the Likelion 12th cohort Ideathon.",
       },
     ],
     lessons: [
       {
-        text: "문제를 '사용자의 행동 흐름(가격 비교 → 탐색 → 구매)' 관점으로 정의하면, 필요한 기능이 자연스럽게 UX 가치로 연결된다는 점을 배웠습니다. 기술(OCR, AI)은 이 흐름을 원활하게 하는 수단이어야 합니다.",
+        text: "데이터 기반 문제 정의(통계 → Pain Point → 솔루션)가 기획의 설득력을 높이는 핵심임을 배웠습니다. '젊은 층 허리디스크 급증'이라는 데이터가 없었다면 문제의 심각성을 전달하기 어려웠을 것입니다.",
         textEn:
-          "Learned that framing a problem as a user's behavior flow (price compare → discover → purchase) naturally maps features to UX value. Technology (OCR, AI) should be a means to smooth this flow.",
+          "Learned that data-driven problem definition (statistics → Pain Point → solution) is the key to persuasive planning. Without the data on 'surging back disc cases among young people,' conveying the severity of the problem would have been difficult.",
       },
       {
-        text: "지자체·전통시장·소비자 세 이해관계자의 니즈를 동시에 충족시키는 서비스를 설계하는 과정에서 멀티 스테이크홀더 기획 역량을 키웠습니다.",
+        text: "PM으로서 개발팀, 디자인팀과 '기술적으로 가능한 범위'를 협의하고 우선순위를 조정하는 역할의 중요성을 실감했습니다. 좋은 아이디어를 실현 가능한 수준으로 구체화하는 것이 PM의 핵심 역할입니다.",
         textEn:
-          "Developed multi-stakeholder planning capabilities through designing a service that simultaneously meets the needs of three parties: local government, traditional market merchants, and consumers.",
+          "As PM, realized the importance of coordinating with dev and design teams on 'technically feasible scope' and adjusting priorities. The core PM role is translating good ideas into realizable specifics.",
       },
     ],
   },
+
+// ── 6. SonGeul ───────────────────────────────────────────────────────────
   {
+    id: "songeul",
+    title: "시니어를 위한 AI-OCR 모바일 뱅킹 — 손글 (SonGeul)",
+    titleEn: "AI-OCR Mobile Banking for Seniors — SonGeul",
+    images: [
+      "/projects/songeul/01.png",
+      "/projects/songeul/02.png",
+      "/projects/songeul/03.png",
+      "/projects/songeul/04.png",
+      "/projects/songeul/05.png",
+      "/projects/songeul/06.png",
+    ],
+    background: [
+      {
+        text: "65세 이상 고령층의 모바일뱅킹 이용률은 53.4%로, 비고령층(95%) 대비 41.2%p 낮습니다. 2030년에는 65세 이상 인구가 1,000만 명을 넘어설 전망이며(통계청 2024), 71.6%의 고령층이 금융 업무를 가족에 의존하고 있습니다.",
+        textEn:
+          "Mobile banking usage among seniors 65+ is 53.4% — 41.2%p below non-seniors (95%). Senior population is expected to exceed 10M by 2030 (Statistics Korea 2024), and 71.6% rely on family for financial tasks.",
+        subItems: [
+          {
+            text: "은행 점포 폐쇄와 ATM 축소로 지방 소도시 금융 접근성이 급락했고, 착오송금의 주요 원인은 '계좌번호 입력 오류'입니다. 기존 앱은 인증 절차 복잡·보안 불안감으로 고령층 진입 장벽이 높습니다.",
+            textEn:
+              "Bank branch closures and ATM reductions have devastated rural financial access. The leading cause of erroneous transfers is 'account number input error.' Existing apps have high barriers for seniors due to complex authentication and security anxiety.",
+          },
+        ],
+      },
+      {
+        text: "2025 한국정보기술전략혁신학회(KIITI) 동계 학술대회 아이디어 및 앱 개발 콘테스트 출품 작품으로, 기획·AI 설계·프론트엔드 개발까지 전 과정을 혼자 수행한 개인 프로젝트입니다.",
+        textEn:
+          "Submitted to the 2025 KIITI Winter Academic Conference App Development Contest — a solo project covering all phases: planning, AI architecture, and frontend development.",
+      },
+    ],
+    role: [
+      {
+        title: "서비스 기획 및 UX 설계",
+        titleEn: "Product Planning & UX Design",
+        items: [
+          {
+            text: "'입력 제거' 개념의 UX 플로우를 설계했습니다: 촬영(손글씨 메모) → 확인(AI-OCR 인식 결과) → 승인(가족 2단계 인증) 3단계로 단순화.",
+            textEn:
+              "Designed an 'eliminate input' UX flow: capture (handwritten memo) → confirm (AI-OCR result) → approve (family 2-step auth) — simplified to 3 steps.",
+            subItems: [
+              {
+                text: "SAFE 프레임워크(Security·Assets·Family Connect·Education) 기반 부가 기능 체계화 및 가족 연동 안전망 구조 설계.",
+                textEn:
+                  "Systematized supporting features under SAFE framework (Security · Assets · Family Connect · Education) and designed family-linked safety net structure.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "AI 시스템 설계",
+        titleEn: "AI System Design",
+        items: [
+          {
+            text: "CLOVA OCR + Google Vision + 자체 파인튜닝 모델 앙상블(가중 투표 방식)을 설계하여 OCR 인식률의 한계를 보완했습니다. 3단계 이상 패턴 감지 로드맵(Rule → 통계 → ML·Isolation Forest·LSTM)을 수립했습니다.",
+            textEn:
+              "Designed a CLOVA OCR + Google Vision + fine-tuned model ensemble (weighted voting) to compensate for OCR accuracy limitations. Established a 3-stage anomaly detection roadmap (Rule → Statistical → ML: Isolation Forest, LSTM).",
+          },
+          {
+            text: "LLM 역할을 NLU(텍스트 의미 구조화)와 XAI(위험 설명)로 분리 설계하고, 사용자 수정 데이터를 자동 학습하는 피드백 루프를 포함했습니다.",
+            textEn:
+              "Separated LLM roles into NLU (text semantic structuring) and XAI (risk explanation), and included a feedback loop for auto-learning from user correction data.",
+          },
+        ],
+      },
+      {
+        title: "비즈니스 모델 설계",
+        titleEn: "Business Model Design",
+        items: [
+          {
+            text: "TAM 455만 명 → SAM 150~180만 명으로 시장 규모를 산정하고, 4개 수익원을 설계했습니다: B2C 구독 / B2B 라이선싱(금감원 고령자 서비스 의무화 규제 활용) / Financial Brokerage / Government Grants.",
+            textEn:
+              "Sized the market at TAM 4.55M → SAM 1.5–1.8M and designed 4 revenue streams: B2C subscription / B2B licensing (leveraging FSS senior service mandate) / financial brokerage / government grants.",
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "2025 KIITI 동계 학술대회 아이디어 및 앱 개발 콘테스트 우수상 수상.",
+        textEn:
+          "Won Excellence Award at the 2025 KIITI Winter Academic Conference App Development Contest.",
+      },
+    
+    ],
+    lessons: [
+      {
+        text: "사용자의 기존 행동(손글씨 메모)을 그대로 인터페이스로 가져온 것이 차별화의 핵심이었습니다. 취약 계층을 위한 서비스일수록 기술의 완성도보다 '사용자가 틀릴 수 없는 구조'를 만드는 것이 중요합니다.",
+        textEn:
+          "Taking the user's existing behavior (handwritten memo) directly as the interface was the key differentiator. For services targeting vulnerable populations, creating a 'structure where users can't make mistakes' matters more than technical completeness.",
+      },
+      {
+        text: "OCR 인식률 한계를 인정하고 앙상블 방식과 사용자 검증 UI로 보완한 것처럼, 기술 한계를 UX로 보완하는 설계 사고가 금융 수준의 신뢰성 확보로 이어졌습니다. 규제(금감원 의무화)를 B2B 수익원으로 전환한 것도 같은 맥락입니다.",
+        textEn:
+          "Just as OCR limitations were compensated with ensemble methods and user verification UI, design thinking that compensates for technical limits through UX led to financial-grade trustworthiness. Turning regulation (FSS mandate) into a B2B revenue stream follows the same logic.",
+      },
+    ],
+  },
+
+{
     id: "connect",
     title: "은둔형 청년 지원 플랫폼 — 커넥트",
     titleEn: "Support Platform for Socially Isolated Youth — Connect",
@@ -965,157 +1121,88 @@ export const careerDetailSections: CareerDetailSection[] = [
       },
     ],
   },
+
+// ── dotori ───────────────────────────────────────────────────────────────
   {
-    id: "artliving",
-    title: "AR 기반 가구 추천 플랫폼 — ARtliving",
-    titleEn: "AR-Powered Furniture Recommendation Platform — ARtliving",
+    id: "dotori",
+    title: "시각장애인을 위한 점자 교육 플랫폼 — dotori",
+    titleEn: "Braille Education Platform for the Visually Impaired — dotori",
     background: [
       {
-        text: "가구 구매 시 '실제 내 공간에 놓으면 어떻게 보일까'를 미리 확인할 수 없다는 불편함이 반품률 증가와 구매 결정 지연의 주요 원인임을 확인했습니다.",
+        text: "시각장애인의 점자 교육 접근성과 학습 지속성 문제를 창업캠프 과제로 정의하고, 사회적 가치와 수익 모델을 함께 설계했습니다.",
         textEn:
-          "Confirmed that the inability to preview 'how will this look in my actual space' before buying furniture is a primary cause of high return rates and delayed purchase decisions.",
-        subItems: [
-          {
-            text: "2025학년도 1학기 HUFS H-UP 진로탐색학점제 참가 프로젝트로, 배럴아이(인공지능 기반 정량적 초음파 진단 소프트웨어 개발 기업)와의 협업을 통해 AI 기술 적용 방향을 수립했습니다.",
-            textEn:
-              "As a 2025 Spring HUFS H-UP Career Exploration Program project, collaborated with Barrel Eye (AI-based quantitative ultrasound diagnostic software company) to establish the AI technology application direction.",
-          },
-        ],
+          "Framed Braille education access and learning continuity for the visually impaired as a startup camp challenge, designing both social impact and revenue logic.",
       },
     ],
     role: [
       {
-        title: "총괄 기획",
-        titleEn: "Overall Product Planning",
+        title: "총괄 기획 및 IR 피칭",
+        titleEn: "Overall Planning & IR Pitching",
         items: [
           {
-            text: "AR 기술을 활용해 사용자가 스마트폰 카메라로 실제 공간을 비추면 가상 가구가 실시간으로 배치되는 서비스 컨셉을 기획했습니다.",
+            text: "서비스 콘셉트·타겟·수익 구조를 정리하고 IR 피칭 경진대회에서 발표를 진행했습니다.",
             textEn:
-              "Planned a service concept where users point their smartphone camera at their actual space and virtual furniture is placed in real time using AR technology.",
-            subItems: [
-              {
-                text: "사용자의 인테리어 취향, 공간 크기, 예산 데이터를 결합한 AI 맞춤 가구 추천 알고리즘 기획을 설계했습니다.",
-                textEn:
-                  "Designed an AI personalized furniture recommendation algorithm that combines user interior preferences, space dimensions, and budget data.",
-              },
-              {
-                text: "B2C 직접 판매 → 가구 브랜드 B2B 파트너십으로 확장하는 비즈니스 모델을 수립했습니다.",
-                textEn:
-                  "Established a business model expanding from B2C direct sales to B2B furniture brand partnerships.",
-              },
-            ],
+              "Structured concept, target, and revenue model and delivered the pitch at the IR competition.",
           },
         ],
       },
     ],
     results: [
       {
-        text: "2025 HUFS H-UP 진로탐색학점제에서 진리상(최우수상)을 수상했습니다. AR과 AI 추천의 결합이 실질적인 소비자 문제를 해결한다는 점을 심사위원에게 인정받았습니다.",
-        textEn:
-          "Won the Grand Prize (Truth Award) at the 2025 HUFS H-UP Career Exploration Program. Judges recognized that the combination of AR and AI recommendation addresses a real consumer problem.",
+        text: "창업캠프 IR 피칭 경진대회 최우수상",
+        textEn: "Grand Prize at HUFS Startup Camp IR Pitching Competition",
+      },
+      {
+        text: "G-RISE 창업 아이디어 경진대회 대상",
+        textEn: "Grand Prize at G-RISE Startup Idea Competition",
       },
     ],
     lessons: [
       {
-        text: "기술의 참신함(AR)보다 그 기술이 해결하는 사용자 문제(구매 전 공간 시각화)가 핵심 가치임을 배웠습니다. 기술은 솔루션의 수단이지 목적이 아닙니다.",
+        text: "사회 문제를 설득력 있게 전달하려면 임팩트 지표와 수익 모델을 동시에 보여줘야 한다는 점을 배웠습니다.",
         textEn:
-          "Learned that the user problem solved by technology (space visualization before purchase) is more valuable than the novelty of the technology (AR) itself. Technology is a means, not the end goal.",
-      },
-      {
-        text: "산업 도메인이 다른 기업(배럴아이)과의 협업을 통해 AI 기술을 다양한 산업에 적용하는 방법론을 배웠습니다. 도메인 전문성과 기술 역량의 결합이 만드는 시너지를 경험했습니다.",
-        textEn:
-          "Through collaboration with a company from a different industry (Barrel Eye), learned methodologies for applying AI technology across various sectors. Experienced the synergy created by combining domain expertise with technical capability.",
+          "Learned that persuasive social-impact pitches pair impact metrics with a credible revenue model.",
       },
     ],
   },
+
+// ── 16P!ay ───────────────────────────────────────────────────────────────
   {
-    id: "huriup",
-    title: "웹캠 기반 자세 교정 서비스 — 허리UP!",
-    titleEn: "Webcam-Based Posture Correction Service — HuriUP!",
-    images: [
-      "/projects/huriup/01.png",
-      "/projects/huriup/02.png",
-      "/projects/huriup/03.png",
-      "/projects/huriup/04.png",
-      "/projects/huriup/05.png",
-    ],
+    id: "16play",
+    title: "MBTI 커뮤니티 — 16P!ay",
+    titleEn: "MBTI Community — 16P!ay",
     background: [
       {
-        text: "건강보험심사평가원 통계를 통해 20~40대 젊은 층의 허리디스크 및 척추 질환 환자가 급증하고 있음을 확인했습니다. 재택·원격근무 확산으로 장시간 앉아 있는 시간이 늘어나 문제가 심화되고 있었습니다.",
+        text: "멋쟁이사자처럼 13기 미니프로젝트로 MBTI 기반 커뮤니티를 기획·디자인·개발했습니다.",
         textEn:
-          "HIRA statistics confirmed a surge in back disc and spinal disease patients among people in their 20s–40s, worsened by expanded remote work increasing sedentary time.",
-        subItems: [
-          {
-            text: "도수 치료(30~50만원/회), 수술 등 기존 해결책은 비용이 높고 사후 치료 중심이었습니다. 일상에서 지속적으로 자세를 교정하는 저비용 IT 솔루션이 없다는 점에 주목했습니다.",
-            textEn:
-              "Existing solutions like manual therapy (₩300,000–500,000/session) and surgery were expensive and reactive. Identified the absence of a low-cost IT solution for continuous daily posture correction.",
-          },
-        ],
-      },
-      {
-        text: "멋쟁이사자처럼 12기 아이디어톤 프로젝트로, 6인 팀에서 PM을 맡아 문제 정의부터 비즈니스 모델 수립, 마케팅 전략, UI/UX 프로토타입까지 전과정을 총괄했습니다. (2024.05.01 ~ 2024.05.16, 16일)",
-        textEn:
-          "As a Likelion 12th cohort ideathon project, served as PM in a 6-person team leading the entire process from problem definition to business model, marketing strategy, and UI/UX prototype. (May 1–16, 2024, 16 days)",
+          "Planned, designed, and developed an MBTI-based community as a Likelion 13th cohort mini project.",
       },
     ],
     role: [
       {
-        title: "서비스 기획 및 PM",
-        titleEn: "Product Planning & PM",
+        title: "총괄 기획·디자인·개발",
+        titleEn: "Planning, Design & Development",
         items: [
           {
-            text: "웹캠 기반 실시간 자세 분석·교정 서비스의 핵심 기능을 기획했습니다: 모션 캡처로 자세 분석, 올바른 자세 가이드라인 오버레이 비교, 잘못된 자세 시 경고 알림, 웨어러블 기기 연동.",
+            text: "서비스 IA·화면 설계·프론트엔드 구현까지 단일 PM으로 전 과정을 맡았습니다.",
             textEn:
-              "Planned core features for a webcam-based real-time posture analysis and correction service: motion capture posture analysis, correct posture guideline overlay comparison, bad posture warning alerts, and wearable device integration.",
-          },
-          {
-            text: "IT 직장인(B2C) → 대기업 HR·복지 담당부서(B2B)로 확장하는 2단계 비즈니스 전략을 수립했습니다. 초기 B2C 크라우드펀딩으로 제품을 검증한 후 B2B 구독 계약으로 매출을 안정화하는 모델입니다.",
-            textEn:
-              "Established a 2-phase business strategy: IT workers (B2C) → corporate HR/welfare departments (B2B). A model to validate the product through B2C crowdfunding, then stabilize revenue through B2B subscription contracts.",
-          },
-        ],
-      },
-      {
-        title: "마케팅 전략 기획",
-        titleEn: "Marketing Strategy Planning",
-        items: [
-          {
-            text: "체험 마케팅(오피스 투어·웨비나에서 직접 자세 분석 시연), 숏폼 콘텐츠(자세 교정 전후 비교 영상), 피트니스 센터 파트너십 등 단계별 인지도 확보 전략을 수립했습니다.",
-            textEn:
-              "Established a step-by-step awareness strategy: experiential marketing (posture analysis demos at office tours/webinars), short-form content (before/after posture correction videos), and fitness center partnerships.",
-          },
-        ],
-      },
-      {
-        title: "UI/UX 설계 및 프로토타입",
-        titleEn: "UI/UX Design & Prototype",
-        items: [
-          {
-            text: "Figma로 실시간 웹캠 자세 분석 화면, 사용자 자세 리포트, 교정 히스토리 대시보드 등 핵심 화면의 UI/UX를 설계하고 인터랙티브 프로토타입을 제작했습니다.",
-            textEn:
-              "Designed UI/UX and built an interactive prototype in Figma for core screens: real-time webcam posture analysis, user posture report, and correction history dashboard.",
+              "Owned IA, UI design, and frontend implementation end-to-end as the sole PM/lead.",
           },
         ],
       },
     ],
     results: [
       {
-        text: "16일의 짧은 기간 안에 시장 조사, 비즈니스 모델, 마케팅 전략, UI/UX 프로토타입을 완성하여 멋쟁이사자처럼 12기 아이디어톤에 참가했습니다.",
-        textEn:
-          "Completed market research, business model, marketing strategy, and UI/UX prototype within 16 days and participated in the Likelion 12th cohort Ideathon.",
+        text: "멋쟁이사자처럼 13기 미니프로젝트 최우수상",
+        textEn: "Grand Prize in Likelion 13th cohort mini project",
       },
     ],
     lessons: [
       {
-        text: "데이터 기반 문제 정의(통계 → Pain Point → 솔루션)가 기획의 설득력을 높이는 핵심임을 배웠습니다. '젊은 층 허리디스크 급증'이라는 데이터가 없었다면 문제의 심각성을 전달하기 어려웠을 것입니다.",
+        text: "짧은 기간 안에 사용자 흐름을 단순하게 유지한 것이 완성도로 이어졌습니다.",
         textEn:
-          "Learned that data-driven problem definition (statistics → Pain Point → solution) is the key to persuasive planning. Without the data on 'surging back disc cases among young people,' conveying the severity of the problem would have been difficult.",
-      },
-      {
-        text: "PM으로서 개발팀, 디자인팀과 '기술적으로 가능한 범위'를 협의하고 우선순위를 조정하는 역할의 중요성을 실감했습니다. 좋은 아이디어를 실현 가능한 수준으로 구체화하는 것이 PM의 핵심 역할입니다.",
-        textEn:
-          "As PM, realized the importance of coordinating with dev and design teams on 'technically feasible scope' and adjusting priorities. The core PM role is translating good ideas into realizable specifics.",
+          "Keeping user flows simple within a tight timeline improved perceived polish.",
       },
     ],
-  },
+  }
 ];

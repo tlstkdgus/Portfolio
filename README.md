@@ -1,18 +1,19 @@
 > [English version](README.en.md)
 
-<div align="center">
+
 
 # 신상현 포트폴리오
 
 **PM/PO를 꿈꾸는 신상현의 포트폴리오입니다.**
 
-<br>
+  
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
 
-</div>
+[Next.js](https://nextjs.org/)
+[TypeScript](https://www.typescriptlang.org/)
+[Tailwind CSS](https://tailwindcss.com/)
+
+
 
 ---
 
@@ -29,13 +30,15 @@
 
 ## 기술 스택
 
-| 기술 | 용도 |
-|---|---|
-| [Next.js 16](https://nextjs.org/) | App Router 기반 React 프레임워크 |
-| [TypeScript](https://www.typescriptlang.org/) | 타입 안전성 |
-| [Tailwind CSS v4](https://tailwindcss.com/) | 유틸리티 스타일링 |
-| [next-intl](https://next-intl-docs.vercel.app/) | 한국어/영어 다국어 지원 |
-| [Framer Motion](https://www.framer.com/motion/) | 애니메이션 |
+
+| 기술                                              | 용도                        |
+| ----------------------------------------------- | ------------------------- |
+| [Next.js 16](https://nextjs.org/)               | App Router 기반 React 프레임워크 |
+| [TypeScript](https://www.typescriptlang.org/)   | 타입 안전성                    |
+| [Tailwind CSS v4](https://tailwindcss.com/)     | 유틸리티 스타일링                 |
+| [next-intl](https://next-intl-docs.vercel.app/) | 한국어/영어 다국어 지원             |
+| [Framer Motion](https://www.framer.com/motion/) | 애니메이션                     |
+
 
 ---
 
@@ -46,7 +49,7 @@ npm install
 npm run dev
 ```
 
-http://localhost:3000 에서 확인하세요.
+[http://localhost:3000](http://localhost:3000) 에서 확인하세요.
 
 ---
 

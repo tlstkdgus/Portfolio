@@ -4,8 +4,8 @@ export const profile = {
     en: "Sanghyeon Shin",
   },
   title: {
-    ko: "PM/PO 지망생",
-    en: "Aspiring PM/PO",
+    ko: "데이터로 문제를 정의하고, 직접 구현하는 IT 기획자",
+    en: "IT Planner Who Defines Problems with Data and Builds the Solution",
   },
   birth: "2001",
   phone: "010-9194-5840",
@@ -36,7 +36,7 @@ export const profile = {
     },
   ],
   military: {
-    ko: "",
-    en: "",
+    ko: "육군 병장 만기 제대 (2021.10 ~ 2023.04)",
+    en: "ROK Army, Sergeant, Honorable Discharge (Oct 2021 — Apr 2023)",
   },
 };
