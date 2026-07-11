@@ -74,7 +74,7 @@ export const communities: Community[] = [
     roleEn: "Coding Education Volunteer",
     organization: "풍생고등학교",
     organizationEn: "Pungsaeng High School",
-    period: "2025.03. ~ 2025.10",
+    period: "2025.03. ~ 2025.11",
     periodEn: "Mar 2025 — Oct 2025",
     active: false,
   },

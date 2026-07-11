@@ -16,6 +16,29 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    company: "CleanB (RoomiClean)",
+    companyEn: "CleanB (RoomiClean)",
+    role: "전체 PM · 프론트엔드 · 디자인",
+    roleEn: "Overall PM · Frontend · Design",
+    team: "에어비앤비 청소 매칭 플랫폼",
+    teamEn: "Airbnb Cleaning Matching Platform",
+    period: "2025.12. ~ 현재",
+    periodEn: "Dec 2025 — Present",
+    startDate: "2025-12",
+    endDate: null,
+    description: [
+      "에어비앤비 청소 매칭 플랫폼의 전체 PM으로 기획·디자인·릴리스 관리 총괄, 청소자 작업 진행 도메인 프론트엔드 직접 구현",
+      "PR 170개+ 저장소의 기능·CI 워크플로·QA·prod 릴리스 머지 담당",
+      "Docker Compose·Caddy·GitHub Actions·CDN 기반 실운영 배포 환경에서 서비스 운영 중",
+    ],
+    descriptionEn: [
+      "Overall PM for an Airbnb cleaning matching platform — leading planning, design, and release management while building the cleaner-side frontend",
+      "Responsible for merging features, CI workflows, QA, and prod releases across a 170+ PR repository",
+      "Operating a live service on Docker Compose, Caddy, GitHub Actions, and CDN infrastructure",
+    ],
+    tags: ["PM", "Next.js", "TypeScript", "CI/CD", "Product"],
+  },
+  {
     company: "SSAFY 15기",
     companyEn: "SSAFY 15th Cohort",
     role: "교육 참여",

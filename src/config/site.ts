@@ -12,8 +12,8 @@ export const siteConfig = {
 
   social: {
     github: "https://github.com/tlstkdgus",
-    linkedin: "",
-    blog: "",
+    linkedin: "https://www.linkedin.com/in/%EC%8B%A0%EC%83%81%ED%98%84",
+    blog: "https://velog.io/@tlstkdgus",
   },
 
   nav: [

@@ -21,6 +21,8 @@ export interface Project {
   resultsEn: string[];
   tags: string[];
   url?: string;
+  repo?: string;
+  commitsUrl?: string;
   image?: string;
   images?: string[];
   stats?: ProjectStat[];
@@ -30,12 +32,67 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "CleanB",
+    titleEn: "CleanB",
+    subtitle: "에어비앤비 청소 매칭 플랫폼",
+    subtitleEn: "Airbnb Cleaning Matching Platform",
+    period: "2025.12. ~ 현재 (운영 중)",
+    periodEn: "Dec 2025 — Present (In Operation)",
+    roles: ["PM", "프론트엔드", "디자인"],
+    rolesEn: ["PM", "Frontend", "Design"],
+    repo: "https://github.com/RoomiClean/Frontend",
+    commitsUrl: "https://github.com/RoomiClean/Frontend/commits?author=tlstkdgus",
+    goals: [
+      "에어비앤비 호스트와 청소 노동자를 연결하는 매칭 플랫폼을 기획하고, 요청부터 작업 완료까지 이어지는 청소 운영 플로우를 제품화",
+      "학생 프로젝트 수준을 넘어 실운영 가능한 배포·QA·릴리스 체계 구축",
+    ],
+    goalsEn: [
+      "Productize the full cleaning operation flow — from request to completion — connecting Airbnb hosts with cleaners",
+      "Build a production-grade deployment, QA, and release pipeline beyond student-project scope",
+    ],
+    contents: [
+      "전체 PM으로서 PR 170개+ 규모 저장소의 기능·CI 워크플로·QA·prod 릴리스 머지 총괄",
+      "청소자(Cleaner) 작업 진행 도메인 구현: 작업 요청 목록 → 진행 관리 → 완료 페이지의 UI·API·타입 설계",
+      "카카오맵·SGIS 기반 지도 검색, Firebase Web Push 알림 등 실서비스 연동",
+      "아토믹 디자인 컴포넌트 구조와 QA용 data-testid 체계 도입",
+    ],
+    contentsEn: [
+      "As overall PM, managed merges for features, CI workflows, QA, and prod releases across a 170+ PR repository",
+      "Built the cleaner-side domain: request list → progress management → completion pages (UI, API, types)",
+      "Integrated Kakao Map / SGIS map search and Firebase Web Push notifications",
+      "Introduced atomic design component architecture and data-testid QA conventions",
+    ],
+    decisions: [
+      "운영 배포를 k3s/ArgoCD에서 Docker Compose + Caddy로 전환하여 소규모 팀에 맞는 운영 복잡도로 조정",
+      "Next.js 정적 청크를 CDN(CloudFront)에서 서빙하도록 분리하여 배포 안정성과 로딩 속도 확보",
+    ],
+    decisionsEn: [
+      "Migrated production deployment from k3s/ArgoCD to Docker Compose + Caddy, matching ops complexity to team size",
+      "Served Next.js static chunks from a CDN (CloudFront) for deployment stability and load speed",
+    ],
+    results: [
+      "GitHub Actions 기반 자동 배포 파이프라인과 다중 EC2 운영 환경에서 실서비스 운영 중",
+      "기획·디자인·개발·배포·QA 전 사이클을 팀과 함께 운영하는 진행형 프로젝트",
+    ],
+    resultsEn: [
+      "Running a live service on GitHub Actions-based auto-deployment across multiple EC2 instances",
+      "An ongoing project covering the full cycle: planning, design, development, deployment, and QA",
+    ],
+    stats: [
+      { label: "PR", labelEn: "PRs", value: "170+" },
+      { label: "상태", labelEn: "Status", value: "실서비스 운영" },
+    ],
+    tags: ["Next.js", "TypeScript", "PM", "Kakao Map", "Firebase", "Docker", "CI/CD"],
+  },
+  {
     title: "FlowPay",
     titleEn: "FlowPay",
     subtitle: "무기명 법인카드 지출·회계 자동화 B2B SaaS",
     subtitleEn: "Anonymous Corporate Card Expense Automation B2B SaaS",
     period: "2025.06. ~ 2025.08.",
     periodEn: "Jun 2025 — Aug 2025",
+    repo: "https://github.com/tlstkdgus/FlowPay",
+    url: "https://flowpay.vercel.app",
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
@@ -99,6 +156,8 @@ export const projects: Project[] = [
     subtitleEn: "AI-Powered Gyeonggi Local Currency Store Recommendation",
     period: "2025.03. ~ 2025.05.",
     periodEn: "Mar 2025 — May 2025",
+    repo: "https://github.com/yong2gether/FE",
+    commitsUrl: "https://github.com/yong2gether/FE/commits/main/?author=tlstkdgus",
     roles: ["PM", "프론트엔드", "디자인"],
     rolesEn: ["PM", "Frontend", "Design"],
     goals: [
@@ -261,6 +320,8 @@ export const projects: Project[] = [
     subtitleEn: "AI-Powered Personalized Career Mentoring Service",
     period: "2025.06.",
     periodEn: "Jun 2025",
+    repo: "https://github.com/CHALLKATHON-Official/2025_CHALLKATHON_Hi-High_FE",
+    commitsUrl: "https://github.com/CHALLKATHON-Official/2025_CHALLKATHON_Hi-High_FE/commits?author=tlstkdgus",
     roles: ["기획", "프론트엔드"],
     rolesEn: ["Planning", "Frontend"],
     goals: [
@@ -307,6 +368,8 @@ export const projects: Project[] = [
     subtitleEn: "AI-Powered Mock Interview App",
     period: "2024.07. ~ 2024.11.",
     periodEn: "Jul 2024 — Nov 2024",
+    repo: "https://github.com/Team2-AInterview/frontend",
+    commitsUrl: "https://github.com/Team2-AInterview/frontend/commits?author=tlstkdgus",
     roles: ["기획", "프론트엔드"],
     rolesEn: ["Planning", "Frontend"],
     goals: [
@@ -354,6 +417,8 @@ export const projects: Project[] = [
     subtitleEn: "AI-Powered Smart Expense Manager",
     period: "2025.07. ~ 2025.08.",
     periodEn: "Jul 2025 — Aug 2025",
+    repo: "https://github.com/Gongdori-Moondori/Gongdori-Moondori-FE",
+    commitsUrl: "https://github.com/Gongdori-Moondori/Gongdori-Moondori-FE/commits/main/?author=tlstkdgus",
     roles: ["기획", "풀스택"],
     rolesEn: ["Planning", "Full-stack"],
     goals: [
@@ -435,6 +500,8 @@ export const projects: Project[] = [
     subtitleEn: "AI Diet Management Service for Diabetics",
     period: "2024.07. ~ 2024.08.",
     periodEn: "Jul 2024 — Aug 2024",
+    repo: "https://github.com/MealSugar/FE",
+    commitsUrl: "https://github.com/MealSugar/FE/commits/master/?author=tlstkdgus",
     roles: ["기획", "프론트엔드"],
     rolesEn: ["Planning", "Frontend"],
     goals: [
@@ -531,6 +598,7 @@ export const projects: Project[] = [
     subtitleEn: "AI-OCR Mobile Banking for Seniors",
     period: "2025",
     periodEn: "2025",
+    repo: "https://github.com/tlstkdgus/songeul",
     roles: ["기획", "프론트엔드"],
     rolesEn: ["Planning", "Frontend"],
     goals: [
@@ -579,6 +647,8 @@ export const projects: Project[] = [
     subtitleEn: "Support Platform for Socially Isolated Youth",
     period: "2024.09. ~ 2024.12.",
     periodEn: "Sep 2024 — Dec 2024",
+    repo: "https://github.com/Connect-GBT/Front",
+    commitsUrl: "https://github.com/Connect-GBT/Front/commits/main/?author=tlstkdgus",
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [

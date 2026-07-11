@@ -8,12 +8,11 @@ export const profile = {
     en: "IT Planner Who Defines Problems with Data and Builds the Solution",
   },
   birth: "2001",
-  phone: "010-9194-5840",
   links: {
     email: "tlstkdgus9@naver.com",
-    blog: "",
+    blog: "https://velog.io/@tlstkdgus",
     github: "https://github.com/tlstkdgus",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/%EC%8B%A0%EC%83%81%ED%98%84",
   },
   education: [
     {

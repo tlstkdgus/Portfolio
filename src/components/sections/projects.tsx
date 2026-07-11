@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { m, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Github, ExternalLink, GitCommitHorizontal } from "lucide-react";
 import { projects } from "@/data/projects";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -254,6 +254,44 @@ export function Projects() {
                               images={project.images}
                               alt={headingLabel(project)}
                             />
+                          </div>
+                        )}
+
+                        {(project.repo || project.url || project.commitsUrl) && (
+                          <div className="flex flex-wrap gap-2 pt-1">
+                            {project.url && (
+                              <a
+                                href={project.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-accent/40 hover:text-accent"
+                              >
+                                <ExternalLink className="h-3.5 w-3.5" />
+                                Live
+                              </a>
+                            )}
+                            {project.repo && (
+                              <a
+                                href={project.repo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-accent/40 hover:text-accent"
+                              >
+                                <Github className="h-3.5 w-3.5" />
+                                GitHub
+                              </a>
+                            )}
+                            {project.commitsUrl && (
+                              <a
+                                href={project.commitsUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-accent/40 hover:text-accent"
+                              >
+                                <GitCommitHorizontal className="h-3.5 w-3.5" />
+                                {isKo ? "내 커밋 보기" : "My Commits"}
+                              </a>
+                            )}
                           </div>
                         )}
 

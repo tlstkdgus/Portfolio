@@ -4,6 +4,8 @@
 
 # 신상현 포트폴리오
 
+**Live**: https://portfolio-tlstkdgus.vercel.app
+
 **PM/PO를 꿈꾸는 신상현의 포트폴리오입니다.**
 
   
@@ -22,7 +24,6 @@
 안녕하세요, PM/PO가 되기 위해 노력 중인 **신상현**입니다.
 보이지 않는 세상의 속도와 변화에 적응하기 위해 다양한 경험을 쌓아가며 성장하고 있습니다.
 
-- 📱 **Phone**: 010-9194-5840
 - 📧 **Email**: [tlstkdgus9@naver.com](mailto:tlstkdgus9@naver.com)
 - 🔗 **GitHub**: [https://github.com/tlstkdgus](https://github.com/tlstkdgus)
 
