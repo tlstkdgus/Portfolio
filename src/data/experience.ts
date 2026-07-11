@@ -16,29 +16,6 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    company: "CleanB (RoomiClean)",
-    companyEn: "CleanB (RoomiClean)",
-    role: "전체 PM · 프론트엔드 · 디자인",
-    roleEn: "Overall PM · Frontend · Design",
-    team: "에어비앤비 청소 매칭 플랫폼",
-    teamEn: "Airbnb Cleaning Matching Platform",
-    period: "2025.12. ~ 현재",
-    periodEn: "Dec 2025 — Present",
-    startDate: "2025-12",
-    endDate: null,
-    description: [
-      "에어비앤비 청소 매칭 서비스의 전체 PM. 기획과 디자인을 잡고, 청소자용 화면은 직접 개발",
-      "PR 170개+ 저장소의 코드 리뷰와 릴리스 머지, 배포·QA 프로세스 관리",
-      "Docker·GitHub Actions·CDN으로 구성한 배포 환경에서 실서비스 운영 중",
-    ],
-    descriptionEn: [
-      "Overall PM for an Airbnb cleaning matching platform — leading planning, design, and release management while building the cleaner-side frontend",
-      "Responsible for merging features, CI workflows, QA, and prod releases across a 170+ PR repository",
-      "Operating a live service on Docker Compose, Caddy, GitHub Actions, and CDN infrastructure",
-    ],
-    tags: ["PM", "Next.js", "TypeScript", "CI/CD", "Product"],
-  },
-  {
     company: "멋쟁이사자처럼",
     companyEn: "LIKELION",
     role: "커뮤니티 매니저 인턴",
@@ -62,6 +39,29 @@ export const experiences: Experience[] = [
       "Producing announcements and SNS content, automating ops workflows; national hackathon upcoming",
     ],
     tags: ["Community", "Event Ops", "Content", "Automation"],
+  },
+  {
+    company: "CleanB (RoomiClean)",
+    companyEn: "CleanB (RoomiClean)",
+    role: "전체 PM · 프론트엔드 · 디자인",
+    roleEn: "Overall PM · Frontend · Design",
+    team: "에어비앤비 청소 매칭 플랫폼",
+    teamEn: "Airbnb Cleaning Matching Platform",
+    period: "2025.12. ~ 현재",
+    periodEn: "Dec 2025 — Present",
+    startDate: "2025-12",
+    endDate: null,
+    description: [
+      "에어비앤비 청소 매칭 서비스의 전체 PM. 기획과 디자인을 잡고, 청소자용 화면은 직접 개발",
+      "PR 170개+ 저장소의 코드 리뷰와 릴리스 머지, 배포·QA 프로세스 관리",
+      "Docker·GitHub Actions·CDN으로 구성한 배포 환경에서 실서비스 운영 중",
+    ],
+    descriptionEn: [
+      "Overall PM for an Airbnb cleaning matching platform — leading planning, design, and release management while building the cleaner-side frontend",
+      "Responsible for merging features, CI workflows, QA, and prod releases across a 170+ PR repository",
+      "Operating a live service on Docker Compose, Caddy, GitHub Actions, and CDN infrastructure",
+    ],
+    tags: ["PM", "Next.js", "TypeScript", "CI/CD", "Product"],
   },
   {
     company: "SSAFY 15기",
