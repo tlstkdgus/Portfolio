@@ -122,14 +122,15 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "처음에는 '직원 편의'를 Pain Point로 설정했지만, 인터뷰를 통해 실제 Pain Point가 '회계담당자의 수기 전표 작성'임을 발견하고 솔루션을 재정의했습니다. 가설은 현장에서 깨진다는 것을 체감했습니다.",
+        text: "처음 가설은 '직원이 결제하기 불편하다'였습니다. 회계담당자 인터뷰에서 이 가설이 깨졌습니다 — 진짜 고통은 결제가 아니라 결제 이후의 수기 전표 작성에 있었습니다. 기획 방향을 통째로 바꿨고, 그 피벗이 결과로 이어졌습니다.",
         textEn:
-          "Initially set 'employee convenience' as the Pain Point, but interviews revealed the real Pain Point was 'accountants manually entering vouchers.' Re-defined the solution. Felt firsthand that hypotheses break in the field.",
+          "Our first hypothesis was 'payment is inconvenient for employees.' Interviews with accountants broke it — the real pain was the manual voucher entry after payment. We rewrote the plan, and that pivot led to the result.",
       },
+      // TODO(상현): 심사 때 실제 받았던 질문이 기억나면 한 줄 추가하면 더 진짜같아짐
       {
-        text: "기술적 참신함(FIDO2, Flow ID)과 명확한 수익 모델(기업 구독 + 거래 수수료)을 함께 제시했을 때 심사위원의 신뢰를 얻을 수 있었습니다. B2B 사업에서는 '기술'보다 '비즈니스 모델의 현실성'이 더 강력한 무기입니다.",
+        text: "심사에서 반응이 온 건 FIDO2 같은 기술이 아니라 '기업 구독 + 거래 수수료'라는 수익 구조였습니다. B2B에서는 기술의 참신함보다 돈이 도는 구조의 현실성이 먼저라는 걸 그때 알았습니다.",
         textEn:
-          "Presenting both technical novelty (FIDO2, Flow ID) and a clear revenue model (enterprise subscription + transaction fees) together earned judges' trust. In B2B, 'business model realism' is a more powerful weapon than 'technology.'",
+          "What judges responded to wasn't the tech like FIDO2 — it was the 'subscription + transaction fee' revenue structure. In B2B, a realistic money flow beats technical novelty.",
       },
     ],
   },
@@ -199,14 +200,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "공공 서비스 영역에서 AI를 활용할 때, '추천 알고리즘의 정확도'보다 '사용자가 추천을 신뢰하고 행동으로 이어지는 UX'가 더 중요하다는 것을 배웠습니다.",
+        text: "추천 정확도를 올리는 것보다, 추천 결과를 보고 실제로 가게에 가게 만드는 화면이 더 어려웠습니다. 지도에서 가맹점이 한눈에 들어오게 만드는 일이 알고리즘보다 사용성을 좌우했습니다.",
         textEn:
-          "When applying AI in public services, learned that 'UX that makes users trust and act on recommendations' matters more than 'recommendation algorithm accuracy.'",
+          "Improving recommendation accuracy was easier than building a screen that makes people actually visit the store. Making merchants legible on the map mattered more than the algorithm.",
       },
       {
-        text: "지역 경제 활성화라는 거시적 목표를 개인 사용자의 혜택(가까운 가맹점, 할인 정보)으로 구체화하는 과정이 서비스 기획의 핵심 역량임을 경험했습니다.",
+        text: "'지역 경제 활성화'는 심사용 문구일 뿐, 사용자에게는 '내 주변 어디서 할인받지?'가 전부였습니다. 거시 목표를 개인의 혜택으로 번역하는 게 기획의 일이라는 걸 배운 프로젝트입니다.",
         textEn:
-          "Experienced that translating the macro goal of local economic revitalization into concrete individual user benefits (nearby merchants, discount info) is the core PM competency.",
+          "'Revitalizing the local economy' is a phrase for judges; for users it was just 'where near me do I get a discount?' Translating macro goals into personal benefits is the planner's job.",
       },
     ],
   },
@@ -300,14 +301,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "의료 AI는 '기술적 참신함'보다 '현장의 문제를 얼마나 정확히 파악했는가'와 '실현 가능한 사업화 로드맵'이 성공을 결정합니다. 78.1% 사망률이라는 데이터에서 출발해 QUS 기술을 마취 분야에 연결한 것이 기획의 설득력을 만들었습니다.",
+        text: "의료 AI는 4일짜리 해커톤으로 기술을 이해할 수 있는 분야가 아니었습니다. 대신 '마취 사고'라는 문제에서 출발해 누가, 언제, 왜 위험해지는지를 파고들었고, 기술(QUS)은 그 답에 맞춰 배치했습니다. 문제가 선명하면 기술 이해가 얕아도 기획이 섭니다.",
         textEn:
-          "Medical AI success is determined less by 'technological novelty' and more by 'how accurately you identified field problems' and 'whether the commercialization roadmap is feasible.' Starting from the 78.1% mortality rate data and connecting QUS technology to anesthesia created the planning's persuasiveness.",
+          "Four days isn't enough to understand medical AI tech. So we started from the problem — who gets hurt, when, and why — and placed the technology (QUS) around that answer. A sharp problem carries a plan even when tech depth is shallow.",
       },
       {
-        text: "복잡한 기술 컨셉을 '누가 얼마나 편해지는가'로 번역하는 것이 4일 해커톤에서 가장 중요했습니다. 규제(FDA/CE)를 리스크가 아닌 OEM 수익원으로 전환한 BM 설계가 '실현 가능성'의 핵심이었습니다.",
+        text: "FDA/CE 규제를 리스크 목록에 넣는 대신 OEM 파트너십의 수익원으로 뒤집어 제시했을 때 반응이 달라졌습니다. 규제는 피하는 게 아니라 설계에 넣는 것이었습니다.",
         textEn:
-          "Translating complex technology concepts into 'who benefits and by how much' was the most important skill in the 4-day hackathon. Converting regulation (FDA/CE) into an OEM revenue stream rather than a risk was the key to demonstrating feasibility.",
+          "The response changed when we flipped FDA/CE regulation from a risk item into an OEM revenue source. Regulation isn't something to dodge — it's something to design in.",
       },
     ],
   },
@@ -404,14 +405,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "사회 문제를 발견하고 기술로 해결하는 과정에서 '왜 지금까지 없었는가'를 분석하는 것이 중요합니다. TCP는 기술적 실현 가능성과 시장성을 동시에 검증하며, 아이디어를 구체적인 비즈니스 모델로 발전시키는 경험을 제공했습니다.",
+        text: "131명 설문에서 나온 '93%가 약관을 읽지 않는다'는 숫자 하나가 발표의 절반을 해줬습니다. 주장을 데이터로 바꾸는 비용은 생각보다 낮았습니다 — 설문 하나면 됐습니다.",
         textEn:
-          "When solving social problems with technology, analyzing 'why hasn't this existed before' is crucial. TCP gave me experience validating both technical feasibility and market potential while developing an idea into a concrete business model.",
+          "One number from our 131-person survey — '93% don't read the terms' — did half the pitch for us. Turning claims into data was cheaper than expected: one survey.",
       },
       {
-        text: "131명의 설문 데이터라는 정량적 근거가 '93%'라는 강력한 메시지가 되어 심사위원과 투자자를 설득하는 핵심 무기가 된다는 것을 배웠습니다. 기획자의 주장은 데이터로 뒷받침될 때 비로소 설득력을 갖습니다.",
+        text: "'왜 지금까지 이런 서비스가 없었지?'를 파는 과정에서 더 많이 배웠습니다. 없는 데는 이유가 있었고(법률 해석 리스크, 약관 텍스트 접근성), 그 이유를 하나씩 반박할 수 있을 때에만 블루오션이라 부를 수 있었습니다.",
         textEn:
-          "Learned that quantitative evidence from 131 survey responses became the powerful message '93%' — the core weapon to persuade judges and investors. A planner's argument only gains persuasive power when backed by data.",
+          "Digging into 'why doesn't this exist yet?' taught us more. There were reasons (legal-interpretation risk, access to terms text) — and only after rebutting each one could we call it a blue ocean.",
       },
     ],
   },
@@ -476,10 +477,11 @@ export const careerDetailSections: CareerDetailSection[] = [
       },
     ],
     lessons: [
+      // TODO(상현): 실제로 잘라낸 기능이 뭐였는지 기억나면 괄호로 추가
       {
-        text: "짧은 해커톤 기간 내에 '완벽한 기능'보다 '핵심 가치를 전달하는 최소 기능'에 집중하는 것이 완성도 높은 결과물로 이어진다는 것을 경험했습니다. MVP 사고방식의 중요성을 체감했습니다.",
+        text: "마감 몇 시간을 앞두고 기능을 더 붙일지, 있는 걸 다듬을지 골라야 했습니다. 붙이고 싶은 기능 목록을 지우고 핵심 플로우 하나를 끝까지 다듬는 쪽을 택했고, 그게 완성도로 이어졌습니다. MVP는 전략이라기보다 시간이 강제하는 규율이었습니다.",
         textEn:
-          "Experienced that focusing on 'minimum features that deliver core value' rather than 'perfect features' within a short hackathon timeframe leads to a higher-quality deliverable. Felt the importance of MVP thinking.",
+          "Hours before the deadline we had to choose: add features or polish what exists. We deleted the wishlist and polished one core flow to the end — that became the finish quality. MVP was less a strategy than a discipline forced by time.",
       },
     ],
   },
@@ -577,14 +579,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "AI 기술을 단순히 도입하는 것이 아니라, 사용자 경험 관점에서 어떻게 자연스럽게 녹여낼지가 핵심이라는 것을 배웠습니다. STT의 딜레이, TTS의 어색함 등 기술적 한계를 UX 설계로 보완하는 과정이 PM의 역할이었습니다.",
+        text: "STT가 답변을 텍스트로 바꾸는 데 몇 초씩 걸렸습니다. 기술로는 줄일 수 없는 시간이라, 그 정적을 타이머와 진행 표시로 채웠습니다. 기술의 한계를 인정하고 UX로 감싸는 법을 처음 연습한 프로젝트입니다.",
         textEn:
-          "Learned that the key is not just adopting AI technology, but seamlessly integrating it from a UX perspective. Compensating for technical limitations — STT delay, awkward TTS — through UX design was the PM's role.",
+          "STT took seconds to transcribe each answer — time we couldn't shrink with tech. So we filled the silence with a timer and progress cues. This was my first practice in accepting a technical limit and wrapping it in UX.",
       },
       {
-        text: "기획자로서 개발팀과 '구현 가능한 것'과 '이상적인 것' 사이의 균형을 조율하는 경험을 했습니다. GPT fine-tuning 범위와 STT 정확도 등 기술적 제약을 이해하고 기획에 반영하는 것이 중요했습니다.",
+        text: "GPT fine-tuning 범위를 놓고 개발팀과 계속 조율했습니다. '이상적인 질문 생성'과 '기한 안에 되는 것' 사이에서 스코프를 자르는 일, 그게 PM 역할의 실체였습니다.",
         textEn:
-          "As a planner, I gained experience balancing 'what's implementable' vs. 'what's ideal' with the dev team. Understanding technical constraints — GPT fine-tuning scope, STT accuracy — and incorporating them into planning was critical.",
+          "We kept negotiating the GPT fine-tuning scope with the dev team. Cutting scope between 'ideal question generation' and 'what ships on time' — that was the real substance of the PM role.",
       },
     ],
   },
@@ -665,14 +667,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "문제를 '사용자의 행동 흐름(가격 비교 → 탐색 → 구매)' 관점으로 정의하면, 필요한 기능이 자연스럽게 UX 가치로 연결된다는 점을 배웠습니다. 기술(OCR, AI)은 이 흐름을 원활하게 하는 수단이어야 합니다.",
+        text: "기능 목록이 아니라 '가격 비교 → 탐색 → 구매'라는 행동 흐름부터 그렸더니 필요한 기능이 저절로 추려졌습니다. OCR도 AI도 그 흐름을 매끄럽게 하는 부품일 뿐이었습니다.",
         textEn:
-          "Learned that framing a problem as a user's behavior flow (price compare → discover → purchase) naturally maps features to UX value. Technology (OCR, AI) should be a means to smooth this flow.",
+          "Drawing the behavior flow first — compare price, explore, buy — filtered the feature list by itself. OCR and AI were just parts that smooth that flow.",
       },
       {
-        text: "지자체·전통시장·소비자 세 이해관계자의 니즈를 동시에 충족시키는 서비스를 설계하는 과정에서 멀티 스테이크홀더 기획 역량을 키웠습니다.",
+        text: "지자체·상인회·소비자가 원하는 게 전부 달랐습니다. 셋을 동시에 만족시키는 기능은 없어서, B2C에서 시작해 B2G로 넓히는 3단계 확장 전략으로 순서를 나눠 풀었습니다.",
         textEn:
-          "Developed multi-stakeholder planning capabilities through designing a service that simultaneously meets the needs of three parties: local government, traditional market merchants, and consumers.",
+          "The district office, merchants, and consumers all wanted different things. No single feature satisfied all three, so we sequenced it: a three-stage expansion from B2C to B2G.",
       },
     ],
   },
@@ -729,11 +731,10 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "기술의 참신함(AR)보다 그 기술이 해결하는 사용자 문제(구매 전 공간 시각화)가 핵심 가치임을 배웠습니다. 기술은 솔루션의 수단이지 목적이 아닙니다.",
+        text: "AR이라는 기술이 먼저 있었고 문제를 나중에 찾은 프로젝트라 초반에 방향이 계속 흔들렸습니다. '구매 전에 내 방에 놓아보고 싶다'는 문제 문장을 확정한 뒤에야 기획이 섰습니다. 기술 주도로 시작하면 문제 정의로 되돌아오는 비용이 큽니다.",
         textEn:
-          "Learned that the user problem solved by technology (space visualization before purchase) is more valuable than the novelty of the technology (AR) itself. Technology is a means, not the end goal.",
+          "The tech (AR) came first and the problem later, so the direction kept wobbling early on. Only after fixing the problem statement — 'I want to place it in my room before buying' — did the plan stand. Starting tech-first makes the trip back to problem definition expensive.",
       },
-     
     ],
   },
 
@@ -818,14 +819,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "의료·헬스케어 도메인에서는 학회 자료·통계 등 공신력 있는 데이터를 기획의 출발점으로 삼는 것이 신뢰도와 차별성을 동시에 확보하는 방법임을 배웠습니다.",
+        text: "당뇨병학회의 식품교환표를 기획의 뼈대로 삼으니 '이 계산이 왜 맞는데?'라는 질문에 답할 수 있었습니다. 헬스케어에서는 출처가 곧 신뢰였습니다.",
         textEn:
-          "In healthcare, grounding planning in credible sources — academic papers and statistics — simultaneously secures credibility and differentiation.",
+          "Building on the Diabetes Association's food exchange table meant we could answer 'why is this calculation right?' In healthcare, the source is the trust.",
       },
       {
-        text: "식품교환표라는 의학적 개념을 사용자가 이해하기 쉬운 UX로 풀어내는 과정에서, 도메인 지식을 서비스로 번역하는 것이 PM의 핵심 역량임을 실감했습니다.",
+        text: "식품교환표를 그대로 보여주면 아무도 못 씁니다. 키·몸무게 입력 → 개인 교환표 자동 생성 → 식단 추천으로 단계를 감췄습니다. 도메인 지식을 UX 뒤로 숨기는 것이 이 프로젝트에서 배운 기획의 핵심입니다.",
         textEn:
-          "Through the process of translating the medical concept of a food exchange table into an understandable UX, I experienced firsthand that translating domain knowledge into service is the core PM competency.",
+          "Show the raw exchange table and nobody can use it. We hid the steps: enter height/weight, auto-generate a personal table, then recommend meals. Hiding domain knowledge behind UX was the core lesson.",
       },
     ],
   },
@@ -909,14 +910,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "데이터 기반 문제 정의(통계 → Pain Point → 솔루션)가 기획의 설득력을 높이는 핵심임을 배웠습니다. '젊은 층 허리디스크 급증'이라는 데이터가 없었다면 문제의 심각성을 전달하기 어려웠을 것입니다.",
+        text: "'젊은 층 허리디스크 급증'이라는 심평원 통계가 없었다면 아이디어 소개에서 끝났을 겁니다. 문제의 심각성은 말이 아니라 숫자가 전달합니다.",
         textEn:
-          "Learned that data-driven problem definition (statistics → Pain Point → solution) is the key to persuasive planning. Without the data on 'surging back disc cases among young people,' conveying the severity of the problem would have been difficult.",
+          "Without the HIRA statistics on spinal disc cases surging among young people, this would have ended as just an idea. Numbers, not words, carry the severity of a problem.",
       },
       {
-        text: "PM으로서 개발팀, 디자인팀과 '기술적으로 가능한 범위'를 협의하고 우선순위를 조정하는 역할의 중요성을 실감했습니다. 좋은 아이디어를 실현 가능한 수준으로 구체화하는 것이 PM의 핵심 역할입니다.",
+        text: "16일 안에 시장조사부터 프로토타입까지 가려면 무엇을 버릴지가 전부였습니다. 6인 팀에서 우선순위를 정하고 설득하는 일 — PM 역할의 실체를 처음 체감한 프로젝트입니다.",
         textEn:
-          "As PM, realized the importance of coordinating with dev and design teams on 'technically feasible scope' and adjusting priorities. The core PM role is translating good ideas into realizable specifics.",
+          "Getting from market research to prototype in 16 days was all about what to drop. Setting priorities and persuading a six-person team — my first taste of what PM work actually is.",
       },
     ],
   },
@@ -1010,14 +1011,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "사용자의 기존 행동(손글씨 메모)을 그대로 인터페이스로 가져온 것이 차별화의 핵심이었습니다. 취약 계층을 위한 서비스일수록 기술의 완성도보다 '사용자가 틀릴 수 없는 구조'를 만드는 것이 중요합니다.",
+        text: "시니어에게 새로운 사용법을 가르치는 대신, 이미 하던 행동 — 계좌번호를 손글씨로 메모하는 습관 — 을 그대로 인터페이스로 만들었습니다. 취약계층 서비스는 사용자에게 학습을 요구하는 순간 지는 게임이라는 게 이 프로젝트의 결론입니다.",
         textEn:
-          "Taking the user's existing behavior (handwritten memo) directly as the interface was the key differentiator. For services targeting vulnerable populations, creating a 'structure where users can't make mistakes' matters more than technical completeness.",
+          "Instead of teaching seniors a new way, I turned what they already do — jotting account numbers by hand — into the interface. For vulnerable users, the moment a service demands learning, it loses.",
       },
       {
-        text: "OCR 인식률 한계를 인정하고 앙상블 방식과 사용자 검증 UI로 보완한 것처럼, 기술 한계를 UX로 보완하는 설계 사고가 금융 수준의 신뢰성 확보로 이어졌습니다. 규제(금감원 의무화)를 B2B 수익원으로 전환한 것도 같은 맥락입니다.",
+        text: "OCR 인식률의 한계를 인정하는 데서 설계가 시작됐습니다. 인식 결과를 큰 글씨로 재확인하는 단계를 넣고 앙상블로 보정했습니다. '틀릴 수 있는 기술'을 '틀릴 수 없는 구조'로 감싸는 것이 금융 서비스의 신뢰라고 생각합니다.",
         textEn:
-          "Just as OCR limitations were compensated with ensemble methods and user verification UI, design thinking that compensates for technical limits through UX led to financial-grade trustworthiness. Turning regulation (FSS mandate) into a B2B revenue stream follows the same logic.",
+          "The design started by accepting OCR's error rate: an oversized confirmation step for the recognized number, plus ensemble correction. Wrapping fallible tech in an infallible structure — that's trust in financial services.",
       },
     ],
   },
@@ -1110,14 +1111,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "사회적 약자를 대상으로 하는 서비스는 '접근성'이 곧 핵심 가치임을 배웠습니다. '비대면·익명'이라는 설계 원칙 하나가 타겟 사용자의 진입 장벽을 결정적으로 낮추는 요소가 되었습니다.",
+        text: "'비대면·익명'이라는 원칙 하나가 서비스 전체를 결정했습니다. 은둔 청년에게는 좋은 프로그램보다 문턱 낮은 입구가 먼저였고, 실제로 테스트에서 가장 높은 9.4점을 받은 것도 가장 부담 없는 기능인 주간 인증 챌린지였습니다.",
         textEn:
-          "Learned that for services targeting vulnerable populations, accessibility is the core value. The single design principle of 'non-face-to-face and anonymous' decisively lowered entry barriers for target users.",
+          "One principle — contactless and anonymous — decided the whole service. For reclusive youth, a low doorstep beats a good program; fittingly, the least demanding feature, the weekly check-in challenge, scored highest (9.4) in testing.",
       },
       {
-        text: "시장 테스트 결과에서 가격 적정성(38.5% 조정 필요)이라는 피드백을 받아 구독료를 하향 조정한 경험을 통해, 데이터 기반 의사결정이 서비스 완성도를 높인다는 것을 실감했습니다.",
+        text: "시장 테스트에서 38.5%가 가격이 부담된다고 답해 구독료를 내렸습니다. 26명짜리 작은 테스트였지만, 내 가설보다 사용자 응답을 따르는 연습으로는 충분했습니다.",
         textEn:
-          "After receiving market test feedback that 38.5% found pricing needed adjustment, I reduced subscription fees — experiencing firsthand that data-driven decision-making improves service quality.",
+          "38.5% of testers said the price was a burden, so we lowered the subscription fee. A small 26-person test — but enough practice in following user responses over my own hypothesis.",
       },
     ],
   },
@@ -1159,9 +1160,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "사회 문제를 설득력 있게 전달하려면 임팩트 지표와 수익 모델을 동시에 보여줘야 한다는 점을 배웠습니다.",
+        text: "사회적 가치만 말하면 '좋은 일 하시네요'로 끝나고, 수익 모델만 말하면 차갑게 들립니다. 임팩트 지표와 돈 버는 구조를 같은 슬라이드에 올렸을 때 심사위원의 태도가 달라졌습니다.",
         textEn:
-          "Learned that persuasive social-impact pitches pair impact metrics with a credible revenue model.",
+          "Talk only social value and you get 'what nice work'; talk only revenue and it sounds cold. Judges changed their posture when impact metrics and the money structure shared one slide.",
       },
     ],
   },
@@ -1199,9 +1200,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "짧은 기간 안에 사용자 흐름을 단순하게 유지한 것이 완성도로 이어졌습니다.",
+        text: "짧은 기간에 완성도를 만든 방법은 기능을 줄이는 것이었습니다. 처음 그린 화면 흐름에서 곁가지를 계속 쳐냈고, 단순하게 남긴 흐름이 미니프로젝트 최우수상으로 이어졌다고 생각합니다.",
         textEn:
-          "Keeping user flows simple within a tight timeline improved perceived polish.",
+          "The way to reach polish in a short period was cutting features. I kept pruning branches off the initial flow, and the simplicity that remained is what won the top prize.",
       },
     ],
   }

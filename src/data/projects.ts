@@ -43,18 +43,18 @@ export const projects: Project[] = [
     repo: "https://github.com/RoomiClean/Frontend",
     commitsUrl: "https://github.com/RoomiClean/Frontend/commits?author=tlstkdgus",
     goals: [
-      "에어비앤비 호스트와 청소 노동자를 연결하는 매칭 플랫폼을 기획하고, 요청부터 작업 완료까지 이어지는 청소 운영 플로우를 제품화",
-      "학생 프로젝트 수준을 넘어 실운영 가능한 배포·QA·릴리스 체계 구축",
+      "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들고 있습니다",
+      "해커톤처럼 만들고 끝나는 게 아니라, 실제 사용자를 받는 서비스로 운영하는 것이 목표",
     ],
     goalsEn: [
       "Productize the full cleaning operation flow — from request to completion — connecting Airbnb hosts with cleaners",
       "Build a production-grade deployment, QA, and release pipeline beyond student-project scope",
     ],
     contents: [
-      "전체 PM으로서 PR 170개+ 규모 저장소의 기능·CI 워크플로·QA·prod 릴리스 머지 총괄",
-      "청소자(Cleaner) 작업 진행 도메인 구현: 작업 요청 목록 → 진행 관리 → 완료 페이지의 UI·API·타입 설계",
-      "카카오맵·SGIS 기반 지도 검색, Firebase Web Push 알림 등 실서비스 연동",
-      "아토믹 디자인 컴포넌트 구조와 QA용 data-testid 체계 도입",
+      "전체 PM을 맡아 기능 개발부터 배포까지의 우선순위를 정하고, PR 170개가 넘는 저장소의 코드 리뷰와 릴리스 머지를 담당",
+      "청소자가 쓰는 화면 전체를 개발: 작업 요청을 받고, 진행 상황을 관리하고, 완료를 보고하는 흐름의 UI와 API 연동",
+      "카카오맵 기반 지도 검색, Firebase 웹 푸시 알림 등 실서비스에 필요한 연동 작업",
+      "컴포넌트 구조(아토믹 디자인)와 QA 테스트 규칙(data-testid)을 정해 팀의 코드 일관성 유지",
     ],
     contentsEn: [
       "As overall PM, managed merges for features, CI workflows, QA, and prod releases across a 170+ PR repository",
@@ -63,16 +63,16 @@ export const projects: Project[] = [
       "Introduced atomic design component architecture and data-testid QA conventions",
     ],
     decisions: [
-      "운영 배포를 k3s/ArgoCD에서 Docker Compose + Caddy로 전환하여 소규모 팀에 맞는 운영 복잡도로 조정",
-      "Next.js 정적 청크를 CDN(CloudFront)에서 서빙하도록 분리하여 배포 안정성과 로딩 속도 확보",
+      "처음엔 k3s/ArgoCD로 배포했지만 3인 팀에겐 과했습니다. Docker Compose + Caddy로 단순화해 유지보수 부담을 줄임",
+      "배포 중 페이지가 깨지는 문제를 해결하려고 정적 파일을 CDN(CloudFront)으로 분리",
     ],
     decisionsEn: [
       "Migrated production deployment from k3s/ArgoCD to Docker Compose + Caddy, matching ops complexity to team size",
       "Served Next.js static chunks from a CDN (CloudFront) for deployment stability and load speed",
     ],
     results: [
-      "GitHub Actions 기반 자동 배포 파이프라인과 다중 EC2 운영 환경에서 실서비스 운영 중",
-      "기획·디자인·개발·배포·QA 전 사이클을 팀과 함께 운영하는 진행형 프로젝트",
+      "GitHub Actions 자동 배포로 EC2 여러 대에 서비스 운영 중",
+      "기획, 디자인, 개발, 배포, QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트",
     ],
     resultsEn: [
       "Running a live service on GitHub Actions-based auto-deployment across multiple EC2 instances",
