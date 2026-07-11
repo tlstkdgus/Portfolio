@@ -28,14 +28,12 @@ export const experiences: Experience[] = [
     endDate: null,
     description: [
       "전국 80개 대학, 2,500여 명 규모의 멋쟁이사자처럼 대학(유니브) 커뮤니티 운영·관리",
-      "14기 중앙 아이디어톤 운영 — 1,822명·378개 프로젝트 규모, 3단계 심사(100팀→10팀→TOP 3) 한 달간 진행",
-      "커뮤니티팀의 실시간 Q&A·문의 대응 체계가 전 운영 항목 중 최고 만족도(75.9%) 기록, 행사 만족도 4.44/5·불만족 응답 0건",
-      "공지·SNS 콘텐츠 제작과 플랫폼 기반 운영 워크플로우 자동화, 중앙 해커톤 운영 예정",
+      "전국 단위 연합 아이디어톤 운영 참여 (1,822명·378개 프로젝트 규모), 실시간 Q&A·문의 대응 담당",
+      "공지·SNS 콘텐츠 제작과 플랫폼 기반 운영 업무 자동화, 중앙 해커톤 운영 예정",
     ],
     descriptionEn: [
       "Managing the nationwide LIKELION Univ. community — 80 universities, ~2,500 members",
-      "Operated the 14th National Ideathon: 1,822 participants, 378 projects, three-stage judging (100 → 10 → Top 3) over one month",
-      "Community team's real-time Q&A and response system scored highest satisfaction (75.9%) among all ops categories; event satisfaction 4.44/5 with zero dissatisfied responses",
+      "Helped operate the national ideathon (1,822 participants, 378 projects); handled real-time Q&A and inquiries",
       "Producing announcements and SNS content, automating ops workflows; national hackathon upcoming",
     ],
     tags: ["Community", "Event Ops", "Content", "Automation"],
