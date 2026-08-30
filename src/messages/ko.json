@@ -1,55 +1,51 @@
 {
   "nav": {
     "about": "소개",
-    "experience": "경험",
-    "certified": "자격·수상",
-    "speaking": "발표·커뮤니티",
+    "experience": "경력",
     "projects": "프로젝트",
-    "contact": "연락처",
-    "career-highlights": "포트폴리오"
+    "certified": "자격·수상",
+    "contact": "연락처"
   },
   "hero": {
     "name": "신상현",
-    "title": "데이터로 문제를 정의하고, 직접 구현하는 IT 기획자",
-    "subtitle": "기획서로 끝내지 않고 직접 만들어 배포합니다. 지금까지 15개 서비스를 만들었고, 지금은 실서비스를 팀과 함께 운영하며 배우고 있습니다.",
-    "cta_resume": "포트폴리오",
+    "title": "데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자",
+    "subtitle": "기획서로 끝내지 않습니다. 문제를 숫자로 정의하고, Figma로 화면을 그리고, React·Next.js로 직접 구현해 사용자에게 내보냅니다. 지금은 에어비앤비 청소 매칭 서비스 CleanB의 PM으로 실서비스를 운영하고 있습니다.",
+    "cta_resume": "프로젝트 보기",
     "cta_contact": "연락하기"
   },
   "about": {
-    "heading": "About",
-    "description_1": "창업 IR 피칭부터 해커톤까지, 11회 수상·15개 서비스를 직접 기획·개발·배포했습니다. 아이디어가 실제 사용자에게 닿는 전 과정을 이끄는 기획자를 향해 노력하고 있습니다.",
-    "description_2": "데이터로 문제를 정의하고, Figma로 화면을 설계하고, React·TypeScript·Next.js로 직접 구현합니다. 지금은 멋쟁이사자처럼 커뮤니티 매니저 인턴으로 전국 80개 대학·2,500여 명 커뮤니티를 운영하고 있고, SSAFY 15기 Java 트랙에서 백엔드·QA 등 부족한 부분을 채우고 있습니다.",
-    "description_3": "실제로 쓰이는 서비스, 데이터로 검증된 의사결정, 팀이 함께 성장하는 프로젝트 — 이 세 가지를 동시에 만드는 PM이 목표입니다.",
+    "heading": "소개",
+    "now_label": "지금",
+    "description_1": "멋쟁이사자처럼 커뮤니티 매니저 인턴으로 전국 80개 대학, 2,500여 명 규모의 커뮤니티를 운영하고 있습니다. 동시에 3인 팀 CleanB의 PM으로 기획·디자인·릴리스를 맡고, 청소자용 화면은 직접 개발합니다.",
+    "description_2": "학부에서 경영(GBT)과 AI 융합전공을 함께 했고, 멋쟁이사자처럼 운영진·해커톤·창업 프로그램을 거치며 15개 서비스를 기획하고 만들었습니다. 그중 11개가 교내외 대회에서 수상했습니다. 부족한 백엔드·QA 역량은 SSAFY 15기 Java 트랙에서 채우는 중입니다.",
+    "description_3": "실제로 쓰이는 서비스, 데이터로 검증된 의사결정, 팀이 함께 성장하는 프로젝트. 이 세 가지를 같이 만드는 PM이 되는 게 목표입니다.",
+    "education_label": "학력",
+    "keywords_label": "잘하는 것",
     "keywords": [
-      "PM/PO",
-      "데이터 기반 문제 정의",
-      "사용자 리서치 & 설문 설계",
-      "IR 피칭 & BM 설계",
-      "React · Next.js · TypeScript",
+      "문제 정의 · 사용자 리서치",
+      "IR 피칭 · BM 설계",
       "Figma 와이어프레임",
-      "ADsP · SQLD",
-      "프로젝트 리드 (7+)"
+      "React · Next.js · TypeScript",
+      "SQLD · ADsP"
     ]
   },
   "experience": {
-    "heading": "Experience"
+    "heading": "경력"
   },
   "certified": {
-    "heading": "Certified",
+    "heading": "자격 · 수상",
     "certifications": "자격증",
     "awards": "수상"
   },
-  "speaking": {
-    "heading": "Speaking & Community",
-    "talks": "발표·강의",
-    "community": "커뮤니티"
-  },
   "projects": {
-    "heading": "Projects"
+    "heading": "프로젝트",
+    "featured_label": "대표 프로젝트",
+    "others_label": "그 외 프로젝트",
+    "detail_link": "전체 프로젝트 상세 보기"
   },
   "contact": {
-    "heading": "Contact",
-    "description": "협업, 프로젝트, 채용 등 편하게 연락 주시면 감사하겠습니다.",
+    "heading": "연락처",
+    "description": "협업, 프로젝트, 채용 관련 연락은 이메일이 가장 빠릅니다.",
     "phone": "전화",
     "email": "이메일",
     "blog": "블로그",
@@ -62,8 +58,8 @@
   },
   "common": {
     "present": "현재",
-    "goal": "목표",
-    "content": "내용",
+    "goal": "문제",
+    "content": "한 일",
     "decision": "핵심 의사결정",
     "result": "성과",
     "view_slides": "발표 자료",
@@ -71,24 +67,14 @@
     "featured": "Featured",
     "active": "활동 중"
   },
-  "career_highlights": {
-    "heading": "Portfolio",
-    "overview_label": "개요",
-    "achievements_label": "주요 성과",
-    "competencies_label": "핵심 역량",
-    "cta_title": "더 자세히 알아보기",
-    "cta_description": "각 프로젝트의 배경, 수행 역할, 성과와 교훈을 확인할 수 있습니다.",
-    "cta_button": "상세 보기",
-    "self_developed_tools_label": "자체 개발 서비스"
-  },
   "career_story": {
-    "title": "포트폴리오",
-    "subtitle": "각 성과의 배경, 역할, 결과와 교훈을 확인할 수 있습니다.",
+    "title": "프로젝트 상세",
+    "subtitle": "각 프로젝트의 배경, 역할, 결과와 배운 점을 정리했습니다.",
     "back": "뒤로가기",
     "background": "배경",
     "role": "역할",
     "results": "결과 & 임팩트",
-    "lessons": "Lessons Learned",
+    "lessons": "배운 점",
     "toc": "목차"
   }
 }

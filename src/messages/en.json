@@ -2,54 +2,50 @@
   "nav": {
     "about": "About",
     "experience": "Experience",
-    "certified": "Certified",
-    "speaking": "Speaking",
     "projects": "Projects",
-    "contact": "Contact",
-    "career-highlights": "Portfolio"
+    "certified": "Credentials",
+    "contact": "Contact"
   },
   "hero": {
     "name": "Sanghyeon Shin",
-    "title": "IT Planner Who Defines Problems with Data and Builds the Solution",
-    "subtitle": "I don't stop at planning docs — I build and ship. 15 services so far, now learning by operating a live product with my team.",
-    "cta_resume": "View Portfolio",
+    "title": "IT planner who defines problems with data, then builds and ships",
+    "subtitle": "I don't stop at planning docs. I frame problems in numbers, design screens in Figma, and build them with React and Next.js. Currently PM of CleanB, an Airbnb cleaning matching service running in production.",
+    "cta_resume": "View Projects",
     "cta_contact": "Get in Touch"
   },
   "about": {
     "heading": "About",
-    "description_1": "From startup IR pitching to hackathons — 11 awards and 15 services planned, built, and shipped. Working toward becoming a planner who leads every step from idea to real users.",
-    "description_2": "I define problems with data, design screens in Figma, and build them with React, TypeScript, and Next.js. Currently a Community Manager Intern at LIKELION, running a community of ~2,500 members across 80 universities, while filling gaps in backend and QA through SSAFY's Java track.",
-    "description_3": "My goal: a PM who simultaneously ships products people actually use, makes decisions backed by data, and builds teams that grow together.",
+    "now_label": "Now",
+    "description_1": "Community Manager Intern at LIKELION, running a community of ~2,500 members across 80 universities. At the same time, PM of CleanB (3-person team) — owning planning, design, and releases while building the cleaner-side frontend myself.",
+    "description_2": "Double major in Global Business & Technology and AI Convergence. Through LIKELION staff roles, hackathons, and startup programs I've planned and built 15 services, 11 of which won awards. Currently filling gaps in backend and QA through SSAFY's Java track.",
+    "description_3": "Products people actually use, decisions backed by data, and teams that grow together — my goal is to be a PM who delivers all three at once.",
+    "education_label": "Education",
+    "keywords_label": "Strengths",
     "keywords": [
-      "PM/PO",
-      "Data-Driven Problem Definition",
-      "User Research & Survey Design",
-      "IR Pitching & BM Design",
+      "Problem framing · User research",
+      "IR pitching · BM design",
+      "Figma wireframing",
       "React · Next.js · TypeScript",
-      "Figma Wireframing",
-      "ADsP · SQLD",
-      "Project Lead (7+)"
+      "SQLD · ADsP"
     ]
   },
   "experience": {
     "heading": "Experience"
   },
   "certified": {
-    "heading": "Certified",
+    "heading": "Credentials",
     "certifications": "Certifications",
     "awards": "Awards"
   },
-  "speaking": {
-    "heading": "Speaking & Community",
-    "talks": "Talks & Lectures",
-    "community": "Community"
-  },
   "projects": {
-    "heading": "Projects"
+    "heading": "Projects",
+    "featured_label": "Featured",
+    "others_label": "Other projects",
+    "detail_link": "See all project details"
   },
   "contact": {
     "heading": "Contact",
-    "description": "Feel free to reach out for collaboration, projects, or opportunities.",
+    "description": "For collaboration, projects, or opportunities, email is the fastest way to reach me.",
     "phone": "Phone",
     "email": "Email",
     "blog": "Blog",
@@ -62,28 +58,18 @@
   },
   "common": {
     "present": "Present",
-    "goal": "Goal",
-    "content": "Content",
-    "decision": "Key Decisions",
-    "result": "Result",
+    "goal": "Problem",
+    "content": "What I did",
+    "decision": "Key decisions",
+    "result": "Results",
     "view_slides": "Slides",
     "view_video": "Watch Video",
     "featured": "Featured",
     "active": "Active"
   },
-  "career_highlights": {
-    "heading": "Portfolio",
-    "overview_label": "Overview",
-    "achievements_label": "Key Achievements",
-    "competencies_label": "Core Competencies",
-    "cta_title": "See the Full Story",
-    "cta_description": "Explore the background, role, results and lessons behind each project.",
-    "cta_button": "View Details",
-    "self_developed_tools_label": "Self-Developed Services"
-  },
   "career_story": {
-    "title": "Portfolio",
-    "subtitle": "Detailed background, role, results and lessons behind each achievement.",
+    "title": "Project Details",
+    "subtitle": "Background, role, results, and lessons behind each project.",
     "back": "Go Back",
     "background": "Background",
     "role": "Role",

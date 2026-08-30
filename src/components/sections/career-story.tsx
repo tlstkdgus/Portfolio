@@ -47,7 +47,7 @@ export function CareerStoryContent() {
       <div className="border-b border-border bg-gradient-to-b from-accent/5 to-transparent">
         <div className="mx-auto max-w-4xl px-4 pb-14 pt-28 sm:px-6 lg:px-8">
           <Link
-            href={`/${locale}/#career-highlights`}
+            href={`/${locale}/#projects`}
             className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
             aria-label={isKo ? "포트폴리오 목록으로 돌아가기" : "Go back to portfolio overview"}
           >

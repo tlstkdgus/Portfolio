@@ -4,9 +4,7 @@ import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Footer } from "@/components/layout/footer";
-import { CareerHighlights } from "@/components/sections/career-highlights";
 import { Credentials } from "@/components/sections/credentials";
-import { Speaking } from "@/components/sections/speaking";
 import { Projects } from "@/components/sections/projects";
 import { Contact } from "@/components/sections/contact";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -61,10 +59,8 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
-        <CareerHighlights />
-        <Speaking />
-        <Credentials />
         <Projects />
+        <Credentials />
         <Contact />
       </main>
       <Footer />

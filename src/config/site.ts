@@ -19,10 +19,8 @@ export const siteConfig = {
   nav: [
     "about",
     "experience",
-    "career-highlights",
-    "speaking",
-    "certified",
     "projects",
+    "certified",
     "contact",
   ] as const,
 
@@ -31,7 +29,6 @@ export const siteConfig = {
     about: true,
     experience: true,
     careerHighlights: true,
-    speaking: true,
     certified: true,
     projects: true,
     contact: true,

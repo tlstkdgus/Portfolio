@@ -1,76 +1,50 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { m } from "framer-motion";
-import Image from "next/image";
+import { useTranslations, useLocale } from "next-intl";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { profile } from "@/data/profile";
 
 export function About() {
   const t = useTranslations("about");
+  const isKo = useLocale() === "ko";
   const keywords: string[] = t.raw("keywords");
+  const edu = profile.education[0];
 
   return (
-    <section id="about" className="bg-section-alt py-20 md:py-28">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <section id="about" className="border-t border-border py-16 md:py-20">
+      <div className="mx-auto max-w-3xl px-6">
         <SectionHeading>{t("heading")}</SectionHeading>
 
-        {/* Profile Photo */}
-        <m.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.45 }}
-          className="mb-8"
-        >
-          <div className="relative h-36 w-36 overflow-hidden rounded-full border-2 border-border shadow-lg">
-            <Image
-              src="/profile.jpg"
-              alt={t("heading")}
-              fill
-              className="object-cover"
-              sizes="144px"
-              priority
-            />
-          </div>
-        </m.div>
-
-        {/* Text Content */}
-        <div className="space-y-5">
-          {(["description_1", "description_2", "description_3"] as const).map(
-            (key, i) => (
-              <m.p
-                key={key}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.45, delay: i * 0.08 }}
-                className={cn(
-                  "text-base leading-relaxed text-foreground/80",
-                  key === "description_3" && "border-l-2 border-accent pl-4"
-                )}
-              >
-                {t(key)}
-              </m.p>
-            )
-          )}
+        <div className="space-y-5 text-base leading-relaxed text-foreground/85 md:text-[17px]">
+          <p>{t("description_1")}</p>
+          <p>{t("description_2")}</p>
+          <p className="border-l-2 border-accent pl-4 font-medium text-foreground">
+            {t("description_3")}
+          </p>
         </div>
 
-        {/* Keywords */}
-        <m.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.45, delay: 0.3 }}
-          className="mt-8 flex flex-wrap gap-2.5"
-        >
-          {keywords.map((keyword) => (
-            <Badge key={keyword} variant="accent">
-              {keyword}
-            </Badge>
-          ))}
-        </m.div>
+        <dl className="mt-10 grid gap-y-4 text-[15px] sm:grid-cols-[110px_1fr] sm:gap-x-6">
+          <dt className="text-sm font-semibold text-muted-foreground">
+            {t("education_label")}
+          </dt>
+          <dd>
+            <span className="font-medium">{isKo ? edu.school : edu.schoolEn}</span>
+            <span className="text-muted-foreground"> · {edu.date}</span>
+            <br />
+            <span className="text-muted-foreground">
+              {isKo ? edu.major : edu.majorEn}
+            </span>
+          </dd>
+
+          <dt className="text-sm font-semibold text-muted-foreground">
+            {t("keywords_label")}
+          </dt>
+          <dd className="flex flex-wrap gap-x-4 gap-y-1">
+            {keywords.map((k) => (
+              <span key={k}>{k}</span>
+            ))}
+          </dd>
+        </dl>
       </div>
     </section>
   );

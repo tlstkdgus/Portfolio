@@ -1,5 +1,4 @@
 import { profile } from "@/data/profile";
-import { talks } from "@/data/speaking";
 import { projects } from "@/data/projects";
 import { siteConfig } from "@/config/site";
 
@@ -44,22 +43,6 @@ export function JsonLd() {
     author: { "@id": `${siteConfig.url}/#person` },
   };
 
-  const featuredTalks = talks.filter((t) => t.highlight);
-
-  const eventSchemas = featuredTalks.map((talk) => ({
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: talk.titleEn,
-    startDate: talk.date.replace(/\./g, "-").replace(/-$/, ""),
-    location: {
-      "@type": "Place",
-      name: talk.venueEn,
-    },
-    performer: { "@id": `${siteConfig.url}/#person` },
-    ...(talk.slidesUrl && { url: talk.slidesUrl }),
-    ...(talk.videoUrl && { recordedIn: { "@type": "VideoObject", url: talk.videoUrl } }),
-  }));
-
   const creativeWorkSchemas = projects.map((project) => ({
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -81,11 +64,6 @@ export function JsonLd() {
       <script type="application/ld+json" suppressHydrationWarning>
         {JSON.stringify(webSiteSchema)}
       </script>
-      {eventSchemas.map((schema, i) => (
-        <script key={`event-${i}`} type="application/ld+json" suppressHydrationWarning>
-          {JSON.stringify(schema)}
-        </script>
-      ))}
       {creativeWorkSchemas.map((schema, i) => (
         <script key={`work-${i}`} type="application/ld+json" suppressHydrationWarning>
           {JSON.stringify(schema)}

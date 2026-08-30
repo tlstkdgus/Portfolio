@@ -20,6 +20,7 @@ export interface Project {
   results: string[];
   resultsEn: string[];
   tags: string[];
+  featured?: boolean;
   url?: string;
   repo?: string;
   commitsUrl?: string;
@@ -33,6 +34,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "CleanB",
+    featured: true,
     titleEn: "CleanB",
     subtitle: "에어비앤비 청소 매칭 플랫폼",
     subtitleEn: "Airbnb Cleaning Matching Platform",
@@ -82,10 +84,21 @@ export const projects: Project[] = [
       { label: "PR", labelEn: "PRs", value: "170+" },
       { label: "상태", labelEn: "Status", value: "실서비스 운영" },
     ],
-    tags: ["Next.js", "TypeScript", "PM", "Kakao Map", "Firebase", "Docker", "CI/CD"],
+    tags: ["Next.js", "TypeScript", "Kakao Map", "Firebase", "Docker", "CI/CD"],
+    image: "/projects/cleanb/01.png",
+    images: [
+      "/projects/cleanb/01.png",
+      "/projects/cleanb/02.png",
+      "/projects/cleanb/03.png",
+      "/projects/cleanb/04.png",
+      "/projects/cleanb/05.png",
+      "/projects/cleanb/06.png",
+      "/projects/cleanb/07.png",
+    ],
   },
   {
     title: "FlowPay",
+    featured: true,
     titleEn: "FlowPay",
     subtitle: "무기명 법인카드 지출·회계 자동화 B2B SaaS",
     subtitleEn: "Anonymous Corporate Card Expense Automation B2B SaaS",
@@ -136,7 +149,7 @@ export const projects: Project[] = [
       { label: "순위", labelEn: "Rank", value: "102팀 중 5위" },
       { label: "TAM 합산", labelEn: "TAM (sum)", value: "1조 6,200억 원" },
     ],
-    tags: ["React", "TypeScript", "FIDO2", "B2B SaaS", "Figma", "기획", "IR피칭"],
+    tags: ["React", "TypeScript", "FIDO2", "B2B SaaS", "Figma"],
     image: "/projects/flowpay/01.png",
     images: [
       "/projects/flowpay/01.png",
@@ -151,6 +164,7 @@ export const projects: Project[] = [
   },
   {
     title: "Y:Wave",
+    featured: true,
     titleEn: "Y:Wave",
     subtitle: "AI 기반 경기도 지역화폐 가맹점 추천 서비스",
     subtitleEn: "AI-Powered Gyeonggi Local Currency Store Recommendation",
@@ -213,10 +227,10 @@ export const projects: Project[] = [
     titleEn: "NeuroSight",
     subtitle: "AI 기반 마취 시술 보조 서비스",
     subtitleEn: "AI-Assisted Anesthesia Guidance System",
-    period: "2025.07.22. ~ 2025.07.25. (4일)",
-    periodEn: "Jul 22–25, 2025 (4 days)",
-    roles: ["기획", "IR", "사업전략"],
-    rolesEn: ["Planning", "IR", "Strategy"],
+    period: "2025.07.",
+    periodEn: "Jul 2025",
+    roles: ["PM", "IR"],
+    rolesEn: ["PM", "IR"],
     goals: [
       "마취 사고의 78.1%가 사망으로 이어지며 92.3%가 비전문의에 의해 발생하는 구조적 문제 해결",
       "배럴아이의 정량적 초음파(QUS) 기술을 기반으로 실시간 조직 분석·니들 트래킹·3D 마취제 확산 예측 기능 컨셉 설계",
@@ -253,7 +267,7 @@ export const projects: Project[] = [
       "Participated in GRAFFITI 2025 AI Startup Hackathon (hosted by KAIST ICISTS)",
       "Developed realistic commercialization strategy based on FDA/CE medical AI regulatory environment",
     ],
-    tags: ["Medical AI", "QUS", "B2B SaaS", "Figma", "기획", "IR피칭"],
+    tags: ["Medical AI", "QUS", "B2B SaaS", "Figma"],
     image: "/projects/neurosight/01.png",
     images: [
       "/projects/neurosight/01.png",
@@ -272,8 +286,8 @@ export const projects: Project[] = [
     subtitleEn: "AI-Based Terms of Service Analysis Service",
     period: "2025.04. ~ 2025.05.",
     periodEn: "Apr 2025 — May 2025",
-    roles: ["총괄 기획"],
-    rolesEn: ["Lead Planner"],
+    roles: ["PM"],
+    rolesEn: ["PM"],
     goals: [
       "131명 설문조사 결과 93%가 약관을 제대로 읽지 않는 문제를 해결하는 AI 기반 실시간 약관 분석 서비스 기획",
       "스크린 오버레이 기술로 백그라운드에서 자동 약관 감지 및 위험 조항 알림 시스템 설계",
@@ -302,7 +316,7 @@ export const projects: Project[] = [
       "Won campus Ideathon Grand Prize",
       "Advanced to 2nd round of national hackathon",
     ],
-    tags: ["AI", "NLP", "BERT", "GPT", "Planning"],
+    tags: ["AI", "NLP", "BERT", "GPT"],
     image: "/projects/tcp/01.png",
     images: [
       "/projects/tcp/01.png",
@@ -322,8 +336,8 @@ export const projects: Project[] = [
     periodEn: "Jun 2025",
     repo: "https://github.com/CHALLKATHON-Official/2025_CHALLKATHON_Hi-High_FE",
     commitsUrl: "https://github.com/CHALLKATHON-Official/2025_CHALLKATHON_Hi-High_FE/commits?author=tlstkdgus",
-    roles: ["기획", "프론트엔드"],
-    rolesEn: ["Planning", "Frontend"],
+    roles: ["PM", "프론트엔드"],
+    rolesEn: ["PM", "Frontend"],
     goals: [
       "취업 준비생이 겪는 '직무 선택의 불확실성'을 AI가 구조적으로 해소하는 맞춤형 커리어 멘토링 서비스 기획",
       "강점·경험·목표를 입력하면 AI가 직무별 적합도를 분석하고 커리어 로드맵을 제시하는 대화형 흐름 설계",
@@ -370,8 +384,8 @@ export const projects: Project[] = [
     periodEn: "Jul 2024 — Nov 2024",
     repo: "https://github.com/Team2-AInterview/frontend",
     commitsUrl: "https://github.com/Team2-AInterview/frontend/commits?author=tlstkdgus",
-    roles: ["기획", "프론트엔드"],
-    rolesEn: ["Planning", "Frontend"],
+    roles: ["PM", "프론트엔드"],
+    rolesEn: ["PM", "Frontend"],
     goals: [
       "취업 준비생 46%가 면접을 가장 어려워한다는 문제 확인, 실전 연습 기회 부족 해결",
       "음성 인식과 GPT Fine-tuning을 결합한 AI 기반 실시간 모의 면접 서비스 개발",
@@ -400,7 +414,7 @@ export const projects: Project[] = [
       "Presented as the 12th Likelion cohort's final project",
       "Successfully implemented voice-based AI interview flow",
     ],
-    tags: ["React", "Spring Boot", "Azure Speech", "GPT-4o", "AI", "기획", "Figma"],
+    tags: ["React", "Spring Boot", "Azure Speech", "GPT-4o", "AI", "Figma"],
     image: "/projects/ainterview/01.png",
     images: [
       "/projects/ainterview/01.png",
@@ -419,8 +433,8 @@ export const projects: Project[] = [
     periodEn: "Jul 2025 — Aug 2025",
     repo: "https://github.com/Gongdori-Moondori/Gongdori-Moondori-FE",
     commitsUrl: "https://github.com/Gongdori-Moondori/Gongdori-Moondori-FE/commits/main/?author=tlstkdgus",
-    roles: ["기획", "풀스택"],
-    rolesEn: ["Planning", "Full-stack"],
+    roles: ["PM", "풀스택"],
+    rolesEn: ["PM", "Full-stack"],
     goals: [
       "동대문구 청년층 전통시장 이용률(8.2%) 저조 문제를 전통시장·대형마트 실시간 가격 비교로 해결",
       "K-HTML 해커톤(서울시 동대문구청 × 경희대) 과제 해결",
@@ -465,8 +479,8 @@ export const projects: Project[] = [
     subtitleEn: "AR-Powered Furniture Recommendation Platform",
     period: "2024.12. ~ 2025.06.",
     periodEn: "Dec 2024 — Jun 2025",
-    roles: ["기획"],
-    rolesEn: ["Planning"],
+    roles: ["PM"],
+    rolesEn: ["PM"],
     goals: [
       "가구 구매 후 '실제 공간과의 불일치'로 발생하는 반품·실패 경험을 AR 시뮬레이션으로 사전에 해결하는 플랫폼 기획",
       "사용자의 공간 치수·취향 데이터를 AI가 분석해 개인화 추천까지 이어지는 통합 UX 설계",
@@ -502,8 +516,8 @@ export const projects: Project[] = [
     periodEn: "Jul 2024 — Aug 2024",
     repo: "https://github.com/MealSugar/FE",
     commitsUrl: "https://github.com/MealSugar/FE/commits/master/?author=tlstkdgus",
-    roles: ["기획", "프론트엔드"],
-    rolesEn: ["Planning", "Frontend"],
+    roles: ["PM", "프론트엔드"],
+    rolesEn: ["PM", "Frontend"],
     goals: [
       "예측보다 30년 빠르게 600만 명을 돌파한 국내 당뇨 인구의 가장 큰 어려움인 식단 관리(44%) 문제 해결",
       "대한당뇨병학회 식품교환표 기반 개인 맞춤 권장 칼로리 계산 및 ChatGPT 활용 식단 자동 생성",
@@ -549,7 +563,7 @@ export const projects: Project[] = [
     titleEn: "HuriUP!",
     subtitle: "웹캠 기반 자세 교정 서비스",
     subtitleEn: "Webcam-Based Posture Correction Service",
-    period: "2024.05.01. ~ 2024.05.16.",
+    period: "2024.05.",
     periodEn: "May 1 — May 16, 2024",
     roles: ["PM"],
     rolesEn: ["PM"],
@@ -581,7 +595,7 @@ export const projects: Project[] = [
       "Completed B2C → B2B subscription model strategy and core PoC (webcam posture analysis, alerts, wearable integration)",
       "Led a 6-person team as PM through the full process: problem definition, solution design, and UI/UX prototype (Likelion 12th Ideathon)",
     ],
-    tags: ["Figma", "Planning", "UX/UI", "Healthcare"],
+    tags: ["Figma", "UX/UI", "Healthcare"],
     image: "/projects/huriup/01.png",
     images: [
       "/projects/huriup/01.png",
@@ -593,14 +607,15 @@ export const projects: Project[] = [
   },
   {
     title: "손글 (SonGeul)",
+    featured: true,
     titleEn: "SonGeul",
     subtitle: "시니어를 위한 AI-OCR 모바일 뱅킹",
     subtitleEn: "AI-OCR Mobile Banking for Seniors",
     period: "2025",
     periodEn: "2025",
     repo: "https://github.com/tlstkdgus/songeul",
-    roles: ["기획", "프론트엔드"],
-    rolesEn: ["Planning", "Frontend"],
+    roles: ["PM", "프론트엔드"],
+    rolesEn: ["PM", "Frontend"],
     goals: [
       "65세 이상 고령층 모바일뱅킹 이용률 53.4% vs 비고령층 95% — 41.2%p 격차 해소",
       "손으로 쓴 메모지를 촬영하면 AI-OCR이 자동 인식해 가족 2단계 승인 후 송금 완료하는 초간편 뱅킹 서비스 설계",
@@ -629,7 +644,7 @@ export const projects: Project[] = [
       "Won Excellence Award at 2025 KIITI Winter Academic Conference",
       "Completed entire pipeline (planning, AI architecture, frontend) as a solo project",
     ],
-    tags: ["React", "TypeScript", "AI-OCR", "FinTech", "Figma", "기획"],
+    tags: ["React", "TypeScript", "AI-OCR", "FinTech", "Figma"],
     image: "/projects/songeul/01.png",
     images: [
       "/projects/songeul/01.png",
@@ -642,6 +657,7 @@ export const projects: Project[] = [
   },
   {
     title: "커넥트",
+    featured: true,
     titleEn: "Connect",
     subtitle: "은둔형 청년 지원 플랫폼",
     subtitleEn: "Support Platform for Socially Isolated Youth",
@@ -683,7 +699,7 @@ export const projects: Project[] = [
       "Weekly challenge feature received highest rating of 9.4",
       "Completed full service planning and 40-page frontend development",
     ],
-    tags: ["React", "Spring Boot", "AI", "Figma", "Kakao Maps", "Planning"],
+    tags: ["React", "Spring Boot", "AI", "Figma", "Kakao Maps"],
     image: "/projects/connect/01.png",
     images: [
       "/projects/connect/01.png",
@@ -703,8 +719,8 @@ export const projects: Project[] = [
     subtitleEn: "Braille Education Platform for the Visually Impaired",
     period: "2025.06.",
     periodEn: "Jun 2025",
-    roles: ["기획", "IR"],
-    rolesEn: ["Planning", "IR"],
+    roles: ["PM", "IR"],
+    rolesEn: ["PM", "IR"],
     goals: [
       "시각장애인의 점자 교육 콘텐츠 접근성 부재 문제를 IT 플랫폼으로 해소하는 서비스 기획",
       "소셜 임팩트와 비즈니스 실현 가능성을 함께 설득하는 IR 피칭 전략 수립",
@@ -729,7 +745,7 @@ export const projects: Project[] = [
       "Grand Prize at IR Pitching Competition",
       "Grand Prize at G-RISE Startup Idea Competition",
     ],
-    tags: ["Startup", "IR피칭", "기획", "Social Impact"],
+    tags: ["Startup", "Social Impact"],
   },
   {
     title: "16P!ay",
@@ -738,8 +754,8 @@ export const projects: Project[] = [
     subtitleEn: "MBTI Community Service",
     period: "2025",
     periodEn: "2025",
-    roles: ["기획", "디자인", "개발"],
-    rolesEn: ["Planning", "Design", "Development"],
+    roles: ["PM", "디자인", "프론트엔드"],
+    rolesEn: ["PM", "Design", "Frontend"],
     goals: [
       "MBTI 16가지 성격 유형을 기반으로, 같은 유형끼리는 공감·소통하고 다른 유형과는 차이를 탐색하는 커뮤니티 서비스 기획",
       "멋쟁이사자처럼 13기 운영진 활동과 병행하여 단독으로 기획·디자인·개발까지 완성",
@@ -762,6 +778,6 @@ export const projects: Project[] = [
     resultsEn: [
       "Won Grand Prize in Likelion 13th cohort mini project",
     ],
-    tags: ["React", "TypeScript", "Community", "기획", "Figma"],
+    tags: ["React", "TypeScript", "Community", "Figma"],
   },
 ];

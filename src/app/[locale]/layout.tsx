@@ -6,19 +6,6 @@ import { routing } from "@/i18n/routing";
 import "@/app/globals.css";
 import { LazyMotionProvider } from "@/components/providers/lazy-motion-provider";
 import { ErrorBoundary } from "@/components/error-boundary";
-import { Inter, JetBrains_Mono } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -38,11 +25,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-      className={`${inter.variable} ${jetbrainsMono.variable}`}
-    >
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <link
           rel="stylesheet"
