@@ -51,9 +51,9 @@ export const careerDetailSections: CareerDetailSection[] = [
         ],
       },
       {
-        text: "FINNECT 챌린지(핀테크 해커톤) 과제로 3인 팀에서 PM + 프론트엔드 + IR 피칭 전 역할을 수행했습니다. (2025.06 ~ 2025.08)",
+        text: "FINNECT 챌린지(핀테크 해커톤) 과제로, 3인 팀에서 PM과 프론트엔드 개발, IR 피칭을 맡았습니다. (2025.06 ~ 2025.08)",
         textEn:
-          "As a FINNECT Challenge (fintech hackathon) project, performed all roles — PM, frontend developer, and IR presenter — in a 3-person team. (Jun–Aug 2025)",
+          "A FINNECT Challenge (fintech hackathon) project — in a 3-person team, I handled PM, frontend development, and the IR pitch. (Jun–Aug 2025)",
       },
     ],
     role: [
@@ -164,8 +164,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "총괄 기획 및 디자인",
-        titleEn: "Overall Planning & Design",
+        title: "서비스 기획 및 디자인",
+        titleEn: "Product Planning & Design",
         items: [
           {
             text: "사용자의 현재 위치, 소비 패턴, 카테고리 선호도를 분석하여 맞춤형 가맹점을 추천하는 AI 기능을 기획했습니다.",
@@ -228,14 +228,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "마취 사고의 78.1%가 사망으로 이어지는 고위험 의료행위이며, 92.3%가 비전문의에 의해 발생합니다. 전문 마취과 의사의 부족과 높은 이탈률이 구조적 문제의 근원입니다.",
+        text: "마취는 사고가 곧 생명과 직결되는 고위험 의료행위인데, 사고 상당수가 마취 비전문의 시술 환경에서 발생합니다. 전문 마취과 의사의 부족과 높은 이탈률이 구조적 문제의 근원입니다.",
         textEn:
-          "78.1% of anesthesia incidents result in death — a high-risk medical procedure. 92.3% of incidents involve non-specialists. A chronic shortage and high turnover of anesthesiologists is the structural root cause.",
+          "Anesthesia is a high-risk procedure where incidents directly threaten lives — and a large share of incidents occur in settings without anesthesia specialists. A chronic shortage and high turnover of anesthesiologists is the structural root cause.",
         subItems: [
           {
-            text: "기존 B-mode 초음파는 주관적 해석에 의존하며 정량적 조직 분석과 마취제 확산 범위 실시간 파악이 불가합니다. 북미 의료 AI 시장은 587억 달러 규모로 급성장 중입니다.",
+            text: "기존 B-mode 초음파는 주관적 해석에 의존하며 정량적 조직 분석과 마취제 확산 범위 실시간 파악이 불가합니다.",
             textEn:
-              "Existing B-mode ultrasound relies on subjective interpretation, with no quantitative tissue analysis or real-time anesthetic diffusion tracking. The North American medical AI market is growing rapidly at $58.7B.",
+              "Existing B-mode ultrasound relies on subjective interpretation, with no quantitative tissue analysis or real-time anesthetic diffusion tracking.",
           },
         ],
       },
@@ -251,9 +251,9 @@ export const careerDetailSections: CareerDetailSection[] = [
         titleEn: "Market Research & Problem Analysis",
         items: [
           {
-            text: "마취 의료 사고 현황 및 비전문의 의존 구조의 원인을 데이터로 분석했습니다. 글로벌 의료 AI 시장 587억 달러 규모와 성장성을 확인하고 진입 기회를 도출했습니다.",
+            text: "마취 의료 사고 현황 및 비전문의 의존 구조의 원인을 분석했습니다. 글로벌 의료 AI 시장의 성장성을 조사하고 진입 기회를 도출했습니다.",
             textEn:
-              "Analyzed anesthesia incident trends and the structural over-reliance on non-specialists with data. Confirmed the $58.7B global medical AI market size and growth potential, identifying market entry opportunities.",
+              "Analyzed anesthesia incident trends and the structural over-reliance on non-specialists. Researched the growth of the global medical AI market and identified entry opportunities.",
           },
           {
             text: "배럴아이 QUS 기술의 동향을 연구하고 마취 분야 적용 가능성을 검토하여 세계 최초 정량적 초음파 기반 마취 보조 시스템이라는 포지셔닝을 수립했습니다.",
@@ -294,9 +294,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "GRAFFITI 2025 AI Startup 해커톤(KAIST ICISTS 주최) 참가 완료. 4일간 의료 AI 기술·규제·시장을 집중 학습하고 사업화 전략까지 수립했습니다.",
+        text: "4일 안에 의료 AI 기술·규제·시장을 학습하고, FDA/CE 규제를 수익원으로 뒤집은 OEM 하이브리드 사업화 전략까지 제안했습니다. (GRAFFITI 2025 AI Startup, KAIST ICISTS 주최)",
         textEn:
-          "Completed GRAFFITI 2025 AI Startup Hackathon (hosted by KAIST ICISTS). Intensively learned medical AI technology, regulation, and market dynamics over 4 days and developed a full commercialization strategy.",
+          "In 4 days, learned medical AI technology, regulation, and market dynamics, and proposed an OEM hybrid commercialization strategy that turned FDA/CE regulation into a revenue source. (GRAFFITI 2025 AI Startup, hosted by KAIST ICISTS)",
       },
     ],
     lessons: [
@@ -333,9 +333,9 @@ export const careerDetailSections: CareerDetailSection[] = [
           "A survey of 131 people revealed that 93% don't read terms of service properly. The SKT SIM hacking incident brought consumer damage from unread ToS to the forefront as a social issue.",
         subItems: [
           {
-            text: "글로벌 리걸테크 시장 규모는 $30.33억이며 CAGR 7.6~8.7%로 성장 중입니다. 국내에는 아직 자동화된 실시간 약관 분석 서비스가 없는 블루오션임을 확인했습니다.",
+            text: "국내에는 아직 자동화된 실시간 약관 분석 서비스가 없다는 점을 확인하고, 그 공백이 왜 생겼는지부터 검증했습니다.",
             textEn:
-              "The global legaltech market stands at $3.03B with a CAGR of 7.6–8.7%. Confirmed a blue ocean — no automated real-time ToS analysis service exists in Korea yet.",
+              "Confirmed that no automated real-time ToS analysis service exists in Korea yet — and started by verifying why that gap exists.",
           },
         ],
       },
@@ -347,8 +347,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "총괄 기획 및 BM 설계",
-        titleEn: "Overall Planning & Business Model Design",
+        title: "서비스 기획 및 BM 설계",
+        titleEn: "Product Planning & Business Model Design",
         items: [
           {
             text: "스크린 오버레이 기술을 활용해 사용자가 약관에 동의하는 순간 백그라운드에서 자동으로 내용을 감지하고 분석하는 시스템을 기획했습니다.",
@@ -393,9 +393,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "교내 아이디어톤 최우수상 수상 — 93%의 설문 데이터와 글로벌 시장 규모 분석을 통해 문제의 심각성과 사업성을 동시에 입증했습니다.",
+        text: "교내 아이디어톤 최우수상 수상 — 직접 진행한 131명 설문 데이터(93%)로 문제의 심각성과 사업성을 입증했습니다.",
         textEn:
-          "Won campus Ideathon Grand Prize — simultaneously validated the severity of the problem and business viability through 93% survey data and global market size analysis.",
+          "Won campus Ideathon Grand Prize — our own 131-person survey data (93%) proved both the severity of the problem and the business case.",
       },
       {
         text: "전국 해커톤 2차 예선 진출 — 기술 구현 가능성(BERT/GPT fine-tuning, 스크린 오버레이)과 수익 모델의 구체성이 심사위원에게 높은 평가를 받았습니다.",
@@ -446,8 +446,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "총괄 기획 및 프론트엔드 개발",
-        titleEn: "Overall Planning & Frontend Development",
+        title: "기획 및 프론트엔드 개발",
+        titleEn: "Planning & Frontend Development",
         items: [
           {
             text: "사용자의 경험·역량·관심사를 입력받아 AI가 맞춤형 커리어 로드맵과 취업 전략을 제안하는 서비스 구조를 기획했습니다.",
@@ -471,9 +471,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "CHALLKATHON을 수료하고 동작 가능한 AI 커리어 멘토링 서비스를 완성했습니다.",
+        text: "해커톤 기간 안에 동작하는 AI 커리어 멘토링 서비스를 완성해 배포했습니다. (CHALLKATHON)",
         textEn:
-          "Completed CHALLKATHON and delivered a working AI career mentoring service.",
+          "Shipped a working AI career mentoring service within the hackathon period. (CHALLKATHON)",
       },
     ],
     lessons: [
@@ -512,9 +512,9 @@ export const careerDetailSections: CareerDetailSection[] = [
         ],
       },
       {
-        text: "멋쟁이사자처럼 12기 최종 프로젝트로, 4인 팀에서 기획·디자인·프론트엔드 개발 전반을 총괄했습니다. 2024년 7월부터 11월까지 약 4개월간 진행했습니다.",
+        text: "멋쟁이사자처럼 12기 최종 프로젝트로, 4인 팀에서 기획·디자인·프론트엔드 개발을 맡았습니다. 2024년 7월부터 11월까지 약 4개월간 진행했습니다.",
         textEn:
-          "As the Likelion 12th cohort final project, I led overall planning, design, and frontend development in a 4-person team over approximately 4 months (July–November 2024).",
+          "The Likelion 12th cohort final project — in a 4-person team, I handled planning, design, and frontend development over about 4 months (July–November 2024).",
       },
     ],
     role: [
@@ -567,9 +567,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "음성 인식 기반 AI 면접 시뮬레이션 서비스를 성공적으로 완성하여 멋쟁이사자처럼 12기 최종 프로젝트로 발표했습니다.",
+        text: "음성 인식 기반 AI 면접 시뮬레이션 서비스를 완성해 멋쟁이사자처럼 12기 최종 프로젝트로 발표했습니다.",
         textEn:
-          "Successfully completed the voice-based AI interview simulation service and presented it as the Likelion 12th cohort's final project.",
+          "Completed the voice-based AI interview simulation service and presented it as the Likelion 12th cohort's final project.",
       },
       {
         text: "Azure Speech + GPT Fine-tuning 조합으로 실제 직무에 맞는 맞춤형 면접 질문 생성과 음성 기반 인터랙션이 가능한 서비스를 구현했습니다.",
@@ -624,8 +624,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "총괄 기획 및 프로덕트 설계",
-        titleEn: "Overall Planning & Product Design",
+        title: "기획 및 프로덕트 설계",
+        titleEn: "Planning & Product Design",
         items: [
           {
             text: "OCR 기술과 AI 추천을 결합한 종합 쇼핑 도우미 PWA의 전체 서비스 플로우를 기획했습니다.",
@@ -642,7 +642,7 @@ export const careerDetailSections: CareerDetailSection[] = [
         ],
       },
       {
-        title: "아키텍처 설계 및 개발 총괄",
+        title: "아키텍처 설계 및 개발 리드",
         titleEn: "Architecture Design & Development Lead",
         items: [
           {
@@ -699,8 +699,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "총괄 기획",
-        titleEn: "Overall Product Planning",
+        title: "서비스 기획",
+        titleEn: "Product Planning",
         items: [
           {
             text: "AR 기술을 활용해 사용자가 스마트폰 카메라로 실제 공간을 비추면 가상 가구가 실시간으로 배치되는 서비스 컨셉을 기획했습니다.",
@@ -764,9 +764,9 @@ export const careerDetailSections: CareerDetailSection[] = [
         ],
       },
       {
-        text: "멋쟁이사자처럼 12기 프로젝트로, 문제 정의부터 비즈니스 모델 설계, UI/UX 디자인, 프론트엔드 개발까지 전 과정을 총괄했습니다.",
+        text: "멋쟁이사자처럼 12기 프로젝트로, 문제 정의부터 비즈니스 모델 설계, UI/UX 디자인, 프론트엔드 개발까지 맡았습니다.",
         textEn:
-          "As a Likelion 12th cohort project, I led the entire process from problem definition to business model design, UI/UX design, and frontend development.",
+          "A Likelion 12th cohort project — I handled problem definition, business model design, UI/UX design, and frontend development.",
       },
     ],
     role: [
@@ -856,9 +856,9 @@ export const careerDetailSections: CareerDetailSection[] = [
         ],
       },
       {
-        text: "멋쟁이사자처럼 12기 아이디어톤 프로젝트로, 6인 팀에서 PM을 맡아 문제 정의부터 비즈니스 모델 수립, 마케팅 전략, UI/UX 프로토타입까지 전과정을 총괄했습니다. (2024.05.01 ~ 2024.05.16, 16일)",
+        text: "멋쟁이사자처럼 12기 아이디어톤 프로젝트로, 6인 팀의 PM을 맡아 문제 정의부터 비즈니스 모델 수립, 마케팅 전략, UI/UX 프로토타입까지 이끌었습니다. (2024.05.01 ~ 2024.05.16, 16일)",
         textEn:
-          "As a Likelion 12th cohort ideathon project, served as PM in a 6-person team leading the entire process from problem definition to business model, marketing strategy, and UI/UX prototype. (May 1–16, 2024, 16 days)",
+          "A Likelion 12th cohort ideathon project — as PM of a 6-person team, I led problem definition, business model, marketing strategy, and the UI/UX prototype. (May 1–16, 2024, 16 days)",
       },
     ],
     role: [
@@ -937,9 +937,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "65세 이상 고령층의 모바일뱅킹 이용률은 53.4%로, 비고령층(95%) 대비 41.2%p 낮습니다. 2030년에는 65세 이상 인구가 1,000만 명을 넘어설 전망이며(통계청 2024), 71.6%의 고령층이 금융 업무를 가족에 의존하고 있습니다.",
+        text: "65세 이상 고령층의 모바일뱅킹 이용률은 53.4%로, 비고령층(95%) 대비 41.2%p 낮습니다. 2030년에는 65세 이상 인구가 1,000만 명을 넘어설 전망이며(통계청 2024), 상당수 고령층이 금융 업무를 가족에 의존하고 있습니다.",
         textEn:
-          "Mobile banking usage among seniors 65+ is 53.4% — 41.2%p below non-seniors (95%). Senior population is expected to exceed 10M by 2030 (Statistics Korea 2024), and 71.6% rely on family for financial tasks.",
+          "Mobile banking usage among seniors 65+ is 53.4% — 41.2%p below non-seniors (95%). The senior population is expected to exceed 10M by 2030 (Statistics Korea 2024), and many seniors rely on family for financial tasks.",
         subItems: [
           {
             text: "은행 점포 폐쇄와 ATM 축소로 지방 소도시 금융 접근성이 급락했고, 착오송금의 주요 원인은 '계좌번호 입력 오류'입니다. 기존 앱은 인증 절차 복잡·보안 불안감으로 고령층 진입 장벽이 높습니다.",
@@ -994,9 +994,9 @@ export const careerDetailSections: CareerDetailSection[] = [
         titleEn: "Business Model Design",
         items: [
           {
-            text: "TAM 455만 명 → SAM 150~180만 명으로 시장 규모를 산정하고, 4개 수익원을 설계했습니다: B2C 구독 / B2B 라이선싱(금감원 고령자 서비스 의무화 규제 활용) / Financial Brokerage / Government Grants.",
+            text: "통계청 고령 인구 통계를 기반으로 시장 규모를 직접 산정하고, 4개 수익원을 설계했습니다: B2C 구독 / B2B 라이선싱(금감원 고령자 서비스 의무화 규제 활용) / Financial Brokerage / Government Grants.",
             textEn:
-              "Sized the market at TAM 4.55M → SAM 1.5–1.8M and designed 4 revenue streams: B2C subscription / B2B licensing (leveraging FSS senior service mandate) / financial brokerage / government grants.",
+              "Sized the market directly from Statistics Korea senior population data and designed 4 revenue streams: B2C subscription / B2B licensing (leveraging the FSS senior service mandate) / financial brokerage / government grants.",
           },
         ],
       },
@@ -1104,9 +1104,9 @@ export const careerDetailSections: CareerDetailSection[] = [
           "Achieved overall usefulness score of 8.9 (exceeding 8.0 target) in market testing with 26 participants. Weekly challenge received the highest rating (9.4), and AI role-play chat was praised for minimizing aversion to real conversation.",
       },
       {
-        text: "전체 서비스 기획, UI/UX 디자인, 40페이지 프론트엔드 개발을 완성하고 최종 발표 및 시연을 총괄했습니다.",
+        text: "서비스 기획, UI/UX 디자인, 40페이지 프론트엔드 개발을 완성하고 최종 발표와 시연을 맡았습니다.",
         textEn:
-          "Completed full service planning, UI/UX design, and 40-page frontend development, and led the final presentation and demo.",
+          "Completed the service planning, UI/UX design, and 40-page frontend build, and delivered the final presentation and demo.",
       },
     ],
     lessons: [
@@ -1137,8 +1137,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "총괄 기획 및 IR 피칭",
-        titleEn: "Overall Planning & IR Pitching",
+        title: "기획 및 IR 피칭",
+        titleEn: "Planning & IR Pitching",
         items: [
           {
             text: "서비스 콘셉트·타겟·수익 구조를 정리하고 IR 피칭 경진대회에서 발표를 진행했습니다.",
@@ -1181,8 +1181,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "총괄 기획·디자인·개발",
-        titleEn: "Planning, Design & Development",
+        title: "기획·디자인·개발 (단독)",
+        titleEn: "Planning, Design & Development (Solo)",
         items: [
           {
             text: "서비스 IA·화면 설계·프론트엔드 구현까지 단일 PM으로 전 과정을 맡았습니다.",

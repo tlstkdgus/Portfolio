@@ -293,7 +293,7 @@ export const projects: Project[] = [
       "BERT·GPT 기반 NLP 모델을 법률 특화 데이터셋으로 미세조정하여 핵심 조항·위험 요소 자동 추출 설계",
       "복잡한 약관을 쉬운 언어로 요약하고 잠재적 위험 조항을 시각적으로 강조하는 시스템 기획",
       "프리미엄 구독, 기업용 API, 파트너십 등 5가지 수익원 구조화 및 글로벌 리걸테크 시장 분석",
-      "총괄 기획 담당 (멋쟁이사자처럼 13기)",
+      "기획 담당 (멋쟁이사자처럼 13기)",
     ],
     contentsEn: [
       "Designed auto-extraction of key clauses and risk terms using BERT/GPT models fine-tuned on legal datasets",
@@ -342,7 +342,7 @@ export const projects: Project[] = [
     contents: [
       "커리어 탐색 과정을 '자기 이해 → 직무 매칭 → 로드맵 수립' 3단계로 구조화하고 AI 대화 흐름 기획",
       "React + TypeScript 기반 대화형 UI 개발 및 AI 추천 결과 시각화 구현",
-      "기획·프론트엔드 개발 총괄 (CHALLKATHON, 한국외국어대학교 컴퓨터공학부 × UMC 공동 주최)",
+      "기획·프론트엔드 개발 담당 (CHALLKATHON, 한국외국어대학교 컴퓨터공학부 × UMC 공동 주최)",
     ],
     contentsEn: [
       "Structured career exploration into 3 phases (self-understanding → job matching → roadmap building) and planned the AI conversation flow",
@@ -389,7 +389,7 @@ export const projects: Project[] = [
       "Azure Speech Service 활용 음성-텍스트 변환(STT/TTS) 처리 시스템 구현",
       "Fine-tuned GPT-4o-mini 기반 직무별 맞춤 면접 질문 자동 생성",
       "React 기반 인터랙티브 UI 설계 및 Spring Boot 백엔드 연동",
-      "기획·디자인·프론트엔드 개발 총괄 (멋쟁이사자처럼 12기 최종 프로젝트)",
+      "기획·디자인·프론트엔드 개발 담당 (멋쟁이사자처럼 12기 최종 프로젝트)",
     ],
     contentsEn: [
       "Implemented voice-to-text (STT/TTS) processing with Azure Speech Service",
@@ -435,7 +435,7 @@ export const projects: Project[] = [
     contents: [
       "OCR 기술 + AI 추천을 결합한 종합 쇼핑 도우미 PWA 개발",
       "실시간 가격비교, OCR 스캔, Google Maps 경로안내, AI 상품추천 핵심 기능 구현",
-      "Next.js 15 + React 19 기반 PWA 아키텍처 설계 및 개발 총괄",
+      "Next.js 15 + React 19 기반 PWA 아키텍처 설계 및 개발 리드",
     ],
     contentsEn: [
       "Built a comprehensive shopping assistant PWA combining OCR and AI recommendations",
@@ -481,7 +481,7 @@ export const projects: Project[] = [
     contents: [
       "AR 기반 실공간 가구 시각화 기능 설계 (공간 치수 인식 → 3D 가구 배치 → 색상·소재 커스터마이징) 및 서비스 IA 구성",
       "사용자 공간·취향 데이터 기반 AI 추천 알고리즘 기획 및 추천 결과 화면 설계",
-      "HUFS H-UP 진로탐색학점제 총괄 기획 담당 — 문제 정의부터 프로덕트 설계까지 전 과정 주도",
+      "HUFS H-UP 진로탐색학점제 기획 담당 — 문제 정의부터 프로덕트 설계까지 주도",
     ],
     contentsEn: [
       "Designed AR furniture visualization (space measurement → 3D placement → color/material customization) and structured the service IA",
@@ -519,7 +519,7 @@ export const projects: Project[] = [
       "식품교환표 기반 맞춤 칼로리 계산 알고리즘 설계 및 ChatGPT 연동 개인화 식단 생성 기능 개발",
       "혈당 모니터링, 당뇨 친화 식당 지도 등 핵심 기능 포함한 React 기반 웹 애플리케이션 개발",
       "프리미엄 구독, 데이터 판매, 당뇨 관련 제품 쇼핑몰 등 다각적 비즈니스 모델 구축",
-      "서비스 기획·UI/UX 디자인·프론트엔드 개발 전 과정 총괄 (멋쟁이사자처럼 12기)",
+      "서비스 기획·UI/UX 디자인·프론트엔드 개발 담당 (멋쟁이사자처럼 12기)",
     ],
     contentsEn: [
       "Designed food-exchange-table calorie algorithm and developed ChatGPT-integrated personalized meal generation",
