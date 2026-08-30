@@ -22,6 +22,150 @@ export interface CareerDetailSection {
 }
 
 export const careerDetailSections: CareerDetailSection[] = [
+// ── 0. 14기 중앙해커톤 ──────────────────────────────────────────────────
+  {
+    id: "hackathon14",
+    title: "80개 대학 연합 해커톤 운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
+    titleEn: "Running an 80-University Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
+    background: [
+      {
+        text: "80개 대학, 참가자 2,000명+, 예선 약 400팀 → 313팀 제출 → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 연합 해커톤입니다. 커뮤니티 매니저 인턴으로 참여해 참가자 가이드 공동 작성, 심사 정책 공동 설계, 운영 도구 3종 제작, 본선 현장 운영을 맡았습니다. (2026.07 ~ 2026.08.25, 코엑스 마곡)",
+        textEn:
+          "The largest LIKELION hackathon to date: 80 universities, 2,000+ participants, ~400 entering teams → 313 submissions → an 8-team finals tournament picking one winner. As a community manager intern, I co-wrote the participant guide, co-designed judging policy, built 3 ops tools, and ran on-site finals operations. (Jul 2026 – Aug 25, 2026, COEX Magok)",
+        subItems: [
+          {
+            text: "참가자·심사위원·파트너의 이해가 충돌하는 지점마다 규칙이 필요했고, 313팀·562개 레포 검증과 2,000명 앞 실시간 토너먼트는 수작업으로 풀 수 없는 문제였습니다.",
+            textEn:
+              "Every collision point between participants, judges, and partners needed a rule — and verifying 562 repos or running a live tournament for 2,000 people was not a manual job.",
+          },
+        ],
+      },
+    ],
+    role: [
+      {
+        title: "심사 정책·프로세스 설계 (공동)",
+        titleEn: "Judging Policy & Process Design (Co-designed)",
+        items: [
+          {
+            text: "3단계 심사 퍼널(서류 심사 60팀 → 트랙 피칭 8팀 → 본선 토너먼트 1팀)과 공통 심사 기준 100점 배점(문제 정의 25 · 실현 가능성 20 · 시장성 15 · UI/UX 10 · 전달력 10 · 트랙 적합성 20)을 설계했습니다.",
+            textEn:
+              "Designed the 3-stage judging funnel (60 teams by docs → 8 by track pitching → 1 by tournament) and the 100-point common rubric (problem definition 25 · feasibility 20 · market 15 · UI/UX 10 · delivery 10 · track fit 20).",
+            subItems: [
+              {
+                text: "서비스 기획안 제출 항목(문제정의/핵심기능/시장성)을 심사 기준과 1:1로 연계해, 참가자가 무엇을 쓰면 어떻게 평가받는지 예측 가능하게 만들었습니다.",
+                textEn:
+                  "Mapped submission items (problem/features/market) 1:1 to judging criteria, so teams could predict how what they wrote would be scored.",
+              },
+              {
+                text: "공정성 규칙: 대본 낭독 시 전달력 0점, 발표는 운영팀 기기로 통일, 대진·순서는 현장 랜덤 추첨 후 변경 불가.",
+                textEn:
+                  "Fairness rules: script-reading scores zero on delivery, all pitches on operator-provided devices, bracket and order drawn live and locked.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "제출물 무결성 검증 — check.py 직접 제작",
+        titleEn: "Submission Integrity — Built check.py Myself",
+        items: [
+          {
+            text: "'마감 후 수정 금지' 규정을 집행하려면 313팀 · 562개 레포를 검사해야 했습니다. Claude를 활용해 check.py를 직접 만들었습니다 — 전 레포·전 브랜치를 순회하며 마감 이후 커밋을 검출하고, 스냅샷 JSON 대조로 force-push · 브랜치 삭제 · Public→Private 전환까지 탐지합니다.",
+            textEn:
+              "Enforcing 'no edits after deadline' meant checking 562 repos across 313 teams. I built check.py with Claude — it sweeps every branch of every repo for post-deadline commits, and snapshot-JSON comparison catches force-pushes, deleted branches, and public-to-private flips.",
+            subItems: [
+              {
+                text: "판정 기준을 검사 전에 합의했습니다: 기능 추가·개선 범위의 코드 수정 = 실격 / 단순 README 수정 = 감점 / 마감 직후 커밋 = 정상참작. 도구는 엑셀 리포트로 근거만 제시하고, 판정은 운영진 회의가 했습니다.",
+                textEn:
+                  "The verdict criteria were agreed before scanning: feature-level code changes = disqualification / README-only edits = deduction / just-past-deadline commits = leniency. The tool only presented evidence in an Excel report; the ops meeting made the calls.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "본선 토너먼트 콘솔 'ANIMAL LEAGUE' 직접 제작·운영",
+        titleEn: "Finals Tournament Console — Built & Operated",
+        items: [
+          {
+            text: "역할별 3개 화면으로 설계한 웹앱입니다(Next.js · React · Supabase): 무대 프로젝터용 스크린(브래킷 실시간 표시·결과 공개 연출), 심사위원용 화면(승자 선택 + 코멘트), 운영팀 콘솔(경기 진행·대진 추첨·결과 공개).",
+            textEn:
+              "A web app with three role-based views (Next.js · React · Supabase): a stage screen (live bracket, reveal effects), a judge view (winner pick + comment), and an ops console (match control, bracket draw, result reveal).",
+            subItems: [
+              {
+                text: "설계 전제는 '되돌릴 수 없는 현장'입니다. 심사위원 명단제(명단 밖 제출은 서버가 거부 — 코드가 유출돼도 가짜 표가 못 섞임), 결과 공개 롤백 없음(대신 확인 다이얼로그 필수), 네트워크 장애 시 운영자 입력만으로 브래킷이 진행되는 백업 모드, 동표 시 자동 결정 없이 사람이 판정.",
+                textEn:
+                  "The design premise: an irreversible live event. Judge allowlist (off-list submissions rejected server-side — fake votes can't mix in even if the code leaks), no rollback after reveal (mandatory confirm dialogs instead), a backup mode that advances the bracket on operator input alone during network failure, and no auto-decision on ties — a human rules.",
+              },
+              {
+                text: "SPEC.md를 요구사항 단일 출처로 두고 기능 동결 → 리허설 → 코드·PIN 교체 → 초기화의 출시 절차를 운영했습니다. 운영 런북을 v8까지 직접 작성·배포했고, 콘솔 조작이 무대 스크린에 반영되는 시간은 실측 2.2초였습니다.",
+                textEn:
+                  "SPEC.md served as the single source of requirements, with a launch procedure of feature freeze → rehearsal → code/PIN rotation → reset. I wrote and shipped the ops runbook through v8; measured console-to-stage-screen latency was 2.2 seconds.",
+              },
+              {
+                text: "무대 연출(결과 공개 카드 연출, 결선 카운트다운→우승 전환)을 음향팀·MC 큐시트와 맞췄습니다. 타이머는 앱에서 빼고 행사장 별도 화면에 위임 — 스코프를 줄이는 결정이었습니다.",
+                textEn:
+                  "Stage effects (reveal card animation, finals countdown into the winner scene) were synced with the sound team's and MC's cue sheets. The timer was cut from the app and delegated to a separate venue screen — a deliberate scope reduction.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "참가자 커뮤니케이션 · FAQ 봇 · 파트너 운영",
+        titleEn: "Participant Comms, FAQ Bot & Partner Ops",
+        items: [
+          {
+            text: "참가자 2,000명이 한 달간 참조하는 노션 통합 가이드를 팀과 공동 작성했습니다. 참가자 여정(팀빌딩 → 개발 → 심사 → 현장) 순서로 구조를 설계하고, 변경 사항마다 날짜를 명시해 추적 가능하게 운영했습니다.",
+            textEn:
+              "Co-wrote the Notion guide that 2,000 participants referenced for a month — structured by participant journey (team building → build → judging → venue), with every change dated and traceable.",
+            subItems: [
+              {
+                text: "FAQ 72문항을 지식으로 쓰는 디스코드 봇을 직접 만들어 운영했습니다. 키워드 매칭 우선(비용 0) + LLM 폴백의 2단 응답, 자료에 없는 내용은 지어내지 않고 '운영진 문의' 안내, 미답변 질문 일일 리포트로 지식을 보강하되 반영 여부는 사람이 판단.",
+                textEn:
+                  "Built and ran a Discord bot over the 72-item FAQ: keyword matching first (zero cost) with LLM fallback, a strict no-fabrication policy (unknowns route to staff), and a daily unanswered-question report — with humans deciding what gets added.",
+              },
+              {
+                text: "파트너 8종 툴 지원 정책(신청 마감 일원화, 팀장 대표 제출, 과금 리스크 안내)을 운영했고, OpenAI와는 영문으로 직접 커뮤니케이션하며 크레딧 지급 이슈를 추적하고 본선 기술 심사위원 섭외까지 연결했습니다.",
+                textEn:
+                  "Ran the 8-partner tool support program (unified deadlines, team-lead submission, billing-risk notices), and communicated directly with OpenAI in English — tracking credit issues and landing a finals technical judge.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "562개 레포 전수 검사 결과 정상 550 · 위반 5팀 — 차등 기준에 따라 2팀 실격, 나머지는 감점·정상참작으로 처리했습니다. 규칙이 말이 아니라 집행으로 존재하게 됐습니다.",
+        textEn:
+          "The full 562-repo sweep found 550 clean and 5 violating teams — 2 disqualified under the graded criteria, the rest handled with deductions or leniency. The rule existed as enforcement, not words.",
+      },
+      {
+        text: "본선 토너먼트(8팀 · 심사위원 5명)를 직접 만든 콘솔로 끝까지 진행했습니다. 2,000명 규모 행사가 계획 대비 약 30분 초과로 마무리됐습니다.",
+        textEn:
+          "Ran the finals tournament (8 teams, 5 judges) end-to-end on the self-built console; the 2,000-person event closed about 30 minutes over schedule.",
+      },
+    ],
+    lessons: [
+      {
+        text: "'마감 후 수정 금지'는 규칙만으로는 집행되지 않았습니다. 도구를 만들되 판정 기준을 먼저 합의하고 도구는 근거만 내게 했습니다 — 도구가 사람 대신 판정하는 순간 규칙의 정당성이 무너진다는 게 이 운영의 결론입니다.",
+        textEn:
+          "'No edits after deadline' doesn't enforce itself. We built the tool, but agreed the verdict criteria first and limited the tool to evidence — the moment a tool judges instead of people, the rule loses its legitimacy.",
+      },
+      {
+        text: "현장 도구는 기능을 더하는 것보다 실패 시나리오를 먼저 닫는 게 본질이었습니다. 롤백 없는 결과 공개, 와이파이 장애 백업 모드, 동표 판정의 사람 위임 — 본선에서 실제로 쓴 건 화려한 기능이 아니라 이 안전장치들이 준 확신이었습니다.",
+        textEn:
+          "For a live-event tool, closing failure scenarios mattered more than adding features. No-rollback reveals, a network-failure backup mode, ties delegated to humans — what we actually used on finals day was the confidence those safeguards gave us.",
+      },
+      {
+        text: "가이드·FAQ·봇·문의 채널은 결국 하나의 시스템이었습니다. 정보의 단일 출처를 정하고 나머지가 그걸 재사용하게 만들자, 같은 질문에 다른 답이 나가는 사고가 구조적으로 줄었습니다.",
+        textEn:
+          "The guide, FAQ, bot, and inquiry channels were really one system. Designating a single source of truth and making everything else reuse it structurally reduced the 'same question, different answer' failure.",
+      },
+    ],
+  },
+
 // ── 1. FlowPay ──────────────────────────────────────────────────────────
   {
     id: "flowpay",
