@@ -12,7 +12,7 @@ export const siteConfig = {
 
   social: {
     github: "https://github.com/tlstkdgus",
-    linkedin: "https://www.linkedin.com/in/%EC%8B%A0%EC%83%81%ED%98%84",
+    linkedin: "https://www.linkedin.com/in/%EC%83%81%ED%98%84-%EC%8B%A0-83267a337",
     blog: "https://velog.io/@tlstkdgus",
   },
 

@@ -12,7 +12,7 @@ export const profile = {
     email: "tlstkdgus9@naver.com",
     blog: "https://velog.io/@tlstkdgus",
     github: "https://github.com/tlstkdgus",
-    linkedin: "https://www.linkedin.com/in/%EC%8B%A0%EC%83%81%ED%98%84",
+    linkedin: "https://www.linkedin.com/in/%EC%83%81%ED%98%84-%EC%8B%A0-83267a337",
   },
   education: [
     {
