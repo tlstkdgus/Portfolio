@@ -11,7 +11,7 @@
 - LinkedIn: https://www.linkedin.com/in/상현-신-83267a337
 - 포트폴리오 사이트: https://portfolio-tlstkdgus.vercel.app
 
-**학력**: 한국외국어대학교 (2020.03 ~ 2026.02 졸업) — 경상대학 Global Business & Technology 학부 / AI 융합전공 Software & AI 트랙 (복수전공) · GPA 4.14/4.5
+**학력**: 한국외국어대학교 (2020.03 ~ 2026.02 졸업) — 경상대학 Global Business & Technology 학부 / AI 융합전공 Software & AI 트랙 (복수전공) · GPA 4.13/4.5
 **병역**: 육군 병장 만기 제대 (2021.10 ~ 2023.04)
 
 **요약 숫자**: 기획·개발한 서비스 15개+ · 교내외 수상 11회 · 실서비스 PM(PR 170+) · AI로 직접 만든 운영 도구 3종
