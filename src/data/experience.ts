@@ -17,29 +17,6 @@ export interface Experience {
 // 해커톤·캠프·수료 이력은 Projects / Credentials로 옮겼습니다. 여기엔 실제 조직에서 맡은 역할만 둡니다.
 export const experiences: Experience[] = [
   {
-    company: "CleanB (RoomiClean)",
-    companyEn: "CleanB (RoomiClean)",
-    role: "PM · 프론트엔드 · 디자인",
-    roleEn: "PM · Frontend · Design",
-    team: "에어비앤비 청소 매칭 플랫폼 (3인 팀, 실서비스 운영 중)",
-    teamEn: "Airbnb cleaning matching platform (3-person team, in production)",
-    period: "2025.12. ~ 현재",
-    periodEn: "Dec 2025 — Present",
-    startDate: "2025-12",
-    endDate: null,
-    description: [
-      "전체 PM으로 기획·디자인·릴리스 우선순위를 잡고, 청소자용 화면 전체를 직접 개발",
-      "PR 170개+ 저장소의 코드 리뷰와 릴리스 머지, 배포·QA 프로세스 관리",
-      "Docker · GitHub Actions · CDN으로 구성한 배포 환경에서 실서비스 운영",
-    ],
-    descriptionEn: [
-      "Overall PM — owning planning, design, and release priorities while building the entire cleaner-side frontend",
-      "Code review, release merges, deployment and QA process across a 170+ PR repository",
-      "Operating a live service on Docker, GitHub Actions, and CDN infrastructure",
-    ],
-    tags: ["PM", "Next.js", "TypeScript", "CI/CD"],
-  },
-  {
     company: "멋쟁이사자처럼",
     companyEn: "LIKELION",
     role: "커뮤니티 매니저 인턴",
@@ -65,6 +42,29 @@ export const experiences: Experience[] = [
       "Produced announcements and SNS content, automated ops workflows",
     ],
     tags: ["Community", "Event Ops", "Content", "Automation"],
+  },
+  {
+    company: "CleanB (RoomiClean)",
+    companyEn: "CleanB (RoomiClean)",
+    role: "PM · 프론트엔드 · 디자인",
+    roleEn: "PM · Frontend · Design",
+    team: "에어비앤비 청소 매칭 플랫폼 (3인 팀, 실서비스 운영 중)",
+    teamEn: "Airbnb cleaning matching platform (3-person team, in production)",
+    period: "2025.12. ~ 현재",
+    periodEn: "Dec 2025 — Present",
+    startDate: "2025-12",
+    endDate: null,
+    description: [
+      "전체 PM으로 기획·디자인·릴리스 우선순위를 잡고, 청소자용 화면 전체를 직접 개발",
+      "PR 170개+ 저장소의 코드 리뷰와 릴리스 머지, 배포·QA 프로세스 관리",
+      "Docker · GitHub Actions · CDN으로 구성한 배포 환경에서 실서비스 운영",
+    ],
+    descriptionEn: [
+      "Overall PM — owning planning, design, and release priorities while building the entire cleaner-side frontend",
+      "Code review, release merges, deployment and QA process across a 170+ PR repository",
+      "Operating a live service on Docker, GitHub Actions, and CDN infrastructure",
+    ],
+    tags: ["PM", "Next.js", "TypeScript", "CI/CD"],
   },
   {
     company: "SSAFY (삼성 청년 SW·AI 아카데미)",
