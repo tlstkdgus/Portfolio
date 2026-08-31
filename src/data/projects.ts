@@ -42,8 +42,6 @@ export const projects: Project[] = [
     periodEn: "Dec 2025 — Present (In Operation)",
     roles: ["PM", "프론트엔드", "디자인"],
     rolesEn: ["PM", "Frontend", "Design"],
-    repo: "https://github.com/RoomiClean/Frontend",
-    commitsUrl: "https://github.com/RoomiClean/Frontend/commits?author=tlstkdgus",
     goals: [
       "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들고 있습니다",
       "해커톤처럼 만들고 끝나는 게 아니라, 실제 사용자를 받는 서비스로 운영하는 것이 목표",
