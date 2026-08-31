@@ -32,6 +32,7 @@ export const careerDetailSections: CareerDetailSection[] = [
       "/projects/hackathon14/02.png",
       "/projects/hackathon14/03.png",
       "/projects/hackathon14/04.png",
+      "/projects/hackathon14/05.png",
     ],
     background: [
       {
