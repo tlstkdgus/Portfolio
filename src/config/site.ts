@@ -4,8 +4,8 @@ export const siteConfig = {
   author: {
     name: { ko: "신상현", en: "Sanghyeon Shin" },
     title: {
-      ko: "데이터로 문제를 정의하고, 직접 구현하는 IT 기획자",
-      en: "IT Planner Who Defines Problems with Data and Builds the Solution",
+      ko: "데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자",
+      en: "IT planner who defines problems with data, then builds and ships",
     },
     email: "tlstkdgus9@naver.com",
   },
