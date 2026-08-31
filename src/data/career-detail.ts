@@ -36,9 +36,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "80개 대학, 참가자 2,000명+, 예선 약 400팀 → 313팀 제출 → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 연합 해커톤입니다. 커뮤니티 매니저 인턴으로 참여해 참가자 가이드 공동 작성, 심사 정책 공동 설계, 운영 도구 3종 제작, 본선 현장 운영을 맡았습니다. (2026.07 ~ 2026.08.25, 코엑스 마곡)",
+        text: "80개 대학, 참가자 2,000명+, 313팀 제출(562개 레포) → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 연합 해커톤입니다. 커뮤니티 매니저 인턴으로 참여해 참가자 가이드 공동 작성, 심사 정책 공동 설계, 운영 도구 3종 제작, 본선 현장 운영을 맡았습니다. (2026.07 ~ 2026.08.25, 코엑스 마곡)",
         textEn:
-          "The largest LIKELION hackathon to date: 80 universities, 2,000+ participants, ~400 entering teams → 313 submissions → an 8-team finals tournament picking one winner. As a community manager intern, I co-wrote the participant guide, co-designed judging policy, built 3 ops tools, and ran on-site finals operations. (Jul 2026 – Aug 25, 2026, COEX Magok)",
+          "The largest LIKELION hackathon to date: 80 universities, 2,000+ participants, 313 submitting teams (562 repos) → an 8-team finals tournament picking one winner. As a community manager intern, I co-wrote the participant guide, co-designed judging policy, built 3 ops tools, and ran on-site finals operations. (Jul 2026 – Aug 25, 2026, COEX Magok)",
         subItems: [
           {
             text: "참가자·심사위원·파트너의 이해가 충돌하는 지점마다 규칙이 필요했고, 313팀·562개 레포 검증과 2,000명 앞 실시간 토너먼트는 수작업으로 풀 수 없는 문제였습니다.",
