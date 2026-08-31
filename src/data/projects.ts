@@ -173,6 +173,7 @@ export const projects: Project[] = [
     roles: ["강의", "프론트엔드"],
     rolesEn: ["Instructor", "Frontend"],
     url: "https://likelion-dev-site.vercel.app",
+    repo: "https://github.com/tlstkdgus/likelion-dev-site",
     goals: [
       "회사에는 저처럼 비전공자인 동료가 많았고, 그분들에게 '배포'·'API' 같은 말이 여전히 어렵다는 걸 알게 됐습니다. AI에게 물어보면 답이 나오는 시대지만, 기본 흐름을 모르면 무엇을 물어야 할지 모릅니다",
     ],
