@@ -141,10 +141,12 @@ export const projects: Project[] = [
     results: [
       "562개 레포 전수 검사로 위반 5팀 적발 — 차등 기준에 따라 2팀 실격, 나머지 감점·정상참작 처리",
       "본선 토너먼트(8팀 · 심사위원 5명)를 직접 만든 콘솔로 진행 완료 — 콘솔 조작이 무대 스크린에 반영되는 시간 실측 2.2초",
+      "FAQ 봇으로 한 달간 질문 229건 응대(사용자 53명) — 80.8%를 키워드 즉답으로 처리(API 비용 0), 미응답 0건",
     ],
     resultsEn: [
       "Full sweep of 562 repos caught 5 violating teams — 2 disqualified under the graded criteria, the rest handled with deductions or leniency",
       "Ran the finals tournament (8 teams, 5 judges) on the self-built console — measured 2.2s from console action to stage screen",
+      "The FAQ bot answered 229 questions from 53 users over a month — 80.8% via instant keyword match (zero API cost), 0 unanswered",
     ],
     stats: [
       { label: "규모", labelEn: "Scale", value: "80개 대학 · 2,000명+" },
