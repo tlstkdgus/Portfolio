@@ -27,6 +27,12 @@ export const careerDetailSections: CareerDetailSection[] = [
     id: "hackathon14",
     title: "80개 대학 연합 해커톤 운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
     titleEn: "Running an 80-University Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
+    images: [
+      "/projects/hackathon14/01.png",
+      "/projects/hackathon14/02.png",
+      "/projects/hackathon14/03.png",
+      "/projects/hackathon14/04.png",
+    ],
     background: [
       {
         text: "80개 대학, 참가자 2,000명+, 예선 약 400팀 → 313팀 제출 → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 연합 해커톤입니다. 커뮤니티 매니저 인턴으로 참여해 참가자 가이드 공동 작성, 심사 정책 공동 설계, 운영 도구 3종 제작, 본선 현장 운영을 맡았습니다. (2026.07 ~ 2026.08.25, 코엑스 마곡)",

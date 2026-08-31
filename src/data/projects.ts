@@ -153,6 +153,13 @@ export const projects: Project[] = [
       { label: "직접 만든 도구", labelEn: "Tools built", value: "3종" },
     ],
     tags: ["Event Ops", "Policy Design", "Next.js", "Supabase", "Python", "LLM"],
+    image: "/projects/hackathon14/01.png",
+    images: [
+      "/projects/hackathon14/01.png",
+      "/projects/hackathon14/02.png",
+      "/projects/hackathon14/03.png",
+      "/projects/hackathon14/04.png",
+    ],
   },
   {
     title: "FlowPay",
