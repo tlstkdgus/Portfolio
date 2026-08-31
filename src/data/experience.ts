@@ -30,12 +30,14 @@ export const experiences: Experience[] = [
     description: [
       "전국 80개 대학, 2,500여 명 규모의 대학(유니브) 커뮤니티 운영·관리",
       "14기 중앙해커톤(80개 대학 · 참가자 2,000명+) 운영 — 심사 정책 공동 설계, 운영 도구 3종(제출물 검사 · 본선 콘솔 · FAQ 봇) 직접 제작·투입, 본선 현장 운영",
+      "비개발 직군 대상 사내 교육 '개발 아는 척 완전정복' 6회 기획·제작·강의 — 설문 6명 만족도 전원 5/5, 추천 의향 9.7/10",
       "전국 단위 연합 아이디어톤 운영 참여 (1,822명 · 378개 프로젝트), 실시간 Q&A·문의 대응",
       "공지·SNS 콘텐츠 제작, 플랫폼 기반 운영 업무 자동화",
     ],
     descriptionEn: [
       "Managing the nationwide LIKELION Univ. community — 80 universities, ~2,500 members",
       "Ran the 14th national hackathon (80 universities, 2,000+ participants) — co-designed judging policy, built and deployed 3 ops tools (submission checker, finals console, FAQ bot), ran on-site finals operations",
+      "Created and taught a 6-session internal dev-literacy course for non-developers — survey of 6 attendees: 5/5 satisfaction across the board, 9.7/10 recommendation",
       "Helped operate the national ideathon (1,822 participants, 378 projects); handled real-time Q&A and inquiries",
       "Producing announcements and SNS content, automating ops workflows",
     ],

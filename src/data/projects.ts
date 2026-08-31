@@ -163,6 +163,63 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "개발 아는 척 완전정복",
+    featured: true,
+    titleEn: "Dev Literacy Crash Course",
+    subtitle: "비개발 직군을 위한 사내 개발 교육 6회 + 교육 사이트",
+    subtitleEn: "6-session internal dev-literacy course for non-developers, with a companion site",
+    period: "2026.07. ~ 2026.08.",
+    periodEn: "Jul 2026 — Aug 2026",
+    roles: ["강의", "프론트엔드"],
+    rolesEn: ["Instructor", "Frontend"],
+    url: "https://likelion-dev-site.vercel.app",
+    goals: [
+      "회사에는 저처럼 비전공자인 동료가 많았고, 그분들에게 '배포'·'API' 같은 말이 여전히 어렵다는 걸 알게 됐습니다. AI에게 물어보면 답이 나오는 시대지만, 기본 흐름을 모르면 무엇을 물어야 할지 모릅니다",
+    ],
+    goalsEn: [
+      "Many colleagues were non-developers like me, and words like 'deploy' and 'API' were still hard for them. In the age of asking AI anything, you still can't ask a good question without knowing the basic flow",
+    ],
+    contents: [
+      "점심시간 분량 6회 커리큘럼을 직접 설계하고 주 1회, 6주간 직접 강의 — 소프트웨어 구조 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드",
+      "모든 개념을 식당 비유 하나로 통일 (홀=프론트엔드, 주방=백엔드, 냉장고=DB, 주문서=API)",
+      "교육용 웹사이트 직접 제작(React · TypeScript · Vite) — SVG 개념 도식 14종, 브라우저에서 바로 동작하는 라이브 실습(로그인 요청 왕복, Git 협업 시뮬레이터 등), 용어 사전 51개",
+    ],
+    contentsEn: [
+      "Designed a 6-session lunchtime curriculum and taught it weekly for 6 weeks — software structure, dev vocabulary, Git & GitHub, collaboration communication, AI & vibe coding, AI trends",
+      "Unified every concept under one restaurant metaphor (dining hall = frontend, kitchen = backend, fridge = DB, order slip = API)",
+      "Built the companion website myself (React · TypeScript · Vite) — 14 SVG concept diagrams, live in-browser demos (login round-trip, Git collaboration simulator), and a 51-term glossary",
+    ],
+    decisions: [
+      "코드를 가르치지 않기로 결정 — 목표를 '개발자 되기'가 아니라 '개발자와 대화하기'로 좁혀 점심시간 6회에 담았습니다",
+      "설치·계정 없이 브라우저에서 바로 동작하는 실습만 — 밥 먹으면서 듣는 환경을 전제로 설계",
+    ],
+    decisionsEn: [
+      "Decided not to teach code — narrowed the goal from 'becoming a developer' to 'talking with developers,' so it fits in six lunch breaks",
+      "Demos run in the browser with no installs or accounts — designed for an audience listening over lunch",
+    ],
+    results: [
+      "수강자 설문(6명): 만족도 전원 5/5, 추천 의향 평균 9.7/10, '개발자와의 대화에서 이해되는 부분이 늘었다' 4.7/5",
+      "'짧아서 아쉽다'는 피드백과 함께 인프라·DB·협업 방식 등 후속 주제 요청 접수",
+    ],
+    resultsEn: [
+      "Attendee survey (n=6): 5/5 satisfaction across the board, 9.7/10 average recommendation, 4.7/5 on 'I understand more of developer conversations now'",
+      "Feedback that it was 'too short' — with requests for follow-up topics like infrastructure, databases, and dev collaboration",
+    ],
+    stats: [
+      { label: "만족도", labelEn: "Satisfaction", value: "5/5 전원" },
+      { label: "추천 의향", labelEn: "Recommend", value: "9.7/10" },
+    ],
+    tags: ["Education", "React", "TypeScript", "Vite", "Content Design"],
+    image: "/projects/devsite/01.png",
+    images: [
+      "/projects/devsite/01.png",
+      "/projects/devsite/02.png",
+      "/projects/devsite/03.png",
+      "/projects/devsite/04.png",
+      "/projects/devsite/05.png",
+    ],
+  },
+  {
     title: "FlowPay",
     featured: true,
     titleEn: "FlowPay",
