@@ -86,6 +86,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Kakao Map", "Firebase", "Docker", "CI/CD"],
     image: "/projects/cleanb/01.png",
     images: [
+      "/projects/cleanb/flow.png",
       "/projects/cleanb/01.png",
       "/projects/cleanb/02.png",
       "/projects/cleanb/03.png",
@@ -156,6 +157,8 @@ export const projects: Project[] = [
     tags: ["Event Ops", "Policy Design", "Next.js", "Supabase", "Python", "LLM"],
     image: "/projects/hackathon14/01.png",
     images: [
+      "/projects/hackathon14/funnel.png",
+      "/projects/hackathon14/pipeline.png",
       "/projects/hackathon14/01.png",
       "/projects/hackathon14/02.png",
       "/projects/hackathon14/03.png",
@@ -759,6 +762,7 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "AI-OCR", "FinTech", "Figma"],
     image: "/projects/songeul/01.png",
     images: [
+      "/projects/songeul/flow.png",
       "/projects/songeul/01.png",
       "/projects/songeul/02.png",
       "/projects/songeul/03.png",

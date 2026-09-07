@@ -28,6 +28,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     title: "80개 대학 연합 해커톤 운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
     titleEn: "Running an 80-University Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
     images: [
+      "/projects/hackathon14/funnel.png",
+      "/projects/hackathon14/pipeline.png",
       "/projects/hackathon14/01.png",
       "/projects/hackathon14/02.png",
       "/projects/hackathon14/03.png",
@@ -1079,6 +1081,7 @@ export const careerDetailSections: CareerDetailSection[] = [
     title: "시니어를 위한 AI-OCR 모바일 뱅킹 — 손글 (SonGeul)",
     titleEn: "AI-OCR Mobile Banking for Seniors — SonGeul",
     images: [
+      "/projects/songeul/flow.png",
       "/projects/songeul/01.png",
       "/projects/songeul/02.png",
       "/projects/songeul/03.png",
