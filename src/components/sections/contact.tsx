@@ -16,8 +16,8 @@ export function Contact() {
   const t = useTranslations("contact");
 
   return (
-    <section id="contact" className="border-t border-border py-16 md:py-20">
-      <div className="mx-auto max-w-3xl px-6">
+    <section id="contact" className="py-14 md:py-20">
+      <div className="mx-auto max-w-5xl px-6">
         <SectionHeading>{t("heading")}</SectionHeading>
         <p className="max-w-2xl text-base leading-relaxed text-muted-foreground md:text-[17px]">
           {t("description")}

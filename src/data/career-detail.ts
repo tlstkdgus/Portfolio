@@ -22,6 +22,96 @@ export interface CareerDetailSection {
 }
 
 export const careerDetailSections: CareerDetailSection[] = [
+// ── 00. CleanB ──────────────────────────────────────────────────────────
+  {
+    id: "cleanb",
+    title: "에어비앤비 청소 매칭 플랫폼 실서비스 운영 — CleanB",
+    titleEn: "Running a Live Airbnb Cleaning Matching Platform — CleanB",
+    images: [
+      "/projects/cleanb/flow.png",
+      "/projects/cleanb/01.png",
+      "/projects/cleanb/03.png",
+      "/projects/cleanb/05.png",
+      "/projects/cleanb/07.png",
+    ],
+    background: [
+      {
+        text: "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 둘을 연결하는 매칭 서비스를 만들되, 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 '운영'하는 것을 목표로 잡았습니다. (2025.12 ~ 현재, 3인 팀 — www.rumiclean.com)",
+        textEn:
+          "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to get steady work. We set out to build a matching service — and to actually operate it with real users, not finish it like a hackathon project. (Dec 2025 – present, 3-person team — www.rumiclean.com)",
+        subItems: [
+          {
+            text: "전체 PM으로 기획·디자인·릴리스 우선순위를 잡고, 청소자용 화면 전체를 직접 개발했습니다.",
+            textEn:
+              "As overall PM I own planning, design, and release priorities, and built the entire cleaner-side frontend myself.",
+          },
+        ],
+      },
+    ],
+    role: [
+      {
+        title: "운영 PM — 우선순위와 배포 의사결정",
+        titleEn: "Operating PM — Priorities & Deployment Decisions",
+        items: [
+          {
+            text: "기능 개발부터 배포까지의 우선순위를 정하고, PR 170개가 넘는 저장소의 코드 리뷰·릴리스 머지·QA 프로세스를 관리합니다.",
+            textEn:
+              "Set priorities from feature work to deployment; manage code review, release merges, and QA across a 170+ PR repository.",
+            subItems: [
+              {
+                text: "처음엔 k3s/ArgoCD로 배포했지만 3인 팀에겐 과했습니다 — Docker Compose + Caddy로 단순화해 유지보수 부담을 줄였고, 배포 중 페이지가 깨지는 문제는 정적 파일을 CDN(CloudFront)으로 분리해 해결했습니다.",
+                textEn:
+                  "We started with k3s/ArgoCD — too much for a 3-person team. Simplified to Docker Compose + Caddy, and fixed mid-deploy page breakage by serving static files from a CDN (CloudFront).",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "프로세스 기반 화면 설계",
+        titleEn: "Process-Driven Screen Design",
+        items: [
+          {
+            text: "청소 작업의 생애주기를 '수락 대기 → 진행 예정 → 진행 중 → 검수 대기 → 정산 대기' 상태 머신으로 정의하고, 각 상태에서 화면과 입력을 도출했습니다.",
+            textEn:
+              "Defined the cleaning job lifecycle as a state machine (pending → scheduled → in progress → review → settlement) and derived each screen and its inputs from the states.",
+            subItems: [
+              {
+                text: "완료 인증에 전·후 사진 최소 5장 규칙을 두어, 호스트-청소자 간 '청소가 됐는가' 분쟁의 근거를 서비스가 보관하도록 정책으로 설계했습니다.",
+                textEn:
+                  "Completion requires at least 5 before/after photos — a policy that makes the service the custodian of evidence in host-cleaner disputes.",
+              },
+            ],
+          },
+          {
+            text: "카카오맵 지도 검색, Firebase 웹 푸시 등 실서비스에 필요한 연동을 구현하고, 아토믹 디자인·data-testid QA 규칙으로 팀 코드 일관성을 유지합니다.",
+            textEn:
+              "Implemented production integrations (Kakao Map search, Firebase Web Push) and keep team code consistent with atomic design and data-testid QA conventions.",
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "GitHub Actions 자동 배포로 실서비스를 운영 중입니다 (www.rumiclean.com). 기획·디자인·개발·배포·QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트입니다.",
+        textEn:
+          "The service runs live on GitHub Actions auto-deployment (www.rumiclean.com) — my first project operating the full cycle: planning, design, development, deployment, and QA.",
+      },
+    ],
+    lessons: [
+      {
+        text: "운영 복잡도는 팀 크기에 맞춰야 합니다. k3s는 틀린 기술이 아니라 3인 팀에 틀린 선택이었습니다 — 도구를 바꾸는 결정이 기능을 더하는 결정보다 서비스를 더 안정시켰습니다.",
+        textEn:
+          "Ops complexity must match team size. k3s wasn't the wrong tech — it was the wrong choice for three people. Swapping tools stabilized the service more than adding features would have.",
+      },
+      {
+        text: "기능 목록을 먼저 쓰면 화면 수만 늘어납니다. 상태 흐름을 먼저 확정하니 필요한 화면과 입력이 저절로 추려졌고, 개발·QA 범위 협상도 이 흐름 위에서 이뤄졌습니다.",
+        textEn:
+          "Write the feature list first and you only multiply screens. Fixing the state flow first distilled the screens and inputs we actually needed — and scope negotiations happened on top of that flow.",
+      },
+    ],
+  },
+
 // ── 0. 14기 중앙해커톤 ──────────────────────────────────────────────────
   {
     id: "hackathon14",

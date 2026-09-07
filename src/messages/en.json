@@ -1,21 +1,50 @@
 {
   "nav": {
-    "about": "About",
-    "experience": "Experience",
     "projects": "Projects",
+    "experience": "Experience",
+    "about": "About",
     "certified": "Credentials",
     "contact": "Contact"
   },
   "hero": {
     "name": "Sanghyeon Shin",
-    "title": "IT planner who defines problems with data, then builds and ships",
-    "subtitle": "I don't stop at planning docs. I frame problems in numbers, design screens in Figma, and build them with React and Next.js. Currently PM of CleanB, an Airbnb cleaning matching service running in production.",
+    "title1": "Defining problems with data,",
+    "title2": "validating them as products",
+    "subtitle": "PM of CleanB, a live service in production — and designer of the policies and ops tools behind a 2,000-person hackathon.",
     "cta_resume": "View Projects",
-    "cta_contact": "Get in Touch"
+    "cta_contact": "Get in Touch",
+    "hero_caption": "Live in production — CleanB (rumiclean.com)",
+    "metrics": [
+      { "v": "15+", "k": "Products planned & built" },
+      { "v": "11", "k": "Competition awards" },
+      { "v": "LIVE", "k": "Service in production" },
+      { "v": "5th / 102", "k": "KakaoBank FIN:NECT" }
+    ]
+  },
+  "selected": {
+    "heading": "Selected Projects",
+    "sub": "How I define the problem, what I decided, and what changed — shown through three projects.",
+    "case_cta": "View Case Study"
+  },
+  "principles": {
+    "heading": "Working Principles",
+    "items": [
+      {
+        "t": "Define problems in numbers",
+        "d": "53% in surveys, 562 repos, a 40%p usage gap — every plan starts from a verifiable number."
+      },
+      {
+        "t": "Resolve conflicts with policy",
+        "d": "A 100-point rubric, graded violation verdicts, a 5-photo rule — I design rules where interests collide."
+      },
+      {
+        "t": "Build missing tools with AI",
+        "d": "A submission checker, a finals console, an FAQ bot — when a tool doesn't exist, I build it and ship it."
+      }
+    ]
   },
   "about": {
     "heading": "About",
-    "now_label": "Now",
     "description_1": "PM of CleanB (3-person team) — owning planning, design, and releases while building the cleaner-side frontend myself. Before that, as a Community Manager Intern at LIKELION, I ran a community of ~2,500 members across 80 universities and the national hackathon.",
     "description_2": "Double major in Global Business & Technology and AI Convergence. Through LIKELION staff roles, hackathons, and startup programs I've planned and built 15 services, 11 of which won awards. I built my backend and QA foundations by completing SSAFY's 15th Java track.",
     "description_3": "Products people actually use, decisions backed by data, and teams that grow together — my goal is to be a PM who delivers all three at once.",
@@ -35,13 +64,13 @@
   "certified": {
     "heading": "Credentials",
     "certifications": "Certifications",
-    "awards": "Awards"
+    "awards": "Highlighted Awards",
+    "awards_rest": "More Awards"
   },
   "projects": {
-    "heading": "Projects",
-    "featured_label": "Featured",
-    "others_label": "Other projects",
-    "detail_link": "See all project details"
+    "heading": "All Projects",
+    "sub": "Everything beyond the selected three. Each case study covers the background, my role, and lessons learned.",
+    "detail_link": "Case Study"
   },
   "contact": {
     "heading": "Contact",

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/sections/hero";
+import { SelectedProjects } from "@/components/sections/selected-projects";
+import { Principles } from "@/components/sections/principles";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Footer } from "@/components/layout/footer";
@@ -57,8 +59,10 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <About />
+        <SelectedProjects />
+        <Principles />
         <Experience />
+        <About />
         <Projects />
         <Credentials />
         <Contact />

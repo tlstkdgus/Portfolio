@@ -17,9 +17,9 @@ export const siteConfig = {
   },
 
   nav: [
-    "about",
-    "experience",
     "projects",
+    "experience",
+    "about",
     "certified",
     "contact",
   ] as const,

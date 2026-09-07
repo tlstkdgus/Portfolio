@@ -9,8 +9,8 @@ export function Experience() {
   const isKo = useLocale() === "ko";
 
   return (
-    <section id="experience" className="border-t border-border py-16 md:py-20">
-      <div className="mx-auto max-w-3xl px-6">
+    <section id="experience" className="py-14 md:py-20">
+      <div className="mx-auto max-w-5xl px-6">
         <SectionHeading>{t("heading")}</SectionHeading>
 
         <ol className="divide-y divide-border">

@@ -21,6 +21,7 @@ export interface Project {
   resultsEn: string[];
   tags: string[];
   featured?: boolean;
+  caseId?: string;
   url?: string;
   repo?: string;
   commitsUrl?: string;
@@ -34,6 +35,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "CleanB",
+    caseId: "cleanb",
     featured: true,
     titleEn: "CleanB",
     subtitle: "에어비앤비 청소 매칭 플랫폼",
@@ -98,6 +100,7 @@ export const projects: Project[] = [
   },
   {
     title: "14기 중앙해커톤 운영",
+    caseId: "hackathon14",
     featured: true,
     titleEn: "LIKELION 14th Hackathon Ops",
     subtitle: "80개 대학 · 2,000명+ 연합 해커톤의 심사 정책과 운영 도구 3종",
@@ -226,6 +229,7 @@ export const projects: Project[] = [
   },
   {
     title: "FlowPay",
+    caseId: "flowpay",
     featured: true,
     titleEn: "FlowPay",
     subtitle: "무기명 법인카드 지출·회계 자동화 B2B SaaS",
@@ -289,6 +293,7 @@ export const projects: Project[] = [
   },
   {
     title: "Y:Wave",
+    caseId: "ywave",
     featured: true,
     titleEn: "Y:Wave",
     subtitle: "AI 기반 경기도 지역화폐 가맹점 추천 서비스",
@@ -345,6 +350,7 @@ export const projects: Project[] = [
   },
   {
     title: "NeuroSight",
+    caseId: "neurosight",
     titleEn: "NeuroSight",
     subtitle: "AI 기반 마취 시술 보조 서비스",
     subtitleEn: "AI-Assisted Anesthesia Guidance System",
@@ -402,6 +408,7 @@ export const projects: Project[] = [
   },
   {
     title: "TCP",
+    caseId: "tcp",
     titleEn: "TCP",
     subtitle: "AI 기반 약관 및 위험 알림 서비스",
     subtitleEn: "AI-Based Terms of Service Analysis Service",
@@ -450,6 +457,7 @@ export const projects: Project[] = [
   },
   {
     title: "hai",
+    caseId: "hai",
     titleEn: "hai",
     subtitle: "AI 기반 개인 맞춤형 커리어 멘토링 서비스",
     subtitleEn: "AI-Powered Personalized Career Mentoring Service",
@@ -496,6 +504,7 @@ export const projects: Project[] = [
   },
   {
     title: "AInterview",
+    caseId: "ainterview",
     titleEn: "AInterview",
     subtitle: "AI 기반 모의 면접 서비스",
     subtitleEn: "AI-Powered Mock Interview App",
@@ -543,6 +552,7 @@ export const projects: Project[] = [
   },
   {
     title: "RZi",
+    caseId: "rzi",
     titleEn: "RZi",
     subtitle: "AI 기반 알뜰 지출관리 플랫폼",
     subtitleEn: "AI-Powered Smart Expense Manager",
@@ -591,6 +601,7 @@ export const projects: Project[] = [
   },
   {
     title: "ARtliving",
+    caseId: "artliving",
     titleEn: "ARtliving",
     subtitle: "AR 기반 가구 추천 플랫폼",
     subtitleEn: "AR-Powered Furniture Recommendation Platform",
@@ -626,6 +637,7 @@ export const projects: Project[] = [
   },
   {
     title: "Meal당",
+    caseId: "mealdang",
     titleEn: "Meal당",
     subtitle: "당뇨병 환자를 위한 AI 식단 관리 서비스",
     subtitleEn: "AI Diet Management Service for Diabetics",
@@ -677,6 +689,7 @@ export const projects: Project[] = [
   },
   {
     title: "허리UP!",
+    caseId: "huriup",
     titleEn: "HuriUP!",
     subtitle: "웹캠 기반 자세 교정 서비스",
     subtitleEn: "Webcam-Based Posture Correction Service",
@@ -724,6 +737,7 @@ export const projects: Project[] = [
   },
   {
     title: "손글 (SonGeul)",
+    caseId: "songeul",
     featured: true,
     titleEn: "SonGeul",
     subtitle: "시니어를 위한 AI-OCR 모바일 뱅킹",
@@ -773,6 +787,7 @@ export const projects: Project[] = [
   },
   {
     title: "커넥트",
+    caseId: "connect",
     featured: true,
     titleEn: "Connect",
     subtitle: "은둔형 청년 지원 플랫폼",
@@ -826,6 +841,7 @@ export const projects: Project[] = [
   },
   {
     title: "dotori",
+    caseId: "dotori",
     titleEn: "dotori",
     subtitle: "시각장애인 점자 교육 플랫폼",
     subtitleEn: "Braille Education Platform for the Visually Impaired",
@@ -861,6 +877,7 @@ export const projects: Project[] = [
   },
   {
     title: "16P!ay",
+    caseId: "16play",
     titleEn: "16P!ay",
     subtitle: "MBTI 커뮤니티",
     subtitleEn: "MBTI Community Service",

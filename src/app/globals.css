@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  /* Light mode base palette */
-  --color-background: #fcfcfc;
-  --color-foreground: #111113;
+  /* Light palette — 스펙: 차분한 그레이 바탕, 블루는 CTA·숫자·활성 요소에만 */
+  --color-background: #f7f8fa;
+  --color-foreground: #111318;
   --color-card: #ffffff;
-  --color-card-foreground: #111113;
-  --color-muted: #f2f2f3;
-  --color-muted-foreground: #55555e;
-  --color-border: #e6e6e9;
-  --color-accent: #2456d6;
+  --color-card-foreground: #111318;
+  --color-muted: #eef0f3;
+  --color-muted-foreground: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #2563eb;
   --color-accent-foreground: #ffffff;
-  --color-accent-secondary: #2456d6;
-  --color-section-alt: #fcfcfc;
+  --color-accent-soft: #eaf1ff;
+  --color-accent-secondary: #2563eb;
+  --color-section-alt: #ffffff;
 
   /* Typography */
   --font-sans: "Pretendard Variable", "Pretendard", -apple-system,
@@ -23,23 +24,25 @@
 
 /* Dark mode overrides */
 .dark {
-  --color-background: #0f0f11;
-  --color-foreground: #f2f2f3;
-  --color-card: #17171a;
-  --color-card-foreground: #f2f2f3;
-  --color-muted: #232326;
-  --color-muted-foreground: #a3a3ab;
-  --color-border: #27272b;
-  --color-accent: #7aa2ff;
-  --color-accent-foreground: #0f0f11;
-  --color-accent-secondary: #7aa2ff;
-  --color-section-alt: #0f0f11;
+  --color-background: #0e1117;
+  --color-foreground: #f3f4f6;
+  --color-card: #161b24;
+  --color-card-foreground: #f3f4f6;
+  --color-muted: #1e2430;
+  --color-muted-foreground: #9aa3b2;
+  --color-border: #232a36;
+  --color-accent: #6ba1ff;
+  --color-accent-foreground: #0e1117;
+  --color-accent-soft: #142138;
+  --color-accent-secondary: #6ba1ff;
+  --color-section-alt: #161b24;
 }
 
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
   word-break: keep-all;
   overflow-wrap: anywhere;
+  font-feature-settings: "tnum";
 }
 
 html {
@@ -67,7 +70,20 @@ html {
   outline-offset: 2px;
 }
 
-/* Scrollbar hide utility (Tailwind v4 doesn't include this) */
+/* 카드 공통 — radius 20px, 약한 그림자, hover 리프트 */
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgb(17 19 24 / 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgb(17 19 24 / 0.08);
+}
+
+/* Scrollbar hide utility */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;

@@ -3,64 +3,66 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
-import { profile } from "@/data/profile";
-
-const links = [
-  { label: "Email", href: `mailto:${profile.links.email}` },
-  { label: "GitHub", href: profile.links.github },
-  { label: "Blog", href: profile.links.blog },
-  { label: "LinkedIn", href: profile.links.linkedin },
-];
 
 export function Hero() {
   const t = useTranslations("hero");
+  const metrics: { v: string; k: string }[] = t.raw("metrics");
 
   return (
-    <section id="hero" className="pb-16 pt-32 md:pb-24 md:pt-44">
-      <div className="mx-auto max-w-3xl px-6">
-        <div className="relative mb-8 h-20 w-20 overflow-hidden rounded-full">
-          <Image
-            src="/profile.jpg"
-            alt={t("name")}
-            fill
-            className="object-cover"
-            sizes="80px"
-            priority
-          />
+    <section id="hero" className="pb-14 pt-32 md:pb-20 md:pt-40">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="grid items-center gap-10 md:grid-cols-[1.05fr_1fr] md:gap-14">
+          <div>
+            <h1 className="text-4xl font-bold leading-[1.18] tracking-tight md:text-[46px]">
+              {t("title1")}
+              <br />
+              <span className="text-accent">{t("title2")}</span>
+            </h1>
+            <p className="mt-6 max-w-md text-[17px] leading-[1.7] text-muted-foreground">
+              {t("subtitle")}
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-1.5 rounded-full bg-accent px-6 py-3 text-[15px] font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
+              >
+                {t("cta_resume")}
+                <ArrowDown className="h-4 w-4" />
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center rounded-full border border-border bg-card px-6 py-3 text-[15px] font-semibold text-foreground transition-transform hover:-translate-y-0.5"
+              >
+                {t("cta_contact")}
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div className="card overflow-hidden !rounded-[20px]">
+              <Image
+                src="/projects/cleanb/01.png"
+                alt="CleanB"
+                width={1440}
+                height={900}
+                className="h-auto w-full"
+                priority
+              />
+            </div>
+            <p className="mt-2.5 text-[13px] text-muted-foreground">{t("hero_caption")}</p>
+          </div>
         </div>
 
-        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
-          {t("name")}
-        </h1>
-        <p className="mt-3 text-xl font-medium text-foreground/90 md:text-2xl">
-          {t("title")}
-        </p>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-          {t("subtitle")}
-        </p>
-
-        <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-          <a
-            href="#projects"
-            className="inline-flex items-center gap-1 font-semibold text-accent hover:underline underline-offset-4"
-          >
-            {t("cta_resume")}
-            <ArrowDown className="h-3.5 w-3.5" />
-          </a>
-          {links.map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
-              {...(!href.startsWith("mailto:") && {
-                target: "_blank",
-                rel: "noopener noreferrer",
-              })}
-              className="text-muted-foreground transition-colors hover:text-foreground hover:underline underline-offset-4"
-            >
-              {label}
-            </a>
+        <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-[20px] border border-border bg-border md:grid-cols-4">
+          {metrics.map(({ v, k }) => (
+            <div key={k} className="bg-card px-6 py-5">
+              <dd className="text-[26px] font-bold tracking-tight text-accent">{v}</dd>
+              <dt className="mt-1 text-[13px] font-semibold tracking-wide text-muted-foreground">
+                {k}
+              </dt>
+            </div>
           ))}
-        </div>
+        </dl>
       </div>
     </section>
   );
