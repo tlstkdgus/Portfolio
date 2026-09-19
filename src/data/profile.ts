@@ -4,8 +4,8 @@ export const profile = {
     en: "Sanghyeon Shin",
   },
   title: {
-    ko: "데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자",
-    en: "IT planner who defines problems with data, then builds and ships",
+    ko: "기획서에서 끝나지 않는 서비스 기획자",
+    en: "A service planner who doesn't stop at the spec",
   },
   birth: "2001",
   links: {

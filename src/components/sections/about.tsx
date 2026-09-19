@@ -33,8 +33,10 @@ export function About() {
             <span className="font-medium tracking-[-0.04em]">{t("name_line")}</span>
           </h2>
           <div className="measure mt-8 space-y-4 text-[16px] leading-[1.8] text-foreground/80">
-            <p>{t("description_1")}</p>
+            <p className="text-[18px] font-semibold leading-[1.6] text-foreground md:text-[20px]">{t("description_1")}</p>
             <p>{t("description_2")}</p>
+            <p>{t("description_3")}</p>
+            <p className="font-semibold text-foreground">{t("closing")}</p>
           </div>
 
           <dl className="measure meta mt-8 grid gap-x-6 gap-y-2 border-t border-border pt-5 text-muted-foreground sm:grid-cols-[72px_1fr]">
@@ -44,6 +46,8 @@ export function About() {
               <br />
               {isKo ? edu.major : edu.majorEn} · {t("gpa")}
             </dd>
+            <dt className="font-bold text-foreground">{t("training_label")}</dt>
+            <dd>{t("training")}</dd>
             <dt className="font-bold text-foreground">{t("military_label")}</dt>
             <dd>{isKo ? profile.military.ko : profile.military.en}</dd>
           </dl>

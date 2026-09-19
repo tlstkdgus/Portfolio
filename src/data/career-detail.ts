@@ -395,8 +395,8 @@ export const careerDetailSections: CareerDetailSection[] = [
 
   {
     id: "cleanb",
-    title: "에어비앤비 청소 매칭 플랫폼 실서비스 운영 — CleanB",
-    titleEn: "Running a Live Airbnb Cleaning Matching Platform — CleanB",
+    title: "에어비앤비 청소 매칭 플랫폼 — CleanB",
+    titleEn: "Airbnb Cleaning Matching Platform — CleanB",
     images: [
       "/projects/cleanb/flow.png",
       "/projects/cleanb/01.png",
@@ -463,9 +463,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "GitHub Actions 자동 배포로 실서비스를 운영 중입니다 (www.rumiclean.com). 기획·디자인·개발·배포·QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트입니다.",
+        text: "GitHub Actions 자동 배포로 www.rumiclean.com에 배포했습니다. 토스 결제 연동 전이라 아직 실사용자는 받지 않고 있습니다. 기획·디자인·개발·배포·QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트입니다.",
         textEn:
-          "The service runs live on GitHub Actions auto-deployment (www.rumiclean.com) — my first project operating the full cycle: planning, design, development, deployment, and QA.",
+          "Deployed to www.rumiclean.com with GitHub Actions auto-deployment. Toss payments are not connected yet, so it does not take real users — my first project operating the full cycle: planning, design, development, deployment, and QA.",
       },
     ],
     lessons: [

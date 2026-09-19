@@ -1,11 +1,14 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 export function Principles() {
   const t = useTranslations("principles");
-  const items: { t: string; d: string }[] = t.raw("items");
+  const locale = useLocale();
+  const items: { t: string; d: string; case: string }[] = t.raw("items");
 
   return (
     <section id="principles" className="gutter pb-24 md:pb-36">
@@ -20,7 +23,15 @@ export function Principles() {
             <h3 className="mt-6 text-[22px] font-bold leading-snug tracking-[-0.02em] md:text-[26px]">
               {item.t}
             </h3>
-            <p className="mt-4 text-[15px] leading-[1.75] text-muted-foreground">{item.d}</p>
+            <p className="mt-4 text-[16px] leading-[1.75] text-foreground/80">{item.d}</p>
+            <Link
+              href={`/${locale}/career#section-${item.case}`}
+              className="hit mt-5 inline-flex items-center gap-1 text-[15px] font-semibold text-accent hover:underline underline-offset-4"
+            >
+              {t("case_link")}
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+              <span className="sr-only">: {item.t}</span>
+            </Link>
           </li>
         ))}
       </ol>

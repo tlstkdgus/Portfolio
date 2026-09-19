@@ -31,7 +31,7 @@ A PM candidate who doesn't stop at planning. He built and ran the tools himself:
 - Next.js 16 (App Router), TypeScript, Tailwind CSS v4, next-intl (ko/en), next-themes (light/dark), Framer Motion.
 - Content lives in `src/data/*.ts` and `src/messages/{ko,en}.json`. Components only render it. When the data changes, PORTFOLIO.md is updated with it.
 - Narrative rules (directed 2026-09-13, binding):
-  - The LIKELION Community Manager internship (2026.04.27–08.31) is always the main story in the hero, the introduction, and the headline.
+  - Identity is the service planner; the LIKELION Community Manager internship (2026.04.27–08.31) is the most recent and strongest evidence, always in the hero summary and as selected project #1 (adjusted 2026-09-20).
   - CleanB (RumiClean) is a **project only**. It never appears under experience, and it is ordered after FlowPay.
   - The hero and introduction never describe a current "live-service PM" role.
   - Representative project order: 14th hackathon ops → internal dev course → FlowPay → CleanB → Y:Wave → SonGeul → Connect.
@@ -40,7 +40,7 @@ A PM candidate who doesn't stop at planning. He built and ran the tools himself:
 
 ## Brand Commitments
 
-- Name: 신상현 / Sanghyeon Shin. Positioning line: 「데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자」 / "An IT planner who defines problems with data, then builds and ships."
+- Name: 신상현 / Sanghyeon Shin. Positioning line (2026-09-20): 「기획서에서 끝나지 않는 서비스 기획자」 / "A service planner who doesn't stop at the spec." Planning documents (policies, specs) are a core strength, not something to replace; the differentiator is carrying them through build and operation.
 - Voice: plain, specific, number-first. Structure every project as problem → what I did / decided → outcome.
 - Fixed facts: GPA 4.13/4.5; email a91945840@gmail.com; SSAFY 15th cohort "completed (2026.01–04)"; the service name is 루미클린 (RumiClean), never "RoomiClean"; Y:Wave was submitted to the LIKELION 13th national hackathon (2025.07–08); FlowPay interviewees were working accountants, not certified accountants.
 
@@ -48,9 +48,9 @@ A PM candidate who doesn't stop at planning. He built and ran the tools himself:
 
 - PORTFOLIO.md holds every fact with its figures and sources.
 - Screenshots and diagrams are in `public/projects/<id>/`. The hackathon has a funnel diagram and a verification-pipeline diagram; CleanB and SonGeul have flow diagrams.
-- Public artifacts: GitHub repos (animal-league, likelion-dev-site, FlowPay, songeul, and others), live sites (likelion-dev-site.vercel.app, flowpay.vercel.app, rumiclean.com), and the ANIMAL LEAGUE Behance case study published by LIKELION's Brand Design Lab, with him credited as a collaborator.
+- Public artifacts: GitHub repos (animal-league, likelion-dev-site, FlowPay, songeul, and others), live sites (likelion-dev-site.vercel.app, flowpay.vercel.app); rumiclean.com is deployed but Toss payments are not connected, so it has no real users, and the ANIMAL LEAGUE Behance case study published by LIKELION's Brand Design Lab, with him credited as a collaborator.
 - Profile photo: `public/profile.jpg` (689×886 portrait; must not be cropped).
-- **Do not fabricate:** there are no testimonials, recommendations, or employer quotes. Do not invent market sizes or statistics without a source. Two awards (1st G-RISE startup competition, 7th College of Business × SPRINT) have no project mapped yet; do not attach one until he confirms.
+- **Do not fabricate:** CleanB has no real users or product metrics yet; never call it a live service with users. There are no testimonials, recommendations, or employer quotes. Do not invent market sizes or statistics without a source. Two awards (1st G-RISE startup competition, 7th College of Business × SPRINT) have no project mapped yet; do not attach one until he confirms.
 
 ## Product Principles
 

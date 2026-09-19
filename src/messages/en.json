@@ -14,8 +14,8 @@
   "hero": {
     "name": "Sanghyeon Shin",
     "wordmark": "Portfolio",
-    "lead": "An IT planner who defines problems with data, then builds and ships.",
-    "summary": "As a Community Manager Intern at LIKELION, I helped run a 2,000+ participant hackathon across 80 universities — co-designing the judging policy and building three ops tools with AI that went live on site.",
+    "lead": "A service planner who doesn't stop at the spec.",
+    "summary": "I design with policies and specs, build the tools that are missing, and check the results in front of real users. Most recently, as an intern at LIKELION, I co-designed the judging policy and feature specs for a 2,000-person hackathon and built three ops tools that went live on site.",
     "metrics": [
       {
         "v": "2,000+",
@@ -39,10 +39,10 @@
   "about": {
     "hello": "Hello!",
     "name_line": "I'm Sanghyeon Shin.",
-    "description_1": "I worked as a Community Manager Intern on LIKELION's Univ. Team 1 (Apr – Aug 2026), running a university community of ~2,500 members across 80 schools. For the 14th national hackathon I co-designed the judging policy and platform feature specs with the team and built three ops tools myself. I also planned and taught a six-session dev literacy course for non-developer colleagues.",
-    "description_2": "I studied Global Business & Technology alongside an AI Convergence major, and through LIKELION staff roles, hackathons, and startup programs I've planned and built 15+ services, winning 11 awards. I completed SSAFY's 15th Java track.",
+    "description_1": "I'm a service planner who stays with the work until it holds up in front of real users, not just on paper.",
+    "description_2": "I started in frontend development. At LIKELION, the part I loved most was zero to one: an idea turning into a screen, then shipping and watching people use it. When I joined the 13th cohort's staff, my questions changed from 'how do we build this' to 'who uses it, why, and how does it become a business', and that led me into service planning.",
     "what_heading": "What I do.",
-    "what_sub": "I define problems in numbers, resolve colliding interests with policy, and build the tools that don't exist yet.",
+    "what_sub": "Service planning at the core, with as much design, building, and operating as the work needs.",
     "skills": [
       "Service planning",
       "User research",
@@ -56,24 +56,32 @@
     ],
     "education_label": "Education",
     "military_label": "Military",
-    "gpa": "GPA 4.13 / 4.5"
+    "gpa": "GPA 4.13 / 4.5",
+    "description_3": "The 14th national hackathon, which I worked on as an intern at LIKELION, shows this best. I co-designed the judging policy and platform feature specs with the team, and to make the 'no edits after deadline' rule actually hold, I built a tool that scanned 562 repos and caught 5 violating teams.",
+    "closing": "I want to keep asking what experience people will have with a service, and what one thing will set it apart.",
+    "training_label": "Training",
+    "training": "SSAFY 15th cohort, Non-CS Java track, completed (Jan – Apr 2026)"
   },
   "principles": {
     "heading": "How I work.",
     "items": [
       {
-        "t": "Define problems in numbers",
-        "d": "562 repos, 53% in a survey, a 41.6%p usage gap. Every plan starts from a number that can be checked."
+        "t": "Build agreement with policy and specs",
+        "d": "I designed a three-stage judging funnel and a 100-point rubric, mapping submission items 1:1 to criteria so teams could predict how they'd be judged. Two feature specs went to the dev and design teams in an As-Is → To-Be format. All of this was co-designed with the team.",
+        "case": "hackathon14"
       },
       {
-        "t": "Resolve conflicts with policy",
-        "d": "A 100-point rubric, graded violation verdicts, a 5-level permission matrix. Where interests collide, I design the rule."
+        "t": "Build the tools that are missing",
+        "d": "562 repos couldn't be checked by hand. I built the submission checker, the finals console, and the FAQ bot, and put them to work on site.",
+        "case": "hackathon14"
       },
       {
-        "t": "Build missing tools with AI",
-        "d": "A submission checker, a finals console, an FAQ bot. When a tool doesn't exist, I build it and ship it."
+        "t": "Test hypotheses in front of users",
+        "d": "The first hypothesis, 'paying is inconvenient', broke in interviews with working accountants. We moved to the real problem, manual vouchers after payment, and placed 5th of 102 teams.",
+        "case": "flowpay"
       }
-    ]
+    ],
+    "case_link": "Case study"
   },
   "experience": {
     "heading": "Where I've worked.",

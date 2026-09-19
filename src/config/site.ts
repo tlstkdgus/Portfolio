@@ -4,8 +4,8 @@ export const siteConfig = {
   author: {
     name: { ko: "신상현", en: "Sanghyeon Shin" },
     title: {
-      ko: "데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자",
-      en: "IT planner who defines problems with data, then builds and ships",
+      ko: "기획서에서 끝나지 않는 서비스 기획자",
+      en: "A service planner who doesn't stop at the spec",
     },
     email: "a91945840@gmail.com",
   },
@@ -36,9 +36,9 @@ export const siteConfig = {
 
   seo: {
     titleTemplate: "%s | 신상현",
-    defaultTitle: "신상현 | 데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자",
+    defaultTitle: "신상현 | 기획서에서 끝나지 않는 서비스 기획자",
     description:
-      "멋쟁이사자처럼 커뮤니티 매니저 인턴으로 80개 대학 2,000명+ 연합 해커톤을 운영하고 운영 도구 3종을 직접 만든 IT 기획자 신상현의 포트폴리오입니다. 서비스 15개+ 기획·개발, 교내외 수상 11회.",
+      "정책과 명세로 설계하고, 필요한 도구는 직접 만들고, 실제 사용자 앞에서 확인하는 서비스 기획자 신상현의 포트폴리오입니다. 멋쟁이사자처럼 인턴으로 2,000명 해커톤의 심사 정책과 운영 도구 3종을 만들었습니다.",
     keywords: [
       "포트폴리오",
       "IT 기획",

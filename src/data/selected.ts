@@ -92,7 +92,7 @@ export const selectedProjects: SelectedProject[] = [
       ko: "도구는 근거만 내고 판정은 사람이 합니다. 위반 차등 기준(기능 수정 실격 · README 감점 · 직후 커밋 정상참작)을 검사 전에 합의했습니다. 콘솔은 '되돌릴 수 없는 현장'을 전제로 심사위원 명단제, 롤백 없는 결과 공개, 네트워크 장애 백업 모드를 먼저 설계했습니다.",
       en: "Tools present evidence; people decide. Graded violation criteria (code changes = DQ, README edits = deduction, just-late commits = leniency) were agreed before scanning. The console assumed an irreversible live event: a judge allowlist, no rollback after reveal, and a network-failure backup mode came first.",
     },
-    statement: { ko: "도구는 근거만,\n판정은 사람이.", en: "Tools show evidence. People decide." },
+    statement: { ko: "도구는 근거만 내고,\n판정은 사람이 합니다.", en: "Tools show evidence. People decide." },
     stats: [
       { v: { ko: "562개", en: "562" }, k: { ko: "레포 전 브랜치 전수 검사", en: "repos swept, every branch" } },
       { v: { ko: "5팀", en: "5" }, k: { ko: "위반 적발 · 2팀 실격", en: "violations caught · 2 DQ'd" } },
@@ -124,10 +124,10 @@ export const selectedProjects: SelectedProject[] = [
       {
         title: { ko: "'마감 후 수정 금지'를 선언이 아니라 집행으로", en: "Enforcing 'no edits after deadline', not just announcing it" },
         steps: [
-          { label: { ko: "가설", en: "Hypothesis" }, note: { ko: "마감 후에도 커밋하는 팀이 있다. 562개 레포는 손으로 검사할 수 없다", en: "Some teams commit after the deadline; 562 repos can't be checked by hand" } },
+          { label: { ko: "가설", en: "Hypothesis" }, note: { ko: "마감 후에도 커밋하는 팀이 있습니다. 562개 레포는 손으로 검사할 수 없습니다", en: "Some teams commit after the deadline; 562 repos can't be checked by hand" } },
           { label: { ko: "기준 합의", en: "Agree criteria" }, note: { ko: "검사 전에 결정: 기능 수정 실격 · README 감점 · 직후 커밋 정상참작", en: "Before scanning: code change = DQ · README = deduction · just-late = leniency" } },
           { label: { ko: "전수 검사", en: "Full scan" }, note: { ko: "check.py로 전 브랜치의 마감 후 커밋 · force-push · 비공개 전환 탐지", en: "check.py sweeps every branch for late commits, force-pushes, private flips" } },
-          { label: { ko: "근거 리포트", en: "Evidence" }, note: { ko: "결과를 엑셀로 정리해 운영진 회의에 제공. 자동 판정은 하지 않는다", en: "Results go to the staff meeting as a spreadsheet. No automatic verdicts" } },
+          { label: { ko: "근거 리포트", en: "Evidence" }, note: { ko: "결과를 엑셀로 정리해 운영진 회의에 넘깁니다. 자동 판정은 하지 않습니다", en: "Results go to the staff meeting as a spreadsheet. No automatic verdicts" } },
           { label: { ko: "사람의 판정", en: "People decide" }, note: { ko: "위반 5팀 적발, 차등 기준으로 2팀 실격", en: "5 violations found; 2 disqualified under the graded criteria" } },
         ],
         caption: {
@@ -189,11 +189,11 @@ export const selectedProjects: SelectedProject[] = [
       ko: "코드를 가르치지 않기로 했습니다. 목표를 '개발자 되기'에서 '개발자와 대화하기'로 좁히고, 설치·계정 없이 브라우저에서 바로 되는 실습만 남겼습니다. 밥 먹으면서 듣는 환경이 전제였습니다.",
       en: "I decided not to teach code, narrowing the goal from 'becoming a developer' to 'talking with developers', and keeping only demos that run in the browser with no installs or accounts. People would be listening over lunch.",
     },
-    statement: { ko: "개발자가 되는 게 아니라,\n개발자와 대화하기.", en: "Not becoming a developer. Talking with one." },
+    statement: { ko: "개발자가 되는 게 아니라,\n개발자와 대화하는 법을 가르쳤습니다.", en: "Not becoming a developer. Talking with one." },
     stats: [
       { v: "5/5", k: { ko: "만족도, 수강자 6명 전원", en: "satisfaction, all 6 attendees" } },
       { v: "9.7/10", k: { ko: "추천 의향", en: "would recommend" } },
-      { v: "4.7/5", k: { ko: "개발자와의 대화가 더 이해된다", en: "better grasp of developer conversations" } },
+      { v: "4.7/5", k: { ko: "개발자와의 대화가 더 이해됩니다", en: "better grasp of developer conversations" } },
       { v: { ko: "6회", en: "6" }, k: { ko: "점심 강의 · 6주", en: "lunch sessions over 6 weeks" } },
     ],
     hero: {
@@ -251,7 +251,7 @@ export const selectedProjects: SelectedProject[] = [
       ko: "첫 가설 '결제가 불편하다'는 인터뷰에서 깨졌습니다. 진짜 고통은 결제 이후의 수기 전표였습니다. 실명인증 대신 익명성을 지키는 가명토큰을 택하고, MVP를 ERP 전체 연동에서 지출보고서 자동 생성으로 좁혔습니다.",
       en: "The first hypothesis, 'paying is inconvenient,' broke in interviews; the real pain was manual vouchers after payment. We chose pseudonymous tokens over real-name auth to keep anonymity, and cut the MVP from full ERP integration to auto-generated expense reports.",
     },
-    statement: { ko: "첫 가설은\n인터뷰에서 깨졌다.", en: "The first hypothesis broke in interviews." },
+    statement: { ko: "첫 가설은\n인터뷰에서 깨졌습니다.", en: "The first hypothesis broke in interviews." },
     stats: [
       { v: "8→3", k: { ko: "정산 단계 수, 8단계에서 3단계로", en: "steps in the reconciliation flow, 8 down to 3" } },
       { v: { ko: "5위", en: "5th" }, k: { ko: "102팀 중 · FIN:NECT 장려상", en: "of 102 teams · FIN:NECT award" } },
@@ -290,8 +290,8 @@ export const selectedProjects: SelectedProject[] = [
     period: { ko: "2025.11 – 현재", en: "Nov 2025 – Present" },
     role: { ko: "PM · 프론트엔드 · 디자인 (3인 팀)", en: "PM · Frontend · Design (team of 3)" },
     headline: {
-      ko: "만들고 끝나는 게 아니라,\n운영하는 서비스.",
-      en: "Not built and abandoned. A service we operate.",
+      ko: "해커톤처럼 끝나지 않도록,\n운영 가능한 구조부터.",
+      en: "Built to be operated, not just demoed.",
     },
     did: {
       ko: [
@@ -315,7 +315,7 @@ export const selectedProjects: SelectedProject[] = [
       ko: "k3s/ArgoCD는 3인 팀에게 과해서 Docker Compose + Caddy로 단순화했습니다. 배포 중 페이지가 깨지는 문제는 정적 파일을 CDN(CloudFront)으로 분리해 해결했습니다.",
       en: "k3s/ArgoCD was too much for three people, so we simplified to Docker Compose + Caddy. Pages breaking mid-deploy were fixed by serving static files from a CDN (CloudFront).",
     },
-    statement: { ko: "운영 복잡도는\n팀 크기에 맞춘다.", en: "Match ops complexity to team size." },
+    statement: { ko: "운영 복잡도는\n팀 크기에 맞춥니다.", en: "Match ops complexity to team size." },
     stats: [
       { v: "170+", k: { ko: "PR 리뷰 · 릴리스 머지", en: "PRs reviewed and released" } },
       { v: { ko: "5단계", en: "5" }, k: { ko: "작업 상태, 수락 대기부터 정산 대기까지", en: "job states, pending to settlement" } },
