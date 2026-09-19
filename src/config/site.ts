@@ -7,7 +7,7 @@ export const siteConfig = {
       ko: "데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자",
       en: "IT planner who defines problems with data, then builds and ships",
     },
-    email: "tlstkdgus9@naver.com",
+    email: "a91945840@gmail.com",
   },
 
   social: {
@@ -17,9 +17,9 @@ export const siteConfig = {
   },
 
   nav: [
-    "projects",
-    "experience",
     "about",
+    "experience",
+    "projects",
     "certified",
     "contact",
   ] as const,
@@ -36,9 +36,9 @@ export const siteConfig = {
 
   seo: {
     titleTemplate: "%s | 신상현",
-    defaultTitle: "신상현 | IT 기획자 · PM/PO · React 개발",
+    defaultTitle: "신상현 | 데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자",
     description:
-      "데이터 기반 서비스 기획부터 React/Next.js 개발까지 직접 수행하는 IT 기획자 신상현의 포트폴리오입니다. FINNECT 챌린지 장려상, 11회 수상.",
+      "멋쟁이사자처럼 커뮤니티 매니저 인턴으로 80개 대학 2,000명+ 연합 해커톤을 운영하고 운영 도구 3종을 직접 만든 IT 기획자 신상현의 포트폴리오입니다. 서비스 15개+ 기획·개발, 교내외 수상 11회.",
     keywords: [
       "포트폴리오",
       "IT 기획",

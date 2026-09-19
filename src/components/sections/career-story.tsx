@@ -1,241 +1,152 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { m } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { careerDetailSections } from "@/data/career-detail";
-import { cn } from "@/lib/utils";
+import { careerDetailSections, type CareerDetailItem } from "@/data/career-detail";
 import { DetailItem } from "@/components/sections/career-story/detail-item";
-import { RoleAccordion } from "@/components/sections/career-story/role-accordion";
 import { ImageCarousel } from "@/components/ui/image-carousel";
+import { MetaRow } from "@/components/ui/meta-row";
+
+const total = String(careerDetailSections.length).padStart(2, "0");
+
+// "80개 대학 연합 해커톤 운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'" → 이름과 설명으로 분리
+function splitTitle(title: string) {
+  const idx = title.lastIndexOf(" — ");
+  if (idx === -1) return { name: title, desc: "" };
+  return { name: title.slice(idx + 3), desc: title.slice(0, idx) };
+}
 
 export function CareerStoryContent() {
   const t = useTranslations("career_story");
+  const tm = useTranslations("meta");
   const locale = useLocale();
   const isKo = locale === "ko";
-  const [activeSection, setActiveSection] = useState<string>(
-    careerDetailSections[0]?.id ?? ""
-  );
-
-  useEffect(() => {
-    const observers: IntersectionObserver[] = [];
-
-    careerDetailSections.forEach((section) => {
-      const el = document.getElementById(`section-${section.id}`);
-      if (!el) return;
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveSection(section.id);
-          }
-        },
-        { rootMargin: "-20% 0px -60% 0px" }
-      );
-      observer.observe(el);
-      observers.push(observer);
-    });
-
-    return () => observers.forEach((o) => o.disconnect());
-  }, []);
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero */}
-      <div className="border-b border-border bg-gradient-to-b from-accent/5 to-transparent">
-        <div className="mx-auto max-w-4xl px-4 pb-14 pt-28 sm:px-6 lg:px-8">
+      {/* 표지 */}
+      <div className="gutter flex min-h-[70svh] flex-col bg-ink pb-10 pt-20 text-ink-foreground md:pb-14">
+        <MetaRow items={[tm("deck"), tm("role")]} className="text-ink-muted" />
+        <div className="flex flex-1 flex-col justify-end pt-16">
           <Link
             href={`/${locale}/#projects`}
-            className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            aria-label={isKo ? "포트폴리오 목록으로 돌아가기" : "Go back to portfolio overview"}
+            className="hit meta mb-6 inline-flex w-fit items-center gap-1.5 text-ink-muted transition-colors hover:text-ink-foreground"
           >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft aria-hidden="true" className="h-3.5 w-3.5" />
             {t("back")}
           </Link>
           <m.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl font-bold tracking-tight text-foreground md:text-4xl"
+            initial={{ y: 24 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="wordmark -ml-[0.04em]"
+            style={{ fontSize: "clamp(3.25rem, 14vw, 13rem)" }}
           >
             {t("title")}
           </m.h1>
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-4 text-base text-foreground/70 md:text-lg"
-          >
-            {t("subtitle")}
-          </m.p>
+          <p className="mt-6 max-w-md text-[16px] leading-[1.7] text-ink-muted">{t("subtitle")}</p>
         </div>
       </div>
 
-      {/* Content with TOC */}
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="lg:grid lg:grid-cols-[240px_1fr] lg:gap-12">
-          {/* Desktop TOC sidebar */}
-          <aside className="hidden lg:block">
-            <div className="sticky top-24">
-              <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                {t("toc")}
-              </h4>
-              <nav className="space-y-1">
-                {careerDetailSections.map((section) => (
-                  <a
-                    key={section.id}
-                    href={`#section-${section.id}`}
-                    aria-current={activeSection === section.id ? "true" : undefined}
-                    className={cn(
-                      "block rounded-lg px-3 py-2 text-sm transition-all",
-                      activeSection === section.id
-                        ? "bg-accent/10 font-medium text-accent border-l-2 border-accent"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                    )}
-                  >
-                    {isKo ? section.title : section.titleEn}
-                  </a>
-                ))}
-              </nav>
-            </div>
-          </aside>
-
-          {/* Mobile TOC */}
-          <div className="mb-8 lg:hidden">
-            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-              {careerDetailSections.map((section) => (
+      {/* 목차 — 번호 + 줄 */}
+      <nav aria-label={t("toc")} className="gutter py-16 md:py-24">
+        <p className="eyebrow mb-5 text-muted-foreground">{t("toc")}</p>
+        <ol className="grid border-t border-foreground md:grid-cols-2 md:gap-x-16">
+          {careerDetailSections.map((section, i) => {
+            const { name } = splitTitle(isKo ? section.title : section.titleEn);
+            return (
+              <li key={section.id}>
                 <a
-                  key={section.id}
                   href={`#section-${section.id}`}
-                  className={cn(
-                    "shrink-0 rounded-full px-4 py-2.5 text-xs font-medium transition-all",
-                    activeSection === section.id
-                      ? "bg-accent/10 text-accent border border-accent/30"
-                      : "bg-card border border-border text-muted-foreground"
-                  )}
+                  className="group grid grid-cols-[36px_1fr] items-baseline border-b border-border py-3 transition-colors hover:text-accent"
                 >
-                  {isKo ? section.title : section.titleEn}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Main content */}
-          <div className="space-y-20">
-            {careerDetailSections.map((section, i) => (
-              <m.article
-                key={section.id}
-                id={`section-${section.id}`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5 }}
-                className="scroll-mt-24"
-              >
-                {/* Section Title */}
-                <div className="mb-10">
-                  <div className="mb-3 text-base font-bold tracking-wider text-accent/70">
+                  <span className="meta text-muted-foreground group-hover:text-accent">
                     {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-                    {isKo ? section.title : section.titleEn}
-                  </h2>
-                  <div aria-hidden="true" className="mt-3 h-1 w-16 rounded-full bg-accent" />
+                  </span>
+                  <span className="text-[16px] font-semibold tracking-[-0.01em]">{name}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ol>
+      </nav>
+
+      {/* 본문 */}
+      <div className="gutter pb-24">
+        {careerDetailSections.map((section, i) => {
+          const { name, desc } = splitTitle(isKo ? section.title : section.titleEn);
+          return (
+            <article
+              key={section.id}
+              id={`section-${section.id}`}
+              className="scroll-mt-16 border-t border-foreground pb-24 pt-6 md:pb-36"
+            >
+              <MetaRow items={[`${String(i + 1).padStart(2, "0")} / ${total}`, desc]} className="text-muted-foreground" />
+              <h2 className="headline mt-10 md:mt-16">{name}</h2>
+
+              {section.images && section.images.length > 0 && (
+                <div className="mt-12 md:mt-16">
+                  <ImageCarousel images={section.images} alt={name} />
                 </div>
+              )}
 
-                {/* Image Carousel */}
-                {section.images && section.images.length > 0 && (
-                  <div className="mb-10">
-                    <ImageCarousel
-                      images={section.images}
-                      alt={isKo ? section.title : section.titleEn}
-                    />
-                  </div>
-                )}
+              <div className="mt-14 space-y-12 md:mt-20 md:space-y-16">
+                <Block label={t("background")} items={section.background} isKo={isKo} />
 
-                {/* Background */}
-                <div className="mb-10">
-                  <h3 className="mb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-accent">
-                    <span aria-hidden="true" className="h-px w-4 bg-accent/40" />
-                    {t("background")}
-                  </h3>
-                  <div className="rounded-xl border border-border bg-card p-6">
-                    <ul className="space-y-3">
-                      {section.background.map((item, j) => (
-                        <DetailItem
-                          key={j}
-                          item={item}
-                          isKo={isKo}
-                        />
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Role (accordion) */}
-                <div className="mb-10">
-                  <h3 className="mb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-accent">
-                    <span aria-hidden="true" className="h-px w-4 bg-accent/40" />
-                    {t("role")}
-                  </h3>
-                  <div className="space-y-3">
-                    {section.role.map((sub, j) => (
-                      <RoleAccordion
-                        key={j}
-                        sub={sub}
-                        isKo={isKo}
-                        sectionId={section.id}
-                        index={j}
-                      />
+                <Row label={t("role")}>
+                  <div className="space-y-10">
+                    {section.role.map((sub) => (
+                      <div key={sub.title}>
+                        <h3 className="text-[19px] font-bold leading-snug tracking-[-0.02em] md:text-[21px]">
+                          {isKo ? sub.title : sub.titleEn}
+                        </h3>
+                        <ul className="mt-4 space-y-4">
+                          {sub.items.map((item, j) => (
+                            <DetailItem key={j} item={item} isKo={isKo} />
+                          ))}
+                        </ul>
+                      </div>
                     ))}
                   </div>
-                </div>
+                </Row>
 
-                {/* Results & Impact */}
-                <div className="mb-10">
-                  <h3 className="mb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-accent-secondary">
-                    <span aria-hidden="true" className="h-px w-4 bg-accent-secondary/40" />
-                    {t("results")}
-                  </h3>
-                  <div className="rounded-xl border border-accent-secondary/20 bg-gradient-to-br from-accent-secondary/5 to-transparent p-6">
-                    <ul className="space-y-3">
-                      {section.results.map((item, j) => (
-                        <DetailItem
-                          key={j}
-                          item={item}
-                          isKo={isKo}
-                        />
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <Row label={t("results")} accent>
+                  <ul className="space-y-4 border-l-2 border-accent pl-5">
+                    {section.results.map((item, j) => (
+                      <DetailItem key={j} item={item} isKo={isKo} strong />
+                    ))}
+                  </ul>
+                </Row>
 
-                {/* Lessons Learned */}
-                <div>
-                  <h3 className="mb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-muted-foreground">
-                    <span aria-hidden="true" className="h-px w-4 bg-muted-foreground/40" />
-                    {t("lessons")}
-                  </h3>
-                  <div className="rounded-xl border border-border bg-card/50 p-6">
-                    <ul className="space-y-3">
-                      {section.lessons.map((item, j) => (
-                        <DetailItem
-                          key={j}
-                          item={item}
-                          isKo={isKo}
-                        />
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </m.article>
-            ))}
-          </div>
-        </div>
-
+                <Block label={t("lessons")} items={section.lessons} isKo={isKo} />
+              </div>
+            </article>
+          );
+        })}
       </div>
     </div>
+  );
+}
+
+function Row({ label, accent, children }: { label: string; accent?: boolean; children: React.ReactNode }) {
+  return (
+    <section className="grid gap-4 md:grid-cols-[180px_1fr] md:gap-10 lg:grid-cols-[240px_1fr]">
+      <h3 className={accent ? "eyebrow pt-1 text-accent" : "eyebrow pt-1 text-muted-foreground"}>{label}</h3>
+      <div className="max-w-3xl">{children}</div>
+    </section>
+  );
+}
+
+function Block({ label, items, isKo }: { label: string; items: CareerDetailItem[]; isKo: boolean }) {
+  return (
+    <Row label={label}>
+      <ul className="space-y-4">
+        {items.map((item, j) => (
+          <DetailItem key={j} item={item} isKo={isKo} />
+        ))}
+      </ul>
+    </Row>
   );
 }

@@ -62,7 +62,7 @@ export default async function CareerPage({
   return (
     <>
       <Header />
-      <main>
+      <main id="main" tabIndex={-1} className="outline-none">
         <CareerStoryContent />
       </main>
       <Footer />

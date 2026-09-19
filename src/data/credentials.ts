@@ -42,8 +42,8 @@ export const certifications: Certification[] = [
 // highlight: 외부 기관 또는 대상급만. 최신순.
 export const awards: Award[] = [
   {
-    title: "제 12회 Bring Your Own Ideas 최우수상",
-    titleEn: "12th Bring Your Own Ideas — Grand Prize",
+    title: "제 12회 Bring Your Own Ideas 최우수상 (풍생고 수행평가 알리미)",
+    titleEn: "12th Bring Your Own Ideas — Grand Prize (Pungsaeng HS assignment notifier)",
     issuer: "한국외국어대학교",
     issuerEn: "HUFS",
     date: "2025.12.",
@@ -63,8 +63,8 @@ export const awards: Award[] = [
     date: "2025.11.",
   },
   {
-    title: "G-RISE × 경상대학 2025 창업 비즈니스 모델 경진대회 대상",
-    titleEn: "G-RISE × College of Business 2025 Startup BM Competition — Grand Prize",
+    title: "G-RISE × 경상대학 2025 창업 비즈니스 모델 경진대회 대상 (dotori)",
+    titleEn: "G-RISE × College of Business 2025 Startup BM Competition — Grand Prize (dotori)",
     issuer: "한국외국어대학교 경상대학",
     issuerEn: "HUFS College of Business",
     date: "2025.11.",
@@ -79,15 +79,15 @@ export const awards: Award[] = [
     highlight: true,
   },
   {
-    title: "2025 1학기 HUFStudy 최우수상",
-    titleEn: "2025 Spring HUFStudy — Grand Prize",
+    title: "2025 1학기 HUFStudy 최우수상 (NeuroSight · RZi)",
+    titleEn: "2025 Spring HUFStudy — Grand Prize (NeuroSight · RZi)",
     issuer: "한국외국어대학교 교육혁신단",
     issuerEn: "HUFS Center for Educational Innovation",
     date: "2025.08.",
   },
   {
-    title: '"PICK YOUR IDEA" IR PITCHING 우수상',
-    titleEn: '"PICK YOUR IDEA" IR Pitching — Excellence Award',
+    title: '"PICK YOUR IDEA" IR PITCHING 우수상 (dotori)',
+    titleEn: '"PICK YOUR IDEA" IR Pitching — Excellence Award (dotori)',
     issuer: "서울 AI 허브 / MOVE",
     issuerEn: "Seoul AI Hub / MOVE",
     date: "2025.07.",

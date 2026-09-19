@@ -1,45 +1,19 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Github, Linkedin, BookOpen, Shield } from "lucide-react";
-import { siteConfig } from "@/config/site";
+import { MetaRow } from "@/components/ui/meta-row";
 
-const socialLinks = [
-  { href: siteConfig.social.blog, icon: BookOpen, label: "Blog" },
-  { href: siteConfig.social.github, icon: Github, label: "GitHub" },
-  { href: siteConfig.social.linkedin, icon: Linkedin, label: "LinkedIn" },
-].filter((link) => Boolean(link.href));
-
+// Contact의 검은 화면이 그대로 이어지는 마지막 메타 줄.
 export function Footer() {
   const t = useTranslations("footer");
+  const tm = useTranslations("meta");
 
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-4 py-10 sm:flex-row sm:justify-between">
-          {/* Left: Logo + Copyright */}
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Shield className="h-4 w-4 text-accent" />
-            <span>{t("copyright")}</span>
-          </div>
-
-          {/* Right: Social links */}
-          <div className="flex items-center gap-4">
-            {socialLinks.map(({ href, icon: Icon, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg p-2 text-muted-foreground transition-colors hover:text-foreground hover:bg-muted/50"
-                aria-label={label}
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
+    <footer className="gutter bg-ink pb-8 text-ink-muted">
+      <MetaRow
+        items={[t("copyright"), tm("role"), "Next.js · Vercel"]}
+        className="border-t border-ink-foreground/15 pt-5"
+      />
     </footer>
   );
 }

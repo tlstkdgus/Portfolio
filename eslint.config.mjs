@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // 에이전트 도구(impeccable)가 설치한 번들 스크립트 — 사이트 코드가 아니다
+    ".claude/**",
+    ".impeccable/**",
   ]),
 ]);
 

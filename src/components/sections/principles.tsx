@@ -8,21 +8,22 @@ export function Principles() {
   const items: { t: string; d: string }[] = t.raw("items");
 
   return (
-    <section id="principles" className="py-14 md:py-20">
-      <div className="mx-auto max-w-5xl px-6">
-        <SectionHeading>{t("heading")}</SectionHeading>
-        <div className="grid gap-5 md:grid-cols-3">
-          {items.map((item, i) => (
-            <div key={item.t} className="card p-7">
-              <p className="text-[13px] font-bold tracking-[0.12em] text-accent">
-                {String(i + 1).padStart(2, "0")}
-              </p>
-              <h3 className="mt-2.5 text-lg font-bold">{item.t}</h3>
-              <p className="mt-2.5 text-[15px] leading-[1.7] text-muted-foreground">{item.d}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+    <section id="principles" className="gutter pb-24 md:pb-36">
+      <SectionHeading>{t("heading")}</SectionHeading>
+      <ol className="grid border-t border-foreground md:grid-cols-3">
+        {items.map((item, i) => (
+          <li
+            key={item.t}
+            className="border-b border-border py-8 md:border-b-0 md:border-l md:px-8 md:py-10 md:first:border-l-0 md:first:pl-0"
+          >
+            <p className="meta text-muted-foreground">{String(i + 1).padStart(2, "0")}</p>
+            <h3 className="mt-6 text-[22px] font-bold leading-snug tracking-[-0.02em] md:text-[26px]">
+              {item.t}
+            </h3>
+            <p className="mt-4 text-[15px] leading-[1.75] text-muted-foreground">{item.d}</p>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

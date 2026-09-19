@@ -40,3 +40,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 에이전트 도구 설정·결과물 (개인 환경, 저장소에 두지 않음)
+/.claude/
+/.impeccable/
