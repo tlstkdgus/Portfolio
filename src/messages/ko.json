@@ -37,11 +37,11 @@
     "scroll": "스크롤"
   },
   "about": {
-    "hello": "안녕하세요,",
+    "hello": "Hello!",
     "name_line": "신상현입니다.",
     "description_1": "멋쟁이사자처럼 유니브 1팀에서 커뮤니티 매니저 인턴으로 일했습니다(2026.04 ~ 08). 전국 80개 대학, 2,500여 명 규모의 대학 커뮤니티를 운영했고, 14기 중앙해커톤에서는 심사 정책과 플랫폼 기능명세서를 팀과 함께 설계하고 운영 도구 3종을 직접 만들었습니다. 비개발 동료를 위한 사내 개발 교육 6회도 기획하고 강의했습니다.",
     "description_2": "학부에서 경영(GBT)과 AI 융합전공을 함께 공부했고, 멋쟁이사자처럼 운영진·해커톤·창업 프로그램을 거치며 15개 이상의 서비스를 기획하고 만들었습니다. 교내외 대회에서 11회 수상했고, SSAFY 15기 Java 트랙을 수료했습니다.",
-    "what_heading": "하는 일.",
+    "what_heading": "What I do.",
     "what_sub": "문제를 숫자로 정의하고, 이해관계가 부딪히는 곳은 정책으로 풀고, 필요한 도구가 없으면 직접 만듭니다.",
     "skills": [
       "서비스 기획",
@@ -59,7 +59,7 @@
     "gpa": "GPA 4.13 / 4.5"
   },
   "principles": {
-    "heading": "일하는 방식.",
+    "heading": "How I work.",
     "items": [
       {
         "t": "문제는 숫자로 정의한다",
@@ -76,11 +76,11 @@
     ]
   },
   "experience": {
-    "heading": "일한 곳.",
+    "heading": "Where I've worked.",
     "main_label": "대표 경력"
   },
   "selected": {
-    "index_heading": "대표 프로젝트.",
+    "index_heading": "Selected work.",
     "problem": "문제",
     "did": "한 일",
     "decision": "핵심 의사결정",
@@ -91,19 +91,19 @@
     "behance": "Behance 케이스 (브랜드 디자인 랩)"
   },
   "projects": {
-    "heading": "그 밖의 프로젝트.",
+    "heading": "Other projects.",
     "sub": "대표 프로젝트 외의 작업입니다. 케이스 스터디에서 배경·역할·배운 점을 볼 수 있습니다.",
     "detail_link": "케이스 스터디"
   },
   "certified": {
-    "heading": "수상.",
+    "heading": "Awards.",
     "count_label": "교내외 수상",
     "certifications": "자격증",
     "awards": "주요 수상",
     "awards_rest": "그 외 수상"
   },
   "contact": {
-    "heading": "연락 주세요.",
+    "heading": "Let's talk.",
     "description": "채용·협업 관련 연락은 이메일이 가장 빠릅니다.",
     "phone": "전화",
     "email": "이메일",
@@ -127,7 +127,7 @@
     "active": "활동 중"
   },
   "career_story": {
-    "title": "케이스 스터디.",
+    "title": "Case Studies.",
     "subtitle": "각 프로젝트의 배경, 역할, 결과와 배운 점을 정리했습니다.",
     "back": "메인으로",
     "background": "배경",

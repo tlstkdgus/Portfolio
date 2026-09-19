@@ -50,7 +50,7 @@ export interface SelectedProject {
 export const selectedProjects: SelectedProject[] = [
   {
     id: "hackathon14",
-    cover: { ko: "해커톤.", en: "Hackathon." },
+    cover: { ko: "Hackathon.", en: "Hackathon." },
     kicker: { ko: "멋쟁이사자처럼 인턴 · 14기 중앙해커톤", en: "LIKELION Internship · 14th Hackathon" },
     title: { ko: "14기 중앙해커톤 운영", en: "LIKELION 14th Hackathon Ops" },
     period: { ko: "2026.06 – 2026.08", en: "Jun – Aug 2026" },
@@ -120,7 +120,7 @@ export const selectedProjects: SelectedProject[] = [
   },
   {
     id: "devsite",
-    cover: { ko: "사내 교육.", en: "Dev Class." },
+    cover: { ko: "Dev Class.", en: "Dev Class." },
     kicker: { ko: "멋쟁이사자처럼 인턴 · 사내 교육", en: "LIKELION Internship · Internal Course" },
     title: { ko: "사내 개발 교육", en: "Internal Dev Literacy Course" },
     period: { ko: "2026.07 – 2026.08", en: "Jul – Aug 2026" },
