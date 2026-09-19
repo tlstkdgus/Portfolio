@@ -68,6 +68,12 @@ html {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
+/* 건너뛰기 링크·해시 이동으로 포커스만 받는 영역(main 등)은 테두리를 그리지 않는다.
+   그리면 화면 폭 전체에 파란 선이 생긴다 (푸터 경계에 보이던 선) */
+[tabindex="-1"]:focus,
+[tabindex="-1"]:focus-visible {
+  outline: none;
+}
 /* 블루·검정 화면 위에서는 블루 테두리가 안 보이거나(블루 위) 대비 2.4:1(검정 위) —
    그 화면의 글자색으로 테두리를 그린다 */
 .bg-accent-surface :focus-visible,

@@ -25,7 +25,7 @@
 
 전체 콘텐츠 원본은 [PORTFOLIO.md](PORTFOLIO.md)에 있습니다.
 
-- 📧 **Email**: [tlstkdgus9@naver.com](mailto:tlstkdgus9@naver.com)
+- 📧 **Email**: [a91945840@gmail.com](mailto:a91945840@gmail.com)
 - 🔗 **GitHub**: [https://github.com/tlstkdgus](https://github.com/tlstkdgus)
 
 ---

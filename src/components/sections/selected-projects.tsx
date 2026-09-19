@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { m } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
 import { selectedProjects, type SelectedProject, type Localized } from "@/data/selected";
 import { MetaRow } from "@/components/ui/meta-row";
 import { cn } from "@/lib/utils";
@@ -123,6 +123,42 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
             <p className="mt-5 text-[17px] leading-[1.8] md:text-[19px]">{tr(p.decision)}</p>
           </div>
         </div>
+        {/* 흐름 다이어그램 — PNG 대신 사이트 글꼴로. 단계 이름은 크게, 설명은 한 줄 */}
+        {p.diagrams?.map((d) => (
+          <div key={d.title.en} className="mt-20 md:mt-28">
+            <h4 className="text-[22px] font-bold leading-snug tracking-[-0.02em] md:text-[28px]">{tr(d.title)}</h4>
+            <ol
+              className={cn(
+                "mt-8 grid border-t border-foreground",
+                d.steps.length >= 5 ? "md:grid-cols-5" : "md:grid-cols-4"
+              )}
+            >
+              {d.steps.map((st, k) => (
+                <li
+                  key={st.label.en}
+                  className="border-b border-border py-5 md:border-b-0 md:border-l md:px-5 md:py-7 md:first:border-l-0 md:first:pl-0"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <p className="text-[30px] font-extrabold leading-[1.05] tracking-[-0.04em] md:text-[36px]">
+                      {tr(st.label)}
+                    </p>
+                    {k < d.steps.length - 1 && (
+                      <>
+                        <ArrowRight aria-hidden="true" className="mt-2 hidden h-5 w-5 shrink-0 text-muted-foreground md:block" />
+                        <ArrowDown aria-hidden="true" className="mt-2 h-5 w-5 shrink-0 text-muted-foreground md:hidden" />
+                      </>
+                    )}
+                  </div>
+                  <p className="mt-3 text-[15px] leading-[1.6] text-muted-foreground">{tr(st.note)}</p>
+                </li>
+              ))}
+            </ol>
+            {d.caption && (
+              <p className="mt-8 max-w-3xl text-[17px] font-semibold leading-[1.7] md:text-[19px]">{tr(d.caption)}</p>
+            )}
+          </div>
+        ))}
+
         <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-2 md:gap-6">
           {p.gallery.map((img) => (
             <div key={img.src} className="overflow-hidden border border-border bg-muted">

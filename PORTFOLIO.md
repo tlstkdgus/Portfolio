@@ -7,7 +7,7 @@
 
 멋쟁이사자처럼 커뮤니티 매니저 인턴으로 80개 대학 2,000명+ 연합 해커톤을 운영(심사 정책·운영 도구 3종). 15개 이상의 서비스를 기획·개발했고 교내외 대회에서 11회 수상.
 
-- 이메일: tlstkdgus9@naver.com
+- 이메일: a91945840@gmail.com
 - GitHub: https://github.com/tlstkdgus
 - 블로그: https://velog.io/@tlstkdgus
 - LinkedIn: https://www.linkedin.com/in/상현-신-83267a337

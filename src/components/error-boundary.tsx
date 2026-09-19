@@ -36,8 +36,8 @@ export class ErrorBoundary extends React.Component<
           <h2 className="display">{isKo ? "화면을 그리지 못했습니다." : "This page failed to render."}</h2>
           <p className="mt-6 max-w-md text-[16px] leading-[1.7] text-ink-muted">
             {isKo
-              ? "일시적인 문제일 수 있습니다. 새로고침하면 대부분 해결됩니다. 계속되면 tlstkdgus9@naver.com 으로 알려주세요."
-              : "It may be temporary; reloading usually fixes it. If it keeps happening, please let me know at tlstkdgus9@naver.com."}
+              ? "일시적인 문제일 수 있습니다. 새로고침하면 대부분 해결됩니다. 계속되면 a91945840@gmail.com 으로 알려주세요."
+              : "It may be temporary; reloading usually fixes it. If it keeps happening, please let me know at a91945840@gmail.com."}
           </p>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-[16px] font-semibold">
             <button

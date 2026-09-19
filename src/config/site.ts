@@ -7,7 +7,7 @@ export const siteConfig = {
       ko: "데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자",
       en: "IT planner who defines problems with data, then builds and ships",
     },
-    email: "tlstkdgus9@naver.com",
+    email: "a91945840@gmail.com",
   },
 
   social: {

@@ -42,7 +42,7 @@ A PM candidate who doesn't stop at planning. He built and ran the tools himself:
 
 - Name: 신상현 / Sanghyeon Shin. Positioning line: 「데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자」 / "An IT planner who defines problems with data, then builds and ships."
 - Voice: plain, specific, number-first. Structure every project as problem → what I did / decided → outcome.
-- Fixed facts: GPA 4.13/4.5; email tlstkdgus9@naver.com; SSAFY 15th cohort "completed (2026.01–04)"; the service name is 루미클린 (RumiClean), never "RoomiClean"; Y:Wave was submitted to the LIKELION 13th national hackathon (2025.07–08); FlowPay interviewees were working accountants, not certified accountants.
+- Fixed facts: GPA 4.13/4.5; email a91945840@gmail.com; SSAFY 15th cohort "completed (2026.01–04)"; the service name is 루미클린 (RumiClean), never "RoomiClean"; Y:Wave was submitted to the LIKELION 13th national hackathon (2025.07–08); FlowPay interviewees were working accountants, not certified accountants.
 
 ## Evidence on Hand
 

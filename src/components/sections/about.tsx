@@ -32,12 +32,12 @@ export function About() {
             <br />
             <span className="font-medium tracking-[-0.04em]">{t("name_line")}</span>
           </h2>
-          <div className="mt-8 max-w-xl space-y-4 text-[16px] leading-[1.8] text-foreground/80">
+          <div className="mt-8 max-w-[46em] space-y-4 text-[16px] leading-[1.8] text-foreground/80">
             <p>{t("description_1")}</p>
             <p>{t("description_2")}</p>
           </div>
 
-          <dl className="meta mt-8 grid max-w-xl gap-x-6 gap-y-2 border-t border-border pt-5 text-muted-foreground sm:grid-cols-[72px_1fr]">
+          <dl className="meta mt-8 grid max-w-[46em] gap-x-6 gap-y-2 border-t border-border pt-5 text-muted-foreground sm:grid-cols-[72px_1fr]">
             <dt className="font-bold text-foreground">{t("education_label")}</dt>
             <dd>
               {isKo ? edu.school : edu.schoolEn} · {edu.date}

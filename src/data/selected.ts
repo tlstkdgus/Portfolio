@@ -15,6 +15,14 @@ export interface SelectedStat {
   k: Localized;
 }
 
+/** 흐름 다이어그램 — PNG 대신 사이트 글꼴로 그린다.
+ *  원본 PNG(3200×1900)는 여백이 넓어 화면에 넣으면 글씨가 작고 휑했다 (2026-09-19 상현 피드백). */
+export interface SelectedDiagram {
+  title: Localized;
+  steps: { label: Localized; note: Localized }[];
+  caption?: Localized;
+}
+
 export interface SelectedImage {
   src: string;
   /** 이미지 안의 글·숫자를 대신 전달하는 설명 (다이어그램은 내용 그대로) */
@@ -39,6 +47,7 @@ export interface SelectedProject {
   hero: SelectedImage;
   /** 대표 화면 배경 — 어두운 스크린샷은 ink, 밝은 화면은 muted */
   heroTone: "ink" | "muted";
+  diagrams?: SelectedDiagram[];
   gallery: SelectedImage[];
   caseId: string;
   liveUrl?: string;
@@ -98,19 +107,48 @@ export const selectedProjects: SelectedProject[] = [
       },
     },
     heroTone: "ink",
-    gallery: [
+    diagrams: [
       {
-        src: "/projects/hackathon14/funnel.png",
-        alt: {
-          ko: "3단계 심사 퍼널: 313팀 제출 → 서류 60팀 → 트랙 피칭 8팀 → 최종 1팀. 배점의 절반 가까이를 문제 정의(25점)와 실현 가능성(20점)에 배정",
-          en: "Three-stage judging funnel: 313 submissions → 60 teams by documents → 8 by track pitch → 1 winner. Nearly half the points go to problem definition (25) and feasibility (20)",
+        title: { ko: "313팀에서 1팀까지, 예측 가능한 3단계 심사", en: "From 313 teams to one, in three predictable stages" },
+        steps: [
+          { label: { ko: "313팀", en: "313" }, note: { ko: "제출 · 562개 레포 · 80개 대학", en: "teams submitted · 562 repos · 80 universities" } },
+          { label: { ko: "60팀", en: "60" }, note: { ko: "서류 심사 100점 배점 · 트랙별 15팀", en: "by 100-point document review · 15 per track" } },
+          { label: { ko: "8팀", en: "8" }, note: { ko: "트랙 피칭 발표 5분 + Q&A · 트랙별 2팀", en: "by 5-minute track pitch + Q&A · 2 per track" } },
+          { label: { ko: "1팀", en: "1" }, note: { ko: "본선 토너먼트 1:1 3라운드 · 2,000명 앞 실시간 발표", en: "by a 1:1, three-round live tournament before 2,000" } },
+        ],
+        caption: {
+          ko: "배점의 절반 가까이를 문제 정의(25점)와 실현 가능성(20점)에 두었습니다. 제출 항목과 심사 기준을 1:1로 연결해, 무엇을 쓰면 어떻게 평가받는지 예측할 수 있게 했습니다.",
+          en: "Nearly half the points went to problem definition (25) and feasibility (20). Submission items mapped 1:1 to criteria, so teams could predict how they'd be scored.",
         },
       },
       {
-        src: "/projects/hackathon14/pipeline.png",
+        title: { ko: "'마감 후 수정 금지'를 선언이 아니라 집행으로", en: "Enforcing 'no edits after deadline', not just announcing it" },
+        steps: [
+          { label: { ko: "가설", en: "Hypothesis" }, note: { ko: "마감 후에도 커밋하는 팀이 있다. 562개 레포는 손으로 검사할 수 없다", en: "Some teams commit after the deadline; 562 repos can't be checked by hand" } },
+          { label: { ko: "기준 합의", en: "Agree criteria" }, note: { ko: "검사 전에 결정: 기능 수정 실격 · README 감점 · 직후 커밋 정상참작", en: "Before scanning: code change = DQ · README = deduction · just-late = leniency" } },
+          { label: { ko: "전수 검사", en: "Full scan" }, note: { ko: "check.py로 전 브랜치의 마감 후 커밋 · force-push · 비공개 전환 탐지", en: "check.py sweeps every branch for late commits, force-pushes, private flips" } },
+          { label: { ko: "근거 리포트", en: "Evidence" }, note: { ko: "결과를 엑셀로 정리해 운영진 회의에 제공. 자동 판정은 하지 않는다", en: "Results go to the staff meeting as a spreadsheet. No automatic verdicts" } },
+          { label: { ko: "사람의 판정", en: "People decide" }, note: { ko: "위반 5팀 적발, 차등 기준으로 2팀 실격", en: "5 violations found; 2 disqualified under the graded criteria" } },
+        ],
+        caption: {
+          ko: "도구가 사람 대신 판정하는 순간 규칙의 정당성이 무너집니다.",
+          en: "The moment a tool judges instead of people, the rule loses its legitimacy.",
+        },
+      },
+    ],
+    gallery: [
+      {
+        src: "/projects/hackathon14/04.png",
         alt: {
-          ko: "검증 파이프라인: 가설 → 기준 합의 → 562개 레포 전수 검사 → 근거 리포트 → 운영진의 판정. 도구는 근거만 내고 판정은 사람이 한다",
-          en: "Verification pipeline: hypothesis → agreed criteria → full scan of 562 repos → evidence report → staff verdict. The tool gives evidence; people decide",
+          ko: "직접 만든 운영 콘솔: 라운드별 대진, 경기 시작, 결과 공개를 조작하는 운영팀 화면",
+          en: "The ops console I built: bracket, match start, and result reveal controls",
+        },
+      },
+      {
+        src: "/projects/hackathon14/05.png",
+        alt: {
+          ko: "심사위원 화면: 두 팀 중 승자를 고르는 투표 화면과 발표 타이머",
+          en: "Judge view: picking the winner of a match, with the pitch timer",
         },
       },
     ],
@@ -288,17 +326,33 @@ export const selectedProjects: SelectedProject[] = [
       alt: { ko: "루미클린 첫 화면: 에어비앤비 청소, 이제 루미클린과 함께", en: "RumiClean home screen: Airbnb cleaning, now with RumiClean" },
     },
     heroTone: "muted",
-    gallery: [
+    diagrams: [
       {
-        src: "/projects/cleanb/flow.png",
-        alt: {
-          ko: "작업 상태 흐름: 수락 대기 → 진행 예정 → 진행 중 → 검수 대기 → 정산 대기. 상태마다 필요한 화면과 입력을 도출",
-          en: "Job state flow: pending → scheduled → in progress → review → settlement, with each state's screens and inputs",
+        title: { ko: "작업 상태가 곧 화면 구조", en: "The job's state is the screen structure" },
+        steps: [
+          { label: { ko: "수락 대기", en: "Pending" }, note: { ko: "청소 요청 도착", en: "A cleaning request arrives" } },
+          { label: { ko: "진행 예정", en: "Scheduled" }, note: { ko: "청소자가 수락", en: "A cleaner accepts" } },
+          { label: { ko: "진행 중", en: "In progress" }, note: { ko: "현장 작업", en: "On-site work" } },
+          { label: { ko: "검수 대기", en: "Review" }, note: { ko: "전·후 사진 최소 5장으로 완료 인증", en: "Completion proven with 5+ before/after photos" } },
+          { label: { ko: "정산 대기", en: "Settlement" }, note: { ko: "검수 후 정산", en: "Paid out after review" } },
+        ],
+        caption: {
+          ko: "기능 목록 대신 상태 흐름을 먼저 확정하자 필요한 화면과 입력이 저절로 추려졌습니다.",
+          en: "Fixing the state flow before the feature list distilled the screens and inputs we actually needed.",
         },
       },
+    ],
+    gallery: [
       {
         src: "/projects/cleanb/03.png",
         alt: { ko: "청소자용 작업 요청 목록과 일정 달력 화면", en: "Cleaner-side job request list and schedule calendar" },
+      },
+      {
+        src: "/projects/cleanb/05.png",
+        alt: {
+          ko: "청소 완료 인증 화면: 청소 전·후 사진 업로드와 작업 특이사항 입력",
+          en: "Completion screen: uploading before/after photos and work notes",
+        },
       },
     ],
     caseId: "cleanb",
