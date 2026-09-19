@@ -134,7 +134,7 @@ function Row({ label, accent, children }: { label: string; accent?: boolean; chi
   return (
     <section className="grid gap-4 md:grid-cols-[180px_1fr] md:gap-10 lg:grid-cols-[240px_1fr]">
       <h3 className={accent ? "eyebrow pt-1 text-accent" : "eyebrow pt-1 text-muted-foreground"}>{label}</h3>
-      <div className="max-w-3xl">{children}</div>
+      <div className="measure">{children}</div>
     </section>
   );
 }

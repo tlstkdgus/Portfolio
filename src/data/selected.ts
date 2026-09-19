@@ -66,7 +66,7 @@ export const selectedProjects: SelectedProject[] = [
     role: { ko: "커뮤니티 매니저 인턴 · 운영", en: "Community Manager Intern · Ops" },
     headline: {
       ko: "80개 대학, 2,000명 해커톤의\n규칙과 도구를 만들었습니다.",
-      en: "Rules and tools for an\n80-university, 2,000-person hackathon.",
+      en: "Rules and tools for an 80‑university, 2,000‑person hackathon.",
     },
     did: {
       ko: [
@@ -77,7 +77,7 @@ export const selectedProjects: SelectedProject[] = [
         "FAQ 디스코드 봇 직접 제작·운영",
       ],
       en: [
-        "Co-designed the judging policy and 100-pt rubric",
+        "Co-designed the judging policy and 100‑pt rubric",
         "Co-wrote two platform feature specs",
         "Built check.py, the submission checker",
         "Built and ran ANIMAL LEAGUE, the finals console",
@@ -92,10 +92,10 @@ export const selectedProjects: SelectedProject[] = [
       ko: "도구는 근거만 내고 판정은 사람이 합니다. 위반 차등 기준(기능 수정 실격 · README 감점 · 직후 커밋 정상참작)을 검사 전에 합의했습니다. 콘솔은 '되돌릴 수 없는 현장'을 전제로 심사위원 명단제, 롤백 없는 결과 공개, 네트워크 장애 백업 모드를 먼저 설계했습니다.",
       en: "Tools present evidence; people decide. Graded violation criteria (code changes = DQ, README edits = deduction, just-late commits = leniency) were agreed before scanning. The console assumed an irreversible live event: a judge allowlist, no rollback after reveal, and a network-failure backup mode came first.",
     },
-    statement: { ko: "도구는 근거만,\n판정은 사람이.", en: "Tools show evidence.\nPeople decide." },
+    statement: { ko: "도구는 근거만,\n판정은 사람이.", en: "Tools show evidence. People decide." },
     stats: [
       { v: { ko: "562개", en: "562" }, k: { ko: "레포 전 브랜치 전수 검사", en: "repos swept, every branch" } },
-      { v: "5팀", k: { ko: "위반 적발 · 2팀 실격", en: "violations caught · 2 DQ'd" } },
+      { v: { ko: "5팀", en: "5" }, k: { ko: "위반 적발 · 2팀 실격", en: "violations caught · 2 DQ'd" } },
       { v: { ko: "2.2초", en: "2.2s" }, k: { ko: "콘솔 조작이 무대 스크린에 뜨기까지 (실측)", en: "console-to-stage latency, measured" } },
       { v: { ko: "229건", en: "229" }, k: { ko: "FAQ 봇 응대 · 미응답 0건", en: "questions answered by the bot · 0 missed" } },
     ],
@@ -165,7 +165,7 @@ export const selectedProjects: SelectedProject[] = [
     role: { ko: "기획·제작·강의 단독", en: "Planned, built, and taught solo" },
     headline: {
       ko: "비개발 동료가 개발자와\n대화할 수 있도록, 점심 여섯 번.",
-      en: "Six lunch breaks to help\nnon-developers talk with developers.",
+      en: "Six lunch breaks to help non-developers talk with developers.",
     },
     did: {
       ko: [
@@ -189,12 +189,12 @@ export const selectedProjects: SelectedProject[] = [
       ko: "코드를 가르치지 않기로 했습니다. 목표를 '개발자 되기'에서 '개발자와 대화하기'로 좁히고, 설치·계정 없이 브라우저에서 바로 되는 실습만 남겼습니다. 밥 먹으면서 듣는 환경이 전제였습니다.",
       en: "I decided not to teach code, narrowing the goal from 'becoming a developer' to 'talking with developers', and keeping only demos that run in the browser with no installs or accounts. People would be listening over lunch.",
     },
-    statement: { ko: "개발자가 되는 게 아니라,\n개발자와 대화하기.", en: "Not becoming a developer.\nTalking with one." },
+    statement: { ko: "개발자가 되는 게 아니라,\n개발자와 대화하기.", en: "Not becoming a developer. Talking with one." },
     stats: [
       { v: "5/5", k: { ko: "만족도, 수강자 6명 전원", en: "satisfaction, all 6 attendees" } },
       { v: "9.7/10", k: { ko: "추천 의향", en: "would recommend" } },
       { v: "4.7/5", k: { ko: "개발자와의 대화가 더 이해된다", en: "better grasp of developer conversations" } },
-      { v: "6회", k: { ko: "점심 강의 · 6주", en: "lunch sessions over 6 weeks" } },
+      { v: { ko: "6회", en: "6" }, k: { ko: "점심 강의 · 6주", en: "lunch sessions over 6 weeks" } },
     ],
     hero: {
       src: "/projects/devsite/01.png",
@@ -227,7 +227,7 @@ export const selectedProjects: SelectedProject[] = [
     role: { ko: "PM · 프론트엔드 · IR", en: "PM · Frontend · IR" },
     headline: {
       ko: "무기명 법인카드 정산을\n8단계에서 3단계로.",
-      en: "Anonymous corporate card\nreconciliation, from 8 steps to 3.",
+      en: "Anonymous corporate card reconciliation, from 8 steps to 3.",
     },
     did: {
       ko: [
@@ -251,11 +251,11 @@ export const selectedProjects: SelectedProject[] = [
       ko: "첫 가설 '결제가 불편하다'는 인터뷰에서 깨졌습니다. 진짜 고통은 결제 이후의 수기 전표였습니다. 실명인증 대신 익명성을 지키는 가명토큰을 택하고, MVP를 ERP 전체 연동에서 지출보고서 자동 생성으로 좁혔습니다.",
       en: "The first hypothesis, 'paying is inconvenient,' broke in interviews; the real pain was manual vouchers after payment. We chose pseudonymous tokens over real-name auth to keep anonymity, and cut the MVP from full ERP integration to auto-generated expense reports.",
     },
-    statement: { ko: "첫 가설은\n인터뷰에서 깨졌다.", en: "The first hypothesis\nbroke in interviews." },
+    statement: { ko: "첫 가설은\n인터뷰에서 깨졌다.", en: "The first hypothesis broke in interviews." },
     stats: [
       { v: "8→3", k: { ko: "정산 단계 수, 8단계에서 3단계로", en: "steps in the reconciliation flow, 8 down to 3" } },
-      { v: "5위", k: { ko: "102팀 중 · FIN:NECT 장려상", en: "of 102 teams · FIN:NECT award" } },
-      { v: "20분", k: { ko: "기존 지출보고서 1건 작성 시간", en: "per expense report, before" } },
+      { v: { ko: "5위", en: "5th" }, k: { ko: "102팀 중 · FIN:NECT 장려상", en: "of 102 teams · FIN:NECT award" } },
+      { v: { ko: "20분", en: "20 min" }, k: { ko: "기존 지출보고서 1건 작성 시간", en: "per expense report, before" } },
     ],
     hero: {
       src: "/projects/flowpay/01.png",
@@ -291,7 +291,7 @@ export const selectedProjects: SelectedProject[] = [
     role: { ko: "PM · 프론트엔드 · 디자인 (3인 팀)", en: "PM · Frontend · Design (team of 3)" },
     headline: {
       ko: "만들고 끝나는 게 아니라,\n운영하는 서비스.",
-      en: "Not built and abandoned.\nA service we operate.",
+      en: "Not built and abandoned. A service we operate.",
     },
     did: {
       ko: [
@@ -315,7 +315,7 @@ export const selectedProjects: SelectedProject[] = [
       ko: "k3s/ArgoCD는 3인 팀에게 과해서 Docker Compose + Caddy로 단순화했습니다. 배포 중 페이지가 깨지는 문제는 정적 파일을 CDN(CloudFront)으로 분리해 해결했습니다.",
       en: "k3s/ArgoCD was too much for three people, so we simplified to Docker Compose + Caddy. Pages breaking mid-deploy were fixed by serving static files from a CDN (CloudFront).",
     },
-    statement: { ko: "운영 복잡도는\n팀 크기에 맞춘다.", en: "Match ops complexity\nto team size." },
+    statement: { ko: "운영 복잡도는\n팀 크기에 맞춘다.", en: "Match ops complexity to team size." },
     stats: [
       { v: "170+", k: { ko: "PR 리뷰 · 릴리스 머지", en: "PRs reviewed and released" } },
       { v: { ko: "5단계", en: "5" }, k: { ko: "작업 상태, 수락 대기부터 정산 대기까지", en: "job states, pending to settlement" } },
