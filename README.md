@@ -6,7 +6,7 @@
 
 **Live**: https://portfolio-tlstkdgus.vercel.app
 
-**PM/PO를 꿈꾸는 신상현의 포트폴리오입니다.**
+**데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자 신상현의 포트폴리오입니다.**
 
   
 
@@ -21,8 +21,9 @@
 
 ## 소개
 
-안녕하세요, PM/PO가 되기 위해 노력 중인 **신상현**입니다.
-보이지 않는 세상의 속도와 변화에 적응하기 위해 다양한 경험을 쌓아가며 성장하고 있습니다.
+멋쟁이사자처럼 커뮤니티 매니저 인턴으로 80개 대학 2,000명+ 연합 해커톤을 운영했고(심사 정책 공동 설계 · 운영 도구 3종 직접 제작), 15개 이상의 서비스를 기획·개발해 교내외 대회에서 11회 수상했습니다.
+
+전체 콘텐츠 원본은 [PORTFOLIO.md](PORTFOLIO.md)에 있습니다.
 
 - 📧 **Email**: [tlstkdgus9@naver.com](mailto:tlstkdgus9@naver.com)
 - 🔗 **GitHub**: [https://github.com/tlstkdgus](https://github.com/tlstkdgus)
