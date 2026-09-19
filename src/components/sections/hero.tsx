@@ -45,7 +45,7 @@ export function Hero() {
             <p className="whitespace-pre-line text-[22px] font-bold leading-[1.35] tracking-[-0.02em] md:text-[28px]">
               {t("lead")}
             </p>
-            <p className="max-w-lg text-[15px] leading-[1.75] text-muted-foreground md:justify-self-end">
+            <p className="max-w-lg text-[16px] leading-[1.75] text-muted-foreground md:justify-self-end">
               {t("summary")}
             </p>
           </div>
@@ -69,7 +69,7 @@ export function Hero() {
               <dd className="text-[44px] font-extrabold leading-none tracking-[-0.05em] md:text-[64px]">
                 {v}
               </dd>
-              <dt className="mt-3 text-[13px] font-medium leading-snug text-muted-foreground">{k}</dt>
+              <dt className="mt-3 text-[14px] font-medium leading-snug text-muted-foreground">{k}</dt>
             </div>
           ))}
         </dl>

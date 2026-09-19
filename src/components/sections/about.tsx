@@ -32,7 +32,7 @@ export function About() {
             <br />
             <span className="font-medium tracking-[-0.04em]">{t("name_line")}</span>
           </h2>
-          <div className="mt-8 max-w-xl space-y-4 text-[15px] leading-[1.8] text-foreground/80">
+          <div className="mt-8 max-w-xl space-y-4 text-[16px] leading-[1.8] text-foreground/80">
             <p>{t("description_1")}</p>
             <p>{t("description_2")}</p>
           </div>
@@ -53,8 +53,8 @@ export function About() {
       {/* What I do — 레퍼런스 3번 슬라이드: 큰 질문 + 짧은 답 + 흩어진 키워드 */}
       <div className="mt-28 md:mt-40">
         <h2 className="display">{t("what_heading")}</h2>
-        <p className="mt-6 max-w-lg text-[15px] leading-[1.8] text-muted-foreground">{t("what_sub")}</p>
-        <ul className="mt-14 flex flex-wrap justify-between gap-x-10 gap-y-5 text-[15px] font-semibold md:mt-20 md:text-[17px]">
+        <p className="mt-6 max-w-lg text-[16px] leading-[1.8] text-muted-foreground">{t("what_sub")}</p>
+        <ul className="mt-14 flex flex-wrap justify-between gap-x-10 gap-y-5 text-[16px] font-semibold md:mt-20 md:text-[17px]">
           {skills.map((s) => (
             <li key={s}>{s}</li>
           ))}

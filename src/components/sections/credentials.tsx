@@ -28,7 +28,7 @@ export function Credentials() {
                   <span className="block text-[20px] font-bold leading-snug tracking-[-0.02em] md:text-[22px]">
                     {isKo ? a.title : a.titleEn}
                   </span>
-                  <span className="mt-1 block text-[14px] text-muted-foreground">
+                  <span className="mt-1 block text-[15px] text-muted-foreground">
                     {isKo ? a.issuer : a.issuerEn}
                   </span>
                 </span>
@@ -40,7 +40,7 @@ export function Credentials() {
             {rest.map((a) => (
               <li
                 key={a.title}
-                className="grid gap-x-6 border-b border-border py-3 text-[14px] sm:grid-cols-[100px_1fr]"
+                className="grid gap-x-6 border-b border-border py-3 text-[15px] sm:grid-cols-[100px_1fr]"
               >
                 <span className="meta pt-0.5 text-muted-foreground">{a.date}</span>
                 <span className="text-foreground/80">{isKo ? a.title : a.titleEn}</span>
@@ -53,7 +53,7 @@ export function Credentials() {
             {certifications.map((c) => (
               <li
                 key={c.name}
-                className="grid gap-x-6 border-b border-border py-3 text-[14px] sm:grid-cols-[100px_1fr]"
+                className="grid gap-x-6 border-b border-border py-3 text-[15px] sm:grid-cols-[100px_1fr]"
               >
                 <span className="meta pt-0.5 text-muted-foreground">{c.date}</span>
                 <span>

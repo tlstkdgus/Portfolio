@@ -73,7 +73,7 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
 
           {/* Counter */}
           {/* 흰 이미지 위에서도 대비가 나오도록 불투명도를 올렸다 (bg-black/50은 4.3:1 이하) */}
-          <div aria-live="polite" className="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 text-xs text-white">
+          <div aria-live="polite" className="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 text-[13px] text-white">
             {current + 1} / {images.length}
           </div>
 

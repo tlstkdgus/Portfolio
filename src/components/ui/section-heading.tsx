@@ -12,7 +12,7 @@ export function SectionHeading({ children, sub, className }: SectionHeadingProps
     <div className={cn("mb-12 md:mb-16", className)}>
       <h2 className="display text-foreground">{children}</h2>
       {sub ? (
-        <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-muted-foreground">{sub}</p>
+        <p className="mt-5 max-w-xl text-[16px] leading-[1.7] text-muted-foreground">{sub}</p>
       ) : null}
     </div>
   );

@@ -93,7 +93,7 @@ export function Header() {
     <>
       <a
         href="#main"
-        className="sr-only bg-foreground px-4 py-3 text-sm font-semibold text-background focus:not-sr-only focus:fixed focus:left-4 focus:top-2 focus:z-60 focus:px-4 focus:py-3"
+        className="sr-only bg-foreground px-4 py-3 text-[15px] font-semibold text-background focus:not-sr-only focus:fixed focus:left-4 focus:top-2 focus:z-60 focus:px-4 focus:py-3"
       >
         {isKo ? "본문으로 건너뛰기" : "Skip to main content"}
       </a>
@@ -118,7 +118,7 @@ export function Header() {
             >
               <span
                 className={cn(
-                  "text-[15px] font-extrabold tracking-[-0.03em]",
+                  "text-[16px] font-extrabold tracking-[-0.03em]",
                   overInk ? "text-ink-foreground" : "text-foreground"
                 )}
               >
@@ -135,7 +135,7 @@ export function Header() {
                     href={`#${key}`}
                     aria-current={active === key ? "location" : undefined}
                     className={cn(
-                      "inline-flex h-11 items-center px-3 text-[13px] font-medium transition-colors",
+                      "inline-flex h-11 items-center px-3 text-[14px] font-medium transition-colors",
                       active === key
                         ? "text-foreground underline decoration-2 underline-offset-8"
                         : "text-muted-foreground hover:text-foreground"
@@ -155,7 +155,7 @@ export function Header() {
                 className={cn(iconBtn, muted)}
               >
                 <Globe aria-hidden="true" className="h-4 w-4" />
-                <span className={cn("text-xs font-bold uppercase tracking-wide", overInk ? "text-ink-foreground" : "text-foreground")}>
+                <span className={cn("text-[13px] font-bold uppercase tracking-wide", overInk ? "text-ink-foreground" : "text-foreground")}>
                   {isKo ? "EN" : "KO"}
                 </span>
               </button>

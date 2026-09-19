@@ -61,18 +61,18 @@ export const selectedProjects: SelectedProject[] = [
     },
     did: {
       ko: [
-        "심사 정책 · 100점 배점 (공동)",
-        "플랫폼 기능명세서 2종 (공동)",
-        "제출물 검사 도구 check.py (직접)",
-        "본선 콘솔 ANIMAL LEAGUE (직접)",
-        "FAQ 디스코드 봇 (직접)",
+        "심사 정책·100점 배점 공동 설계",
+        "플랫폼 기능명세서 2종 공동 작성",
+        "제출물 검사 도구 check.py 직접 제작",
+        "본선 콘솔 ANIMAL LEAGUE 직접 제작·운영",
+        "FAQ 디스코드 봇 직접 제작·운영",
       ],
       en: [
-        "Judging policy · 100-pt rubric (co-designed)",
-        "2 platform feature specs (co-written)",
-        "Submission checker check.py (built)",
-        "Finals console ANIMAL LEAGUE (built)",
-        "FAQ Discord bot (built)",
+        "Co-designed the judging policy and 100-pt rubric",
+        "Co-wrote two platform feature specs",
+        "Built check.py, the submission checker",
+        "Built and ran ANIMAL LEAGUE, the finals console",
+        "Built and ran the FAQ Discord bot",
       ],
     },
     problem: {
@@ -124,7 +124,7 @@ export const selectedProjects: SelectedProject[] = [
     kicker: { ko: "멋쟁이사자처럼 인턴 · 사내 교육", en: "LIKELION Internship · Internal Course" },
     title: { ko: "사내 개발 교육", en: "Internal Dev Literacy Course" },
     period: { ko: "2026.07 – 2026.08", en: "Jul – Aug 2026" },
-    role: { ko: "기획 · 제작 · 강의 (단독)", en: "Planning · Build · Teaching (solo)" },
+    role: { ko: "기획·제작·강의 단독", en: "Planned, built, and taught solo" },
     headline: {
       ko: "비개발 동료가 개발자와\n대화할 수 있도록, 점심 여섯 번.",
       en: "Six lunch breaks to help\nnon-developers talk with developers.",

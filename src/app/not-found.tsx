@@ -21,14 +21,14 @@ export default function NotFound() {
             404.
           </h1>
           <div className="mt-8 grid gap-6 border-t border-ink-foreground/25 pt-6 md:grid-cols-2">
-            <p className="text-[15px] leading-[1.7]">
+            <p className="text-[16px] leading-[1.7]">
               찾는 페이지가 없습니다. 주소가 바뀌었거나 잘못 입력됐을 수 있습니다.
               <br />
               <Link href="/ko" className="hit mt-3 inline-block border-b-2 border-ink-foreground pb-1 font-semibold">
                 메인으로 가기
               </Link>
             </p>
-            <p lang="en" className="text-[15px] leading-[1.7]">
+            <p lang="en" className="text-[16px] leading-[1.7]">
               This page doesn&apos;t exist. The address may have changed or been mistyped.
               <br />
               <Link href="/en" className="hit mt-3 inline-block border-b-2 border-ink-foreground pb-1 font-semibold">

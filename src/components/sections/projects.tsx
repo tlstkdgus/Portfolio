@@ -19,7 +19,7 @@ export function Projects() {
       <div className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
         <div className="lg:sticky lg:top-24 lg:self-start">
           <h2 className="display">{t("heading")}</h2>
-          <p className="mt-5 max-w-sm text-[15px] leading-[1.7] text-muted-foreground">{t("sub")}</p>
+          <p className="mt-5 max-w-sm text-[16px] leading-[1.7] text-muted-foreground">{t("sub")}</p>
         </div>
 
         <ol className="border-t border-foreground">
@@ -33,7 +33,7 @@ export function Projects() {
                   <span className="block text-[20px] font-bold tracking-[-0.02em] md:text-[24px]">
                     {isKo ? p.title : p.titleEn}
                   </span>
-                  <span className="mt-1 block text-[14px] leading-snug text-muted-foreground">
+                  <span className="mt-1 block text-[15px] leading-snug text-muted-foreground">
                     {isKo ? p.subtitle : p.subtitleEn}
                     {p.roles?.length ? ` · ${(isKo ? p.roles : p.rolesEn)?.join(" · ")}` : null}
                   </span>

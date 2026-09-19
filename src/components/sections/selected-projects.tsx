@@ -28,7 +28,7 @@ export function SelectedProjects() {
                 href={`#work-${p.id}`}
                 className="group grid grid-cols-[28px_1fr] items-baseline gap-x-4 gap-y-1 border-b border-foreground py-4 transition-colors hover:text-accent md:grid-cols-[40px_1fr_auto] md:py-5"
               >
-                <span className="text-[15px] font-bold">{i + 1}</span>
+                <span className="text-[16px] font-bold">{i + 1}</span>
                 <span className="meta text-muted-foreground group-hover:text-accent">
                   {isKo ? p.kicker.ko : p.kicker.en}
                 </span>
@@ -150,16 +150,16 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
           )}
         >
           {p.stats.map((s) => (
-            <div key={s.k.en} className="border-t border-accent-foreground/40 pt-5">
+            <div key={s.k.en} className="stat-cell border-t border-accent-foreground/40 pt-5">
               <dd className="stat">{statValue(s.v)}</dd>
-              <dt className="mt-3 text-[13px] font-medium leading-snug opacity-85 md:text-[14px]">
+              <dt className="mt-3 text-[14px] font-medium leading-snug opacity-85 md:text-[15px]">
                 {tr(s.k)}
               </dt>
             </div>
           ))}
         </dl>
 
-        <div className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 text-[15px] font-semibold md:mt-24">
+        <div className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 text-[16px] font-semibold md:mt-24">
           <Link
             href={`/${isKo ? "ko" : "en"}/career#section-${p.caseId}`}
             className="hit inline-flex items-center gap-2 border-b-2 border-accent-foreground pb-1 transition-opacity hover:opacity-75"

@@ -53,8 +53,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "사전 기획 — 플랫폼 기능명세서·워밍업 세션 (공동)",
-        titleEn: "Pre-event Planning — Platform Specs & Warm-up Sessions (Co-planned)",
+        title: "사전 기획 공동 참여 — 플랫폼 기능명세서·워밍업 세션",
+        titleEn: "Co-planned the Pre-event Work — Platform Specs & Warm-up Sessions",
         items: [
           {
             text: "해커톤 커뮤니티 플랫폼의 기능명세서 2종(중앙해커톤·연합해커톤)을 팀원들과 공동 작성해 개발(AXP)·디자인(브디랩) 조직에 핸드오프했습니다. 각 항목을 As-Is → To-Be → 기대 산출물 → 세부 명세 구조로 정리하고, 운영팀이 먼저 결정해야 할 사항과 개발 항목을 분리했습니다.",
@@ -76,8 +76,8 @@ export const careerDetailSections: CareerDetailSection[] = [
         ],
       },
       {
-        title: "심사 정책·프로세스 설계 (공동)",
-        titleEn: "Judging Policy & Process Design (Co-designed)",
+        title: "심사 정책·프로세스 공동 설계",
+        titleEn: "Co-designed the Judging Policy & Process",
         items: [
           {
             text: "3단계 심사 퍼널(서류 심사 60팀 → 트랙 피칭 8팀 → 본선 토너먼트 1팀)과 공통 심사 기준 100점 배점(문제 정의 25 · 실현 가능성 20 · 시장성 15 · UI/UX 10 · 전달력 10 · 트랙 적합성 20)을 설계했습니다.",
@@ -224,8 +224,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "커리큘럼 설계와 강의 (단독)",
-        titleEn: "Curriculum & Teaching (Solo)",
+        title: "커리큘럼 설계와 강의 — 단독",
+        titleEn: "Curriculum & Teaching — Solo",
         items: [
           {
             text: "점심시간 분량 6회 커리큘럼을 설계하고 주 1회, 6주간 직접 강의했습니다 — 소프트웨어 구조 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드.",
@@ -1525,8 +1525,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "기획·디자인·개발 (단독)",
-        titleEn: "Planning, Design & Development (Solo)",
+        title: "기획·디자인·개발 — 단독",
+        titleEn: "Planning, Design & Development — Solo",
         items: [
           {
             text: "서비스 IA·화면 설계·프론트엔드 구현까지 단일 PM으로 전 과정을 맡았습니다.",

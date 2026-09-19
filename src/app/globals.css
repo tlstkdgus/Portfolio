@@ -110,27 +110,39 @@ html {
   font-size: clamp(1.875rem, 4.6vw, 4rem);
 }
 
-/* 성과 숫자 */
+/* 성과 숫자 — 칸 폭(cqi)에 맞춘다. 화면 폭(vw)만 보면 4칸 배치에서 "562개"가
+   칸보다 커져 "562 / 개"로 쪼개졌다 (1320~1440px). 가장 긴 값 "9.7/10" ≈ 3.05em */
+.stat-cell {
+  container-type: inline-size;
+}
 .stat {
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 0.95;
-  font-size: clamp(3rem, 9vw, 8.5rem);
+  white-space: nowrap;
+  font-size: min(clamp(3rem, 9vw, 8.5rem), 30cqi);
 }
 
 /* 모서리 메타 텍스트 ('Creative Presentation · 09 Jan, 2026' 자리) */
 .meta {
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 13px;
+  line-height: 1.45;
   font-weight: 500;
   letter-spacing: 0.01em;
 }
 
 .eyebrow {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .meta,
+  .eyebrow {
+    font-size: 14px;
+  }
 }
 
 /* 좌우 여백 — 폰 16px, 데스크톱은 넓게 */

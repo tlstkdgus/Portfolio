@@ -20,7 +20,7 @@ export function Principles() {
             <h3 className="mt-6 text-[22px] font-bold leading-snug tracking-[-0.02em] md:text-[26px]">
               {item.t}
             </h3>
-            <p className="mt-4 text-[14px] leading-[1.75] text-muted-foreground">{item.d}</p>
+            <p className="mt-4 text-[15px] leading-[1.75] text-muted-foreground">{item.d}</p>
           </li>
         ))}
       </ol>

@@ -25,10 +25,10 @@ export function Experience() {
             <h3 className="mt-5 text-[30px] font-extrabold leading-tight tracking-[-0.03em] md:text-[40px]">
               {isKo ? main.company : main.companyEn}
             </h3>
-            <p className="mt-1 text-[15px] text-ink-muted">
+            <p className="mt-1 text-[16px] text-ink-muted">
               {isKo ? main.role : main.roleEn} · {isKo ? main.team : main.teamEn}
             </p>
-            <ul className="mt-7 space-y-3 text-[15px] leading-[1.75] text-ink-foreground/85">
+            <ul className="mt-7 space-y-3 text-[16px] leading-[1.75] text-ink-foreground/85">
               {(isKo ? main.description : main.descriptionEn).map((item) => (
                 <li key={item} className="grid grid-cols-[20px_1fr]">
                   <span aria-hidden="true" className="text-ink-muted">
@@ -52,8 +52,8 @@ export function Experience() {
                   <p className="text-[17px] font-bold tracking-[-0.01em]">
                     {isKo ? exp.role : exp.roleEn}
                   </p>
-                  <p className="text-[14px] text-ink-muted">{isKo ? exp.company : exp.companyEn}</p>
-                  <p className="mt-2 text-[14px] leading-[1.7] text-ink-foreground/70">
+                  <p className="text-[15px] text-ink-muted">{isKo ? exp.company : exp.companyEn}</p>
+                  <p className="mt-2 text-[15px] leading-[1.7] text-ink-foreground/70">
                     {(isKo ? exp.description : exp.descriptionEn)[0]}
                   </p>
                 </div>

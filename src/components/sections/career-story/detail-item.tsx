@@ -14,14 +14,14 @@ export const DetailItem = React.memo(function DetailItem({ item, isKo, strong }:
     <li
       className={cn(
         "leading-[1.8]",
-        strong ? "text-[17px] font-semibold tracking-[-0.01em] text-foreground" : "text-[15px] text-foreground/85"
+        strong ? "text-[17px] font-semibold tracking-[-0.01em] text-foreground" : "text-[16px] text-foreground/85"
       )}
     >
       {isKo ? item.text : item.textEn}
       {item.subItems && item.subItems.length > 0 && (
         <ul className="mt-3 space-y-2 border-l border-border pl-4">
           {item.subItems.map((sub, k) => (
-            <li key={k} className="text-[14px] font-normal leading-[1.75] text-muted-foreground">
+            <li key={k} className="text-[15px] font-normal leading-[1.75] text-muted-foreground">
               {isKo ? sub.text : sub.textEn}
             </li>
           ))}

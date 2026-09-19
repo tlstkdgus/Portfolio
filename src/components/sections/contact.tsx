@@ -27,7 +27,7 @@ export function Contact() {
         <h2 className="wordmark -ml-[0.04em]" style={{ fontSize: "clamp(3.5rem, 16vw, 15rem)" }}>
           {t("heading")}
         </h2>
-        <p className="mt-8 max-w-md text-[15px] leading-[1.7] text-ink-muted">{t("description")}</p>
+        <p className="mt-8 max-w-md text-[16px] leading-[1.7] text-ink-muted">{t("description")}</p>
 
         <a
           href={`mailto:${profile.links.email}`}

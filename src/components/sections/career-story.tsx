@@ -46,7 +46,7 @@ export function CareerStoryContent() {
           >
             {t("title")}
           </m.h1>
-          <p className="mt-6 max-w-md text-[15px] leading-[1.7] text-ink-muted">{t("subtitle")}</p>
+          <p className="mt-6 max-w-md text-[16px] leading-[1.7] text-ink-muted">{t("subtitle")}</p>
         </div>
       </div>
 
