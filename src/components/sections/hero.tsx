@@ -1,69 +1,79 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { ArrowDown } from "lucide-react";
+import { m } from "framer-motion";
+import { MetaRow } from "@/components/ui/meta-row";
+import { profile } from "@/data/profile";
+import { cn } from "@/lib/utils";
 
 export function Hero() {
   const t = useTranslations("hero");
+  const tm = useTranslations("meta");
   const metrics: { v: string; k: string }[] = t.raw("metrics");
 
   return (
-    <section id="hero" className="pb-14 pt-32 md:pb-20 md:pt-40">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="grid items-center gap-10 md:grid-cols-[1.05fr_1fr] md:gap-14">
-          <div>
-            <h1 className="text-4xl font-bold leading-[1.18] tracking-tight md:text-[46px]">
-              {t("title1")}
-              <br />
-              <span className="text-accent">{t("title2")}</span>
-            </h1>
-            <p className="mt-6 max-w-md text-[17px] leading-[1.7] text-muted-foreground">
-              {t("subtitle")}
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href="#projects"
-                className="inline-flex items-center gap-1.5 rounded-full bg-accent px-6 py-3 text-[15px] font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
-              >
-                {t("cta_resume")}
-                <ArrowDown className="h-4 w-4" />
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center rounded-full border border-border bg-card px-6 py-3 text-[15px] font-semibold text-foreground transition-transform hover:-translate-y-0.5"
-              >
-                {t("cta_contact")}
-              </a>
-            </div>
-          </div>
+    <>
+      {/* 표지 — 레퍼런스 1번 슬라이드. 메타 줄 + 화면 폭 워드마크 */}
+      <section id="hero" className="gutter flex min-h-[100svh] flex-col pb-10 pt-24 md:pb-14">
+        <MetaRow items={[tm("deck"), t("name")]} className="text-muted-foreground" />
 
-          <div>
-            <div className="card overflow-hidden !rounded-[20px]">
-              <Image
-                src="/projects/cleanb/01.png"
-                alt="CleanB"
-                width={1440}
-                height={900}
-                className="h-auto w-full"
-                priority
-              />
-            </div>
-            <p className="mt-2.5 text-[13px] text-muted-foreground">{t("hero_caption")}</p>
+        <div className="flex flex-1 flex-col justify-end">
+          <MetaRow
+            items={[
+              tm("role"),
+              <a
+                key="email"
+                href={`mailto:${profile.links.email}`}
+                className="underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground"
+              >
+                {profile.links.email}
+              </a>,
+              tm("location"),
+            ]}
+            className="mb-3 border-b border-foreground pb-3 md:mb-4"
+          />
+          <m.h1
+            initial={{ y: 24 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="wordmark -ml-[0.04em] text-foreground"
+          >
+            {t("wordmark")}
+          </m.h1>
+
+          <div className="mt-8 grid gap-6 md:mt-12 md:grid-cols-2 md:gap-10">
+            <p className="whitespace-pre-line text-[22px] font-bold leading-[1.35] tracking-[-0.02em] md:text-[28px]">
+              {t("lead")}
+            </p>
+            <p className="max-w-lg text-[15px] leading-[1.75] text-muted-foreground md:justify-self-end">
+              {t("summary")}
+            </p>
           </div>
         </div>
+      </section>
 
-        <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-[20px] border border-border bg-border md:grid-cols-4">
-          {metrics.map(({ v, k }) => (
-            <div key={k} className="bg-card px-6 py-5">
-              <dd className="text-[26px] font-bold tracking-tight text-accent">{v}</dd>
-              <dt className="mt-1 text-[13px] font-semibold tracking-wide text-muted-foreground">
-                {k}
-              </dt>
+      {/* 핵심 숫자 — 인턴 경험이 첫 칸 */}
+      <section aria-label="Key numbers" className="gutter border-t border-foreground">
+        <dl className="grid grid-cols-2 md:grid-cols-4">
+          {metrics.map(({ v, k }, i) => (
+            <div
+              key={k}
+              className={cn(
+                "border-border py-8 md:py-12",
+                // 폰: 2×2 격자 / 데스크톱: 한 줄 4칸
+                i % 2 === 1 ? "border-l pl-4" : "pr-4",
+                i >= 2 && "border-t md:border-t-0",
+                i > 0 ? "md:border-l md:px-8" : "md:pr-8"
+              )}
+            >
+              <dd className="text-[44px] font-extrabold leading-none tracking-[-0.05em] md:text-[64px]">
+                {v}
+              </dd>
+              <dt className="mt-3 text-[13px] font-medium leading-snug text-muted-foreground">{k}</dt>
             </div>
           ))}
         </dl>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -57,12 +57,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main" tabIndex={-1} className="outline-none">
+        {/* 레퍼런스 흐름: 표지 → Hello → How I work → Where I've worked(인턴이 메인) → 목차·대표 프로젝트 */}
         <Hero />
-        <SelectedProjects />
+        <About />
         <Principles />
         <Experience />
-        <About />
+        <SelectedProjects />
         <Projects />
         <Credentials />
         <Contact />

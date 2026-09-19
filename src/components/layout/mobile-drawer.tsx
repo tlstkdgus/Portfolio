@@ -54,9 +54,9 @@ export function MobileDrawer({
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className="fixed top-0 right-0 bottom-0 z-40 w-72 bg-card border-l border-border p-6 pt-20 shadow-xl md:hidden"
+        className="fixed top-0 right-0 bottom-0 z-40 w-72 bg-ink p-6 pt-20 text-ink-foreground md:hidden"
       >
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col">
           {navKeys.map((key, i) => (
             <m.button
               key={key}
@@ -64,7 +64,7 @@ export function MobileDrawer({
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.05 }}
               onClick={() => onNavigate(key)}
-              className="rounded-lg px-4 py-3 text-left text-base font-medium text-muted-foreground transition-colors hover:text-foreground hover:bg-muted/50"
+              className="border-b border-ink-foreground/15 py-4 text-left text-[26px] font-extrabold tracking-[-0.03em] transition-colors hover:text-accent-bright"
             >
               {t(key)}
             </m.button>

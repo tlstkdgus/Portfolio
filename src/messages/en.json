@@ -1,80 +1,110 @@
 {
   "nav": {
-    "projects": "Projects",
-    "experience": "Experience",
     "about": "About",
-    "certified": "Credentials",
+    "experience": "Experience",
+    "projects": "Projects",
+    "certified": "Awards",
     "contact": "Contact"
+  },
+  "meta": {
+    "deck": "Portfolio 2026",
+    "role": "PM · PO / Frontend · AI tooling",
+    "location": "Seoul, Korea"
   },
   "hero": {
     "name": "Sanghyeon Shin",
-    "title1": "Defining problems with data,",
-    "title2": "validating them as products",
-    "subtitle": "PM of CleanB, a live service in production — and designer of the policies and ops tools behind a 2,000-person hackathon.",
-    "cta_resume": "View Projects",
-    "cta_contact": "Get in Touch",
-    "hero_caption": "Live in production — CleanB (rumiclean.com)",
+    "wordmark": "Portfolio",
+    "lead": "An IT planner who defines problems with data,\nthen builds and ships.",
+    "summary": "As a Community Manager Intern at LIKELION, I helped run a 2,000+ participant hackathon across 80 universities — co-designing the judging policy and building three ops tools with AI that went live on site.",
     "metrics": [
-      { "v": "15+", "k": "Products planned & built" },
-      { "v": "11", "k": "Competition awards" },
-      { "v": "LIVE", "k": "Service in production" },
-      { "v": "5th / 102", "k": "KakaoBank FIN:NECT" }
-    ]
+      {
+        "v": "2,000+",
+        "k": "80-university hackathon, operated"
+      },
+      {
+        "v": "3",
+        "k": "Ops tools built with AI"
+      },
+      {
+        "v": "15+",
+        "k": "Services planned & built"
+      },
+      {
+        "v": "11",
+        "k": "Competition awards"
+      }
+    ],
+    "scroll": "Scroll"
   },
-  "selected": {
-    "heading": "Selected Projects",
-    "sub": "How I define the problem, what I decided, and what changed — shown through three projects.",
-    "case_cta": "View Case Study"
+  "about": {
+    "hello": "Hello!",
+    "name_line": "I'm Sanghyeon Shin.",
+    "description_1": "I worked as a Community Manager Intern on LIKELION's Univ. Team 1 (Apr – Aug 2026), running a university community of ~2,500 members across 80 schools. For the 14th national hackathon I co-designed the judging policy and platform feature specs with the team and built three ops tools myself. I also planned and taught a six-session dev literacy course for non-developer colleagues.",
+    "description_2": "I studied Global Business & Technology alongside an AI Convergence major, and through LIKELION staff roles, hackathons, and startup programs I've planned and built 15+ services, winning 11 awards. I completed SSAFY's 15th Java track.",
+    "what_heading": "What I do.",
+    "what_sub": "I define problems in numbers, resolve colliding interests with policy, and build the tools that don't exist yet.",
+    "skills": [
+      "Service planning",
+      "User research",
+      "Survey design",
+      "Policy design",
+      "BM · IR pitching",
+      "Figma wireframes",
+      "React · Next.js",
+      "TypeScript",
+      "AI tooling"
+    ],
+    "education_label": "Education",
+    "military_label": "Military",
+    "gpa": "GPA 4.13 / 4.5"
   },
   "principles": {
-    "heading": "Working Principles",
+    "heading": "How I work.",
     "items": [
       {
         "t": "Define problems in numbers",
-        "d": "53% in surveys, 562 repos, a 40%p usage gap — every plan starts from a verifiable number."
+        "d": "562 repos, 53% in a survey, a 41.6%p usage gap. Every plan starts from a number that can be checked."
       },
       {
         "t": "Resolve conflicts with policy",
-        "d": "A 100-point rubric, graded violation verdicts, a 5-photo rule — I design rules where interests collide."
+        "d": "A 100-point rubric, graded violation verdicts, a 5-level permission matrix. Where interests collide, I design the rule."
       },
       {
         "t": "Build missing tools with AI",
-        "d": "A submission checker, a finals console, an FAQ bot — when a tool doesn't exist, I build it and ship it."
+        "d": "A submission checker, a finals console, an FAQ bot. When a tool doesn't exist, I build it and ship it."
       }
     ]
   },
-  "about": {
-    "heading": "About",
-    "description_1": "PM of CleanB (3-person team) — owning planning, design, and releases while building the cleaner-side frontend myself. Before that, as a Community Manager Intern at LIKELION, I ran a community of ~2,500 members across 80 universities and the national hackathon.",
-    "description_2": "Double major in Global Business & Technology and AI Convergence. Through LIKELION staff roles, hackathons, and startup programs I've planned and built 15 services, 11 of which won awards. I built my backend and QA foundations by completing SSAFY's 15th Java track.",
-    "description_3": "Products people actually use, decisions backed by data, and teams that grow together — my goal is to be a PM who delivers all three at once.",
-    "education_label": "Education",
-    "keywords_label": "Strengths",
-    "keywords": [
-      "Problem framing · User research",
-      "IR pitching · BM design",
-      "Figma wireframing",
-      "React · Next.js · TypeScript",
-      "SQLD · ADsP"
-    ]
-  },
   "experience": {
-    "heading": "Experience"
+    "heading": "Where I've worked.",
+    "main_label": "Main role"
   },
-  "certified": {
-    "heading": "Credentials",
-    "certifications": "Certifications",
-    "awards": "Highlighted Awards",
-    "awards_rest": "More Awards"
+  "selected": {
+    "index_heading": "Selected work.",
+    "problem": "Problem",
+    "did": "What I did",
+    "decision": "Key decisions",
+    "impact": "Impact",
+    "case_cta": "Read the case study",
+    "live": "Visit site",
+    "repo": "GitHub",
+    "behance": "Behance case (Brand Design Lab)"
   },
   "projects": {
-    "heading": "All Projects",
-    "sub": "Everything beyond the selected three. Each case study covers the background, my role, and lessons learned.",
-    "detail_link": "Case Study"
+    "heading": "Other projects.",
+    "sub": "Work beyond the selected projects. Each case study covers the background, my role, and lessons learned.",
+    "detail_link": "Case study"
+  },
+  "certified": {
+    "heading": "Awards.",
+    "count_label": "Competition awards",
+    "certifications": "Certifications",
+    "awards": "Highlighted awards",
+    "awards_rest": "More awards"
   },
   "contact": {
-    "heading": "Contact",
-    "description": "For collaboration, projects, or opportunities, email is the fastest way to reach me.",
+    "heading": "Let's talk.",
+    "description": "For hiring or collaboration, email is the fastest way to reach me.",
     "phone": "Phone",
     "email": "Email",
     "blog": "Blog",
@@ -82,7 +112,7 @@
     "linkedin": "LinkedIn"
   },
   "footer": {
-    "copyright": "© 2026 Sanghyeon Shin. All rights reserved.",
+    "copyright": "© 2026 Sanghyeon Shin",
     "built_with": "Sanghyeon Shin Portfolio"
   },
   "common": {
@@ -97,13 +127,13 @@
     "active": "Active"
   },
   "career_story": {
-    "title": "Project Details",
+    "title": "Case Studies.",
     "subtitle": "Background, role, results, and lessons behind each project.",
-    "back": "Go Back",
+    "back": "Back to main",
     "background": "Background",
     "role": "Role",
-    "results": "Results & Impact",
-    "lessons": "Lessons Learned",
-    "toc": "Table of Contents"
+    "results": "Results",
+    "lessons": "Lessons",
+    "toc": "Contents"
   }
 }
