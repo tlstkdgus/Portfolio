@@ -4,7 +4,9 @@
     "experience": "Experience",
     "projects": "Projects",
     "certified": "Awards",
-    "contact": "Contact"
+    "contact": "Contact",
+    "hero": "Cover",
+    "rail_label": "Page position"
   },
   "meta": {
     "deck": "Portfolio 2026",
@@ -15,7 +17,7 @@
     "name": "Sanghyeon Shin",
     "wordmark": "Portfolio",
     "lead": "A service planner who doesn't stop at the spec.",
-    "summary": "I design with policies and specs, build the tools that are missing, and check the results in front of real users. Most recently, as an intern at LIKELION, I co-designed the judging policy and feature specs for a 2,000-person hackathon and built three ops tools that went live on site.",
+    "summary": "I **design with policies and specs**, **build the tools** that are missing, and check the results in front of real users. Most recently, as an intern at LIKELION, I co-designed the judging policy and feature specs for a **2,000-person hackathon** and built **three ops tools** that went live on site.",
     "metrics": [
       {
         "v": "2,000+",
@@ -40,7 +42,7 @@
     "hello": "Hello!",
     "name_line": "I'm Sanghyeon Shin.",
     "description_1": "I'm a service planner who stays with the work until it holds up in front of real users, not just on paper.",
-    "description_2": "I started in frontend development. At LIKELION, the part I loved most was zero to one: an idea turning into a screen, then shipping and watching people use it. When I joined the 13th cohort's staff, my questions changed from 'how do we build this' to 'who uses it, why, and how does it become a business', and that led me into service planning.",
+    "description_2": "I started in **frontend development**. At LIKELION, the part I loved most was **zero to one**: an idea turning into a screen, then shipping and watching people use it. When I joined the 13th cohort's staff, my questions changed from 'how do we build this' to **'who uses it, why, and how does it become a business'**, and that led me into service planning.",
     "what_heading": "What I do.",
     "what_sub": "Service planning at the core, with as much design, building, and operating as the work needs.",
     "skills": [
@@ -57,7 +59,7 @@
     "education_label": "Education",
     "military_label": "Military",
     "gpa": "GPA 4.13 / 4.5",
-    "description_3": "The 14th national hackathon, which I worked on as an intern at LIKELION, shows this best. I co-designed the judging policy and platform feature specs with the team, and to make the 'no edits after deadline' rule actually hold, I built a tool that scanned 562 repos and caught 5 violating teams.",
+    "description_3": "The **14th national hackathon**, which I worked on as an intern at LIKELION, shows this best. I co-designed the **judging policy and platform feature specs** with the team, and to make the 'no edits after deadline' rule actually hold, I **built a tool that scanned 562 repos and caught 5 violating teams**.",
     "closing": "I want to keep asking what experience people will have with a service, and what one thing will set it apart.",
     "training_label": "Training",
     "training": "SSAFY 15th cohort, Non-CS Java track, completed (Jan – Apr 2026)"
@@ -96,7 +98,9 @@
     "case_cta": "Read the case study",
     "live": "Visit site",
     "repo": "GitHub",
-    "behance": "Behance case (Brand Design Lab)"
+    "behance": "Behance case (Brand Design Lab)",
+    "role": "Role",
+    "scope": "Scope"
   },
   "projects": {
     "heading": "Other projects.",

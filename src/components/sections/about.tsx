@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { profile } from "@/data/profile";
+import { Emph } from "@/components/ui/emph";
 
 export function About() {
   const t = useTranslations("about");
@@ -34,8 +35,12 @@ export function About() {
           </h2>
           <div className="measure mt-8 space-y-4 text-[16px] leading-[1.8] text-foreground/80">
             <p className="text-[18px] font-semibold leading-[1.6] text-foreground md:text-[20px]">{t("description_1")}</p>
-            <p>{t("description_2")}</p>
-            <p>{t("description_3")}</p>
+            <p>
+              <Emph text={t("description_2")} />
+            </p>
+            <p>
+              <Emph text={t("description_3")} />
+            </p>
             <p className="font-semibold text-foreground">{t("closing")}</p>
           </div>
 

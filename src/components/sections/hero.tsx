@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { m } from "framer-motion";
 import { MetaRow } from "@/components/ui/meta-row";
 import { profile } from "@/data/profile";
+import { Emph } from "@/components/ui/emph";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -46,7 +47,7 @@ export function Hero() {
               {t("lead")}
             </p>
             <p className="max-w-lg text-[16px] leading-[1.75] text-muted-foreground md:justify-self-end">
-              {t("summary")}
+              <Emph text={t("summary")} />
             </p>
           </div>
         </div>

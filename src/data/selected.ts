@@ -34,6 +34,10 @@ export interface SelectedProject {
   /** 검은 표지에 화면 폭으로 들어가는 단어 */
   cover: Localized;
   kicker: Localized;
+  /** 상태 뱃지 — 사실 그대로. CleanB는 결제 연동 전이라 'LIVE'라고 쓰지 않는다 */
+  status: Localized;
+  /** 이 프로젝트에서 맡은 범위. 설계 → 구현 → 운영 순서로, 실제 한 것만 */
+  scope: { ko: string[]; en: string[] };
   title: Localized;
   period: Localized;
   role: Localized;
@@ -61,6 +65,11 @@ export const selectedProjects: SelectedProject[] = [
     id: "hackathon14",
     cover: { ko: "Hackathon.", en: "Hackathon." },
     kicker: { ko: "멋쟁이사자처럼 인턴 · 14기 중앙해커톤", en: "LIKELION Internship · 14th Hackathon" },
+    status: { ko: "완료 · 2026.08 본선", en: "Completed · Finals Aug 2026" },
+    scope: {
+      ko: ["심사 정책 설계", "기능명세서", "도구 구현", "현장 운영"],
+      en: ["Judging policy", "Feature specs", "Tool build", "On-site ops"],
+    },
     title: { ko: "14기 중앙해커톤 운영", en: "LIKELION 14th Hackathon Ops" },
     period: { ko: "2026.06 – 2026.08", en: "Jun – Aug 2026" },
     role: { ko: "커뮤니티 매니저 인턴 · 운영", en: "Community Manager Intern · Ops" },
@@ -160,6 +169,11 @@ export const selectedProjects: SelectedProject[] = [
     id: "devsite",
     cover: { ko: "Dev Class.", en: "Dev Class." },
     kicker: { ko: "멋쟁이사자처럼 인턴 · 사내 교육", en: "LIKELION Internship · Internal Course" },
+    status: { ko: "완료 · 사이트 공개 중", en: "Completed · Site live" },
+    scope: {
+      ko: ["문제 정의", "커리큘럼 설계", "사이트 구현", "강의"],
+      en: ["Problem definition", "Curriculum", "Site build", "Teaching"],
+    },
     title: { ko: "사내 개발 교육", en: "Internal Dev Literacy Course" },
     period: { ko: "2026.07 – 2026.08", en: "Jul – Aug 2026" },
     role: { ko: "기획·제작·강의 단독", en: "Planned, built, and taught solo" },
@@ -222,6 +236,11 @@ export const selectedProjects: SelectedProject[] = [
     id: "flowpay",
     cover: { ko: "FlowPay.", en: "FlowPay." },
     kicker: { ko: "B2B 핀테크 · FIN:NECT 챌린지", en: "B2B Fintech · FIN:NECT Challenge" },
+    status: { ko: "수상 · 102팀 중 5위", en: "Award · 5th of 102" },
+    scope: {
+      ko: ["사용자 인터뷰", "IA 설계", "프론트엔드", "IR 발표"],
+      en: ["User interviews", "IA design", "Frontend", "IR pitch"],
+    },
     title: { ko: "FlowPay", en: "FlowPay" },
     period: { ko: "2025.06 – 2025.08", en: "Jun – Aug 2025" },
     role: { ko: "PM · 프론트엔드 · IR", en: "PM · Frontend · IR" },
@@ -286,6 +305,11 @@ export const selectedProjects: SelectedProject[] = [
     id: "cleanb",
     cover: { ko: "CleanB.", en: "CleanB." },
     kicker: { ko: "사이드 프로젝트 · 루미클린(RumiClean)", en: "Side Project · RumiClean" },
+    status: { ko: "배포 완료 · 결제 연동 전", en: "Deployed · Payments pending" },
+    scope: {
+      ko: ["상태 흐름 설계", "프론트엔드", "릴리스 관리", "배포"],
+      en: ["State-flow design", "Frontend", "Release management", "Deployment"],
+    },
     title: { ko: "CleanB", en: "CleanB" },
     period: { ko: "2025.11 – 현재", en: "Nov 2025 – Present" },
     role: { ko: "PM · 프론트엔드 · 디자인 (3인 팀)", en: "PM · Frontend · Design (team of 3)" },

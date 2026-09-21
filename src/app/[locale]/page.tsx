@@ -11,6 +11,7 @@ import { Projects } from "@/components/sections/projects";
 import { Contact } from "@/components/sections/contact";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { SectionRail } from "@/components/ui/section-rail";
 import { siteConfig } from "@/config/site";
 
 export async function generateMetadata({
@@ -69,6 +70,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <SectionRail />
       <ScrollToTop />
       <JsonLd />
     </>

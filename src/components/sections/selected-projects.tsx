@@ -29,8 +29,11 @@ export function SelectedProjects() {
                 className="group grid grid-cols-[28px_1fr] items-baseline gap-x-4 gap-y-1 border-b border-foreground py-4 transition-colors hover:text-accent md:grid-cols-[40px_1fr_auto] md:py-5"
               >
                 <span className="text-[16px] font-bold">{i + 1}</span>
-                <span className="meta text-muted-foreground group-hover:text-accent">
+                <span className="meta flex flex-wrap items-baseline gap-x-3 text-muted-foreground group-hover:text-accent">
                   {isKo ? p.kicker.ko : p.kicker.en}
+                  <span className="font-semibold text-foreground group-hover:text-accent">
+                    {isKo ? p.status.ko : p.status.en}
+                  </span>
                 </span>
                 <span className="col-start-2 text-[22px] font-medium tracking-[-0.03em] md:col-start-auto md:text-[30px]">
                   {isKo ? p.title.ko : p.title.en}.
@@ -73,7 +76,7 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
 
       {/* 2. 헤드라인 + 한 일 — 레퍼런스 'The Making of Sira' */}
       <div className="gutter py-20 md:py-32">
-        <MetaRow items={[title, tr(p.role)]} className="mb-12 text-muted-foreground md:mb-20" />
+        <MetaRow items={[title, tr(p.status)]} className="mb-12 text-muted-foreground md:mb-20" />
         <div className="grid gap-12 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)] lg:items-end">
           <m.h3
             id={`work-${p.id}-title`}
@@ -97,6 +100,26 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
             </ul>
           </div>
         </div>
+
+        <dl className="mt-12 grid gap-x-10 gap-y-5 border-t border-foreground pt-6 md:mt-16 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+          <div className="grid grid-cols-[72px_1fr] gap-x-4">
+            <dt className="eyebrow pt-1 text-muted-foreground">{t("role")}</dt>
+            <dd className="text-[16px] font-semibold">{tr(p.role)}</dd>
+          </div>
+          <div className="grid grid-cols-[72px_1fr] gap-x-4">
+            <dt className="eyebrow pt-1 text-muted-foreground">{t("scope")}</dt>
+            <dd className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[16px] font-semibold">
+              {(isKo ? p.scope.ko : p.scope.en).map((s, k, arr) => (
+                <span key={s} className="inline-flex items-center gap-2">
+                  {s}
+                  {k < arr.length - 1 && (
+                    <ArrowRight aria-hidden="true" className="h-3.5 w-3.5 text-muted-foreground" />
+                  )}
+                </span>
+              ))}
+            </dd>
+          </div>
+        </dl>
       </div>
 
       {/* 3. 대표 화면 — 화면 폭 */}
