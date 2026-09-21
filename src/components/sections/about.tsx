@@ -41,6 +41,9 @@ export function About() {
             <p>
               <Emph text={t("description_3")} />
             </p>
+            <p>
+              <Emph text={t("description_4")} />
+            </p>
             <p className="font-semibold text-foreground">{t("closing")}</p>
           </div>
 

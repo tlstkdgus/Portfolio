@@ -36,10 +36,10 @@ export const projects: Project[] = [
   // 순서 = 사이트 노출 순서. 멋사 인턴 경험(중앙해커톤·사내 교육)이 항상 앞,
   // CleanB는 경력이 아니라 프로젝트로만, FlowPay 뒤 (2026.09.13 서사 우선순위 지시).
   {
-    title: "14기 중앙해커톤 운영",
+    title: "14기 중앙해커톤 기획·운영",
     caseId: "hackathon14",
     featured: true,
-    titleEn: "LIKELION 14th Hackathon Ops",
+    titleEn: "LIKELION 14th Hackathon — Planning & Ops",
     subtitle: "80개 대학 · 2,000명+ 연합 해커톤의 심사 정책과 운영 도구 3종",
     subtitleEn: "Judging policy and 3 ops tools for an 80-university, 2,000+ participant hackathon",
     period: "2026.06. ~ 2026.08.",
@@ -238,15 +238,15 @@ export const projects: Project[] = [
     caseId: "cleanb",
     featured: true,
     titleEn: "CleanB",
-    subtitle: "에어비앤비 청소 매칭 플랫폼 '루미클린(RumiClean)'",
-    subtitleEn: "Airbnb Cleaning Matching Platform 'RumiClean'",
+    subtitle: "외주 프로젝트 · 에어비앤비 청소 매칭 플랫폼 '루미클린(RumiClean)'",
+    subtitleEn: "Client Project · Airbnb Cleaning Matching Platform 'RumiClean'",
     period: "2025.11. ~ 현재 (배포 완료 · 결제 연동 전)",
     periodEn: "Nov 2025 — Present (deployed · payments not yet connected)",
     roles: ["PM", "프론트엔드", "디자인"],
     rolesEn: ["PM", "Frontend", "Design"],
     url: "https://www.rumiclean.com",
     goals: [
-      "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들고 있습니다",
+      "외주로 맡은 프로젝트입니다. 에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들고 있습니다",
       "해커톤처럼 만들고 끝나는 게 아니라, 실제 사용자를 받는 서비스로 운영하는 것이 목표",
     ],
     goalsEn: [

@@ -18,7 +18,7 @@ The personal portfolio of 신상현 (Sanghyeon Shin), an IT planner who defines 
 
 ## Positioning
 
-A PM candidate who doesn't stop at planning. He built and ran the tools himself: a submission checker that swept 562 repos, a live finals console, and an FAQ bot, all shipped during a real 2,000-person hackathon. Every claim is backed by a verifiable number or a public artifact.
+A service planner who digs into users until the answer holds, then builds and ships. The proof is depth: he analyzed all 390K records rather than a sample, rebuilt FlowPay's problem from scratch when interviews broke the first hypothesis, read every one of 229 hackathon questions and patched the FAQ daily, and keeps revising RumiClean after deploy. Building the tools himself (submission checker, finals console, FAQ bot) is how the planning reaches users, not the headline. Every claim is backed by a verifiable number or a public artifact.
 
 ## Operating Context
 
@@ -40,13 +40,15 @@ A PM candidate who doesn't stop at planning. He built and ran the tools himself:
 
 ## Brand Commitments
 
-- Name: 신상현 / Sanghyeon Shin. Positioning line (2026-09-20): 「기획서에서 끝나지 않는 서비스 기획자」 / "A service planner who doesn't stop at the spec." Planning documents (policies, specs) are a core strength, not something to replace; the differentiator is carrying them through build and operation.
+- Name: 신상현 / Sanghyeon Shin. Positioning line (2026-09-21, v5): 「사용자를 끝까지 파고들어, 직접 만들어 배포하는 서비스 기획자」 / "A service planner who digs into users until the answer holds, then builds and ships." Proof line beneath it: 「39만 건은 전수로 분석하고, 인터뷰에서 깨진 가설은 처음부터 다시 세우고, 배포한 뒤에도 사용자의 질문을 매일 읽습니다」. Depth markers that must survive any edit: 전수 / 다시 / 매일 / 이미 하는 행동에서 / 배포한 뒤에도. Planning documents remain a strength; never write "기획서 대신".
+- Hackathon is always described as planned-and-run end to end (기획부터 본선 운영까지); never lead with 'co-designed judging policy', and never write '참가자 경험을 설계'. Co-done items (policy, specs, warm-ups) keep '공동/팀과 함께'; the 3 tools and on-site ops are '직접'.
+- FlowPay is described by what the product did (8 → 3 steps, 5th of 102), not by the pivot story (at most a half-sentence in How I work). RumiClean is a client project (외주), never '사이드 프로젝트'.
 - Voice: plain, specific, number-first. Structure every project as problem → what I did / decided → outcome.
 - Fixed facts: GPA 4.13/4.5; email a91945840@gmail.com; SSAFY 15th cohort "completed (2026.01–04)"; the service name is 루미클린 (RumiClean), never "RoomiClean"; Y:Wave was submitted to the LIKELION 13th national hackathon (2025.07–08); FlowPay interviewees were working accountants, not certified accountants.
 
 ## Evidence on Hand
 
-- PORTFOLIO.md holds every fact with its figures and sources.
+- PORTFOLIO.md holds every fact with its figures and sources. Before→after figures (inquiries 3h+/day → 80.8% instant; 562-repo manual check ~2 days estimate → automated; Excel+PPT reveal → 2.2 s console) are his own statements from 2026-09-22; the 2-day figure is an estimate and must stay labeled as one.
 - Screenshots and diagrams are in `public/projects/<id>/`. The hackathon has a funnel diagram and a verification-pipeline diagram; CleanB and SonGeul have flow diagrams.
 - Public artifacts: GitHub repos (animal-league, likelion-dev-site, FlowPay, songeul, and others), live sites (likelion-dev-site.vercel.app, flowpay.vercel.app); rumiclean.com is deployed but Toss payments are not connected, so it has no real users, and the ANIMAL LEAGUE Behance case study published by LIKELION's Brand Design Lab, with him credited as a collaborator.
 - Profile photo: `public/profile.jpg` (689×886 portrait; must not be cropped).

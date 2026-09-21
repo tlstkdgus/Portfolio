@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/sections/hero";
 import { SelectedProjects } from "@/components/sections/selected-projects";
 import { Principles } from "@/components/sections/principles";
+import { Figures } from "@/components/sections/figures";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Footer } from "@/components/layout/footer";
@@ -63,6 +64,7 @@ export default function Home() {
         <Hero />
         <About />
         <Principles />
+        <Figures />
         <Experience />
         <SelectedProjects />
         <Projects />

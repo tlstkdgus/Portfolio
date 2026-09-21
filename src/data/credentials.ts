@@ -13,7 +13,12 @@ export interface Award {
   issuerEn: string;
   date: string;
   highlight?: boolean;
+  /** 상장 스캔 경로 (public/awards/<slug>.jpg). 파일이 오면 채운다. 없으면 이미지 자리 없이 렌더 */
+  image?: string;
 }
+
+// 상장 파일명 예정: byoi-12.jpg, grise-startup.jpg, kiiti.jpg, grise-bm.jpg, finnect.jpg,
+// hufstudy.jpg, pick-your-idea.jpg, startup-camp-ir.jpg, hup.jpg, startup-platform.jpg, sprint.jpg
 
 export const certifications: Certification[] = [
   {

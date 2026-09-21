@@ -26,8 +26,8 @@ export const careerDetailSections: CareerDetailSection[] = [
 // CleanB는 FlowPay 뒤 (2026.09.13 서사 우선순위 지시).
   {
     id: "hackathon14",
-    title: "80개 대학 연합 해커톤 운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
-    titleEn: "Running an 80-University Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
+    title: "80개 대학 연합 해커톤 기획·운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
+    titleEn: "Planning and Running an 80-University Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
     images: [
       "/projects/hackathon14/funnel.png",
       "/projects/hackathon14/pipeline.png",
@@ -395,8 +395,8 @@ export const careerDetailSections: CareerDetailSection[] = [
 
   {
     id: "cleanb",
-    title: "에어비앤비 청소 매칭 플랫폼 — CleanB",
-    titleEn: "Airbnb Cleaning Matching Platform — CleanB",
+    title: "외주 에어비앤비 청소 매칭 플랫폼 운영 — CleanB",
+    titleEn: "Operating a Client's Airbnb Cleaning Matching Platform — CleanB",
     images: [
       "/projects/cleanb/flow.png",
       "/projects/cleanb/01.png",
@@ -406,9 +406,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 둘을 연결하는 매칭 서비스를 만들되, 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 '운영'하는 것을 목표로 잡았습니다. (2025.11 기획·디자인 시작 ~ 현재, 3인 팀 — 서비스명 루미클린(RumiClean), www.rumiclean.com)",
+        text: "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 둘을 연결하는 매칭 서비스를 만들되, 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 '운영'하는 것을 목표로 잡았습니다. (외주 · 2025.11 기획·디자인 시작 ~ 현재, 3인 팀 — 서비스명 루미클린(RumiClean), www.rumiclean.com)",
         textEn:
-          "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to get steady work. We set out to build a matching service — and to actually operate it with real users, not finish it like a hackathon project. (Planning and design from Nov 2025 – present, 3-person team — service name RumiClean, www.rumiclean.com)",
+          "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to get steady work. We set out to build a matching service — and to actually operate it with real users, not finish it like a hackathon project. (Client project · planning and design from Nov 2025 – present, 3-person team — service name RumiClean, www.rumiclean.com)",
         subItems: [
           {
             text: "전체 PM으로 기획·디자인·릴리스 우선순위를 잡고, 청소자용 화면 전체를 직접 개발했습니다.",
@@ -573,9 +573,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "65세 이상 고령층의 모바일뱅킹 이용률은 53.4%로, 비고령층(95%) 대비 41.2%p 낮습니다. 2030년에는 65세 이상 인구가 1,000만 명을 넘어설 전망이며(통계청 2024), 상당수 고령층이 금융 업무를 가족에 의존하고 있습니다.",
+        text: "65세 이상 고령층의 모바일뱅킹 이용률은 53.4%로, 비고령층(95%) 대비 41.6%p 낮습니다. 2030년에는 65세 이상 인구가 1,000만 명을 넘어설 전망이며(통계청 2024), 상당수 고령층이 금융 업무를 가족에 의존하고 있습니다.",
         textEn:
-          "Mobile banking usage among seniors 65+ is 53.4% — 41.2%p below non-seniors (95%). The senior population is expected to exceed 10M by 2030 (Statistics Korea 2024), and many seniors rely on family for financial tasks.",
+          "Mobile banking usage among seniors 65+ is 53.4% — 41.6%p below non-seniors (95%). The senior population is expected to exceed 10M by 2030 (Statistics Korea 2024), and many seniors rely on family for financial tasks.",
         subItems: [
           {
             text: "은행 점포 폐쇄와 ATM 축소로 지방 소도시 금융 접근성이 급락했고, 착오송금의 주요 원인은 '계좌번호 입력 오류'입니다. 기존 앱은 인증 절차 복잡·보안 불안감으로 고령층 진입 장벽이 높습니다.",

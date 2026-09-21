@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
+import Image from "next/image";
 import { certifications, awards } from "@/data/credentials";
 
 export function Credentials() {
@@ -22,7 +23,10 @@ export function Credentials() {
         <div>
           <ol className="border-t border-foreground">
             {top.map((a) => (
-              <li key={a.title} className="grid gap-x-6 gap-y-1 border-b border-border py-6 sm:grid-cols-[100px_1fr]">
+              <li
+                key={a.title}
+                className="grid gap-x-6 gap-y-1 border-b border-border py-6 sm:grid-cols-[100px_1fr_auto]"
+              >
                 <span className="meta pt-1.5 text-muted-foreground">{a.date}</span>
                 <span>
                   <span className="block text-[20px] font-bold leading-snug tracking-[-0.02em] md:text-[22px]">
@@ -32,6 +36,18 @@ export function Credentials() {
                     {isKo ? a.issuer : a.issuerEn}
                   </span>
                 </span>
+                {/* 상장 스캔 — 있을 때만. 누르면 원본이 새 창에 열린다 */}
+                {a.image && (
+                  <a
+                    href={a.image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative block h-24 w-[72px] overflow-hidden border border-border bg-muted sm:justify-self-end"
+                    aria-label={`${isKo ? a.title : a.titleEn} — ${isKo ? "상장 보기 (새 창)" : "view certificate (new tab)"}`}
+                  >
+                    <Image src={a.image} alt="" fill sizes="72px" className="object-cover transition-transform group-hover:scale-105" />
+                  </a>
+                )}
               </li>
             ))}
           </ol>

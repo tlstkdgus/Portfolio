@@ -67,30 +67,30 @@ export const selectedProjects: SelectedProject[] = [
     kicker: { ko: "멋쟁이사자처럼 인턴 · 14기 중앙해커톤", en: "LIKELION Internship · 14th Hackathon" },
     status: { ko: "완료 · 2026.08 본선", en: "Completed · Finals Aug 2026" },
     scope: {
-      ko: ["심사 정책 설계", "기능명세서", "도구 구현", "현장 운영"],
-      en: ["Judging policy", "Feature specs", "Tool build", "On-site ops"],
+      ko: ["가이드·워밍업 기획", "정책·명세 공동 설계", "도구 3종 직접 제작", "본선 현장 운영"],
+      en: ["Guide & warm-ups", "Policy & specs (co-)", "3 tools, built", "On-site finals"],
     },
-    title: { ko: "14기 중앙해커톤 운영", en: "LIKELION 14th Hackathon Ops" },
+    title: { ko: "14기 중앙해커톤 기획·운영", en: "LIKELION 14th Hackathon" },
     period: { ko: "2026.06 – 2026.08", en: "Jun – Aug 2026" },
-    role: { ko: "커뮤니티 매니저 인턴 · 운영", en: "Community Manager Intern · Ops" },
+    role: { ko: "커뮤니티 매니저 인턴 · 기획·운영", en: "Community Manager Intern · Planning & Ops" },
     headline: {
-      ko: "80개 대학, 2,000명 해커톤의\n규칙과 도구를 만들었습니다.",
-      en: "Rules and tools for an 80‑university, 2,000‑person hackathon.",
+      ko: "80개 대학, 2,000명 해커톤을\n기획부터 본선까지 운영했습니다.",
+      en: "Planned and ran an 80‑university, 2,000‑person hackathon end to end.",
     },
     did: {
       ko: [
-        "심사 정책·100점 배점 공동 설계",
+        "참가자 가이드 · 워밍업 세션 3회 기획",
+        "심사 정책 · 100점 배점 공동 설계",
         "플랫폼 기능명세서 2종 공동 작성",
-        "제출물 검사 도구 check.py 직접 제작",
-        "본선 콘솔 ANIMAL LEAGUE 직접 제작·운영",
-        "FAQ 디스코드 봇 직접 제작·운영",
+        "제출물 검사 · 본선 콘솔 · FAQ 봇 직접 제작·운영",
+        "본선 현장 운영 (코엑스 마곡)",
       ],
       en: [
+        "Participant guide · 3 warm-up sessions",
         "Co-designed the judging policy and 100‑pt rubric",
-        "Co-wrote two platform feature specs",
-        "Built check.py, the submission checker",
-        "Built and ran ANIMAL LEAGUE, the finals console",
-        "Built and ran the FAQ Discord bot",
+        "Co-wrote 2 platform feature specs",
+        "Built and ran the submission checker, finals console, FAQ bot",
+        "On-site finals operations",
       ],
     },
     problem: {
@@ -250,13 +250,13 @@ export const selectedProjects: SelectedProject[] = [
     },
     did: {
       ko: [
-        "현업 회계담당자 인터뷰 · 가설 피벗",
+        "현업 회계담당자 인터뷰 · 문제 정의",
         "Flow ID 익명 태깅 설계",
         "React 대시보드 · FIDO2 생체인증",
         "시장 분석 · IR 발표",
       ],
       en: [
-        "Interviews with working accountants · pivot",
+        "Interviews with working accountants · problem definition",
         "Flow ID anonymous tagging",
         "React dashboard · FIDO2 biometrics",
         "Market sizing · IR pitch",
@@ -267,10 +267,10 @@ export const selectedProjects: SelectedProject[] = [
       en: "20 minutes per expense report, 100+ a month for each accountant: about 1,000 hours a year per company. The root cause: anonymous cards record no user.",
     },
     decision: {
-      ko: "첫 가설 '결제가 불편하다'는 인터뷰에서 깨졌습니다. 진짜 고통은 결제 이후의 수기 전표였습니다. 실명인증 대신 익명성을 지키는 가명토큰을 택하고, MVP를 ERP 전체 연동에서 지출보고서 자동 생성으로 좁혔습니다.",
-      en: "The first hypothesis, 'paying is inconvenient,' broke in interviews; the real pain was manual vouchers after payment. We chose pseudonymous tokens over real-name auth to keep anonymity, and cut the MVP from full ERP integration to auto-generated expense reports.",
+      ko: "회계담당자 인터뷰에서 확인한 문제는 결제가 아니라 결제 이후의 수기 전표였고, 여기에 맞춰 설계했습니다. 실명인증 대신 익명성을 지키는 가명토큰을 택하고, MVP를 ERP 전체 연동에서 지출보고서 자동 생성으로 좁혔습니다.",
+      en: "Interviews with working accountants showed the problem wasn't paying but the manual vouchers after payment, so that's what we designed for. We chose pseudonymous tokens over real-name auth to keep anonymity, and cut the MVP from full ERP integration to auto-generated expense reports.",
     },
-    statement: { ko: "첫 가설은\n인터뷰에서 깨졌습니다.", en: "The first hypothesis broke in interviews." },
+    statement: { ko: "정산 8단계를\n3단계로 줄였습니다.", en: "Reconciliation, from 8 steps to 3." },
     stats: [
       { v: "8→3", k: { ko: "정산 단계 수, 8단계에서 3단계로", en: "steps in the reconciliation flow, 8 down to 3" } },
       { v: { ko: "5위", en: "5th" }, k: { ko: "102팀 중 · FIN:NECT 장려상", en: "of 102 teams · FIN:NECT award" } },
@@ -304,7 +304,7 @@ export const selectedProjects: SelectedProject[] = [
   {
     id: "cleanb",
     cover: { ko: "CleanB.", en: "CleanB." },
-    kicker: { ko: "사이드 프로젝트 · 루미클린(RumiClean)", en: "Side Project · RumiClean" },
+    kicker: { ko: "외주 프로젝트 · 루미클린(RumiClean)", en: "Client Project · RumiClean" },
     status: { ko: "배포 완료 · 결제 연동 전", en: "Deployed · Payments pending" },
     scope: {
       ko: ["상태 흐름 설계", "프론트엔드", "릴리스 관리", "배포"],
@@ -314,8 +314,8 @@ export const selectedProjects: SelectedProject[] = [
     period: { ko: "2025.11 – 현재", en: "Nov 2025 – Present" },
     role: { ko: "PM · 프론트엔드 · 디자인 (3인 팀)", en: "PM · Frontend · Design (team of 3)" },
     headline: {
-      ko: "해커톤처럼 끝나지 않도록,\n운영 가능한 구조부터.",
-      en: "Built to be operated, not just demoed.",
+      ko: "만들고 끝나는 게 아니라,\n운영하는 서비스.",
+      en: "Not built and abandoned.\nA service we operate.",
     },
     did: {
       ko: [
@@ -332,14 +332,14 @@ export const selectedProjects: SelectedProject[] = [
       ],
     },
     problem: {
-      ko: "에어비앤비 호스트는 믿을 청소 인력을, 청소자는 안정적인 일감을 구하기 어렵습니다. 목표는 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 운영하는 것이었습니다.",
-      en: "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to find steady work. The goal was to run it with real users, not ship it once like a hackathon project.",
+      ko: "외주로 맡은 에어비앤비 청소 매칭 서비스입니다. 호스트는 믿을 청소 인력을, 청소자는 안정적인 일감을 구하기 어렵습니다. 목표는 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 운영하는 것이었습니다.",
+      en: "A client project: an Airbnb cleaning matching service. Hosts struggle to find reliable cleaners; cleaners struggle to find steady work. The goal was to run it with real users, not ship it once.",
     },
     decision: {
-      ko: "k3s/ArgoCD는 3인 팀에게 과해서 Docker Compose + Caddy로 단순화했습니다. 배포 중 페이지가 깨지는 문제는 정적 파일을 CDN(CloudFront)으로 분리해 해결했습니다.",
-      en: "k3s/ArgoCD was too much for three people, so we simplified to Docker Compose + Caddy. Pages breaking mid-deploy were fixed by serving static files from a CDN (CloudFront).",
+      ko: "기능 목록 대신 청소 작업의 상태 흐름(수락 대기 → 진행 예정 → 진행 중 → 검수 대기 → 정산 대기)을 먼저 확정하고 화면을 도출했습니다. '청소가 됐는가'로 호스트와 청소자가 다투지 않도록 전·후 사진 최소 5장을 완료 조건으로 정했고, 배포 후 깨진 화면은 정적 파일을 CDN으로 분리해 잡았습니다.",
+      en: "Instead of a feature list, I fixed the job's state flow first (pending → scheduled → in progress → review → settlement) and derived the screens from it. So hosts and cleaners never argue over 'was it cleaned,' completion requires at least five before/after photos; pages that broke after deploy were fixed by moving static files to a CDN.",
     },
-    statement: { ko: "운영 복잡도는\n팀 크기에 맞춥니다.", en: "Match ops complexity to team size." },
+    statement: { ko: "분쟁의 근거는\n서비스가 갖습니다.", en: "The service, not the parties, holds the evidence." },
     stats: [
       { v: "170+", k: { ko: "PR 리뷰 · 릴리스 머지", en: "PRs reviewed and released" } },
       { v: { ko: "5단계", en: "5" }, k: { ko: "작업 상태, 수락 대기부터 정산 대기까지", en: "job states, pending to settlement" } },
