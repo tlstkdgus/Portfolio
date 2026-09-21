@@ -4,8 +4,8 @@ export const profile = {
     en: "Sanghyeon Shin",
   },
   title: {
-    ko: "사용자를 끝까지 파고들어, 직접 만들어 배포하는 서비스 기획자",
-    en: "A service planner who digs into users until the answer holds, then builds and ships",
+    ko: "사용자의 실제 행동에서 답을 찾아, 직접 만들어 배포하는 서비스 기획자",
+    en: "A service planner who finds the answer in what users actually do, then builds and ships",
   },
   birth: "2001",
   links: {

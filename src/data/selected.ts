@@ -58,6 +58,12 @@ export interface SelectedProject {
   repo?: string;
   /** 외부 공개 케이스 (예: 브랜드 디자인 랩의 Behance) */
   behanceUrl?: string;
+  /** 현장 사진과 제3자 기술 — 출처를 반드시 같이 보여준다 */
+  field?: {
+    images: SelectedImage[];
+    quote: Localized;
+    source: { label: Localized; url: string };
+  };
 }
 
 export const selectedProjects: SelectedProject[] = [
@@ -162,6 +168,25 @@ export const selectedProjects: SelectedProject[] = [
       },
     ],
     caseId: "hackathon14",
+    // 사진·인용: 멋쟁이사자처럼 브랜드 디자인 랩의 Behance 케이스(공동 소유자로 등재). 브랜드 디자인은 랩의 작업이고,
+    // 상현의 몫은 본선 무대·심사·운영 콘솔과 해커톤 기획이다. 사진은 콘솔이 실제 무대에서 쓰인 장면 위주로 골랐다.
+    field: {
+      images: [
+        { src: "/projects/hackathon14/field-console.jpg", alt: { ko: "본선 무대 옆에서 운영 콘솔을 조작하는 운영자. 노트북에 브래킷과 경기 진행 화면이 떠 있다", en: "An operator running the ops console beside the stage, bracket and match controls on the laptop" } },
+        { src: "/projects/hackathon14/field-stage.jpg", alt: { ko: "본선 무대: 발표 팀 뒤 대형 스크린에 심사 점수가 실시간으로 표시된다", en: "Finals stage: the live judging score on the big screen behind a presenting team" } },
+        { src: "/projects/hackathon14/field-pitch.jpg", alt: { ko: "ANIMAL LEAGUE 무대에서 발표 중인 참가 팀", en: "A team pitching on the ANIMAL LEAGUE stage" } },
+        { src: "/projects/hackathon14/field-gate.jpg", alt: { ko: "행사장 입구의 ANIMAL LEAGUE 미디어 게이트를 지나는 참가자들", en: "Participants passing the ANIMAL LEAGUE media gate at the venue entrance" } },
+        { src: "/projects/hackathon14/field-keyvisual.jpg", alt: { ko: "ANIMAL LEAGUE 키 비주얼: 80개 대학을 상징하는 동물 캐릭터들과 트로피", en: "ANIMAL LEAGUE key visual: animal characters for 80 universities and the trophy" } },
+      ],
+      quote: {
+        ko: "무대 스크린, 심사 화면, 운영 콘솔을 하나의 시스템으로 개발해 심사와 무대 연출이 끊기지 않게 했다. 심사위원 평가는 운영 콘솔에서 실시간으로 집계되어 무대 스크린에 즉시 표시됐다.",
+        en: "The stage screens, judging interface, and operations console were developed as an integrated system to create a seamless flow between the evaluation process and stage presentation. Judges' evaluations were aggregated in real time within the operations console and immediately displayed on the stage screens.",
+      },
+      source: {
+        label: { ko: "멋쟁이사자처럼 브랜드 디자인 랩, Behance 케이스 'STAGE SYSTEM' (사진 · 브랜드 디자인: 브랜드 디자인 랩)", en: "LIKELION Brand Design Lab, Behance case study, 'Stage System' (photos and brand design: Brand Design Lab)" },
+        url: "https://www.behance.net/gallery/255861853/ANIMAL-LEAGUE-LIKELION-HACKATHON-2026",
+      },
+    },
     repo: "https://github.com/tlstkdgus/animal-league",
     behanceUrl: "https://www.behance.net/gallery/255861853/ANIMAL-LEAGUE-LIKELION-HACKATHON-2026",
   },

@@ -198,6 +198,34 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
         </div>
       </div>
 
+      {/* 4-1. 현장 — 제3자(브랜드 디자인 랩)가 기록한 사진과 문장. 출처를 같이 보여준다 */}
+      {p.field && (
+        <div className="gutter bg-muted py-16 md:py-24">
+          <div className="grid gap-3 md:grid-cols-6 md:gap-4">
+            {p.field.images.map((img, j) => (
+              <a
+                key={img.src}
+                href={p.field!.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn("relative block overflow-hidden bg-background", j < 2 ? "aspect-[3/2] md:col-span-3" : "aspect-[4/3] md:col-span-2")}
+              >
+                <Image src={img.src} alt={tr(img.alt)} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+              </a>
+            ))}
+          </div>
+          <blockquote className="mt-10 max-w-3xl md:mt-14">
+            <p className="text-[19px] font-semibold leading-[1.6] tracking-[-0.01em] md:text-[24px]">“{tr(p.field.quote)}”</p>
+            <cite className="meta mt-4 block not-italic text-muted-foreground">
+              <a href={p.field.source.url} target="_blank" rel="noopener noreferrer" className="hit underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground">
+                {tr(p.field.source.label)}
+                <span className="sr-only">{isKo ? " (새 창)" : " (opens in a new tab)"}</span>
+              </a>
+            </cite>
+          </blockquote>
+        </div>
+      )}
+
       {/* 5. 성과 — 블루 화면. 레퍼런스 'WE CONCLUDED THAT… 18% 76%' */}
       <div className="gutter bg-accent-surface py-20 text-accent-foreground md:py-32">
         <MetaRow items={[t("impact"), title]} className="mb-12 opacity-90 md:mb-20" />

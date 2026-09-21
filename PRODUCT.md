@@ -18,7 +18,7 @@ The personal portfolio of 신상현 (Sanghyeon Shin), an IT planner who defines 
 
 ## Positioning
 
-A service planner who digs into users until the answer holds, then builds and ships. The proof is depth: he analyzed all 390K records rather than a sample, rebuilt FlowPay's problem from scratch when interviews broke the first hypothesis, read every one of 229 hackathon questions and patched the FAQ daily, and keeps revising RumiClean after deploy. Building the tools himself (submission checker, finals console, FAQ bot) is how the planning reaches users, not the headline. Every claim is backed by a verifiable number or a public artifact.
+A service planner who finds the answer in what users actually do, then builds and ships. The proof is that every answer came from observed behavior, not assumption: he analyzed all 390K records rather than a sample, rebuilt FlowPay's problem from scratch when interviews broke the first hypothesis, read every one of 229 hackathon questions and patched the FAQ daily, and keeps revising RumiClean after deploy. Building the tools himself (submission checker, finals console, FAQ bot) is how the planning reaches users, not the headline. Every claim is backed by a verifiable number or a public artifact.
 
 ## Operating Context
 
@@ -40,7 +40,7 @@ A service planner who digs into users until the answer holds, then builds and sh
 
 ## Brand Commitments
 
-- Name: 신상현 / Sanghyeon Shin. Positioning line (2026-09-21, v5): 「사용자를 끝까지 파고들어, 직접 만들어 배포하는 서비스 기획자」 / "A service planner who digs into users until the answer holds, then builds and ships." Proof line beneath it: 「39만 건은 전수로 분석하고, 인터뷰에서 깨진 가설은 처음부터 다시 세우고, 배포한 뒤에도 사용자의 질문을 매일 읽습니다」. Depth markers that must survive any edit: 전수 / 다시 / 매일 / 이미 하는 행동에서 / 배포한 뒤에도. Planning documents remain a strength; never write "기획서 대신".
+- Name: 신상현 / Sanghyeon Shin. Positioning line (2026-09-21, v6): 「사용자의 실제 행동에서 답을 찾아, 직접 만들어 배포하는 서비스 기획자」 / "A service planner who finds the answer in what users actually do, then builds and ships." Proof line beneath it (hero.summary and PORTFOLIO.md): 「회계담당자의 문제는 결제가 아니라 결제 이후의 수기 전표였고, 가맹점 39만 건이 말한 답은 지도가 아니라 추천 리스트였고, 어르신에게 필요한 건 새 습관이 아니라 계좌번호를 손으로 적던 습관을 그대로 쓰는 화면이었습니다. 그렇게 찾은 답을 직접 만들어 배포하고, 배포한 뒤에도 사용자의 질문을 매일 읽습니다.」. Markers that must survive any edit: 실제 행동 / ~가 아니라 ~였다 / 전수 / 매일 / 배포한 뒤에도. Planning documents remain a strength; never write "기획서 대신".
 - Hackathon is always described as planned-and-run end to end (기획부터 본선 운영까지); never lead with 'co-designed judging policy', and never write '참가자 경험을 설계'. Co-done items (policy, specs, warm-ups) keep '공동/팀과 함께'; the 3 tools and on-site ops are '직접'.
 - FlowPay is described by what the product did (8 → 3 steps, 5th of 102), not by the pivot story (at most a half-sentence in How I work). RumiClean is a client project (외주), never '사이드 프로젝트'.
 - Voice: plain, specific, number-first. Structure every project as problem → what I did / decided → outcome.
@@ -50,7 +50,7 @@ A service planner who digs into users until the answer holds, then builds and sh
 
 - PORTFOLIO.md holds every fact with its figures and sources. Before→after figures (inquiries 3h+/day → 80.8% instant; 562-repo manual check ~2 days estimate → automated; Excel+PPT reveal → 2.2 s console) are his own statements from 2026-09-22; the 2-day figure is an estimate and must stay labeled as one.
 - Screenshots and diagrams are in `public/projects/<id>/`. The hackathon has a funnel diagram and a verification-pipeline diagram; CleanB and SonGeul have flow diagrams.
-- Public artifacts: GitHub repos (animal-league, likelion-dev-site, FlowPay, songeul, and others), live sites (likelion-dev-site.vercel.app, flowpay.vercel.app); rumiclean.com is deployed but Toss payments are not connected, so it has no real users, and the ANIMAL LEAGUE Behance case study published by LIKELION's Brand Design Lab, with him credited as a collaborator.
+- Public artifacts: GitHub repos (animal-league, likelion-dev-site, FlowPay, songeul, and others), live sites (likelion-dev-site.vercel.app, flowpay.vercel.app); rumiclean.com is deployed but Toss payments are not connected, so it has no real users, and the ANIMAL LEAGUE Behance case study published by LIKELION's Brand Design Lab, with him listed as a co-owner. Five photos and the 'Stage System' passage from that case are used on the hackathon slides with credit; the brand design is the Lab's work, his part is the finals stage/judging/ops console and the hackathon planning.
 - Profile photo: `public/profile.jpg` (689×886 portrait; must not be cropped).
 - **Do not fabricate:** CleanB has no real users or product metrics yet; never call it a live service with users. There are no testimonials, recommendations, or employer quotes. Do not invent market sizes or statistics without a source. Two awards (1st G-RISE startup competition, 7th College of Business × SPRINT) have no project mapped yet; do not attach one until he confirms.
 

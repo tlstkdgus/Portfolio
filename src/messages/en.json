@@ -16,8 +16,8 @@
   "hero": {
     "name": "Sanghyeon Shin",
     "wordmark": "Portfolio",
-    "lead": "A service planner who digs into users until the answer holds, then builds and ships.",
-    "summary": "I **analyze all 390K rows**, **rebuild a hypothesis from scratch** when interviews break it, and keep **reading user questions daily** after launch. As a Community Manager Intern at LIKELION, I planned and ran the **14th national hackathon end to end: 80 universities, 2,000 participants**.",
+    "lead": "A service planner who finds the answer in what users actually do, then builds and ships.",
+    "summary": "The accountant's problem **wasn't payment but the manual receipts after it**; 390K merchant records said the answer was **a recommendation list, not a map**; seniors didn't need a new habit, just **a screen that used the one they had**, writing account numbers by hand. I build and ship the answers I find, and keep **reading user questions daily** after launch. As a Community Manager Intern at LIKELION, I planned and ran the **14th national hackathon end to end: 80 universities, 2,000 participants**.",
     "metrics": [
       {
         "v": "2,000+",
@@ -41,10 +41,10 @@
   "about": {
     "hello": "Hello!",
     "name_line": "I'm Sanghyeon Shin.",
-    "description_1": "I'm a service planner who digs into users before building, and keeps fixing in front of them after.",
+    "description_1": "I'm a service planner who finds the answer in what users actually do, not in assumptions, and keeps fixing after I build and ship it.",
     "description_2": "I started in **frontend development**. What I loved most was **zero to one**: an idea becoming a screen, shipping, and watching people use it. When I joined the 13th cohort's staff at LIKELION, my questions shifted from 'how do we build this' to **'who uses it, why, and how does it become a business'**, and that led me into service planning.",
     "what_heading": "What I do.",
-    "what_sub": "Most of my time goes into understanding users. I define problems in numbers, let hypotheses break against users, and keep fixing after launch.",
+    "what_sub": "Most of my time goes into understanding users. I find answers in what they actually do, not in assumptions, and keep fixing after I ship.",
     "skills": [
       "Service planning",
       "User research",
@@ -70,8 +70,8 @@
     "items": [
       {
         "step": "DIG IN",
-        "t": "Define problems in numbers.\nLet hypotheses break against users.",
-        "d": "562 repos, 53% in a survey, a 41.6%p usage gap. Every plan starts from a number that can be checked. Y:Wave's assumption broke against 390K records and FlowPay's first hypothesis broke in accountant interviews; each time I redefined the problem from scratch.",
+        "t": "Define problems in numbers.\nFind the answer in what users do.",
+        "d": "562 repos, 53% in a survey, a 41.6%p usage gap. Every plan starts from a number that can be checked. An accountant's workday, 390K merchant records, a senior writing account numbers by hand: I start from what users actually do, not from assumptions.",
         "evidence": [
           {
             "t": "Y:Wave · all 390K records",
@@ -131,7 +131,7 @@
       }
     ],
     "case_link": "Case study",
-    "sub": "Dig into users, build it myself, keep fixing after launch. Each step comes with the projects where I actually did it.",
+    "sub": "Find the answer in what users do, build it myself, keep fixing after launch. Each step comes with the projects where I actually did it.",
     "evidence": "Evidence",
     "to_projects": "See how the three steps played out in the projects"
   },
