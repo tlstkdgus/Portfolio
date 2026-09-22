@@ -36,11 +36,11 @@ export const projects: Project[] = [
   // 순서 = 사이트 노출 순서. 멋사 인턴 경험(중앙해커톤·사내 교육)이 항상 앞,
   // CleanB는 경력이 아니라 프로젝트로만, FlowPay 뒤 (2026.09.13 서사 우선순위 지시).
   {
-    title: "14기 중앙해커톤 운영",
+    title: "14기 중앙해커톤 기획·운영",
     caseId: "hackathon14",
     featured: true,
-    titleEn: "LIKELION 14th Hackathon Ops",
-    subtitle: "80개 대학 · 2,000명+ 연합 해커톤의 심사 정책과 운영 도구 3종",
+    titleEn: "LIKELION 14th Hackathon — Planning & Ops",
+    subtitle: "80개 대학 · 2,000명+ 연합 해커톤의 심사 정책과 운영 도구 3개",
     subtitleEn: "Judging policy and 3 ops tools for an 80-university, 2,000+ participant hackathon",
     period: "2026.06. ~ 2026.08.",
     periodEn: "Jun 2026 — Aug 2026",
@@ -60,8 +60,8 @@ export const projects: Project[] = [
       "제출물 무결성 검사 도구 check.py 직접 제작(Claude 활용) — 562개 레포 전 브랜치의 마감 후 커밋·force-push·비공개 전환 전수 검사",
       "본선 토너먼트 콘솔 'ANIMAL LEAGUE' 직접 제작·운영 — 스크린·심사·운영 3화면(Next.js · Supabase), 무대 연출과 음향팀·MC 큐시트 조율 포함",
       "FAQ 디스코드 봇 직접 제작·운영 — FAQ 72문항 기반, 키워드 우선 + LLM 폴백 2단 응답, 미답변 일일 리포트 개선 루프",
-      "참가자 가이드 공동 작성(참가자 여정 순서로 구조 설계, 날짜별 변경 이력 관리), 파트너 8종 툴 지원 정책 운영 및 OpenAI 영문 커뮤니케이션(크레딧 지급 · 심사위원 섭외)",
-      "사전 기획 공동 참여 — 해커톤 플랫폼 기능명세서 2종(중앙·연합: As-Is→To-Be 구조, 5단계 권한 매트릭스, 팀빌딩·승인 워크플로우) 작성 후 개발(AXP)·디자인(브디랩) 핸드오프, 워밍업 세션 3회(문제 발견 → MVP 범위 → AI 실전 개발) 커리큘럼 설계",
+      "참가자 가이드 공동 작성(참가자 여정 순서로 목차 설계, 날짜별 변경 이력 관리), 파트너 8종 툴 지원 정책 운영 및 OpenAI 영문 커뮤니케이션(크레딧 지급 · 심사위원 섭외)",
+      "사전 기획 공동 참여 — 해커톤 플랫폼 기능명세서 2종(중앙·연합: As-Is→To-Be 정리, 5단계 권한 매트릭스, 팀빌딩·승인 워크플로우) 작성 후 개발(AXP)·디자인(브디랩) 핸드오프, 워밍업 세션 3회(문제 발견 → MVP 범위 → AI 실전 개발) 커리큘럼 설계",
     ],
     contentsEn: [
       "Co-designed judging policy — 3-stage funnel (docs → track pitching → tournament), a 100-point common rubric, 1:1 mapping between submission items and judging criteria, and fairness rules (script-reading scores zero, uniform devices, random draw)",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     stats: [
       { label: "규모", labelEn: "Scale", value: "80개 대학 · 2,000명+" },
       { label: "검사 레포", labelEn: "Repos swept", value: "562개" },
-      { label: "직접 만든 도구", labelEn: "Tools built", value: "3종" },
+      { label: "직접 만든 도구", labelEn: "Tools built", value: "3개" },
     ],
     tags: ["Event Ops", "Policy Design", "Next.js", "Supabase", "Python", "LLM"],
     image: "/projects/hackathon14/01.png",
@@ -140,11 +140,11 @@ export const projects: Project[] = [
       "Built the companion website myself (React · TypeScript · Vite) — 14 SVG concept diagrams, live in-browser demos (login round-trip, Git collaboration simulator), and a 51-term glossary",
     ],
     decisions: [
-      "코드를 가르치지 않기로 결정 — 목표를 '개발자 되기'가 아니라 '개발자와 대화하기'로 좁혀 점심시간 6회에 담았습니다",
+      "코드를 가르치지 않기로 결정 — 목표를 개발자와 대화할 수 있는 수준으로 좁혀 점심시간 6회에 담았습니다",
       "설치·계정 없이 브라우저에서 바로 동작하는 실습만 — 밥 먹으면서 듣는 환경을 전제로 설계",
     ],
     decisionsEn: [
-      "Decided not to teach code — narrowed the goal from 'becoming a developer' to 'talking with developers,' so it fits in six lunch breaks",
+      "Decided not to teach code — narrowed the goal to being able to talk with developers, so it fits in six lunch breaks",
       "Demos run in the browser with no installs or accounts — designed for an audience listening over lunch",
     ],
     results: [
@@ -184,7 +184,7 @@ export const projects: Project[] = [
     rolesEn: ["PM", "Frontend"],
     goals: [
       "직원은 지출보고서 한 건에 20분을 쓰고, 회계담당자는 월 100건 이상을 처리합니다. 무기명 법인카드 정산에 기업당 연간 약 1,000시간·8천만 원이 사라집니다",
-      "누가 썼는지 기록되지 않는 카드라서, 지출 내역을 사람이 일일이 맞춰야 하는 구조 자체가 문제였습니다",
+      "누가 썼는지 기록되지 않는 카드라서, 지출 내역을 사람이 일일이 맞춰야 한다는 점이 문제였습니다",
     ],
     goalsEn: [
       "Employees spend 20 minutes per expense report; accountants process 100+ a month. Anonymous corporate card reconciliation drains ~1,000 hours and ₩80M per company each year",
@@ -238,15 +238,15 @@ export const projects: Project[] = [
     caseId: "cleanb",
     featured: true,
     titleEn: "CleanB",
-    subtitle: "에어비앤비 청소 매칭 플랫폼 '루미클린(RumiClean)'",
-    subtitleEn: "Airbnb Cleaning Matching Platform 'RumiClean'",
-    period: "2025.11. ~ 현재 (운영 중)",
-    periodEn: "Nov 2025 — Present (In Operation)",
+    subtitle: "외주 프로젝트 · 에어비앤비 청소 매칭 플랫폼 '루미클린(RumiClean)'",
+    subtitleEn: "Client Project · Airbnb Cleaning Matching Platform 'RumiClean'",
+    period: "2025.11. ~ 현재 (배포 완료 · 결제 연동 전)",
+    periodEn: "Nov 2025 — Present (deployed · payments not yet connected)",
     roles: ["PM", "프론트엔드", "디자인"],
     rolesEn: ["PM", "Frontend", "Design"],
     url: "https://www.rumiclean.com",
     goals: [
-      "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들고 있습니다",
+      "외주로 맡은 프로젝트입니다. 에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들고 있습니다",
       "해커톤처럼 만들고 끝나는 게 아니라, 실제 사용자를 받는 서비스로 운영하는 것이 목표",
     ],
     goalsEn: [
@@ -256,8 +256,8 @@ export const projects: Project[] = [
     contents: [
       "전체 PM을 맡아 기능 개발부터 배포까지의 우선순위를 정하고, PR 170개가 넘는 저장소의 코드 리뷰와 릴리스 머지를 담당",
       "청소자가 쓰는 화면 전체를 개발: 작업 요청을 받고, 진행 상황을 관리하고, 완료를 보고하는 흐름의 UI와 API 연동",
-      "카카오맵 기반 지도 검색, Firebase 웹 푸시 알림 등 실서비스에 필요한 연동 작업",
-      "컴포넌트 구조(아토믹 디자인)와 QA 테스트 규칙(data-testid)을 정해 팀의 코드 일관성 유지",
+      "카카오맵 기반 지도 검색, Firebase 웹 푸시 알림 등 운영에 필요한 연동 작업",
+      "컴포넌트 체계(아토믹 디자인)와 QA 테스트 규칙(data-testid)을 정해 팀의 코드 일관성 유지",
     ],
     contentsEn: [
       "As overall PM, managed merges for features, CI workflows, QA, and prod releases across a 170+ PR repository",
@@ -266,24 +266,24 @@ export const projects: Project[] = [
       "Introduced atomic design component architecture and data-testid QA conventions",
     ],
     decisions: [
-      "처음엔 k3s/ArgoCD로 배포했지만 3인 팀에겐 과했습니다. Docker Compose + Caddy로 단순화해 유지보수 부담을 줄임",
-      "배포 중 페이지가 깨지는 문제를 해결하려고 정적 파일을 CDN(CloudFront)으로 분리",
+      "3인 팀 규모에 맞춰 배포를 k3s/ArgoCD에서 Docker Compose + Caddy로 단순화해 유지보수 부담을 줄임",
+      "배포 중에도 화면이 유지되도록 정적 파일을 CDN(CloudFront)으로 분리",
     ],
     decisionsEn: [
       "Migrated production deployment from k3s/ArgoCD to Docker Compose + Caddy, matching ops complexity to team size",
       "Served Next.js static chunks from a CDN (CloudFront) for deployment stability and load speed",
     ],
     results: [
-      "GitHub Actions 자동 배포로 EC2 여러 대에 서비스 운영 중",
+      "GitHub Actions 자동 배포로 rumiclean.com 배포 완료. 토스 결제 연동 전이라 아직 실사용자는 받지 않는 상태",
       "기획, 디자인, 개발, 배포, QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트",
     ],
     resultsEn: [
-      "Running a live service on GitHub Actions-based auto-deployment across multiple EC2 instances",
+      "Deployed to rumiclean.com with GitHub Actions auto-deployment. Toss payments are not connected yet, so it does not take real users",
       "An ongoing project covering the full cycle: planning, design, development, deployment, and QA",
     ],
     stats: [
       { label: "PR", labelEn: "PRs", value: "170+" },
-      { label: "상태", labelEn: "Status", value: "실서비스 운영" },
+      { label: "상태", labelEn: "Status", value: "배포 완료 · 결제 연동 전" },
     ],
     tags: ["Next.js", "TypeScript", "Kakao Map", "Firebase", "Docker", "CI/CD"],
     image: "/projects/cleanb/01.png",

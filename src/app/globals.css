@@ -52,7 +52,25 @@
 body {
   word-break: keep-all;
   overflow-wrap: anywhere;
-  font-feature-settings: "tnum";
+}
+p,
+li {
+  text-wrap: pretty;
+}
+.meta,
+.eyebrow,
+time {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 읽는 폭 — 같은 폭에서 영문은 글자가 좁아 한 줄이 95~108자까지 늘어났다.
+   영문은 34em(약 70자), 한글은 44em. ch 단위는 '0' 폭 기준이라 영문 평균 글자보다 넓어
+   68ch로 잡아도 한 줄 90자가 됐다 */
+.measure {
+  max-width: 44em;
+}
+:lang(en) .measure {
+  max-width: 34em;
 }
 
 html {
@@ -102,6 +120,7 @@ html {
 
 /* 섹션 제목 — 'Where I've worked.' 급 */
 .display {
+  text-wrap: balance;
   font-weight: 800;
   letter-spacing: -0.045em;
   line-height: 1.02;
@@ -110,6 +129,7 @@ html {
 
 /* 프로젝트 헤드라인 — 한글 문장이 두세 줄로 떨어지는 크기 */
 .headline {
+  text-wrap: balance;
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.12;

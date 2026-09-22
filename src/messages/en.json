@@ -4,7 +4,9 @@
     "experience": "Experience",
     "projects": "Projects",
     "certified": "Awards",
-    "contact": "Contact"
+    "contact": "Contact",
+    "hero": "Cover",
+    "rail_label": "Page position"
   },
   "meta": {
     "deck": "Portfolio 2026",
@@ -14,24 +16,24 @@
   "hero": {
     "name": "Sanghyeon Shin",
     "wordmark": "Portfolio",
-    "lead": "An IT planner who defines problems with data,\nthen builds and ships.",
-    "summary": "As a Community Manager Intern at LIKELION, I helped run a 2,000+ participant hackathon across 80 universities — co-designing the judging policy and building three ops tools with AI that went live on site.",
+    "lead": "A service planner who finds the answer in what users actually do, then builds and ships.",
+    "summary": "As a LIKELION intern I planned and ran an 80-university community platform and **a 2,000-person national hackathon through the finals**, and over two years I've **planned, built, and shipped 15+ services**.",
     "metrics": [
       {
         "v": "2,000+",
-        "k": "80-university hackathon, operated"
+        "k": "hackathon participants"
       },
       {
-        "v": "3",
-        "k": "Ops tools built with AI"
+        "v": "8 → 3",
+        "k": "reconciliation steps"
       },
       {
-        "v": "15+",
-        "k": "Services planned & built"
+        "v": "0",
+        "k": "unanswered of 229 questions"
       },
       {
         "v": "11",
-        "k": "Competition awards"
+        "k": "awards"
       }
     ],
     "scroll": "Scroll"
@@ -39,39 +41,44 @@
   "about": {
     "hello": "Hello!",
     "name_line": "I'm Sanghyeon Shin.",
-    "description_1": "I worked as a Community Manager Intern on LIKELION's Univ. Team 1 (Apr – Aug 2026), running a university community of ~2,500 members across 80 schools. For the 14th national hackathon I co-designed the judging policy and platform feature specs with the team and built three ops tools myself. I also planned and taught a six-session dev literacy course for non-developer colleagues.",
-    "description_2": "I studied Global Business & Technology alongside an AI Convergence major, and through LIKELION staff roles, hackathons, and startup programs I've planned and built 15+ services, winning 11 awards. I completed SSAFY's 15th Java track.",
+    "description_1": "I started in frontend development, and leading projects as staff for HUFS LIKELION's 13th cohort taught me that **\"who uses this, and why\" has to be answered before \"how do we build it.\"** Now, before I draw a screen, I check how users actually behave, and I build whatever is needed, **whether that's a screen, a backend, or an AI tool**.",
+    "description_2": "As a LIKELION intern I planned and ran an 80-university community platform, **the 14th national hackathon, and the national ideathon**, and I'm still improving RumiClean, a client project, after launch. I studied Global Business & Technology with an AI Convergence major and **won 11 awards** along the way.",
     "what_heading": "What I do.",
-    "what_sub": "I define problems in numbers, resolve colliding interests with policy, and build the tools that don't exist yet.",
+    "what_sub": "Most of my time goes into understanding users. I find answers in what they actually do, not in assumptions, and keep fixing after I ship.",
     "skills": [
       "Service planning",
       "User research",
-      "Survey design",
       "Policy design",
-      "BM · IR pitching",
-      "Figma wireframes",
-      "React · Next.js",
-      "TypeScript",
-      "AI tooling"
+      "Business models",
+      "IR pitching",
+      "Figma",
+      "React",
+      "Next.js",
+      "Python",
+      "Supabase",
+      "LLM APIs"
     ],
     "education_label": "Education",
     "military_label": "Military",
-    "gpa": "GPA 4.13 / 4.5"
+    "gpa": "GPA 4.13 / 4.5",
+    "training_label": "Training",
+    "training": "SSAFY 15th cohort, Non-CS Java track, completed (Jan – Apr 2026)"
   },
   "principles": {
     "heading": "How I work.",
+    "to_projects": "See how the three steps played out in the projects",
     "items": [
       {
-        "t": "Define problems in numbers",
-        "d": "562 repos, 53% in a survey, a 41.6%p usage gap. Every plan starts from a number that can be checked."
+        "t": "I find the problem\nin what users actually do.",
+        "d": "I start by watching how users and operators really move, and I re-check common assumptions against data. The point where people keep getting stuck becomes the problem the product has to solve."
       },
       {
-        "t": "Resolve conflicts with policy",
-        "d": "A 100-point rubric, graded violation verdicts, a 5-level permission matrix. Where interests collide, I design the rule."
+        "t": "I turn that problem into a flow and rules,\nand build it myself.",
+        "d": "I design the user flow and the policy, and when needed I build it myself, from the screens to the backend and AI tooling, so it becomes a product that actually runs. Being able to check that it works as planned cuts the communication cost between planning and development."
       },
       {
-        "t": "Build missing tools with AI",
-        "d": "A submission checker, a finals console, an FAQ bot. When a tool doesn't exist, I build it and ship it."
+        "t": "After launch, I watch users\nand fix it again.",
+        "d": "Launch is where user data starts coming in. I run the product where it's actually used and feed the questions and problems back into it."
       }
     ]
   },
@@ -81,14 +88,14 @@
   },
   "selected": {
     "index_heading": "Selected work.",
-    "problem": "Problem",
     "did": "What I did",
-    "decision": "Key decisions",
     "impact": "Impact",
     "case_cta": "Read the case study",
     "live": "Visit site",
     "repo": "GitHub",
-    "behance": "Behance case (Brand Design Lab)"
+    "behance": "Behance case (Brand Design Lab)",
+    "role": "Role",
+    "scope": "Scope"
   },
   "projects": {
     "heading": "Other projects.",
@@ -135,5 +142,70 @@
     "results": "Results",
     "lessons": "Lessons",
     "toc": "Contents"
+  },
+  "figures": {
+    "heading": "Changes I can prove in numbers",
+    "sub": "Only what actually changed in operations.",
+    "group_ops": "OPERATIONAL IMPACT",
+    "group_scale": "SCALE",
+    "changes": [
+      {
+        "before": "3 hours a day",
+        "after": "80.8% instant",
+        "label": "Participant inquiries",
+        "d": "The FAQ bot answered 80.8% of inquiries instantly by keyword, and the staff picked up the rest.",
+        "basis": "Basis: one month after the FAQ bot, 229 questions · 0 unanswered · 14th hackathon"
+      },
+      {
+        "before": "~2 days (estimate)",
+        "after": "One run",
+        "label": "Checking 562 submitted repos",
+        "d": "Post-deadline commits, force-pushes, and private flips were detected automatically across every branch, and people made the verdicts against agreed criteria.",
+        "basis": "Basis: after the 313-team deadline · 5 violations found · 14th hackathon"
+      },
+      {
+        "before": "Excel → PPT",
+        "after": "2.2 s",
+        "label": "Finals tally and reveal",
+        "d": "I cut the time from judges' votes reaching the console to the stage screen with a console I built.",
+        "basis": "Basis: 8-team finals tournament · measured · 14th hackathon"
+      },
+      {
+        "before": "Paper roll call",
+        "after": "QR scan, auto-logged",
+        "label": "13th cohort session attendance",
+        "d": "Staff put up a QR code, members scan it on their phones, it's recorded on the server instantly, and only late or absent members show up on the roll.",
+        "basis": "Basis: 45 members of HUFS LIKELION's 13th cohort · WelcomeKit PWA"
+      },
+      {
+        "before": "8 steps",
+        "after": "3 steps",
+        "label": "Corporate card reconciliation",
+        "d": "I designed it to identify the user at the moment of payment so expense reports generate themselves.",
+        "basis": "Basis: FlowPay design (prototype) · FIN:NECT, 5th of 102"
+      }
+    ],
+    "scale": [
+      {
+        "v": "2,000+",
+        "label": "14th hackathon participants",
+        "note": "80 universities · 313 teams"
+      },
+      {
+        "v": "45",
+        "label": "13th cohort WelcomeKit app users",
+        "note": "attendance · bingo · profiles"
+      },
+      {
+        "v": "6 of 6 at 5/5",
+        "label": "Internal dev course satisfaction",
+        "note": "9.7/10 would recommend"
+      },
+      {
+        "v": "470",
+        "label": "Ideathon survey responses analyzed",
+        "note": "1,822 participants"
+      }
+    ]
   }
 }

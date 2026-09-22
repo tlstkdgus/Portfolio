@@ -26,8 +26,8 @@ export const careerDetailSections: CareerDetailSection[] = [
 // CleanB는 FlowPay 뒤 (2026.09.13 서사 우선순위 지시).
   {
     id: "hackathon14",
-    title: "80개 대학 연합 해커톤 운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
-    titleEn: "Running an 80-University Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
+    title: "80개 대학 연합 해커톤 기획·운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
+    titleEn: "Planning and Running an 80-University Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
     images: [
       "/projects/hackathon14/funnel.png",
       "/projects/hackathon14/pipeline.png",
@@ -39,7 +39,7 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "80개 대학, 참가자 2,000명+, 313팀 제출(562개 레포) → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 연합 해커톤입니다. 커뮤니티 매니저 인턴으로 참여해 사전 기획(플랫폼 기능명세서·워밍업 세션) 공동 참여, 참가자 가이드 공동 작성, 심사 정책 공동 설계, 운영 도구 3종 제작, 본선 현장 운영을 맡았습니다. (2026.06 ~ 2026.08.25, 본선 코엑스 마곡)",
+        text: "80개 대학, 참가자 2,000명+, 313팀 제출(562개 레포) → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 연합 해커톤입니다. 커뮤니티 매니저 인턴으로 참여해 사전 기획(플랫폼 기능명세서·워밍업 세션) 공동 참여, 참가자 가이드 공동 작성, 심사 정책 공동 설계, 운영 도구 3개 제작, 본선 현장 운영을 맡았습니다. (2026.06 ~ 2026.08.25, 본선 코엑스 마곡)",
         textEn:
           "The largest LIKELION hackathon to date: 80 universities, 2,000+ participants, 313 submitting teams (562 repos) → an 8-team finals tournament picking one winner. As a community manager intern, I co-planned the pre-event work (platform feature specs, warm-up sessions), co-wrote the participant guide, co-designed judging policy, built 3 ops tools, and ran on-site finals operations. (Jun 2026 – Aug 25, 2026; finals at COEX Magok)",
         subItems: [
@@ -192,14 +192,14 @@ export const careerDetailSections: CareerDetailSection[] = [
           "'No edits after deadline' doesn't enforce itself. We built the tool, but agreed the verdict criteria first and limited the tool to evidence — the moment a tool judges instead of people, the rule loses its legitimacy.",
       },
       {
-        text: "현장 도구는 기능을 더하는 것보다 실패 시나리오를 먼저 닫는 게 본질이었습니다. 롤백 없는 결과 공개, 와이파이 장애 백업 모드, 동표 판정의 사람 위임 — 본선에서 실제로 쓴 건 화려한 기능이 아니라 이 안전장치들이 준 확신이었습니다.",
+        text: "현장 도구는 기능을 더하기 전에 되돌릴 수 없는 상황부터 닫아야 한다고 판단했습니다. 롤백 없는 결과 공개, 네트워크 백업 모드, 동표 판정의 사람 위임을 먼저 넣었고, 본선 당일 운영진이 확신을 갖고 진행할 수 있었던 이유가 이 안전장치들이었습니다.",
         textEn:
-          "For a live-event tool, closing failure scenarios mattered more than adding features. No-rollback reveals, a network-failure backup mode, ties delegated to humans — what we actually used on finals day was the confidence those safeguards gave us.",
+          "For a live-event tool, I decided to close the irreversible situations before adding features: no-rollback reveals, a network backup mode, ties delegated to humans. Those safeguards are what let the crew run finals day with confidence.",
       },
       {
-        text: "가이드·FAQ·봇·문의 채널은 결국 하나의 시스템이었습니다. 정보의 단일 출처를 정하고 나머지가 그걸 재사용하게 만들자, 같은 질문에 다른 답이 나가는 사고가 구조적으로 줄었습니다.",
+        text: "가이드·FAQ·봇·문의 채널은 결국 하나의 시스템이었습니다. 정보의 단일 출처를 정하고 나머지가 그걸 재사용하게 만들자, 같은 질문에 다른 답이 나가는 일이 줄었습니다.",
         textEn:
-          "The guide, FAQ, bot, and inquiry channels were really one system. Designating a single source of truth and making everything else reuse it structurally reduced the 'same question, different answer' failure.",
+          "The guide, FAQ, bot, and inquiry channels were really one system. Designating a single source of truth and making everything else reuse it reduced the 'same question, different answer' failure.",
       },
     ],
   },
@@ -368,9 +368,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "FINNECT 챌린지 장려상 수상 (5등/102팀) — 틀린 가설을 인터뷰로 빠르게 검증하고 피벗한 것이 결과로 이어졌습니다.",
+        text: "FINNECT 챌린지 장려상 수상 (5등/102팀) — 현업 인터뷰로 문제를 다시 정의하고 정산 단계를 8단계에서 3단계로 줄인 설계가 결과로 이어졌습니다.",
         textEn:
-          "Won Encouragement Prize at FINNECT Challenge (5th of 102 teams) — rapid hypothesis validation through interviews and pivoting led to this outcome.",
+          "Won Encouragement Prize at FINNECT Challenge (5th of 102 teams) — redefining the problem through interviews and cutting reconciliation from 8 steps to 3 led to this outcome.",
       },
       {
         text: "3인 팀에서 PM·프론트엔드·IR 피칭을 모두 수행하며 B2B SaaS 기획의 전 사이클(문제 정의 → 솔루션 설계 → 기술 구현 → 사업화 전략)을 경험했습니다.",
@@ -380,23 +380,23 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "처음 가설은 '직원이 결제하기 불편하다'였습니다. 회계담당자 인터뷰에서 이 가설이 깨졌습니다 — 진짜 고통은 결제가 아니라 결제 이후의 수기 전표 작성에 있었습니다. 기획 방향을 통째로 바꿨고, 그 피벗이 결과로 이어졌습니다.",
+        text: "현업 회계담당자 인터뷰에서 가장 큰 비용은 결제 이후 수기로 작성하는 전표에 있다고 판단했습니다. 결제 시점에 사용자를 식별하면 전표 자체가 필요 없어지므로 설계의 출발점을 결제 화면에서 결제 데이터로 옮겼고, 이 판단이 정산 8단계 → 3단계로 이어졌습니다.",
         textEn:
-          "Our first hypothesis was 'payment is inconvenient for employees.' Interviews with accountants broke it — the real pain was the manual voucher entry after payment. We rewrote the plan, and that pivot led to the result.",
+          "Interviews with working accountants showed the biggest cost sits in the vouchers written by hand after each payment. Identifying the user at the moment of payment removes the voucher entirely, so I moved the design's starting point from the payment screen to the payment data, and that decision took reconciliation from 8 steps to 3.",
       },
       // TODO(상현): 심사 때 실제 받았던 질문이 기억나면 한 줄 추가하면 더 진짜같아짐
       {
-        text: "심사에서 반응이 온 건 FIDO2 같은 기술이 아니라 '기업 구독 + 거래 수수료'라는 수익 구조였습니다. B2B에서는 기술의 참신함보다 돈이 도는 구조의 현실성이 먼저라는 걸 그때 알았습니다.",
+        text: "심사에서 가장 많은 질문을 받은 부분은 기업 구독과 거래 수수료를 합친 수익 모델이었습니다. B2B에서는 기술의 참신함보다 돈이 실제로 도는 경로를 먼저 보여줘야 한다고 판단하게 된 계기입니다.",
         textEn:
-          "What judges responded to wasn't the tech like FIDO2 — it was the 'subscription + transaction fee' revenue structure. In B2B, a realistic money flow beats technical novelty.",
+          "The part judges asked about most was the revenue model that combines an enterprise subscription with transaction fees. That is when I decided that in B2B, showing how money actually moves comes before technical novelty.",
       },
     ],
   },
 
   {
     id: "cleanb",
-    title: "에어비앤비 청소 매칭 플랫폼 실서비스 운영 — CleanB",
-    titleEn: "Running a Live Airbnb Cleaning Matching Platform — CleanB",
+    title: "외주 에어비앤비 청소 매칭 플랫폼 운영 — CleanB",
+    titleEn: "Operating a Client's Airbnb Cleaning Matching Platform — CleanB",
     images: [
       "/projects/cleanb/flow.png",
       "/projects/cleanb/01.png",
@@ -406,9 +406,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 둘을 연결하는 매칭 서비스를 만들되, 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 '운영'하는 것을 목표로 잡았습니다. (2025.11 기획·디자인 시작 ~ 현재, 3인 팀 — 서비스명 루미클린(RumiClean), www.rumiclean.com)",
+        text: "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 둘을 연결하는 매칭 서비스를 만들되, 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 '운영'하는 것을 목표로 잡았습니다. (외주 · 2025.11 기획·디자인 시작 ~ 현재, 3인 팀 — 서비스명 루미클린(RumiClean), www.rumiclean.com)",
         textEn:
-          "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to get steady work. We set out to build a matching service — and to actually operate it with real users, not finish it like a hackathon project. (Planning and design from Nov 2025 – present, 3-person team — service name RumiClean, www.rumiclean.com)",
+          "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to get steady work. We set out to build a matching service — and to actually operate it with real users, not finish it like a hackathon project. (Client project · planning and design from Nov 2025 – present, 3-person team — service name RumiClean, www.rumiclean.com)",
         subItems: [
           {
             text: "전체 PM으로 기획·디자인·릴리스 우선순위를 잡고, 청소자용 화면 전체를 직접 개발했습니다.",
@@ -429,9 +429,9 @@ export const careerDetailSections: CareerDetailSection[] = [
               "Set priorities from feature work to deployment; manage code review, release merges, and QA across a 170+ PR repository.",
             subItems: [
               {
-                text: "처음엔 k3s/ArgoCD로 배포했지만 3인 팀에겐 과했습니다 — Docker Compose + Caddy로 단순화해 유지보수 부담을 줄였고, 배포 중 페이지가 깨지는 문제는 정적 파일을 CDN(CloudFront)으로 분리해 해결했습니다.",
+                text: "3인 팀 규모에 맞춰 배포를 k3s/ArgoCD에서 Docker Compose + Caddy로 단순화해 유지보수 부담을 줄였고, 배포 중에도 화면이 유지되도록 정적 파일을 CDN(CloudFront)으로 분리했습니다.",
                 textEn:
-                  "We started with k3s/ArgoCD — too much for a 3-person team. Simplified to Docker Compose + Caddy, and fixed mid-deploy page breakage by serving static files from a CDN (CloudFront).",
+                  "Simplified deployment from k3s/ArgoCD to Docker Compose + Caddy to match a 3-person team, and served static files from a CDN (CloudFront) so pages stay up during deploys.",
               },
             ],
           },
@@ -454,7 +454,7 @@ export const careerDetailSections: CareerDetailSection[] = [
             ],
           },
           {
-            text: "카카오맵 지도 검색, Firebase 웹 푸시 등 실서비스에 필요한 연동을 구현하고, 아토믹 디자인·data-testid QA 규칙으로 팀 코드 일관성을 유지합니다.",
+            text: "카카오맵 지도 검색, Firebase 웹 푸시 등 운영에 필요한 연동을 구현하고, 아토믹 디자인·data-testid QA 규칙으로 팀 코드 일관성을 유지합니다.",
             textEn:
               "Implemented production integrations (Kakao Map search, Firebase Web Push) and keep team code consistent with atomic design and data-testid QA conventions.",
           },
@@ -463,16 +463,16 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "GitHub Actions 자동 배포로 실서비스를 운영 중입니다 (www.rumiclean.com). 기획·디자인·개발·배포·QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트입니다.",
+        text: "GitHub Actions 자동 배포로 www.rumiclean.com에 배포했습니다. 토스 결제 연동 전이라 아직 실사용자는 받지 않고 있습니다. 기획·디자인·개발·배포·QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트입니다.",
         textEn:
-          "The service runs live on GitHub Actions auto-deployment (www.rumiclean.com) — my first project operating the full cycle: planning, design, development, deployment, and QA.",
+          "Deployed to www.rumiclean.com with GitHub Actions auto-deployment. Toss payments are not connected yet, so it does not take real users — my first project operating the full cycle: planning, design, development, deployment, and QA.",
       },
     ],
     lessons: [
       {
-        text: "운영 복잡도는 팀 크기에 맞춰야 합니다. k3s는 틀린 기술이 아니라 3인 팀에 틀린 선택이었습니다 — 도구를 바꾸는 결정이 기능을 더하는 결정보다 서비스를 더 안정시켰습니다.",
+        text: "운영 복잡도는 팀 크기에 맞춰야 한다고 판단했습니다. 3인 팀이 k3s를 유지하는 비용이 기능 개발 시간을 잠식해 Docker Compose와 Caddy로 단순화했고, 도구를 바꾸는 결정이 기능을 더하는 결정보다 서비스를 더 안정시켰습니다.",
         textEn:
-          "Ops complexity must match team size. k3s wasn't the wrong tech — it was the wrong choice for three people. Swapping tools stabilized the service more than adding features would have.",
+          "Ops complexity has to match team size. Keeping k3s running was eating into a three-person team's feature time, so I simplified to Docker Compose and Caddy, and swapping tools stabilized the service more than adding features would have.",
       },
       {
         text: "기능 목록을 먼저 쓰면 화면 수만 늘어납니다. 상태 흐름을 먼저 확정하니 필요한 화면과 입력이 저절로 추려졌고, 개발·QA 범위 협상도 이 흐름 위에서 이뤄졌습니다.",
@@ -573,9 +573,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "65세 이상 고령층의 모바일뱅킹 이용률은 53.4%로, 비고령층(95%) 대비 41.2%p 낮습니다. 2030년에는 65세 이상 인구가 1,000만 명을 넘어설 전망이며(통계청 2024), 상당수 고령층이 금융 업무를 가족에 의존하고 있습니다.",
+        text: "65세 이상 고령층의 모바일뱅킹 이용률은 53.4%로, 비고령층(95%) 대비 41.6%p 낮습니다. 2030년에는 65세 이상 인구가 1,000만 명을 넘어설 전망이며(통계청 2024), 상당수 고령층이 금융 업무를 가족에 의존하고 있습니다.",
         textEn:
-          "Mobile banking usage among seniors 65+ is 53.4% — 41.2%p below non-seniors (95%). The senior population is expected to exceed 10M by 2030 (Statistics Korea 2024), and many seniors rely on family for financial tasks.",
+          "Mobile banking usage among seniors 65+ is 53.4% — 41.6%p below non-seniors (95%). The senior population is expected to exceed 10M by 2030 (Statistics Korea 2024), and many seniors rely on family for financial tasks.",
         subItems: [
           {
             text: "은행 점포 폐쇄와 ATM 축소로 지방 소도시 금융 접근성이 급락했고, 착오송금의 주요 원인은 '계좌번호 입력 오류'입니다. 기존 앱은 인증 절차 복잡·보안 불안감으로 고령층 진입 장벽이 높습니다.",
@@ -652,9 +652,9 @@ export const careerDetailSections: CareerDetailSection[] = [
           "Instead of teaching seniors a new way, I turned what they already do — jotting account numbers by hand — into the interface. For vulnerable users, the moment a service demands learning, it loses.",
       },
       {
-        text: "OCR 인식률의 한계를 인정하는 데서 설계가 시작됐습니다. 인식 결과를 큰 글씨로 재확인하는 단계를 넣고 앙상블로 보정했습니다. '틀릴 수 있는 기술'을 '틀릴 수 없는 구조'로 감싸는 것이 금융 서비스의 신뢰라고 생각합니다.",
+        text: "OCR 인식률에는 한계가 있다는 전제에서 설계를 시작했습니다. 인식 결과를 큰 글씨로 재확인하는 단계를 넣고 앙상블로 보정했습니다. 인식이 어긋나도 잘못된 송금으로 이어지지 않게 막는 확인 단계가 금융 서비스의 신뢰를 만든다고 판단했습니다.",
         textEn:
-          "The design started by accepting OCR's error rate: an oversized confirmation step for the recognized number, plus ensemble correction. Wrapping fallible tech in an infallible structure — that's trust in financial services.",
+          "The design started from the premise that OCR has an error rate: an oversized confirmation step for the recognized number, plus ensemble correction. I judged that a confirmation step which stops a misread from becoming a wrong transfer is what builds trust in a financial service.",
       },
     ],
   },
@@ -1001,7 +1001,7 @@ export const careerDetailSections: CareerDetailSection[] = [
               {
                 text: "AI 멘토와의 대화형 인터페이스를 설계하여 딱딱한 분석 결과가 아닌 자연스러운 멘토링 경험을 제공하는 UX를 기획했습니다.",
                 textEn:
-                  "Designed a conversational interface with an AI mentor to provide a natural mentoring experience rather than rigid analytical outputs.",
+                  "Designed a conversational interface with an AI mentor so the guidance reads as a natural mentoring conversation instead of a rigid analytical report.",
               },
             ],
           },
@@ -1544,7 +1544,7 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "짧은 기간에 완성도를 만든 방법은 기능을 줄이는 것이었습니다. 처음 그린 화면 흐름에서 곁가지를 계속 쳐냈고, 단순하게 남긴 흐름이 미니프로젝트 최우수상으로 이어졌다고 생각합니다.",
+        text: "짧은 기간에 완성도를 만든 방법은 기능을 줄이는 것이었습니다. 처음 그린 화면 흐름에서 곁가지를 계속 쳐냈고, 단순하게 남긴 흐름이 미니프로젝트 최우수상으로 이어졌습니다.",
         textEn:
           "The way to reach polish in a short period was cutting features. I kept pruning branches off the initial flow, and the simplicity that remained is what won the top prize.",
       },

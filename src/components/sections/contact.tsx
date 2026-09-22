@@ -1,14 +1,15 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, BookOpen } from "lucide-react";
 import { profile } from "@/data/profile";
 import { MetaRow } from "@/components/ui/meta-row";
 
+// velog는 lucide에 아이콘이 없어 BookOpen(블로그)으로 대신한다
 const links = [
-  { key: "github", href: profile.links.github, text: "github.com/tlstkdgus" },
-  { key: "blog", href: profile.links.blog, text: "velog.io/@tlstkdgus" },
-  { key: "linkedin", href: profile.links.linkedin, text: "LinkedIn" },
+  { key: "github", href: profile.links.github, text: "github.com/tlstkdgus", Icon: Github },
+  { key: "linkedin", href: profile.links.linkedin, text: "LinkedIn", Icon: Linkedin },
+  { key: "blog", href: profile.links.blog, text: "velog.io/@tlstkdgus", Icon: BookOpen },
 ] as const;
 
 export function Contact() {
@@ -37,16 +38,17 @@ export function Contact() {
           <ArrowUpRight aria-hidden="true" className="h-6 w-6 md:h-9 md:w-9" />
         </a>
 
-        <ul className="meta mt-14 flex flex-wrap gap-x-10 gap-y-6 border-t border-ink-foreground/25 pt-5">
-          {links.map(({ key, href, text }) => (
+        <ul className="mt-14 flex flex-wrap gap-x-8 gap-y-4 border-t border-ink-foreground/25 pt-6">
+          {links.map(({ key, href, text, Icon }) => (
             <li key={key}>
               <a
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hit inline-flex gap-2 text-ink-foreground/85 hover:text-accent-bright"
+                className="hit inline-flex items-center gap-2.5 text-[15px] font-semibold text-ink-foreground/85 transition-colors hover:text-accent-bright"
               >
-                <span className="text-ink-muted">{t(key)}</span>
+                <Icon aria-hidden="true" className="h-5 w-5" />
+                <span className="sr-only">{t(key)}: </span>
                 {text}
                 <span className="sr-only">{isKo ? " (새 창)" : " (opens in a new tab)"}</span>
               </a>

@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { profile } from "@/data/profile";
+import { Emph } from "@/components/ui/emph";
 
 export function About() {
   const t = useTranslations("about");
@@ -32,18 +33,24 @@ export function About() {
             <br />
             <span className="font-medium tracking-[-0.04em]">{t("name_line")}</span>
           </h2>
-          <div className="mt-8 max-w-[46em] space-y-4 text-[16px] leading-[1.8] text-foreground/80">
-            <p>{t("description_1")}</p>
-            <p>{t("description_2")}</p>
+          <div className="measure mt-8 space-y-4 text-[16px] leading-[1.8] text-foreground/80">
+            <p className="text-[17px] leading-[1.8] md:text-[18px]">
+              <Emph text={t("description_1")} />
+            </p>
+            <p>
+              <Emph text={t("description_2")} />
+            </p>
           </div>
 
-          <dl className="meta mt-8 grid max-w-[46em] gap-x-6 gap-y-2 border-t border-border pt-5 text-muted-foreground sm:grid-cols-[72px_1fr]">
+          <dl className="measure meta mt-8 grid gap-x-6 gap-y-2 border-t border-border pt-5 text-muted-foreground sm:grid-cols-[72px_1fr]">
             <dt className="font-bold text-foreground">{t("education_label")}</dt>
             <dd>
               {isKo ? edu.school : edu.schoolEn} · {edu.date}
               <br />
               {isKo ? edu.major : edu.majorEn} · {t("gpa")}
             </dd>
+            <dt className="font-bold text-foreground">{t("training_label")}</dt>
+            <dd>{t("training")}</dd>
             <dt className="font-bold text-foreground">{t("military_label")}</dt>
             <dd>{isKo ? profile.military.ko : profile.military.en}</dd>
           </dl>
@@ -54,9 +61,14 @@ export function About() {
       <div className="mt-28 md:mt-40">
         <h2 className="display">{t("what_heading")}</h2>
         <p className="mt-6 max-w-lg text-[16px] leading-[1.8] text-muted-foreground">{t("what_sub")}</p>
-        <ul className="mt-14 flex flex-wrap justify-between gap-x-10 gap-y-5 text-[16px] font-semibold md:mt-20 md:text-[17px]">
+        <ul className="mt-14 grid grid-cols-2 border-t border-foreground md:mt-20 md:grid-cols-3">
           {skills.map((s) => (
-            <li key={s}>{s}</li>
+            <li
+              key={s}
+              className="border-b border-border py-4 pr-4 text-[17px] font-semibold tracking-[-0.01em] md:py-5 md:text-[20px]"
+            >
+              {s}
+            </li>
           ))}
         </ul>
       </div>

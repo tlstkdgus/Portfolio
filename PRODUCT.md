@@ -18,7 +18,7 @@ The personal portfolio of 신상현 (Sanghyeon Shin), an IT planner who defines 
 
 ## Positioning
 
-A PM candidate who doesn't stop at planning. He built and ran the tools himself: a submission checker that swept 562 repos, a live finals console, and an FAQ bot, all shipped during a real 2,000-person hackathon. Every claim is backed by a verifiable number or a public artifact.
+A service planner who finds the answer in what users actually do, then builds and ships. The proof is that every answer came from observed behavior, not assumption: he analyzed all 390K records rather than a sample, rebuilt FlowPay's problem from scratch when interviews broke the first hypothesis, read every one of 229 hackathon questions and patched the FAQ daily, and keeps revising RumiClean after deploy. Building the tools himself (submission checker, finals console, FAQ bot) is how the planning reaches users, not the headline. Every claim is backed by a verifiable number or a public artifact.
 
 ## Operating Context
 
@@ -31,7 +31,7 @@ A PM candidate who doesn't stop at planning. He built and ran the tools himself:
 - Next.js 16 (App Router), TypeScript, Tailwind CSS v4, next-intl (ko/en), next-themes (light/dark), Framer Motion.
 - Content lives in `src/data/*.ts` and `src/messages/{ko,en}.json`. Components only render it. When the data changes, PORTFOLIO.md is updated with it.
 - Narrative rules (directed 2026-09-13, binding):
-  - The LIKELION Community Manager internship (2026.04.27–08.31) is always the main story in the hero, the introduction, and the headline.
+  - Identity is the service planner; the LIKELION Community Manager internship (2026.04.27–08.31) is the most recent and strongest evidence, always in the hero summary and as selected project #1 (adjusted 2026-09-20).
   - CleanB (RumiClean) is a **project only**. It never appears under experience, and it is ordered after FlowPay.
   - The hero and introduction never describe a current "live-service PM" role.
   - Representative project order: 14th hackathon ops → internal dev course → FlowPay → CleanB → Y:Wave → SonGeul → Connect.
@@ -40,17 +40,19 @@ A PM candidate who doesn't stop at planning. He built and ran the tools himself:
 
 ## Brand Commitments
 
-- Name: 신상현 / Sanghyeon Shin. Positioning line: 「데이터로 문제를 정의하고, 직접 만들어 배포하는 IT 기획자」 / "An IT planner who defines problems with data, then builds and ships."
-- Voice: plain, specific, number-first. Structure every project as problem → what I did / decided → outcome.
+- Name: 신상현 / Sanghyeon Shin. Positioning line (2026-09-21, v6): 「사용자의 실제 행동에서 답을 찾아, 직접 만들어 배포하는 서비스 기획자」 / "A service planner who finds the answer in what users actually do, then builds and ships." The v6 proof line ("~가 아니라 ~였다" triplet) was retired by v9 (2026-09-22) because it violates the v9 voice rules below; hero.summary is now one sentence of evidence (v9 rev. 2026-09-22): 「멋쟁이사자처럼 인턴으로 80개 대학 커뮤니티 플랫폼의 기획·운영과 2,000명 규모 중앙해커톤의 기획부터 본선 운영까지 맡았고, 2년간 15개 이상의 서비스를 기획, 개발, 배포했습니다.」 Markers that must survive any edit: 실제 행동 / 직접 만들어 배포 / 기획부터 본선 운영까지. Planning documents remain a strength; never write "기획서 대신".
+- Hackathon is always described as planned-and-run end to end (기획부터 본선 운영까지); never lead with 'co-designed judging policy', and never write '참가자 경험을 설계'. Co-done items (policy, specs, warm-ups) keep '공동/팀과 함께'; the 3 tools and on-site ops are '직접'.
+- FlowPay is described by what the product did (8 → 3 steps, 5th of 102), not by the pivot story (at most a half-sentence in How I work). RumiClean is a client project (외주), never '사이드 프로젝트'.
+- Voice (v9, from his own cover letters): complete 합니다체 sentences that run to the end; no fragment endings, no "~게." Give the reason for a judgment ("~라고 판단했습니다", "~한 결과 ~였습니다"), never "~라고 생각합니다". Write results as sentences. Banned: aphorisms ("설득은 문서보다 화면이 합니다"), quote-mark contrasts, poetic line-break headlines, the "~가 아니라 ~였다" pattern, "구조", "총괄". Headlines are complete sentences even across two lines. No filler openers ("저는", "그래서", "그 결과", "만드는 데서 끝내지 않고"); each sentence picks up the previous one (problem → action → result). Never admit a mistake, outage, or wrong assumption ("배포 후 깨진 화면", "틀린 전제", "놓쳤다"); the 'before' state he improved (3 h/day by hand, ~2 days of manual checks, Excel→PPT) is evidence and stays. Limits: headline ≤ 2 lines, How-I-work description 2 sentences, case body 3 sentences. Structure every project as problem → action → result. Intern bullets run platform → inter-university hackathon spec → national hackathon → ideathon → training; the community platform (likelion.community) is the first bullet because it was a core duty. The ideathon is "기획부터 운영까지 참여", never "운영 참여". The 13th-cohort item is the WelcomeKit PWA (45 members, paper roll call → QR); "공식 홈페이지" is not used anywhere.
 - Fixed facts: GPA 4.13/4.5; email a91945840@gmail.com; SSAFY 15th cohort "completed (2026.01–04)"; the service name is 루미클린 (RumiClean), never "RoomiClean"; Y:Wave was submitted to the LIKELION 13th national hackathon (2025.07–08); FlowPay interviewees were working accountants, not certified accountants.
 
 ## Evidence on Hand
 
-- PORTFOLIO.md holds every fact with its figures and sources.
+- PORTFOLIO.md holds every fact with its figures and sources. Before→after figures (inquiries 3h+/day → 80.8% instant; 562-repo manual check ~2 days estimate → automated; Excel+PPT reveal → 2.2 s console) are his own statements from 2026-09-22; the 2-day figure is an estimate and must stay labeled as one.
 - Screenshots and diagrams are in `public/projects/<id>/`. The hackathon has a funnel diagram and a verification-pipeline diagram; CleanB and SonGeul have flow diagrams.
-- Public artifacts: GitHub repos (animal-league, likelion-dev-site, FlowPay, songeul, and others), live sites (likelion-dev-site.vercel.app, flowpay.vercel.app, rumiclean.com), and the ANIMAL LEAGUE Behance case study published by LIKELION's Brand Design Lab, with him credited as a collaborator.
+- Public artifacts: GitHub repos (animal-league, likelion-dev-site, FlowPay, songeul, and others), live sites (likelion-dev-site.vercel.app, flowpay.vercel.app); rumiclean.com is deployed but Toss payments are not connected, so it has no real users, and the ANIMAL LEAGUE Behance case study published by LIKELION's Brand Design Lab, with him listed as a co-owner. Five photos and the 'Stage System' passage from that case are used on the hackathon slides with credit; the brand design is the Lab's work, his part is the finals stage/judging/ops console and the hackathon planning.
 - Profile photo: `public/profile.jpg` (689×886 portrait; must not be cropped).
-- **Do not fabricate:** there are no testimonials, recommendations, or employer quotes. Do not invent market sizes or statistics without a source. Two awards (1st G-RISE startup competition, 7th College of Business × SPRINT) have no project mapped yet; do not attach one until he confirms.
+- **Do not fabricate:** CleanB has no real users or product metrics yet; never call it a live service with users. There are no testimonials, recommendations, or employer quotes. Do not invent market sizes or statistics without a source. Two awards (1st G-RISE startup competition, 7th College of Business × SPRINT) have no project mapped yet; do not attach one until he confirms.
 
 ## Product Principles
 

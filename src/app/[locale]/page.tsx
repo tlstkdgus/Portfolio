@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/sections/hero";
 import { SelectedProjects } from "@/components/sections/selected-projects";
 import { Principles } from "@/components/sections/principles";
+import { Figures } from "@/components/sections/figures";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Footer } from "@/components/layout/footer";
@@ -11,6 +12,7 @@ import { Projects } from "@/components/sections/projects";
 import { Contact } from "@/components/sections/contact";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { SectionRail } from "@/components/ui/section-rail";
 import { siteConfig } from "@/config/site";
 
 export async function generateMetadata({
@@ -62,6 +64,7 @@ export default function Home() {
         <Hero />
         <About />
         <Principles />
+        <Figures />
         <Experience />
         <SelectedProjects />
         <Projects />
@@ -69,6 +72,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <SectionRail />
       <ScrollToTop />
       <JsonLd />
     </>

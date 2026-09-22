@@ -29,8 +29,11 @@ export function SelectedProjects() {
                 className="group grid grid-cols-[28px_1fr] items-baseline gap-x-4 gap-y-1 border-b border-foreground py-4 transition-colors hover:text-accent md:grid-cols-[40px_1fr_auto] md:py-5"
               >
                 <span className="text-[16px] font-bold">{i + 1}</span>
-                <span className="meta text-muted-foreground group-hover:text-accent">
+                <span className="meta flex flex-wrap items-baseline gap-x-3 text-muted-foreground group-hover:text-accent">
                   {isKo ? p.kicker.ko : p.kicker.en}
+                  <span className="font-semibold text-foreground group-hover:text-accent">
+                    {isKo ? p.status.ko : p.status.en}
+                  </span>
                 </span>
                 <span className="col-start-2 text-[22px] font-medium tracking-[-0.03em] md:col-start-auto md:text-[30px]">
                   {isKo ? p.title.ko : p.title.en}.
@@ -73,7 +76,7 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
 
       {/* 2. 헤드라인 + 한 일 — 레퍼런스 'The Making of Sira' */}
       <div className="gutter py-20 md:py-32">
-        <MetaRow items={[title, tr(p.role)]} className="mb-12 text-muted-foreground md:mb-20" />
+        <MetaRow items={[title, tr(p.status)]} className="mb-12 text-muted-foreground md:mb-20" />
         <div className="grid gap-12 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)] lg:items-end">
           <m.h3
             id={`work-${p.id}-title`}
@@ -97,6 +100,26 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
             </ul>
           </div>
         </div>
+
+        <dl className="mt-12 grid gap-x-10 gap-y-5 border-t border-foreground pt-6 md:mt-16 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+          <div className="grid grid-cols-[72px_1fr] gap-x-4">
+            <dt className="eyebrow pt-1 text-muted-foreground">{t("role")}</dt>
+            <dd className="text-[16px] font-semibold">{tr(p.role)}</dd>
+          </div>
+          <div className="grid grid-cols-[72px_1fr] gap-x-4">
+            <dt className="eyebrow pt-1 text-muted-foreground">{t("scope")}</dt>
+            <dd className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[16px] font-semibold">
+              {(isKo ? p.scope.ko : p.scope.en).map((s, k, arr) => (
+                <span key={s} className="inline-flex items-center gap-2">
+                  {s}
+                  {k < arr.length - 1 && (
+                    <ArrowRight aria-hidden="true" className="h-3.5 w-3.5 text-muted-foreground" />
+                  )}
+                </span>
+              ))}
+            </dd>
+          </div>
+        </dl>
       </div>
 
       {/* 3. 대표 화면 — 화면 폭 */}
@@ -113,15 +136,8 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
 
       {/* 4. 문제 · 결정 */}
       <div className="gutter py-20 md:py-32">
-        <div className="grid gap-12 border-t border-foreground pt-8 md:grid-cols-2 md:gap-16">
-          <div>
-            <p className="eyebrow text-muted-foreground">{t("problem")}</p>
-            <p className="mt-5 text-[17px] leading-[1.8] md:text-[19px]">{tr(p.problem)}</p>
-          </div>
-          <div>
-            <p className="eyebrow text-accent">{t("decision")}</p>
-            <p className="mt-5 text-[17px] leading-[1.8] md:text-[19px]">{tr(p.decision)}</p>
-          </div>
+        <div className="border-t border-foreground pt-8">
+          <p className="max-w-3xl text-[17px] leading-[1.85] md:text-[20px]">{tr(p.body)}</p>
         </div>
         {/* 흐름 다이어그램 — PNG 대신 사이트 글꼴로. 단계 이름은 크게, 설명은 한 줄 */}
         {p.diagrams?.map((d) => (
@@ -175,14 +191,42 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
         </div>
       </div>
 
+      {/* 4-1. 현장 — 제3자(브랜드 디자인 랩)가 기록한 사진과 문장. 출처를 같이 보여준다 */}
+      {p.field && (
+        <div className="gutter bg-muted py-16 md:py-24">
+          <div className="grid gap-3 md:grid-cols-6 md:gap-4">
+            {p.field.images.map((img, j) => (
+              <a
+                key={img.src}
+                href={p.field!.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn("relative block overflow-hidden bg-background", j < 2 ? "aspect-[3/2] md:col-span-3" : "aspect-[4/3] md:col-span-2")}
+              >
+                <Image src={img.src} alt={tr(img.alt)} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+              </a>
+            ))}
+          </div>
+          <blockquote className="mt-10 max-w-3xl md:mt-14">
+            <p className="text-[19px] font-semibold leading-[1.6] tracking-[-0.01em] md:text-[24px]">“{tr(p.field.quote)}”</p>
+            <cite className="meta mt-4 block not-italic text-muted-foreground">
+              <a href={p.field.source.url} target="_blank" rel="noopener noreferrer" className="hit underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground">
+                {tr(p.field.source.label)}
+                <span className="sr-only">{isKo ? " (새 창)" : " (opens in a new tab)"}</span>
+              </a>
+            </cite>
+          </blockquote>
+        </div>
+      )}
+
       {/* 5. 성과 — 블루 화면. 레퍼런스 'WE CONCLUDED THAT… 18% 76%' */}
       <div className="gutter bg-accent-surface py-20 text-accent-foreground md:py-32">
         <MetaRow items={[t("impact"), title]} className="mb-12 opacity-90 md:mb-20" />
-        <p className="headline whitespace-pre-line">{tr(p.statement)}</p>
+        <p className="headline whitespace-pre-line">{tr(p.headline)}</p>
         <dl
           className={cn(
             "mt-16 grid gap-x-8 gap-y-12 md:mt-24",
-            p.stats.length === 4 ? "grid-cols-2 lg:grid-cols-4" : "grid-cols-2 md:grid-cols-3"
+            p.stats.length === 2 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-2 md:grid-cols-3"
           )}
         >
           {p.stats.map((s) => (

@@ -34,15 +34,17 @@ export interface SelectedProject {
   /** 검은 표지에 화면 폭으로 들어가는 단어 */
   cover: Localized;
   kicker: Localized;
+  /** 상태 뱃지 — 사실 그대로. CleanB는 결제 연동 전이라 'LIVE'라고 쓰지 않는다 */
+  status: Localized;
+  /** 이 프로젝트에서 맡은 범위. 설계 → 구현 → 운영 순서로, 실제 한 것만 */
+  scope: { ko: string[]; en: string[] };
   title: Localized;
   period: Localized;
   role: Localized;
   headline: Localized;
   did: { ko: string[]; en: string[] };
-  problem: Localized;
-  decision: Localized;
-  /** 성과 화면 상단의 한 줄 — 이 프로젝트의 판단을 요약 */
-  statement: Localized;
+  /** 문제 → 조치 → 결과, 완결형 세 문장 (v9 어투 규칙) */
+  body: Localized;
   stats: SelectedStat[];
   hero: SelectedImage;
   /** 대표 화면 배경 — 어두운 스크린샷은 ink, 밝은 화면은 muted */
@@ -54,6 +56,12 @@ export interface SelectedProject {
   repo?: string;
   /** 외부 공개 케이스 (예: 브랜드 디자인 랩의 Behance) */
   behanceUrl?: string;
+  /** 현장 사진과 제3자 기술 — 출처를 반드시 같이 보여준다 */
+  field?: {
+    images: SelectedImage[];
+    quote: Localized;
+    source: { label: Localized; url: string };
+  };
 }
 
 export const selectedProjects: SelectedProject[] = [
@@ -61,43 +69,41 @@ export const selectedProjects: SelectedProject[] = [
     id: "hackathon14",
     cover: { ko: "Hackathon.", en: "Hackathon." },
     kicker: { ko: "멋쟁이사자처럼 인턴 · 14기 중앙해커톤", en: "LIKELION Internship · 14th Hackathon" },
-    title: { ko: "14기 중앙해커톤 운영", en: "LIKELION 14th Hackathon Ops" },
+    status: { ko: "완료 · 2026.08 본선", en: "Completed · Finals Aug 2026" },
+    scope: {
+      ko: ["가이드·워밍업 기획", "정책·명세 공동 설계", "운영 도구 3개 직접 제작", "본선 현장 운영"],
+      en: ["Guide & warm-ups", "Policy & specs (co-)", "3 tools, built", "On-site finals"],
+    },
+    title: { ko: "14기 중앙해커톤 기획·운영", en: "LIKELION 14th Hackathon" },
     period: { ko: "2026.06 – 2026.08", en: "Jun – Aug 2026" },
-    role: { ko: "커뮤니티 매니저 인턴 · 운영", en: "Community Manager Intern · Ops" },
+    role: { ko: "커뮤니티 매니저 인턴 · 기획·운영", en: "Community Manager Intern · Planning & Ops" },
     headline: {
-      ko: "80개 대학, 2,000명 해커톤의\n규칙과 도구를 만들었습니다.",
-      en: "Rules and tools for an\n80-university, 2,000-person hackathon.",
+      ko: "2,000명의 참가자가 평가 기준을\n예측할 수 있는 해커톤을 만들었습니다.",
+      en: "I made a hackathon where 2,000 participants could predict how they'd be judged.",
     },
     did: {
       ko: [
-        "심사 정책·100점 배점 공동 설계",
+        "참가자 가이드 · 워밍업 세션 3회 기획",
+        "심사 정책 · 100점 배점 공동 설계",
         "플랫폼 기능명세서 2종 공동 작성",
-        "제출물 검사 도구 check.py 직접 제작",
-        "본선 콘솔 ANIMAL LEAGUE 직접 제작·운영",
-        "FAQ 디스코드 봇 직접 제작·운영",
+        "제출물 검사 · 본선 콘솔 · FAQ 봇 직접 제작·운영",
+        "본선 현장 운영 (코엑스 마곡)",
       ],
       en: [
-        "Co-designed the judging policy and 100-pt rubric",
-        "Co-wrote two platform feature specs",
-        "Built check.py, the submission checker",
-        "Built and ran ANIMAL LEAGUE, the finals console",
-        "Built and ran the FAQ Discord bot",
+        "Participant guide · 3 warm-up sessions",
+        "Co-designed the judging policy and 100‑pt rubric",
+        "Co-wrote 2 platform feature specs",
+        "Built and ran the submission checker, finals console, FAQ bot",
+        "On-site finals operations",
       ],
     },
-    problem: {
-      ko: "313팀 · 562개 레포의 '마감 후 수정 금지' 검증과 2,000명 앞 실시간 토너먼트. 참가자·심사위원·파트너의 이해가 부딪히는 곳마다 규칙이 필요했고, 수작업으로는 불가능했습니다.",
-      en: "Verifying 562 repos from 313 teams against a 'no edits after deadline' rule, and running a live tournament for 2,000 people. Every collision between participants, judges, and partners needed a rule, and none of it could be done by hand.",
+    body: {
+      ko: "313팀이 참가하는 해커톤에서 참가자는 무엇을 제출하면 어떻게 평가받는지 알기 어려웠고, 문의는 운영진이 하루 3시간씩 직접 답하고 있었습니다. 제출 항목과 심사 기준을 1:1로 연결해 평가를 예측할 수 있게 했고, 참가자가 겪는 순서대로 가이드를 짜고 FAQ 봇이 즉답하게 했습니다. 본선 결과는 심사위원 투표가 무대 스크린에 바로 반영되도록 콘솔(Next.js · Supabase)을 DB 스키마부터 직접 개발해 진행했습니다.",
+      en: "With 313 teams competing, participants couldn't tell what to submit or how it would be judged, and the staff were answering inquiries by hand for three hours a day. I mapped submission items 1:1 to judging criteria so scoring became predictable, structured the guide in the order participants live it, and had an FAQ bot answer instantly. For the finals I built the console (Next.js · Supabase) from the DB schema up so judges' votes showed on the stage screen as they came in.",
     },
-    decision: {
-      ko: "도구는 근거만 내고 판정은 사람이 합니다. 위반 차등 기준(기능 수정 실격 · README 감점 · 직후 커밋 정상참작)을 검사 전에 합의했습니다. 콘솔은 '되돌릴 수 없는 현장'을 전제로 심사위원 명단제, 롤백 없는 결과 공개, 네트워크 장애 백업 모드를 먼저 설계했습니다.",
-      en: "Tools present evidence; people decide. Graded violation criteria (code changes = DQ, README edits = deduction, just-late commits = leniency) were agreed before scanning. The console assumed an irreversible live event: a judge allowlist, no rollback after reveal, and a network-failure backup mode came first.",
-    },
-    statement: { ko: "도구는 근거만,\n판정은 사람이.", en: "Tools show evidence.\nPeople decide." },
     stats: [
-      { v: { ko: "562개", en: "562" }, k: { ko: "레포 전 브랜치 전수 검사", en: "repos swept, every branch" } },
-      { v: "5팀", k: { ko: "위반 적발 · 2팀 실격", en: "violations caught · 2 DQ'd" } },
-      { v: { ko: "2.2초", en: "2.2s" }, k: { ko: "콘솔 조작이 무대 스크린에 뜨기까지 (실측)", en: "console-to-stage latency, measured" } },
-      { v: { ko: "229건", en: "229" }, k: { ko: "FAQ 봇 응대 · 미응답 0건", en: "questions answered by the bot · 0 missed" } },
+      { v: "80.8%", k: { ko: "문의 즉답 · 하루 3시간 직접 답변에서, 미응답 0건", en: "inquiries answered instantly · from 3 hours a day by hand, 0 missed" } },
+      { v: { ko: "2.2초", en: "2.2 s" }, k: { ko: "결과 공개 · 엑셀·PPT 집계에서 투표가 스크린에 뜨기까지", en: "result reveal · from Excel and PPT tallies to vote-on-screen" } },
     ],
     hero: {
       src: "/projects/hackathon14/02.png",
@@ -124,15 +130,15 @@ export const selectedProjects: SelectedProject[] = [
       {
         title: { ko: "'마감 후 수정 금지'를 선언이 아니라 집행으로", en: "Enforcing 'no edits after deadline', not just announcing it" },
         steps: [
-          { label: { ko: "가설", en: "Hypothesis" }, note: { ko: "마감 후에도 커밋하는 팀이 있다. 562개 레포는 손으로 검사할 수 없다", en: "Some teams commit after the deadline; 562 repos can't be checked by hand" } },
+          { label: { ko: "가설", en: "Hypothesis" }, note: { ko: "마감 후에도 커밋하는 팀이 있습니다. 제출된 레포 전부를 손으로 검사할 수 없습니다", en: "Some teams commit after the deadline; 562 repos can't be checked by hand" } },
           { label: { ko: "기준 합의", en: "Agree criteria" }, note: { ko: "검사 전에 결정: 기능 수정 실격 · README 감점 · 직후 커밋 정상참작", en: "Before scanning: code change = DQ · README = deduction · just-late = leniency" } },
           { label: { ko: "전수 검사", en: "Full scan" }, note: { ko: "check.py로 전 브랜치의 마감 후 커밋 · force-push · 비공개 전환 탐지", en: "check.py sweeps every branch for late commits, force-pushes, private flips" } },
-          { label: { ko: "근거 리포트", en: "Evidence" }, note: { ko: "결과를 엑셀로 정리해 운영진 회의에 제공. 자동 판정은 하지 않는다", en: "Results go to the staff meeting as a spreadsheet. No automatic verdicts" } },
+          { label: { ko: "근거 리포트", en: "Evidence" }, note: { ko: "결과를 엑셀로 정리해 운영진 회의에 넘깁니다. 자동 판정은 하지 않습니다", en: "Results go to the staff meeting as a spreadsheet. No automatic verdicts" } },
           { label: { ko: "사람의 판정", en: "People decide" }, note: { ko: "위반 5팀 적발, 차등 기준으로 2팀 실격", en: "5 violations found; 2 disqualified under the graded criteria" } },
         ],
         caption: {
-          ko: "도구가 사람 대신 판정하는 순간 규칙의 정당성이 무너집니다.",
-          en: "The moment a tool judges instead of people, the rule loses its legitimacy.",
+          ko: "판정 기준을 검사 전에 합의하고 도구는 근거만 제시하도록 했기 때문에, 위반 5팀을 합의된 기준으로 판정할 수 있었습니다.",
+          en: "Because the criteria were agreed before scanning and the tool only presented evidence, the five violations were judged against a standard everyone had accepted.",
         },
       },
     ],
@@ -153,6 +159,25 @@ export const selectedProjects: SelectedProject[] = [
       },
     ],
     caseId: "hackathon14",
+    // 사진·인용: 멋쟁이사자처럼 브랜드 디자인 랩의 Behance 케이스(공동 소유자로 등재). 브랜드 디자인은 랩의 작업이고,
+    // 상현의 몫은 본선 무대·심사·운영 콘솔과 해커톤 기획이다. 사진은 콘솔이 실제 무대에서 쓰인 장면 위주로 골랐다.
+    field: {
+      images: [
+        { src: "/projects/hackathon14/field-console.jpg", alt: { ko: "본선 무대 옆에서 운영 콘솔을 조작하는 운영자. 노트북에 브래킷과 경기 진행 화면이 떠 있다", en: "An operator running the ops console beside the stage, bracket and match controls on the laptop" } },
+        { src: "/projects/hackathon14/field-stage.jpg", alt: { ko: "본선 무대: 발표 팀 뒤 대형 스크린에 심사 점수가 실시간으로 표시된다", en: "Finals stage: the live judging score on the big screen behind a presenting team" } },
+        { src: "/projects/hackathon14/field-pitch.jpg", alt: { ko: "ANIMAL LEAGUE 무대에서 발표 중인 참가 팀", en: "A team pitching on the ANIMAL LEAGUE stage" } },
+        { src: "/projects/hackathon14/field-gate.jpg", alt: { ko: "행사장 입구의 ANIMAL LEAGUE 미디어 게이트를 지나는 참가자들", en: "Participants passing the ANIMAL LEAGUE media gate at the venue entrance" } },
+        { src: "/projects/hackathon14/field-keyvisual.jpg", alt: { ko: "ANIMAL LEAGUE 키 비주얼: 80개 대학을 상징하는 동물 캐릭터들과 트로피", en: "ANIMAL LEAGUE key visual: animal characters for 80 universities and the trophy" } },
+      ],
+      quote: {
+        ko: "무대 스크린, 심사 화면, 운영 콘솔을 하나의 시스템으로 개발해 심사와 무대 연출이 끊기지 않게 했다. 심사위원 평가는 운영 콘솔에서 실시간으로 집계되어 무대 스크린에 즉시 표시됐다.",
+        en: "The stage screens, judging interface, and operations console were developed as an integrated system to create a seamless flow between the evaluation process and stage presentation. Judges' evaluations were aggregated in real time within the operations console and immediately displayed on the stage screens.",
+      },
+      source: {
+        label: { ko: "멋쟁이사자처럼 브랜드 디자인 랩, Behance 케이스 'STAGE SYSTEM' (사진 · 브랜드 디자인: 브랜드 디자인 랩)", en: "LIKELION Brand Design Lab, Behance case study, 'Stage System' (photos and brand design: Brand Design Lab)" },
+        url: "https://www.behance.net/gallery/255861853/ANIMAL-LEAGUE-LIKELION-HACKATHON-2026",
+      },
+    },
     repo: "https://github.com/tlstkdgus/animal-league",
     behanceUrl: "https://www.behance.net/gallery/255861853/ANIMAL-LEAGUE-LIKELION-HACKATHON-2026",
   },
@@ -160,12 +185,17 @@ export const selectedProjects: SelectedProject[] = [
     id: "devsite",
     cover: { ko: "Dev Class.", en: "Dev Class." },
     kicker: { ko: "멋쟁이사자처럼 인턴 · 사내 교육", en: "LIKELION Internship · Internal Course" },
+    status: { ko: "완료 · 사이트 공개 중", en: "Completed · Site live" },
+    scope: {
+      ko: ["문제 정의", "커리큘럼 설계", "사이트 구현", "강의"],
+      en: ["Problem definition", "Curriculum", "Site build", "Teaching"],
+    },
     title: { ko: "사내 개발 교육", en: "Internal Dev Literacy Course" },
     period: { ko: "2026.07 – 2026.08", en: "Jul – Aug 2026" },
     role: { ko: "기획·제작·강의 단독", en: "Planned, built, and taught solo" },
     headline: {
-      ko: "비개발 동료가 개발자와\n대화할 수 있도록, 점심 여섯 번.",
-      en: "Six lunch breaks to help\nnon-developers talk with developers.",
+      ko: "비개발 동료가 개발자와 대화할 수 있도록\n점심 강의 6회를 설계했습니다.",
+      en: "I designed six lunchtime sessions so non-developers could talk with developers.",
     },
     did: {
       ko: [
@@ -181,20 +211,14 @@ export const selectedProjects: SelectedProject[] = [
         "14 SVG diagrams · 51-term glossary",
       ],
     },
-    problem: {
-      ko: "비전공 동료에게 '배포'·'API'는 여전히 어렵습니다. AI에게 물어보면 답이 나오는 시대지만, 기본 흐름을 모르면 무엇을 물어야 할지조차 모릅니다.",
-      en: "For non-developer colleagues, 'deploy' and 'API' were still hard. You can ask AI anything now, but without the basic flow, you don't know what to ask.",
+    body: {
+      ko: "비전공 동료들은 '배포'나 'API' 같은 기본 흐름을 몰라 AI에게 무엇을 물어야 할지조차 어려워했습니다. 목표를 '개발자와 대화하기'로 좁히고, 설치 없이 브라우저에서 바로 되는 실습만 남긴 6회 커리큘럼과 교육 사이트를 직접 만들어 강의했습니다. 수강자 6명 전원이 만족도 5점을 주었고, 개발자와의 대화가 더 이해된다는 응답이 4.7점이었습니다.",
+      en: "Non-developer colleagues didn't know basic flows like 'deploy' or 'API', so they couldn't even tell what to ask an AI. I narrowed the goal to 'talking with developers', kept only exercises that run in the browser with no installs, and built the six-session curriculum and course site myself, then taught it. All six attendees rated it 5 out of 5, and 'I understand developer conversations better' scored 4.7.",
     },
-    decision: {
-      ko: "코드를 가르치지 않기로 했습니다. 목표를 '개발자 되기'에서 '개발자와 대화하기'로 좁히고, 설치·계정 없이 브라우저에서 바로 되는 실습만 남겼습니다. 밥 먹으면서 듣는 환경이 전제였습니다.",
-      en: "I decided not to teach code, narrowing the goal from 'becoming a developer' to 'talking with developers', and keeping only demos that run in the browser with no installs or accounts. People would be listening over lunch.",
-    },
-    statement: { ko: "개발자가 되는 게 아니라,\n개발자와 대화하기.", en: "Not becoming a developer.\nTalking with one." },
     stats: [
-      { v: "5/5", k: { ko: "만족도, 수강자 6명 전원", en: "satisfaction, all 6 attendees" } },
+      { v: "4.7/5", k: { ko: "개발자와의 대화가 이해된다", en: "I understand developer conversations better" } },
+      { v: "5/5", k: { ko: "만족도 · 수강자 6명 전원", en: "satisfaction · all 6 attendees" } },
       { v: "9.7/10", k: { ko: "추천 의향", en: "would recommend" } },
-      { v: "4.7/5", k: { ko: "개발자와의 대화가 더 이해된다", en: "better grasp of developer conversations" } },
-      { v: "6회", k: { ko: "점심 강의 · 6주", en: "lunch sessions over 6 weeks" } },
     ],
     hero: {
       src: "/projects/devsite/01.png",
@@ -222,40 +246,40 @@ export const selectedProjects: SelectedProject[] = [
     id: "flowpay",
     cover: { ko: "FlowPay.", en: "FlowPay." },
     kicker: { ko: "B2B 핀테크 · FIN:NECT 챌린지", en: "B2B Fintech · FIN:NECT Challenge" },
+    status: { ko: "수상 · 102팀 중 5위", en: "Award · 5th of 102" },
+    scope: {
+      ko: ["사용자 인터뷰", "IA 설계", "프론트엔드", "IR 발표"],
+      en: ["User interviews", "IA design", "Frontend", "IR pitch"],
+    },
     title: { ko: "FlowPay", en: "FlowPay" },
     period: { ko: "2025.06 – 2025.08", en: "Jun – Aug 2025" },
     role: { ko: "PM · 프론트엔드 · IR", en: "PM · Frontend · IR" },
     headline: {
-      ko: "무기명 법인카드 정산을\n8단계에서 3단계로.",
-      en: "Anonymous corporate card\nreconciliation, from 8 steps to 3.",
+      ko: "무기명 법인카드 정산 8단계를\n3단계로 줄였습니다.",
+      en: "I cut anonymous corporate card reconciliation from 8 steps to 3.",
     },
     did: {
       ko: [
-        "현업 회계담당자 인터뷰 · 가설 피벗",
+        "현업 회계담당자 인터뷰 · 문제 정의",
         "Flow ID 익명 태깅 설계",
         "React 대시보드 · FIDO2 생체인증",
         "시장 분석 · IR 발표",
       ],
       en: [
-        "Interviews with working accountants · pivot",
+        "Interviews with working accountants · problem definition",
         "Flow ID anonymous tagging",
         "React dashboard · FIDO2 biometrics",
         "Market sizing · IR pitch",
       ],
     },
-    problem: {
-      ko: "지출보고서 1건에 20분, 회계담당자는 월 100건 이상. 기업당 연 약 1,000시간이 정산에 사라집니다. 근본 원인은 무기명 카드에 사용자가 기록되지 않는 구조였습니다.",
-      en: "20 minutes per expense report, 100+ a month for each accountant: about 1,000 hours a year per company. The root cause: anonymous cards record no user.",
+    body: {
+      ko: "회계담당자는 지출보고서 1건에 20분씩, 월 100건 이상을 처리하고 있었습니다. 인터뷰해 보니 진짜 병목은 결제 이후 수기로 작성하는 전표라고 판단했고, 익명성을 지키는 가명 토큰 Flow ID로 결제 시점부터 사용자를 식별해 지출보고서가 자동 생성되도록 설계했습니다. FIN:NECT 챌린지에서 102팀 중 5위에 올랐습니다.",
+      en: "Accountants were spending 20 minutes per expense report, over 100 reports a month. Interviews showed the real bottleneck was the vouchers written by hand after each payment, so I designed Flow ID, a pseudonymous token that identifies the user at the moment of payment while keeping anonymity, so expense reports generate themselves. It placed 5th of 102 teams at the FIN:NECT Challenge.",
     },
-    decision: {
-      ko: "첫 가설 '결제가 불편하다'는 인터뷰에서 깨졌습니다. 진짜 고통은 결제 이후의 수기 전표였습니다. 실명인증 대신 익명성을 지키는 가명토큰을 택하고, MVP를 ERP 전체 연동에서 지출보고서 자동 생성으로 좁혔습니다.",
-      en: "The first hypothesis, 'paying is inconvenient,' broke in interviews; the real pain was manual vouchers after payment. We chose pseudonymous tokens over real-name auth to keep anonymity, and cut the MVP from full ERP integration to auto-generated expense reports.",
-    },
-    statement: { ko: "첫 가설은\n인터뷰에서 깨졌다.", en: "The first hypothesis\nbroke in interviews." },
     stats: [
-      { v: "8→3", k: { ko: "정산 단계 수, 8단계에서 3단계로", en: "steps in the reconciliation flow, 8 down to 3" } },
-      { v: "5위", k: { ko: "102팀 중 · FIN:NECT 장려상", en: "of 102 teams · FIN:NECT award" } },
-      { v: "20분", k: { ko: "기존 지출보고서 1건 작성 시간", en: "per expense report, before" } },
+      { v: "8 → 3", k: { ko: "정산 단계", en: "reconciliation steps" } },
+      { v: { ko: "자동 생성", en: "Automatic" }, k: { ko: "지출보고서 1건 · 20분 수작업에서", en: "expense reports · from 20 minutes by hand" } },
+      { v: { ko: "5위", en: "5th" }, k: { ko: "FIN:NECT 챌린지 · 102팀 중", en: "FIN:NECT Challenge · of 102 teams" } },
     ],
     hero: {
       src: "/projects/flowpay/01.png",
@@ -285,13 +309,18 @@ export const selectedProjects: SelectedProject[] = [
   {
     id: "cleanb",
     cover: { ko: "CleanB.", en: "CleanB." },
-    kicker: { ko: "사이드 프로젝트 · 루미클린(RumiClean)", en: "Side Project · RumiClean" },
+    kicker: { ko: "외주 프로젝트 · 루미클린(RumiClean)", en: "Client Project · RumiClean" },
+    status: { ko: "배포 완료 · 결제 연동 전", en: "Deployed · Payments pending" },
+    scope: {
+      ko: ["상태 흐름 설계", "프론트엔드", "릴리스 관리", "배포"],
+      en: ["State-flow design", "Frontend", "Release management", "Deployment"],
+    },
     title: { ko: "CleanB", en: "CleanB" },
     period: { ko: "2025.11 – 현재", en: "Nov 2025 – Present" },
     role: { ko: "PM · 프론트엔드 · 디자인 (3인 팀)", en: "PM · Frontend · Design (team of 3)" },
     headline: {
-      ko: "만들고 끝나는 게 아니라,\n운영하는 서비스.",
-      en: "Not built and abandoned.\nA service we operate.",
+      ko: "호스트와 청소자가 '청소 완료'를 두고\n다투지 않는 서비스를 설계했습니다.",
+      en: "I designed a service where hosts and cleaners don't argue over whether the cleaning was done.",
     },
     did: {
       ko: [
@@ -307,19 +336,14 @@ export const selectedProjects: SelectedProject[] = [
         "Kakao Map · Firebase push integration",
       ],
     },
-    problem: {
-      ko: "에어비앤비 호스트는 믿을 청소 인력을, 청소자는 안정적인 일감을 구하기 어렵습니다. 목표는 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 운영하는 것이었습니다.",
-      en: "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to find steady work. The goal was to run it with real users, not ship it once like a hackathon project.",
+    body: {
+      ko: "외주로 맡은 에어비앤비 청소 매칭 서비스입니다. 서로 모르는 호스트와 청소자가 다투지 않으려면 완료 기준이 서비스 안에 있어야 해서, 청소 작업의 상태 흐름 5단계를 먼저 확정하고 전·후 사진 5장을 완료 조건으로 정했습니다. 청소자 화면 전체를 직접 개발해 배포했고, 지금도 수정하고 있습니다.",
+      en: "A client project: an Airbnb cleaning matching service. Hosts and cleaners who've never met need the completion standard to live inside the service, so I fixed the five-state job flow first and made five before-and-after photos the condition for completion. I built the entire cleaner-side app myself, shipped it, and I'm still revising it.",
     },
-    decision: {
-      ko: "k3s/ArgoCD는 3인 팀에게 과해서 Docker Compose + Caddy로 단순화했습니다. 배포 중 페이지가 깨지는 문제는 정적 파일을 CDN(CloudFront)으로 분리해 해결했습니다.",
-      en: "k3s/ArgoCD was too much for three people, so we simplified to Docker Compose + Caddy. Pages breaking mid-deploy were fixed by serving static files from a CDN (CloudFront).",
-    },
-    statement: { ko: "운영 복잡도는\n팀 크기에 맞춘다.", en: "Match ops complexity\nto team size." },
     stats: [
-      { v: "170+", k: { ko: "PR 리뷰 · 릴리스 머지", en: "PRs reviewed and released" } },
-      { v: { ko: "5단계", en: "5" }, k: { ko: "작업 상태, 수락 대기부터 정산 대기까지", en: "job states, pending to settlement" } },
-      { v: { ko: "3인", en: "3" }, k: { ko: "팀, 기획·디자인·개발 분담", en: "people: planning, design, dev" } },
+      { v: { ko: "5장", en: "5" }, k: { ko: "완료 인증 · 전·후 사진을 조건으로 확정", en: "before/after photos fixed as the completion condition" } },
+      { v: { ko: "5단계", en: "5" }, k: { ko: "화면 설계 · 작업 상태 흐름에서 도출", en: "job states the screens were derived from" } },
+      { v: { ko: "개선 중", en: "Ongoing" }, k: { ko: "배포 후 · 화면·정책 지속 개선", en: "after launch · screens and policy still being revised" } },
     ],
     hero: {
       src: "/projects/cleanb/01.png",
@@ -328,7 +352,7 @@ export const selectedProjects: SelectedProject[] = [
     heroTone: "muted",
     diagrams: [
       {
-        title: { ko: "작업 상태가 곧 화면 구조", en: "The job's state is the screen structure" },
+        title: { ko: "작업 상태가 화면을 정합니다", en: "The job's state decides the screen" },
         steps: [
           { label: { ko: "수락 대기", en: "Pending" }, note: { ko: "청소 요청 도착", en: "A cleaning request arrives" } },
           { label: { ko: "진행 예정", en: "Scheduled" }, note: { ko: "청소자가 수락", en: "A cleaner accepts" } },
