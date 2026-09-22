@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { m } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
-import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { selectedProjects, type SelectedProject, type Localized } from "@/data/selected";
 import { MetaRow } from "@/components/ui/meta-row";
 import { cn } from "@/lib/utils";
@@ -74,51 +74,22 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
         </p>
       </div>
 
-      {/* 2. 헤드라인 + 한 일 — 레퍼런스 'The Making of Sira' */}
+      {/* 2. 헤드라인 — 레퍼런스 'The Making of Sira'. 한 일 목록·범위 칩은 뺐다: 케이스는 문제 → 조치 → 결과 세 칸만 (FINAL §B) */}
       <div className="gutter py-20 md:py-32">
         <MetaRow items={[title, tr(p.status)]} className="mb-12 text-muted-foreground md:mb-20" />
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)] lg:items-end">
-          <m.h3
-            id={`work-${p.id}-title`}
-            initial={{ y: 20 }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="headline whitespace-pre-line"
-          >
-            {tr(p.headline)}
-          </m.h3>
-          <div>
-            <p className="eyebrow mb-4 text-muted-foreground">{t("did")}</p>
-            <ul className="space-y-2 text-[17px] font-medium leading-snug tracking-[-0.01em] md:text-[19px]">
-              {(isKo ? p.did.ko : p.did.en).map((d) => (
-                <li key={d} className="flex gap-3">
-                  <span aria-hidden="true">•</span>
-                  <span>{d}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <dl className="mt-12 grid gap-x-10 gap-y-5 border-t border-foreground pt-6 md:mt-16 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
-          <div className="grid grid-cols-[72px_1fr] gap-x-4">
-            <dt className="eyebrow pt-1 text-muted-foreground">{t("role")}</dt>
-            <dd className="text-[16px] font-semibold">{tr(p.role)}</dd>
-          </div>
-          <div className="grid grid-cols-[72px_1fr] gap-x-4">
-            <dt className="eyebrow pt-1 text-muted-foreground">{t("scope")}</dt>
-            <dd className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[16px] font-semibold">
-              {(isKo ? p.scope.ko : p.scope.en).map((s, k, arr) => (
-                <span key={s} className="inline-flex items-center gap-2">
-                  {s}
-                  {k < arr.length - 1 && (
-                    <ArrowRight aria-hidden="true" className="h-3.5 w-3.5 text-muted-foreground" />
-                  )}
-                </span>
-              ))}
-            </dd>
-          </div>
+        <m.h3
+          id={`work-${p.id}-title`}
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="headline max-w-5xl whitespace-pre-line"
+        >
+          {tr(p.headline)}
+        </m.h3>
+        <dl className="mt-12 grid grid-cols-[72px_1fr] gap-x-4 border-t border-foreground pt-6 md:mt-16">
+          <dt className="eyebrow pt-1 text-muted-foreground">{t("role")}</dt>
+          <dd className="text-[16px] font-semibold">{tr(p.role)}</dd>
         </dl>
       </div>
 
@@ -134,46 +105,11 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
         />
       </div>
 
-      {/* 4. 문제 · 결정 */}
+      {/* 4. 문제 → 조치 → 결과 (본문 세 문장) */}
       <div className="gutter py-20 md:py-32">
         <div className="border-t border-foreground pt-8">
           <p className="max-w-3xl text-[17px] leading-[1.85] md:text-[20px]">{tr(p.body)}</p>
         </div>
-        {/* 흐름 다이어그램 — PNG 대신 사이트 글꼴로. 단계 이름은 크게, 설명은 한 줄 */}
-        {p.diagrams?.map((d) => (
-          <div key={d.title.en} className="mt-20 md:mt-28">
-            <h4 className="text-[22px] font-bold leading-snug tracking-[-0.02em] md:text-[28px]">{tr(d.title)}</h4>
-            <ol
-              className={cn(
-                "mt-8 grid border-t border-foreground",
-                d.steps.length >= 5 ? "md:grid-cols-5" : "md:grid-cols-4"
-              )}
-            >
-              {d.steps.map((st, k) => (
-                <li
-                  key={st.label.en}
-                  className="border-b border-border py-5 md:border-b-0 md:border-l md:px-5 md:py-7 md:first:border-l-0 md:first:pl-0"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <p className="text-[30px] font-extrabold leading-[1.05] tracking-[-0.04em] md:text-[36px]">
-                      {tr(st.label)}
-                    </p>
-                    {k < d.steps.length - 1 && (
-                      <>
-                        <ArrowRight aria-hidden="true" className="mt-2 hidden h-5 w-5 shrink-0 text-muted-foreground md:block" />
-                        <ArrowDown aria-hidden="true" className="mt-2 h-5 w-5 shrink-0 text-muted-foreground md:hidden" />
-                      </>
-                    )}
-                  </div>
-                  <p className="mt-3 text-[15px] leading-[1.6] text-muted-foreground">{tr(st.note)}</p>
-                </li>
-              ))}
-            </ol>
-            {d.caption && (
-              <p className="mt-8 max-w-3xl text-[17px] font-semibold leading-[1.7] md:text-[19px]">{tr(d.caption)}</p>
-            )}
-          </div>
-        ))}
 
         <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-2 md:gap-6">
           {p.gallery.map((img) => (
@@ -191,7 +127,7 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
         </div>
       </div>
 
-      {/* 4-1. 현장 — 제3자(브랜드 디자인 랩)가 기록한 사진과 문장. 출처를 같이 보여준다 */}
+      {/* 4-1. 현장 — 제3자(브랜드 디자인 랩)가 기록한 사진. 인용문은 뺐고(FINAL §B) 출처는 남긴다 */}
       {p.field && (
         <div className="gutter bg-muted py-16 md:py-24">
           <div className="grid gap-3 md:grid-cols-6 md:gap-4">
@@ -207,15 +143,12 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
               </a>
             ))}
           </div>
-          <blockquote className="mt-10 max-w-3xl md:mt-14">
-            <p className="text-[19px] font-semibold leading-[1.6] tracking-[-0.01em] md:text-[24px]">“{tr(p.field.quote)}”</p>
-            <cite className="meta mt-4 block not-italic text-muted-foreground">
-              <a href={p.field.source.url} target="_blank" rel="noopener noreferrer" className="hit underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground">
-                {tr(p.field.source.label)}
-                <span className="sr-only">{isKo ? " (새 창)" : " (opens in a new tab)"}</span>
-              </a>
-            </cite>
-          </blockquote>
+          <p className="meta mt-6 text-muted-foreground md:mt-8">
+            <a href={p.field.source.url} target="_blank" rel="noopener noreferrer" className="hit underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground">
+              {tr(p.field.source.label)}
+              <span className="sr-only">{isKo ? " (새 창)" : " (opens in a new tab)"}</span>
+            </a>
+          </p>
         </div>
       )}
 
@@ -269,19 +202,6 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
               className="hit inline-flex items-center gap-1 opacity-85 transition-opacity hover:opacity-100"
             >
               {t("behance")}
-              <span className="sr-only">: {title}</span>
-              <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              <span className="sr-only">{isKo ? " (새 창)" : " (opens in a new tab)"}</span>
-            </a>
-          )}
-          {p.repo && (
-            <a
-              href={p.repo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hit inline-flex items-center gap-1 opacity-85 transition-opacity hover:opacity-100"
-            >
-              {t("repo")}
               <span className="sr-only">: {title}</span>
               <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
               <span className="sr-only">{isKo ? " (새 창)" : " (opens in a new tab)"}</span>

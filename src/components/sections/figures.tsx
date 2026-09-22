@@ -32,20 +32,20 @@ export function Figures() {
         <span className="font-bold text-accent">01</span>
         <span className="ml-3 font-semibold tracking-[0.12em]">{t("group_ops")}</span>
       </p>
-      <ol className="mt-4 border-t border-foreground">
+      {/* 전 · 화살표 · 후 · 설명 네 열을 서브그리드로 묶어 행마다 같은 x 위치에 놓는다.
+          '전' 길이가 제각각이라 flex로 두면 화살표와 '후'가 행마다 어긋난다 (2026-09-22 상현 지적). */}
+      <ol className="mt-4 grid grid-cols-[max-content_auto_minmax(0,1fr)] border-t border-foreground lg:grid-cols-[max-content_auto_max-content_minmax(0,1fr)]">
         {changes.map((c) => (
           <li
             key={c.label}
-            className="grid gap-y-4 border-b border-border py-7 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-x-10 md:py-9"
+            className="col-span-3 grid grid-cols-subgrid items-center gap-x-3 border-b border-border py-7 md:gap-x-4 md:py-9 lg:col-span-4"
           >
-            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-              <span className="text-[22px] font-bold leading-tight tracking-[-0.03em] text-muted-foreground line-through decoration-1 md:text-[26px]">
-                {c.before}
-              </span>
-              <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 self-center text-accent" />
-              <span className="text-[34px] font-extrabold leading-none tracking-[-0.04em] md:text-[44px]">{c.after}</span>
-            </div>
-            <div>
+            <span className="text-[18px] font-bold leading-tight tracking-[-0.03em] text-muted-foreground line-through decoration-1 md:text-[24px]">
+              {c.before}
+            </span>
+            <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 text-accent" />
+            <span className="text-[26px] font-extrabold leading-none tracking-[-0.04em] md:whitespace-nowrap md:text-[40px]">{c.after}</span>
+            <div className="col-span-3 mt-4 lg:col-span-1 lg:mt-0 lg:pl-10">
               <p className="text-[17px] font-bold tracking-[-0.01em] md:text-[19px]">{c.label}</p>
               <p className="mt-2 text-[15px] leading-[1.7] text-foreground/80">{c.d}</p>
               <p className="meta mt-2 text-muted-foreground">{c.basis}</p>

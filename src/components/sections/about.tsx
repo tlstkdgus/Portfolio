@@ -60,7 +60,6 @@ export function About() {
       {/* What I do — 레퍼런스 3번 슬라이드: 큰 질문 + 짧은 답 + 흩어진 키워드 */}
       <div className="mt-28 md:mt-40">
         <h2 className="display">{t("what_heading")}</h2>
-        <p className="mt-6 max-w-lg text-[16px] leading-[1.8] text-muted-foreground">{t("what_sub")}</p>
         <ul className="mt-14 grid grid-cols-2 border-t border-foreground md:mt-20 md:grid-cols-3">
           {skills.map((s) => (
             <li

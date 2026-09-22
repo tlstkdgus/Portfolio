@@ -44,7 +44,6 @@
     "description_1": "I started in frontend development, and leading projects as staff for HUFS LIKELION's 13th cohort taught me that **\"who uses this, and why\" has to be answered before \"how do we build it.\"** Now, before I draw a screen, I check how users actually behave, and I build whatever is needed, **whether that's a screen, a backend, or an AI tool**.",
     "description_2": "As a LIKELION intern I planned and ran an 80-university community platform, **the 14th national hackathon, and the national ideathon**, and I'm still improving RumiClean, a client project, after launch. I studied Global Business & Technology with an AI Convergence major and **won 11 awards** along the way.",
     "what_heading": "What I do.",
-    "what_sub": "Most of my time goes into understanding users. I find answers in what they actually do, not in assumptions, and keep fixing after I ship.",
     "skills": [
       "Service planning",
       "User research",
@@ -88,14 +87,11 @@
   },
   "selected": {
     "index_heading": "Selected work.",
-    "did": "What I did",
     "impact": "Impact",
     "case_cta": "Read the case study",
     "live": "Visit site",
-    "repo": "GitHub",
     "behance": "Behance case (Brand Design Lab)",
-    "role": "Role",
-    "scope": "Scope"
+    "role": "Role"
   },
   "projects": {
     "heading": "Other projects.",
@@ -174,7 +170,7 @@
         "before": "Paper roll call",
         "after": "QR scan, auto-logged",
         "label": "13th cohort session attendance",
-        "d": "Staff put up a QR code, members scan it on their phones, it's recorded on the server instantly, and only late or absent members show up on the roll.",
+        "d": "Staff put up a QR code, members scan it on their phones, it's recorded on the server instantly, lateness is judged automatically at the 20-minute mark, and only late or absent members show up on the roll.",
         "basis": "Basis: 45 members of HUFS LIKELION's 13th cohort · WelcomeKit PWA"
       },
       {
