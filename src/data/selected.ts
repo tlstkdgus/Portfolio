@@ -43,10 +43,8 @@ export interface SelectedProject {
   role: Localized;
   headline: Localized;
   did: { ko: string[]; en: string[] };
-  problem: Localized;
-  decision: Localized;
-  /** 성과 화면 상단의 한 줄 — 이 프로젝트의 판단을 요약 */
-  statement: Localized;
+  /** 문제 → 조치 → 결과, 완결형 세 문장 (v9 어투 규칙) */
+  body: Localized;
   stats: SelectedStat[];
   hero: SelectedImage;
   /** 대표 화면 배경 — 어두운 스크린샷은 ink, 밝은 화면은 muted */
@@ -73,15 +71,15 @@ export const selectedProjects: SelectedProject[] = [
     kicker: { ko: "멋쟁이사자처럼 인턴 · 14기 중앙해커톤", en: "LIKELION Internship · 14th Hackathon" },
     status: { ko: "완료 · 2026.08 본선", en: "Completed · Finals Aug 2026" },
     scope: {
-      ko: ["가이드·워밍업 기획", "정책·명세 공동 설계", "도구 3종 직접 제작", "본선 현장 운영"],
+      ko: ["가이드·워밍업 기획", "정책·명세 공동 설계", "운영 도구 3개 직접 제작", "본선 현장 운영"],
       en: ["Guide & warm-ups", "Policy & specs (co-)", "3 tools, built", "On-site finals"],
     },
     title: { ko: "14기 중앙해커톤 기획·운영", en: "LIKELION 14th Hackathon" },
     period: { ko: "2026.06 – 2026.08", en: "Jun – Aug 2026" },
     role: { ko: "커뮤니티 매니저 인턴 · 기획·운영", en: "Community Manager Intern · Planning & Ops" },
     headline: {
-      ko: "80개 대학, 2,000명 해커톤을\n기획부터 본선까지 운영했습니다.",
-      en: "Planned and ran an 80‑university, 2,000‑person hackathon end to end.",
+      ko: "2,000명의 참가자가 평가 기준을\n예측할 수 있는 해커톤을 만들었습니다.",
+      en: "I made a hackathon where 2,000 participants could predict how they'd be judged.",
     },
     did: {
       ko: [
@@ -99,20 +97,13 @@ export const selectedProjects: SelectedProject[] = [
         "On-site finals operations",
       ],
     },
-    problem: {
-      ko: "313팀 · 562개 레포의 '마감 후 수정 금지' 검증과 2,000명 앞 실시간 토너먼트. 참가자·심사위원·파트너의 이해가 부딪히는 곳마다 규칙이 필요했고, 수작업으로는 불가능했습니다.",
-      en: "Verifying 562 repos from 313 teams against a 'no edits after deadline' rule, and running a live tournament for 2,000 people. Every collision between participants, judges, and partners needed a rule, and none of it could be done by hand.",
+    body: {
+      ko: "313팀이 참가하는 해커톤에서 참가자는 무엇을 제출하면 어떻게 평가받는지 알기 어려웠고, 문의는 운영진이 하루 3시간씩 직접 답하고 있었습니다. 제출 항목과 심사 기준을 1:1로 연결해 평가를 예측할 수 있게 했고, 참가자가 겪는 순서대로 가이드를 짜고 FAQ 봇이 즉답하게 했습니다. 본선 결과는 심사위원 투표가 무대 스크린에 바로 반영되도록 콘솔(Next.js · Supabase)을 DB 스키마부터 직접 개발해 진행했습니다.",
+      en: "With 313 teams competing, participants couldn't tell what to submit or how it would be judged, and the staff were answering inquiries by hand for three hours a day. I mapped submission items 1:1 to judging criteria so scoring became predictable, structured the guide in the order participants live it, and had an FAQ bot answer instantly. For the finals I built the console (Next.js · Supabase) from the DB schema up so judges' votes showed on the stage screen as they came in.",
     },
-    decision: {
-      ko: "도구는 근거만 내고 판정은 사람이 합니다. 위반 차등 기준(기능 수정 실격 · README 감점 · 직후 커밋 정상참작)을 검사 전에 합의했습니다. 콘솔은 '되돌릴 수 없는 현장'을 전제로 심사위원 명단제, 롤백 없는 결과 공개, 네트워크 장애 백업 모드를 먼저 설계했습니다.",
-      en: "Tools present evidence; people decide. Graded violation criteria (code changes = DQ, README edits = deduction, just-late commits = leniency) were agreed before scanning. The console assumed an irreversible live event: a judge allowlist, no rollback after reveal, and a network-failure backup mode came first.",
-    },
-    statement: { ko: "도구는 근거만 내고,\n판정은 사람이 합니다.", en: "Tools show evidence. People decide." },
     stats: [
-      { v: { ko: "562개", en: "562" }, k: { ko: "레포 전 브랜치 전수 검사", en: "repos swept, every branch" } },
-      { v: { ko: "5팀", en: "5" }, k: { ko: "위반 적발 · 2팀 실격", en: "violations caught · 2 DQ'd" } },
-      { v: { ko: "2.2초", en: "2.2s" }, k: { ko: "콘솔 조작이 무대 스크린에 뜨기까지 (실측)", en: "console-to-stage latency, measured" } },
-      { v: { ko: "229건", en: "229" }, k: { ko: "FAQ 봇 응대 · 미응답 0건", en: "questions answered by the bot · 0 missed" } },
+      { v: "80.8%", k: { ko: "문의 즉답 · 하루 3시간 직접 답변에서, 미응답 0건", en: "inquiries answered instantly · from 3 hours a day by hand, 0 missed" } },
+      { v: { ko: "2.2초", en: "2.2 s" }, k: { ko: "결과 공개 · 엑셀·PPT 집계에서 투표가 스크린에 뜨기까지", en: "result reveal · from Excel and PPT tallies to vote-on-screen" } },
     ],
     hero: {
       src: "/projects/hackathon14/02.png",
@@ -139,15 +130,15 @@ export const selectedProjects: SelectedProject[] = [
       {
         title: { ko: "'마감 후 수정 금지'를 선언이 아니라 집행으로", en: "Enforcing 'no edits after deadline', not just announcing it" },
         steps: [
-          { label: { ko: "가설", en: "Hypothesis" }, note: { ko: "마감 후에도 커밋하는 팀이 있습니다. 562개 레포는 손으로 검사할 수 없습니다", en: "Some teams commit after the deadline; 562 repos can't be checked by hand" } },
+          { label: { ko: "가설", en: "Hypothesis" }, note: { ko: "마감 후에도 커밋하는 팀이 있습니다. 제출된 레포 전부를 손으로 검사할 수 없습니다", en: "Some teams commit after the deadline; 562 repos can't be checked by hand" } },
           { label: { ko: "기준 합의", en: "Agree criteria" }, note: { ko: "검사 전에 결정: 기능 수정 실격 · README 감점 · 직후 커밋 정상참작", en: "Before scanning: code change = DQ · README = deduction · just-late = leniency" } },
           { label: { ko: "전수 검사", en: "Full scan" }, note: { ko: "check.py로 전 브랜치의 마감 후 커밋 · force-push · 비공개 전환 탐지", en: "check.py sweeps every branch for late commits, force-pushes, private flips" } },
           { label: { ko: "근거 리포트", en: "Evidence" }, note: { ko: "결과를 엑셀로 정리해 운영진 회의에 넘깁니다. 자동 판정은 하지 않습니다", en: "Results go to the staff meeting as a spreadsheet. No automatic verdicts" } },
           { label: { ko: "사람의 판정", en: "People decide" }, note: { ko: "위반 5팀 적발, 차등 기준으로 2팀 실격", en: "5 violations found; 2 disqualified under the graded criteria" } },
         ],
         caption: {
-          ko: "도구가 사람 대신 판정하는 순간 규칙의 정당성이 무너집니다.",
-          en: "The moment a tool judges instead of people, the rule loses its legitimacy.",
+          ko: "판정 기준을 검사 전에 합의하고 도구는 근거만 제시하도록 했기 때문에, 위반 5팀을 합의된 기준으로 판정할 수 있었습니다.",
+          en: "Because the criteria were agreed before scanning and the tool only presented evidence, the five violations were judged against a standard everyone had accepted.",
         },
       },
     ],
@@ -203,8 +194,8 @@ export const selectedProjects: SelectedProject[] = [
     period: { ko: "2026.07 – 2026.08", en: "Jul – Aug 2026" },
     role: { ko: "기획·제작·강의 단독", en: "Planned, built, and taught solo" },
     headline: {
-      ko: "비개발 동료가 개발자와\n대화할 수 있도록, 점심 여섯 번.",
-      en: "Six lunch breaks to help non-developers talk with developers.",
+      ko: "비개발 동료가 개발자와 대화할 수 있도록\n점심 강의 6회를 설계했습니다.",
+      en: "I designed six lunchtime sessions so non-developers could talk with developers.",
     },
     did: {
       ko: [
@@ -220,20 +211,14 @@ export const selectedProjects: SelectedProject[] = [
         "14 SVG diagrams · 51-term glossary",
       ],
     },
-    problem: {
-      ko: "비전공 동료에게 '배포'·'API'는 여전히 어렵습니다. AI에게 물어보면 답이 나오는 시대지만, 기본 흐름을 모르면 무엇을 물어야 할지조차 모릅니다.",
-      en: "For non-developer colleagues, 'deploy' and 'API' were still hard. You can ask AI anything now, but without the basic flow, you don't know what to ask.",
+    body: {
+      ko: "비전공 동료들은 '배포'나 'API' 같은 기본 흐름을 몰라 AI에게 무엇을 물어야 할지조차 어려워했습니다. 목표를 '개발자와 대화하기'로 좁히고, 설치 없이 브라우저에서 바로 되는 실습만 남긴 6회 커리큘럼과 교육 사이트를 직접 만들어 강의했습니다. 수강자 6명 전원이 만족도 5점을 주었고, 개발자와의 대화가 더 이해된다는 응답이 4.7점이었습니다.",
+      en: "Non-developer colleagues didn't know basic flows like 'deploy' or 'API', so they couldn't even tell what to ask an AI. I narrowed the goal to 'talking with developers', kept only exercises that run in the browser with no installs, and built the six-session curriculum and course site myself, then taught it. All six attendees rated it 5 out of 5, and 'I understand developer conversations better' scored 4.7.",
     },
-    decision: {
-      ko: "코드를 가르치지 않기로 했습니다. 목표를 '개발자 되기'에서 '개발자와 대화하기'로 좁히고, 설치·계정 없이 브라우저에서 바로 되는 실습만 남겼습니다. 밥 먹으면서 듣는 환경이 전제였습니다.",
-      en: "I decided not to teach code, narrowing the goal from 'becoming a developer' to 'talking with developers', and keeping only demos that run in the browser with no installs or accounts. People would be listening over lunch.",
-    },
-    statement: { ko: "개발자가 되는 게 아니라,\n개발자와 대화하는 법을 가르쳤습니다.", en: "Not becoming a developer. Talking with one." },
     stats: [
-      { v: "5/5", k: { ko: "만족도, 수강자 6명 전원", en: "satisfaction, all 6 attendees" } },
+      { v: "4.7/5", k: { ko: "개발자와의 대화가 이해된다", en: "I understand developer conversations better" } },
+      { v: "5/5", k: { ko: "만족도 · 수강자 6명 전원", en: "satisfaction · all 6 attendees" } },
       { v: "9.7/10", k: { ko: "추천 의향", en: "would recommend" } },
-      { v: "4.7/5", k: { ko: "개발자와의 대화가 더 이해됩니다", en: "better grasp of developer conversations" } },
-      { v: { ko: "6회", en: "6" }, k: { ko: "점심 강의 · 6주", en: "lunch sessions over 6 weeks" } },
     ],
     hero: {
       src: "/projects/devsite/01.png",
@@ -270,8 +255,8 @@ export const selectedProjects: SelectedProject[] = [
     period: { ko: "2025.06 – 2025.08", en: "Jun – Aug 2025" },
     role: { ko: "PM · 프론트엔드 · IR", en: "PM · Frontend · IR" },
     headline: {
-      ko: "무기명 법인카드 정산을\n8단계에서 3단계로.",
-      en: "Anonymous corporate card reconciliation, from 8 steps to 3.",
+      ko: "무기명 법인카드 정산 8단계를\n3단계로 줄였습니다.",
+      en: "I cut anonymous corporate card reconciliation from 8 steps to 3.",
     },
     did: {
       ko: [
@@ -287,19 +272,14 @@ export const selectedProjects: SelectedProject[] = [
         "Market sizing · IR pitch",
       ],
     },
-    problem: {
-      ko: "지출보고서 1건에 20분, 회계담당자는 월 100건 이상. 기업당 연 약 1,000시간이 정산에 사라집니다. 근본 원인은 무기명 카드에 사용자가 기록되지 않는 구조였습니다.",
-      en: "20 minutes per expense report, 100+ a month for each accountant: about 1,000 hours a year per company. The root cause: anonymous cards record no user.",
+    body: {
+      ko: "회계담당자는 지출보고서 1건에 20분씩, 월 100건 이상을 처리하고 있었습니다. 인터뷰해 보니 진짜 병목은 결제 이후 수기로 작성하는 전표라고 판단했고, 익명성을 지키는 가명 토큰 Flow ID로 결제 시점부터 사용자를 식별해 지출보고서가 자동 생성되도록 설계했습니다. FIN:NECT 챌린지에서 102팀 중 5위에 올랐습니다.",
+      en: "Accountants were spending 20 minutes per expense report, over 100 reports a month. Interviews showed the real bottleneck was the vouchers written by hand after each payment, so I designed Flow ID, a pseudonymous token that identifies the user at the moment of payment while keeping anonymity, so expense reports generate themselves. It placed 5th of 102 teams at the FIN:NECT Challenge.",
     },
-    decision: {
-      ko: "회계담당자 인터뷰에서 확인한 문제는 결제가 아니라 결제 이후의 수기 전표였고, 여기에 맞춰 설계했습니다. 실명인증 대신 익명성을 지키는 가명토큰을 택하고, MVP를 ERP 전체 연동에서 지출보고서 자동 생성으로 좁혔습니다.",
-      en: "Interviews with working accountants showed the problem wasn't paying but the manual vouchers after payment, so that's what we designed for. We chose pseudonymous tokens over real-name auth to keep anonymity, and cut the MVP from full ERP integration to auto-generated expense reports.",
-    },
-    statement: { ko: "정산 8단계를\n3단계로 줄였습니다.", en: "Reconciliation, from 8 steps to 3." },
     stats: [
-      { v: "8→3", k: { ko: "정산 단계 수, 8단계에서 3단계로", en: "steps in the reconciliation flow, 8 down to 3" } },
-      { v: { ko: "5위", en: "5th" }, k: { ko: "102팀 중 · FIN:NECT 장려상", en: "of 102 teams · FIN:NECT award" } },
-      { v: { ko: "20분", en: "20 min" }, k: { ko: "기존 지출보고서 1건 작성 시간", en: "per expense report, before" } },
+      { v: "8 → 3", k: { ko: "정산 단계", en: "reconciliation steps" } },
+      { v: { ko: "자동 생성", en: "Automatic" }, k: { ko: "지출보고서 1건 · 20분 수작업에서", en: "expense reports · from 20 minutes by hand" } },
+      { v: { ko: "5위", en: "5th" }, k: { ko: "FIN:NECT 챌린지 · 102팀 중", en: "FIN:NECT Challenge · of 102 teams" } },
     ],
     hero: {
       src: "/projects/flowpay/01.png",
@@ -339,8 +319,8 @@ export const selectedProjects: SelectedProject[] = [
     period: { ko: "2025.11 – 현재", en: "Nov 2025 – Present" },
     role: { ko: "PM · 프론트엔드 · 디자인 (3인 팀)", en: "PM · Frontend · Design (team of 3)" },
     headline: {
-      ko: "만들고 끝나는 게 아니라,\n운영하는 서비스.",
-      en: "Not built and abandoned.\nA service we operate.",
+      ko: "호스트와 청소자가 '청소 완료'를 두고\n다투지 않는 서비스를 설계했습니다.",
+      en: "I designed a service where hosts and cleaners don't argue over whether the cleaning was done.",
     },
     did: {
       ko: [
@@ -356,19 +336,14 @@ export const selectedProjects: SelectedProject[] = [
         "Kakao Map · Firebase push integration",
       ],
     },
-    problem: {
-      ko: "외주로 맡은 에어비앤비 청소 매칭 서비스입니다. 호스트는 믿을 청소 인력을, 청소자는 안정적인 일감을 구하기 어렵습니다. 목표는 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 운영하는 것이었습니다.",
-      en: "A client project: an Airbnb cleaning matching service. Hosts struggle to find reliable cleaners; cleaners struggle to find steady work. The goal was to run it with real users, not ship it once.",
+    body: {
+      ko: "외주로 맡은 에어비앤비 청소 매칭 서비스입니다. 서로 모르는 호스트와 청소자가 다투지 않으려면 완료 기준이 서비스 안에 있어야 해서, 청소 작업의 상태 흐름 5단계를 먼저 확정하고 전·후 사진 5장을 완료 조건으로 정했습니다. 청소자 화면 전체를 직접 개발해 배포했고, 지금도 수정하고 있습니다.",
+      en: "A client project: an Airbnb cleaning matching service. Hosts and cleaners who've never met need the completion standard to live inside the service, so I fixed the five-state job flow first and made five before-and-after photos the condition for completion. I built the entire cleaner-side app myself, shipped it, and I'm still revising it.",
     },
-    decision: {
-      ko: "기능 목록 대신 청소 작업의 상태 흐름(수락 대기 → 진행 예정 → 진행 중 → 검수 대기 → 정산 대기)을 먼저 확정하고 화면을 도출했습니다. '청소가 됐는가'로 호스트와 청소자가 다투지 않도록 전·후 사진 최소 5장을 완료 조건으로 정했고, 배포 후 깨진 화면은 정적 파일을 CDN으로 분리해 잡았습니다.",
-      en: "Instead of a feature list, I fixed the job's state flow first (pending → scheduled → in progress → review → settlement) and derived the screens from it. So hosts and cleaners never argue over 'was it cleaned,' completion requires at least five before/after photos; pages that broke after deploy were fixed by moving static files to a CDN.",
-    },
-    statement: { ko: "분쟁의 근거는\n서비스가 갖습니다.", en: "The service, not the parties, holds the evidence." },
     stats: [
-      { v: "170+", k: { ko: "PR 리뷰 · 릴리스 머지", en: "PRs reviewed and released" } },
-      { v: { ko: "5단계", en: "5" }, k: { ko: "작업 상태, 수락 대기부터 정산 대기까지", en: "job states, pending to settlement" } },
-      { v: { ko: "3인", en: "3" }, k: { ko: "팀, 기획·디자인·개발 분담", en: "people: planning, design, dev" } },
+      { v: { ko: "5장", en: "5" }, k: { ko: "완료 인증 · 전·후 사진을 조건으로 확정", en: "before/after photos fixed as the completion condition" } },
+      { v: { ko: "5단계", en: "5" }, k: { ko: "화면 설계 · 작업 상태 흐름에서 도출", en: "job states the screens were derived from" } },
+      { v: { ko: "개선 중", en: "Ongoing" }, k: { ko: "배포 후 · 화면·정책 지속 개선", en: "after launch · screens and policy still being revised" } },
     ],
     hero: {
       src: "/projects/cleanb/01.png",
@@ -377,7 +352,7 @@ export const selectedProjects: SelectedProject[] = [
     heroTone: "muted",
     diagrams: [
       {
-        title: { ko: "작업 상태가 곧 화면 구조", en: "The job's state is the screen structure" },
+        title: { ko: "작업 상태가 화면을 정합니다", en: "The job's state decides the screen" },
         steps: [
           { label: { ko: "수락 대기", en: "Pending" }, note: { ko: "청소 요청 도착", en: "A cleaning request arrives" } },
           { label: { ko: "진행 예정", en: "Scheduled" }, note: { ko: "청소자가 수락", en: "A cleaner accepts" } },

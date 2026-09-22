@@ -29,18 +29,14 @@ export const experiences: Experience[] = [
     startDate: "2026-04",
     endDate: "2026-08",
     description: [
-      "전국 80개 대학, 2,500여 명 규모의 대학(유니브) 커뮤니티 운영·관리",
-      "14기 중앙해커톤(80개 대학 · 참가자 2,000명+) 운영 — 심사 정책·해커톤 플랫폼 기능명세서 2종·워밍업 세션 3회 공동 기획, 운영 도구 3종(제출물 검사 · 본선 콘솔 · FAQ 봇) AI로 직접 제작·투입, 본선 현장 운영",
-      "비개발 직군 대상 사내 개발 교육 6회 기획·제작·강의 — 설문 6명 만족도 전원 5/5, 추천 의향 9.7/10",
-      "전국 단위 연합 아이디어톤 운영 참여 (1,822명 · 378개 프로젝트) — 본선 심사 자동화 시트(Google Sheets)와 만족도조사 설계·470건 분석 보고서(NPS +7.02) 팀원들과 공동 기획, 실시간 Q&A·문의 대응",
-      "공지·SNS 콘텐츠 제작, 플랫폼 기반 운영 업무 자동화",
+      "14기 중앙해커톤(80개 대학 · 2,000명+)을 기획부터 본선 운영까지 담당",
+      "비개발 직군 대상 사내 개발 교육 6회 기획·제작·강의 — 만족도 전원 5/5",
+      "전국 연합 아이디어톤(1,822명) 운영 참여 — 심사 자동화 시트 · 470건 만족도 분석 공동 기획",
     ],
     descriptionEn: [
-      "Managed the nationwide LIKELION Univ. community — 80 universities, ~2,500 members",
-      "Ran the 14th national hackathon (80 universities, 2,000+ participants) — co-planned judging policy, 2 platform feature specs, and a 3-part warm-up series; built and deployed 3 ops tools with AI (submission checker, finals console, FAQ bot); ran on-site finals operations",
-      "Created and taught a 6-session internal dev-literacy course for non-developers — survey of 6 attendees: 5/5 satisfaction across the board, 9.7/10 recommendation",
-      "Helped operate the national ideathon (1,822 participants, 378 projects) — co-planned the finals scoring automation (Google Sheets) and a satisfaction survey with a 470-response analysis report (NPS +7.02); handled real-time Q&A and inquiries",
-      "Produced announcements and SNS content, automated ops workflows",
+      "Planned and ran the 14th national hackathon (80 universities, 2,000+ participants) through the finals",
+      "Planned, built, and taught a 6-session internal dev course for non-developers — 5/5 satisfaction from every attendee",
+      "Helped run the national ideathon (1,822 participants) — co-planned the scoring automation sheet and a 470-response satisfaction analysis",
     ],
     tags: ["Community", "Event Ops", "Content", "Automation"],
   },
@@ -56,7 +52,7 @@ export const experiences: Experience[] = [
     startDate: "2026-01",
     endDate: "2026-04",
     description: [
-      "알고리즘·자료구조·백엔드(Java) 중심의 비전공 Java 트랙 교육 과정 수료",
+      "알고리즘·Java 백엔드 중심의 비전공 Java 트랙 교육 과정 수료",
       "실전 프로젝트 기반 학습으로 프로덕트 관점과 개발 역량을 함께 보강",
     ],
     descriptionEn: [

@@ -34,17 +34,12 @@ export function About() {
             <span className="font-medium tracking-[-0.04em]">{t("name_line")}</span>
           </h2>
           <div className="measure mt-8 space-y-4 text-[16px] leading-[1.8] text-foreground/80">
-            <p className="text-[18px] font-semibold leading-[1.6] text-foreground md:text-[20px]">{t("description_1")}</p>
+            <p className="text-[17px] leading-[1.8] md:text-[18px]">
+              <Emph text={t("description_1")} />
+            </p>
             <p>
               <Emph text={t("description_2")} />
             </p>
-            <p>
-              <Emph text={t("description_3")} />
-            </p>
-            <p>
-              <Emph text={t("description_4")} />
-            </p>
-            <p className="font-semibold text-foreground">{t("closing")}</p>
           </div>
 
           <dl className="measure meta mt-8 grid gap-x-6 gap-y-2 border-t border-border pt-5 text-muted-foreground sm:grid-cols-[72px_1fr]">

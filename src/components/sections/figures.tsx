@@ -1,67 +1,79 @@
 "use client";
 
-import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 
-interface Figure {
-  label: string;
+interface Change {
   before: string;
-  beforeNote: string;
   after: string;
-  afterNote: string;
+  label: string;
+  d: string;
   basis: string;
-  case: string;
+}
+interface ScaleItem {
+  v: string;
+  label: string;
+  note: string;
 }
 
-// 도구를 만들기 전과 후. '전'은 상현이 직접 겪은 운영 방식이고, 추정치는 문구에 '추정'을 남긴다.
+// 운영이 실제로 바뀐 것만 적는다. '전'은 상현이 직접 겪은 방식이고, 추정치는 문구에 '추정'을 남긴다 (v9).
+// 사용자 수·방문수는 확보되지 않아 넣지 않는다.
 export function Figures() {
   const t = useTranslations("figures");
-  const locale = useLocale();
-  const items: Figure[] = t.raw("items");
+  const changes: Change[] = t.raw("changes");
+  const scale: ScaleItem[] = t.raw("scale");
 
   return (
     <section id="figures" className="gutter pb-24 md:pb-36">
       <SectionHeading sub={t("sub")}>{t("heading")}</SectionHeading>
-      <ol className="border-t border-foreground">
-        {items.map((f) => (
+
+      <p className="meta text-muted-foreground">
+        <span className="font-bold text-accent">01</span>
+        <span className="ml-3 font-semibold tracking-[0.12em]">{t("group_ops")}</span>
+      </p>
+      <ol className="mt-4 border-t border-foreground">
+        {changes.map((c) => (
           <li
-            key={f.label}
-            className="grid gap-y-5 border-b border-border py-8 md:grid-cols-[minmax(0,3fr)_minmax(0,4fr)_minmax(0,5fr)] md:gap-x-10 md:py-10"
+            key={c.label}
+            className="grid gap-y-4 border-b border-border py-7 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-x-10 md:py-9"
           >
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <span className="text-[22px] font-bold leading-tight tracking-[-0.03em] text-muted-foreground line-through decoration-1 md:text-[26px]">
+                {c.before}
+              </span>
+              <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 self-center text-accent" />
+              <span className="text-[34px] font-extrabold leading-none tracking-[-0.04em] md:text-[44px]">{c.after}</span>
+            </div>
             <div>
-              <p className="text-[17px] font-bold tracking-[-0.01em] md:text-[19px]">{f.label}</p>
-              <p className="meta mt-2 text-muted-foreground">{f.basis}</p>
-            </div>
-            <div className="flex items-start gap-4 md:block">
-              <div>
-                <p className="meta text-muted-foreground">{t("before")}</p>
-                <p className="mt-1 text-[24px] font-bold leading-tight tracking-[-0.03em] text-muted-foreground line-through decoration-1 md:text-[30px]">
-                  {f.before}
-                </p>
-                <p className="mt-1.5 text-[14px] leading-snug text-muted-foreground">{f.beforeNote}</p>
-              </div>
-            </div>
-            <div className="grid grid-cols-[28px_1fr] items-start gap-x-3">
-              <ArrowRight aria-hidden="true" className="mt-2 h-6 w-6 text-accent" />
-              <div>
-                <p className="meta text-accent">{t("after")}</p>
-                <p className="mt-1 text-[36px] font-extrabold leading-none tracking-[-0.04em] md:text-[48px]">{f.after}</p>
-                <p className="mt-2 text-[15px] leading-snug">{f.afterNote}</p>
-                <Link
-                  href={`/${locale}/career#section-${f.case}`}
-                  className="hit mt-3 inline-flex items-center gap-1 text-[14px] font-semibold text-accent hover:underline underline-offset-4"
-                >
-                  {t("case_link")}
-                  <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
-                  <span className="sr-only">: {f.label}</span>
-                </Link>
-              </div>
+              <p className="text-[17px] font-bold tracking-[-0.01em] md:text-[19px]">{c.label}</p>
+              <p className="mt-2 text-[15px] leading-[1.7] text-foreground/80">{c.d}</p>
+              <p className="meta mt-2 text-muted-foreground">{c.basis}</p>
             </div>
           </li>
         ))}
       </ol>
+
+      <p className="meta mt-16 text-muted-foreground md:mt-20">
+        <span className="font-bold text-accent">02</span>
+        <span className="ml-3 font-semibold tracking-[0.12em]">{t("group_scale")}</span>
+      </p>
+      <dl className="mt-4 grid border-t border-foreground md:grid-cols-3">
+        {scale.map((x, i) => (
+          <div
+            key={x.label}
+            className={
+              "border-b border-border py-6 md:border-b-0 md:py-8 " +
+              (i > 0 ? "md:border-l md:pl-8" : "") +
+              (i < scale.length - 1 ? " md:pr-8" : "")
+            }
+          >
+            <dd className="text-[36px] font-extrabold leading-none tracking-[-0.04em] md:text-[44px]">{x.v}</dd>
+            <dt className="mt-3 text-[16px] font-semibold">{x.label}</dt>
+            <p className="meta mt-1 text-muted-foreground">{x.note}</p>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

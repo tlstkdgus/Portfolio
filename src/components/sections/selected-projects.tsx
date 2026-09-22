@@ -136,15 +136,8 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
 
       {/* 4. 문제 · 결정 */}
       <div className="gutter py-20 md:py-32">
-        <div className="grid gap-12 border-t border-foreground pt-8 md:grid-cols-2 md:gap-16">
-          <div>
-            <p className="eyebrow text-muted-foreground">{t("problem")}</p>
-            <p className="mt-5 text-[17px] leading-[1.8] md:text-[19px]">{tr(p.problem)}</p>
-          </div>
-          <div>
-            <p className="eyebrow text-accent">{t("decision")}</p>
-            <p className="mt-5 text-[17px] leading-[1.8] md:text-[19px]">{tr(p.decision)}</p>
-          </div>
+        <div className="border-t border-foreground pt-8">
+          <p className="max-w-3xl text-[17px] leading-[1.85] md:text-[20px]">{tr(p.body)}</p>
         </div>
         {/* 흐름 다이어그램 — PNG 대신 사이트 글꼴로. 단계 이름은 크게, 설명은 한 줄 */}
         {p.diagrams?.map((d) => (
@@ -229,11 +222,11 @@ function ProjectSlides({ p, i, isKo }: { p: SelectedProject; i: number; isKo: bo
       {/* 5. 성과 — 블루 화면. 레퍼런스 'WE CONCLUDED THAT… 18% 76%' */}
       <div className="gutter bg-accent-surface py-20 text-accent-foreground md:py-32">
         <MetaRow items={[t("impact"), title]} className="mb-12 opacity-90 md:mb-20" />
-        <p className="headline whitespace-pre-line">{tr(p.statement)}</p>
+        <p className="headline whitespace-pre-line">{tr(p.headline)}</p>
         <dl
           className={cn(
             "mt-16 grid gap-x-8 gap-y-12 md:mt-24",
-            p.stats.length === 4 ? "grid-cols-2 lg:grid-cols-4" : "grid-cols-2 md:grid-cols-3"
+            p.stats.length === 2 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-2 md:grid-cols-3"
           )}
         >
           {p.stats.map((s) => (
