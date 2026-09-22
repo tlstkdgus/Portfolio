@@ -17,7 +17,7 @@
     "name": "Sanghyeon Shin",
     "wordmark": "Portfolio",
     "lead": "A service planner who finds the answer in what users actually do, then builds and ships.",
-    "summary": "As a LIKELION intern I **planned and ran an 80-university, 2,000-person national hackathon through the finals**, and over two years I've **planned, built, and shipped 15+ services**.",
+    "summary": "As a LIKELION intern I planned and ran an 80-university community platform and **a 2,000-person national hackathon through the finals**, and over two years I've **planned, built, and shipped 15+ services**.",
     "metrics": [
       {
         "v": "2,000+",
@@ -42,7 +42,7 @@
     "hello": "Hello!",
     "name_line": "I'm Sanghyeon Shin.",
     "description_1": "I started in frontend development, and leading projects as staff for HUFS LIKELION's 13th cohort taught me that **\"who uses this, and why\" has to be answered before \"how do we build it.\"** Now, before I draw a screen, I check how users actually behave, and I build whatever is needed, **whether that's a screen, a backend, or an AI tool**.",
-    "description_2": "As a LIKELION intern I **planned and ran the 14th national hackathon through the finals**, and I'm still improving RumiClean, a client project, after launch. I studied Global Business & Technology with an AI Convergence major and **won 11 awards** along the way.",
+    "description_2": "As a LIKELION intern I planned and ran an 80-university community platform, **the 14th national hackathon, and the national ideathon**, and I'm still improving RumiClean, a client project, after launch. I studied Global Business & Technology with an AI Convergence major and **won 11 awards** along the way.",
     "what_heading": "What I do.",
     "what_sub": "Most of my time goes into understanding users. I find answers in what they actually do, not in assumptions, and keep fixing after I ship.",
     "skills": [
@@ -171,6 +171,13 @@
         "basis": "Basis: 8-team finals tournament · measured · 14th hackathon"
       },
       {
+        "before": "Paper roll call",
+        "after": "QR scan, auto-logged",
+        "label": "13th cohort session attendance",
+        "d": "Staff put up a QR code, members scan it on their phones, it's recorded on the server instantly, and only late or absent members show up on the roll.",
+        "basis": "Basis: 45 members of HUFS LIKELION's 13th cohort · WelcomeKit PWA"
+      },
+      {
         "before": "8 steps",
         "after": "3 steps",
         "label": "Corporate card reconciliation",
@@ -183,6 +190,11 @@
         "v": "2,000+",
         "label": "14th hackathon participants",
         "note": "80 universities · 313 teams"
+      },
+      {
+        "v": "45",
+        "label": "13th cohort WelcomeKit app users",
+        "note": "attendance · bingo · profiles"
       },
       {
         "v": "6 of 6 at 5/5",

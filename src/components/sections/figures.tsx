@@ -58,17 +58,13 @@ export function Figures() {
         <span className="font-bold text-accent">02</span>
         <span className="ml-3 font-semibold tracking-[0.12em]">{t("group_scale")}</span>
       </p>
-      <dl className="mt-4 grid border-t border-foreground md:grid-cols-3">
-        {scale.map((x, i) => (
+      <dl className="mt-4 grid border-t border-foreground md:grid-cols-2 lg:grid-cols-4">
+        {scale.map((x) => (
           <div
             key={x.label}
-            className={
-              "border-b border-border py-6 md:border-b-0 md:py-8 " +
-              (i > 0 ? "md:border-l md:pl-8" : "") +
-              (i < scale.length - 1 ? " md:pr-8" : "")
-            }
+            className="border-b border-border py-6 md:py-8 md:odd:pr-8 md:even:border-l md:even:pl-8 lg:border-b-0 lg:[&:not(:first-child)]:border-l lg:[&:not(:first-child)]:pl-8 lg:[&:not(:last-child)]:pr-8"
           >
-            <dd className="text-[36px] font-extrabold leading-none tracking-[-0.04em] md:text-[44px]">{x.v}</dd>
+            <dd className="whitespace-nowrap text-[34px] font-extrabold leading-none tracking-[-0.04em] md:text-[40px] lg:text-[clamp(27px,2.7vw,40px)]">{x.v}</dd>
             <dt className="mt-3 text-[16px] font-semibold">{x.label}</dt>
             <p className="meta mt-1 text-muted-foreground">{x.note}</p>
           </div>
