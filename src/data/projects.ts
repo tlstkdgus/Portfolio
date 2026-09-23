@@ -49,11 +49,11 @@ export const projects: Project[] = [
     repo: "https://github.com/tlstkdgus/animal-league",
     goals: [
       "참가자·심사위원·파트너의 이해가 충돌하는 지점마다 규칙이 필요했습니다. 심사 기준, 제출 요건, 수료 기준, 위반 처리까지 — 정책으로 풀어야 하는 문제였습니다",
-      "313팀이 제출한 562개 레포의 '마감 후 수정 금지' 검증과 2,000명 앞 실시간 토너먼트 진행은 수작업으로 불가능했습니다. 없는 도구는 직접 만들어야 했습니다",
+      "314팀이 제출한 562개 레포의 '마감 후 수정 금지' 검증과 2,000명 앞 실시간 토너먼트 진행은 수작업으로 불가능했습니다. 없는 도구는 직접 만들어야 했습니다",
     ],
     goalsEn: [
       "Every point where participants, judges, and partners collided needed a rule — judging criteria, submission requirements, completion standards, violation handling",
-      "Verifying 562 repos from 313 teams against a 'no edits after deadline' rule, and running a live tournament in front of 2,000 people, was impossible by hand — the missing tools had to be built",
+      "Verifying 562 repos from 314 teams against a 'no edits after deadline' rule, and running a live tournament in front of 2,000 people, was impossible by hand — the missing tools had to be built",
     ],
     contents: [
       "심사 정책 공동 설계 — 3단계 퍼널(서류 60팀 → 트랙 피칭 8팀 → 토너먼트 1팀), 공통 심사 기준 100점 배점, 제출 항목과 심사 기준의 1:1 연계, 공정성 규칙(대본 낭독 0점 · 기기 통일 · 랜덤 추첨)",

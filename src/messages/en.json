@@ -151,7 +151,7 @@
         "after": "One run",
         "label": "Checking 562 submitted repos",
         "d": "Post-deadline commits, force-pushes, and private flips were detected automatically across every branch, and people made the verdicts against agreed criteria.",
-        "basis": "Basis: after the 313-team deadline · 5 violations found · 14th hackathon"
+        "basis": "Basis: after the 314-team deadline · 5 violations found · 14th hackathon"
       },
       {
         "before": "Excel → PPT",
@@ -172,7 +172,7 @@
       {
         "v": "2,000+",
         "label": "14th hackathon participants",
-        "note": "80 universities · 313 teams · registered through the community platform"
+        "note": "80 universities · 314 teams · registered through the community platform"
       },
       {
         "v": "45",
