@@ -3,7 +3,7 @@
     "about": "소개",
     "experience": "경력",
     "projects": "프로젝트",
-    "certified": "수상·학력",
+    "certified": "수상",
     "contact": "연락처",
     "hero": "표지",
     "rail_label": "페이지 위치"
@@ -15,7 +15,7 @@
   },
   "hero": {
     "name": "신상현",
-    "lead": "사용자의 실제 행동에서 답을 찾아,직접 만들어 배포하는 서비스 기획자, \n신상현입니다.",
+    "lead": "사용자의 실제 행동에서 답을 찾아,\n직접 만들어 배포하는 서비스 기획자, \n 신상현입니다.",
     "summary": "멋쟁이사자처럼 12기 프론트엔드 트랙으로 IT 분야를 처음 접했고, 13기 운영진으로 프로젝트를 이끌면서 **'어떻게 만들까'보다 '누가, 왜 쓰는가'에 먼저 답해야 한다**는 것을 배웠습니다. 이후 인턴으로 2,000명 규모 중앙해커톤을 기획부터 본선 운영까지 맡았고, 문의 응대·제출물 검사·본선 집계에 쓸 도구를 **직접 만들어 현장에서 운영**했습니다.",
     "metrics": [
       {
@@ -51,7 +51,18 @@
       "Python",
       "Supabase",
       "LLM API"
-    ]
+    ],
+    "edu_label": "학력",
+    "training_label": "교육",
+    "cert_label": "자격증",
+    "gpa": "GPA 4.13 / 4.5",
+    "training_title": "SSAFY 15기 · 비전공 Java 트랙",
+    "training_detail": "삼성 청년 SW·AI 아카데미",
+    "training_date": "2026.01 – 2026.04",
+    "profile_heading": "Profile.",
+    "military_label": "병역",
+    "military_title": "육군 병장 만기 제대",
+    "military_date": "2021.10 – 2023.04"
   },
   "principles": {
     "heading": "How I work.",
@@ -91,15 +102,7 @@
     "heading": "Awards.",
     "count_label": "교내외 수상",
     "awards": "주요 수상",
-    "awards_rest": "그 외 수상",
-    "edu_heading": "Education & Certifications.",
-    "edu_label": "학력",
-    "training_label": "교육",
-    "cert_label": "자격증",
-    "gpa": "GPA 4.13 / 4.5",
-    "training_title": "SSAFY 15기 · 비전공 Java 트랙",
-    "training_detail": "삼성 청년 SW·AI 아카데미 · 수료",
-    "training_date": "2026.01 – 2026.04"
+    "awards_rest": "그 외 수상"
   },
   "contact": {
     "heading": "Let's talk.",

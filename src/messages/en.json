@@ -3,7 +3,7 @@
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
-    "certified": "Awards · Education",
+    "certified": "Awards",
     "contact": "Contact",
     "hero": "Cover",
     "rail_label": "Page position"
@@ -51,7 +51,18 @@
       "Python",
       "Supabase",
       "LLM APIs"
-    ]
+    ],
+    "edu_label": "Education",
+    "training_label": "Training",
+    "cert_label": "Certifications",
+    "gpa": "GPA 4.13 / 4.5",
+    "training_title": "SSAFY 15th Cohort · Non-CS Java Track",
+    "training_detail": "Samsung SW·AI Academy For Youth",
+    "training_date": "2026.01 – 2026.04",
+    "profile_heading": "Profile.",
+    "military_label": "Military",
+    "military_title": "ROK Army, Sergeant, Honorable Discharge",
+    "military_date": "2021.10 – 2023.04"
   },
   "principles": {
     "heading": "How I work.",
@@ -91,15 +102,7 @@
     "heading": "Awards.",
     "count_label": "Competition awards",
     "awards": "Highlighted awards",
-    "awards_rest": "More awards",
-    "edu_heading": "Education & Certifications.",
-    "edu_label": "Education",
-    "training_label": "Training",
-    "cert_label": "Certifications",
-    "gpa": "GPA 4.13 / 4.5",
-    "training_title": "SSAFY 15th Cohort · Non-CS Java Track",
-    "training_detail": "Samsung SW·AI Academy For Youth · Completed",
-    "training_date": "2026.01 – 2026.04"
+    "awards_rest": "More awards"
   },
   "contact": {
     "heading": "Let's talk.",
