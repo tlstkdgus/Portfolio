@@ -1533,7 +1533,24 @@ export const careerDetailSections: CareerDetailSection[] = [
     id: "dotori",
     title: "시각장애인을 위한 점자 교육 플랫폼 — dotori",
     titleEn: "Braille Education Platform for the Visually Impaired — dotori",
+    // 발표 자료(3조_발표자료.pdf)에서 2400px로 렌더링. 팀원 소개(p.21)와 인터뷰이 사진·실명(p.27)은 싣지 않는다
+    images: [
+      "/projects/dotori/01.png",
+      "/projects/dotori/02.png",
+      "/projects/dotori/03.png",
+      "/projects/dotori/04.png",
+      "/projects/dotori/05.png",
+      "/projects/dotori/06.png",
+      "/projects/dotori/07.png",
+      "/projects/dotori/08.png",
+      "/projects/dotori/09.png",
+    ],
     background: [
+      {
+        text: "점자를 모르는 시각장애인이 90.4%(보건복지부)이고, 등록 시각장애인은 1990년 14,618명에서 2020년 252,324명으로 늘었습니다(통계청). 점자 교구는 150만~777만 원대라 학습을 시작하기조차 어려웠고, 월 9,900원부터 시작하는 구독형 앱으로 비용 문턱을 낮추는 방향을 잡았습니다.",
+        textEn:
+          "90.4% of visually impaired people cannot read Braille (Ministry of Health and Welfare), and registered visually impaired people grew from 14,618 in 1990 to 252,324 in 2020 (Statistics Korea). Braille learning devices cost ₩1.5M–7.77M, so even starting was hard; we set out to lower that barrier with a subscription app from ₩9,900 a month.",
+      },
       {
         text: "시각장애인의 점자 교육 접근성과 학습 지속성 문제를 창업캠프 과제로 정의하고, 사회적 가치와 수익 모델을 함께 설계했습니다. 2025.06 창업캠프에서 시작해 11월 창업 BM 경진대회까지 세 차례 피칭을 거치며 고도화했습니다.",
         textEn:
@@ -1580,6 +1597,16 @@ export const careerDetailSections: CareerDetailSection[] = [
     id: "16play",
     title: "MBTI 커뮤니티 — 16P!ay",
     titleEn: "MBTI Community — 16P!ay",
+    // 발표 자료(16P!ay(3팀).pdf)에서 2400px로 렌더링. 목차·개발 환경·명세서(글씨가 읽히지 않음)·Q&A는 뺐다
+    images: [
+      "/projects/16play/01.png",
+      "/projects/16play/02.png",
+      "/projects/16play/03.png",
+      "/projects/16play/04.png",
+      "/projects/16play/05.png",
+      "/projects/16play/06.png",
+      "/projects/16play/07.png",
+    ],
     background: [
       {
         text: "멋쟁이사자처럼 13기 미니프로젝트로 MBTI 기반 커뮤니티를 기획·디자인·개발했습니다.",
@@ -1589,13 +1616,13 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "기획·디자인·개발 — 단독",
-        titleEn: "Planning, Design & Development — Solo",
+        title: "PM · 기획·디자인·프론트엔드",
+        titleEn: "PM · Planning, Design & Frontend",
         items: [
           {
-            text: "서비스 IA·화면 설계·프론트엔드 구현까지 단일 PM으로 전 과정을 맡았습니다.",
+            text: "MBTI별 게시판, 밸런스 게임, 단점 보완 체크, 책 추천, 마이페이지로 이어지는 화면 흐름(UX Flow)과 기능·API 명세서를 정리하고, 화면 디자인과 프론트엔드를 맡았습니다.",
             textEn:
-              "Owned IA, UI design, and frontend implementation end-to-end as the sole PM/lead.",
+              "Laid out the screen flow (UX Flow) and feature/API specs across the MBTI boards, balance game, weakness checklist, book recommendations, and my page, and handled the UI design and frontend.",
           },
         ],
       },
