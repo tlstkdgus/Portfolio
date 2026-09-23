@@ -12,7 +12,7 @@ import { MetaRow } from "@/components/ui/meta-row";
 import { cn } from "@/lib/utils";
 import { fitStat } from "@/lib/fit-stat";
 
-// 프로젝트 상세 페이지. 순서: 제목·메타 → 자료 → (대표 4개) 요약·성과 → 배경 → 내가 한 일 → 결과 → 배운 점.
+// 프로젝트 상세 페이지. 순서: 제목·메타 → 자료 → (대표 4개) 요약·성과 → 배경 → 실행 → 결과 → 배운 점.
 // 이전 /career 한 페이지에서는 '배경·역할·결과·배운 점' 라벨이 13px 회색 eyebrow라 섹션 경계가 안 보였다
 // (2026-09-23 피드백). 섹션 제목을 본문보다 확실히 크게 두고, 본문은 17~18px 본문색으로 올렸다.
 export function WorkDetail({ id }: { id: string }) {
@@ -137,7 +137,7 @@ export function WorkDetail({ id }: { id: string }) {
         </section>
       )}
 
-      {/* 4. 배경 · 내가 한 일 · 결과 · 배운 점 */}
+      {/* 4. 배경 · 실행 · 결과 · 배운 점 */}
       <div className="gutter space-y-20 py-20 md:space-y-28 md:py-28">
         <Section n="01" label={t("background")}>
           <Items items={detail.background} isKo={isKo} />
