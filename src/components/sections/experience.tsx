@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { experiences } from "@/data/experience";
+import { Emph } from "@/components/ui/emph";
 
 // 레퍼런스 'Where I've worked.' — 왼쪽 큰 제목, 오른쪽 연도·역할 목록.
 // 첫 항목(멋사 인턴)은 항상 펼쳐 보여 메인 경험으로 읽히게 한다.
@@ -34,7 +35,9 @@ export function Experience() {
                   <span aria-hidden="true" className="text-ink-muted">
                     —
                   </span>
-                  <span>{item}</span>
+                  <span>
+                    <Emph text={item} />
+                  </span>
                 </li>
               ))}
             </ul>

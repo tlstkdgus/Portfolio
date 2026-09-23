@@ -15,25 +15,24 @@
   },
   "hero": {
     "name": "Sanghyeon Shin",
-    "wordmark": "Portfolio",
     "lead": "A service planner who finds the answer in what users actually do, then builds and ships.",
-    "summary": "As a LIKELION intern I planned and ran an 80-university community platform and **a 2,000-person national hackathon through the finals**, and over two years I've **planned, built, and shipped 15+ services**.",
+    "summary": "As a LIKELION intern I ran the [community platform](https://likelion.community/) used by 2,500+ students across 80 universities, and took **the 2,000-person national hackathon that registered through it from planning through the finals**. Inquiries the staff answered by hand for three hours a day, a submission check that would take about two days by hand, and finals results tallied in Excel — **I built an FAQ bot, a checking tool, and a finals console for them and ran them on site**.",
     "metrics": [
       {
         "v": "2,000+",
-        "k": "hackathon participants"
+        "k": "hackathon participants on site"
       },
       {
-        "v": "3 hrs → 10 mins",
-        "k": "average inquiry response time"
+        "v": "80.8%",
+        "k": "inquiries answered instantly · 0 of 229 unanswered"
       },
       {
-        "v": "0",
-        "k": "unanswered of 229 questions"
+        "v": "2.2 s",
+        "k": "from judges' votes to the stage screen"
       },
       {
-        "v": "11",
-        "k": "awards"
+        "v": "5",
+        "k": "violating teams caught in a full sweep of 562 repos"
       }
     ],
     "scroll": "Scroll"
@@ -41,8 +40,8 @@
   "about": {
     "hello": "Hello!",
     "name_line": "I'm Sanghyeon Shin.",
-    "description_1": "I started in frontend development, and leading projects as staff for HUFS LIKELION's 13th cohort taught me that **\"who uses this, and why\" has to be answered before \"how do we build it.\"** Now, before I draw a screen, I check how users actually behave, and I build whatever is needed, **whether that's a screen, a backend, or an AI tool**.",
-    "description_2": "As a LIKELION intern I planned and ran an 80-university community platform, **the 14th national hackathon, and the national ideathon**, and I'm still improving RumiClean, a client project, after launch. I studied Global Business & Technology with an AI Convergence major and **won 11 awards** along the way.",
+    "description_1": "I first got into IT through the frontend track of LIKELION's 12th cohort. Leading projects as staff for HUFS LIKELION's 13th cohort then taught me that **\"who uses this, and why\" has to be answered before \"how do we build it.\"** Now, before I draw a screen, I check how users actually behave, and I build whatever is needed, **whether that's a screen, a backend, or an AI tool**.",
+    "description_2": "I'm still improving RumiClean, a client project, after launch. I studied Global Business & Technology with an AI Convergence major and **won 11 awards** along the way.",
     "what_heading": "What I do.",
     "skills": [
       "Service planning",
@@ -170,9 +169,9 @@
     ],
     "scale": [
       {
-        "v": "2,000+",
-        "label": "14th hackathon participants",
-        "note": "80 universities · 313 teams"
+        "v": "2,500+",
+        "label": "Community platform operated",
+        "note": "80 universities · where hackathon and ideathon teams registered"
       },
       {
         "v": "45",

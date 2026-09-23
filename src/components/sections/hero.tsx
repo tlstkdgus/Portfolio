@@ -7,8 +7,9 @@ import { profile } from "@/data/profile";
 import { Emph } from "@/components/ui/emph";
 import { cn } from "@/lib/utils";
 
-// 표지 — 레퍼런스 1번 슬라이드. 워드마크를 한 단계 줄여서 핵심 숫자 4개까지 첫 화면 안에 넣는다
-// (2026-09-22 상현 승인). 이름·섹션 순서는 그대로 둔다.
+// 표지. 가장 큰 글자는 포지셔닝 문장이고, 바로 아래 문단과 숫자 4개가 그 문장을 증명한다 (2026-09-24).
+// 이전에는 'Portfolio' 워드마크가 가장 컸는데 정보가 없는 글자였다. 'Portfolio 2026'은 위 메타 줄에 남긴다.
+// 이름을 거대하게 두는 안은 상현이 거절했다(2026-09) — 이름은 문장 끝 "신상현입니다"로만.
 export function Hero() {
   const t = useTranslations("hero");
   const tm = useTranslations("meta");
@@ -37,20 +38,15 @@ export function Hero() {
           initial={{ y: 24 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="wordmark -ml-[0.04em] text-foreground"
-          style={{ fontSize: "clamp(3.75rem, min(15vw, 26svh), 13rem)" }}
+          className="mt-8 whitespace-pre-line text-balance font-extrabold leading-[1.18] tracking-[-0.045em] text-foreground md:mt-10"
+          style={{ fontSize: "clamp(2rem, 4.6vw, 4.5rem)" }}
         >
-          {t("wordmark")}
+          {t("lead")}
         </m.h1>
 
-        <div className="mt-6 grid gap-5 md:mt-8 md:grid-cols-2 md:gap-10">
-          <p className="whitespace-pre-line text-balance text-[22px] font-bold leading-[1.35] tracking-[-0.02em] md:text-[26px]">
-            {t("lead")}
-          </p>
-          <p className="max-w-lg text-[15px] leading-[1.7] text-muted-foreground md:justify-self-end md:text-[16px]">
-            <Emph text={t("summary")} />
-          </p>
-        </div>
+        <p className="mt-6 max-w-4xl text-[16px] leading-[1.75] text-muted-foreground md:mt-8 md:text-[18px]">
+          <Emph text={t("summary")} />
+        </p>
 
         <dl className="mt-8 grid grid-cols-2 border-t border-foreground md:mt-10 md:grid-cols-4">
           {metrics.map(({ v, k }, i) => (
@@ -63,7 +59,7 @@ export function Hero() {
                 i > 0 ? "md:border-l md:px-8" : "md:pr-8"
               )}
             >
-              <dd className="text-[40px] font-extrabold leading-none tracking-[-0.05em] md:text-[52px]">{v}</dd>
+              <dd className="text-[30px] font-extrabold leading-none tracking-[-0.05em] md:text-[clamp(1.75rem,2.8vw,2.75rem)]">{v}</dd>
               <dt className="mt-2 text-[14px] font-medium leading-snug text-muted-foreground">{k}</dt>
             </div>
           ))}
