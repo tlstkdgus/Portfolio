@@ -31,7 +31,7 @@ export function CareerStoryContent() {
         <div className="flex flex-1 flex-col justify-end pt-16">
           <Link
             href={`/${locale}/#projects`}
-            className="hit meta mb-6 inline-flex w-fit items-center gap-1.5 text-ink-muted transition-colors hover:text-ink-foreground"
+            className="hit meta mb-6 inline-flex min-h-11 w-fit items-center gap-1.5 text-ink-muted transition-colors hover:text-ink-foreground"
           >
             <ArrowLeft aria-hidden="true" className="h-3.5 w-3.5" />
             {t("back")}

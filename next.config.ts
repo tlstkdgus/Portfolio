@@ -45,7 +45,6 @@ const nextConfig: NextConfig = {
               "script-src 'self' 'unsafe-inline'",
               "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net",
               "img-src 'self' data: blob:",
-              "frame-src https://player.vimeo.com",
               "font-src 'self' https://cdn.jsdelivr.net",
               "connect-src 'self' https://vitals.vercel-analytics.com https://*.vercel-insights.com",
               "frame-ancestors 'none'",

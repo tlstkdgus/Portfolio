@@ -1559,8 +1559,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "기획 및 IR 피칭",
-        titleEn: "Planning & IR Pitching",
+        title: "기획·IR 피칭 · 프론트엔드",
+        titleEn: "Planning, IR Pitching & Frontend",
         items: [
           {
             text: "서비스 콘셉트·타겟·수익 모델을 정리하고 IR 피칭 경진대회에서 발표를 진행했습니다.",
@@ -1609,9 +1609,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "멋쟁이사자처럼 13기 미니프로젝트로 MBTI 기반 커뮤니티를 기획·디자인·개발했습니다.",
+        text: "멋쟁이사자처럼 13기 운영진으로서 아기사자(13기 부원)들과 함께 MBTI 기반 커뮤니티를 기획·디자인·개발한 미니프로젝트입니다.",
         textEn:
-          "Planned, designed, and developed an MBTI-based community as a Likelion 13th cohort mini project.",
+          "A mini project where, as 13th-cohort staff, I planned, designed, and built an MBTI-based community together with the cohort's members.",
       },
     ],
     role: [

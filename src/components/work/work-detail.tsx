@@ -8,9 +8,9 @@ import { fmtPeriod, getWork, workHref, type WorkEntry } from "@/lib/work";
 import type { CareerDetailItem, FlowDiagram } from "@/data/career-detail";
 import type { Localized } from "@/data/selected";
 import { ImageCarousel } from "@/components/ui/image-carousel";
-import { VimeoLoop } from "@/components/ui/vimeo-loop";
 import { MetaRow } from "@/components/ui/meta-row";
 import { cn } from "@/lib/utils";
+import { fitStat } from "@/lib/fit-stat";
 
 // 프로젝트 상세 페이지. 순서: 제목·메타 → 자료 → (대표 4개) 요약·성과 → 배경 → 내가 한 일 → 결과 → 배운 점.
 // 이전 /career 한 페이지에서는 '배경·역할·결과·배운 점' 라벨이 13px 회색 eyebrow라 섹션 경계가 안 보였다
@@ -26,7 +26,8 @@ export function WorkDetail({ id }: { id: string }) {
 
   const name = tr(entry.name);
   const images = dedupe([
-    ...(selected ? [selected.hero.src, ...selected.gallery.map((g) => g.src)] : []),
+    // 메인 카드 썸네일(해커톤 키 비주얼)도 캐러셀 첫 장에 둔다
+    ...(selected ? [...(selected.thumb ? [selected.thumb.src] : []), selected.hero.src, ...selected.gallery.map((g) => g.src)] : []),
     ...(detail.images ?? []),
   ]);
   const roles = selected ? tr(selected.role) : (isKo ? project?.roles : project?.rolesEn)?.join(" · ");
@@ -40,7 +41,7 @@ export function WorkDetail({ id }: { id: string }) {
       <header className="gutter pb-12 pt-24 md:pb-16 md:pt-32">
         <Link
           href={backHref}
-          className="hit meta inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
+          className="hit meta inline-flex min-h-11 items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
         >
           <ArrowLeft aria-hidden="true" className="h-3.5 w-3.5" />
           {selected ? t("back_selected") : t("back_other")}
@@ -76,25 +77,10 @@ export function WorkDetail({ id }: { id: string }) {
       </header>
 
       {/* 2. 자료 — 발표 자료·화면. 원본 PDF에서 2400px로 다시 뽑았다 */}
-      {/* 1-1. 반복 영상 (해커톤) — 제3자 제작물이라 출처를 붙인다 */}
-      {selected?.video && (
-        <figure className="gutter bg-ink py-10 md:py-16">
-          <div className="mx-auto max-w-6xl">
-            <VimeoLoop
-              id={selected.video.vimeoId}
-              ratio={selected.video.ratio}
-              poster={selected.video.poster}
-              title={tr(selected.video.title)}
-            />
-            <figcaption className="meta mt-4 text-ink-muted">{tr(selected.video.credit)}</figcaption>
-          </div>
-        </figure>
-      )}
-
       {images.length > 0 && (
         <div className={cn("gutter py-10 md:py-16", selected?.heroTone === "ink" ? "bg-ink" : "bg-muted")}>
           <div className="mx-auto max-w-6xl">
-            <ImageCarousel images={images} alt={name} />
+            <ImageCarousel images={images} alt={name} tone={selected?.heroTone === "ink" ? "ink" : "light"} />
           </div>
         </div>
       )}
@@ -126,7 +112,9 @@ export function WorkDetail({ id }: { id: string }) {
                       <span className="sr-only">{isKo ? "에서" : "to"}</span>
                     </p>
                   )}
-                  <dd className="stat">{typeof s.v === "string" ? s.v : tr(s.v)}</dd>
+                  <dd className="stat" style={fitStat(selected.stats.map((x) => (typeof x.v === "string" ? x.v : tr(x.v))))}>
+                    {typeof s.v === "string" ? s.v : tr(s.v)}
+                  </dd>
                   <dt className="mt-3 text-[15px] font-medium leading-snug opacity-90 md:text-[16px]">{tr(s.k)}</dt>
                 </div>
               ))}
@@ -228,7 +216,7 @@ export function WorkDetail({ id }: { id: string }) {
         </div>
         <Link
           href={`/${locale}/career`}
-          className="hit meta mt-10 inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
+          className="hit meta mt-10 inline-flex min-h-11 items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
         >
           {t("all")}
           <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />

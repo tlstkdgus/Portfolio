@@ -858,8 +858,8 @@ export const projects: Project[] = [
     subtitleEn: "Braille Education Platform for the Visually Impaired",
     period: "2025.06. ~ 2025.11.",
     periodEn: "Jun 2025 — Nov 2025",
-    roles: ["PM", "IR"],
-    rolesEn: ["PM", "IR"],
+    roles: ["PM", "IR", "프론트엔드"],
+    rolesEn: ["PM", "IR", "Frontend"],
     goals: [
       "시각장애인의 점자 교육 콘텐츠 접근성 부재 문제를 IT 플랫폼으로 해소하는 서비스 기획",
       "소셜 임팩트와 비즈니스 실현 가능성을 함께 설득하는 IR 피칭 전략 수립",
@@ -900,19 +900,19 @@ export const projects: Project[] = [
     rolesEn: ["PM", "Design", "Frontend"],
     goals: [
       "MBTI 16가지 성격 유형을 기반으로, 같은 유형끼리는 공감·소통하고 다른 유형과는 차이를 탐색하는 커뮤니티 서비스 기획",
-      "멋쟁이사자처럼 13기 운영진 활동과 병행하여 단독으로 기획·디자인·개발까지 완성",
+      "멋쟁이사자처럼 13기 운영진으로서 아기사자(13기 부원)들과 함께 기획·디자인·개발까지 완성",
     ],
     goalsEn: [
       "Planned a community service where same MBTI types connect over shared traits while exploring differences with other types",
-      "Completed solo — planning, design, and development — while serving as 13th cohort staff",
+      "Built with the 13th-cohort members as their staff lead — from planning and design to development",
     ],
     contents: [
-      "16가지 MBTI 유형별 전용 게시판, 유형 간 교류 공간, MBTI 성격 분석 콘텐츠 등 서비스 구조 설계",
-      "React 기반 UI 기획·Figma 와이어프레임 제작·프론트엔드 개발 전 과정 단독 수행",
+      "16가지 MBTI 유형별 전용 게시판, 유형 간 교류 공간, MBTI 성격 분석 콘텐츠 등 서비스 흐름 설계",
+      "PM으로 UI 기획·Figma 와이어프레임을 맡고 React 프론트엔드 개발에 참여",
     ],
     contentsEn: [
       "Designed service structure: type-specific boards, cross-type interaction spaces, and MBTI personality analysis content",
-      "Handled solo: UI planning, Figma wireframing, and full React frontend development",
+      "As PM, owned UI planning and Figma wireframes and worked on the React frontend",
     ],
     results: [
       "멋쟁이사자처럼 13기 미니프로젝트 최우수상",

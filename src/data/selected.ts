@@ -38,8 +38,6 @@ export interface SelectedProject {
   summary: Localized;
   /** 메인 목록 썸네일. 없으면 hero */
   thumb?: SelectedImage;
-  /** 상세 페이지 상단 반복 영상 (Vimeo background 모드). 동작 줄이기 설정이면 poster 이미지만 */
-  video?: { vimeoId: string; ratio: string; poster: string; title: Localized; credit: Localized };
   /** 문제 → 조치 → 결과, 완결형 세 문장 (v9 어투 규칙) */
   body: Localized;
   stats: SelectedStat[];
@@ -76,20 +74,14 @@ export const selectedProjects: SelectedProject[] = [
       src: "/projects/hackathon14/keyvisual.jpg",
       alt: { ko: "ANIMAL LEAGUE 14th Hackathon 키 비주얼: 트로피를 든 사자와 동물 캐릭터들", en: "ANIMAL LEAGUE 14th Hackathon key visual: a lion holding a trophy with animal characters" },
     },
-    video: {
-      vimeoId: "1227718161",
-      ratio: "2728 / 2160",
-      poster: "/projects/hackathon14/keyvisual.jpg",
-      title: { ko: "ANIMAL LEAGUE 영상", en: "ANIMAL LEAGUE video" },
-      credit: { ko: "영상 · 브랜드 디자인: 멋쟁이사자처럼 브랜드 디자인 랩", en: "Video and brand design: LIKELION Brand Design Lab" },
-    },
     body: {
       ko: "313팀이 참가하는 해커톤에서 참가자는 무엇을 제출하면 어떻게 평가받는지 알기 어려웠고, 문의는 운영진이 하루 3시간씩 직접 답하고 있었습니다. 제출 항목과 심사 기준을 1:1로 연결해 평가를 예측할 수 있게 했고, 참가자가 겪는 순서대로 가이드를 짜고 FAQ 봇이 즉답하게 했습니다. 본선 결과는 심사위원 투표가 무대 스크린에 바로 반영되도록 콘솔(Next.js · Supabase)을 DB 스키마부터 직접 개발해 진행했습니다.",
       en: "With 313 teams competing, participants couldn't tell what to submit or how it would be judged, and the staff were answering inquiries by hand for three hours a day. I mapped submission items 1:1 to judging criteria so scoring became predictable, structured the guide in the order participants live it, and had an FAQ bot answer instantly. For the finals I built the console (Next.js · Supabase) from the DB schema up so judges' votes showed on the stage screen as they came in.",
     },
     stats: [
-      { before: { ko: "하루 3시간", en: "3 h/day" }, v: { ko: "80.8% 즉답", en: "80.8% instant" }, k: { ko: "참가자 문의 · 229건 중 미응답 0건", en: "participant inquiries · 0 of 229 unanswered" } },
+      { before: { ko: "하루 3시간", en: "3 h/day" }, v: { ko: "80.8% 즉답", en: "80.8% instant" }, k: { ko: "참가자 문의 · 미응답 0건", en: "participant inquiries · none left unanswered" } },
       { before: { ko: "엑셀 → PPT", en: "Excel → PPT" }, v: { ko: "2.2초", en: "2.2 s" }, k: { ko: "본선 결과 공개 · 심사 투표가 무대 스크린에 뜨기까지", en: "finals reveal · from judges' votes to the stage screen" } },
+      { before: { ko: "약 2일 (추정)", en: "~2 days (est.)" }, v: { ko: "1회 실행", en: "One run" }, k: { ko: "제출물 전수 검사 · 위반 5팀 적발", en: "full submission sweep · 5 violating teams caught" } },
     ],
     hero: {
       src: "/projects/hackathon14/02.png",
