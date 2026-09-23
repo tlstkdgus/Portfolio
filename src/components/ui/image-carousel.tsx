@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 
@@ -43,12 +43,26 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
           key={current}
           src={images[current]}
           alt={`${alt} ${current + 1}`}
-          width={1280}
-          height={720}
-          sizes="(max-width: 1024px) 100vw, 1024px"
+          width={2400}
+          height={1350}
+          // 발표 슬라이드는 작은 글씨가 많아 기본 품질(75)에서 글자 가장자리가 뭉개졌다
+          quality={90}
+          sizes="(max-width: 1200px) 100vw, 1152px"
           className="h-auto w-full object-contain"
         />
       </div>
+
+      {/* 원본 크기 — 슬라이드 속 표·작은 글씨를 확대해 볼 수 있게 */}
+      <a
+        href={images[current]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute right-2 top-2 inline-flex h-9 items-center gap-1 bg-black/80 px-2.5 text-[13px] font-medium text-white transition hover:bg-black"
+      >
+        {isKo ? "원본 크기" : "Full size"}
+        <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+        <span className="sr-only">{isKo ? " (새 창)" : " (opens in a new tab)"}</span>
+      </a>
 
       {/* Controls — only when multiple images */}
       {images.length > 1 && (

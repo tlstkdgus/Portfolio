@@ -22,7 +22,7 @@ A service planner who finds the answer in what users actually do, then builds an
 
 ## Operating Context
 
-- Main page: a one-page scroll. Case studies: `/career`, with deep links (`/career#section-<id>`) from the main page. The Korean page is `/ko` and the English page is `/en`.
+- Main page: a one-page scroll. Each project has its own page `/work/<id>` (2026-09-23); the main page shows the four selected projects only as a short list (one-line summary, key impact, role, "자세히 보기 →") because the full slide sequences made the page ~30 screens long. `/career` is the list of all projects; legacy `/career#section-<id>` links redirect to `/work/<id>`. Flow diagrams are HTML (career-detail `diagrams`), never PNG, so the copy stays editable and sharp; slide images come from the original PDFs rendered at 2400px. The Korean page is `/ko` and the English page is `/en`.
 - Reviewers usually compare it against the résumé PDF, so the facts must match PORTFOLIO.md, the single source for all application documents.
 - Deployed on Vercel. Link previews (OG images) appear when the URL is shared.
 

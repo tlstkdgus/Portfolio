@@ -24,8 +24,8 @@
         "k": "hackathon participants"
       },
       {
-        "v": "8 → 3",
-        "k": "reconciliation steps"
+        "v": "3 hrs → 10 mins",
+        "k": "average inquiry response time"
       },
       {
         "v": "0",
@@ -87,16 +87,15 @@
   },
   "selected": {
     "index_heading": "Selected work.",
-    "impact": "Impact",
-    "case_cta": "Read the case study",
-    "live": "Visit site",
-    "behance": "Behance case (Brand Design Lab)",
-    "role": "Role"
+    "sub": "Projects where I found the problem, then built and shipped the answer myself. Each project page covers the background and my role in detail.",
+    "key_impact": "Key impact",
+    "role": "Role",
+    "more": "View project"
   },
   "projects": {
     "heading": "Other projects.",
-    "sub": "Work beyond the selected projects. Each case study covers the background, my role, and lessons learned.",
-    "detail_link": "Case study"
+    "sub": "Work beyond the selected projects. Open one to see the background, my role, the results, and what I learned.",
+    "detail_link": "Project page"
   },
   "certified": {
     "heading": "Awards.",
@@ -131,13 +130,8 @@
   },
   "career_story": {
     "title": "Case Studies.",
-    "subtitle": "Background, role, results, and lessons behind each project.",
-    "back": "Back to main",
-    "background": "Background",
-    "role": "Role",
-    "results": "Results",
-    "lessons": "Lessons",
-    "toc": "Contents"
+    "subtitle": "Every project in one list. Open one to see its background, my role, the results, and what I learned.",
+    "back": "Back to main"
   },
   "figures": {
     "heading": "Changes I can prove in numbers",
@@ -172,13 +166,6 @@
         "label": "13th cohort session attendance",
         "d": "Staff put up a QR code, members scan it on their phones, it's recorded on the server instantly, lateness is judged automatically at the 20-minute mark, and only late or absent members show up on the roll.",
         "basis": "Basis: 45 members of HUFS LIKELION's 13th cohort · WelcomeKit PWA"
-      },
-      {
-        "before": "8 steps",
-        "after": "3 steps",
-        "label": "Corporate card reconciliation",
-        "d": "I designed it to identify the user at the moment of payment so expense reports generate themselves.",
-        "basis": "Basis: FlowPay design (prototype) · FIN:NECT, 5th of 102"
       }
     ],
     "scale": [
@@ -193,7 +180,7 @@
         "note": "attendance · bingo · profiles"
       },
       {
-        "v": "6 of 6 at 5/5",
+        "v": "everyone 5/5",
         "label": "Internal dev course satisfaction",
         "note": "9.7/10 would recommend"
       },
@@ -203,5 +190,26 @@
         "note": "1,822 participants"
       }
     ]
+  },
+  "work": {
+    "back_selected": "Selected work",
+    "back_other": "All projects",
+    "period": "Period",
+    "role": "Role",
+    "status": "Status",
+    "links": "Links",
+    "live": "Visit site",
+    "behance": "Behance case (Brand Design Lab)",
+    "summary": "Summary",
+    "impact": "Impact",
+    "background": "Background",
+    "did": "What I did",
+    "results": "Results",
+    "lessons": "What I learned",
+    "field": "On site",
+    "pager": "Other projects",
+    "prev": "Previous project",
+    "next": "Next project",
+    "all": "All projects"
   }
 }

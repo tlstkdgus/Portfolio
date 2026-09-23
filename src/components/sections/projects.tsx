@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import { selectedProjects } from "@/data/selected";
+import { fmtPeriod, workHref } from "@/lib/work";
 
 const selectedIds = new Set(selectedProjects.map((s) => s.caseId));
 const rest = projects.filter((p) => !p.caseId || !selectedIds.has(p.caseId));
@@ -27,7 +28,7 @@ export function Projects() {
             const row = (
               <>
                 <span className="meta col-span-2 pt-1.5 text-muted-foreground sm:col-span-1">
-                  {isKo ? p.period : p.periodEn}
+                  {fmtPeriod(isKo ? p.period : p.periodEn)}
                 </span>
                 <span className="min-w-0">
                   <span className="block text-[20px] font-bold tracking-[-0.02em] md:text-[24px]">
@@ -54,7 +55,7 @@ export function Projects() {
               <li key={p.title}>
                 {p.caseId ? (
                   <Link
-                    href={`/${locale}/career#section-${p.caseId}`}
+                    href={workHref(locale, p.caseId)}
                     aria-label={`${isKo ? p.title : p.titleEn} — ${t("detail_link")}`}
                     className={`${cls} transition-colors hover:text-accent`}
                   >

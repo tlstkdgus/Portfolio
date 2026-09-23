@@ -1,33 +1,32 @@
 "use client";
 
+import { useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 import { m } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { careerDetailSections, type CareerDetailItem } from "@/data/career-detail";
-import { DetailItem } from "@/components/sections/career-story/detail-item";
-import { ImageCarousel } from "@/components/ui/image-carousel";
+import { fmtPeriod, workEntries, workHref } from "@/lib/work";
 import { MetaRow } from "@/components/ui/meta-row";
 
-const total = String(careerDetailSections.length).padStart(2, "0");
-
-// "80개 대학 연합 해커톤 운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'" → 이름과 설명으로 분리
-function splitTitle(title: string) {
-  const idx = title.lastIndexOf(" — ");
-  if (idx === -1) return { name: title, desc: "" };
-  return { name: title.slice(idx + 3), desc: title.slice(0, idx) };
-}
-
+// /career는 전체 케이스 스터디 목록. 본문은 프로젝트마다 /work/<id>로 옮겼다 (2026-09-23).
+// 이력서·지원서에 적힌 옛 링크(/career#section-<id>)는 해당 프로젝트 페이지로 보낸다.
 export function CareerStoryContent() {
   const t = useTranslations("career_story");
   const tm = useTranslations("meta");
   const locale = useLocale();
   const isKo = locale === "ko";
+  const router = useRouter();
+
+  useEffect(() => {
+    const id = window.location.hash.match(/^#section-(.+)$/)?.[1];
+    if (id && workEntries.some((w) => w.id === id)) router.replace(workHref(locale, id));
+  }, [locale, router]);
 
   return (
     <div className="min-h-screen bg-background">
       {/* 표지 */}
-      <div className="gutter flex min-h-[70svh] flex-col bg-ink pb-10 pt-20 text-ink-foreground md:pb-14">
+      <div className="gutter flex min-h-[60svh] flex-col bg-ink pb-10 pt-20 text-ink-foreground md:pb-14">
         <MetaRow items={[tm("deck"), tm("role")]} className="text-ink-muted" />
         <div className="flex flex-1 flex-col justify-end pt-16">
           <Link
@@ -50,103 +49,44 @@ export function CareerStoryContent() {
         </div>
       </div>
 
-      {/* 목차 — 번호 + 줄 */}
-      <nav aria-label={t("toc")} className="gutter py-16 md:py-24">
-        <p className="eyebrow mb-5 text-muted-foreground">{t("toc")}</p>
-        <ol className="grid border-t border-foreground md:grid-cols-2 md:gap-x-16">
-          {careerDetailSections.map((section, i) => {
-            const { name } = splitTitle(isKo ? section.title : section.titleEn);
+      {/* 목록 */}
+      <div className="gutter py-16 md:py-24">
+        <ol className="border-t border-foreground">
+          {workEntries.map((w, i) => {
+            const period = w.selected
+              ? isKo
+                ? w.selected.period.ko
+                : w.selected.period.en
+              : fmtPeriod(isKo ? w.project?.period : w.project?.periodEn);
             return (
-              <li key={section.id}>
-                <a
-                  href={`#section-${section.id}`}
-                  className="group grid grid-cols-[36px_1fr] items-baseline border-b border-border py-3 transition-colors hover:text-accent"
+              <li key={w.id}>
+                <Link
+                  href={workHref(locale, w.id)}
+                  className="group grid grid-cols-[36px_minmax(0,1fr)_20px] items-center gap-x-4 border-b border-border py-6 transition-colors hover:text-accent md:grid-cols-[56px_minmax(0,1fr)_220px_24px] md:py-7"
                 >
-                  <span className="meta text-muted-foreground group-hover:text-accent">
+                  <span className="meta self-baseline pt-2 text-muted-foreground group-hover:text-accent">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-[16px] font-semibold tracking-[-0.01em]">{name}</span>
-                </a>
+                  <span className="min-w-0">
+                    <span className="block text-[22px] font-bold tracking-[-0.02em] md:text-[28px]">
+                      {isKo ? w.name.ko : w.name.en}
+                    </span>
+                    <span className="mt-1 block text-[15px] leading-snug text-muted-foreground md:text-[16px]">
+                      {isKo ? w.desc.ko : w.desc.en}
+                    </span>
+                    <span className="meta mt-2 block text-muted-foreground md:hidden">{period}</span>
+                  </span>
+                  <span className="meta hidden whitespace-nowrap text-muted-foreground md:block">{period}</span>
+                  <ArrowRight
+                    aria-hidden="true"
+                    className="h-5 w-5 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-accent"
+                  />
+                </Link>
               </li>
             );
           })}
         </ol>
-      </nav>
-
-      {/* 본문 */}
-      <div className="gutter pb-24">
-        {careerDetailSections.map((section, i) => {
-          const { name, desc } = splitTitle(isKo ? section.title : section.titleEn);
-          return (
-            <article
-              key={section.id}
-              id={`section-${section.id}`}
-              className="scroll-mt-16 border-t border-foreground pb-24 pt-6 md:pb-36"
-            >
-              <MetaRow items={[`${String(i + 1).padStart(2, "0")} / ${total}`, desc]} className="text-muted-foreground" />
-              <h2 className="headline mt-10 md:mt-16">{name}</h2>
-
-              {section.images && section.images.length > 0 && (
-                <div className="mt-12 md:mt-16">
-                  <ImageCarousel images={section.images} alt={name} />
-                </div>
-              )}
-
-              <div className="mt-14 space-y-12 md:mt-20 md:space-y-16">
-                <Block label={t("background")} items={section.background} isKo={isKo} />
-
-                <Row label={t("role")}>
-                  <div className="space-y-10">
-                    {section.role.map((sub) => (
-                      <div key={sub.title}>
-                        <h3 className="text-[19px] font-bold leading-snug tracking-[-0.02em] md:text-[21px]">
-                          {isKo ? sub.title : sub.titleEn}
-                        </h3>
-                        <ul className="mt-4 space-y-4">
-                          {sub.items.map((item, j) => (
-                            <DetailItem key={j} item={item} isKo={isKo} />
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </Row>
-
-                <Row label={t("results")} accent>
-                  <ul className="space-y-4 border-l-2 border-accent pl-5">
-                    {section.results.map((item, j) => (
-                      <DetailItem key={j} item={item} isKo={isKo} strong />
-                    ))}
-                  </ul>
-                </Row>
-
-                <Block label={t("lessons")} items={section.lessons} isKo={isKo} />
-              </div>
-            </article>
-          );
-        })}
       </div>
     </div>
-  );
-}
-
-function Row({ label, accent, children }: { label: string; accent?: boolean; children: React.ReactNode }) {
-  return (
-    <section className="grid gap-4 md:grid-cols-[180px_1fr] md:gap-10 lg:grid-cols-[240px_1fr]">
-      <h3 className={accent ? "eyebrow pt-1 text-accent" : "eyebrow pt-1 text-muted-foreground"}>{label}</h3>
-      <div className="measure">{children}</div>
-    </section>
-  );
-}
-
-function Block({ label, items, isKo }: { label: string; items: CareerDetailItem[]; isKo: boolean }) {
-  return (
-    <Row label={label}>
-      <ul className="space-y-4">
-        {items.map((item, j) => (
-          <DetailItem key={j} item={item} isKo={isKo} />
-        ))}
-      </ul>
-    </Row>
   );
 }

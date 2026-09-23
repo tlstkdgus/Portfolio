@@ -1,6 +1,6 @@
-// 메인 화면의 대표 프로젝트. 레퍼런스(Behance 'Portfolio 2026')의 슬라이드 흐름을 따른다:
-// 검은 표지(divider) → 헤드라인 → 대표 화면 → 본문 세 문장(문제 → 조치 → 결과) → 블루 성과 화면.
-// 한 일 목록·범위 칩·흐름 도식·인용문은 FINAL(2026.09.22)에서 뺐다: 한 케이스가 화면 3~4개 분량이었다.
+// 대표 프로젝트 4개. 메인에서는 한 줄 요약·핵심 수치·역할만(selected-projects.tsx),
+// 헤드라인·본문 세 문장·전→후 성과·현장 사진은 /work/<id> 상세 페이지(work-detail.tsx)에서 쓴다.
+// 한 일 목록·범위 칩·흐름 도식·인용문은 FINAL(2026.09.22)에서 뺐다.
 //
 // 순서 규칙 (2026.09.13 지시): 멋사 인턴 경험(중앙해커톤·사내 교육)이 항상 앞, CleanB는 FlowPay 뒤.
 // 수치는 PORTFOLIO.md에 출처가 있는 것만 쓴다. 역할 경계("공동"/"직접")도 PORTFOLIO.md를 따른다.
@@ -24,8 +24,6 @@ export interface SelectedImage {
 
 export interface SelectedProject {
   id: string;
-  /** 검은 표지에 화면 폭으로 들어가는 단어 */
-  cover: Localized;
   kicker: Localized;
   /** 상태 뱃지 — 사실 그대로. CleanB는 결제 연동 전이라 'LIVE'라고 쓰지 않는다 */
   status: Localized;
@@ -41,7 +39,7 @@ export interface SelectedProject {
   heroTone: "ink" | "muted";
   gallery: SelectedImage[];
   caseId: string;
-  /** 링크는 케이스 스터디 1개 + 서비스/Behance 1개만 (FINAL §B). 저장소 링크는 /career에 있다 */
+  /** 서비스 링크. 저장소 링크는 projects.ts(repo)에 두고 상세 페이지에서만 보여준다 */
   liveUrl?: string;
   /** 외부 공개 케이스 (예: 브랜드 디자인 랩의 Behance) */
   behanceUrl?: string;
@@ -55,7 +53,6 @@ export interface SelectedProject {
 export const selectedProjects: SelectedProject[] = [
   {
     id: "hackathon14",
-    cover: { ko: "Hackathon.", en: "Hackathon." },
     kicker: { ko: "멋쟁이사자처럼 인턴 · 14기 중앙해커톤", en: "LIKELION Internship · 14th Hackathon" },
     status: { ko: "완료 · 2026.08 본선", en: "Completed · Finals Aug 2026" },
     title: { ko: "14기 중앙해커톤 기획·운영", en: "LIKELION 14th Hackathon" },
@@ -117,7 +114,6 @@ export const selectedProjects: SelectedProject[] = [
   },
   {
     id: "devsite",
-    cover: { ko: "Dev Class.", en: "Dev Class." },
     kicker: { ko: "멋쟁이사자처럼 인턴 · 사내 교육", en: "LIKELION Internship · Internal Course" },
     status: { ko: "완료 · 사이트 공개 중", en: "Completed · Site live" },
     title: { ko: "사내 개발 교육", en: "Internal Dev Literacy Course" },
@@ -159,7 +155,6 @@ export const selectedProjects: SelectedProject[] = [
   },
   {
     id: "flowpay",
-    cover: { ko: "FlowPay.", en: "FlowPay." },
     kicker: { ko: "B2B 핀테크 · FIN:NECT 챌린지", en: "B2B Fintech · FIN:NECT Challenge" },
     status: { ko: "수상 · 102팀 중 5위", en: "Award · 5th of 102" },
     title: { ko: "FlowPay", en: "FlowPay" },
@@ -204,7 +199,6 @@ export const selectedProjects: SelectedProject[] = [
   },
   {
     id: "cleanb",
-    cover: { ko: "CleanB.", en: "CleanB." },
     kicker: { ko: "외주 프로젝트 · 루미클린(RumiClean)", en: "Client Project · RumiClean" },
     status: { ko: "배포 완료 · 결제 연동 전", en: "Deployed · Payments pending" },
     title: { ko: "CleanB", en: "CleanB" },

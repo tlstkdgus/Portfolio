@@ -31,9 +31,10 @@ export function Header() {
   const [mounted, setMounted] = useState(false);
   const [active, setActive] = useState<string | null>(null);
 
-  const isSubPage = pathname.includes("/career");
-  // /career 표지는 검은 화면 — 스크롤 전에는 헤더 글자를 밝게 해야 이름·언어 전환이 보인다
-  const overInk = isSubPage && !scrolled;
+  const isSubPage = pathname.includes("/career") || pathname.includes("/work/");
+  // /career 표지는 검은 화면 — 스크롤 전에는 헤더 글자를 밝게 해야 이름·언어 전환이 보인다.
+  // /work/<id>는 흰 바탕에서 시작하므로 해당 없음
+  const overInk = pathname.includes("/career") && !scrolled;
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect

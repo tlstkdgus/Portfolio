@@ -78,7 +78,7 @@
 
 ## 대표 프로젝트
 
-사이트 메인에는 1~4번이 슬라이드형으로, 5~7번은 '그 외 프로젝트' 목록 상단에 나옵니다.
+사이트 메인에는 1~4번이 요약 목록(한 줄 요약·핵심 수치·역할·자세히 보기 →)으로, 5~7번은 '그 외 프로젝트' 목록 상단에 나옵니다. 모든 프로젝트는 `/work/<id>` 상세 페이지(배경·내가 한 일·결과·배운 점)가 있습니다.
 
 ### 1. 14기 중앙해커톤 기획·운영 — 80개 대학 · 2,000명+ 연합 해커톤
 **2026.06 ~ 2026.08** · 인턴 업무 · PM · 운영 · Repo: https://github.com/tlstkdgus/animal-league · Behance 케이스(멋쟁이사자처럼 브랜드 디자인 랩 공개, 공동작업자 등재): https://www.behance.net/gallery/255861853/ANIMAL-LEAGUE-LIKELION-HACKATHON-2026
@@ -211,8 +211,8 @@
 ## 저장소 구조 참고
 
 - `src/data/` — 이 문서의 원본 데이터
-  - `experience.ts` 경력 (CleanB 넣지 말 것) · `selected.ts` 메인 대표 프로젝트 4개(슬라이드용) · `projects.ts` 전체 프로젝트(배열 순서 = 노출 순서) · `career-detail.ts` 케이스 스터디 롱폼 · `credentials.ts` 수상·자격 · `profile.ts`
+  - `experience.ts` 경력 (CleanB 넣지 말 것) · `selected.ts` 메인 대표 프로젝트 4개(목록 요약 + 상세 페이지 상단) · `projects.ts` 전체 프로젝트(배열 순서 = 노출 순서) · `career-detail.ts` 케이스 스터디 롱폼 · `credentials.ts` 수상·자격 · `profile.ts`
 - `src/messages/` — 한/영 문구 (ko.json, en.json)
 - `public/projects/` — 프로젝트별 스크린샷
 - 디자인: 흰 바탕·검정·포인트 블루(#1F36FF) 한 색. 레퍼런스는 Behance 'Portfolio 2026'(Ramy Ayman) — 표지 워드마크, 검은 표지 슬라이드, 블루 성과 슬라이드 구조.
-- 상세 페이지: 사이트 `/career` (Case Studies)
+- 상세 페이지: 프로젝트마다 `/work/<id>` (career-detail.ts 본문 + 흐름 다이어그램). `/career`는 전체 목록이고, 옛 링크 `/career#section-<id>`는 해당 `/work/<id>`로 이동합니다.
