@@ -62,7 +62,7 @@ export function WorkDetail({ id }: { id: string }) {
           {selected && <Meta label={t("status")}>{tr(selected.status)}</Meta>}
           {(liveUrl || project?.repo || selected?.behanceUrl) && (
             <Meta label={t("links")}>
-              <span className="flex flex-col gap-1">
+              <span className="-my-2 flex flex-col">
                 {liveUrl && <OutLink href={liveUrl} label={t("live")} isKo={isKo} />}
                 {selected?.behanceUrl && <OutLink href={selected.behanceUrl} label={t("behance")} isKo={isKo} />}
                 {project?.repo && <OutLink href={project.repo} label="GitHub" isKo={isKo} />}
@@ -232,7 +232,7 @@ function OutLink({ href, label, isKo }: { href: string; label: string; isKo: boo
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex w-fit items-center gap-1 underline decoration-foreground/30 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+      className="inline-flex min-h-11 w-fit items-center gap-1 underline decoration-foreground/30 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
     >
       {label}
       <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />

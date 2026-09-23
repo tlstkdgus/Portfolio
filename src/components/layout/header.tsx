@@ -10,6 +10,8 @@ import { Sun, Moon, Menu, X, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { MobileDrawer } from "@/components/layout/mobile-drawer";
+import { LogoMark } from "@/components/ui/logo-mark";
+import { scrollBehavior } from "@/lib/scroll";
 
 const navKeys = siteConfig.nav;
 
@@ -84,7 +86,7 @@ export function Header() {
       router.push(`/${locale}#${id}`);
       return;
     }
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)?.scrollIntoView({ behavior: scrollBehavior() });
   };
 
   const name = isKo ? "신상현" : "Sanghyeon Shin";
@@ -112,11 +114,12 @@ export function Header() {
               onClick={(e) => {
                 if (!isSubPage) {
                   e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: scrollBehavior() });
                 }
               }}
-              className="-ml-1 inline-flex h-11 items-baseline gap-2 px-1 pt-3"
+              className="-ml-1 inline-flex h-11 items-center gap-2 px-1"
             >
+              <LogoMark className={cn("h-[18px] w-auto shrink-0", overInk ? "text-ink-foreground" : "text-foreground")} />
               <span
                 className={cn(
                   "text-[16px] font-extrabold tracking-[-0.03em]",

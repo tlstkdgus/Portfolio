@@ -57,7 +57,7 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
         href={images[current]}
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute right-2 top-2 inline-flex h-9 items-center gap-1 bg-black/80 px-2.5 text-[13px] font-medium text-white transition hover:bg-black"
+        className="absolute right-2 top-2 inline-flex h-11 items-center gap-1 bg-black/80 px-2.5 text-[13px] font-medium text-white transition hover:bg-black"
       >
         {isKo ? "원본 크기" : "Full size"}
         <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />

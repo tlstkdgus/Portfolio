@@ -3,7 +3,7 @@
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
-    "certified": "Awards",
+    "certified": "Awards · Education",
     "contact": "Contact",
     "hero": "Cover",
     "rail_label": "Page position"
@@ -16,11 +16,11 @@
   "hero": {
     "name": "Sanghyeon Shin",
     "lead": "A service planner who finds the answer in what users actually do, then builds and ships.",
-    "summary": "As a LIKELION intern I ran the [community platform](https://likelion.community/) used by 2,500+ students across 80 universities, and took **the 2,000-person national hackathon that registered through it from planning through the finals**. Inquiries the staff answered by hand for three hours a day, a submission check that would take about two days by hand, and finals results tallied in Excel — **I built an FAQ bot, a checking tool, and a finals console for them and ran them on site**.",
+    "summary": "I first got into IT through the frontend track of LIKELION's 12th cohort, and leading projects as 13th-cohort staff taught me that **\"who uses this, and why\" has to be answered before \"how do we build it.\"** As an intern I then ran the 2,000-person national hackathon from planning through the finals, and **built the tools for inquiries, submission checks, and the finals tally myself and ran them on site**.",
     "metrics": [
       {
-        "v": "2,000+",
-        "k": "hackathon participants on site"
+        "v": "2,500+",
+        "k": "students on the community platform I ran · 80 universities"
       },
       {
         "v": "80.8%",
@@ -38,10 +38,6 @@
     "scroll": "Scroll"
   },
   "about": {
-    "hello": "Hello!",
-    "name_line": "I'm Sanghyeon Shin.",
-    "description_1": "I first got into IT through the frontend track of LIKELION's 12th cohort. Leading projects as staff for HUFS LIKELION's 13th cohort then taught me that **\"who uses this, and why\" has to be answered before \"how do we build it.\"** Now, before I draw a screen, I check how users actually behave, and I build whatever is needed, **whether that's a screen, a backend, or an AI tool**.",
-    "description_2": "I'm still improving RumiClean, a client project, after launch. I studied Global Business & Technology with an AI Convergence major and **won 11 awards** along the way.",
     "what_heading": "What I do.",
     "skills": [
       "Service planning",
@@ -55,12 +51,7 @@
       "Python",
       "Supabase",
       "LLM APIs"
-    ],
-    "education_label": "Education",
-    "military_label": "Military",
-    "gpa": "GPA 4.13 / 4.5",
-    "training_label": "Training",
-    "training": "SSAFY 15th cohort, Non-CS Java track, completed (Jan – Apr 2026)"
+    ]
   },
   "principles": {
     "heading": "How I work.",
@@ -99,9 +90,16 @@
   "certified": {
     "heading": "Awards.",
     "count_label": "Competition awards",
-    "certifications": "Certifications",
     "awards": "Highlighted awards",
-    "awards_rest": "More awards"
+    "awards_rest": "More awards",
+    "edu_heading": "Education & Certifications.",
+    "edu_label": "Education",
+    "training_label": "Training",
+    "cert_label": "Certifications",
+    "gpa": "GPA 4.13 / 4.5",
+    "training_title": "SSAFY 15th Cohort · Non-CS Java Track",
+    "training_detail": "Samsung SW·AI Academy For Youth · Completed",
+    "training_date": "2026.01 – 2026.04"
   },
   "contact": {
     "heading": "Let's talk.",
@@ -169,9 +167,9 @@
     ],
     "scale": [
       {
-        "v": "2,500+",
-        "label": "Community platform operated",
-        "note": "80 universities · where hackathon and ideathon teams registered"
+        "v": "2,000+",
+        "label": "14th hackathon participants",
+        "note": "80 universities · 313 teams · registered through the community platform"
       },
       {
         "v": "45",

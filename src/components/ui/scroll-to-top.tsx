@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { m, AnimatePresence } from "framer-motion";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
+import { scrollBehavior } from "@/lib/scroll";
 
 export function ScrollToTop() {
   const [visible, setVisible] = useState(false);
@@ -21,7 +22,7 @@ export function ScrollToTop() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.2 }}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => window.scrollTo({ top: 0, behavior: scrollBehavior() })}
           className="scroll-to-top fixed bottom-5 right-5 z-50 border border-background bg-foreground p-3 text-background transition-colors hover:bg-accent-surface hover:text-accent-foreground"
           aria-label="Scroll to top"
         >
