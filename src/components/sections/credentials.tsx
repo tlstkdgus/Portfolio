@@ -21,6 +21,7 @@ export function Credentials() {
         </div>
 
         <div>
+          <p className="eyebrow mb-3 text-muted-foreground">{t("awards")}</p>
           <ol className="border-t border-foreground">
             {top.map((a) => (
               <li
@@ -52,7 +53,8 @@ export function Credentials() {
             ))}
           </ol>
 
-          <ul className="mt-2">
+          <p className="eyebrow mb-1 mt-12 text-muted-foreground">{t("awards_rest")}</p>
+          <ul className="border-t border-border">
             {rest.map((a) => (
               <li
                 key={a.title}

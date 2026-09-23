@@ -65,7 +65,7 @@ function Intro() {
 
   return (
     <section id="intro" className="gutter flex flex-col justify-center pb-16 pt-20 md:min-h-svh md:pb-20 md:pt-24">
-      <div className="grid items-end gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,9fr)] md:gap-12">
+      <div className="grid items-end gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] md:gap-14">
         {/* 원본(689×886) 비율 그대로, 컬러 */}
         <div className="w-32 md:w-full md:max-w-72">
           <Image
@@ -84,7 +84,7 @@ function Intro() {
           >
             {t("lead")}
           </h1>
-          <p className="mt-6 max-w-3xl text-[17px] leading-[1.7] text-foreground/80 md:text-[19px]">
+          <p className="mt-6 text-[17px] leading-[1.75] text-foreground/80 md:text-[20px]">
             <Emph text={t("summary")} />
           </p>
         </div>

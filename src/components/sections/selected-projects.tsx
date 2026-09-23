@@ -42,7 +42,7 @@ export function SelectedProjects() {
                 )}
               >
                 <Image
-                  src={p.hero.src}
+                  src={(p.thumb ?? p.hero).src}
                   alt=""
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
@@ -66,8 +66,9 @@ export function SelectedProjects() {
                 <p className="meta mt-2 text-muted-foreground">
                   {tr(p.kicker)} · {tr(p.period)}
                 </p>
+                {/* 무엇인지 한 줄 — 헤드라인만으로는 어떤 프로젝트인지 안 보였다 (2026-09-24) */}
                 <p className="mt-5 text-[18px] font-semibold leading-[1.55] tracking-[-0.01em] md:text-[20px]">
-                  {tr(p.headline).replace(/\n/g, " ")}
+                  {tr(p.summary)}
                 </p>
 
                 <p className="eyebrow mt-8 text-muted-foreground">{t("key_impact")}</p>
@@ -77,8 +78,19 @@ export function SelectedProjects() {
                       key={s.k.en}
                       className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-border py-3"
                     >
-                      <dd className="text-[24px] font-extrabold leading-tight tracking-[-0.03em] md:text-[28px]">
-                        {typeof s.v === "string" ? s.v : tr(s.v)}
+                      <dd className="flex flex-wrap items-baseline gap-x-3">
+                        {s.before && (
+                          <>
+                            <span className="text-[16px] font-semibold text-muted-foreground line-through decoration-1 md:text-[18px]">
+                              {typeof s.before === "string" ? s.before : tr(s.before)}
+                            </span>
+                            <span aria-hidden="true" className="text-accent">→</span>
+                            <span className="sr-only">{isKo ? "에서" : "to"}</span>
+                          </>
+                        )}
+                        <span className="text-[24px] font-extrabold leading-tight tracking-[-0.03em] md:text-[28px]">
+                          {typeof s.v === "string" ? s.v : tr(s.v)}
+                        </span>
                       </dd>
                       <dt className="text-[14px] leading-snug text-muted-foreground sm:max-w-[60%] sm:text-right md:text-[15px]">
                         {tr(s.k)}

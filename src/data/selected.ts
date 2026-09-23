@@ -11,6 +11,8 @@ export interface Localized {
 }
 
 export interface SelectedStat {
+  /** 개선 전 상태(있을 때만). 목록에서 취소선 → 뒤에 v를 굵게 보여 준다 */
+  before?: string | Localized;
   /** 숫자. 단위가 언어마다 다르면(562개 / 562) Localized로 둔다 — 단위를 설명 쪽에 떼어 두면 읽는 사람이 다시 조립해야 한다 */
   v: string | Localized;
   k: Localized;
@@ -31,6 +33,13 @@ export interface SelectedProject {
   period: Localized;
   role: Localized;
   headline: Localized;
+  /** 이 프로젝트가 무엇인지 한 줄 — 메인 목록에서 헤드라인 대신 보인다.
+   *  헤드라인("…예측할 수 있는 해커톤을 만들었습니다")만으로는 어떤 프로젝트인지 안 보인다는 상현 지적 (2026-09-24) */
+  summary: Localized;
+  /** 메인 목록 썸네일. 없으면 hero */
+  thumb?: SelectedImage;
+  /** 상세 페이지 상단 반복 영상 (Vimeo background 모드). 동작 줄이기 설정이면 poster 이미지만 */
+  video?: { vimeoId: string; ratio: string; poster: string; title: Localized; credit: Localized };
   /** 문제 → 조치 → 결과, 완결형 세 문장 (v9 어투 규칙) */
   body: Localized;
   stats: SelectedStat[];
@@ -62,13 +71,25 @@ export const selectedProjects: SelectedProject[] = [
       ko: "2,000명의 참가자가 평가 기준을\n예측할 수 있는 해커톤을 만들었습니다.",
       en: "I made a hackathon where 2,000 participants could predict how they'd be judged.",
     },
+    summary: { ko: "80개 대학 2,000명이 참가한 멋쟁이사자처럼 연합 해커톤 'ANIMAL LEAGUE'의 기획부터 본선 운영까지", en: "LIKELION's 80-university hackathon 'ANIMAL LEAGUE' with 2,000 participants, run from planning through the finals" },
+    thumb: {
+      src: "/projects/hackathon14/keyvisual.jpg",
+      alt: { ko: "ANIMAL LEAGUE 14th Hackathon 키 비주얼: 트로피를 든 사자와 동물 캐릭터들", en: "ANIMAL LEAGUE 14th Hackathon key visual: a lion holding a trophy with animal characters" },
+    },
+    video: {
+      vimeoId: "1227718161",
+      ratio: "2728 / 2160",
+      poster: "/projects/hackathon14/keyvisual.jpg",
+      title: { ko: "ANIMAL LEAGUE 영상", en: "ANIMAL LEAGUE video" },
+      credit: { ko: "영상 · 브랜드 디자인: 멋쟁이사자처럼 브랜드 디자인 랩", en: "Video and brand design: LIKELION Brand Design Lab" },
+    },
     body: {
       ko: "313팀이 참가하는 해커톤에서 참가자는 무엇을 제출하면 어떻게 평가받는지 알기 어려웠고, 문의는 운영진이 하루 3시간씩 직접 답하고 있었습니다. 제출 항목과 심사 기준을 1:1로 연결해 평가를 예측할 수 있게 했고, 참가자가 겪는 순서대로 가이드를 짜고 FAQ 봇이 즉답하게 했습니다. 본선 결과는 심사위원 투표가 무대 스크린에 바로 반영되도록 콘솔(Next.js · Supabase)을 DB 스키마부터 직접 개발해 진행했습니다.",
       en: "With 313 teams competing, participants couldn't tell what to submit or how it would be judged, and the staff were answering inquiries by hand for three hours a day. I mapped submission items 1:1 to judging criteria so scoring became predictable, structured the guide in the order participants live it, and had an FAQ bot answer instantly. For the finals I built the console (Next.js · Supabase) from the DB schema up so judges' votes showed on the stage screen as they came in.",
     },
     stats: [
-      { v: "80.8%", k: { ko: "문의 즉답 · 하루 3시간 직접 답변에서, 미응답 0건", en: "inquiries answered instantly · from 3 hours a day by hand, 0 missed" } },
-      { v: { ko: "2.2초", en: "2.2 s" }, k: { ko: "결과 공개 · 엑셀·PPT 집계에서 투표가 스크린에 뜨기까지", en: "result reveal · from Excel and PPT tallies to vote-on-screen" } },
+      { before: { ko: "하루 3시간", en: "3 h/day" }, v: { ko: "80.8% 즉답", en: "80.8% instant" }, k: { ko: "참가자 문의 · 229건 중 미응답 0건", en: "participant inquiries · 0 of 229 unanswered" } },
+      { before: { ko: "엑셀 → PPT", en: "Excel → PPT" }, v: { ko: "2.2초", en: "2.2 s" }, k: { ko: "본선 결과 공개 · 심사 투표가 무대 스크린에 뜨기까지", en: "finals reveal · from judges' votes to the stage screen" } },
     ],
     hero: {
       src: "/projects/hackathon14/02.png",
@@ -123,14 +144,15 @@ export const selectedProjects: SelectedProject[] = [
       ko: "비개발 동료가 개발자와 대화할 수 있도록\n점심 강의 6회를 설계했습니다.",
       en: "I designed six lunchtime sessions so non-developers could talk with developers.",
     },
+    summary: { ko: "비개발 직군 동료를 위한 점심 개발 강의 6회와 직접 만든 교육 사이트", en: "Six lunchtime dev lectures for non-developer colleagues, with a companion site I built" },
     body: {
       ko: "비전공 동료들은 '배포'나 'API' 같은 기본 흐름을 몰라 AI에게 무엇을 물어야 할지조차 어려워했습니다. 목표를 '개발자와 대화하기'로 좁히고, 설치 없이 브라우저에서 바로 되는 실습만 남긴 6회 커리큘럼과 교육 사이트를 직접 만들어 강의했습니다. 수강자 6명 전원이 만족도 5점을 주었고, 개발자와의 대화가 더 이해된다는 응답이 4.7점이었습니다.",
       en: "Non-developer colleagues didn't know basic flows like 'deploy' or 'API', so they couldn't even tell what to ask an AI. I narrowed the goal to 'talking with developers', kept only exercises that run in the browser with no installs, and built the six-session curriculum and course site myself, then taught it. All six attendees rated it 5 out of 5, and 'I understand developer conversations better' scored 4.7.",
     },
     stats: [
-      { v: "4.7/5", k: { ko: "개발자와의 대화가 이해된다", en: "I understand developer conversations better" } },
-      { v: "5/5", k: { ko: "만족도 · 수강자 6명 전원", en: "satisfaction · all 6 attendees" } },
+      { v: "5/5", k: { ko: "수강 만족도 · 6명 전원", en: "satisfaction · all 6 attendees" } },
       { v: "9.7/10", k: { ko: "추천 의향", en: "would recommend" } },
+      { v: "4.7/5", k: { ko: "개발자와의 대화 이해도", en: "understanding of developer conversations" } },
     ],
     hero: {
       src: "/projects/devsite/01.png",
@@ -164,14 +186,15 @@ export const selectedProjects: SelectedProject[] = [
       ko: "무기명 법인카드 정산 8단계를\n3단계로 줄였습니다.",
       en: "I cut anonymous corporate card reconciliation from 8 steps to 3.",
     },
+    summary: { ko: "무기명 법인카드의 결제부터 지출보고서까지 자동화하는 B2B 정산 서비스 프로토타입", en: "A B2B prototype that automates anonymous corporate-card spending from payment to expense report" },
     body: {
       ko: "회계담당자는 지출보고서 1건에 20분씩, 월 100건 이상을 처리하고 있었습니다. 인터뷰해 보니 진짜 병목은 결제 이후 수기로 작성하는 전표라고 판단했고, 익명성을 지키는 가명 토큰 Flow ID로 결제 시점부터 사용자를 식별해 지출보고서가 자동 생성되도록 설계했습니다. FIN:NECT 챌린지에서 102팀 중 5위에 올랐습니다.",
       en: "Accountants were spending 20 minutes per expense report, over 100 reports a month. Interviews showed the real bottleneck was the vouchers written by hand after each payment, so I designed Flow ID, a pseudonymous token that identifies the user at the moment of payment while keeping anonymity, so expense reports generate themselves. It placed 5th of 102 teams at the FIN:NECT Challenge.",
     },
     stats: [
-      { v: "8 → 3", k: { ko: "정산 단계", en: "reconciliation steps" } },
-      { v: { ko: "자동 생성", en: "Automatic" }, k: { ko: "지출보고서 1건 · 20분 수작업에서", en: "expense reports · from 20 minutes by hand" } },
-      { v: { ko: "5위", en: "5th" }, k: { ko: "FIN:NECT 챌린지 · 102팀 중", en: "FIN:NECT Challenge · of 102 teams" } },
+      { before: { ko: "8단계", en: "8 steps" }, v: { ko: "3단계", en: "3 steps" }, k: { ko: "법인카드 지출 정산 단계", en: "corporate-card reconciliation steps" } },
+      { before: { ko: "건당 20분", en: "20 min each" }, v: { ko: "자동 생성", en: "Automatic" }, k: { ko: "지출보고서 작성", en: "expense report writing" } },
+      { v: { ko: "102팀 중 5위", en: "5th of 102" }, k: { ko: "FIN:NECT 챌린지 장려상", en: "FIN:NECT Challenge, Encouragement Prize" } },
     ],
     hero: {
       src: "/projects/flowpay/01.png",
@@ -208,14 +231,15 @@ export const selectedProjects: SelectedProject[] = [
       ko: "호스트와 청소자가 '청소 완료'를 두고\n다투지 않는 서비스를 설계했습니다.",
       en: "I designed a service where hosts and cleaners don't argue over whether the cleaning was done.",
     },
+    summary: { ko: "에어비앤비 호스트와 청소자를 잇는 청소 매칭 서비스 루미클린 (외주)", en: "RumiClean, a cleaning-matching service connecting Airbnb hosts and cleaners (client project)" },
     body: {
       ko: "외주로 맡은 에어비앤비 청소 매칭 서비스입니다. 서로 모르는 호스트와 청소자가 다투지 않으려면 완료 기준이 서비스 안에 있어야 해서, 청소 작업의 상태 흐름 5단계를 먼저 확정하고 전·후 사진 5장을 완료 조건으로 정했습니다. 청소자 화면 전체를 직접 개발해 배포했고, 지금도 수정하고 있습니다.",
       en: "A client project: an Airbnb cleaning matching service. Hosts and cleaners who've never met need the completion standard to live inside the service, so I fixed the five-state job flow first and made five before-and-after photos the condition for completion. I built the entire cleaner-side app myself, shipped it, and I'm still revising it.",
     },
     stats: [
-      { v: { ko: "5장", en: "5" }, k: { ko: "완료 인증 · 전·후 사진을 조건으로 확정", en: "before/after photos fixed as the completion condition" } },
-      { v: { ko: "5단계", en: "5" }, k: { ko: "화면 설계 · 작업 상태 흐름에서 도출", en: "job states the screens were derived from" } },
-      { v: { ko: "개선 중", en: "Ongoing" }, k: { ko: "배포 후 · 화면·정책 지속 개선", en: "after launch · screens and policy still being revised" } },
+      { v: { ko: "사진 5장", en: "5 photos" }, k: { ko: "청소 완료 인증 조건 · 전·후 사진", en: "completion proof · before/after photos" } },
+      { v: { ko: "상태 5단계", en: "5 states" }, k: { ko: "청소자 화면을 도출한 작업 흐름", en: "job flow the cleaner screens were derived from" } },
+      { v: { ko: "배포 완료", en: "Deployed" }, k: { ko: "rumiclean.com · 결제 연동 전", en: "rumiclean.com · payments not yet connected" } },
     ],
     hero: {
       src: "/projects/cleanb/01.png",

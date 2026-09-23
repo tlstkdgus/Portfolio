@@ -8,6 +8,7 @@ import { fmtPeriod, getWork, workHref, type WorkEntry } from "@/lib/work";
 import type { CareerDetailItem, FlowDiagram } from "@/data/career-detail";
 import type { Localized } from "@/data/selected";
 import { ImageCarousel } from "@/components/ui/image-carousel";
+import { VimeoLoop } from "@/components/ui/vimeo-loop";
 import { MetaRow } from "@/components/ui/meta-row";
 import { cn } from "@/lib/utils";
 
@@ -52,7 +53,9 @@ export function WorkDetail({ id }: { id: string }) {
         <h1 className="headline mt-6 max-w-5xl whitespace-pre-line md:mt-8">
           {selected ? tr(selected.headline) : tr(entry.desc)}
         </h1>
-        {!selected && (
+        {selected ? (
+          <p className="mt-6 max-w-4xl text-[18px] leading-[1.6] text-muted-foreground md:text-[21px]">{tr(selected.summary)}</p>
+        ) : (
           <p className="mt-5 text-[20px] font-semibold tracking-[-0.02em] md:text-[24px]">{name}</p>
         )}
 
@@ -73,6 +76,21 @@ export function WorkDetail({ id }: { id: string }) {
       </header>
 
       {/* 2. 자료 — 발표 자료·화면. 원본 PDF에서 2400px로 다시 뽑았다 */}
+      {/* 1-1. 반복 영상 (해커톤) — 제3자 제작물이라 출처를 붙인다 */}
+      {selected?.video && (
+        <figure className="gutter bg-ink py-10 md:py-16">
+          <div className="mx-auto max-w-6xl">
+            <VimeoLoop
+              id={selected.video.vimeoId}
+              ratio={selected.video.ratio}
+              poster={selected.video.poster}
+              title={tr(selected.video.title)}
+            />
+            <figcaption className="meta mt-4 text-ink-muted">{tr(selected.video.credit)}</figcaption>
+          </div>
+        </figure>
+      )}
+
       {images.length > 0 && (
         <div className={cn("gutter py-10 md:py-16", selected?.heroTone === "ink" ? "bg-ink" : "bg-muted")}>
           <div className="mx-auto max-w-6xl">
@@ -101,6 +119,13 @@ export function WorkDetail({ id }: { id: string }) {
             >
               {selected.stats.map((s) => (
                 <div key={s.k.en} className="stat-cell border-t border-accent-foreground/40 pt-5">
+                  {s.before && (
+                    <p className="mb-2 text-[17px] font-semibold opacity-80 md:text-[20px]">
+                      <span className="line-through decoration-1">{typeof s.before === "string" ? s.before : tr(s.before)}</span>
+                      <span aria-hidden="true"> →</span>
+                      <span className="sr-only">{isKo ? "에서" : "to"}</span>
+                    </p>
+                  )}
                   <dd className="stat">{typeof s.v === "string" ? s.v : tr(s.v)}</dd>
                   <dt className="mt-3 text-[15px] font-medium leading-snug opacity-90 md:text-[16px]">{tr(s.k)}</dt>
                 </div>

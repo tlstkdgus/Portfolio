@@ -44,7 +44,7 @@ export const certifications: Certification[] = [
   },
 ];
 
-// highlight: 외부 기관 또는 대상급만. 최신순.
+// highlight = 프로젝트별 대표 수상 하나(FlowPay·손글·dotori). 외부 기관·학회 심사를 우선한다 (2026-09-24 상현: 손글 포함). 최신순.
 export const awards: Award[] = [
   {
     title: "제 12회 Bring Your Own Ideas 최우수상 (풍생고 수행평가 알리미)",
@@ -66,6 +66,7 @@ export const awards: Award[] = [
     issuer: "한국정보기술전략혁신학회",
     issuerEn: "KIITI",
     date: "2025.11.",
+    highlight: true,
   },
   {
     title: "G-RISE × 경상대학 2025 창업 비즈니스 모델 경진대회 대상 (dotori)",
@@ -103,7 +104,6 @@ export const awards: Award[] = [
     issuer: "한국외국어대학교 글로벌창업지원단",
     issuerEn: "HUFS Global Startup Center",
     date: "2025.06.",
-    highlight: true,
   },
   {
     title: "2025 HUFS H-UP 진로탐색학점제 진리상 [최우수상] (ARtliving)",
@@ -113,8 +113,8 @@ export const awards: Award[] = [
     date: "2025.06.",
   },
   {
-    title: "2025 HUFS Start-up Platform 학생창업팀 선발대회 입선",
-    titleEn: "2025 HUFS Start-up Platform Team Selection — Honorable Mention",
+    title: "2025 HUFS Start-up Platform 학생창업팀 선발 (ARtliving)",
+    titleEn: "Selected as a Student Startup Team, 2025 HUFS Start-up Platform (ARtliving)",
     issuer: "한국외국어대학교 글로벌 창업지원단",
     issuerEn: "HUFS Global Startup Center",
     date: "2025.03.",
