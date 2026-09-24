@@ -95,7 +95,7 @@
 - 스택: Event Ops, Policy Design, Next.js, Supabase, Python, LLM
 
 ### 2. FlowPay — 무기명 법인카드 지출·회계 자동화 B2B SaaS
-**2025.06 ~ 2025.08** · PM · 프론트엔드 · IR · Live: https://flowpay.vercel.app · Repo: https://github.com/tlstkdgus/FlowPay
+**2025.06 ~ 2025.08** · PM · 프론트엔드 · IR · Live: https://flow-pay-seven.vercel.app · Repo: https://github.com/tlstkdgus/FlowPay
 
 - **문제**: 직원은 지출보고서 한 건에 20분, 회계담당자는 월 100건+ — 기업당 연 약 1,000시간·8천만 원이 정산에 사라진다. 근본 원인은 무기명 카드에 사용자가 기록되지 않는 구조.
 - **한 일**: 현업 회계담당자 인터뷰로 문제 정의(진짜 병목은 결제 후 수기 전표) / Flow ID 익명 태깅 시스템 설계(8→3단계 단축) / React 실시간 대시보드 + FIDO2 생체인증 결제 개발 / 3개 유효 시장 분석, FINNECT IR 발표

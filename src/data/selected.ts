@@ -177,7 +177,7 @@ export const selectedProjects: SelectedProject[] = [
       },
     ],
     caseId: "flowpay",
-    liveUrl: "https://flowpay.vercel.app",
+    liveUrl: "https://flow-pay-seven.vercel.app",
   },
   {
     id: "ywave",

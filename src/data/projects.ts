@@ -182,7 +182,7 @@ export const projects: Project[] = [
     period: "2025.06. ~ 2025.08.",
     periodEn: "Jun 2025 — Aug 2025",
     repo: "https://github.com/tlstkdgus/FlowPay",
-    url: "https://flowpay.vercel.app",
+    url: "https://flow-pay-seven.vercel.app",
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
