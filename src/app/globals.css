@@ -163,6 +163,11 @@ html {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+/* 넓은 자간은 영문 대문자용이다. 한글에 걸면 '학 력', '역 할'처럼 글자가 흩어져 읽혔다.
+   한국어 페이지의 영문 라벨(Key impact)은 lang="en"을 달아 넓은 자간을 유지한다 */
+.eyebrow:lang(ko) {
+  letter-spacing: 0.02em;
+}
 
 @media (min-width: 768px) {
   .meta,

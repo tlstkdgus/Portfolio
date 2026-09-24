@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
-import { certifications, awards } from "@/data/credentials";
+import { awards } from "@/data/credentials";
 
 export function Credentials() {
   const t = useTranslations("certified");
@@ -21,13 +21,14 @@ export function Credentials() {
         </div>
 
         <div>
+          <p className="eyebrow mb-3 text-muted-foreground">{t("awards")}</p>
           <ol className="border-t border-foreground">
             {top.map((a) => (
               <li
                 key={a.title}
                 className="grid gap-x-6 gap-y-1 border-b border-border py-6 sm:grid-cols-[100px_1fr_auto]"
               >
-                <span className="meta pt-1.5 text-muted-foreground">{a.date}</span>
+                <span className="meta pt-1.5 text-muted-foreground">{a.date.replace(/\.$/, "")}</span>
                 <span>
                   <span className="block text-[20px] font-bold leading-snug tracking-[-0.02em] md:text-[22px]">
                     {isKo ? a.title : a.titleEn}
@@ -52,33 +53,19 @@ export function Credentials() {
             ))}
           </ol>
 
-          <ul className="mt-2">
+          <p className="eyebrow mb-1 mt-12 text-muted-foreground">{t("awards_rest")}</p>
+          <ul className="border-t border-border">
             {rest.map((a) => (
               <li
                 key={a.title}
                 className="grid gap-x-6 border-b border-border py-3 text-[15px] sm:grid-cols-[100px_1fr]"
               >
-                <span className="meta pt-0.5 text-muted-foreground">{a.date}</span>
+                <span className="meta pt-0.5 text-muted-foreground">{a.date.replace(/\.$/, "")}</span>
                 <span className="text-foreground/80">{isKo ? a.title : a.titleEn}</span>
               </li>
             ))}
           </ul>
 
-          <h3 className="eyebrow mt-14 text-muted-foreground">{t("certifications")}</h3>
-          <ul className="mt-4 border-t border-foreground">
-            {certifications.map((c) => (
-              <li
-                key={c.name}
-                className="grid gap-x-6 border-b border-border py-3 text-[15px] sm:grid-cols-[100px_1fr]"
-              >
-                <span className="meta pt-0.5 text-muted-foreground">{c.date}</span>
-                <span>
-                  <span className="font-semibold">{isKo ? c.name : c.nameEn}</span>
-                  <span className="text-muted-foreground"> · {isKo ? c.issuer : c.issuerEn}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>

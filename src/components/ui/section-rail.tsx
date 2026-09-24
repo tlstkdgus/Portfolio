@@ -34,7 +34,7 @@ export function SectionRail() {
     let raf = 0;
     const check = () => {
       raf = 0;
-      // 레일(right-6, 폭 ~100px) 바깥인 화면 오른쪽 끝 6px 지점을 본다. 레일 자체를 짚으면 .bg-ink를 못 찾는다
+      // 레일(right-3, 폭 ~46px) 바깥인 화면 오른쪽 끝 6px 지점을 본다. 레일 자체를 짚으면 .bg-ink를 못 찾는다
       const el = document.elementFromPoint(window.innerWidth - 6, window.innerHeight / 2);
       setOnDark(Boolean(el?.closest(".bg-ink, .bg-accent-surface")));
     };
@@ -55,7 +55,7 @@ export function SectionRail() {
     <nav
       aria-label={t("rail_label")}
       className={cn(
-        "pointer-events-none fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 xl:block",
+        "pointer-events-none fixed right-3 top-1/2 z-40 hidden -translate-y-1/2 xl:block",
         onDark ? "text-ink-foreground" : "text-foreground"
       )}
     >
@@ -72,7 +72,8 @@ export function SectionRail() {
                   isActive ? "opacity-100" : "opacity-40 hover:opacity-80"
                 )}
               >
-                <span className={cn("transition-opacity", isActive ? "opacity-100" : "opacity-0")}>{t(id)}</span>
+                {/* 섹션 이름은 화면에 내지 않는다: 이름까지 넣으면 레일 폭이 ~100px라 오른쪽 여백(64px)을 넘어 본문을 덮었다 */}
+                <span className="sr-only">{t(id)}</span>
                 <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>
                 <span
                   aria-hidden="true"

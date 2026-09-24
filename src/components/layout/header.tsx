@@ -10,6 +10,8 @@ import { Sun, Moon, Menu, X, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { MobileDrawer } from "@/components/layout/mobile-drawer";
+import { LogoMark } from "@/components/ui/logo-mark";
+import { scrollBehavior } from "@/lib/scroll";
 
 const navKeys = siteConfig.nav;
 
@@ -31,9 +33,10 @@ export function Header() {
   const [mounted, setMounted] = useState(false);
   const [active, setActive] = useState<string | null>(null);
 
-  const isSubPage = pathname.includes("/career");
-  // /career 표지는 검은 화면 — 스크롤 전에는 헤더 글자를 밝게 해야 이름·언어 전환이 보인다
-  const overInk = isSubPage && !scrolled;
+  const isSubPage = pathname.includes("/career") || pathname.includes("/work/");
+  // /career 표지는 검은 화면 — 스크롤 전에는 헤더 글자를 밝게 해야 이름·언어 전환이 보인다.
+  // /work/<id>는 흰 바탕에서 시작하므로 해당 없음
+  const overInk = pathname.includes("/career") && !scrolled;
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -83,7 +86,7 @@ export function Header() {
       router.push(`/${locale}#${id}`);
       return;
     }
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)?.scrollIntoView({ behavior: scrollBehavior() });
   };
 
   const name = isKo ? "신상현" : "Sanghyeon Shin";
@@ -111,11 +114,12 @@ export function Header() {
               onClick={(e) => {
                 if (!isSubPage) {
                   e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: scrollBehavior() });
                 }
               }}
-              className="-ml-1 inline-flex h-11 items-baseline gap-2 px-1 pt-3"
+              className="-ml-1 inline-flex h-11 items-center gap-2 px-1"
             >
+              <LogoMark className={cn("h-[18px] w-auto shrink-0", overInk ? "text-ink-foreground" : "text-foreground")} />
               <span
                 className={cn(
                   "text-[16px] font-extrabold tracking-[-0.03em]",

@@ -29,14 +29,14 @@ export const experiences: Experience[] = [
     startDate: "2026-04",
     endDate: "2026-08",
     description: [
-      "80개 대학 2,500여 명이 쓰는 커뮤니티 플랫폼(likelion.community) 기획·운영 — 백오피스 기능 추가·수정 제안, 행사 상세페이지 3개 설계와 QA, 중앙해커톤 기능명세서 작성",
+      "80개 대학 2,500여 명 학생 관리와 [커뮤니티 플랫폼](https://likelion.community/) 기획·운영 — 해커톤·아이디어톤 참가 등록이 이 플랫폼에서 이뤄지도록 행사 상세페이지 3개 설계와 QA, 백오피스 기능 추가·수정 제안, 중앙해커톤 기능명세서 작성",
       "연합 해커톤(학생 주최 대학 연합 해커톤) 플랫폼 기능 기획 — 4단계 권한 격리·학교 자동 검증·시각 기반 자동화 정책 설계, 페이지 26개·기능 영역 10개 명세 후 개발·디자인 핸드오프",
       "14기 중앙해커톤(80개 대학 · 2,000명+)을 기획부터 본선 운영까지 담당",
       "전국 연합 아이디어톤(1,822명 · 378개 프로젝트)을 기획부터 운영까지 참여 — 심사 자동화 시트 · 470건 만족도 분석 보고서",
       "비개발 직군 대상 사내 개발 교육 6회 기획·제작·강의 — 만족도 전원 5/5",
     ],
     descriptionEn: [
-      "Planned and ran the community platform (likelion.community) used by 2,500+ members across 80 universities — proposed back-office features and fixes, designed and QA'd 3 event detail pages, wrote the national hackathon feature spec",
+      "Managed 2,500+ students across 80 universities and planned and ran the [community platform](https://likelion.community/) — designed and QA'd 3 event detail pages so hackathon and ideathon registration ran through the platform, proposed back-office features and fixes, wrote the national hackathon feature spec",
       "Planned platform features for the student-run inter-university hackathon — 4-level permission isolation, automatic school verification, time-based automation policy; specified 26 pages across 10 feature areas and handed off to dev and design",
       "Planned and ran the 14th national hackathon (80 universities, 2,000+ participants) through the finals",
       "Took part in the national ideathon (1,822 participants · 378 projects) from planning through operations — scoring automation sheet and a 470-response satisfaction report",

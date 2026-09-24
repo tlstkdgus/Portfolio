@@ -5,6 +5,10 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  images: {
+    // 90: 발표 슬라이드 캐러셀 전용 (작은 글씨 보존)
+    qualities: [75, 90],
+  },
   async headers() {
     return [
       {
