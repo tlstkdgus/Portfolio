@@ -19,7 +19,9 @@ export function About() {
     <section id="about" className="gutter scroll-mt-16 py-24 md:py-36">
       <div className="grid gap-8 border-t border-foreground pt-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
         <h2 className="text-[36px] font-extrabold leading-[1.05] tracking-[-0.04em] md:text-[48px]">{t("profile_heading")}</h2>
-        <ul className="border-t border-foreground lg:border-t-0">
+        {/* 라벨 열은 목록 전체가 나눠 쓴다(subgrid). 폭은 가장 긴 라벨에 맞추되 최소 88px.
+            88px 고정일 때 영문 'CERTIFICATIONS'·'EDUCATION'이 단어 중간에서 끊겼다 (2026-09-25) */}
+        <ul className="border-t border-foreground sm:grid sm:grid-cols-[minmax(88px,max-content)_minmax(0,1fr)_auto] sm:gap-x-6 lg:border-t-0">
           <Row label={t("edu_label")} date={dash(edu.date)}>
             <Name>{isKo ? edu.school : edu.schoolEn}</Name>
             <Detail>
@@ -60,10 +62,10 @@ export function About() {
 
 function Row({ label, date, children }: { label: string; date: string; children: React.ReactNode }) {
   return (
-    <li className="grid grid-cols-[1fr_auto] gap-x-6 gap-y-1 border-b border-border py-5 sm:grid-cols-[88px_1fr_auto]">
+    <li className="grid grid-cols-[1fr_auto] gap-x-6 gap-y-1 border-b border-border py-5 sm:col-span-3 sm:grid-cols-subgrid">
       <span className="eyebrow col-span-2 text-muted-foreground sm:col-span-1 sm:pt-1.5">{label}</span>
       <span className="min-w-0">{children}</span>
-      <span className="meta whitespace-nowrap pt-1.5 text-muted-foreground">{date}</span>
+      <span className="meta whitespace-nowrap pt-1.5 text-right text-muted-foreground">{date}</span>
     </li>
   );
 }

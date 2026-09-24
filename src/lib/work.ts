@@ -54,5 +54,6 @@ export const workHref = (locale: string, id: string) => `/${locale}/work/${id}`;
 /** projects.ts의 "2025.07. ~ 2025.08."을 대표 프로젝트 표기("2025.07 – 2025.08")에 맞춘다 */
 export function fmtPeriod(period?: string) {
   if (!period) return period;
-  return period.replace(/\.(?=\s|$|\))/g, "").replace(" ~ ", " – ");
+  // 영문 경력 기간은 em dash(—)로 적혀 있어 다른 섹션의 en dash(–)와 맞춘다
+  return period.replace(/\.(?=\s|$|\))/g, "").replace(" ~ ", " – ").replace(" — ", " – ");
 }
