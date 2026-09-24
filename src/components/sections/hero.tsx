@@ -16,6 +16,8 @@ import { cn } from "@/lib/utils";
 // 자기소개는 이 한 번뿐이다. 학력·교육·자격증·병역은 바로 아래 #about의 Profile 블록에 있다.
 // 데스크톱은 첫 화면 높이를 꽉 채운다(min-h-svh). 헤드라인 줄이 남는 높이를 가져가(1fr) 메타 줄은 위,
 // 숫자는 화면 아래에 붙는다. 내용만큼만 높이를 쓰면 1440×900에서 숫자 아래가 200px 넘게 비었다 (2026-09-25 상현 지적).
+// 1536px 이상 큰 화면에서는 제목·사진·소개·숫자를 한 단계 키운다. 1440 기준 크기 그대로면 2000×1134에서
+// 메타 줄과 헤드라인 사이가 400px 가까이 비었다 (2026-09-25). 1440 이하는 크기가 같다(clamp의 vw 구간).
 // 사진은 원본 컬러 그대로 — 흑백은 영정사진처럼 보여 쓰지 않는다(상현 지적).
 export function Hero() {
   const t = useTranslations("hero");
@@ -43,7 +45,7 @@ export function Hero() {
       />
 
       {/* 원본(689×886) 비율 그대로, 컬러 */}
-      <div className="w-24 [grid-area:photo] md:w-full md:max-w-72 md:self-end">
+      <div className="w-24 [grid-area:photo] md:w-full md:max-w-72 md:self-end 2xl:max-w-96">
         <Image
           src="/profile.jpg"
           alt={isKo ? "신상현 프로필 사진" : "Portrait of Sanghyeon Shin"}
@@ -51,13 +53,13 @@ export function Hero() {
           height={886}
           priority
           className="h-auto w-full"
-          sizes="(max-width: 768px) 96px, 288px"
+          sizes="(max-width: 768px) 96px, (max-width: 1536px) 288px, 384px"
         />
       </div>
 
       <h1
         className="mt-6 font-extrabold leading-[1.2] tracking-[-0.045em] [grid-area:lead] md:mt-0 md:self-end"
-        style={{ fontSize: "clamp(1.875rem, 3.5vw, 3.5rem)" }}
+        style={{ fontSize: "clamp(1.875rem, 3.5vw, 4.5rem)" }}
       >
         {/* 줄마다 따로 균형을 맞춘다. 한 덩어리에 text-balance를 걸면 강제 줄바꿈 사이는 균형이 안 잡혀
             폰(390px)에서 "기획자," 한 단어만 따로 떨어졌다 */}
@@ -70,9 +72,16 @@ export function Hero() {
           ))}
       </h1>
 
-      <p className="mt-8 max-w-[52em] text-[17px] leading-[1.75] text-foreground/80 [grid-area:summary] md:mt-6 md:text-[18px]">
-        <Emph text={t("summary")} />
-      </p>
+      {/* 소개는 두 문단(빈 줄로 나눔): 인턴에서 한 일 → 그 밖의 서비스에서 알게 된 것·지향 (2026-09-25 상현 요청) */}
+      <div className="mt-8 max-w-[52em] space-y-2 text-[17px] leading-[1.75] text-foreground/80 [grid-area:summary] md:mt-6 md:text-[18px] 2xl:text-[21px]">
+        {t("summary")
+          .split("\n\n")
+          .map((para) => (
+            <p key={para.slice(0, 12)}>
+              <Emph text={para} />
+            </p>
+          ))}
+      </div>
 
       <dl className="mt-8 grid grid-cols-2 border-t border-foreground [grid-area:metrics] md:mt-8 md:grid-cols-4">
         {metrics.map(({ v, k }, i) => (
@@ -86,7 +95,7 @@ export function Hero() {
             )}
           >
             <dt className="order-last mt-2 text-[14px] font-medium leading-snug text-muted-foreground md:text-[15px]">{k}</dt>
-            <dd className="text-[30px] font-extrabold leading-none tracking-[-0.05em] md:text-[clamp(2rem,3.2vw,3rem)]">{v}</dd>
+            <dd className="text-[30px] font-extrabold leading-none tracking-[-0.05em] md:text-[clamp(2rem,3.2vw,4rem)]">{v}</dd>
           </div>
         ))}
       </dl>
