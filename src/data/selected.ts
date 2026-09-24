@@ -26,6 +26,12 @@ export interface SelectedImage {
   alt: Localized;
 }
 
+/** 메인 카드 썸네일 — 이미지 안에 글자가 있어 언어별로 따로 만든다 (2026-09-25) */
+export interface SelectedThumb {
+  src: Localized;
+  alt: Localized;
+}
+
 export interface SelectedProject {
   id: string;
   kicker: Localized;
@@ -40,8 +46,11 @@ export interface SelectedProject {
   summary: Localized;
   /** 판단 한 줄 — 상세 페이지에 있는 '왜 그렇게 정했는지'를 메인 카드에서도 보이게 한다 (§G-5) */
   decision: Localized;
-  /** 메인 목록 썸네일. 없으면 hero */
-  thumb?: SelectedImage;
+  /** 메인 목록 썸네일. 없으면 hero.
+   *  2026-09-25: 스크린샷을 그대로 자르던 것을 표지처럼 디자인한 이미지로 바꿨다(레퍼런스 limdahyun.vercel.app 구성,
+   *  색은 사이트의 검정·회색·블루). 이름·한 줄·역할 + 기기 목업 속 실제 화면. 1600×1000 @1.5x, Pretendard.
+   *  원본 HTML은 design/thumbnails/. 상세 페이지 캐러셀의 첫 장으로도 쓴다 */
+  thumb?: SelectedThumb;
   /** 문제 → 조치 → 결과, 완결형 세 문장 (v9 어투 규칙) */
   body: Localized;
   stats: SelectedStat[];
@@ -77,8 +86,8 @@ export const selectedProjects: SelectedProject[] = [
     summary: { ko: "80개 대학 2,000명이 참가한 멋쟁이사자처럼 14기 중앙해커톤 'ANIMAL LEAGUE'의 기획부터 본선 운영까지", en: "LIKELION's 14th national hackathon 'ANIMAL LEAGUE', with 2,000 participants from 80 universities, run from planning through the finals" },
     decision: { ko: "판정 기준은 검사 전에 합의하고, 검사 도구는 근거만 내도록 설계했습니다.", en: "I had the judging criteria agreed before the scan, and designed the checking tool to produce only evidence." },
     thumb: {
-      src: "/projects/hackathon14/keyvisual.jpg",
-      alt: { ko: "ANIMAL LEAGUE 14th Hackathon 키 비주얼: 트로피를 든 사자와 동물 캐릭터들", en: "ANIMAL LEAGUE 14th Hackathon key visual: a lion holding a trophy with animal characters" },
+      src: { ko: "/projects/hackathon14/thumb-ko.jpg", en: "/projects/hackathon14/thumb-en.jpg" },
+      alt: { ko: "검정 바탕 썸네일: ANIMAL LEAGUE, 기획부터 본선 운영까지. 본선 무대 스크린(결승 3 대 2)과 직접 만든 운영 콘솔 화면", en: "Black thumbnail: ANIMAL LEAGUE, planned and run end to end. The finals stage screen (3 to 2) and the ops console I built" },
     },
     body: {
       ko: "314팀이 참가하는 해커톤에서 참가자는 무엇을 제출하면 어떻게 평가받는지 알기 어려웠고, 문의는 운영진이 하루 3시간씩 직접 답하고 있었습니다. 제출 항목과 심사 기준을 1:1로 연결해 평가를 예측할 수 있게 했고, 참가자가 겪는 순서대로 가이드를 짜고 FAQ 봇이 즉답하게 했습니다. 본선 결과는 심사위원 투표가 무대 스크린에 바로 반영되도록 콘솔(Next.js · Supabase)을 DB 스키마부터 직접 개발해 진행했습니다.",
@@ -146,6 +155,10 @@ export const selectedProjects: SelectedProject[] = [
     },
     summary: { ko: "무기명 법인카드의 결제부터 지출보고서까지 자동화하는 B2B 정산 서비스 프로토타입", en: "A B2B prototype that automates anonymous corporate-card spending from payment to expense report" },
     decision: { ko: "회계에 필요한 것은 실명보다 누가 썼는지의 구분이라고 판단해, 가명 토큰으로 결제자를 식별했습니다.", en: "Accounting needs to know who spent, not their real name, so I identified payers with a pseudonymous token." },
+    thumb: {
+      src: { ko: "/projects/flowpay/thumb-ko.jpg", en: "/projects/flowpay/thumb-en.jpg" },
+      alt: { ko: "회색 바탕 썸네일: FlowPay, 무기명 법인카드 정산 8단계에서 3단계로. 노트북의 지출 대시보드와 휴대폰 결제 화면", en: "Gray thumbnail: FlowPay, corporate-card expenses from 8 steps to 3. The spending dashboard on a laptop and the payment screen on a phone" },
+    },
     body: {
       ko: "회계담당자는 지출보고서 1건에 20분씩, 월 100건 이상을 처리하고 있었습니다. 인터뷰해 보니 진짜 병목은 결제 이후 수기로 작성하는 전표라고 판단했고, 익명성을 지키는 가명 토큰 Flow ID로 결제 시점부터 사용자를 식별해 지출보고서가 자동 생성되도록 설계했습니다. FIN:NECT 챌린지에서 102팀 중 5위에 올랐습니다.",
       en: "Accountants were spending 20 minutes per expense report, over 100 reports a month. Interviews showed the real bottleneck was the vouchers written by hand after each payment, so I designed Flow ID, a pseudonymous token that identifies the user at the moment of payment while keeping anonymity, so expense reports generate themselves. It placed 5th of 102 teams at the FIN:NECT Challenge.",
@@ -193,8 +206,8 @@ export const selectedProjects: SelectedProject[] = [
     summary: { ko: "경기도 지역화폐 가맹점 39만 건을 분석해 위치와 소비 카테고리로 가맹점을 추천하는 서비스", en: "A service that analyzes 390K Gyeonggi local-currency merchants and recommends them by location and spending category" },
     decision: { ko: "설문 응답자 53%가 가맹점 찾기를 어려워해, 지도 중심 화면을 추천 리스트 중심으로 바꿨습니다.", en: "53% of surveyed users said merchants were hard to find, so I moved the main screen from a map to a recommendation list." },
     thumb: {
-      src: "/projects/ywave/03.png",
-      alt: { ko: "Y:Wave 서비스 소개: 선호 카테고리와 ChatGPT API로 가맹점을 추천하는 앱 화면 3개", en: "Y:Wave overview: three app screens recommending merchants from preferred categories and the ChatGPT API" },
+      src: { ko: "/projects/ywave/thumb-ko.jpg", en: "/projects/ywave/thumb-en.jpg" },
+      alt: { ko: "블루 바탕 썸네일: Y:Wave, 경기도 가맹점 39만 건을 추천 리스트로. 휴대폰 두 대의 지도 화면과 오늘의 추천 화면", en: "Blue thumbnail: Y:Wave, 390K merchants turned into a recommendation list. A map screen and a today's-picks screen on two phones" },
     },
     body: {
       ko: "직접 진행한 설문에서 응답자 53%가 지역화폐 가맹점을 찾기 어렵다고 답했고, 경기도 가맹점 39만 곳은 데이터로만 공개돼 있었습니다. 39만 건을 전수 분석한 뒤, 사용자가 지도에서 직접 찾아야 하는 화면 대신 위치 반경과 소비 카테고리로 가맹점을 추천하는 리스트를 첫 화면에 두었습니다. React·TypeScript로 프론트엔드를 직접 개발했고, 13기 중앙해커톤에서 247팀 중 상위 12%로 2차 예선에 진출했습니다.",
@@ -241,6 +254,10 @@ export const selectedProjects: SelectedProject[] = [
     },
     summary: { ko: "에어비앤비 호스트와 청소자를 잇는 청소 매칭 서비스 루미클린 (외주)", en: "RumiClean, a cleaning-matching service connecting Airbnb hosts and cleaners (client project)" },
     decision: { ko: "완료 기준이 서비스 안에 있어야 분쟁이 생기지 않는다고 판단해, 전·후 사진 5장을 완료 조건으로 정했습니다.", en: "Disputes stop only when the completion standard lives inside the service, so I made five before-and-after photos the condition for completion." },
+    thumb: {
+      src: { ko: "/projects/cleanb/thumb-ko.jpg", en: "/projects/cleanb/thumb-en.jpg" },
+      alt: { ko: "회색 바탕 썸네일: CleanB, 에어비앤비 청소 매칭과 전·후 사진 완료 인증. 청소자 작업 요청 목록과 완료 인증 화면", en: "Gray thumbnail: CleanB, Airbnb cleaning proven with before-and-after photos. The cleaner job list and the completion screen" },
+    },
     body: {
       ko: "외주로 맡은 에어비앤비 청소 매칭 서비스입니다. 서로 모르는 호스트와 청소자가 다투지 않으려면 완료 기준이 서비스 안에 있어야 해서, 청소 작업의 상태 흐름 5단계를 먼저 확정하고 전·후 사진 5장을 완료 조건으로 정했습니다. 청소자 화면 전체를 직접 개발해 배포했고, 지금도 수정하고 있습니다.",
       en: "A client project: an Airbnb cleaning matching service. Hosts and cleaners who've never met need the completion standard to live inside the service, so I fixed the five-state job flow first and made five before-and-after photos the condition for completion. I built the entire cleaner-side app myself, shipped it, and I'm still revising it.",

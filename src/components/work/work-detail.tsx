@@ -26,8 +26,8 @@ export function WorkDetail({ id }: { id: string }) {
 
   const name = tr(entry.name);
   const images = dedupe([
-    // 메인 카드 썸네일(해커톤 키 비주얼)도 캐러셀 첫 장에 둔다
-    ...(selected ? [...(selected.thumb ? [selected.thumb.src] : []), selected.hero.src, ...selected.gallery.map((g) => g.src)] : []),
+    // 메인 카드 썸네일(언어별 표지 이미지)도 캐러셀 첫 장에 둔다
+    ...(selected ? [...(selected.thumb ? [tr(selected.thumb.src)] : []), selected.hero.src, ...selected.gallery.map((g) => g.src)] : []),
     ...(detail.images ?? []),
   ]);
   const roles = selected ? tr(selected.role) : (isKo ? project?.roles : project?.rolesEn)?.join(" · ");

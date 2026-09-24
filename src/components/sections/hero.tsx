@@ -14,6 +14,8 @@ import { cn } from "@/lib/utils";
 // 수용 기준: 1440×900·390×844에서 스크롤 없이 이름·헤드라인·숫자 첫 줄이 보인다.
 // 폰에서는 숫자를 소개 문단보다 먼저 보이게 둔다(문단이 길어 숫자가 첫 화면 밖으로 밀렸다). 데스크톱은 문단 → 숫자.
 // 자기소개는 이 한 번뿐이다. 학력·교육·자격증·병역은 바로 아래 #about의 Profile 블록에 있다.
+// 데스크톱은 첫 화면 높이를 꽉 채운다(min-h-svh). 헤드라인 줄이 남는 높이를 가져가(1fr) 메타 줄은 위,
+// 숫자는 화면 아래에 붙는다. 내용만큼만 높이를 쓰면 1440×900에서 숫자 아래가 200px 넘게 비었다 (2026-09-25 상현 지적).
 // 사진은 원본 컬러 그대로 — 흑백은 영정사진처럼 보여 쓰지 않는다(상현 지적).
 export function Hero() {
   const t = useTranslations("hero");
@@ -24,7 +26,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="gutter grid grid-cols-1 gap-x-14 pb-16 pt-20 [grid-template-areas:'meta'_'photo'_'lead'_'metrics'_'summary'] md:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] md:pb-20 md:pt-20 md:[grid-template-areas:'meta_meta'_'photo_lead'_'photo_summary'_'metrics_metrics']"
+      className="gutter grid grid-cols-1 gap-x-14 pb-16 pt-20 [grid-template-areas:'meta'_'photo'_'lead'_'metrics'_'summary'] md:min-h-svh md:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] md:grid-rows-[auto_1fr_auto_auto] md:pb-16 md:pt-20 md:[grid-template-areas:'meta_meta'_'photo_lead'_'photo_summary'_'metrics_metrics']"
     >
       <MetaRow
         items={[

@@ -37,12 +37,13 @@ export function SelectedProjects() {
                 tabIndex={-1}
                 aria-hidden="true"
                 className={cn(
-                  "group relative block aspect-[16/10] overflow-hidden",
+                  // 오른쪽 글(판단·Key impact·역할)이 길어 이미지가 위에 붙으면 아래가 크게 비었다 → 글 높이의 가운데로
+                  "group relative block aspect-[16/10] overflow-hidden lg:self-center",
                   p.heroTone === "ink" ? "bg-ink" : "bg-muted"
                 )}
               >
                 <Image
-                  src={(p.thumb ?? p.hero).src}
+                  src={p.thumb ? tr(p.thumb.src) : p.hero.src}
                   alt=""
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
@@ -82,8 +83,10 @@ export function SelectedProjects() {
                 {/* sm부터 한 카드의 줄들이 열을 나눠 쓴다(subgrid): 이전 값 · 화살표 · 값 · 설명.
                     줄마다 flex로 두면 이전 값 길이에 따라 큰 숫자의 시작점이 줄마다 달랐다.
                     화살표도 따로 한 열이라 이전 값이 없는 줄(102팀 중 5위)도 같은 x에서 시작한다.
-                    열 사이 간격은 gap이 아니라 padding이라, 이전 값이 없는 카드는 빈 열이 폭 0으로 접힌다 */}
-                <dl className="mt-3 border-t border-foreground sm:grid sm:grid-cols-[auto_auto_auto_minmax(0,1fr)]">
+                    열 사이 간격은 gap이 아니라 padding이라, 이전 값이 없는 카드는 빈 열이 폭 0으로 접힌다.
+                    설명 열은 최소 12rem. 없으면 영문 긴 값('Recommended by place & category')이 설명 열을 0으로 밀어
+                    설명이 한 글자씩 세로로 쌓이고 줄 높이가 수백 px가 됐다(1280px, 2026-09-25). 긴 값은 값 열 안에서 줄바꿈 */}
+                <dl className="mt-3 border-t border-foreground sm:grid sm:grid-cols-[auto_auto_minmax(0,auto)_minmax(12rem,1fr)]">
                   {p.stats.map((s) => (
                     <div
                       key={s.k.en}
@@ -104,7 +107,7 @@ export function SelectedProjects() {
                             <span className="sr-only">{isKo ? "에서" : "to"}</span>
                           </span>
                         )}
-                        <span className="text-[24px] font-extrabold leading-tight tracking-[-0.03em] sm:col-start-3 md:text-[28px]">
+                        <span className="text-balance text-[24px] font-extrabold leading-tight tracking-[-0.03em] sm:col-start-3 md:text-[28px]">
                           {typeof s.v === "string" ? s.v : tr(s.v)}
                         </span>
                       </dd>
