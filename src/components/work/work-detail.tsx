@@ -173,10 +173,12 @@ export function WorkDetail({ id }: { id: string }) {
         )}
 
         <Section n="03" label={t("results")} accent>
-          {/* 굵은 파란 세로선(border-l 3px)은 뺐다. 결과 제목이 이미 파란색이고, 나머지 목록처럼 가로 괘선으로 나눈다 */}
-          <ul className="border-t border-foreground">
+          {/* 굵은 파란 세로선(border-l 3px)은 뺐다. 결과 제목이 이미 파란색이다.
+              항목 사이에만 옅은 선을 둔다. 목록에 윗선을 따로 그으면 Section의 윗선과 두 줄로 겹쳐 보였다(2026-09-25 상현 지적).
+              첫 항목은 위 여백 없이 왼쪽 '03 결과'와 같은 높이에서 시작한다 */}
+          <ul className="divide-y divide-border">
             {detail.results.map((item, j) => (
-              <li key={j} className="border-b border-border py-5 text-[18px] font-semibold leading-[1.75] tracking-[-0.01em] md:text-[19px]">
+              <li key={j} className="py-5 text-[18px] font-semibold leading-[1.75] tracking-[-0.01em] first:pt-0 last:pb-0 md:text-[19px]">
                 {isKo ? item.text : item.textEn}
                 <Sub item={item} isKo={isKo} />
               </li>
