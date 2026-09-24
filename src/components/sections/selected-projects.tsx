@@ -70,6 +70,11 @@ export function SelectedProjects() {
                 <p className="mt-5 text-[18px] font-semibold leading-[1.55] tracking-[-0.01em] md:text-[20px]">
                   {tr(p.summary)}
                 </p>
+                {/* 판단 한 줄 — 상세 페이지의 '왜 그렇게 정했는지'를 목록에서도 보이게 (§G-5) */}
+                <p className="mt-4 text-[16px] leading-[1.7] text-foreground/80 md:text-[17px]">
+                  <span className="mr-2 font-bold text-accent">{t("decision")}</span>
+                  {tr(p.decision)}
+                </p>
 
                 <p lang="en" className="eyebrow mt-8 text-muted-foreground">
                   {t("key_impact")}

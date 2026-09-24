@@ -2,7 +2,9 @@
 // 헤드라인·본문 세 문장·전→후 성과·현장 사진은 /work/<id> 상세 페이지(work-detail.tsx)에서 쓴다.
 // 한 일 목록·범위 칩·흐름 도식·인용문은 FINAL(2026.09.22)에서 뺐다.
 //
-// 순서 규칙 (2026.09.13 지시): 멋사 인턴 경험(중앙해커톤·사내 교육)이 항상 앞, CleanB는 FlowPay 뒤.
+// 순서 (HANDOFF §G, 2026-09-24): 14기 중앙해커톤 → FlowPay → Y:Wave → CleanB.
+// 사내 개발 교육은 Other projects로 옮겼다(상세 페이지는 유지). IT 기획 포지션에서 대표 4개 중
+// 서비스 기획 케이스가 2개뿐이었다. CleanB는 여전히 FlowPay 뒤(2026.09.13 지시).
 // 수치는 PORTFOLIO.md에 출처가 있는 것만 쓴다. 역할 경계("공동"/"직접")도 PORTFOLIO.md를 따른다.
 
 export interface Localized {
@@ -36,6 +38,8 @@ export interface SelectedProject {
   /** 이 프로젝트가 무엇인지 한 줄 — 메인 목록에서 헤드라인 대신 보인다.
    *  헤드라인("…예측할 수 있는 해커톤을 만들었습니다")만으로는 어떤 프로젝트인지 안 보인다는 상현 지적 (2026-09-24) */
   summary: Localized;
+  /** 판단 한 줄 — 상세 페이지에 있는 '왜 그렇게 정했는지'를 메인 카드에서도 보이게 한다 (§G-5) */
+  decision: Localized;
   /** 메인 목록 썸네일. 없으면 hero */
   thumb?: SelectedImage;
   /** 문제 → 조치 → 결과, 완결형 세 문장 (v9 어투 규칙) */
@@ -69,7 +73,9 @@ export const selectedProjects: SelectedProject[] = [
       ko: "2,000명의 참가자가 평가 기준을\n예측할 수 있는 해커톤을 만들었습니다.",
       en: "I made a hackathon where 2,000 participants could predict how they'd be judged.",
     },
-    summary: { ko: "80개 대학 2,000명이 참가한 멋쟁이사자처럼 연합 해커톤 'ANIMAL LEAGUE'의 기획부터 본선 운영까지", en: "LIKELION's 80-university hackathon 'ANIMAL LEAGUE' with 2,000 participants, run from planning through the finals" },
+    // '연합 해커톤'은 학생 주최 대학 연합 해커톤(별도 기획물)을 가리키므로 여기서는 쓰지 않는다 (§G-5)
+    summary: { ko: "80개 대학 2,000명이 참가한 멋쟁이사자처럼 14기 중앙해커톤 'ANIMAL LEAGUE'의 기획부터 본선 운영까지", en: "LIKELION's 14th national hackathon 'ANIMAL LEAGUE', with 2,000 participants from 80 universities, run from planning through the finals" },
+    decision: { ko: "판정 기준은 검사 전에 합의하고, 검사 도구는 근거만 내도록 설계했습니다.", en: "I had the judging criteria agreed before the scan, and designed the checking tool to produce only evidence." },
     thumb: {
       src: "/projects/hackathon14/keyvisual.jpg",
       alt: { ko: "ANIMAL LEAGUE 14th Hackathon 키 비주얼: 트로피를 든 사자와 동물 캐릭터들", en: "ANIMAL LEAGUE 14th Hackathon key visual: a lion holding a trophy with animal characters" },
@@ -79,9 +85,11 @@ export const selectedProjects: SelectedProject[] = [
       en: "With 314 teams competing, participants couldn't tell what to submit or how it would be judged, and the staff were answering inquiries by hand for three hours a day. I mapped submission items 1:1 to judging criteria so scoring became predictable, structured the guide in the order participants live it, and had an FAQ bot answer instantly. For the finals I built the console (Next.js · Supabase) from the DB schema up so judges' votes showed on the stage screen as they came in.",
     },
     stats: [
-      { before: { ko: "하루 3시간", en: "3 h/day" }, v: { ko: "80.8% 즉답", en: "80.8% instant" }, k: { ko: "참가자 문의 · 미응답 0건", en: "participant inquiries · none left unanswered" } },
-      { before: { ko: "엑셀+PPT", en: "Excel+PPT" }, v: { ko: "2.2초", en: "2.2 s" }, k: { ko: "본선 결과 공개 · 심사 투표가 무대 스크린에 뜨기까지", en: "finals reveal · from judges' votes to the stage screen" } },
-      { before: { ko: "약 2일 (추정)", en: "~2 days (est.)" }, v: { ko: "1회 실행", en: "One run" }, k: { ko: "제출물 전수 검사 · 위반 5팀 적발", en: "full submission sweep · 5 violating teams caught" } },
+      // §G-4·5: 전후 단위를 맞췄다(하루 3시간 → 하루 15분). 추정치(약 2일)는 숫자 전체의 신뢰도를 깎아 뺐다.
+      // 2.2초는 값이 아니라 설명에 둔다. 값이 '투표 즉시 스크린 반영(2.2초)'로 길어지면 상세 성과 칸 글자가 모두 작아진다
+      { before: { ko: "하루 3시간", en: "3 hrs/day" }, v: { ko: "하루 15분", en: "15 min/day" }, k: { ko: "참가자 문의 대응 · 229건 중 80.8% 즉답 · 미응답 0건", en: "participant inquiries · 80.8% of 229 answered instantly · none unanswered" } },
+      { before: { ko: "집계 후 PPT", en: "Tally, then PPT" }, v: { ko: "투표 즉시 스크린 반영", en: "On screen as votes land" }, k: { ko: "본선 결과 공개 · 투표에서 스크린까지 2.2초", en: "finals reveal · 2.2 s from vote to stage screen" } },
+      { before: { ko: "수작업 확인", en: "Manual checks" }, v: { ko: "1회 전수 검사", en: "One full scan" }, k: { ko: "제출물 검사 · 위반 5팀 적발", en: "submission checks · 5 violating teams caught" } },
     ],
     hero: {
       src: "/projects/hackathon14/02.png",
@@ -126,48 +134,6 @@ export const selectedProjects: SelectedProject[] = [
     behanceUrl: "https://www.behance.net/gallery/255861853/ANIMAL-LEAGUE-LIKELION-HACKATHON-2026",
   },
   {
-    id: "devsite",
-    kicker: { ko: "멋쟁이사자처럼 인턴 · 사내 교육", en: "LIKELION Internship · Internal Course" },
-    status: { ko: "완료 · 사이트 공개 중", en: "Completed · Site live" },
-    title: { ko: "사내 개발 교육", en: "Internal Dev Literacy Course" },
-    period: { ko: "2026.07 – 2026.08", en: "Jul – Aug 2026" },
-    role: { ko: "기획·제작·강의 단독", en: "Planned, built, and taught solo" },
-    headline: {
-      ko: "비개발 동료가 개발자와 대화할 수 있도록\n점심 강의 6회를 설계했습니다.",
-      en: "I designed six lunchtime sessions so non-developers could talk with developers.",
-    },
-    summary: { ko: "비개발 직군 동료를 위한 점심 개발 강의 6회와 직접 만든 교육 사이트", en: "Six lunchtime dev lectures for non-developer colleagues, with a companion site I built" },
-    body: {
-      ko: "비전공 동료들은 '배포'나 'API' 같은 기본 흐름을 몰라 AI에게 무엇을 물어야 할지조차 어려워했습니다. 목표를 '개발자와 대화하기'로 좁히고, 설치 없이 브라우저에서 바로 되는 실습만 남긴 6회 커리큘럼과 교육 사이트를 직접 만들어 강의했습니다. 수강자 6명 전원이 만족도 5점을 주었고, 개발자와의 대화가 더 이해된다는 응답이 4.7점이었습니다.",
-      en: "Non-developer colleagues didn't know basic flows like 'deploy' or 'API', so they couldn't even tell what to ask an AI. I narrowed the goal to 'talking with developers', kept only exercises that run in the browser with no installs, and built the six-session curriculum and course site myself, then taught it. All six attendees rated it 5 out of 5, and 'I understand developer conversations better' scored 4.7.",
-    },
-    stats: [
-      { v: "5/5", k: { ko: "수강 만족도 · 6명 전원", en: "satisfaction · all 6 attendees" } },
-      { v: "9.7/10", k: { ko: "추천 의향", en: "would recommend" } },
-      { v: "4.7/5", k: { ko: "개발자와의 대화 이해도", en: "understanding of developer conversations" } },
-    ],
-    hero: {
-      src: "/projects/devsite/01.png",
-      alt: { ko: "교육 사이트 '개발 아는 척 완전정복' 첫 화면", en: "Home screen of the companion course site" },
-    },
-    heroTone: "muted",
-    gallery: [
-      {
-        src: "/projects/devsite/02.png",
-        alt: { ko: "6회 강의 커리큘럼과 회차별 목차 화면", en: "The six-session curriculum with per-session outlines" },
-      },
-      {
-        src: "/projects/devsite/03.png",
-        alt: {
-          ko: "로그인 요청 시뮬레이터: 버튼을 누르면 요청이 프론트엔드 → API → 백엔드 → DB를 거치는 과정을 보여주는 브라우저 실습",
-          en: "Login request simulator: an in-browser demo showing a request travel frontend → API → backend → DB",
-        },
-      },
-    ],
-    caseId: "devsite",
-    liveUrl: "https://likelion-dev-site.vercel.app",
-  },
-  {
     id: "flowpay",
     kicker: { ko: "B2B 핀테크 · FIN:NECT 챌린지", en: "B2B Fintech · FIN:NECT Challenge" },
     status: { ko: "수상 · 102팀 중 5위", en: "Award · 5th of 102" },
@@ -179,6 +145,7 @@ export const selectedProjects: SelectedProject[] = [
       en: "I cut anonymous corporate card reconciliation from 8 steps to 3.",
     },
     summary: { ko: "무기명 법인카드의 결제부터 지출보고서까지 자동화하는 B2B 정산 서비스 프로토타입", en: "A B2B prototype that automates anonymous corporate-card spending from payment to expense report" },
+    decision: { ko: "회계에 필요한 것은 실명보다 누가 썼는지의 구분이라고 판단해, 가명 토큰으로 결제자를 식별했습니다.", en: "Accounting needs to know who spent, not their real name, so I identified payers with a pseudonymous token." },
     body: {
       ko: "회계담당자는 지출보고서 1건에 20분씩, 월 100건 이상을 처리하고 있었습니다. 인터뷰해 보니 진짜 병목은 결제 이후 수기로 작성하는 전표라고 판단했고, 익명성을 지키는 가명 토큰 Flow ID로 결제 시점부터 사용자를 식별해 지출보고서가 자동 생성되도록 설계했습니다. FIN:NECT 챌린지에서 102팀 중 5위에 올랐습니다.",
       en: "Accountants were spending 20 minutes per expense report, over 100 reports a month. Interviews showed the real bottleneck was the vouchers written by hand after each payment, so I designed Flow ID, a pseudonymous token that identifies the user at the moment of payment while keeping anonymity, so expense reports generate themselves. It placed 5th of 102 teams at the FIN:NECT Challenge.",
@@ -213,6 +180,55 @@ export const selectedProjects: SelectedProject[] = [
     liveUrl: "https://flowpay.vercel.app",
   },
   {
+    id: "ywave",
+    kicker: { ko: "멋쟁이사자처럼 13기 중앙해커톤", en: "LIKELION 13th Hackathon" },
+    status: { ko: "2차 예선 진출 · 247팀 중 상위 12%", en: "2nd round · top 12% of 247" },
+    title: { ko: "Y:Wave", en: "Y:Wave" },
+    period: { ko: "2025.07 – 2025.08", en: "Jul – Aug 2025" },
+    role: { ko: "PM · 프론트엔드 · 디자인 (6인 팀)", en: "PM · Frontend · Design (team of 6)" },
+    headline: {
+      ko: "가맹점 39만 건을 사용자가 바로 고를 수 있는\n추천 리스트로 바꿨습니다.",
+      en: "I turned 390K merchants into a recommendation list users can pick from right away.",
+    },
+    summary: { ko: "경기도 지역화폐 가맹점 39만 건을 분석해 위치와 소비 카테고리로 가맹점을 추천하는 서비스", en: "A service that analyzes 390K Gyeonggi local-currency merchants and recommends them by location and spending category" },
+    decision: { ko: "설문 응답자 53%가 가맹점 찾기를 어려워해, 지도 중심 화면을 추천 리스트 중심으로 바꿨습니다.", en: "53% of surveyed users said merchants were hard to find, so I moved the main screen from a map to a recommendation list." },
+    thumb: {
+      src: "/projects/ywave/03.png",
+      alt: { ko: "Y:Wave 서비스 소개: 선호 카테고리와 ChatGPT API로 가맹점을 추천하는 앱 화면 3개", en: "Y:Wave overview: three app screens recommending merchants from preferred categories and the ChatGPT API" },
+    },
+    body: {
+      ko: "직접 진행한 설문에서 응답자 53%가 지역화폐 가맹점을 찾기 어렵다고 답했고, 경기도 가맹점 39만 곳은 데이터로만 공개돼 있었습니다. 39만 건을 전수 분석한 뒤, 사용자가 지도에서 직접 찾아야 하는 화면 대신 위치 반경과 소비 카테고리로 가맹점을 추천하는 리스트를 첫 화면에 두었습니다. React·TypeScript로 프론트엔드를 직접 개발했고, 13기 중앙해커톤에서 247팀 중 상위 12%로 2차 예선에 진출했습니다.",
+      en: "In a survey we ran ourselves, 53% of respondents said local-currency merchants were hard to find, and Gyeonggi's 390K merchants were published only as raw data. After analyzing all 390K records, I put a list recommending merchants by distance and spending category on the first screen, instead of making users search the map themselves. I built the frontend myself in React and TypeScript, and the project reached the second round of the LIKELION 13th hackathon, in the top 12% of 247 teams.",
+    },
+    stats: [
+      { before: { ko: "지도에서 직접 찾기", en: "Searching the map" }, v: { ko: "위치·카테고리 기반 추천", en: "Recommended by place & category" }, k: { ko: "가맹점 탐색", en: "finding a merchant" } },
+      { v: { ko: "39만 건 전수 분석", en: "All 390K analyzed" }, k: { ko: "근거 데이터 · 경기도 가맹점 · 설문 53%", en: "evidence · Gyeonggi merchants · 53% in our survey" } },
+      { v: { ko: "247팀 중 상위 12%", en: "Top 12% of 247" }, k: { ko: "13기 중앙해커톤 · 2차 예선 진출", en: "LIKELION 13th hackathon · 2nd round" } },
+    ],
+    hero: {
+      src: "/projects/ywave/03.png",
+      alt: { ko: "Y:Wave 서비스 소개: 선호 카테고리와 ChatGPT API로 가맹점을 추천하는 앱 화면 3개", en: "Y:Wave overview: three app screens recommending merchants from preferred categories and the ChatGPT API" },
+    },
+    heroTone: "muted",
+    gallery: [
+      {
+        src: "/projects/ywave/02.png",
+        alt: {
+          ko: "문제 인식: 용인와이페이 가맹점 감소 기사와 자체 설문 결과(가맹점 찾기 불편함 27%, 가맹점 수 부족 26%)",
+          en: "Problem: a news story on Yongin Pay merchants shrinking, and our survey (27% found merchants hard to find, 26% said there were too few)",
+        },
+      },
+      {
+        src: "/projects/ywave/04.png",
+        alt: {
+          ko: "핵심 기능: 경기도 39만 개 가맹점 데이터 기반 지도와 카테고리·지역 필터",
+          en: "Core feature: a map built on 390K Gyeonggi merchant records, with category and region filters",
+        },
+      },
+    ],
+    caseId: "ywave",
+  },
+  {
     id: "cleanb",
     kicker: { ko: "외주 프로젝트 · 루미클린(RumiClean)", en: "Client Project · RumiClean" },
     status: { ko: "배포 완료 · 결제 연동 전", en: "Deployed · Payments pending" },
@@ -224,6 +240,7 @@ export const selectedProjects: SelectedProject[] = [
       en: "I designed a service where hosts and cleaners don't argue over whether the cleaning was done.",
     },
     summary: { ko: "에어비앤비 호스트와 청소자를 잇는 청소 매칭 서비스 루미클린 (외주)", en: "RumiClean, a cleaning-matching service connecting Airbnb hosts and cleaners (client project)" },
+    decision: { ko: "완료 기준이 서비스 안에 있어야 분쟁이 생기지 않는다고 판단해, 전·후 사진 5장을 완료 조건으로 정했습니다.", en: "Disputes stop only when the completion standard lives inside the service, so I made five before-and-after photos the condition for completion." },
     body: {
       ko: "외주로 맡은 에어비앤비 청소 매칭 서비스입니다. 서로 모르는 호스트와 청소자가 다투지 않으려면 완료 기준이 서비스 안에 있어야 해서, 청소 작업의 상태 흐름 5단계를 먼저 확정하고 전·후 사진 5장을 완료 조건으로 정했습니다. 청소자 화면 전체를 직접 개발해 배포했고, 지금도 수정하고 있습니다.",
       en: "A client project: an Airbnb cleaning matching service. Hosts and cleaners who've never met need the completion standard to live inside the service, so I fixed the five-state job flow first and made five before-and-after photos the condition for completion. I built the entire cleaner-side app myself, shipped it, and I'm still revising it.",

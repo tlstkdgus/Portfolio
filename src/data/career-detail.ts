@@ -33,12 +33,12 @@ export interface CareerDetailSection {
 }
 
 export const careerDetailSections: CareerDetailSection[] = [
-// 순서 = 메인 페이지 노출 순서. 멋사 인턴 경험(중앙해커톤·사내 교육)이 항상 앞,
-// CleanB는 FlowPay 뒤 (2026.09.13 서사 우선순위 지시).
+// 순서 = 메인 페이지 노출 순서(/career 목록과 상세 페이지 이전·다음도 이 순서). HANDOFF §G (2026-09-24):
+// 대표 4개(해커톤 → FlowPay → Y:Wave → CleanB) → Other 노출 6개 → 접힌 8개. CleanB는 FlowPay 뒤(2026.09.13 지시).
   {
     id: "hackathon14",
-    title: "80개 대학 연합 해커톤 기획·운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
-    titleEn: "Planning and Running an 80-University Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
+    title: "2,000명 규모 해커톤 기획·운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
+    titleEn: "Planning and Running a 2,000-Person Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
     images: [
       "/projects/hackathon14/01.png",
       "/projects/hackathon14/02.png",
@@ -75,7 +75,7 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "80개 대학, 참가자 2,000명+, 314팀 제출(562개 레포) → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 연합 해커톤입니다. 커뮤니티 매니저 인턴으로 기획부터 본선 운영까지 맡았고, 기능명세서·워밍업 세션·참가자 가이드·심사 정책은 팀과 함께 만들었으며 운영 도구 3개와 본선 현장 운영은 직접 맡았습니다. (2026.06 ~ 2026.08.25, 본선 코엑스 마곡)",
+        text: "80개 대학, 참가자 2,000명+, 314팀 제출(562개 레포) → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 중앙해커톤입니다. 커뮤니티 매니저 인턴으로 기획부터 본선 운영까지 맡았고, 기능명세서·워밍업 세션·참가자 가이드·심사 정책은 팀과 함께 만들었으며 운영 도구 3개와 본선 현장 운영은 직접 맡았습니다. (2026.06 ~ 2026.08.25, 본선 코엑스 마곡)",
         textEn:
           "The largest LIKELION hackathon to date: 80 universities, 2,000+ participants, 314 submitting teams (562 repos) → an 8-team finals tournament picking one winner. As a community manager intern I took it from planning through the finals: the feature specs, warm-up sessions, participant guide, and judging policy were made with the team, and I built the 3 ops tools and ran the finals on site myself. (Jun 2026 – Aug 25, 2026; finals at COEX Magok)",
         subItems: [
@@ -190,9 +190,9 @@ export const careerDetailSections: CareerDetailSection[] = [
               "Co-wrote the Notion guide that 2,000 participants referenced for a month — structured by participant journey (team building → build → judging → venue), with every change dated and traceable.",
             subItems: [
               {
-                text: "FAQ 72문항을 지식으로 쓰는 디스코드 봇을 직접 만들어 운영했습니다. 키워드 매칭 우선(비용 0) + LLM 폴백의 2단 응답, 자료에 없는 내용은 지어내지 않고 '운영진 문의' 안내, 미답변 질문 일일 리포트로 지식을 보강하되 반영 여부는 사람이 판단. 한 달간 229건(사용자 53명)을 응대했고 80.8%가 키워드 즉답, 미응답은 0건이었습니다.",
+                text: "FAQ 78문항을 지식으로 쓰는 디스코드 봇을 직접 만들어 운영했습니다. 키워드 매칭 우선(비용 0) + LLM 폴백의 2단 응답, 자료에 없는 내용은 지어내지 않고 '운영진 문의' 안내, 미답변 질문 일일 리포트로 지식을 보강하되 반영 여부는 사람이 판단. 한 달간 229건(사용자 53명)을 응대했고 80.8%가 키워드 즉답, 미응답은 0건이었습니다.",
                 textEn:
-                  "Built and ran a Discord bot over the 72-item FAQ: keyword matching first (zero cost) with LLM fallback, a strict no-fabrication policy (unknowns route to staff), and a daily unanswered-question report — with humans deciding what gets added. Over a month it answered 229 questions from 53 users — 80.8% via instant keyword match, 0 unanswered.",
+                  "Built and ran a Discord bot over the 78-item FAQ: keyword matching first (zero cost) with LLM fallback, a strict no-fabrication policy (unknowns route to staff), and a daily unanswered-question report — with humans deciding what gets added. Over a month it answered 229 questions from 53 users — 80.8% via instant keyword match, 0 unanswered.",
               },
               {
                 text: "파트너 8종 툴 지원 정책(신청 마감 일원화, 팀장 대표 제출, 과금 리스크 안내)을 운영했고, OpenAI와는 영문으로 직접 커뮤니케이션하며 크레딧 지급 이슈를 추적하고 본선 기술 심사위원 섭외까지 연결했습니다.",
@@ -211,9 +211,9 @@ export const careerDetailSections: CareerDetailSection[] = [
           "The full 562-repo sweep found 550 clean and 5 violating teams — 2 disqualified under the graded criteria, the rest handled with deductions or leniency.",
       },
       {
-        text: "본선 토너먼트(8팀 · 심사위원 5명)를 직접 만든 콘솔로 끝까지 진행했습니다. 2,000명 규모 행사가 계획 대비 약 30분 초과로 마무리됐습니다.",
+        text: "본선 토너먼트(8팀 · 심사위원 5명)를 직접 만든 콘솔로 끝까지 진행했습니다.",
         textEn:
-          "Ran the finals tournament (8 teams, 5 judges) end-to-end on the self-built console; the 2,000-person event closed about 30 minutes over schedule.",
+          "Ran the finals tournament (8 teams, 5 judges) end-to-end on the console I built.",
       },
       {
         text: "멋쟁이사자처럼 브랜드 디자인 랩이 'ANIMAL LEAGUE'를 Behance 케이스로 공개했고, 공동작업자로 등재됐습니다.",
@@ -236,83 +236,6 @@ export const careerDetailSections: CareerDetailSection[] = [
         text: "가이드·FAQ·봇·문의 채널은 결국 하나의 시스템이었습니다. 정보의 단일 출처를 정하고 나머지가 그걸 재사용하게 만들자, 같은 질문에 다른 답이 나가는 일이 줄었습니다.",
         textEn:
           "The guide, FAQ, bot, and inquiry channels were really one system. Designating a single source of truth and making everything else reuse it reduced the 'same question, different answer' failure.",
-      },
-    ],
-  },
-
-  {
-    id: "devsite",
-    title: "비개발 직군을 위한 6회 강의와 교육 사이트 — 사내 개발 교육",
-    titleEn: "Six Lectures and a Companion Site for Non-Developers — Internal Dev Literacy Course",
-    images: [
-      "/projects/devsite/01.png",
-      "/projects/devsite/02.png",
-      "/projects/devsite/03.png",
-      "/projects/devsite/04.png",
-      "/projects/devsite/05.png",
-    ],
-    background: [
-      {
-        text: "회사에는 저처럼 비전공자인 동료가 많았고, 그분들에게 '배포'·'API' 같은 말이 여전히 어렵다는 걸 알게 됐습니다. AI에게 물어보면 답이 나오는 시대지만, 기본 흐름을 모르면 무엇을 물어야 할지조차 모릅니다. 멋쟁이사자처럼 인턴 기간에 기획·제작·강의를 단독으로 맡았습니다. (2026.07 ~ 2026.08)",
-        textEn:
-          "Many colleagues were non-developers like me, and words like 'deploy' and 'API' were still hard for them. You can ask AI anything now — but without the basic flow, you don't know what to ask. During my LIKELION internship I planned, built, and taught the course on my own. (Jul – Aug 2026)",
-      },
-    ],
-    role: [
-      {
-        title: "커리큘럼 설계와 강의 — 단독",
-        titleEn: "Curriculum & Teaching — Solo",
-        items: [
-          {
-            text: "점심시간 분량 6회 커리큘럼을 설계하고 주 1회, 6주간 직접 강의했습니다 — 소프트웨어 구조 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드.",
-            textEn:
-              "Designed a 6-session lunchtime curriculum and taught it weekly for 6 weeks — software structure, dev vocabulary, Git & GitHub, collaboration communication, AI & vibe coding, AI trends.",
-            subItems: [
-              {
-                text: "모든 개념을 식당 비유 하나로 통일했습니다 — 홀=프론트엔드, 주방=백엔드, 냉장고=DB, 주문서=API. 회차가 바뀌어도 같은 그림 위에 새 개념을 얹도록 했습니다.",
-                textEn:
-                  "Unified every concept under one restaurant metaphor — dining hall = frontend, kitchen = backend, fridge = DB, order slip = API — so each session added to the same picture.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        title: "교육 사이트 직접 제작",
-        titleEn: "Built the Companion Site",
-        items: [
-          {
-            text: "React · TypeScript · Vite로 교육용 사이트를 만들었습니다 — SVG 개념 도식 14종, 브라우저에서 바로 동작하는 라이브 실습(로그인 요청 왕복, Git 협업 시뮬레이터 등), 용어 사전 51개.",
-            textEn:
-              "Built the site with React · TypeScript · Vite — 14 SVG concept diagrams, live in-browser demos (login round-trip, Git collaboration simulator), and a 51-term glossary.",
-            subItems: [
-              {
-                text: "설치·계정이 필요한 실습은 전부 뺐습니다. 밥 먹으면서 듣는 환경을 전제로, 링크 하나로 바로 따라 할 수 있는 것만 남겼습니다.",
-                textEn:
-                  "Cut every exercise that needed installs or accounts — assuming people listen over lunch, only what works from a single link stayed.",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-    results: [
-      {
-        text: "수강자 설문(6명): 만족도 전원 5/5, 추천 의향 평균 9.7/10, '개발자와의 대화에서 이해되는 부분이 늘었다' 4.7/5.",
-        textEn:
-          "Attendee survey (n=6): 5/5 satisfaction across the board, 9.7/10 average recommendation, 4.7/5 on 'I understand more of developer conversations now.'",
-      },
-      {
-        text: "'짧아서 아쉽다'는 피드백과 함께 인프라·DB·협업 방식 등 후속 주제 요청을 받았습니다.",
-        textEn:
-          "Feedback said it was 'too short,' with requests for follow-ups on infrastructure, databases, and dev collaboration.",
-      },
-    ],
-    lessons: [
-      {
-        text: "코드를 가르치지 않기로 한 게 가장 큰 결정이었습니다. 목표를 '개발자 되기'에서 '개발자와 대화하기'로 좁히자 6회 안에 담을 것과 버릴 것이 분명해졌습니다 — 교육도 스코프를 자르는 일이었습니다.",
-        textEn:
-          "The biggest decision was not teaching code. Narrowing the goal from 'becoming a developer' to 'talking with developers' made clear what fit in six sessions and what didn't — teaching, too, was scope cutting.",
       },
     ],
   },
@@ -430,6 +353,82 @@ export const careerDetailSections: CareerDetailSection[] = [
   },
 
   {
+    id: "ywave",
+    title: "경기도 지역화폐 가맹점 추천 서비스 — Y:Wave",
+    titleEn: "Gyeonggi Local Currency Store Recommendation — Y:Wave",
+    images: [
+      "/projects/ywave/01.png",
+      "/projects/ywave/02.png",
+      "/projects/ywave/03.png",
+      "/projects/ywave/04.png",
+      "/projects/ywave/05.png",
+      "/projects/ywave/06.png",
+    ],
+    background: [
+      {
+        text: "경기도 지역화폐 이용자는 많지만, 가맹점 탐색의 어려움으로 소비가 특정 대형 가맹점에 편중되고 소상공인 수혜가 미미한 문제를 파악했습니다.",
+        textEn:
+          "Despite a large base of Gyeonggi local currency users, spending concentrated in large merchants due to difficulty discovering stores — leaving small business owners with minimal benefit.",
+        subItems: [
+          {
+            text: "멋쟁이사자처럼 13기 중앙해커톤 제출작으로, 6인 팀에서 경기도 지역화폐 가맹점 추천이라는 공공 문제를 AI로 해결하는 서비스를 기획·개발했습니다.",
+            textEn:
+              "Submitted to the LIKELION 13th national hackathon — as part of a 6-person team, planned and developed a service solving the public problem of Gyeonggi local currency store discovery with AI.",
+          },
+        ],
+      },
+    ],
+    role: [
+      {
+        title: "서비스 기획 및 디자인",
+        titleEn: "Product Planning & Design",
+        items: [
+          {
+            text: "사용자의 현재 위치, 소비 패턴, 카테고리 선호도를 분석하여 맞춤형 가맹점을 추천하는 AI 기능을 기획했습니다.",
+            textEn:
+              "Planned an AI feature that analyzes user's current location, spending patterns, and category preferences to recommend personalized merchants.",
+          },
+          {
+            text: "Figma로 전체 UI/UX를 설계하고, 지역 소상공인 홍보 효과와 사용자 혜택을 동시에 달성하는 서비스 흐름을 설계했습니다.",
+            textEn:
+              "Designed the full UI/UX in Figma and structured the service to simultaneously achieve local small business promotion and user benefits.",
+          },
+        ],
+      },
+      {
+        title: "프론트엔드 개발",
+        titleEn: "Frontend Development",
+        items: [
+          {
+            text: "React + TypeScript + Tailwind CSS 기반의 반응형 UI를 개발했습니다. 위치 기반 가맹점 지도, AI 추천 리스트, 카테고리 필터 등 핵심 화면을 구현했습니다.",
+            textEn:
+              "Developed responsive UI in React + TypeScript + Tailwind CSS. Implemented core screens: location-based merchant map, AI recommendation list, and category filters.",
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "멋쟁이사자처럼 13기 중앙해커톤 2차 예선에 진출했습니다 — 247팀 중 상위 12%에 해당하는 성과입니다.",
+        textEn:
+          "Advanced to the 2nd round of the LIKELION 13th national hackathon — top 12% among 247 teams.",
+      },
+    ],
+    lessons: [
+      {
+        text: "추천 정확도를 올리는 것보다, 추천 결과를 보고 실제로 가게에 가게 만드는 화면이 더 어려웠습니다. 지도에서 가맹점이 한눈에 들어오게 만드는 일이 알고리즘보다 사용성을 좌우했습니다.",
+        textEn:
+          "Improving recommendation accuracy was easier than building a screen that makes people actually visit the store. Making merchants legible on the map mattered more than the algorithm.",
+      },
+      {
+        text: "'지역 경제 활성화'는 심사용 문구일 뿐, 사용자에게는 '내 주변 어디서 할인받지?'가 전부였습니다. 거시 목표를 개인의 혜택으로 번역하는 게 기획의 일이라는 걸 배운 프로젝트입니다.",
+        textEn:
+          "'Revitalizing the local economy' is a phrase for judges; for users it was just 'where near me do I get a discount?' Translating macro goals into personal benefits is the planner's job.",
+      },
+    ],
+  },
+
+  {
     id: "cleanb",
     title: "외주 에어비앤비 청소 매칭 플랫폼 운영 — CleanB",
     titleEn: "Operating a Client's Airbnb Cleaning Matching Platform — CleanB",
@@ -533,85 +532,9 @@ export const careerDetailSections: CareerDetailSection[] = [
   },
 
   {
-    id: "ywave",
-    title: "AI 기반 경기도 지역화폐 가맹점 추천 서비스 — Y:Wave",
-    titleEn: "AI-Powered Gyeonggi Local Currency Store Recommendation — Y:Wave",
-    images: [
-      "/projects/ywave/01.png",
-      "/projects/ywave/02.png",
-      "/projects/ywave/03.png",
-      "/projects/ywave/04.png",
-      "/projects/ywave/05.png",
-      "/projects/ywave/06.png",
-    ],
-    background: [
-      {
-        text: "경기도 지역화폐 이용자는 많지만, 가맹점 탐색의 어려움으로 소비가 특정 대형 가맹점에 편중되고 소상공인 수혜가 미미한 문제를 파악했습니다.",
-        textEn:
-          "Despite a large base of Gyeonggi local currency users, spending concentrated in large merchants due to difficulty discovering stores — leaving small business owners with minimal benefit.",
-        subItems: [
-          {
-            text: "멋쟁이사자처럼 13기 중앙해커톤 제출작으로, 6인 팀에서 경기도 지역화폐 가맹점 추천이라는 공공 문제를 AI로 해결하는 서비스를 기획·개발했습니다.",
-            textEn:
-              "Submitted to the LIKELION 13th national hackathon — as part of a 6-person team, planned and developed a service solving the public problem of Gyeonggi local currency store discovery with AI.",
-          },
-        ],
-      },
-    ],
-    role: [
-      {
-        title: "서비스 기획 및 디자인",
-        titleEn: "Product Planning & Design",
-        items: [
-          {
-            text: "사용자의 현재 위치, 소비 패턴, 카테고리 선호도를 분석하여 맞춤형 가맹점을 추천하는 AI 기능을 기획했습니다.",
-            textEn:
-              "Planned an AI feature that analyzes user's current location, spending patterns, and category preferences to recommend personalized merchants.",
-          },
-          {
-            text: "Figma로 전체 UI/UX를 설계하고, 지역 소상공인 홍보 효과와 사용자 혜택을 동시에 달성하는 서비스 흐름을 설계했습니다.",
-            textEn:
-              "Designed the full UI/UX in Figma and structured the service to simultaneously achieve local small business promotion and user benefits.",
-          },
-        ],
-      },
-      {
-        title: "프론트엔드 개발",
-        titleEn: "Frontend Development",
-        items: [
-          {
-            text: "React + TypeScript + Tailwind CSS 기반의 반응형 UI를 개발했습니다. 위치 기반 가맹점 지도, AI 추천 리스트, 카테고리 필터 등 핵심 화면을 구현했습니다.",
-            textEn:
-              "Developed responsive UI in React + TypeScript + Tailwind CSS. Implemented core screens: location-based merchant map, AI recommendation list, and category filters.",
-          },
-        ],
-      },
-    ],
-    results: [
-      {
-        text: "멋쟁이사자처럼 13기 중앙해커톤 2차 예선에 진출했습니다 — 247팀 중 상위 12%에 해당하는 성과입니다.",
-        textEn:
-          "Advanced to the 2nd round of the LIKELION 13th national hackathon — top 12% among 247 teams.",
-      },
-    ],
-    lessons: [
-      {
-        text: "추천 정확도를 올리는 것보다, 추천 결과를 보고 실제로 가게에 가게 만드는 화면이 더 어려웠습니다. 지도에서 가맹점이 한눈에 들어오게 만드는 일이 알고리즘보다 사용성을 좌우했습니다.",
-        textEn:
-          "Improving recommendation accuracy was easier than building a screen that makes people actually visit the store. Making merchants legible on the map mattered more than the algorithm.",
-      },
-      {
-        text: "'지역 경제 활성화'는 심사용 문구일 뿐, 사용자에게는 '내 주변 어디서 할인받지?'가 전부였습니다. 거시 목표를 개인의 혜택으로 번역하는 게 기획의 일이라는 걸 배운 프로젝트입니다.",
-        textEn:
-          "'Revitalizing the local economy' is a phrase for judges; for users it was just 'where near me do I get a discount?' Translating macro goals into personal benefits is the planner's job.",
-      },
-    ],
-  },
-
-  {
     id: "songeul",
     title: "시니어를 위한 AI-OCR 모바일 뱅킹 — 손글 (SonGeul)",
-    titleEn: "AI-OCR Mobile Banking for Seniors — SonGeul",
+    titleEn: "Mobile Banking for Seniors, with AI-OCR — SonGeul",
     images: [
       "/projects/songeul/01.png",
       "/projects/songeul/02.png",
@@ -724,109 +647,202 @@ export const careerDetailSections: CareerDetailSection[] = [
   },
 
   {
-    id: "connect",
-    title: "은둔형 청년 지원 플랫폼 — 커넥트",
-    titleEn: "Support Platform for Socially Isolated Youth — Connect",
-    images: [
-      "/projects/connect/01.png",
-      "/projects/connect/02.png",
-      "/projects/connect/03.png",
-      "/projects/connect/04.png",
-      "/projects/connect/05.png",
-      "/projects/connect/06.png",
-      "/projects/connect/07.png",
-      "/projects/connect/08.png",
-    ],
+    // §G-6에서 추가 (2026-09-24). HANDOFF D-8의 '결정 기록' 중 상현 확인 전(※) 문장은 넣지 않고,
+    // 화면에 실제로 반영된 동작만 적었다. 배운 점은 확인된 문장이 없어 비워 둔다(상세 페이지에서 섹션을 그리지 않음).
+    id: "welcomekit",
+    title: "부원 45명이 쓴 13기 동아리 앱 — 웰컴키트",
+    titleEn: "A Club App Used by 45 Members — WelcomeKit",
     background: [
       {
-        text: "2024년 한국보건사회연구원 조사에 따르면 국내 은둔형 청년이 약 54만 명에 달합니다. 이 중 80% 이상이 은둔 상태를 벗어나길 원하지만, 절반 이상이 지원을 받은 경험이 없습니다.",
+        text: "한국외대 멋쟁이사자처럼 13기 부원 45명의 세션 출석을 운영진이 수기 출석부로 관리하고 있었습니다. 13기 운영진으로 출석과 팀 빙고 미션을 한 앱에서 처리하는 PWA를 기획하고 프론트엔드 개발을 이끌었습니다. (2025.03 ~ 2025.09)",
         textEn:
-          "A 2024 Korea Institute for Health and Social Affairs survey found approximately 540,000 socially isolated youth in Korea. Over 80% want to overcome their isolation, yet more than half have never received any support.",
-        subItems: [
-          {
-            text: "주요 고립 원인은 취업 실패(24.1%)와 대인관계 어려움(23.5%)이며, 삶의 만족도는 일반 청년 대비 절반 수준입니다. 사회적 손실은 연간 7조 원 규모로 추산됩니다.",
-            textEn:
-              "Primary causes of isolation: employment failure (24.1%) and interpersonal difficulties (23.5%). Life satisfaction is about half that of general youth. Social losses are estimated at ₩7 trillion annually.",
-          },
-        ],
-      },
-      {
-        text: "기존 지원 사업은 국가 주도의 대면 프로그램 중심으로, 은둔 청년에게 오히려 높은 진입 장벽이었습니다. 비대면·익명 기반의 단계적 접근이 핵심 차별점이라고 판단했습니다.",
-        textEn:
-          "Existing programs were government-led and face-to-face — paradoxically creating high barriers for isolated youth. Concluded that a non-face-to-face, anonymous, step-by-step approach would be the key differentiator.",
+          "Attendance for the 45 members of HUFS LIKELION's 13th cohort was kept by staff on a paper roll. As 13th-cohort staff, I planned a PWA that handled attendance and team bingo missions in one app, and led its frontend development. (Mar 2025 – Sep 2025)",
       },
     ],
     role: [
       {
-        title: "서비스 기획 및 PM",
-        titleEn: "Product Planning & PM",
+        title: "QR 출석",
+        titleEn: "QR attendance",
         items: [
           {
-            text: "2단계 사회 적응 커리큘럼을 설계했습니다: 1단계(사회 적응 훈련) - 텍스트 시뮬레이션, AI 역할극 채팅, 사용자 매칭 대화 / 2단계(사회 참여 훈련) - AI 취업 컨설팅, 외부 기관 연계, 일간 뉴스레터.",
-            textEn:
-              "Designed a 2-stage social adaptation curriculum: Stage 1 (Social Adaptation Training) — text simulation, AI role-play chat, user matching dialogue / Stage 2 (Social Participation Training) — AI job consulting, institution links, daily newsletter.",
+            text: "운영진이 QR을 띄우고 부원이 모바일로 스캔하면 서버에 바로 기록되고, 세션 시작 20분이 지난 스캔은 지각으로 자동 판정되게 했습니다.",
+            textEn: "Staff show a QR code and members scan it on their phones, so attendance is recorded on the server at once; scans more than 20 minutes after the session starts are marked late automatically.",
           },
           {
-            text: "구독 모델(사회 적응 훈련 6,900원/월, 사회 참여 훈련 9,900원/월)과 3단계 확장 전략(B2C → 기술 안정화 → B2B)을 수립하고 3개년 수익 예측을 작성했습니다.",
-            textEn:
-              "Established subscription model (₩6,900/month for adaptation, ₩9,900/month for participation) and 3-phase growth strategy (B2C → tech stabilization → B2B), including 3-year revenue projections.",
-            subItems: [
-              {
-                text: "첫 해 당기순이익 563만원 → 3년차 3억 987만원 달성 전망의 손익계산서를 작성했습니다.",
-                textEn:
-                  "Prepared a P&L statement projecting ₩5.63M net profit in year 1, scaling to ₩309.87M by year 3.",
-              },
-            ],
+            text: "오늘 출석부에서는 지각·결석자만 팀별로 보여주게 했습니다.",
+            textEn: "Today's roll shows only late or absent members, grouped by team.",
+          },
+          {
+            text: "데스크톱에서는 QR 띄우기와 출석부 최신화만, 모바일에서는 출석하기 버튼만 보이게 했습니다.",
+            textEn: "On desktop only 'show QR' and 'refresh roll' appear; on mobile only the 'check in' button does.",
           },
         ],
       },
       {
-        title: "UI/UX 디자인 및 프론트엔드 개발",
-        titleEn: "UI/UX Design & Frontend Development",
+        title: "빙고 미션",
+        titleEn: "Bingo missions",
         items: [
           {
-            text: "와이어프레임부터 스타일 가이드, 아이콘·버튼 등 세부 UI 요소까지 Figma로 전체 디자인 시스템을 구축했습니다.",
-            textEn:
-              "Built the complete design system in Figma — from wireframes and style guides to detailed UI elements like icons and buttons.",
-          },
-          {
-            text: "React 기반으로 40개 이상의 페이지를 구현하고, Spring Boot 백엔드 API(회원가입, 뉴스레터, OpenAI 연동)와 카카오맵 API를 연동했습니다. (3인팀, 멋쟁이사자처럼 12기)",
-            textEn:
-              "Implemented 40+ pages in React, integrated Spring Boot backend APIs (registration, newsletter, OpenAI) and Kakao Maps API. (3-person team, Likelion 12th cohort)",
+            text: "승인 대기 중인 칸이 있으면 다른 칸을 선택할 수 없게 하고, 운영진이 승인하면 카드가 뒤집히며 미션이 공개되게 했습니다.",
+            textEn: "While one square awaits approval, no other square can be picked; once staff approve it, the card flips and the mission is revealed.",
           },
         ],
       },
     ],
     results: [
       {
-        text: "26명 대상 시장 테스트에서 전반적 유용성 8.9점(목표 8.0점 초과)을 달성했습니다. 주간 인증 챌린지가 9.4점으로 가장 높은 평가를 받았으며, AI 역할극 채팅은 실제 대화 거부감을 최소화했다는 평가를 받았습니다.",
+        text: "부원 45명이 세션 출석과 빙고 미션에 사용했고, 수기 출석부는 QR 스캔 자동 기록으로 바뀌었습니다.",
+        textEn: "All 45 members used it for session attendance and bingo missions, and the paper roll was replaced by automatic QR logging.",
+      },
+    ],
+    lessons: [],
+  },
+
+  {
+    id: "devsite",
+    title: "비개발 직군을 위한 6회 강의와 교육 사이트 — 사내 개발 교육",
+    titleEn: "Six Lectures and a Companion Site for Non-Developers — Internal Dev Literacy Course",
+    images: [
+      "/projects/devsite/01.png",
+      "/projects/devsite/02.png",
+      "/projects/devsite/03.png",
+      "/projects/devsite/04.png",
+      "/projects/devsite/05.png",
+    ],
+    background: [
+      {
+        text: "회사에는 저처럼 비전공자인 동료가 많았고, 그분들에게 '배포'·'API' 같은 말이 여전히 어렵다는 걸 알게 됐습니다. AI에게 물어보면 답이 나오는 시대지만, 기본 흐름을 모르면 무엇을 물어야 할지조차 모릅니다. 멋쟁이사자처럼 인턴 기간에 기획·제작·강의를 단독으로 맡았습니다. (2026.07 ~ 2026.08)",
         textEn:
-          "Achieved overall usefulness score of 8.9 (exceeding 8.0 target) in market testing with 26 participants. Weekly challenge received the highest rating (9.4), and AI role-play chat was praised for minimizing aversion to real conversation.",
+          "Many colleagues were non-developers like me, and words like 'deploy' and 'API' were still hard for them. You can ask AI anything now — but without the basic flow, you don't know what to ask. During my LIKELION internship I planned, built, and taught the course on my own. (Jul – Aug 2026)",
+      },
+    ],
+    role: [
+      {
+        title: "커리큘럼 설계와 강의 — 단독",
+        titleEn: "Curriculum & Teaching — Solo",
+        items: [
+          {
+            text: "점심시간 분량 6회 커리큘럼을 설계하고 주 1회, 6주간 직접 강의했습니다 — 소프트웨어 구조 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드.",
+            textEn:
+              "Designed a 6-session lunchtime curriculum and taught it weekly for 6 weeks — software structure, dev vocabulary, Git & GitHub, collaboration communication, AI & vibe coding, AI trends.",
+            subItems: [
+              {
+                text: "모든 개념을 식당 비유 하나로 통일했습니다 — 홀=프론트엔드, 주방=백엔드, 냉장고=DB, 주문서=API. 회차가 바뀌어도 같은 그림 위에 새 개념을 얹도록 했습니다.",
+                textEn:
+                  "Unified every concept under one restaurant metaphor — dining hall = frontend, kitchen = backend, fridge = DB, order slip = API — so each session added to the same picture.",
+              },
+            ],
+          },
+        ],
       },
       {
-        text: "서비스 기획, UI/UX 디자인, 40페이지 프론트엔드 개발을 완성하고 최종 발표와 시연을 맡았습니다.",
+        title: "교육 사이트 직접 제작",
+        titleEn: "Built the Companion Site",
+        items: [
+          {
+            text: "React · TypeScript · Vite로 교육용 사이트를 만들었습니다 — SVG 개념 도식 14종, 브라우저에서 바로 동작하는 라이브 실습(로그인 요청 왕복, Git 협업 시뮬레이터 등), 용어 사전 51개.",
+            textEn:
+              "Built the site with React · TypeScript · Vite — 14 SVG concept diagrams, live in-browser demos (login round-trip, Git collaboration simulator), and a 51-term glossary.",
+            subItems: [
+              {
+                text: "설치·계정이 필요한 실습은 전부 뺐습니다. 밥 먹으면서 듣는 환경을 전제로, 링크 하나로 바로 따라 할 수 있는 것만 남겼습니다.",
+                textEn:
+                  "Cut every exercise that needed installs or accounts — assuming people listen over lunch, only what works from a single link stayed.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "수강자 설문(6명): 만족도 전원 5/5, 추천 의향 평균 9.7/10, '개발자와의 대화에서 이해되는 부분이 늘었다' 4.7/5.",
         textEn:
-          "Completed the service planning, UI/UX design, and 40-page frontend build, and delivered the final presentation and demo.",
+          "Attendee survey (n=6): 5/5 satisfaction across the board, 9.7/10 average recommendation, 4.7/5 on 'I understand more of developer conversations now.'",
+      },
+      {
+        text: "'짧아서 아쉽다'는 피드백과 함께 인프라·DB·협업 방식 등 후속 주제 요청을 받았습니다.",
+        textEn:
+          "Feedback said it was 'too short,' with requests for follow-ups on infrastructure, databases, and dev collaboration.",
       },
     ],
     lessons: [
       {
-        text: "'비대면·익명'이라는 원칙 하나가 서비스 전체를 결정했습니다. 은둔 청년에게는 좋은 프로그램보다 문턱 낮은 입구가 먼저였고, 실제로 테스트에서 가장 높은 9.4점을 받은 것도 가장 부담 없는 기능인 주간 인증 챌린지였습니다.",
+        text: "코드를 가르치지 않기로 한 게 가장 큰 결정이었습니다. 목표를 '개발자 되기'에서 '개발자와 대화하기'로 좁히자 6회 안에 담을 것과 버릴 것이 분명해졌습니다 — 교육도 스코프를 자르는 일이었습니다.",
         textEn:
-          "One principle — contactless and anonymous — decided the whole service. For reclusive youth, a low doorstep beats a good program; fittingly, the least demanding feature, the weekly check-in challenge, scored highest (9.4) in testing.",
+          "The biggest decision was not teaching code. Narrowing the goal from 'becoming a developer' to 'talking with developers' made clear what fit in six sessions and what didn't — teaching, too, was scope cutting.",
+      },
+    ],
+  },
+
+  {
+    id: "dotori",
+    title: "시각장애인을 위한 점자 교육 플랫폼 — dotori",
+    titleEn: "Braille Education Platform for the Visually Impaired — dotori",
+    // 발표 자료(3조_발표자료.pdf)에서 2400px로 렌더링. 팀원 소개(p.21)와 인터뷰이 사진·실명(p.27)은 싣지 않는다
+    images: [
+      "/projects/dotori/01.png",
+      "/projects/dotori/02.png",
+      "/projects/dotori/03.png",
+      "/projects/dotori/04.png",
+      "/projects/dotori/05.png",
+      "/projects/dotori/06.png",
+      "/projects/dotori/07.png",
+      "/projects/dotori/08.png",
+      "/projects/dotori/09.png",
+    ],
+    background: [
+      {
+        text: "점자를 모르는 시각장애인이 90.4%(보건복지부)이고, 등록 시각장애인은 1990년 14,618명에서 2020년 252,324명으로 늘었습니다(통계청). 점자 교구는 150만~777만 원대라 학습을 시작하기조차 어려웠고, 월 9,900원부터 시작하는 구독형 앱으로 비용 문턱을 낮추는 방향을 잡았습니다.",
+        textEn:
+          "90.4% of visually impaired people cannot read Braille (Ministry of Health and Welfare), and registered visually impaired people grew from 14,618 in 1990 to 252,324 in 2020 (Statistics Korea). Braille learning devices cost ₩1.5M–7.77M, so even starting was hard; we set out to lower that barrier with a subscription app from ₩9,900 a month.",
       },
       {
-        text: "시장 테스트에서 38.5%가 가격이 부담된다고 답해 구독료를 내렸습니다. 26명 규모의 테스트였지만 가설보다 사용자 응답을 우선해 가격을 조정했습니다.",
+        text: "시각장애인의 점자 교육 접근성과 학습 지속성 문제를 창업캠프 과제로 정의하고, 사회적 가치와 수익 모델을 함께 설계했습니다. 2025.06 창업캠프에서 시작해 11월 창업 BM 경진대회까지 세 차례 피칭을 거치며 고도화했습니다.",
         textEn:
-          "38.5% of testers said the price was a burden, so we lowered the subscription fee. It was a 26-person test, but we put user responses ahead of our own hypothesis and adjusted the price.",
+          "Framed Braille education access and learning continuity for the visually impaired as a startup camp challenge, designing both social impact and revenue logic. Started at the June 2025 startup camp and refined it through three pitches up to the November startup BM competition.",
+      },
+    ],
+    role: [
+      {
+        title: "기획·IR 피칭 · 프론트엔드",
+        titleEn: "Planning, IR Pitching & Frontend",
+        items: [
+          {
+            text: "서비스 콘셉트·타겟·수익 모델을 정리하고 IR 피칭 경진대회에서 발표를 진행했습니다.",
+            textEn:
+              "Structured concept, target, and revenue model and delivered the pitch at the IR competition.",
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "2025 창업캠프 실전 IR 피칭 경진대회 최우수상 (한국외대 글로벌창업지원단, 2025.06)",
+        textEn: "Grand Prize, 2025 HUFS Startup Camp IR Pitching Competition (Jun 2025)",
+      },
+      {
+        text: "\"PICK YOUR IDEA\" IR PITCHING 우수상 (서울 AI 허브 / MOVE, 2025.07)",
+        textEn: "Excellence Award, \"PICK YOUR IDEA\" IR Pitching (Seoul AI Hub / MOVE, Jul 2025)",
+      },
+      {
+        text: "G-RISE × 경상대학 2025 창업 비즈니스 모델 경진대회 대상 (한국외대 경상대학, 2025.11)",
+        textEn: "Grand Prize, G-RISE × College of Business 2025 Startup BM Competition (Nov 2025)",
+      },
+    ],
+    lessons: [
+      {
+        text: "사회적 가치만 강조하면 공감에 그치고, 수익 모델만 강조하면 설득력이 떨어진다고 판단했습니다. 임팩트 지표와 수익 모델을 같은 슬라이드에 올렸을 때 심사위원의 반응이 달라졌습니다.",
+        textEn:
+          "I judged that social value alone earns sympathy and revenue alone sounds cold. When the impact metrics and the revenue model shared one slide, the judges' response changed.",
       },
     ],
   },
 
   {
     id: "neurosight",
-    title: "AI 기반 마취 시술 보조 서비스 — NeuroSight",
-    titleEn: "AI-Assisted Anesthesia Guidance System — NeuroSight",
+    title: "마취 시술 보조 서비스 — NeuroSight",
+    titleEn: "Anesthesia Guidance System — NeuroSight",
     images: [
       "/projects/neurosight/01.png",
       "/projects/neurosight/02.png",
@@ -933,8 +949,8 @@ export const careerDetailSections: CareerDetailSection[] = [
       "/projects/tcp/05.png",
       "/projects/tcp/06.png",
     ],
-    title: "AI 기반 약관 분석 서비스 — TCP",
-    titleEn: "AI-Based Terms of Service Analysis — TCP",
+    title: "약관 위험 알림 서비스 — TCP",
+    titleEn: "Terms-of-Service Risk Alerts — TCP",
     background: [
       {
         text: "131명 설문조사 결과 93%가 약관을 제대로 읽지 않는다는 것을 확인했습니다. SKT 유심 해킹 사태를 계기로 약관을 읽지 않아 발생하는 소비자 피해가 사회적 문제로 부각되었습니다.",
@@ -1027,9 +1043,109 @@ export const careerDetailSections: CareerDetailSection[] = [
   },
 
   {
+    id: "connect",
+    title: "은둔형 청년 지원 플랫폼 — 커넥트",
+    titleEn: "Support Platform for Socially Isolated Youth — Connect",
+    images: [
+      "/projects/connect/01.png",
+      "/projects/connect/02.png",
+      "/projects/connect/03.png",
+      "/projects/connect/04.png",
+      "/projects/connect/05.png",
+      "/projects/connect/06.png",
+      "/projects/connect/07.png",
+      "/projects/connect/08.png",
+    ],
+    background: [
+      {
+        text: "2024년 한국보건사회연구원 조사에 따르면 국내 은둔형 청년이 약 54만 명에 달합니다. 이 중 80% 이상이 은둔 상태를 벗어나길 원하지만, 절반 이상이 지원을 받은 경험이 없습니다.",
+        textEn:
+          "A 2024 Korea Institute for Health and Social Affairs survey found approximately 540,000 socially isolated youth in Korea. Over 80% want to overcome their isolation, yet more than half have never received any support.",
+        subItems: [
+          {
+            text: "주요 고립 원인은 취업 실패(24.1%)와 대인관계 어려움(23.5%)이며, 삶의 만족도는 일반 청년 대비 절반 수준입니다. 사회적 손실은 연간 7조 원 규모로 추산됩니다.",
+            textEn:
+              "Primary causes of isolation: employment failure (24.1%) and interpersonal difficulties (23.5%). Life satisfaction is about half that of general youth. Social losses are estimated at ₩7 trillion annually.",
+          },
+        ],
+      },
+      {
+        text: "기존 지원 사업은 국가 주도의 대면 프로그램 중심으로, 은둔 청년에게 오히려 높은 진입 장벽이었습니다. 비대면·익명 기반의 단계적 접근이 핵심 차별점이라고 판단했습니다.",
+        textEn:
+          "Existing programs were government-led and face-to-face — paradoxically creating high barriers for isolated youth. Concluded that a non-face-to-face, anonymous, step-by-step approach would be the key differentiator.",
+      },
+    ],
+    role: [
+      {
+        title: "서비스 기획 및 PM",
+        titleEn: "Product Planning & PM",
+        items: [
+          {
+            text: "2단계 사회 적응 커리큘럼을 설계했습니다: 1단계(사회 적응 훈련) - 텍스트 시뮬레이션, AI 역할극 채팅, 사용자 매칭 대화 / 2단계(사회 참여 훈련) - AI 취업 컨설팅, 외부 기관 연계, 일간 뉴스레터.",
+            textEn:
+              "Designed a 2-stage social adaptation curriculum: Stage 1 (Social Adaptation Training) — text simulation, AI role-play chat, user matching dialogue / Stage 2 (Social Participation Training) — AI job consulting, institution links, daily newsletter.",
+          },
+          {
+            text: "구독 모델(사회 적응 훈련 6,900원/월, 사회 참여 훈련 9,900원/월)과 3단계 확장 전략(B2C → 기술 안정화 → B2B)을 수립하고 3개년 수익 예측을 작성했습니다.",
+            textEn:
+              "Established subscription model (₩6,900/month for adaptation, ₩9,900/month for participation) and 3-phase growth strategy (B2C → tech stabilization → B2B), including 3-year revenue projections.",
+            subItems: [
+              {
+                text: "첫 해 당기순이익 563만원 → 3년차 3억 987만원 달성 전망의 손익계산서를 작성했습니다.",
+                textEn:
+                  "Prepared a P&L statement projecting ₩5.63M net profit in year 1, scaling to ₩309.87M by year 3.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "UI/UX 디자인 및 프론트엔드 개발",
+        titleEn: "UI/UX Design & Frontend Development",
+        items: [
+          {
+            text: "와이어프레임부터 스타일 가이드, 아이콘·버튼 등 세부 UI 요소까지 Figma로 전체 디자인 시스템을 구축했습니다.",
+            textEn:
+              "Built the complete design system in Figma — from wireframes and style guides to detailed UI elements like icons and buttons.",
+          },
+          {
+            text: "React 기반으로 40개 이상의 페이지를 구현하고, Spring Boot 백엔드 API(회원가입, 뉴스레터, OpenAI 연동)와 카카오맵 API를 연동했습니다. (3인팀, 멋쟁이사자처럼 12기)",
+            textEn:
+              "Implemented 40+ pages in React, integrated Spring Boot backend APIs (registration, newsletter, OpenAI) and Kakao Maps API. (3-person team, Likelion 12th cohort)",
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "26명 대상 시장 테스트에서 전반적 유용성 8.9점(목표 8.0점 초과)을 달성했습니다. 주간 인증 챌린지가 9.4점으로 가장 높은 평가를 받았으며, AI 역할극 채팅은 실제 대화 거부감을 최소화했다는 평가를 받았습니다.",
+        textEn:
+          "Achieved overall usefulness score of 8.9 (exceeding 8.0 target) in market testing with 26 participants. Weekly challenge received the highest rating (9.4), and AI role-play chat was praised for minimizing aversion to real conversation.",
+      },
+      {
+        text: "서비스 기획, UI/UX 디자인, 40페이지 프론트엔드 개발을 완성하고 최종 발표와 시연을 맡았습니다.",
+        textEn:
+          "Completed the service planning, UI/UX design, and 40-page frontend build, and delivered the final presentation and demo.",
+      },
+    ],
+    lessons: [
+      {
+        text: "'비대면·익명'이라는 원칙 하나가 서비스 전체를 결정했습니다. 은둔 청년에게는 좋은 프로그램보다 문턱 낮은 입구가 먼저였고, 실제로 테스트에서 가장 높은 9.4점을 받은 것도 가장 부담 없는 기능인 주간 인증 챌린지였습니다.",
+        textEn:
+          "One principle — contactless and anonymous — decided the whole service. For reclusive youth, a low doorstep beats a good program; fittingly, the least demanding feature, the weekly check-in challenge, scored highest (9.4) in testing.",
+      },
+      {
+        text: "시장 테스트에서 38.5%가 가격이 부담된다고 답해 구독료를 내렸습니다. 26명 규모의 테스트였지만 가설보다 사용자 응답을 우선해 가격을 조정했습니다.",
+        textEn:
+          "38.5% of testers said the price was a burden, so we lowered the subscription fee. It was a 26-person test, but we put user responses ahead of our own hypothesis and adjusted the price.",
+      },
+    ],
+  },
+
+  {
     id: "hai",
-    title: "AI 기반 개인 맞춤형 커리어 멘토링 서비스 — hai",
-    titleEn: "AI-Powered Personalized Career Mentoring Service — hai",
+    title: "개인 맞춤형 커리어 멘토링 서비스 — hai",
+    titleEn: "Personalized Career Mentoring Service — hai",
     images: [
       "/projects/hai/01.png",
       "/projects/hai/02.png",
@@ -1096,8 +1212,8 @@ export const careerDetailSections: CareerDetailSection[] = [
 
   {
     id: "ainterview",
-    title: "AI 기반 모의 면접 서비스 — AInterview",
-    titleEn: "AI-Based Mock Interview Service — AInterview",
+    title: "모의 면접 서비스 — AInterview",
+    titleEn: "Mock Interview Service — AInterview",
     images: [
       "/projects/ainterview/01.png",
       "/projects/ainterview/02.png",
@@ -1200,8 +1316,8 @@ export const careerDetailSections: CareerDetailSection[] = [
 
   {
     id: "rzi",
-    title: "AI 기반 알뜰 지출관리 플랫폼 — RZi",
-    titleEn: "AI-Powered Smart Expense Manager — RZi",
+    title: "알뜰 지출관리 플랫폼 — RZi",
+    titleEn: "Smart Expense Manager — RZi",
     images: [
       "/projects/rzi/01.png",
       "/projects/rzi/02.png",
@@ -1348,7 +1464,7 @@ export const careerDetailSections: CareerDetailSection[] = [
   {
     id: "mealdang",
     title: "당뇨병 환자를 위한 AI 식단 관리 서비스 — Meal당",
-    titleEn: "AI Diet Management Service for Diabetics — Meal당",
+    titleEn: "Diet Management Service for Diabetics, with AI — Meal당",
     images: [
       "/projects/mealdang/01.png",
       "/projects/mealdang/02.png",
@@ -1530,70 +1646,6 @@ export const careerDetailSections: CareerDetailSection[] = [
   },
 
   {
-    id: "dotori",
-    title: "시각장애인을 위한 점자 교육 플랫폼 — dotori",
-    titleEn: "Braille Education Platform for the Visually Impaired — dotori",
-    // 발표 자료(3조_발표자료.pdf)에서 2400px로 렌더링. 팀원 소개(p.21)와 인터뷰이 사진·실명(p.27)은 싣지 않는다
-    images: [
-      "/projects/dotori/01.png",
-      "/projects/dotori/02.png",
-      "/projects/dotori/03.png",
-      "/projects/dotori/04.png",
-      "/projects/dotori/05.png",
-      "/projects/dotori/06.png",
-      "/projects/dotori/07.png",
-      "/projects/dotori/08.png",
-      "/projects/dotori/09.png",
-    ],
-    background: [
-      {
-        text: "점자를 모르는 시각장애인이 90.4%(보건복지부)이고, 등록 시각장애인은 1990년 14,618명에서 2020년 252,324명으로 늘었습니다(통계청). 점자 교구는 150만~777만 원대라 학습을 시작하기조차 어려웠고, 월 9,900원부터 시작하는 구독형 앱으로 비용 문턱을 낮추는 방향을 잡았습니다.",
-        textEn:
-          "90.4% of visually impaired people cannot read Braille (Ministry of Health and Welfare), and registered visually impaired people grew from 14,618 in 1990 to 252,324 in 2020 (Statistics Korea). Braille learning devices cost ₩1.5M–7.77M, so even starting was hard; we set out to lower that barrier with a subscription app from ₩9,900 a month.",
-      },
-      {
-        text: "시각장애인의 점자 교육 접근성과 학습 지속성 문제를 창업캠프 과제로 정의하고, 사회적 가치와 수익 모델을 함께 설계했습니다. 2025.06 창업캠프에서 시작해 11월 창업 BM 경진대회까지 세 차례 피칭을 거치며 고도화했습니다.",
-        textEn:
-          "Framed Braille education access and learning continuity for the visually impaired as a startup camp challenge, designing both social impact and revenue logic. Started at the June 2025 startup camp and refined it through three pitches up to the November startup BM competition.",
-      },
-    ],
-    role: [
-      {
-        title: "기획·IR 피칭 · 프론트엔드",
-        titleEn: "Planning, IR Pitching & Frontend",
-        items: [
-          {
-            text: "서비스 콘셉트·타겟·수익 모델을 정리하고 IR 피칭 경진대회에서 발표를 진행했습니다.",
-            textEn:
-              "Structured concept, target, and revenue model and delivered the pitch at the IR competition.",
-          },
-        ],
-      },
-    ],
-    results: [
-      {
-        text: "2025 창업캠프 실전 IR 피칭 경진대회 최우수상 (한국외대 글로벌창업지원단, 2025.06)",
-        textEn: "Grand Prize, 2025 HUFS Startup Camp IR Pitching Competition (Jun 2025)",
-      },
-      {
-        text: "\"PICK YOUR IDEA\" IR PITCHING 우수상 (서울 AI 허브 / MOVE, 2025.07)",
-        textEn: "Excellence Award, \"PICK YOUR IDEA\" IR Pitching (Seoul AI Hub / MOVE, Jul 2025)",
-      },
-      {
-        text: "G-RISE × 경상대학 2025 창업 비즈니스 모델 경진대회 대상 (한국외대 경상대학, 2025.11)",
-        textEn: "Grand Prize, G-RISE × College of Business 2025 Startup BM Competition (Nov 2025)",
-      },
-    ],
-    lessons: [
-      {
-        text: "사회적 가치만 강조하면 공감에 그치고, 수익 모델만 강조하면 설득력이 떨어진다고 판단했습니다. 임팩트 지표와 수익 모델을 같은 슬라이드에 올렸을 때 심사위원의 반응이 달라졌습니다.",
-        textEn:
-          "I judged that social value alone earns sympathy and revenue alone sounds cold. When the impact metrics and the revenue model shared one slide, the judges' response changed.",
-      },
-    ],
-  },
-
-  {
     id: "16play",
     title: "MBTI 커뮤니티 — 16P!ay",
     titleEn: "MBTI Community — 16P!ay",
@@ -1641,4 +1693,5 @@ export const careerDetailSections: CareerDetailSection[] = [
       },
     ],
   }
+
 ];

@@ -114,6 +114,12 @@ export function WorkDetail({ id }: { id: string }) {
                         <span className="sr-only">{isKo ? "에서" : "to"}</span>
                       </span>
                     )}
+                    {/* 옆 칸에만 '전' 값이 있으면 큰 숫자 높이가 칸마다 달랐다(Y:Wave). 같은 높이의 빈 줄로 맞춘다 */}
+                    {!s.before && selected.stats.some((x) => x.before) && (
+                      <span aria-hidden="true" className="mb-2 hidden text-[17px] font-semibold sm:block md:text-[20px]">
+                        &nbsp;
+                      </span>
+                    )}
                     <span className="stat block" style={fitStat(selected.stats.map((x) => (typeof x.v === "string" ? x.v : tr(x.v))))}>
                       {typeof s.v === "string" ? s.v : tr(s.v)}
                     </span>
@@ -178,9 +184,12 @@ export function WorkDetail({ id }: { id: string }) {
           </ul>
         </Section>
 
-        <Section n="04" label={t("lessons")}>
-          <Items items={detail.lessons} isKo={isKo} />
-        </Section>
+        {/* 확인된 문장이 없는 프로젝트(웰컴키트)는 배운 점을 비워 둔다 — 빈 제목만 남기지 않는다 */}
+        {detail.lessons.length > 0 && (
+          <Section n="04" label={t("lessons")}>
+            <Items items={detail.lessons} isKo={isKo} />
+          </Section>
+        )}
       </div>
 
       {/* 5. 현장 사진 — 제3자(브랜드 디자인 랩) 기록, 출처 표기 필수 */}

@@ -5,34 +5,34 @@
     "projects": "Projects",
     "certified": "Awards",
     "contact": "Contact",
-    "hero": "Cover",
+    "hero": "Intro",
     "rail_label": "Page position"
   },
   "meta": {
     "deck": "Portfolio 2026",
-    "role": "PM · PO / Frontend · AI tooling",
+    "role": "Service Planning · PM",
     "location": "Seoul, Korea"
   },
   "hero": {
     "name": "Sanghyeon Shin",
     "lead": "A service planner who finds the answer in what users actually do, then builds and ships.",
-    "summary": "I first got into IT through the frontend track of LIKELION's 12th cohort, and leading projects as 13th-cohort staff taught me that **\"who uses this, and why\" has to be answered before \"how do we build it.\"** As an intern I then ran the 2,000-person national hackathon from planning through the finals, and **built the tools for inquiries, submission checks, and the finals tally myself and ran them on site**.",
+    "summary": "In interviews with accountants I found that what slowed reconciliation was the handwritten slip after payment, and a full analysis of merchant data showed that users needed a recommendation list more than a map. Building those answers myself, from screens to backend and AI tooling, then shipping and running them, I learned that what makes a plan convincing isn't the finished screen, but what I decided about the user and on what evidence. Next, I want to do this inside a long-running service: make the next decision from the data users leave behind, and check it with users again.",
     "metrics": [
       {
-        "v": "2,500+",
-        "k": "students on the community platform I ran · 80 universities"
+        "v": "2,000+",
+        "k": "hackathon participants"
       },
       {
-        "v": "80.8%",
-        "k": "inquiries answered instantly · 0 of 229 unanswered"
+        "v": "80",
+        "k": "universities — community platform"
       },
       {
-        "v": "2.2 s",
-        "k": "from judges' votes to the stage screen"
+        "v": "15+",
+        "k": "services planned & shipped"
       },
       {
-        "v": "5",
-        "k": "violating teams caught in a full sweep of 562 repos"
+        "v": "11",
+        "k": "awards"
       }
     ],
     "scroll": "Scroll"
@@ -88,15 +88,17 @@
   },
   "selected": {
     "index_heading": "Selected work.",
-    "sub": "Projects where I found the problem, then built and shipped the answer myself. Each project page covers the background and my role in detail.",
+    "sub": "Selected projects where I found the user's problem and built the answer myself. The reasoning behind each decision is on its project page.",
     "key_impact": "Key impact",
     "role": "Role",
-    "more": "View project"
+    "more": "View project",
+    "decision": "Decision"
   },
   "projects": {
     "heading": "Other projects.",
     "sub": "Work beyond the selected projects. Open one to see the background, my role, the results, and what I learned.",
-    "detail_link": "Project page"
+    "detail_link": "Project page",
+    "more_toggle": "{n} more projects"
   },
   "certified": {
     "heading": "Awards.",
@@ -140,24 +142,24 @@
     "group_scale": "SCALE",
     "changes": [
       {
-        "before": "3 hours a day",
-        "after": "80.8% instant",
+        "before": "3 hrs/day",
+        "after": "15 min/day (−92%)",
         "label": "Participant inquiries",
-        "d": "The FAQ bot answered 80.8% of inquiries instantly by keyword, and the staff picked up the rest.",
-        "basis": "Basis: one month after the FAQ bot, 229 questions · 0 unanswered · 14th hackathon"
+        "d": "The FAQ bot answered 80.8% of inquiries instantly by keyword, and the staff spent 15 minutes a day reviewing the bot log and filling in missing answers.",
+        "basis": "Basis: one month after the FAQ bot · 229 questions · 0 unanswered · staff time includes log review and answer updates · 14th hackathon"
       },
       {
-        "before": "~2 days (estimate)",
-        "after": "One run",
-        "label": "Checking 562 submitted repos",
-        "d": "Post-deadline commits, force-pushes, and private flips were detected automatically across every branch, and people made the verdicts against agreed criteria.",
+        "before": "Manual check of 562 repos",
+        "after": "One full scan",
+        "label": "Submission checks",
+        "d": "Post-deadline commits, force-pushes, and private flips were detected automatically across every branch, and the staff made the verdicts against criteria agreed before the scan.",
         "basis": "Basis: after the 314-team deadline · 5 violations found · 14th hackathon"
       },
       {
-        "before": "Excel+PPT",
-        "after": "2.2 s",
-        "label": "Finals tally and reveal",
-        "d": "I cut the time from judges' votes reaching the console to the stage screen with a console I built.",
+        "before": "Tally, then PPT",
+        "after": "On screen as votes land",
+        "label": "Finals results reveal",
+        "d": "Judges' votes gathered in a console I built and reached the stage screen in 2.2 seconds.",
         "basis": "Basis: 8-team finals tournament · measured · 14th hackathon"
       },
       {
@@ -170,24 +172,19 @@
     ],
     "scale": [
       {
-        "v": "2,000+",
-        "label": "14th hackathon participants",
-        "note": "80 universities · 314 teams · registered through the community platform"
+        "v": "2,500+",
+        "label": "Students on the community platform",
+        "note": "80 universities"
       },
       {
-        "v": "45",
-        "label": "13th cohort WelcomeKit app users",
-        "note": "attendance · bingo · profiles"
+        "v": "314 teams",
+        "label": "14th hackathon submissions",
+        "note": "8-team finals tournament"
       },
       {
-        "v": "everyone 5/5",
-        "label": "Internal dev course satisfaction",
-        "note": "9.7/10 would recommend"
-      },
-      {
-        "v": "470",
-        "label": "Ideathon survey responses analyzed",
-        "note": "1,822 participants"
+        "v": "1,822",
+        "label": "National ideathon participants",
+        "note": "378 projects · 470 satisfaction responses analyzed"
       }
     ]
   },
