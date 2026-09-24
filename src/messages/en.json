@@ -16,7 +16,7 @@
   "hero": {
     "name": "Sanghyeon Shin",
     "lead": "A service planner who finds the answer in what users actually do, then builds and ships.",
-    "summary": "In interviews with accountants I found that what slowed reconciliation was the handwritten slip after payment, and a full analysis of merchant data showed that users needed a recommendation list more than a map. Building those answers myself, from screens to backend and AI tooling, then shipping and running them, I learned that what makes a plan convincing isn't the finished screen, but what I decided about the user and on what evidence. Next, I want to do this inside a long-running service: make the next decision from the data users leave behind, and check it with users again.",
+    "summary": "As a LIKELION intern, I planned and ran a community platform for 80 universities and took a 2,000-person national hackathon from planning through the finals. With a limited ops team, I built automation tools myself and put them to work where the bottlenecks were: participant inquiries, checking 562 submitted repos, and tallying the finals. Beyond that, over two years I've built, shipped, and run 15+ services myself, from screens to backend and AI tooling, and learned that what makes a plan convincing isn't the finished screen, but what I decided about the user and on what evidence. Next, I want to make the next decision from the data users leave behind, and check that decision with users again.",
     "metrics": [
       {
         "v": "2,000+",

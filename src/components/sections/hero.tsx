@@ -26,7 +26,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="gutter grid grid-cols-1 gap-x-14 pb-16 pt-20 [grid-template-areas:'meta'_'photo'_'lead'_'metrics'_'summary'] md:min-h-svh md:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] md:grid-rows-[auto_1fr_auto_auto] md:pb-16 md:pt-20 md:[grid-template-areas:'meta_meta'_'photo_lead'_'photo_summary'_'metrics_metrics']"
+      className="gutter grid grid-cols-1 gap-x-14 pb-16 pt-20 [grid-template-areas:'meta'_'photo'_'lead'_'metrics'_'summary'] md:min-h-svh md:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] md:grid-rows-[auto_1fr_auto_auto] md:pb-16 md:pt-16 md:[grid-template-areas:'meta_meta'_'photo_lead'_'photo_summary'_'metrics_metrics']"
     >
       <MetaRow
         items={[
@@ -39,7 +39,7 @@ export function Hero() {
             {profile.links.email}
           </a>,
         ]}
-        className="mb-8 border-b border-foreground pb-3 text-muted-foreground [grid-area:meta] md:mb-10"
+        className="mb-8 border-b border-foreground pb-3 text-muted-foreground [grid-area:meta] md:mb-6"
       />
 
       {/* 원본(689×886) 비율 그대로, 컬러 */}
@@ -74,7 +74,7 @@ export function Hero() {
         <Emph text={t("summary")} />
       </p>
 
-      <dl className="mt-8 grid grid-cols-2 border-t border-foreground [grid-area:metrics] md:mt-10 md:grid-cols-4">
+      <dl className="mt-8 grid grid-cols-2 border-t border-foreground [grid-area:metrics] md:mt-8 md:grid-cols-4">
         {metrics.map(({ v, k }, i) => (
           <div
             key={k}

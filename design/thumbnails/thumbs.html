@@ -8,6 +8,10 @@
   - assets/: FlowPay는 배포본(flow-pay-seven.vercel.app)을 390·1440 폭에서 캡처, Y:Wave는 원본 화면이 없어
     발표 자료 03·04 슬라이드에서 휴대폰 화면 부분만 잘랐다. 해커톤·CleanB는 public/projects의 원본 화면을 쓴다.
   - 팀원 실명이 있는 슬라이드(Y:Wave 01 등)는 쓰지 않는다.
+  - 이름 자리는 글자 대신 각 프로젝트의 로고(2026-09-25 상현 요청). ANIMAL LEAGUE는 파일이 없어 animal-league 저장소의
+    콘솔 배경(public/main.1_background_ver3.png)에 흰색 반투명으로 들어 있는 워드마크를 불투명 마스크로 뽑고 카드 뒷면의
+    주황(#E47424)을 입혔다. FlowPay public/LOGO.png, Y:Wave ywave-vite/src/Images/TitleLogo2.svg(블루 바탕이라 흰색으로),
+    CleanB는 RumiCleanFE의 RowLogo.svg에서 집 심볼만 — 로고 글자가 'RoomiClean' 표기라 이름은 CleanB로 둔다.
 -->
 <html lang="en">
 <head>
@@ -22,6 +26,8 @@
   .t.blue { background:var(--blue); color:#fff; --line:rgba(255,255,255,.35); }
   .meta { position:absolute; left:80px; right:80px; top:64px; display:flex; justify-content:space-between; font-size:30px; font-weight:700; letter-spacing:.06em; padding-bottom:24px; border-bottom:2px solid var(--line); }
   .copy { position:absolute; left:80px; bottom:76px; width:620px; z-index:5; }
+  .logo { display:block; }
+  .brand { display:flex; align-items:center; gap:28px; }
   .title { font-size:150px; font-weight:800; letter-spacing:-.055em; line-height:.92; }
   .sub { margin-top:34px; font-size:40px; font-weight:600; line-height:1.35; letter-spacing:-.02em; opacity:.82; }
   .role { margin-top:40px; font-size:28px; font-weight:700; letter-spacing:.12em; }
@@ -50,7 +56,7 @@
 <section class="t ink" id="hackathon14">
   <div class="meta"><span>LIKELION 14TH HACKATHON</span><span>2026.06 – 2026.08</span></div>
   <div class="copy">
-    <div class="title">ANIMAL<br/>LEAGUE</div>
+    <img class="logo" src="assets/al_logo_orange.png" alt="ANIMAL LEAGUE" style="width:620px" />
     <div class="sub">Planned and run end to end,<br/>with the ops tools I built</div>
     <div class="role">PLANNING &amp; OPS</div>
   </div>
@@ -67,7 +73,7 @@
 <section class="t" id="flowpay">
   <div class="meta"><span>FIN:NECT CHALLENGE · 5TH OF 102</span><span>2025.06 – 2025.08</span></div>
   <div class="copy">
-    <div class="title">FlowPay</div>
+    <img class="logo" src="assets/fp_logo.png" alt="FlowPay" style="height:190px" />
     <div class="sub">Corporate-card expenses,<br/>8 steps down to 3</div>
     <div class="role">PM · FRONTEND · IR</div>
   </div>
@@ -84,7 +90,7 @@
 <section class="t blue" id="ywave">
   <div class="meta"><span>LIKELION 13TH HACKATHON · TOP 12%</span><span>2025.07 – 2025.08</span></div>
   <div class="copy">
-    <div class="title">Y:Wave</div>
+    <img class="logo" src="assets/yw_title2.svg" alt="Y:Wave" style="height:150px; filter:brightness(0) invert(1)" />
     <div class="sub">390K merchants, turned into<br/>a recommendation list</div>
     <div class="role">PM · FRONTEND · DESIGN</div>
   </div>
@@ -100,7 +106,7 @@
 <section class="t" id="cleanb">
   <div class="meta"><span>CLIENT PROJECT · RUMICLEAN</span><span>2025.11 –</span></div>
   <div class="copy">
-    <div class="title">CleanB</div>
+    <div class="title brand"><img src="assets/rc_icon.png" alt="" style="height:128px" />CleanB</div>
     <div class="sub">Airbnb cleaning, proven with<br/>before-and-after photos</div>
     <div class="role">PM · FRONTEND · DESIGN</div>
   </div>
