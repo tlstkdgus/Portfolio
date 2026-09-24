@@ -28,7 +28,7 @@ export function Credentials() {
                 key={a.title}
                 className="grid gap-x-6 gap-y-1 border-b border-border py-6 sm:grid-cols-[100px_1fr_auto]"
               >
-                <span className="meta pt-1.5 text-muted-foreground">{a.date}</span>
+                <span className="meta pt-1.5 text-muted-foreground">{a.date.replace(/\.$/, "")}</span>
                 <span>
                   <span className="block text-[20px] font-bold leading-snug tracking-[-0.02em] md:text-[22px]">
                     {isKo ? a.title : a.titleEn}
@@ -60,7 +60,7 @@ export function Credentials() {
                 key={a.title}
                 className="grid gap-x-6 border-b border-border py-3 text-[15px] sm:grid-cols-[100px_1fr]"
               >
-                <span className="meta pt-0.5 text-muted-foreground">{a.date}</span>
+                <span className="meta pt-0.5 text-muted-foreground">{a.date.replace(/\.$/, "")}</span>
                 <span className="text-foreground/80">{isKo ? a.title : a.titleEn}</span>
               </li>
             ))}

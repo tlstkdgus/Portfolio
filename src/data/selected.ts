@@ -80,7 +80,7 @@ export const selectedProjects: SelectedProject[] = [
     },
     stats: [
       { before: { ko: "하루 3시간", en: "3 h/day" }, v: { ko: "80.8% 즉답", en: "80.8% instant" }, k: { ko: "참가자 문의 · 미응답 0건", en: "participant inquiries · none left unanswered" } },
-      { before: { ko: "엑셀 → PPT", en: "Excel → PPT" }, v: { ko: "2.2초", en: "2.2 s" }, k: { ko: "본선 결과 공개 · 심사 투표가 무대 스크린에 뜨기까지", en: "finals reveal · from judges' votes to the stage screen" } },
+      { before: { ko: "엑셀+PPT", en: "Excel+PPT" }, v: { ko: "2.2초", en: "2.2 s" }, k: { ko: "본선 결과 공개 · 심사 투표가 무대 스크린에 뜨기까지", en: "finals reveal · from judges' votes to the stage screen" } },
       { before: { ko: "약 2일 (추정)", en: "~2 days (est.)" }, v: { ko: "1회 실행", en: "One run" }, k: { ko: "제출물 전수 검사 · 위반 5팀 적발", en: "full submission sweep · 5 violating teams caught" } },
     ],
     hero: {

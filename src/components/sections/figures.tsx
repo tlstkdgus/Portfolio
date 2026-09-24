@@ -62,11 +62,12 @@ export function Figures() {
         {scale.map((x) => (
           <div
             key={x.label}
-            className="border-b border-border py-6 md:py-8 md:odd:pr-8 md:even:border-l md:even:pl-8 lg:border-b-0 lg:[&:not(:first-child)]:border-l lg:[&:not(:first-child)]:pl-8 lg:[&:not(:last-child)]:pr-8"
+            className="flex flex-col border-b border-border py-6 md:py-8 md:odd:pr-8 md:even:border-l md:even:pl-8 lg:border-b-0 lg:[&:not(:first-child)]:border-l lg:[&:not(:first-child)]:pl-8 lg:[&:not(:last-child)]:pr-8"
           >
-            <dd className="whitespace-nowrap text-[34px] font-extrabold leading-none tracking-[-0.04em] md:text-[40px] lg:text-[clamp(27px,2.7vw,40px)]">{x.v}</dd>
-            <dt className="mt-3 text-[16px] font-semibold">{x.label}</dt>
-            <p className="meta mt-1 text-muted-foreground">{x.note}</p>
+            {/* 읽는 순서는 dt(무엇) → dd(숫자·근거), 보이는 순서는 숫자 → 무엇 → 근거 */}
+            <dt className="order-2 mt-3 text-[16px] font-semibold">{x.label}</dt>
+            <dd className="order-1 whitespace-nowrap text-[34px] font-extrabold leading-none tracking-[-0.04em] md:text-[40px] lg:text-[clamp(27px,2.7vw,40px)]">{x.v}</dd>
+            <dd className="meta order-3 mt-1 text-muted-foreground">{x.note}</dd>
           </div>
         ))}
       </dl>

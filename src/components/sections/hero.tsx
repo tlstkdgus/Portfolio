@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 // 1) 표지 — 흰 바탕 'Portfolio' 워드마크와 메타 줄만. 정보는 두지 않는다.
 // 2) 소개 — 컬러 사진 · 포지셔닝 문장(h1) · 증거 문단 · 숫자 4개.
 // 자기소개는 이 한 번뿐이다. 예전에는 히어로와 '안녕하세요' 섹션이 같은 이야기를 두 번 했다.
-// 학력·교육·자격증은 수상 섹션의 별도 블록으로 옮겼다(첫 화면 글을 줄이기 위해).
+// 학력·교육·자격증·병역은 바로 아래 #about의 Profile 블록에 있다(첫 화면 글을 줄이기 위해).
 // 흑백 사진·검은 표지는 영정사진처럼 보여 쓰지 않는다(상현 지적).
 export function Hero() {
   return (
@@ -79,10 +79,18 @@ function Intro() {
         </div>
         <div>
           <h1
-            className="whitespace-pre-line text-balance font-extrabold leading-[1.2] tracking-[-0.045em]"
+            className="font-extrabold leading-[1.2] tracking-[-0.045em]"
             style={{ fontSize: "clamp(1.875rem, 3.5vw, 3.5rem)" }}
           >
-            {t("lead")}
+            {/* 줄마다 따로 균형을 맞춘다. 한 덩어리에 text-balance를 걸면 강제 줄바꿈 사이는 균형이 안 잡혀
+                폰(390px)에서 "기획자," 한 단어만 따로 떨어졌다 */}
+            {t("lead")
+              .split("\n")
+              .map((line) => (
+                <span key={line} className="block text-balance">
+                  {line.trim()}
+                </span>
+              ))}
           </h1>
           <p className="mt-6 text-[17px] leading-[1.75] text-foreground/80 md:text-[20px]">
             <Emph text={t("summary")} />
@@ -95,14 +103,14 @@ function Intro() {
           <div
             key={k}
             className={cn(
-              "border-border pb-2 pt-5",
+              "flex flex-col border-border pb-2 pt-5",
               i % 2 === 1 ? "border-l pl-4" : "pr-4",
               i >= 2 && "border-t md:border-t-0",
               i > 0 ? "md:border-l md:px-8" : "md:pr-8"
             )}
           >
+            <dt className="order-last mt-2 text-[14px] font-medium leading-snug text-muted-foreground md:text-[15px]">{k}</dt>
             <dd className="text-[30px] font-extrabold leading-none tracking-[-0.05em] md:text-[clamp(2rem,3.2vw,3rem)]">{v}</dd>
-            <dt className="mt-2 text-[14px] font-medium leading-snug text-muted-foreground md:text-[15px]">{k}</dt>
           </div>
         ))}
       </dl>

@@ -71,30 +71,38 @@ export function SelectedProjects() {
                   {tr(p.summary)}
                 </p>
 
-                <p className="eyebrow mt-8 text-muted-foreground">{t("key_impact")}</p>
-                <dl className="mt-3 border-t border-foreground">
+                <p lang="en" className="eyebrow mt-8 text-muted-foreground">
+                  {t("key_impact")}
+                </p>
+                {/* sm부터 한 카드의 줄들이 열을 나눠 쓴다(subgrid): 이전 값 · 화살표 · 값 · 설명.
+                    줄마다 flex로 두면 이전 값 길이에 따라 큰 숫자의 시작점이 줄마다 달랐다.
+                    화살표도 따로 한 열이라 이전 값이 없는 줄(102팀 중 5위)도 같은 x에서 시작한다.
+                    열 사이 간격은 gap이 아니라 padding이라, 이전 값이 없는 카드는 빈 열이 폭 0으로 접힌다 */}
+                <dl className="mt-3 border-t border-foreground sm:grid sm:grid-cols-[auto_auto_auto_minmax(0,1fr)]">
                   {p.stats.map((s) => (
                     <div
                       key={s.k.en}
-                      className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-border py-3"
+                      className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-border py-3 sm:col-span-4 sm:grid sm:grid-cols-subgrid sm:gap-x-0"
                     >
-                      <dd className="flex flex-wrap items-baseline gap-x-3">
+                      <dt className="text-[14px] leading-snug text-muted-foreground order-last sm:order-none sm:col-start-4 sm:row-start-1 sm:pl-3 sm:text-right md:text-[15px]">
+                        {tr(s.k)}
+                      </dt>
+                      <dd className="flex flex-wrap items-baseline gap-x-3 sm:col-span-3 sm:row-start-1 sm:grid sm:grid-cols-subgrid sm:gap-x-0">
                         {s.before && (
-                          <>
-                            <span className="text-[16px] font-semibold text-muted-foreground line-through decoration-1 md:text-[18px]">
-                              {typeof s.before === "string" ? s.before : tr(s.before)}
-                            </span>
-                            <span aria-hidden="true" className="text-accent">→</span>
-                            <span className="sr-only">{isKo ? "에서" : "to"}</span>
-                          </>
+                          <span className="text-[16px] font-semibold text-muted-foreground line-through decoration-1 sm:pr-3 md:text-[18px]">
+                            {typeof s.before === "string" ? s.before : tr(s.before)}
+                          </span>
                         )}
-                        <span className="text-[24px] font-extrabold leading-tight tracking-[-0.03em] md:text-[28px]">
+                        {s.before && (
+                          <span className="self-center sm:col-start-2 sm:pr-3">
+                            <ArrowRight aria-hidden="true" className="h-4 w-4 text-accent" />
+                            <span className="sr-only">{isKo ? "에서" : "to"}</span>
+                          </span>
+                        )}
+                        <span className="text-[24px] font-extrabold leading-tight tracking-[-0.03em] sm:col-start-3 md:text-[28px]">
                           {typeof s.v === "string" ? s.v : tr(s.v)}
                         </span>
                       </dd>
-                      <dt className="text-[14px] leading-snug text-muted-foreground sm:max-w-[60%] sm:text-right md:text-[15px]">
-                        {tr(s.k)}
-                      </dt>
                     </div>
                   ))}
                 </dl>

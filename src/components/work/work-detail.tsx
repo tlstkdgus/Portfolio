@@ -104,18 +104,20 @@ export function WorkDetail({ id }: { id: string }) {
               )}
             >
               {selected.stats.map((s) => (
-                <div key={s.k.en} className="stat-cell border-t border-accent-foreground/40 pt-5">
-                  {s.before && (
-                    <p className="mb-2 text-[17px] font-semibold opacity-80 md:text-[20px]">
-                      <span className="line-through decoration-1">{typeof s.before === "string" ? s.before : tr(s.before)}</span>
-                      <span aria-hidden="true"> →</span>
-                      <span className="sr-only">{isKo ? "에서" : "to"}</span>
-                    </p>
-                  )}
-                  <dd className="stat" style={fitStat(selected.stats.map((x) => (typeof x.v === "string" ? x.v : tr(x.v))))}>
-                    {typeof s.v === "string" ? s.v : tr(s.v)}
+                <div key={s.k.en} className="stat-cell flex flex-col border-t border-accent-foreground/40 pt-5">
+                  <dt className="order-last mt-3 text-[15px] font-medium leading-snug opacity-90 md:text-[16px]">{tr(s.k)}</dt>
+                  <dd>
+                    {s.before && (
+                      <span className="mb-2 block text-[17px] font-semibold opacity-80 md:text-[20px]">
+                        <span className="line-through decoration-1">{typeof s.before === "string" ? s.before : tr(s.before)}</span>
+                        <ArrowRight aria-hidden="true" className="ml-1.5 inline-block h-[0.9em] w-[0.9em] align-[-0.08em]" />
+                        <span className="sr-only">{isKo ? "에서" : "to"}</span>
+                      </span>
+                    )}
+                    <span className="stat block" style={fitStat(selected.stats.map((x) => (typeof x.v === "string" ? x.v : tr(x.v))))}>
+                      {typeof s.v === "string" ? s.v : tr(s.v)}
+                    </span>
                   </dd>
-                  <dt className="mt-3 text-[15px] font-medium leading-snug opacity-90 md:text-[16px]">{tr(s.k)}</dt>
                 </div>
               ))}
             </dl>
@@ -128,9 +130,9 @@ export function WorkDetail({ id }: { id: string }) {
         <section className="gutter pt-20 md:pt-28">
           <dl className="grid border-t border-foreground sm:grid-cols-3">
             {project.stats.map((s) => (
-              <div key={s.labelEn} className="border-b border-border py-6 sm:border-b-0 sm:pr-8 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:pl-8">
+              <div key={s.labelEn} className="flex flex-col border-b border-border py-6 sm:border-b-0 sm:pr-8 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:pl-8">
+                <dt className="order-last mt-3 text-[15px] text-muted-foreground">{isKo ? s.label : s.labelEn}</dt>
                 <dd className="text-[30px] font-extrabold leading-none tracking-[-0.04em] md:text-[36px]">{s.value}</dd>
-                <dt className="mt-3 text-[15px] text-muted-foreground">{isKo ? s.label : s.labelEn}</dt>
               </div>
             ))}
           </dl>
@@ -165,9 +167,10 @@ export function WorkDetail({ id }: { id: string }) {
         )}
 
         <Section n="03" label={t("results")} accent>
-          <ul className="space-y-5 border-l-[3px] border-accent pl-6">
+          {/* 굵은 파란 세로선(border-l 3px)은 뺐다. 결과 제목이 이미 파란색이고, 나머지 목록처럼 가로 괘선으로 나눈다 */}
+          <ul className="border-t border-foreground">
             {detail.results.map((item, j) => (
-              <li key={j} className="text-[18px] font-semibold leading-[1.75] tracking-[-0.01em] md:text-[19px]">
+              <li key={j} className="border-b border-border py-5 text-[18px] font-semibold leading-[1.75] tracking-[-0.01em] md:text-[19px]">
                 {isKo ? item.text : item.textEn}
                 <Sub item={item} isKo={isKo} />
               </li>
@@ -348,7 +351,7 @@ function Diagram({ d, isKo }: { d: FlowDiagram; isKo: boolean }) {
         ))}
       </ol>
       {(d.caption || d.captionEn) && (
-        <p className="mt-8 max-w-3xl border-l-[3px] border-accent pl-5 text-[17px] font-semibold leading-[1.75] md:text-[18px]">
+        <p className="mt-8 max-w-3xl text-[17px] font-semibold leading-[1.75] md:text-[18px]">
           {isKo ? d.caption : d.captionEn}
         </p>
       )}

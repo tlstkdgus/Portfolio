@@ -154,7 +154,7 @@
         "basis": "Basis: after the 314-team deadline · 5 violations found · 14th hackathon"
       },
       {
-        "before": "Excel → PPT",
+        "before": "Excel+PPT",
         "after": "2.2 s",
         "label": "Finals tally and reveal",
         "d": "I cut the time from judges' votes reaching the console to the stage screen with a console I built.",
