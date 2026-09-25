@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { selectedProjects, type Localized } from "@/data/selected";
-import { workHref } from "@/lib/work";
+import { workEntries, workHref } from "@/lib/work";
 import { cn } from "@/lib/utils";
 
 // 메인에서는 프로젝트마다 한 줄 요약 · 핵심 수치 · 역할만 보여주고, 나머지는 /work/<id>로 넘긴다.
@@ -133,6 +133,14 @@ export function SelectedProjects() {
           );
         })}
       </ol>
+
+      <Link
+        href={`/${locale}/career`}
+        className="hit mt-10 inline-flex w-fit items-center gap-2 border-b-2 border-foreground pb-1 text-[16px] font-bold transition-colors hover:border-accent hover:text-accent md:mt-14"
+      >
+        {t("all_link", { n: workEntries.length })}
+        <ArrowRight aria-hidden="true" className="h-4 w-4" />
+      </Link>
     </section>
   );
 }

@@ -92,13 +92,15 @@
     "key_impact": "Key impact",
     "role": "Role",
     "more": "View project",
-    "decision": "Decision"
+    "decision": "Decision",
+    "all_link": "See all {n} projects"
   },
   "projects": {
     "heading": "Other projects.",
     "sub": "Work beyond the selected projects. Open one to see the background, my role, the results, and what I learned.",
     "detail_link": "Project page",
-    "more_toggle": "{n} more projects"
+    "more_toggle": "{n} more projects",
+    "all_link": "See all {n} projects"
   },
   "certified": {
     "heading": "Awards.",

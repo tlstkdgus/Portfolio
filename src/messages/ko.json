@@ -92,13 +92,15 @@
     "key_impact": "Key impact",
     "role": "역할",
     "more": "자세히 보기",
-    "decision": "판단"
+    "decision": "판단",
+    "all_link": "전체 프로젝트 {n}개 보기"
   },
   "projects": {
     "heading": "Other projects.",
     "sub": "대표 프로젝트 외의 작업입니다. 프로젝트를 누르면 배경·역할·결과·배운 점을 볼 수 있습니다.",
     "detail_link": "프로젝트 페이지",
-    "more_toggle": "그 외 프로젝트 {n}개"
+    "more_toggle": "그 외 프로젝트 {n}개",
+    "all_link": "전체 프로젝트 {n}개 보기"
   },
   "certified": {
     "heading": "Awards.",

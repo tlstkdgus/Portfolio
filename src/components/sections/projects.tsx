@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronDown } from "lucide-react";
 import { projects, otherProjectsShown, otherProjectsFolded, type Project } from "@/data/projects";
-import { fmtPeriod, workHref } from "@/lib/work";
+import { fmtPeriod, workEntries, workHref } from "@/lib/work";
 
 const byId = (ids: string[]) =>
   ids.map((id) => projects.find((p) => p.caseId === id)).filter((p): p is Project => Boolean(p));
@@ -15,6 +15,7 @@ const folded = byId(otherProjectsFolded);
 // 접기는 <details>라 JS 없이도 열리고, 키보드·스크린리더가 펼침 상태를 읽는다.
 export function Projects() {
   const t = useTranslations("projects");
+  const locale = useLocale();
 
   return (
     <section id="more-projects" className="gutter py-24 md:py-36">
@@ -22,6 +23,14 @@ export function Projects() {
         <div className="lg:sticky lg:top-24 lg:self-start">
           <h2 className="display">{t("heading")}</h2>
           <p className="mt-5 max-w-sm text-[16px] leading-[1.7] text-muted-foreground">{t("sub")}</p>
+          {/* 전체 목록(/career)으로 가는 길이 메인에 없었다 (2026-09-25 상현 지적) */}
+          <Link
+            href={`/${locale}/career`}
+            className="hit mt-8 inline-flex w-fit items-center gap-2 border-b-2 border-foreground pb-1 text-[16px] font-bold transition-colors hover:border-accent hover:text-accent"
+          >
+            {t("all_link", { n: workEntries.length })}
+            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+          </Link>
         </div>
 
         <div>
