@@ -78,12 +78,12 @@ export const experiences: Experience[] = [
     endDate: "2025-12",
     description: [
       "13기 학생 교육 세션 기획·진행, 학생 관리 및 강의 진도 체크",
-      "부원 45명이 쓴 13기 웰컴키트 PWA 기획·디자인·개발 리드 — 수기 출석체크를 QR 스캔으로 자동화 (github.com/tlstkdgus/WelcomeKit)",
+      "부원 45명이 쓴 13기 웰컴키트 PWA 기획·디자인·개발 리드 — 수기 출석체크를 QR 스캔으로 자동화 (github.com/13thWellcomeKit/FE)",
       "운영과 병행해 16P!ay · TCP · Y:Wave 프로젝트 리드 (교내 최우수상 2회, 전국 예선 진출 2회)",
     ],
     descriptionEn: [
       "Planned and led educational sessions; managed students and lecture progress for the 13th cohort",
-      "Led planning, design, and development of the 13th cohort WelcomeKit PWA used by 45 members — replaced paper roll call with QR scanning (github.com/tlstkdgus/WelcomeKit)",
+      "Led planning, design, and development of the 13th cohort WelcomeKit PWA used by 45 members — replaced paper roll call with QR scanning (github.com/13thWellcomeKit/FE)",
       "Led 16P!ay · TCP · Y:Wave projects alongside operations (2 campus Grand Prizes, 2 national semifinals)",
     ],
     tags: ["Education", "Next.js", "Figma", "Notion"],
