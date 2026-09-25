@@ -674,8 +674,8 @@ export const careerDetailSections: CareerDetailSection[] = [
           "Attendance for the 45 members of HUFS LIKELION's 13th cohort was kept by staff on a paper roll. As 13th-cohort staff, I planned WelcomeKit, a PWA that handled attendance, team bingo missions, and the club introduction for new members in one app, and led its frontend development. (Mar 2025 – Sep 2025)",
         subItems: [
           {
-            text: "React 18 PWA입니다. 2025년 운영 당시 프론트엔드 저장소 커밋 98개 중 60개를 맡았고, 2026.09에는 다음 기수를 위한 출석 관리 개선을 프론트엔드와 백엔드(Spring) 모두 직접 구현해 PR로 올렸습니다(머지·배포 전).",
-            textEn: "A React 18 PWA. During the 2025 run I made 60 of the 98 frontend commits; in Sep 2026 I built attendance-management improvements for the next cohort on both frontend and backend (Spring) and opened PRs (not yet merged or deployed).",
+            text: "React 18 PWA입니다. 2025년 운영 당시 프론트엔드 저장소 커밋 98개 중 60개를 맡았고, 2026.09에는 다음 기수를 위한 출석 관리 개선을 프론트엔드와 백엔드(Spring) 모두 직접 구현해 반영했습니다.",
+            textEn: "A React 18 PWA. During the 2025 run I made 60 of the 98 frontend commits; in Sep 2026 I built attendance-management improvements for the next cohort on both frontend and backend (Spring) and shipped them to the codebase.",
           },
         ],
       },
@@ -738,10 +738,11 @@ export const careerDetailSections: CareerDetailSection[] = [
         ],
       },
       {
-        // 2026-09-25 상현이 올린 PR 두 개(13thWellcomeKit/FE #30, BE #4) — 둘 다 열린 상태, 머지·배포 전이다.
+        // 2026-09-25 상현이 올린 PR 두 개(13thWellcomeKit/FE #30, BE #4) — 둘 다 머지됨. FE는 welcomekit.vercel.app에 배포(번들에 새 기능 코드 확인),
+        // API 서버 도메인 welcomekitbe.lion.it.kr은 DNS에 없고 BE 배포 작업은 queued라 서버는 아직 열리지 않았다(2026-09-26 확인).
         // 부원이 쓴 기능이 아니므로 결과(results)에는 넣지 않는다. 기존 코드의 오류 수정(팀·이름 뒤바뀜 등)은 쓰지 않는다.
-        title: "다음 기수를 위한 출석 관리 개선 — FE·BE 직접 구현, 배포 전",
-        titleEn: "Attendance management for the next cohort — FE and BE built myself, not yet deployed",
+        title: "다음 기수를 위한 출석 관리 개선 — FE·BE 직접 구현",
+        titleEn: "Attendance management for the next cohort — FE and BE built myself",
         items: [
           {
             text: "운영진이 출석 상태를 고르면 서버에 저장되고 수정한 사람이 함께 남도록, 출석 수정 화면과 API를 만들었습니다.",
@@ -760,8 +761,8 @@ export const careerDetailSections: CareerDetailSection[] = [
             textEn: "The screen only decides which menus to show; the server checks permission for edits and statistics, so requests from member accounts are rejected.",
           },
           {
-            text: "위 화면의 운영진 통계·QR·내 출석은 배포 전이라 예시 데이터로 찍었습니다. 이름과 수치는 실제 기록이 아닙니다.",
-            textEn: "The staff statistics, QR, and personal attendance screens above were captured with sample data before deployment; the names and numbers are not real records.",
+            text: "위 화면의 운영진 통계·QR·내 출석은 예시 데이터로 찍었습니다. 이름과 수치는 실제 기록이 아닙니다.",
+            textEn: "The staff statistics, QR, and personal attendance screens above were captured with sample data; the names and numbers are not real records.",
           },
         ],
       },
