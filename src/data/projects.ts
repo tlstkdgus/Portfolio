@@ -35,6 +35,10 @@ export interface Project {
 // Other projects 노출 (§G-6, 2026-09-24): 앞의 6개만 펼쳐 두고 나머지는 '그 외 프로젝트' 접기 안에 둔다.
 // 15개가 한 번에 펼쳐져 있어 대표가 아닌 작업까지 같은 무게로 읽혔다. 데이터와 상세 페이지는 모두 유지한다.
 export const otherProjectsShown = ["songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
+// 표지 썸네일이 있는 프로젝트(2026-09-25). public/projects/<id>/thumb-{ko,en}.jpg, 원본 design/thumbnails/.
+// 대표 4개는 selected.ts의 thumb를 쓴다. 목록 행과 상세 캐러셀 첫 장에 나온다.
+export const projectThumbs = ["songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
+export const thumbSrc = (id: string, locale: string) => `/projects/${id}/thumb-${locale === "ko" ? "ko" : "en"}.jpg`;
 export const otherProjectsFolded = ["connect", "hai", "ainterview", "rzi", "artliving", "mealdang", "huriup", "16play"];
 
 export const projects: Project[] = [
@@ -65,8 +69,8 @@ export const projects: Project[] = [
       "제출물 무결성 검사 도구 check.py 직접 제작(Claude 활용) — 562개 레포 전 브랜치의 마감 후 커밋·force-push·비공개 전환 전수 검사",
       "본선 토너먼트 콘솔 'ANIMAL LEAGUE' 직접 제작·운영 — 스크린·심사·운영 3화면(Next.js · Supabase), 무대 연출과 음향팀·MC 큐시트 조율 포함",
       "FAQ 디스코드 봇 직접 제작·운영 — FAQ 78문항 기반, 키워드 우선 + LLM 폴백 2단 응답, 미답변 일일 리포트 개선 루프",
-      "참가자 가이드 공동 작성(참가자 여정 순서로 목차 설계, 날짜별 변경 이력 관리), 파트너 8종 툴 지원 정책 운영 및 OpenAI 영문 커뮤니케이션(크레딧 지급 · 심사위원 섭외)",
-      "사전 기획 공동 참여 — 해커톤 플랫폼 기능명세서 2종(중앙·연합: As-Is→To-Be 정리, 5단계 권한 매트릭스, 팀빌딩·승인 워크플로우) 작성 후 개발(AXP)·디자인(브디랩) 핸드오프, 워밍업 세션 3회(문제 발견 → MVP 범위 → AI 실전 개발) 커리큘럼 설계",
+      "참가자 가이드 공동 작성(참가자 여정 순서로 목차 설계, 날짜별 변경 이력 관리), 파트너 툴 8개 지원 정책 운영 및 OpenAI 영문 커뮤니케이션(크레딧 지급 · 심사위원 섭외)",
+      "사전 기획 공동 참여 — 해커톤 플랫폼 기능명세서 2개(중앙·연합: As-Is→To-Be 정리, 5단계 권한 매트릭스, 팀빌딩·승인 워크플로우) 작성 후 개발(AXP)·디자인(브디랩) 핸드오프, 워밍업 세션 3회(문제 발견 → MVP 범위 → AI 실전 개발) 커리큘럼 설계",
     ],
     contentsEn: [
       "Co-designed judging policy — 3-stage funnel (docs → track pitching → tournament), a 100-point common rubric, 1:1 mapping between submission items and judging criteria, and fairness rules (script-reading scores zero, uniform devices, random draw)",
@@ -78,7 +82,7 @@ export const projects: Project[] = [
     ],
     decisions: [
       "도구는 근거만 제시하고 판정은 운영진이 — 위반 성격별 차등 기준(기능 수정 실격 / README 수정 감점 / 마감 직후 커밋 정상참작)을 검사 전에 합의",
-      "콘솔은 '되돌릴 수 없는 현장'을 전제로 설계 — 심사위원 명단제(코드 유출에도 가짜 표 차단), 결과 공개 롤백 없음, 네트워크 장애 시 운영자 입력만으로 진행되는 백업 모드",
+      "콘솔은 '되돌릴 수 없는 현장'을 전제로 설계 — 심사위원 명단제(코드 유출에도 가짜 표 차단), 결과 공개 롤백 없음, 네트워크가 끊겨도 운영자 입력만으로 진행되는 백업 모드",
       "동표 시 시스템은 경고만 하고 판정은 사전 합의 규칙으로 사람이 — 도구와 사람의 역할 분리",
     ],
     decisionsEn: [
@@ -133,9 +137,9 @@ export const projects: Project[] = [
       "Many colleagues were non-developers like me, and words like 'deploy' and 'API' were still hard for them. In the age of asking AI anything, you still can't ask a good question without knowing the basic flow",
     ],
     contents: [
-      "점심시간 분량 6회 커리큘럼을 직접 설계하고 주 1회, 6주간 직접 강의 — 소프트웨어 구조 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드",
+      "점심시간 분량 6회 커리큘럼을 직접 설계하고 주 1회, 6주간 직접 강의 — 소프트웨어가 동작하는 방식 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드",
       "모든 개념을 식당 비유 하나로 통일 (홀=프론트엔드, 주방=백엔드, 냉장고=DB, 주문서=API)",
-      "교육용 웹사이트 직접 제작(React · TypeScript · Vite) — SVG 개념 도식 14종, 브라우저에서 바로 동작하는 라이브 실습(로그인 요청 왕복, Git 협업 시뮬레이터 등), 용어 사전 51개",
+      "교육용 웹사이트 직접 제작(React · TypeScript · Vite) — SVG 개념 도식 14개, 브라우저에서 바로 동작하는 라이브 실습(로그인 요청 왕복, Git 협업 시뮬레이터 등), 용어 사전 51개",
     ],
     contentsEn: [
       "Designed a 6-session lunchtime curriculum and taught it weekly for 6 weeks — software structure, dev vocabulary, Git & GitHub, collaboration communication, AI & vibe coding, AI trends",
@@ -195,7 +199,7 @@ export const projects: Project[] = [
     ],
     contents: [
       "현업 회계담당자 인터뷰로 Pain Point를 발굴하고 솔루션 재정의",
-      "Flow ID 기반 익명 태깅 시스템 아이디어 도출, 사용자 여정 맵핑·정보구조 설계 — 업무 프로세스를 8단계에서 3단계로 단축",
+      "Flow ID 기반 익명 태깅 시스템 아이디어 도출, 사용자 여정 맵핑·화면 정보 설계(IA) — 업무 프로세스를 8단계에서 3단계로 단축",
       "React 기반 실시간 대시보드 및 FIDO2 API 연동 생체인증 결제 시스템 개발",
       "3개 유효 시장 분석으로 시장 규모 산정, FINNECT IR 발표 담당",
     ],
@@ -243,11 +247,10 @@ export const projects: Project[] = [
     titleEn: "CleanB",
     subtitle: "외주 프로젝트 · 에어비앤비 청소 매칭 플랫폼 '루미클린(RumiClean)'",
     subtitleEn: "Client Project · Airbnb Cleaning Matching Platform 'RumiClean'",
-    period: "2025.11. ~ 현재 (배포 완료 · 결제 연동 전)",
-    periodEn: "Nov 2025 — Present (deployed · payments not yet connected)",
+    period: "2025.11. ~ (외주 완료)",
+    periodEn: "Nov 2025 — (client project completed)",
     roles: ["PM", "프론트엔드", "디자인"],
     rolesEn: ["PM", "Frontend", "Design"],
-    url: "https://www.rumiclean.com",
     goals: [
       "외주로 맡은 프로젝트입니다. 에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들고 있습니다",
       "해커톤처럼 만들고 끝나는 게 아니라, 실제 사용자를 받는 서비스로 운영하는 것이 목표",
@@ -277,16 +280,16 @@ export const projects: Project[] = [
       "Served Next.js static chunks from a CDN (CloudFront) for deployment stability and load speed",
     ],
     results: [
-      "GitHub Actions 자동 배포로 rumiclean.com 배포 완료. 토스 결제 연동 전이라 아직 실사용자는 받지 않는 상태",
+      "GitHub Actions 자동 배포로 rumiclean.com에 배포한 뒤 외주를 마무리했습니다(토스 결제 연동 전, 실사용자 없음)",
       "기획, 디자인, 개발, 배포, QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트",
     ],
     resultsEn: [
-      "Deployed to rumiclean.com with GitHub Actions auto-deployment. Toss payments are not connected yet, so it does not take real users",
+      "Deployed to rumiclean.com with GitHub Actions auto-deployment, then wrapped up the client engagement (before Toss payments; no real users)",
       "An ongoing project covering the full cycle: planning, design, development, deployment, and QA",
     ],
     stats: [
       { label: "PR", labelEn: "PRs", value: "170+" },
-      { label: "상태", labelEn: "Status", value: "배포 완료 · 결제 연동 전" },
+      { label: "상태", labelEn: "Status", value: "외주 완료" },
     ],
     tags: ["Next.js", "TypeScript", "Kakao Map", "Firebase", "Docker", "CI/CD"],
     image: "/projects/cleanb/01.png",
@@ -314,10 +317,10 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드", "디자인"],
     rolesEn: ["PM", "Frontend", "Design"],
     goals: [
-      "직접 진행한 설문에서 응답자 53%가 '지역화폐 가맹점을 찾기 어렵다'고 답했습니다. 경기도 가맹점 39만 곳이 데이터로는 공개돼 있지만, 탐색할 수 있는 형태가 아니었습니다",
+      "직접 진행한 설문에서 응답자 53%가 지역화폐 가맹점을 찾기 불편하거나(27%) 쓸 곳이 적다(26%)고 답했습니다. 경기도 가맹점 39만 곳이 데이터로는 공개돼 있지만, 탐색할 수 있는 형태가 아니었습니다",
     ],
     goalsEn: [
-      "In our own survey, 53% of respondents said local-currency merchants are hard to find. Gyeonggi publishes ~390K merchant records as open data — but not in a form people can actually explore",
+      "In our own survey, 53% of respondents said local-currency merchants are hard to find (27%) or too few (26%). Gyeonggi publishes ~390K merchant records as open data — but not in a form people can actually explore",
     ],
     contents: [
       "경기도 39만 건 가맹점 데이터 전수 분석으로 추천 알고리즘 방향 확정",
@@ -346,7 +349,7 @@ export const projects: Project[] = [
     stats: [
       { label: "데이터", labelEn: "Data", value: "39만 건" },
       { label: "해커톤", labelEn: "Hackathon", value: "상위 12%" },
-      { label: "탐색 어려움", labelEn: "Hard to discover", value: "53%" },
+      { label: "찾기 불편 + 가맹점 부족", labelEn: "Hard to find + too few", value: "53%" },
     ],
     tags: ["React", "TypeScript", "Tailwind CSS", "AI", "Figma"],
     image: "/projects/ywave/01.png",
@@ -410,7 +413,7 @@ export const projects: Project[] = [
   },
   {
     // 13기 운영진 때 만든 동아리 앱 (§G-6에서 Other projects에 추가). 기간은 저장소 커밋 기준:
-    // 첫 커밋 2025-03-18, 88개 중 75개가 3월, 마지막 커밋 2025-09-10. React(JavaScript) PWA
+    // 첫 커밋 2025-03-05, 마지막 커밋 2025-09-10, 커밋 98개 중 60개가 상현(2026-09-25 GitHub API 확인). React 18 PWA
     title: "웰컴키트",
     caseId: "welcomekit",
     titleEn: "WelcomeKit",
@@ -418,24 +421,31 @@ export const projects: Project[] = [
     subtitleEn: "A club app used by 45 members of the 13th cohort (QR attendance, bingo)",
     period: "2025.03. ~ 2025.09.",
     periodEn: "Mar 2025 — Sep 2025",
-    repo: "https://github.com/tlstkdgus/WelcomeKit",
+    // 원본은 조직 저장소(개인 저장소는 2025-09에 멈춘 포크). 2026-09 후속 개선 PR도 여기에 있다: FE #30, BE #4
+    repo: "https://github.com/13thWellcomeKit/FE",
     roles: ["PM", "프론트엔드 리드"],
     rolesEn: ["PM", "Frontend lead"],
     goals: ["한국외대 멋쟁이사자처럼 13기 부원 45명의 세션 출석을 수기 출석부로 관리하고 있었습니다"],
     goalsEn: ["Attendance for the 45 members of HUFS LIKELION's 13th cohort was kept on a paper roll"],
     contents: [
-      "운영진이 QR을 띄우고 부원이 모바일로 스캔하면 서버에 바로 기록, 세션 시작 20분이 지난 스캔은 지각으로 자동 판정",
-      "오늘 출석부에는 지각·결석자만 팀별로 표시",
-      "빙고 미션: 승인 대기 중인 칸이 있으면 다른 칸 선택 불가, 승인되면 카드가 뒤집히며 미션 공개",
+      "QR 출석(팀과 함께 구현): 운영진이 서버가 만든 QR을 띄우고 부원이 모바일로 스캔하면 바로 기록, 세션 시작 20분이 지난 스캔은 지각으로 자동 판정",
+      "오늘 출석부에는 지각·결석자만 팀·이름으로 표시, 운영진이 '출석수정'으로 결석↔지각 정정. 데스크톱은 QR 띄우기·출석부 최신화, 모바일은 출석하기만",
+      "팀 빙고 미션(직접 구현): 승인 대기 중인 칸이 있으면 다른 칸 선택 불가, 승인되면 카드가 뒤집히며 미션 공개",
+      "신입 부원 맞이 첫 화면과 동아리 소개 페이지, 로그인·회원가입·마이페이지(프로필 사진·비밀번호 변경)",
+      "PWA(직접 구현): 홈 화면 설치 안내, 서비스 워커 캐시",
+      "2026.09 후속 개선(FE·BE 직접 구현, PR 머지·배포 전): 출석 수정 서버 저장·수정자 기록, 30분 만료 1회성 QR, 내 출석 이력, 운영진 통계·CSV(출석률은 부원별 기록 세션 수 기준)",
     ],
     contentsEn: [
-      "Staff show a QR code, members scan it on their phones, and it's recorded on the server; scans more than 20 minutes after the start are marked late automatically",
-      "Today's roll shows only late or absent members, by team",
-      "Bingo missions: no other square can be picked while one awaits approval; once approved, the card flips to reveal the mission",
+      "QR attendance (built with the team): staff show a server-generated QR code and members' scans are recorded at once; scans more than 20 minutes after the start are marked late automatically",
+      "Today's roll lists only late or absent members by team and name, and staff can switch absent/late with 'Edit attendance'. Desktop shows 'show QR' and 'refresh roll'; mobile shows only 'check in'",
+      "Team bingo missions (built myself): no other square can be picked while one awaits approval; once approved, the card flips to reveal the mission",
+      "A welcome screen and club introduction page for new members, plus sign-up, login, and My Page (profile photo, password change)",
+      "PWA (built myself): home-screen install prompt and service-worker caching",
+      "Sep 2026 follow-up (FE and BE built myself, PRs not yet merged or deployed): server-saved attendance edits with editor log, one-time QR expiring in 30 minutes, personal attendance history, staff statistics and CSV (rate based on each member's recorded sessions)",
     ],
     results: ["부원 45명이 세션 출석과 빙고 미션에 사용"],
     resultsEn: ["Used by 45 members for session attendance and bingo missions"],
-    tags: ["React", "PWA", "QR"],
+    tags: ["React", "PWA", "QR", "Service Worker", "Spring Boot"],
   },
   {
     title: "커넥트",

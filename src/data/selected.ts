@@ -35,7 +35,7 @@ export interface SelectedThumb {
 export interface SelectedProject {
   id: string;
   kicker: Localized;
-  /** 상태 뱃지 — 사실 그대로. CleanB는 결제 연동 전이라 'LIVE'라고 쓰지 않는다 */
+  /** 상태 뱃지 — 사실 그대로. CleanB는 외주가 마무리돼 'LIVE'·'운영 중'이라고 쓰지 않는다 */
   status: Localized;
   title: Localized;
   period: Localized;
@@ -204,18 +204,18 @@ export const selectedProjects: SelectedProject[] = [
       en: "I turned 390K merchants into a recommendation list users can pick from right away.",
     },
     summary: { ko: "경기도 지역화폐 가맹점 39만 건을 분석해 위치와 소비 카테고리로 가맹점을 추천하는 서비스", en: "A service that analyzes 390K Gyeonggi local-currency merchants and recommends them by location and spending category" },
-    decision: { ko: "설문 응답자 53%가 가맹점 찾기를 어려워해, 지도 중심 화면을 추천 리스트 중심으로 바꿨습니다.", en: "53% of surveyed users said merchants were hard to find, so I moved the main screen from a map to a recommendation list." },
+    decision: { ko: "설문 응답자 53%가 가맹점을 찾기 불편하거나(27%) 쓸 곳이 적다(26%)고 답해, 지도 중심 화면을 추천 리스트 중심으로 바꿨습니다.", en: "53% of respondents said merchants were hard to find (27%) or too few (26%), so I moved the main screen from a map to a recommendation list." },
     thumb: {
       src: { ko: "/projects/ywave/thumb-ko.jpg", en: "/projects/ywave/thumb-en.jpg" },
       alt: { ko: "블루 바탕 썸네일: Y:Wave, 경기도 가맹점 39만 건을 추천 리스트로. 휴대폰 두 대의 지도 화면과 오늘의 추천 화면", en: "Blue thumbnail: Y:Wave, 390K merchants turned into a recommendation list. A map screen and a today's-picks screen on two phones" },
     },
     body: {
-      ko: "직접 진행한 설문에서 응답자 53%가 지역화폐 가맹점을 찾기 어렵다고 답했고, 경기도 가맹점 39만 곳은 데이터로만 공개돼 있었습니다. 39만 건을 전수 분석한 뒤, 사용자가 지도에서 직접 찾아야 하는 화면 대신 위치 반경과 소비 카테고리로 가맹점을 추천하는 리스트를 첫 화면에 두었습니다. React·TypeScript로 프론트엔드를 직접 개발했고, 13기 중앙해커톤에서 247팀 중 상위 12%로 2차 예선에 진출했습니다.",
-      en: "In a survey we ran ourselves, 53% of respondents said local-currency merchants were hard to find, and Gyeonggi's 390K merchants were published only as raw data. After analyzing all 390K records, I put a list recommending merchants by distance and spending category on the first screen, instead of making users search the map themselves. I built the frontend myself in React and TypeScript, and the project reached the second round of the LIKELION 13th hackathon, in the top 12% of 247 teams.",
+      ko: "직접 진행한 설문에서 응답자 53%가 지역화폐 가맹점을 찾기 불편하거나(27%) 쓸 곳이 적다(26%)고 답했고, 경기도 가맹점 39만 곳은 데이터로만 공개돼 있었습니다. 39만 건을 전수 분석한 뒤, 사용자가 지도에서 직접 찾아야 하는 화면 대신 위치 반경과 소비 카테고리로 가맹점을 추천하는 리스트를 첫 화면에 두었습니다. React·TypeScript로 프론트엔드를 직접 개발했고, 13기 중앙해커톤에서 247팀 중 상위 12%로 2차 예선에 진출했습니다.",
+      en: "In a survey we ran ourselves, 53% of respondents said local-currency merchants were hard to find (27%) or too few (26%), and Gyeonggi's 390K merchants were published only as raw data. After analyzing all 390K records, I put a list recommending merchants by distance and spending category on the first screen, instead of making users search the map themselves. I built the frontend myself in React and TypeScript, and the project reached the second round of the LIKELION 13th hackathon, in the top 12% of 247 teams.",
     },
     stats: [
       { before: { ko: "지도에서 직접 찾기", en: "Searching the map" }, v: { ko: "위치·카테고리 기반 추천", en: "Recommended by place & category" }, k: { ko: "가맹점 탐색", en: "finding a merchant" } },
-      { v: { ko: "39만 건 전수 분석", en: "All 390K analyzed" }, k: { ko: "근거 데이터 · 경기도 가맹점 · 설문 53%", en: "evidence · Gyeonggi merchants · 53% in our survey" } },
+      { v: { ko: "39만 건 전수 분석", en: "All 390K analyzed" }, k: { ko: "근거 데이터 · 경기도 가맹점 · 설문 53%(찾기 불편 27% + 가맹점 부족 26%)", en: "evidence · Gyeonggi merchants · 53% in our survey (hard to find 27% + too few 26%)" } },
       { v: { ko: "247팀 중 상위 12%", en: "Top 12% of 247" }, k: { ko: "13기 중앙해커톤 · 2차 예선 진출", en: "LIKELION 13th hackathon · 2nd round" } },
     ],
     hero: {
@@ -244,9 +244,9 @@ export const selectedProjects: SelectedProject[] = [
   {
     id: "cleanb",
     kicker: { ko: "외주 프로젝트 · 루미클린(RumiClean)", en: "Client Project · RumiClean" },
-    status: { ko: "배포 완료 · 결제 연동 전", en: "Deployed · Payments pending" },
+    status: { ko: "외주 완료", en: "Client project · Completed" },
     title: { ko: "CleanB", en: "CleanB" },
-    period: { ko: "2025.11 – 현재", en: "Nov 2025 – Present" },
+    period: { ko: "2025.11 – 외주 완료", en: "Nov 2025 – completed" },
     role: { ko: "PM · 프론트엔드 · 디자인 (3인 팀)", en: "PM · Frontend · Design (team of 3)" },
     headline: {
       ko: "호스트와 청소자가 '청소 완료'를 두고\n다투지 않는 서비스를 설계했습니다.",
@@ -259,13 +259,13 @@ export const selectedProjects: SelectedProject[] = [
       alt: { ko: "회색 바탕 썸네일: CleanB, 에어비앤비 청소 매칭과 전·후 사진 완료 인증. 청소자 작업 요청 목록과 완료 인증 화면", en: "Gray thumbnail: CleanB, Airbnb cleaning proven with before-and-after photos. The cleaner job list and the completion screen" },
     },
     body: {
-      ko: "외주로 맡은 에어비앤비 청소 매칭 서비스입니다. 서로 모르는 호스트와 청소자가 다투지 않으려면 완료 기준이 서비스 안에 있어야 해서, 청소 작업의 상태 흐름 5단계를 먼저 확정하고 전·후 사진 5장을 완료 조건으로 정했습니다. 청소자 화면 전체를 직접 개발해 배포했고, 지금도 수정하고 있습니다.",
-      en: "A client project: an Airbnb cleaning matching service. Hosts and cleaners who've never met need the completion standard to live inside the service, so I fixed the five-state job flow first and made five before-and-after photos the condition for completion. I built the entire cleaner-side app myself, shipped it, and I'm still revising it.",
+      ko: "외주로 맡은 에어비앤비 청소 매칭 서비스입니다. 서로 모르는 호스트와 청소자가 다투지 않으려면 완료 기준이 서비스 안에 있어야 해서, 청소 작업의 상태 흐름 5단계를 먼저 확정하고 전·후 사진 5장을 완료 조건으로 정했습니다. 청소자 화면 전체를 직접 개발해 배포한 뒤 외주를 마무리했습니다.",
+      en: "A client project: an Airbnb cleaning matching service. Hosts and cleaners who've never met need the completion standard to live inside the service, so I fixed the five-state job flow first and made five before-and-after photos the condition for completion. I built the entire cleaner-side app myself, shipped it, and wrapped up the engagement.",
     },
     stats: [
       { v: { ko: "사진 5장", en: "5 photos" }, k: { ko: "청소 완료 인증 조건 · 전·후 사진", en: "completion proof · before/after photos" } },
       { v: { ko: "상태 5단계", en: "5 states" }, k: { ko: "청소자 화면을 도출한 작업 흐름", en: "job flow the cleaner screens were derived from" } },
-      { v: { ko: "배포 완료", en: "Deployed" }, k: { ko: "rumiclean.com · 결제 연동 전", en: "rumiclean.com · payments not yet connected" } },
+      { v: { ko: "외주 완료", en: "Delivered" }, k: { ko: "기획부터 배포까지 · 결제 연동 전 마무리", en: "planning through deployment · wrapped before payments" } },
     ],
     hero: {
       src: "/projects/cleanb/01.png",
@@ -286,6 +286,6 @@ export const selectedProjects: SelectedProject[] = [
       },
     ],
     caseId: "cleanb",
-    liveUrl: "https://www.rumiclean.com",
+    // rumiclean.com은 외주 마무리 뒤 서버가 내려가 열리지 않는다(2026-09-25 확인) — 링크하지 않는다
   },
 ];

@@ -93,7 +93,7 @@ export const careerDetailSections: CareerDetailSection[] = [
         titleEn: "Co-planned the Pre-event Work — Platform Specs & Warm-up Sessions",
         items: [
           {
-            text: "해커톤 커뮤니티 플랫폼의 기능명세서 2종(중앙해커톤·연합해커톤)을 팀원들과 공동 작성해 개발(AXP)·디자인(브디랩) 조직에 핸드오프했습니다. 각 항목을 As-Is → To-Be → 기대 산출물 → 세부 명세 순서로 정리하고, 운영팀이 먼저 결정해야 할 사항과 개발 항목을 분리했습니다.",
+            text: "해커톤 커뮤니티 플랫폼의 기능명세서 2개(중앙해커톤·연합해커톤)을 팀원들과 공동 작성해 개발(AXP)·디자인(브디랩) 조직에 핸드오프했습니다. 각 항목을 As-Is → To-Be → 기대 산출물 → 세부 명세 순서로 정리하고, 운영팀이 먼저 결정해야 할 사항과 개발 항목을 분리했습니다.",
             textEn:
               "Co-wrote two feature specs for the hackathon community platform (central and inter-university) with the team and handed them off to the dev (AXP) and design (BD Lab) teams. Each item followed As-Is → To-Be → expected output → detailed spec, with ops decisions separated from dev items.",
             subItems: [
@@ -162,7 +162,7 @@ export const careerDetailSections: CareerDetailSection[] = [
               "A web app with three role-based views (Next.js · React · Supabase): a stage screen (live bracket, reveal effects), a judge view (winner pick + comment), and an ops console (match control, bracket draw, result reveal).",
             subItems: [
               {
-                text: "설계 전제는 '되돌릴 수 없는 현장'입니다. 심사위원 명단제(명단 밖 제출은 서버가 거부 — 코드가 유출돼도 가짜 표가 못 섞임), 결과 공개 롤백 없음(대신 확인 다이얼로그 필수), 네트워크 장애 시 운영자 입력만으로 브래킷이 진행되는 백업 모드, 동표 시 자동 결정 없이 사람이 판정.",
+                text: "설계 전제는 '되돌릴 수 없는 현장'입니다. 심사위원 명단제(명단 밖 제출은 서버가 거부 — 코드가 유출돼도 가짜 표가 못 섞임), 결과 공개 롤백 없음(대신 확인 다이얼로그 필수), 네트워크가 끊겨도 운영자 입력만으로 브래킷이 진행되는 백업 모드, 동표 시 자동 결정 없이 사람이 판정.",
                 textEn:
                   "The design premise: an irreversible live event. Judge allowlist (off-list submissions rejected server-side — fake votes can't mix in even if the code leaks), no rollback after reveal (mandatory confirm dialogs instead), a backup mode that advances the bracket on operator input alone during network failure, and no auto-decision on ties — a human rules.",
               },
@@ -195,7 +195,7 @@ export const careerDetailSections: CareerDetailSection[] = [
                   "Built and ran a Discord bot over the 78-item FAQ: keyword matching first (zero cost) with LLM fallback, a strict no-fabrication policy (unknowns route to staff), and a daily unanswered-question report — with humans deciding what gets added. Over a month it answered 229 questions from 53 users — 80.8% via instant keyword match, 0 unanswered.",
               },
               {
-                text: "파트너 8종 툴 지원 정책(신청 마감 일원화, 팀장 대표 제출, 과금 리스크 안내)을 운영했고, OpenAI와는 영문으로 직접 커뮤니케이션하며 크레딧 지급 이슈를 추적하고 본선 기술 심사위원 섭외까지 연결했습니다.",
+                text: "파트너 툴 8개 지원 정책(신청 마감 일원화, 팀장 대표 제출, 과금 리스크 안내)을 운영했고, OpenAI와는 영문으로 직접 커뮤니케이션하며 크레딧 지급 이슈를 추적하고 본선 기술 심사위원 섭외까지 연결했습니다.",
                 textEn:
                   "Ran the 8-partner tool support program (unified deadlines, team-lead submission, billing-risk notices), and communicated directly with OpenAI in English — tracking credit issues and landing a finals technical judge.",
               },
@@ -284,7 +284,7 @@ export const careerDetailSections: CareerDetailSection[] = [
               "Conceived the Flow ID-based anonymous tagging system: auto-identify and log anonymous card users, shortening the workflow from 8 steps to 3.",
             subItems: [
               {
-                text: "사용자 여정 맵핑 및 정보구조 설계, 3인팀 스프린트 계획 수립 및 주간 회의 주관.",
+                text: "사용자 여정 맵핑과 화면 정보 설계(IA), 3인팀 스프린트 계획 수립 및 주간 회의 주관.",
                 textEn:
                   "Mapped user journeys, designed IA, established sprint plans for the 3-person team, and chaired weekly meetings.",
               },
@@ -430,8 +430,8 @@ export const careerDetailSections: CareerDetailSection[] = [
 
   {
     id: "cleanb",
-    title: "외주 에어비앤비 청소 매칭 플랫폼 운영 — CleanB",
-    titleEn: "Operating a Client's Airbnb Cleaning Matching Platform — CleanB",
+    title: "외주 에어비앤비 청소 매칭 플랫폼 — CleanB",
+    titleEn: "A Client's Airbnb Cleaning Matching Platform — CleanB",
     images: [
       "/projects/cleanb/01.png",
       "/projects/cleanb/03.png",
@@ -455,9 +455,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 둘을 연결하는 매칭 서비스를 만들되, 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 '운영'하는 것을 목표로 잡았습니다. (외주 · 2025.11 기획·디자인 시작 ~ 현재, 3인 팀 — 서비스명 루미클린(RumiClean), www.rumiclean.com)",
+        text: "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 둘을 연결하는 매칭 서비스를 만들되, 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 '운영'하는 것을 목표로 잡았습니다. (외주 · 2025.11 기획·디자인 시작 ~ 외주 완료, 3인 팀 — 서비스명 루미클린(RumiClean), www.rumiclean.com)",
         textEn:
-          "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to get steady work. We set out to build a matching service — and to actually operate it with real users, not finish it like a hackathon project. (Client project · planning and design from Nov 2025 – present, 3-person team — service name RumiClean, www.rumiclean.com)",
+          "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to get steady work. We set out to build a matching service — and to actually operate it with real users, not finish it like a hackathon project. (Client project · Nov 2025 through completion, 3-person team — service name RumiClean)",
         subItems: [
           {
             text: "전체 PM으로 기획·디자인·릴리스 우선순위를 잡고, 청소자용 화면 전체를 직접 개발했습니다.",
@@ -469,8 +469,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "운영 PM — 우선순위와 배포 의사결정",
-        titleEn: "Operating PM — Priorities & Deployment Decisions",
+        title: "PM — 우선순위와 배포 의사결정",
+        titleEn: "PM — Priorities & Deployment Decisions",
         items: [
           {
             text: "기능 개발부터 배포까지의 우선순위를 정하고, PR 170개가 넘는 저장소의 코드 리뷰·릴리스 머지·QA 프로세스를 관리합니다.",
@@ -503,7 +503,7 @@ export const careerDetailSections: CareerDetailSection[] = [
             ],
           },
           {
-            text: "카카오맵 지도 검색, Firebase 웹 푸시 등 운영에 필요한 연동을 구현하고, 아토믹 디자인·data-testid QA 규칙으로 팀 코드 일관성을 유지합니다.",
+            text: "카카오맵 지도 검색, Firebase 웹 푸시 등 운영에 필요한 연동을 구현하고, 아토믹 디자인·data-testid QA 규칙으로 팀 코드 일관성을 유지했습니다.",
             textEn:
               "Implemented production integrations (Kakao Map search, Firebase Web Push) and keep team code consistent with atomic design and data-testid QA conventions.",
           },
@@ -512,9 +512,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "GitHub Actions 자동 배포로 www.rumiclean.com에 배포했습니다. 토스 결제 연동 전이라 아직 실사용자는 받지 않고 있습니다. 기획·디자인·개발·배포·QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트입니다.",
+        text: "GitHub Actions 자동 배포로 www.rumiclean.com에 배포한 뒤 외주를 마무리했습니다. 토스 결제 연동 전에 마무리해 실사용자는 받지 않았습니다. 기획·디자인·개발·배포·QA까지 서비스의 전 과정을 처음으로 맡아 끝낸 외주 프로젝트입니다.",
         textEn:
-          "Deployed to www.rumiclean.com with GitHub Actions auto-deployment. Toss payments are not connected yet, so it does not take real users — my first project operating the full cycle: planning, design, development, deployment, and QA.",
+          "Deployed to www.rumiclean.com with GitHub Actions auto-deployment, then wrapped up the engagement before Toss payments were connected, so it never took real users — my first client project carried through the full cycle: planning, design, development, deployment, and QA.",
       },
     ],
     lessons: [
@@ -606,7 +606,7 @@ export const careerDetailSections: CareerDetailSection[] = [
               "Designed a CLOVA OCR + Google Vision + fine-tuned model ensemble (weighted voting) to compensate for OCR accuracy limitations. Established a 3-stage anomaly detection roadmap (Rule → Statistical → ML: Isolation Forest, LSTM).",
           },
           {
-            text: "LLM 역할을 NLU(텍스트 의미 구조화)와 XAI(위험 설명)로 분리 설계하고, 사용자 수정 데이터를 자동 학습하는 피드백 루프를 포함했습니다.",
+            text: "LLM 역할을 NLU(텍스트 의미 분석)와 XAI(위험 설명)로 분리 설계하고, 사용자 수정 데이터를 자동 학습하는 피드백 루프를 포함했습니다.",
             textEn:
               "Separated LLM roles into NLU (text semantic structuring) and XAI (risk explanation), and included a feedback loop for auto-learning from user correction data.",
           },
@@ -647,44 +647,121 @@ export const careerDetailSections: CareerDetailSection[] = [
   },
 
   {
-    // §G-6에서 추가 (2026-09-24). HANDOFF D-8의 '결정 기록' 중 상현 확인 전(※) 문장은 넣지 않고,
-    // 화면에 실제로 반영된 동작만 적었다. 배운 점은 확인된 문장이 없어 비워 둔다(상세 페이지에서 섹션을 그리지 않음).
+    // §G-6에서 추가(2026-09-24), 2026-09-25 저장소 코드를 읽고 보강(상현: "웰컴키트도 내용 훨씬 더 많이 들어갈 수 있어").
+    // 근거: github.com/tlstkdgus/WelcomeKit — check.jsx·Board.jsx(출석), bingo.jsx, PWAInstall.jsx·sw.js, introduce.jsx.
+    // 역할 경계는 파일별 커밋으로 나눴다: PWA 설치·캐시는 상현 단독, 빙고는 상현 8/15, 출석 화면은 팀원과 함께(m-inseok 5·상현 4),
+    // 배포(GitHub Actions·Docker)는 다른 팀원 작업이라 쓰지 않는다. 판단 이유(HANDOFF D-8의 ※ 문장)는 상현 확인 전이라 넣지 않았다.
+    // 배포 주소로 보이던 welcome-kit.vercel.app은 다른 사람의 사이트(헬스장)라 링크하지 않는다.
     id: "welcomekit",
     title: "부원 45명이 쓴 13기 동아리 앱 — 웰컴키트",
     titleEn: "A Club App Used by 45 Members — WelcomeKit",
+    // 배포본이 없어 저장소를 로컬에서 띄워 캡처했다(2026-09-25). 빙고 칸 글자 '미션 N'은 캡처용 가짜 응답이다.
+    // 05~07은 PR #30(feat/attendance-admin) 화면을 목 데이터로 찍었다(상현 동의). 이름은 '아기사자 NN', 수치도 예시값.
+    // 세션 출석부 표는 글자색이 빠져 흰 배경에 흰 글자로 보여(RowBox color 없음) 캡처하지 않았다.
+    images: [
+      "/projects/welcomekit/01.png",
+      "/projects/welcomekit/02.png",
+      "/projects/welcomekit/03.png",
+      "/projects/welcomekit/04.png",
+      "/projects/welcomekit/05.png",
+      "/projects/welcomekit/06.png",
+      "/projects/welcomekit/07.png",
+    ],
     background: [
       {
-        text: "한국외대 멋쟁이사자처럼 13기 부원 45명의 세션 출석을 운영진이 수기 출석부로 관리하고 있었습니다. 13기 운영진으로 출석과 팀 빙고 미션을 한 앱에서 처리하는 PWA를 기획하고 프론트엔드 개발을 이끌었습니다. (2025.03 ~ 2025.09)",
+        text: "한국외대 멋쟁이사자처럼 13기 부원 45명의 세션 출석을 운영진이 수기 출석부로 관리하고 있었습니다. 13기 운영진으로 출석, 팀 빙고 미션, 신입 부원 소개를 한 앱에서 처리하는 웰컴키트 PWA를 기획하고 프론트엔드 개발을 이끌었습니다. (2025.03 ~ 2025.09)",
         textEn:
-          "Attendance for the 45 members of HUFS LIKELION's 13th cohort was kept by staff on a paper roll. As 13th-cohort staff, I planned a PWA that handled attendance and team bingo missions in one app, and led its frontend development. (Mar 2025 – Sep 2025)",
+          "Attendance for the 45 members of HUFS LIKELION's 13th cohort was kept by staff on a paper roll. As 13th-cohort staff, I planned WelcomeKit, a PWA that handled attendance, team bingo missions, and the club introduction for new members in one app, and led its frontend development. (Mar 2025 – Sep 2025)",
+        subItems: [
+          {
+            text: "React 18 PWA입니다. 2025년 운영 당시 프론트엔드 저장소 커밋 98개 중 60개를 맡았고, 2026.09에는 다음 기수를 위한 출석 관리 개선을 프론트엔드와 백엔드(Spring) 모두 직접 구현해 PR로 올렸습니다(머지·배포 전).",
+            textEn: "A React 18 PWA. During the 2025 run I made 60 of the 98 frontend commits; in Sep 2026 I built attendance-management improvements for the next cohort on both frontend and backend (Spring) and opened PRs (not yet merged or deployed).",
+          },
+        ],
       },
     ],
     role: [
       {
-        title: "QR 출석",
-        titleEn: "QR attendance",
+        title: "QR 출석과 출석부 — 팀과 함께 구현",
+        titleEn: "QR attendance and the roll, built with the team",
         items: [
           {
-            text: "운영진이 QR을 띄우고 부원이 모바일로 스캔하면 서버에 바로 기록되고, 세션 시작 20분이 지난 스캔은 지각으로 자동 판정되게 했습니다.",
-            textEn: "Staff show a QR code and members scan it on their phones, so attendance is recorded on the server at once; scans more than 20 minutes after the session starts are marked late automatically.",
+            text: "운영진이 'QR 체크 진행'을 누르면 서버가 만든 QR이 뜨고, 부원이 휴대폰으로 스캔하면 서버에 바로 출석이 기록되게 했습니다. 세션 시작 20분이 지난 스캔은 지각으로 자동 판정됩니다.",
+            textEn: "When staff press 'Start QR check', a server-generated QR code appears, and a member's scan is recorded on the server at once. Scans more than 20 minutes after the session starts are marked late automatically.",
           },
           {
-            text: "오늘 출석부에서는 지각·결석자만 팀별로 보여주게 했습니다.",
-            textEn: "Today's roll shows only late or absent members, grouped by team.",
+            text: "오늘 출석부에는 지각·결석자만 팀과 이름으로 보이고, 운영진이 '출석수정' 버튼으로 결석과 지각을 바로잡을 수 있게 했습니다.",
+            textEn: "Today's roll lists only late or absent members by team and name, and staff can switch a member between absent and late with the 'Edit attendance' button.",
           },
           {
-            text: "데스크톱에서는 QR 띄우기와 출석부 최신화만, 모바일에서는 출석하기 버튼만 보이게 했습니다.",
-            textEn: "On desktop only 'show QR' and 'refresh roll' appear; on mobile only the 'check in' button does.",
+            text: "데스크톱에서는 QR 띄우기와 출석부 최신화만, 모바일에서는 출석하기 버튼만 보이게 해 운영진 화면과 부원 화면을 나눴습니다.",
+            textEn: "On desktop only 'show QR' and 'refresh roll' appear; on mobile only 'check in' does, which separates the staff screen from the member screen.",
           },
         ],
       },
       {
-        title: "빙고 미션",
-        titleEn: "Bingo missions",
+        title: "팀 빙고 미션 — 직접 구현",
+        titleEn: "Team bingo missions, built myself",
         items: [
           {
-            text: "승인 대기 중인 칸이 있으면 다른 칸을 선택할 수 없게 하고, 운영진이 승인하면 카드가 뒤집히며 미션이 공개되게 했습니다.",
-            textEn: "While one square awaits approval, no other square can be picked; once staff approve it, the card flips and the mission is revealed.",
+            text: "미션은 서버에서 받아 빙고판에 가려 둔 채로 두고, 팀이 칸을 고르면 운영진 승인 뒤에 카드가 뒤집히며 미션이 공개되게 했습니다.",
+            textEn: "Missions come from the server and stay hidden on the board; when a team picks a square, the card flips to reveal the mission once staff approve it.",
+          },
+          {
+            text: "승인 대기 중인 칸이 있으면 다른 칸을 고를 수 없게 해, 한 팀이 여러 미션을 한꺼번에 신청하지 못하게 했습니다.",
+            textEn: "While one square awaits approval, no other square can be picked, so a team can't request several missions at once.",
+          },
+        ],
+      },
+      {
+        title: "신입 부원 맞이와 계정",
+        titleEn: "Welcoming new members, and accounts",
+        items: [
+          {
+            text: "첫 화면에서 13기 아기사자를 맞이하고, 소개 페이지에 트랙별 교육(프론트엔드·백엔드), 해커톤, 교육봉사 같은 동아리 활동을 정리해 신입 부원이 동아리를 한 번에 알 수 있게 했습니다.",
+            textEn: "The first screen welcomes the 13th-cohort members, and an introduction page lays out the club's activities, from track-based training (frontend, backend) to hackathons and the teaching volunteer program, so new members can learn the club in one place.",
+          },
+          {
+            text: "로그인·회원가입과 마이페이지(프로필 사진, 비밀번호 변경)를 두어 부원마다 자기 계정으로 출석과 미션에 참여하게 했습니다.",
+            textEn: "Sign-up, login, and a My Page (profile photo, password change) let every member take part in attendance and missions under their own account.",
+          },
+        ],
+      },
+      {
+        title: "앱처럼 쓰는 PWA — 직접 구현",
+        titleEn: "An installable PWA, built myself",
+        items: [
+          {
+            text: "홈 화면 설치 안내를 띄우고(이미 설치했으면 띄우지 않음), 서비스 워커로 화면 자원을 캐시해 세션 현장에서 앱처럼 바로 열리게 했습니다.",
+            textEn: "The app prompts members to add it to their home screen (not shown once installed), and a service worker caches the app shell so it opens like an app at the session.",
+          },
+        ],
+      },
+      {
+        // 2026-09-25 상현이 올린 PR 두 개(13thWellcomeKit/FE #30, BE #4) — 둘 다 열린 상태, 머지·배포 전이다.
+        // 부원이 쓴 기능이 아니므로 결과(results)에는 넣지 않는다. 기존 코드의 오류 수정(팀·이름 뒤바뀜 등)은 쓰지 않는다.
+        title: "다음 기수를 위한 출석 관리 개선 — FE·BE 직접 구현, 배포 전",
+        titleEn: "Attendance management for the next cohort — FE and BE built myself, not yet deployed",
+        items: [
+          {
+            text: "운영진이 출석 상태를 고르면 서버에 저장되고 수정한 사람이 함께 남도록, 출석 수정 화면과 API를 만들었습니다.",
+            textEn: "Built the attendance-edit screen and API so a status staff choose is saved on the server along with who changed it.",
+          },
+          {
+            text: "고정된 QR은 캡처해 돌려 쓸 수 있다고 판단해, QR마다 1회성 토큰을 넣고 30분이 지나거나 새 QR을 띄우면 이전 QR이 무효가 되게 했습니다. 휴대폰 기본 카메라로 찍어도 출석이 바로 제출되고, 로그인이 안 돼 있으면 로그인 뒤 원래 화면으로 돌아옵니다.",
+            textEn: "A fixed QR code could be screenshotted and shared, so each QR now carries a one-time token that expires after 30 minutes or as soon as a new QR is shown. Scanning with the phone's default camera submits attendance directly, and members who aren't logged in return to the same screen after logging in.",
+          },
+          {
+            text: "부원은 마이페이지에서 자기 출석 이력을, 운영진은 세션별 출석과 부원별 출석률을 보고 CSV로 내려받게 했습니다. 출석률은 전체 세션 수가 아니라 부원마다 기록된 세션 수로 나눴습니다. 늦게 들어온 부원이 가입 전 세션 때문에 결석으로 잡히지 않아야 한다고 판단했습니다.",
+            textEn: "Members can see their own attendance history on My Page, and staff see per-session attendance and per-member rates with a CSV export. The rate divides by each member's recorded sessions, not all sessions, so a member who joined late isn't counted absent for sessions before they joined.",
+          },
+          {
+            text: "메뉴를 보여 줄지는 화면에서 정하지만, 수정·통계 권한은 서버가 검사하게 해 부원 계정으로는 요청이 막히도록 했습니다.",
+            textEn: "The screen only decides which menus to show; the server checks permission for edits and statistics, so requests from member accounts are rejected.",
+          },
+          {
+            text: "위 화면의 운영진 통계·QR·내 출석은 배포 전이라 예시 데이터로 찍었습니다. 이름과 수치는 실제 기록이 아닙니다.",
+            textEn: "The staff statistics, QR, and personal attendance screens above were captured with sample data before deployment; the names and numbers are not real records.",
           },
         ],
       },
@@ -693,6 +770,10 @@ export const careerDetailSections: CareerDetailSection[] = [
       {
         text: "부원 45명이 세션 출석과 빙고 미션에 사용했고, 수기 출석부는 QR 스캔 자동 기록으로 바뀌었습니다.",
         textEn: "All 45 members used it for session attendance and bingo missions, and the paper roll was replaced by automatic QR logging.",
+      },
+      {
+        text: "운영진이 세션 중에 확인할 사람은 출석부에 뜨는 지각·결석자뿐이었고, 잘못 찍힌 기록은 그 자리에서 고칠 수 있었습니다.",
+        textEn: "During a session, staff only had to check the late and absent members the roll showed, and could fix a wrong record on the spot.",
       },
     ],
     lessons: [],
@@ -722,7 +803,7 @@ export const careerDetailSections: CareerDetailSection[] = [
         titleEn: "Curriculum & Teaching — Solo",
         items: [
           {
-            text: "점심시간 분량 6회 커리큘럼을 설계하고 주 1회, 6주간 직접 강의했습니다 — 소프트웨어 구조 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드.",
+            text: "점심시간 분량 6회 커리큘럼을 설계하고 주 1회, 6주간 직접 강의했습니다 — 소프트웨어가 동작하는 방식 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드.",
             textEn:
               "Designed a 6-session lunchtime curriculum and taught it weekly for 6 weeks — software structure, dev vocabulary, Git & GitHub, collaboration communication, AI & vibe coding, AI trends.",
             subItems: [
@@ -740,7 +821,7 @@ export const careerDetailSections: CareerDetailSection[] = [
         titleEn: "Built the Companion Site",
         items: [
           {
-            text: "React · TypeScript · Vite로 교육용 사이트를 만들었습니다 — SVG 개념 도식 14종, 브라우저에서 바로 동작하는 라이브 실습(로그인 요청 왕복, Git 협업 시뮬레이터 등), 용어 사전 51개.",
+            text: "React · TypeScript · Vite로 교육용 사이트를 만들었습니다 — SVG 개념 도식 14개, 브라우저에서 바로 동작하는 라이브 실습(로그인 요청 왕복, Git 협업 시뮬레이터 등), 용어 사전 51개.",
             textEn:
               "Built the site with React · TypeScript · Vite — 14 SVG concept diagrams, live in-browser demos (login round-trip, Git collaboration simulator), and a 51-term glossary.",
             subItems: [
@@ -993,7 +1074,7 @@ export const careerDetailSections: CareerDetailSection[] = [
             ],
           },
           {
-            text: "5가지 수익원을 구조화했습니다: 프리미엄 구독제(B2C), 기업용 API(B2B), 법무법인·핀테크 파트너십, 익명화 데이터 인사이트 판매, 집단대응 중개 서비스.",
+            text: "5가지 수익원을 설계했습니다: 프리미엄 구독제(B2C), 기업용 API(B2B), 법무법인·핀테크 파트너십, 익명화 데이터 인사이트 판매, 집단대응 중개 서비스.",
             textEn:
               "Structured 5 revenue streams: premium subscription (B2C), enterprise API (B2B), law firm & fintech partnerships, anonymized data insight sales, and collective action brokerage.",
           },

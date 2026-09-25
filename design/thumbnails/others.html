@@ -1,0 +1,113 @@
+<!doctype html>
+<!--
+  그 외 프로젝트 6개(손글·웰컴키트·사내 개발 교육·dotori·NeuroSight·TCP) 썸네일 원본 (2026-09-25).
+  thumbs.html과 같은 틀(1600×1000, 로고 + 한 줄 + 역할 + 실제 화면). ?lang=ko | ?lang=en 으로 언어를 고른다.
+  - 로고: 손글·dotori·NeuroSight는 발표 자료 표지에서 추출(assets/sg_logo·dotori_logo·ns_logo), 웰컴키트는 저장소 Logo.png,
+    사내 교육은 교육 사이트 파비콘. TCP는 로고가 없어 글자로 둔다.
+  - 화면: 웰컴키트는 저장소를 로컬에서 띄워 캡처(API는 가짜 응답, 빙고 칸 글자는 '미션 N'), 사내 교육은 배포 사이트 캡처,
+    나머지는 public/projects의 발표 자료 슬라이드.
+  - 팀원 이름은 넣지 않는다.
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<style>
+  :root { --ink:#0a0a0a; --muted:#f3f3f1; --blue:#1f36ff; --line:rgba(10,10,10,.18); }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Pretendard Variable",Pretendard,sans-serif; background:#777; }
+  .t { position:relative; width:1600px; height:1000px; overflow:hidden; margin-bottom:40px; color:var(--ink); background:var(--muted); }
+  .t.ink { background:var(--ink); color:#fafafa; --line:rgba(250,250,250,.22); }
+  .t.blue { background:var(--blue); color:#fff; --line:rgba(255,255,255,.35); }
+  .meta { position:absolute; left:80px; right:80px; top:64px; display:flex; justify-content:space-between; font-size:30px; font-weight:700; letter-spacing:.06em; padding-bottom:24px; border-bottom:2px solid var(--line); }
+  .copy { position:absolute; left:80px; bottom:76px; width:620px; z-index:5; }
+  .brand { display:flex; align-items:center; gap:26px; font-size:118px; font-weight:800; letter-spacing:-.05em; line-height:1; }
+  .sub { margin-top:34px; font-size:40px; font-weight:600; line-height:1.35; letter-spacing:-.02em; opacity:.82; white-space:pre-line; }
+  .role { margin-top:40px; font-size:28px; font-weight:700; letter-spacing:.12em; }
+  .role::before { content:""; display:inline-block; width:18px; height:18px; background:var(--blue); margin-right:16px; }
+  .blue .role::before { background:#fff; }
+  html[lang=ko] .meta { letter-spacing:.01em; } html[lang=ko] .role { letter-spacing:.02em; } html[lang=ko] .sub { letter-spacing:-.03em; }
+  .dev { position:absolute; }
+  .shadow { box-shadow:0 40px 80px -20px rgba(0,0,0,.35), 0 12px 24px -8px rgba(0,0,0,.18); }
+  .laptop .scr { border:16px solid #1c1c1e; border-bottom-width:22px; border-radius:22px 22px 6px 6px; overflow:hidden; background:#000; }
+  .laptop .scr img { display:block; width:100%; }
+  .laptop .base { height:22px; margin:0 -9%; background:linear-gradient(#d9d9dc,#a9a9ae); border-radius:2px 2px 14px 14px; }
+  .phone { border:12px solid #111; border-radius:52px; overflow:hidden; background:#fff; }
+  .phone img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; }
+  .window { border-radius:14px; overflow:hidden; background:#fff; }
+  .window .bar { height:34px; background:#ececea; display:flex; align-items:center; gap:9px; padding-left:16px; }
+  .window .bar i { width:12px; height:12px; border-radius:50%; background:#c9c9c6; display:block; }
+  .window img { display:block; width:100%; }
+</style>
+</head>
+<body>
+
+<section class="t" id="songeul">
+  <div class="meta"><span data-ko="KIITI 2025 동계 학술대회 · 우수상" data-en="KIITI 2025 WINTER CONFERENCE · AWARD"></span><span>2025.09 – 2025.12</span></div>
+  <div class="copy">
+    <img src="assets/sg_logo.png" alt="손글" style="height:150px;display:block" />
+    <div class="sub" data-ko="손글씨 메모를 찍으면 송금이 끝나는&#10;시니어 모바일 뱅킹" data-en="Senior mobile banking: photograph&#10;a handwritten note to send money"></div>
+    <div class="role" data-ko="PM · 프론트엔드 (6인 팀)" data-en="PM · FRONTEND (TEAM OF 6)"></div>
+  </div>
+  <div class="dev window shadow" style="left:720px; top:230px; width:960px;"><div class="bar"><i></i><i></i><i></i></div><img src="../../public/projects/songeul/04.png" /></div>
+</section>
+
+<section class="t ink" id="welcomekit">
+  <div class="meta"><span data-ko="한국외대 멋쟁이사자처럼 13기" data-en="HUFS LIKELION 13TH COHORT"></span><span>2025.03 – 2025.09</span></div>
+  <div class="copy">
+    <div class="brand" style="font-size:92px;gap:22px"><img src="assets/wk_logo.png" alt="" style="height:100px;border-radius:50%" />WelcomeKit</div>
+    <div class="sub" data-ko="부원 45명이 쓴&#10;QR 출석·팀 빙고 앱" data-en="The QR attendance and team&#10;bingo app 45 members used"></div>
+    <div class="role" data-ko="PM · 프론트엔드 리드" data-en="PM · FRONTEND LEAD"></div>
+  </div>
+  <div class="dev laptop" style="left:800px; top:190px; width:780px;"><div class="scr shadow"><img src="assets/wk_d_bingo.png" /></div><div class="base"></div></div>
+  <div class="dev phone shadow" style="left:1230px; top:420px; width:250px; height:540px;"><img src="assets/wk_m_main.png" /></div>
+</section>
+
+<section class="t" id="devsite">
+  <div class="meta"><span data-ko="멋쟁이사자처럼 인턴 · 사내 교육" data-en="LIKELION INTERNSHIP · INTERNAL COURSE"></span><span>2026.07 – 2026.08</span></div>
+  <div class="copy">
+    <div class="brand" style="font-size:92px"><img src="assets/ds_fav.svg" alt="" style="height:110px" /><span data-ko="사내 개발 교육" data-en="Dev Course"></span></div>
+    <div class="sub" data-ko="비개발 동료를 위한 점심 강의 6회,&#10;수강자 6명 전원 만족도 5/5" data-en="Six lunchtime sessions for&#10;non-developers, all 6 rated it 5/5"></div>
+    <div class="role" data-ko="기획 · 제작 · 강의" data-en="PLANNED · BUILT · TAUGHT"></div>
+  </div>
+  <div class="dev laptop" style="left:740px; top:205px; width:960px;"><div class="scr shadow"><img src="assets/ds_home.png" /></div><div class="base"></div></div>
+  <div class="dev phone shadow" style="left:1270px; top:395px; width:250px; height:540px;"><img src="assets/ds_home_m.png" /></div>
+</section>
+
+<section class="t blue" id="dotori">
+  <div class="meta"><span data-ko="G-RISE 창업 BM 경진대회 · 대상" data-en="G-RISE STARTUP BM CONTEST · GRAND PRIZE"></span><span>2025.06 – 2025.11</span></div>
+  <div class="copy">
+    <img src="assets/dotori_logo.png" alt="dotori" style="height:120px;display:block" />
+    <div class="sub" data-ko="시각장애인을 위한&#10;점자 교육 플랫폼" data-en="A braille education platform&#10;for the visually impaired"></div>
+    <div class="role" data-ko="PM · IR · 프론트엔드" data-en="PM · IR · FRONTEND"></div>
+  </div>
+  <div class="dev window shadow" style="left:740px; top:230px; width:940px;"><div class="bar"><i></i><i></i><i></i></div><img src="../../public/projects/dotori/04.png" /></div>
+</section>
+
+<section class="t ink" id="neurosight">
+  <div class="meta"><span data-ko="GRAFFITI 2025: AI STARTUP · KAIST ICISTS" data-en="GRAFFITI 2025: AI STARTUP · KAIST ICISTS"></span><span>2025.07</span></div>
+  <div class="copy">
+    <img src="assets/ns_logo.png" alt="NeuroSight" style="width:560px;display:block" />
+    <div class="sub" data-ko="바늘이 갈 길을 실시간으로 보여 주는&#10;마취 시술 보조 서비스" data-en="An anesthesia aid that shows&#10;the needle's path in real time"></div>
+    <div class="role" data-ko="PM · IR" data-en="PM · IR"></div>
+  </div>
+  <div class="dev window shadow" style="left:740px; top:230px; width:940px;"><div class="bar"><i></i><i></i><i></i></div><img src="../../public/projects/neurosight/04.png" /></div>
+</section>
+
+<section class="t" id="tcp">
+  <div class="meta"><span data-ko="교내 아이디어톤 · 최우수상" data-en="CAMPUS IDEATHON · FIRST PRIZE"></span><span>2025.04 – 2025.05</span></div>
+  <div class="copy">
+    <div class="brand" style="font-size:150px">TCP</div>
+    <div class="sub" data-ko="약관 속 위험 조항을&#10;동의하기 전에 짚어 주는 서비스" data-en="Flags risky clauses in terms&#10;before you agree"></div>
+    <div class="role" data-ko="PM" data-en="PM"></div>
+  </div>
+  <div class="dev window shadow" style="left:740px; top:230px; width:940px;"><div class="bar"><i></i><i></i><i></i></div><img src="../../public/projects/tcp/03.png" /></div>
+</section>
+
+<script>
+  const lang = new URLSearchParams(location.search).get("lang") === "en" ? "en" : "ko";
+  document.documentElement.lang = lang;
+  for (const el of document.querySelectorAll("[data-ko]")) el.textContent = el.dataset[lang];
+</script>
+</body>
+</html>

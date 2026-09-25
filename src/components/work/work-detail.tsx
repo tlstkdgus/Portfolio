@@ -8,6 +8,7 @@ import { fmtPeriod, getWork, workHref, type WorkEntry } from "@/lib/work";
 import type { CareerDetailItem, FlowDiagram } from "@/data/career-detail";
 import type { Localized } from "@/data/selected";
 import { ImageCarousel } from "@/components/ui/image-carousel";
+import { projectThumbs, thumbSrc } from "@/data/projects";
 import { MetaRow } from "@/components/ui/meta-row";
 import { cn } from "@/lib/utils";
 import { fitStat } from "@/lib/fit-stat";
@@ -28,6 +29,7 @@ export function WorkDetail({ id }: { id: string }) {
   const images = dedupe([
     // 메인 카드 썸네일(언어별 표지 이미지)도 캐러셀 첫 장에 둔다
     ...(selected ? [...(selected.thumb ? [tr(selected.thumb.src)] : []), selected.hero.src, ...selected.gallery.map((g) => g.src)] : []),
+    ...(!selected && projectThumbs.includes(id) ? [thumbSrc(id, locale)] : []),
     ...(detail.images ?? []),
   ]);
   const roles = selected ? tr(selected.role) : (isKo ? project?.roles : project?.rolesEn)?.join(" · ");
@@ -173,10 +175,12 @@ export function WorkDetail({ id }: { id: string }) {
         )}
 
         <Section n="03" label={t("results")} accent>
-          {/* 굵은 파란 세로선(border-l 3px)은 뺐다. 결과 제목이 이미 파란색이고, 나머지 목록처럼 가로 괘선으로 나눈다 */}
-          <ul className="border-t border-foreground">
+          {/* 굵은 파란 세로선(border-l 3px)은 뺐다. 결과 제목이 이미 파란색이다.
+              항목 사이에만 옅은 선을 둔다. 목록에 윗선을 따로 그으면 Section의 윗선과 두 줄로 겹쳐 보였다(2026-09-25 상현 지적).
+              첫 항목은 위 여백 없이 왼쪽 '03 결과'와 같은 높이에서 시작한다 */}
+          <ul className="divide-y divide-border">
             {detail.results.map((item, j) => (
-              <li key={j} className="border-b border-border py-5 text-[18px] font-semibold leading-[1.75] tracking-[-0.01em] md:text-[19px]">
+              <li key={j} className="py-5 text-[18px] font-semibold leading-[1.75] tracking-[-0.01em] first:pt-0 last:pb-0 md:text-[19px]">
                 {isKo ? item.text : item.textEn}
                 <Sub item={item} isKo={isKo} />
               </li>
