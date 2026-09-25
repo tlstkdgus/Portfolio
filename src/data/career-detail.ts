@@ -655,12 +655,17 @@ export const careerDetailSections: CareerDetailSection[] = [
     id: "welcomekit",
     title: "부원 45명이 쓴 13기 동아리 앱 — 웰컴키트",
     titleEn: "A Club App Used by 45 Members — WelcomeKit",
-    // 배포본이 없어 저장소를 로컬에서 띄워 캡처했다(2026-09-25). 빙고 칸 글자 '미션 N'은 캡처용 가짜 응답이다
+    // 배포본이 없어 저장소를 로컬에서 띄워 캡처했다(2026-09-25). 빙고 칸 글자 '미션 N'은 캡처용 가짜 응답이다.
+    // 05~07은 PR #30(feat/attendance-admin) 화면을 목 데이터로 찍었다(상현 동의). 이름은 '아기사자 NN', 수치도 예시값.
+    // 세션 출석부 표는 글자색이 빠져 흰 배경에 흰 글자로 보여(RowBox color 없음) 캡처하지 않았다.
     images: [
       "/projects/welcomekit/01.png",
       "/projects/welcomekit/02.png",
       "/projects/welcomekit/03.png",
       "/projects/welcomekit/04.png",
+      "/projects/welcomekit/05.png",
+      "/projects/welcomekit/06.png",
+      "/projects/welcomekit/07.png",
     ],
     background: [
       {
@@ -753,6 +758,10 @@ export const careerDetailSections: CareerDetailSection[] = [
           {
             text: "메뉴를 보여 줄지는 화면에서 정하지만, 수정·통계 권한은 서버가 검사하게 해 부원 계정으로는 요청이 막히도록 했습니다.",
             textEn: "The screen only decides which menus to show; the server checks permission for edits and statistics, so requests from member accounts are rejected.",
+          },
+          {
+            text: "위 화면의 운영진 통계·QR·내 출석은 배포 전이라 예시 데이터로 찍었습니다. 이름과 수치는 실제 기록이 아닙니다.",
+            textEn: "The staff statistics, QR, and personal attendance screens above were captured with sample data before deployment; the names and numbers are not real records.",
           },
         ],
       },
