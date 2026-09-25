@@ -35,6 +35,10 @@ export interface Project {
 // Other projects 노출 (§G-6, 2026-09-24): 앞의 6개만 펼쳐 두고 나머지는 '그 외 프로젝트' 접기 안에 둔다.
 // 15개가 한 번에 펼쳐져 있어 대표가 아닌 작업까지 같은 무게로 읽혔다. 데이터와 상세 페이지는 모두 유지한다.
 export const otherProjectsShown = ["songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
+// 표지 썸네일이 있는 프로젝트(2026-09-25). public/projects/<id>/thumb-{ko,en}.jpg, 원본 design/thumbnails/.
+// 대표 4개는 selected.ts의 thumb를 쓴다. 목록 행과 상세 캐러셀 첫 장에 나온다.
+export const projectThumbs = ["songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
+export const thumbSrc = (id: string, locale: string) => `/projects/${id}/thumb-${locale === "ko" ? "ko" : "en"}.jpg`;
 export const otherProjectsFolded = ["connect", "hai", "ainterview", "rzi", "artliving", "mealdang", "huriup", "16play"];
 
 export const projects: Project[] = [

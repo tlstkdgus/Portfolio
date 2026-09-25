@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight, ArrowUpRight, ChevronDown } from "lucide-react";
-import { projects, otherProjectsShown, otherProjectsFolded, type Project } from "@/data/projects";
+import Image from "next/image";
+import { projects, otherProjectsShown, otherProjectsFolded, projectThumbs, thumbSrc, type Project } from "@/data/projects";
 import { fmtPeriod, workEntries, workHref } from "@/lib/work";
 
 const byId = (ids: string[]) =>
@@ -63,12 +64,21 @@ function Row({ p }: { p: Project }) {
   const t = useTranslations("projects");
   const locale = useLocale();
   const isKo = locale === "ko";
+  // 펼쳐 둔 6개는 표지 썸네일을 앞에 둔다(2026-09-25 상현 요청). 기간은 제목 위 메타 줄로 올린다
+  const thumb = p.caseId && projectThumbs.includes(p.caseId) ? thumbSrc(p.caseId, locale) : null;
   const row = (
     <>
-      <span className="meta col-span-2 pt-1.5 text-muted-foreground sm:col-span-1">
-        {fmtPeriod(isKo ? p.period : p.periodEn)}
-      </span>
+      {thumb ? (
+        <span className="relative col-span-2 block aspect-[16/10] overflow-hidden bg-muted sm:col-span-1">
+          <Image src={thumb} alt="" fill sizes="(max-width: 640px) 100vw, 200px" className="object-cover" />
+        </span>
+      ) : (
+        <span className="meta col-span-2 pt-1.5 text-muted-foreground sm:col-span-1">
+          {fmtPeriod(isKo ? p.period : p.periodEn)}
+        </span>
+      )}
       <span className="min-w-0">
+        {thumb && <span className="meta mb-1 block text-muted-foreground">{fmtPeriod(isKo ? p.period : p.periodEn)}</span>}
         <span className="block text-[20px] font-bold tracking-[-0.02em] md:text-[24px]">{isKo ? p.title : p.titleEn}</span>
         <span className="mt-1 block text-[15px] leading-snug text-muted-foreground">
           {isKo ? p.subtitle : p.subtitleEn}
@@ -85,7 +95,9 @@ function Row({ p }: { p: Project }) {
       )}
     </>
   );
-  const cls = "group/row grid grid-cols-[1fr_20px] gap-x-6 gap-y-1 border-b border-border py-5 sm:grid-cols-[130px_1fr_20px]";
+  const cls = thumb
+    ? "group/row grid grid-cols-[1fr_20px] items-center gap-x-6 gap-y-4 border-b border-border py-5 sm:grid-cols-[200px_1fr_20px]"
+    : "group/row grid grid-cols-[1fr_20px] gap-x-6 gap-y-1 border-b border-border py-5 sm:grid-cols-[130px_1fr_20px]";
   return (
     <li>
       {p.caseId ? (

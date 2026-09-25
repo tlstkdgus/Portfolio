@@ -8,6 +8,7 @@ import { fmtPeriod, getWork, workHref, type WorkEntry } from "@/lib/work";
 import type { CareerDetailItem, FlowDiagram } from "@/data/career-detail";
 import type { Localized } from "@/data/selected";
 import { ImageCarousel } from "@/components/ui/image-carousel";
+import { projectThumbs, thumbSrc } from "@/data/projects";
 import { MetaRow } from "@/components/ui/meta-row";
 import { cn } from "@/lib/utils";
 import { fitStat } from "@/lib/fit-stat";
@@ -28,6 +29,7 @@ export function WorkDetail({ id }: { id: string }) {
   const images = dedupe([
     // 메인 카드 썸네일(언어별 표지 이미지)도 캐러셀 첫 장에 둔다
     ...(selected ? [...(selected.thumb ? [tr(selected.thumb.src)] : []), selected.hero.src, ...selected.gallery.map((g) => g.src)] : []),
+    ...(!selected && projectThumbs.includes(id) ? [thumbSrc(id, locale)] : []),
     ...(detail.images ?? []),
   ]);
   const roles = selected ? tr(selected.role) : (isKo ? project?.roles : project?.rolesEn)?.join(" · ");

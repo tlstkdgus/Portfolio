@@ -655,6 +655,13 @@ export const careerDetailSections: CareerDetailSection[] = [
     id: "welcomekit",
     title: "부원 45명이 쓴 13기 동아리 앱 — 웰컴키트",
     titleEn: "A Club App Used by 45 Members — WelcomeKit",
+    // 배포본이 없어 저장소를 로컬에서 띄워 캡처했다(2026-09-25). 빙고 칸 글자 '미션 N'은 캡처용 가짜 응답이다
+    images: [
+      "/projects/welcomekit/01.png",
+      "/projects/welcomekit/02.png",
+      "/projects/welcomekit/03.png",
+      "/projects/welcomekit/04.png",
+    ],
     background: [
       {
         text: "한국외대 멋쟁이사자처럼 13기 부원 45명의 세션 출석을 운영진이 수기 출석부로 관리하고 있었습니다. 13기 운영진으로 출석, 팀 빙고 미션, 신입 부원 소개를 한 앱에서 처리하는 웰컴키트 PWA를 기획하고 프론트엔드 개발을 이끌었습니다. (2025.03 ~ 2025.09)",
