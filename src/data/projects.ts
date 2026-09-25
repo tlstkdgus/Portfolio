@@ -433,7 +433,7 @@ export const projects: Project[] = [
       "팀 빙고 미션(직접 구현): 승인 대기 중인 칸이 있으면 다른 칸 선택 불가, 승인되면 카드가 뒤집히며 미션 공개",
       "신입 부원 맞이 첫 화면과 동아리 소개 페이지, 로그인·회원가입·마이페이지(프로필 사진·비밀번호 변경)",
       "PWA(직접 구현): 홈 화면 설치 안내, 서비스 워커 캐시",
-      "2026.09 후속 개선(FE·BE 직접 구현, 머지·프론트엔드 배포 완료, 서버 가동 전): 출석 수정 서버 저장·수정자 기록, 30분 만료 1회성 QR, 내 출석 이력, 운영진 통계·CSV(출석률은 부원별 기록 세션 수 기준)",
+      "2026.09 후속 개선(FE·BE 직접 구현): 출석 수정 서버 저장·수정자 기록, 30분 만료 1회성 QR, 내 출석 이력, 운영진 통계·CSV(출석률은 부원별 기록 세션 수 기준)",
     ],
     contentsEn: [
       "QR attendance (built with the team): staff show a server-generated QR code and members' scans are recorded at once; scans more than 20 minutes after the start are marked late automatically",
@@ -441,7 +441,7 @@ export const projects: Project[] = [
       "Team bingo missions (built myself): no other square can be picked while one awaits approval; once approved, the card flips to reveal the mission",
       "A welcome screen and club introduction page for new members, plus sign-up, login, and My Page (profile photo, password change)",
       "PWA (built myself): home-screen install prompt and service-worker caching",
-      "Sep 2026 follow-up (FE and BE built myself; merged, frontend deployed, server not yet running): server-saved attendance edits with editor log, one-time QR expiring in 30 minutes, personal attendance history, staff statistics and CSV (rate based on each member's recorded sessions)",
+      "Sep 2026 follow-up (FE and BE built myself): server-saved attendance edits with editor log, one-time QR expiring in 30 minutes, personal attendance history, staff statistics and CSV (rate based on each member's recorded sessions)",
     ],
     results: ["부원 45명이 세션 출석과 빙고 미션에 사용"],
     resultsEn: ["Used by 45 members for session attendance and bingo missions"],
