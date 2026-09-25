@@ -669,8 +669,8 @@ export const careerDetailSections: CareerDetailSection[] = [
           "Attendance for the 45 members of HUFS LIKELION's 13th cohort was kept by staff on a paper roll. As 13th-cohort staff, I planned WelcomeKit, a PWA that handled attendance, team bingo missions, and the club introduction for new members in one app, and led its frontend development. (Mar 2025 – Sep 2025)",
         subItems: [
           {
-            text: "React 18 PWA입니다. 프론트엔드 저장소 커밋 98개 중 60개를 맡았습니다.",
-            textEn: "A React 18 PWA. I made 60 of the 98 commits in the frontend repository.",
+            text: "React 18 PWA입니다. 2025년 운영 당시 프론트엔드 저장소 커밋 98개 중 60개를 맡았고, 2026.09에는 다음 기수를 위한 출석 관리 개선을 프론트엔드와 백엔드(Spring) 모두 직접 구현해 PR로 올렸습니다(머지·배포 전).",
+            textEn: "A React 18 PWA. During the 2025 run I made 60 of the 98 frontend commits; in Sep 2026 I built attendance-management improvements for the next cohort on both frontend and backend (Spring) and opened PRs (not yet merged or deployed).",
           },
         ],
       },
@@ -729,6 +729,30 @@ export const careerDetailSections: CareerDetailSection[] = [
           {
             text: "홈 화면 설치 안내를 띄우고(이미 설치했으면 띄우지 않음), 서비스 워커로 화면 자원을 캐시해 세션 현장에서 앱처럼 바로 열리게 했습니다.",
             textEn: "The app prompts members to add it to their home screen (not shown once installed), and a service worker caches the app shell so it opens like an app at the session.",
+          },
+        ],
+      },
+      {
+        // 2026-09-25 상현이 올린 PR 두 개(13thWellcomeKit/FE #30, BE #4) — 둘 다 열린 상태, 머지·배포 전이다.
+        // 부원이 쓴 기능이 아니므로 결과(results)에는 넣지 않는다. 기존 코드의 오류 수정(팀·이름 뒤바뀜 등)은 쓰지 않는다.
+        title: "다음 기수를 위한 출석 관리 개선 — FE·BE 직접 구현, 배포 전",
+        titleEn: "Attendance management for the next cohort — FE and BE built myself, not yet deployed",
+        items: [
+          {
+            text: "운영진이 출석 상태를 고르면 서버에 저장되고 수정한 사람이 함께 남도록, 출석 수정 화면과 API를 만들었습니다.",
+            textEn: "Built the attendance-edit screen and API so a status staff choose is saved on the server along with who changed it.",
+          },
+          {
+            text: "고정된 QR은 캡처해 돌려 쓸 수 있다고 판단해, QR마다 1회성 토큰을 넣고 30분이 지나거나 새 QR을 띄우면 이전 QR이 무효가 되게 했습니다. 휴대폰 기본 카메라로 찍어도 출석이 바로 제출되고, 로그인이 안 돼 있으면 로그인 뒤 원래 화면으로 돌아옵니다.",
+            textEn: "A fixed QR code could be screenshotted and shared, so each QR now carries a one-time token that expires after 30 minutes or as soon as a new QR is shown. Scanning with the phone's default camera submits attendance directly, and members who aren't logged in return to the same screen after logging in.",
+          },
+          {
+            text: "부원은 마이페이지에서 자기 출석 이력을, 운영진은 세션별 출석과 부원별 출석률을 보고 CSV로 내려받게 했습니다. 출석률은 전체 세션 수가 아니라 부원마다 기록된 세션 수로 나눴습니다. 늦게 들어온 부원이 가입 전 세션 때문에 결석으로 잡히지 않아야 한다고 판단했습니다.",
+            textEn: "Members can see their own attendance history on My Page, and staff see per-session attendance and per-member rates with a CSV export. The rate divides by each member's recorded sessions, not all sessions, so a member who joined late isn't counted absent for sessions before they joined.",
+          },
+          {
+            text: "메뉴를 보여 줄지는 화면에서 정하지만, 수정·통계 권한은 서버가 검사하게 해 부원 계정으로는 요청이 막히도록 했습니다.",
+            textEn: "The screen only decides which menus to show; the server checks permission for edits and statistics, so requests from member accounts are rejected.",
           },
         ],
       },

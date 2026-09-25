@@ -421,7 +421,8 @@ export const projects: Project[] = [
     subtitleEn: "A club app used by 45 members of the 13th cohort (QR attendance, bingo)",
     period: "2025.03. ~ 2025.09.",
     periodEn: "Mar 2025 — Sep 2025",
-    repo: "https://github.com/tlstkdgus/WelcomeKit",
+    // 원본은 조직 저장소(개인 저장소는 2025-09에 멈춘 포크). 2026-09 후속 개선 PR도 여기에 있다: FE #30, BE #4
+    repo: "https://github.com/13thWellcomeKit/FE",
     roles: ["PM", "프론트엔드 리드"],
     rolesEn: ["PM", "Frontend lead"],
     goals: ["한국외대 멋쟁이사자처럼 13기 부원 45명의 세션 출석을 수기 출석부로 관리하고 있었습니다"],
@@ -432,6 +433,7 @@ export const projects: Project[] = [
       "팀 빙고 미션(직접 구현): 승인 대기 중인 칸이 있으면 다른 칸 선택 불가, 승인되면 카드가 뒤집히며 미션 공개",
       "신입 부원 맞이 첫 화면과 동아리 소개 페이지, 로그인·회원가입·마이페이지(프로필 사진·비밀번호 변경)",
       "PWA(직접 구현): 홈 화면 설치 안내, 서비스 워커 캐시",
+      "2026.09 후속 개선(FE·BE 직접 구현, PR 머지·배포 전): 출석 수정 서버 저장·수정자 기록, 30분 만료 1회성 QR, 내 출석 이력, 운영진 통계·CSV(출석률은 부원별 기록 세션 수 기준)",
     ],
     contentsEn: [
       "QR attendance (built with the team): staff show a server-generated QR code and members' scans are recorded at once; scans more than 20 minutes after the start are marked late automatically",
@@ -439,10 +441,11 @@ export const projects: Project[] = [
       "Team bingo missions (built myself): no other square can be picked while one awaits approval; once approved, the card flips to reveal the mission",
       "A welcome screen and club introduction page for new members, plus sign-up, login, and My Page (profile photo, password change)",
       "PWA (built myself): home-screen install prompt and service-worker caching",
+      "Sep 2026 follow-up (FE and BE built myself, PRs not yet merged or deployed): server-saved attendance edits with editor log, one-time QR expiring in 30 minutes, personal attendance history, staff statistics and CSV (rate based on each member's recorded sessions)",
     ],
     results: ["부원 45명이 세션 출석과 빙고 미션에 사용"],
     resultsEn: ["Used by 45 members for session attendance and bingo missions"],
-    tags: ["React", "PWA", "QR", "Service Worker"],
+    tags: ["React", "PWA", "QR", "Service Worker", "Spring Boot"],
   },
   {
     title: "커넥트",
