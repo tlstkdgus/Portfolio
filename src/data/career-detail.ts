@@ -1190,9 +1190,9 @@ export const careerDetailSections: CareerDetailSection[] = [
               "Built the complete design system in Figma — from wireframes and style guides to detailed UI elements like icons and buttons.",
           },
           {
-            text: "React 기반으로 40개 이상의 페이지를 구현하고, Spring Boot 백엔드 API(회원가입, 뉴스레터, OpenAI 연동)와 카카오맵 API를 연동했습니다. (3인팀, 멋쟁이사자처럼 12기)",
+            text: "React 기반으로 40개 이상의 페이지를 구현하고, Spring Boot 백엔드 API(회원가입, 뉴스레터, OpenAI 연동)와 카카오맵 API를 연동했습니다. (3인 팀, GBT학부 캡스톤 프로젝트)",
             textEn:
-              "Implemented 40+ pages in React, integrated Spring Boot backend APIs (registration, newsletter, OpenAI) and Kakao Maps API. (3-person team, Likelion 12th cohort)",
+              "Implemented 40+ pages in React, integrated Spring Boot backend APIs (registration, newsletter, OpenAI) and Kakao Maps API. (3-person team, GBT capstone project)",
           },
         ],
       },
@@ -1316,9 +1316,9 @@ export const careerDetailSections: CareerDetailSection[] = [
         ],
       },
       {
-        text: "멋쟁이사자처럼 12기 최종 프로젝트로, 4인 팀에서 기획·디자인·프론트엔드 개발을 맡았습니다. 2024년 7월부터 11월까지 약 4개월간 진행했습니다.",
+        text: "멋쟁이사자처럼 12기 최종 프로젝트로, 4인 팀에서 기획·디자인·프론트엔드 개발을 맡았습니다. 2024년 9월부터 12월까지 약 4개월간 진행했습니다.",
         textEn:
-          "The Likelion 12th cohort final project — in a 4-person team, I handled planning, design, and frontend development over about 4 months (July–November 2024).",
+          "The Likelion 12th cohort final project — in a 4-person team, I handled planning, design, and frontend development over about 4 months (September–December 2024).",
       },
     ],
     role: [

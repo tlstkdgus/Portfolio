@@ -161,9 +161,9 @@
 | **dotori** — 점자 교육 플랫폼 | 2025.06~11 | PM·IR·프론트엔드 | 창업캠프 실전 IR 피칭 최우수상(06) · PICK YOUR IDEA IR 우수상(07) · G-RISE×경상대학 창업 BM 경진대회 대상(11) |
 | **NeuroSight** — 마취 시술 보조 | 2025.07 | PM·IR | 배럴아이 QUS 기술 기반 마취 보조 컨셉. FDA/CE 규제를 OEM 수익원으로 뒤집은 하이브리드 BM 설계 (KAIST ICISTS GRAFFITI 2025, 6인 팀 4일). RZi와 함께 HUFStudy 최우수상 |
 | **TCP** — 약관 위험 알림 | 2025.04~05 | PM | 131명 설문(93% 약관 안 읽음) 근거, 스크린 오버레이 자동 감지 설계. 교내 아이디어톤 최우수상, 전국 해커톤 2차 예선 진출 |
-| **커넥트** — 은둔형 청년 지원 플랫폼 | 2024.09~12 | PM·프론트엔드 | 비대면·익명 2단계 커리큘럼, React 40페이지 UI + Spring Boot·카카오맵 연동 (멋사 12기 3인 팀). 26명 시장 테스트 유용성 8.9점 |
+| **커넥트** — 은둔형 청년 지원 플랫폼 | 2024.09~12 | PM·프론트엔드 | 비대면·익명 2단계 커리큘럼, React 40페이지 UI + Spring Boot·카카오맵 연동 (GBT학부 캡스톤 3인 팀). 26명 시장 테스트 유용성 8.9점 |
 | **hai** — 커리어 멘토링 | 2025.06 | PM·프론트엔드 | 자기 이해→직무 매칭→로드맵 3단계 구조화. 해커톤 기간 내 MVP 완성·배포 (CHALLKATHON) |
-| **AInterview** — 모의 면접 | 2024.07~11 | PM·프론트엔드 | Azure Speech STT/TTS + fine-tuned GPT-4o-mini 직무별 질문 생성. 멋사 12기 최종 프로젝트 |
+| **AInterview** — 모의 면접 | 2024.09~12 | PM·프론트엔드 | Azure Speech STT/TTS + fine-tuned GPT-4o-mini 직무별 질문 생성. 멋사 12기 최종 프로젝트 |
 | **RZi** — 알뜰 지출관리 PWA | 2025.07~08 | PM·풀스택 | 전통시장 가격비교+OCR+AI 추천, Next.js 15 PWA 해커톤 기간 내 배포 (K-HTML 해커톤). NeuroSight와 함께 HUFStudy 최우수상 |
 | **ARtliving** — AR 가구 추천 | 2024.12~2025.06 | PM | AR 시각화+AI 추천 기획. HUFS H-UP 진리상(최우수상) |
 | **Meal당** — 당뇨 AI 식단 관리 | 2024.07~08 | PM·프론트엔드 | 식품교환표 기반 칼로리 계산+ChatGPT 식단 생성. mealdang.vercel.app 배포 |
