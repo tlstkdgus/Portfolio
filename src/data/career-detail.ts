@@ -430,8 +430,8 @@ export const careerDetailSections: CareerDetailSection[] = [
 
   {
     id: "cleanb",
-    title: "외주 에어비앤비 청소 매칭 플랫폼 운영 — CleanB",
-    titleEn: "Operating a Client's Airbnb Cleaning Matching Platform — CleanB",
+    title: "외주 에어비앤비 청소 매칭 플랫폼 — CleanB",
+    titleEn: "A Client's Airbnb Cleaning Matching Platform — CleanB",
     images: [
       "/projects/cleanb/01.png",
       "/projects/cleanb/03.png",
@@ -455,9 +455,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 둘을 연결하는 매칭 서비스를 만들되, 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 '운영'하는 것을 목표로 잡았습니다. (외주 · 2025.11 기획·디자인 시작 ~ 현재, 3인 팀 — 서비스명 루미클린(RumiClean), www.rumiclean.com)",
+        text: "에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 둘을 연결하는 매칭 서비스를 만들되, 해커톤처럼 만들고 끝나는 게 아니라 실제 사용자를 받는 서비스로 '운영'하는 것을 목표로 잡았습니다. (외주 · 2025.11 기획·디자인 시작 ~ 외주 완료, 3인 팀 — 서비스명 루미클린(RumiClean), www.rumiclean.com)",
         textEn:
-          "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to get steady work. We set out to build a matching service — and to actually operate it with real users, not finish it like a hackathon project. (Client project · planning and design from Nov 2025 – present, 3-person team — service name RumiClean, www.rumiclean.com)",
+          "Airbnb hosts struggle to find reliable cleaners; cleaners struggle to get steady work. We set out to build a matching service — and to actually operate it with real users, not finish it like a hackathon project. (Client project · Nov 2025 through completion, 3-person team — service name RumiClean)",
         subItems: [
           {
             text: "전체 PM으로 기획·디자인·릴리스 우선순위를 잡고, 청소자용 화면 전체를 직접 개발했습니다.",
@@ -469,8 +469,8 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "운영 PM — 우선순위와 배포 의사결정",
-        titleEn: "Operating PM — Priorities & Deployment Decisions",
+        title: "PM — 우선순위와 배포 의사결정",
+        titleEn: "PM — Priorities & Deployment Decisions",
         items: [
           {
             text: "기능 개발부터 배포까지의 우선순위를 정하고, PR 170개가 넘는 저장소의 코드 리뷰·릴리스 머지·QA 프로세스를 관리합니다.",
@@ -503,7 +503,7 @@ export const careerDetailSections: CareerDetailSection[] = [
             ],
           },
           {
-            text: "카카오맵 지도 검색, Firebase 웹 푸시 등 운영에 필요한 연동을 구현하고, 아토믹 디자인·data-testid QA 규칙으로 팀 코드 일관성을 유지합니다.",
+            text: "카카오맵 지도 검색, Firebase 웹 푸시 등 운영에 필요한 연동을 구현하고, 아토믹 디자인·data-testid QA 규칙으로 팀 코드 일관성을 유지했습니다.",
             textEn:
               "Implemented production integrations (Kakao Map search, Firebase Web Push) and keep team code consistent with atomic design and data-testid QA conventions.",
           },
@@ -512,9 +512,9 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "GitHub Actions 자동 배포로 www.rumiclean.com에 배포했습니다. 토스 결제 연동 전이라 아직 실사용자는 받지 않고 있습니다. 기획·디자인·개발·배포·QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트입니다.",
+        text: "GitHub Actions 자동 배포로 www.rumiclean.com에 배포한 뒤 외주를 마무리했습니다. 토스 결제 연동 전에 마무리해 실사용자는 받지 않았습니다. 기획·디자인·개발·배포·QA까지 서비스의 전 과정을 처음으로 맡아 끝낸 외주 프로젝트입니다.",
         textEn:
-          "Deployed to www.rumiclean.com with GitHub Actions auto-deployment. Toss payments are not connected yet, so it does not take real users — my first project operating the full cycle: planning, design, development, deployment, and QA.",
+          "Deployed to www.rumiclean.com with GitHub Actions auto-deployment, then wrapped up the engagement before Toss payments were connected, so it never took real users — my first client project carried through the full cycle: planning, design, development, deployment, and QA.",
       },
     ],
     lessons: [

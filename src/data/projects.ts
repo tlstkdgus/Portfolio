@@ -247,11 +247,10 @@ export const projects: Project[] = [
     titleEn: "CleanB",
     subtitle: "외주 프로젝트 · 에어비앤비 청소 매칭 플랫폼 '루미클린(RumiClean)'",
     subtitleEn: "Client Project · Airbnb Cleaning Matching Platform 'RumiClean'",
-    period: "2025.11. ~ 현재 (배포 완료 · 결제 연동 전)",
-    periodEn: "Nov 2025 — Present (deployed · payments not yet connected)",
+    period: "2025.11. ~ (외주 완료)",
+    periodEn: "Nov 2025 — (client project completed)",
     roles: ["PM", "프론트엔드", "디자인"],
     rolesEn: ["PM", "Frontend", "Design"],
-    url: "https://www.rumiclean.com",
     goals: [
       "외주로 맡은 프로젝트입니다. 에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들고 있습니다",
       "해커톤처럼 만들고 끝나는 게 아니라, 실제 사용자를 받는 서비스로 운영하는 것이 목표",
@@ -281,16 +280,16 @@ export const projects: Project[] = [
       "Served Next.js static chunks from a CDN (CloudFront) for deployment stability and load speed",
     ],
     results: [
-      "GitHub Actions 자동 배포로 rumiclean.com 배포 완료. 토스 결제 연동 전이라 아직 실사용자는 받지 않는 상태",
+      "GitHub Actions 자동 배포로 rumiclean.com에 배포한 뒤 외주를 마무리했습니다(토스 결제 연동 전, 실사용자 없음)",
       "기획, 디자인, 개발, 배포, QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트",
     ],
     resultsEn: [
-      "Deployed to rumiclean.com with GitHub Actions auto-deployment. Toss payments are not connected yet, so it does not take real users",
+      "Deployed to rumiclean.com with GitHub Actions auto-deployment, then wrapped up the client engagement (before Toss payments; no real users)",
       "An ongoing project covering the full cycle: planning, design, development, deployment, and QA",
     ],
     stats: [
       { label: "PR", labelEn: "PRs", value: "170+" },
-      { label: "상태", labelEn: "Status", value: "배포 완료 · 결제 연동 전" },
+      { label: "상태", labelEn: "Status", value: "외주 완료" },
     ],
     tags: ["Next.js", "TypeScript", "Kakao Map", "Firebase", "Docker", "CI/CD"],
     image: "/projects/cleanb/01.png",
@@ -318,10 +317,10 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드", "디자인"],
     rolesEn: ["PM", "Frontend", "Design"],
     goals: [
-      "직접 진행한 설문에서 응답자 53%가 '지역화폐 가맹점을 찾기 어렵다'고 답했습니다. 경기도 가맹점 39만 곳이 데이터로는 공개돼 있지만, 탐색할 수 있는 형태가 아니었습니다",
+      "직접 진행한 설문에서 응답자 53%가 지역화폐 가맹점을 찾기 불편하거나(27%) 쓸 곳이 적다(26%)고 답했습니다. 경기도 가맹점 39만 곳이 데이터로는 공개돼 있지만, 탐색할 수 있는 형태가 아니었습니다",
     ],
     goalsEn: [
-      "In our own survey, 53% of respondents said local-currency merchants are hard to find. Gyeonggi publishes ~390K merchant records as open data — but not in a form people can actually explore",
+      "In our own survey, 53% of respondents said local-currency merchants are hard to find (27%) or too few (26%). Gyeonggi publishes ~390K merchant records as open data — but not in a form people can actually explore",
     ],
     contents: [
       "경기도 39만 건 가맹점 데이터 전수 분석으로 추천 알고리즘 방향 확정",
@@ -350,7 +349,7 @@ export const projects: Project[] = [
     stats: [
       { label: "데이터", labelEn: "Data", value: "39만 건" },
       { label: "해커톤", labelEn: "Hackathon", value: "상위 12%" },
-      { label: "탐색 어려움", labelEn: "Hard to discover", value: "53%" },
+      { label: "찾기 불편 + 가맹점 부족", labelEn: "Hard to find + too few", value: "53%" },
     ],
     tags: ["React", "TypeScript", "Tailwind CSS", "AI", "Figma"],
     image: "/projects/ywave/01.png",
