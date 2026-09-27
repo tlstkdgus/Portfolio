@@ -218,14 +218,14 @@ export const projects: Project[] = [
       "Reduced accounting automation scope from full ERP integration to auto expense reports to fix MVP scope",
     ],
     results: [
-      "FINNECT 챌린지 장려상 수상 (102팀 중 5위)",
+      "FINNECT 챌린지 장려상 수상 (110팀 중 5위)",
     ],
     resultsEn: [
-      "Won Encouragement Prize at FINNECT Challenge (5th out of 102 teams)",
+      "Won Encouragement Prize at FINNECT Challenge (5th out of 110 teams)",
     ],
     stats: [
       { label: "프로세스", labelEn: "Process", value: "8→3단계" },
-      { label: "순위", labelEn: "Rank", value: "102팀 중 5위" },
+      { label: "순위", labelEn: "Rank", value: "110팀 중 5위" },
     ],
     tags: ["React", "TypeScript", "FIDO2", "B2B SaaS", "Figma"],
     image: "/projects/flowpay/01.png",

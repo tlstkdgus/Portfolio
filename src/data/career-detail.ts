@@ -318,18 +318,18 @@ export const careerDetailSections: CareerDetailSection[] = [
               "Analyzed TAM/SAM/SOM across 3 addressable markets, sizing the total at ₩1.62T. Built a phased roadmap: Phase 1 (50 companies) → Phase 2 (800) → Phase 3 (Enterprise/IPO).",
           },
           {
-            text: "FINNECT 챌린지 IR 발표를 직접 담당하여 102팀 중 5위(장려상)를 수상했습니다.",
+            text: "FINNECT 챌린지 IR 발표를 직접 담당하여 110팀 중 5위(장려상)를 수상했습니다.",
             textEn:
-              "Personally delivered the FINNECT Challenge IR pitch, winning 5th place (Encouragement Prize) out of 102 teams.",
+              "Personally delivered the FINNECT Challenge IR pitch, winning 5th place (Encouragement Prize) out of 110 teams.",
           },
         ],
       },
     ],
     results: [
       {
-        text: "FINNECT 챌린지 장려상 수상 (5등/102팀) — 현업 인터뷰로 문제를 다시 정의하고 정산 단계를 8단계에서 3단계로 줄인 설계가 결과로 이어졌습니다.",
+        text: "FINNECT 챌린지 장려상 수상 (5등/110팀) — 현업 인터뷰로 문제를 다시 정의하고 정산 단계를 8단계에서 3단계로 줄인 설계가 결과로 이어졌습니다.",
         textEn:
-          "Won Encouragement Prize at FINNECT Challenge (5th of 102 teams) — redefining the problem through interviews and cutting reconciliation from 8 steps to 3 led to this outcome.",
+          "Won Encouragement Prize at FINNECT Challenge (5th of 110 teams) — redefining the problem through interviews and cutting reconciliation from 8 steps to 3 led to this outcome.",
       },
       {
         text: "3인 팀에서 PM·프론트엔드·IR 피칭을 모두 수행하며 B2B SaaS 기획의 전 사이클(문제 정의 → 솔루션 설계 → 기술 구현 → 사업화 전략)을 경험했습니다.",

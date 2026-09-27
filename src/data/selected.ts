@@ -145,7 +145,7 @@ export const selectedProjects: SelectedProject[] = [
   {
     id: "flowpay",
     kicker: { ko: "B2B 핀테크 · FIN:NECT 챌린지", en: "B2B Fintech · FIN:NECT Challenge" },
-    status: { ko: "수상 · 102팀 중 5위", en: "Award · 5th of 102" },
+    status: { ko: "수상 · 110팀 중 5위", en: "Award · 5th of 110" },
     title: { ko: "FlowPay", en: "FlowPay" },
     period: { ko: "2025.06 – 2025.08", en: "Jun – Aug 2025" },
     role: { ko: "PM · 프론트엔드 · IR", en: "PM · Frontend · IR" },
@@ -160,13 +160,13 @@ export const selectedProjects: SelectedProject[] = [
       alt: { ko: "회색 바탕 썸네일: FlowPay, 무기명 법인카드 정산 8단계에서 3단계로. 노트북의 지출 대시보드와 휴대폰 결제 화면", en: "Gray thumbnail: FlowPay, corporate-card expenses from 8 steps to 3. The spending dashboard on a laptop and the payment screen on a phone" },
     },
     body: {
-      ko: "회계담당자는 지출보고서 1건에 20분씩, 월 100건 이상을 처리하고 있었습니다. 인터뷰해 보니 진짜 병목은 결제 이후 수기로 작성하는 전표라고 판단했고, 익명성을 지키는 가명 토큰 Flow ID로 결제 시점부터 사용자를 식별해 지출보고서가 자동 생성되도록 설계했습니다. FIN:NECT 챌린지에서 102팀 중 5위에 올랐습니다.",
-      en: "Accountants were spending 20 minutes per expense report, over 100 reports a month. Interviews showed the real bottleneck was the vouchers written by hand after each payment, so I designed Flow ID, a pseudonymous token that identifies the user at the moment of payment while keeping anonymity, so expense reports generate themselves. It placed 5th of 102 teams at the FIN:NECT Challenge.",
+      ko: "회계담당자는 지출보고서 1건에 20분씩, 월 100건 이상을 처리하고 있었습니다. 인터뷰해 보니 진짜 병목은 결제 이후 수기로 작성하는 전표라고 판단했고, 익명성을 지키는 가명 토큰 Flow ID로 결제 시점부터 사용자를 식별해 지출보고서가 자동 생성되도록 설계했습니다. FIN:NECT 챌린지에서 110팀 중 5위에 올랐습니다.",
+      en: "Accountants were spending 20 minutes per expense report, over 100 reports a month. Interviews showed the real bottleneck was the vouchers written by hand after each payment, so I designed Flow ID, a pseudonymous token that identifies the user at the moment of payment while keeping anonymity, so expense reports generate themselves. It placed 5th of 110 teams at the FIN:NECT Challenge.",
     },
     stats: [
       { before: { ko: "8단계", en: "8 steps" }, v: { ko: "3단계", en: "3 steps" }, k: { ko: "법인카드 지출 정산 단계", en: "corporate-card reconciliation steps" } },
       { before: { ko: "건당 20분", en: "20 min each" }, v: { ko: "자동 생성", en: "Automatic" }, k: { ko: "지출보고서 작성", en: "expense report writing" } },
-      { v: { ko: "102팀 중 5위", en: "5th of 102" }, k: { ko: "FIN:NECT 챌린지 장려상", en: "FIN:NECT Challenge, Encouragement Prize" } },
+      { v: { ko: "110팀 중 5위", en: "5th of 110" }, k: { ko: "FIN:NECT 챌린지 장려상", en: "FIN:NECT Challenge, Encouragement Prize" } },
     ],
     hero: {
       src: "/projects/flowpay/01.png",
