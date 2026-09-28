@@ -77,8 +77,8 @@ export const awards: Award[] = [
     highlight: true,
   },
   {
-    title: "FIN:NECT 챌린지 장려상 (FlowPay, 102팀 중 5위)",
-    titleEn: "FIN:NECT Challenge — Encouragement Prize (FlowPay, 5th of 102 teams)",
+    title: "FIN:NECT 챌린지 장려상 (FlowPay, 110팀 중 5위)",
+    titleEn: "FIN:NECT Challenge — Encouragement Prize (FlowPay, 5th of 110 teams)",
     issuer: "한국핀테크지원센터 × 카카오뱅크",
     issuerEn: "Korea Fintech Center × KakaoBank",
     date: "2025.08.",
