@@ -13,12 +13,10 @@ export interface Award {
   issuerEn: string;
   date: string;
   highlight?: boolean;
-  /** 상장 스캔 경로 (public/awards/<slug>.jpg). 파일이 오면 채운다. 없으면 이미지 자리 없이 렌더 */
-  image?: string;
 }
 
-// 상장 파일명 예정: byoi-12.jpg, grise-startup.jpg, kiiti.jpg, grise-bm.jpg, finnect.jpg,
-// hufstudy.jpg, pick-your-idea.jpg, startup-camp-ir.jpg, hup.jpg, startup-platform.jpg, sprint.jpg
+// 상장 스캔 이미지는 넣지 않기로 결정 (2026-10-04 상현): 증빙은 지원서 단계의 일이고,
+// 공개 사이트에 상장 개인정보를 올릴 이유가 없다. 주최 기관·일자 표기로 충분.
 
 export const certifications: Certification[] = [
   {
