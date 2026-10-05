@@ -79,11 +79,11 @@ export const selectedProjects: SelectedProject[] = [
     period: { ko: "2026.06 – 2026.08", en: "Jun – Aug 2026" },
     role: { ko: "커뮤니티 매니저 인턴 · 기획·운영", en: "Community Manager Intern · Planning & Ops" },
     headline: {
-      ko: "2,000명의 참가자가 평가 기준을\n예측할 수 있는 해커톤을 만들었습니다.",
-      en: "I made a hackathon where 2,000 participants could predict how they'd be judged.",
+      ko: "2,500명의 참가자가 평가 기준을\n예측할 수 있는 해커톤을 만들었습니다.",
+      en: "I made a hackathon where 2,500 participants could predict how they'd be judged.",
     },
     // '연합 해커톤'은 학생 주최 대학 연합 해커톤(별도 기획물)을 가리키므로 여기서는 쓰지 않는다 (§G-5)
-    summary: { ko: "80개 대학 2,000명이 참가한 멋쟁이사자처럼 14기 중앙해커톤 'ANIMAL LEAGUE'의 기획부터 본선 운영까지", en: "LIKELION's 14th national hackathon 'ANIMAL LEAGUE', with 2,000 participants from 80 universities, run from planning through the finals" },
+    summary: { ko: "80개 대학 2,500명이 참가한 멋쟁이사자처럼 14기 중앙해커톤 'ANIMAL LEAGUE'의 기획부터 본선 운영까지", en: "LIKELION's 14th national hackathon 'ANIMAL LEAGUE', with 2,500 participants from 80 universities, run from planning through the finals" },
     decision: { ko: "판정 기준은 검사 전에 합의하고, 검사 도구는 근거만 내도록 설계했습니다.", en: "I had the judging criteria agreed before the scan, and designed the checking tool to produce only evidence." },
     thumb: {
       src: { ko: "/projects/hackathon14/thumb-ko.jpg", en: "/projects/hackathon14/thumb-en.jpg" },
@@ -154,13 +154,13 @@ export const selectedProjects: SelectedProject[] = [
       en: "I cut anonymous corporate card reconciliation from 8 steps to 3.",
     },
     summary: { ko: "무기명 법인카드의 결제부터 지출보고서까지 자동화하는 B2B 정산 서비스 프로토타입", en: "A B2B prototype that automates anonymous corporate-card spending from payment to expense report" },
-    decision: { ko: "회계 처리에는 누가 썼는지 구분만 되면 충분해서, 실명 대신 가명 토큰으로 결제자를 식별했습니다.", en: "Accounting needs to know who spent, not their real name, so I identified payers with a pseudonymous token." },
+    decision: { ko: "회계담당자에게 필요한 것은 결제자 구분이라고 판단해, 실명 인증 대신 가명 토큰으로 결제자를 식별했습니다.", en: "Accounting needs to know who spent, not their real name, so I identified payers with a pseudonymous token." },
     thumb: {
       src: { ko: "/projects/flowpay/thumb-ko.jpg", en: "/projects/flowpay/thumb-en.jpg" },
       alt: { ko: "회색 바탕 썸네일: FlowPay, 무기명 법인카드 정산 8단계에서 3단계로. 노트북의 지출 대시보드와 휴대폰 결제 화면", en: "Gray thumbnail: FlowPay, corporate-card expenses from 8 steps to 3. The spending dashboard on a laptop and the payment screen on a phone" },
     },
     body: {
-      ko: "회계담당자는 지출보고서 1건에 20분씩, 월 100건 이상을 처리하고 있었습니다. 인터뷰해 보니 시간이 가장 많이 드는 일은 결제 뒤에 손으로 쓰는 전표였고, 익명성을 지키는 가명 토큰 Flow ID로 결제 시점부터 사용자를 식별해 지출보고서가 자동 생성되도록 설계했습니다. FIN:NECT 챌린지에서 110팀 중 5위에 올랐습니다.",
+      ko: "회계담당자는 지출보고서 1건에 20분씩, 월 100건 이상을 처리하고 있었습니다. 인터뷰 결과 가장 큰 병목은 결제 이후 수기로 작성하는 전표였고, 익명성을 지키는 가명 토큰 Flow ID로 결제 시점부터 사용자를 식별해 지출보고서가 자동 생성되도록 설계했습니다. FIN:NECT 챌린지에서 110팀 중 5위에 올랐습니다.",
       en: "Accountants were spending 20 minutes per expense report, over 100 reports a month. Interviews showed the real bottleneck was the vouchers written by hand after each payment, so I designed Flow ID, a pseudonymous token that identifies the user at the moment of payment while keeping anonymity, so expense reports generate themselves. It placed 5th of 110 teams at the FIN:NECT Challenge.",
     },
     stats: [
@@ -253,7 +253,7 @@ export const selectedProjects: SelectedProject[] = [
       en: "I designed a service where hosts and cleaners don't argue over whether the cleaning was done.",
     },
     summary: { ko: "에어비앤비 호스트와 청소자를 잇는 청소 매칭 서비스 루미클린 (외주)", en: "RumiClean, a cleaning-matching service connecting Airbnb hosts and cleaners (client project)" },
-    decision: { ko: "청소가 끝났는지를 두고 다투지 않도록, 전·후 사진 5장을 올려야 완료되게 했습니다.", en: "Disputes stop only when the completion standard lives inside the service, so I made five before-and-after photos the condition for completion." },
+    decision: { ko: "청소 완료를 두고 분쟁이 생기지 않도록, 전·후 사진 5장 업로드를 완료 조건으로 정했습니다.", en: "Disputes stop only when the completion standard lives inside the service, so I made five before-and-after photos the condition for completion." },
     thumb: {
       src: { ko: "/projects/cleanb/thumb-ko.jpg", en: "/projects/cleanb/thumb-en.jpg" },
       alt: { ko: "회색 바탕 썸네일: CleanB, 에어비앤비 청소 매칭과 전·후 사진 완료 인증. 청소자 작업 요청 목록과 완료 인증 화면", en: "Gray thumbnail: CleanB, Airbnb cleaning proven with before-and-after photos. The cleaner job list and the completion screen" },

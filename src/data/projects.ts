@@ -49,8 +49,8 @@ export const projects: Project[] = [
     caseId: "hackathon14",
     featured: true,
     titleEn: "LIKELION 14th Hackathon — Planning & Ops",
-    subtitle: "80개 대학 · 2,000명+ 14기 중앙해커톤의 기획부터 본선 운영까지",
-    subtitleEn: "Planning through the finals of an 80-university, 2,000+ participant hackathon",
+    subtitle: "80개 대학 · 2,500명 14기 중앙해커톤의 기획부터 본선 운영까지",
+    subtitleEn: "Planning through the finals of an 80-university, 2,500 participant hackathon",
     period: "2026.06. ~ 2026.08.",
     periodEn: "Jun 2026 — Aug 2026",
     roles: ["PM", "운영"],
@@ -58,11 +58,11 @@ export const projects: Project[] = [
     repo: "https://github.com/tlstkdgus/animal-league",
     goals: [
       "참가자·심사위원·파트너의 이해가 충돌하는 지점마다 규칙이 필요했습니다. 심사 기준, 제출 요건, 수료 기준, 위반 처리를 하나씩 정책으로 정해야 했습니다",
-      "314팀이 제출한 562개 레포의 '마감 후 수정 금지' 검증과 2,000명 앞 실시간 토너먼트 진행은 수작업으로는 할 수 없어서, 필요한 도구를 직접 만들었습니다",
+      "314팀이 제출한 562개 레포의 '마감 후 수정 금지' 검증과 2,500명 앞 실시간 토너먼트 진행은 수작업으로는 처리할 수 없어, 필요한 도구를 직접 만들었습니다",
     ],
     goalsEn: [
       "Every point where participants, judges, and partners collided needed a rule — judging criteria, submission requirements, completion standards, violation handling",
-      "Verifying 562 repos from 314 teams against a 'no edits after deadline' rule, and running a live tournament in front of 2,000 people, was impossible by hand — the missing tools had to be built",
+      "Verifying 562 repos from 314 teams against a 'no edits after deadline' rule, and running a live tournament in front of 2,500 people, was impossible by hand — the missing tools had to be built",
     ],
     contents: [
       "심사 정책 공동 설계: 3단계 퍼널(서류 60팀 → 트랙 피칭 8팀 → 토너먼트 1팀), 공통 심사 기준 100점 배점, 제출 항목과 심사 기준의 1:1 연계, 공정성 규칙(대본 낭독 0점 · 기기 통일 · 랜덤 추첨)",
@@ -81,8 +81,8 @@ export const projects: Project[] = [
       "Co-planned the pre-event work — two platform feature specs (central & inter-university: As-Is→To-Be structure, 5-level permission matrix, team-building and approval workflows) handed off to dev (AXP) and design (BD Lab), plus a 3-part warm-up curriculum (problem discovery → MVP scoping → hands-on AI development)",
     ],
     decisions: [
-      "검사 도구는 근거만 보여 주고 판정은 운영진이 하도록 분리, 위반 성격별 차등 기준(기능 수정 실격 / README 수정 감점 / 마감 직후 커밋 정상참작)은 검사 전에 합의",
-      "현장에서는 실수를 되돌릴 수 없어서 콘솔에 안전장치부터 넣음: 심사위원 명단제(코드가 유출돼도 가짜 표 차단), 결과 공개 후 롤백 없음, 네트워크가 끊겨도 운영자 입력만으로 진행되는 백업 모드",
+      "검사 도구는 근거만 제시하고 판정은 운영진이 하도록 역할 분리, 위반 성격별 차등 기준(기능 수정 실격 / README 수정 감점 / 마감 직후 커밋 정상참작)은 검사 전에 합의",
+      "되돌릴 수 없는 현장 상황을 전제로 콘솔 안전장치 우선 설계: 심사위원 명단제(코드가 유출돼도 가짜 표 차단), 결과 공개 후 롤백 없음, 네트워크가 끊겨도 운영자 입력만으로 진행되는 백업 모드",
       "동표가 나오면 시스템은 경고만 띄우고, 판정은 미리 합의한 규칙에 따라 운영진이 결정",
     ],
     decisionsEn: [
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     results: [
       "562개 레포 전수 검사로 위반 5팀 적발, 차등 기준에 따라 2팀 실격, 나머지 감점·정상참작 처리",
       "본선 토너먼트(8팀 · 심사위원 5명)를 직접 만든 콘솔로 진행, 콘솔 조작이 무대 스크린에 반영되기까지 실측 2.2초",
-      "FAQ 봇으로 한 달간 질문 229건 응대(사용자 53명). 80.8%를 키워드로 즉답(API 비용 0), 미응답 0건이며, 자료에 없는 내용은 답을 지어내지 않고 운영진 문의로 안내",
+      "FAQ 봇으로 한 달간 질문 229건 응대(사용자 53명), 80.8%를 키워드 즉답으로 처리(API 비용 0), 미응답 0건. 자료에 없는 내용은 답하지 않고 운영진 문의로 안내",
       "멋쟁이사자처럼 브랜드 디자인 랩이 'ANIMAL LEAGUE'를 Behance 케이스로 공개, 공동작업자로 등재",
     ],
     resultsEn: [
@@ -103,7 +103,7 @@ export const projects: Project[] = [
       "LIKELION's Brand Design Lab published 'ANIMAL LEAGUE' as a Behance case study, crediting me as a collaborator",
     ],
     stats: [
-      { label: "규모", labelEn: "Scale", value: "80개 대학 · 2,000명+" },
+      { label: "규모", labelEn: "Scale", value: "80개 대학 · 2,500명" },
       { label: "검사 레포", labelEn: "Repos swept", value: "562개" },
       { label: "직접 만든 도구", labelEn: "Tools built", value: "3개" },
     ],
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     url: "https://likelion-dev-site.vercel.app",
     repo: "https://github.com/tlstkdgus/likelion-dev-site",
     goals: [
-      "회사에는 저처럼 비전공자인 동료가 많았고, '배포'나 'API' 같은 말을 어려워하는 분이 많았습니다. AI에게 물어보려 해도 기본 흐름을 모르면 무엇을 물어야 할지부터 막힙니다",
+      "회사에는 저처럼 비전공자인 동료가 많았고, 이분들에게 '배포'·'API' 같은 용어는 여전히 어려웠습니다. AI에게 질문하더라도 기본 흐름을 알아야 무엇을 물을지 정할 수 있습니다",
     ],
     goalsEn: [
       "Many colleagues were non-developers like me, and words like 'deploy' and 'API' were still hard for them. In the age of asking AI anything, you still can't ask a good question without knowing the basic flow",
@@ -147,8 +147,8 @@ export const projects: Project[] = [
       "Built the companion website myself (React · TypeScript · Vite) — 14 SVG concept diagrams, live in-browser demos (login round-trip, Git collaboration simulator), and a 51-term glossary",
     ],
     decisions: [
-      "코드는 가르치지 않기로 하고, 목표를 개발자와 대화할 수 있는 수준으로 좁혀 점심시간 6회에 담음",
-      "밥 먹으면서 듣는 강의라, 설치나 계정 없이 브라우저에서 바로 되는 실습만 넣음",
+      "코드는 가르치지 않기로 결정, 목표를 개발자와 대화할 수 있는 수준으로 좁혀 점심시간 6회로 구성",
+      "점심시간 강의 환경을 고려해 설치·계정 없이 브라우저에서 바로 동작하는 실습만 구성",
     ],
     decisionsEn: [
       "Decided not to teach code — narrowed the goal to being able to talk with developers, so it fits in six lunch breaks",
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
-      "직원은 지출보고서 한 건에 20분을 쓰고, 회계담당자는 월 100건 이상을 처리합니다. 무기명 법인카드 정산에 기업당 연간 약 1,000시간·8천만 원이 들어갑니다",
+      "직원은 지출보고서 한 건에 20분을 쓰고, 회계담당자는 월 100건 이상을 처리합니다. 무기명 법인카드 정산에 기업당 연간 약 1,000시간·8천만 원이 소요됩니다",
       "누가 썼는지 기록되지 않는 카드라서, 지출 내역을 사람이 일일이 맞춰야 한다는 점이 문제였습니다",
     ],
     goalsEn: [
@@ -281,7 +281,7 @@ export const projects: Project[] = [
     ],
     results: [
       "GitHub Actions 자동 배포로 rumiclean.com에 배포한 뒤 외주를 마무리했습니다(토스 결제 연동 전, 실사용자 없음)",
-      "기획부터 디자인, 개발, 배포, QA까지 서비스 전 과정을 처음으로 직접 맡아 본 프로젝트",
+      "기획부터 디자인, 개발, 배포, QA까지 서비스 전 과정을 처음으로 직접 맡은 프로젝트",
     ],
     resultsEn: [
       "Deployed to rumiclean.com with GitHub Actions auto-deployment, then wrapped up the client engagement (before Toss payments; no real users)",
@@ -375,7 +375,7 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
-      "60대 이상의 모바일금융 이용률은 53.8%로 20~40대(95% 이상)에 크게 못 미칩니다(한국은행, 2024). 계좌번호·금액·수취인을 차례로 입력해야 하는 단계가 고령층에게 특히 어렵습니다",
+      "60대 이상의 모바일금융 이용률은 53.8%로 20~40대(95% 이상)에 크게 못 미칩니다(한국은행, 2024). 계좌번호·금액·수취인을 차례로 입력하는 단계가 고령층에게 큰 장벽이었습니다",
     ],
     goalsEn: [
       "Mobile finance usage among people in their 60s and older is 53.8%, far below the 95%+ of people in their 20s to 40s (Bank of Korea, 2024). Typing in the account number, amount, and payee step by step is especially hard for seniors",
@@ -461,7 +461,7 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
-      "국내 은둔형 청년은 54만 명, 그중 80% 이상이 벗어나고 싶어 합니다. 하지만 지원 프로그램이 대부분 대면이라, 정작 밖에 나오기 어려운 청년들은 참여하기 어렵습니다",
+      "국내 은둔형 청년은 54만 명, 그중 80% 이상이 벗어나고 싶어 합니다. 하지만 대부분의 지원 프로그램이 대면 방식이라 은둔 청년이 참여하기 어렵습니다",
     ],
     goalsEn: [
       "Korea has 540,000 socially isolated youth, and over 80% want a way out — but in-person support programs rarely reach them",
@@ -625,7 +625,7 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
-      "어떤 직무가 맞는지 정하지 못한 취업 준비생에게 AI가 직무별 적합도와 준비 순서를 알려 주는 커리어 멘토링 서비스 기획",
+      "자신의 강점과 적합한 직무를 모른 채 지원하는 취업 준비생을 위한 AI 커리어 멘토링 서비스 기획",
       "강점·경험·목표를 입력하면 AI가 직무별 적합도를 분석하고 커리어 로드맵을 제시하는 대화형 흐름 설계",
     ],
     goalsEn: [
@@ -769,7 +769,7 @@ export const projects: Project[] = [
     roles: ["PM"],
     rolesEn: ["PM"],
     goals: [
-      "가구를 산 뒤 방에 맞지 않아 반품하는 일을 줄이려고, 사기 전에 AR로 내 방에 놓아 보는 플랫폼 기획",
+      "구매 전 AR로 실제 공간에 가구를 배치해 보고, 공간 불일치로 인한 반품을 줄이는 플랫폼 기획",
       "사용자의 공간 치수·취향 데이터를 AI가 분석해 개인화 추천까지 이어지는 통합 UX 설계",
     ],
     goalsEn: [

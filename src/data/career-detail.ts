@@ -37,8 +37,8 @@ export const careerDetailSections: CareerDetailSection[] = [
 // 대표 4개(해커톤 → FlowPay → Y:Wave → CleanB) → Other 노출 6개 → 접힌 8개. CleanB는 FlowPay 뒤(2026.09.13 지시).
   {
     id: "hackathon14",
-    title: "2,000명 규모 해커톤 기획·운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
-    titleEn: "Planning and Running a 2,000-Person Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
+    title: "2,500명 규모 해커톤 기획·운영 — 14기 중앙해커톤 'ANIMAL LEAGUE'",
+    titleEn: "Planning and Running a 2,500-Person Hackathon — LIKELION 14th 'ANIMAL LEAGUE'",
     images: [
       "/projects/hackathon14/01.png",
       "/projects/hackathon14/02.png",
@@ -54,7 +54,7 @@ export const careerDetailSections: CareerDetailSection[] = [
           { label: "314팀", labelEn: "314 teams", note: "제출 · 562개 레포 · 80개 대학", noteEn: "submitted · 562 repos · 80 universities" },
           { label: "60팀", labelEn: "60 teams", note: "서류 심사 100점 배점 · 트랙별 15팀", noteEn: "100-point document review · 15 per track" },
           { label: "8팀", labelEn: "8 teams", note: "트랙 피칭 발표 5분 + Q&A · 트랙별 2팀", noteEn: "5-minute track pitch + Q&A · 2 per track" },
-          { label: "1팀", labelEn: "1 team", note: "본선 토너먼트 1:1 3라운드 · 2,000명 앞 실시간 발표", noteEn: "1:1 three-round live tournament before 2,000" },
+          { label: "1팀", labelEn: "1 team", note: "본선 토너먼트 1:1 3라운드 · 2,500명 앞 실시간 발표", noteEn: "1:1 three-round live tournament before 2,500" },
         ],
         caption: "배점의 절반 가까이를 문제 정의(25점)와 실현 가능성(20점)에 두었습니다. 제출 항목과 심사 기준을 1:1로 연결해, 무엇을 쓰면 어떻게 평가받는지 예측할 수 있게 했습니다.",
         captionEn: "Nearly half the points went to problem definition (25) and feasibility (20). Submission items mapped 1:1 to criteria, so teams could predict how they'd be scored.",
@@ -75,14 +75,14 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "80개 대학, 참가자 2,000명+, 314팀 제출(562개 레포) → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 중앙해커톤입니다. 커뮤니티 매니저 인턴으로 기획부터 본선 운영까지 맡았고, 기능명세서·워밍업 세션·참가자 가이드·심사 정책은 팀과 함께 만들었으며 운영 도구 3개와 본선 현장 운영은 직접 맡았습니다. (2026.06 ~ 2026.08.25, 본선 코엑스 마곡)",
+        text: "80개 대학, 참가자 2,500명, 314팀 제출(562개 레포) → 본선 8팀 토너먼트로 최종 1팀을 뽑는 역대 최대 규모 중앙해커톤입니다. 커뮤니티 매니저 인턴으로 기획부터 본선 운영까지 맡았고, 기능명세서·워밍업 세션·참가자 가이드·심사 정책은 팀과 함께 만들었으며 운영 도구 3개와 본선 현장 운영은 직접 맡았습니다. (2026.06 ~ 2026.08.25, 본선 코엑스 마곡)",
         textEn:
-          "The largest LIKELION hackathon to date: 80 universities, 2,000+ participants, 314 submitting teams (562 repos) → an 8-team finals tournament picking one winner. As a community manager intern I took it from planning through the finals: the feature specs, warm-up sessions, participant guide, and judging policy were made with the team, and I built the 3 ops tools and ran the finals on site myself. (Jun 2026 – Aug 25, 2026; finals at COEX Magok)",
+          "The largest LIKELION hackathon to date: 80 universities, 2,500 participants, 314 submitting teams (562 repos) → an 8-team finals tournament picking one winner. As a community manager intern I took it from planning through the finals: the feature specs, warm-up sessions, participant guide, and judging policy were made with the team, and I built the 3 ops tools and ran the finals on site myself. (Jun 2026 – Aug 25, 2026; finals at COEX Magok)",
         subItems: [
           {
-            text: "참가자·심사위원·파트너의 이해가 충돌하는 지점마다 규칙이 필요했고, 314팀·562개 레포 검증과 2,000명 앞 실시간 토너먼트는 수작업으로는 감당할 수 없었습니다.",
+            text: "참가자·심사위원·파트너의 이해가 충돌하는 지점마다 규칙이 필요했고, 314팀·562개 레포 검증과 2,500명 앞 실시간 토너먼트는 수작업으로는 감당할 수 없었습니다.",
             textEn:
-              "Every collision point between participants, judges, and partners needed a rule — and verifying 562 repos or running a live tournament for 2,000 people was not a manual job.",
+              "Every collision point between participants, judges, and partners needed a rule — and verifying 562 repos or running a live tournament for 2,500 people was not a manual job.",
           },
         ],
       },
@@ -185,9 +185,9 @@ export const careerDetailSections: CareerDetailSection[] = [
         titleEn: "Participant Comms, FAQ Bot & Partner Ops",
         items: [
           {
-            text: "참가자 2,000명이 한 달간 참조하는 노션 통합 가이드를 팀과 공동 작성했습니다. 참가자 여정(팀빌딩 → 개발 → 심사 → 현장) 순서로 목차를 설계하고, 변경 사항마다 날짜를 명시해 추적 가능하게 운영했습니다.",
+            text: "참가자 2,500명이 한 달간 참조하는 노션 통합 가이드를 팀과 공동 작성했습니다. 참가자 여정(팀빌딩 → 개발 → 심사 → 현장) 순서로 목차를 설계하고, 변경 사항마다 날짜를 명시해 추적 가능하게 운영했습니다.",
             textEn:
-              "Co-wrote the Notion guide that 2,000 participants referenced for a month — structured by participant journey (team building → build → judging → venue), with every change dated and traceable.",
+              "Co-wrote the Notion guide that 2,500 participants referenced for a month — structured by participant journey (team building → build → judging → venue), with every change dated and traceable.",
             subItems: [
               {
                 text: "FAQ 78문항을 지식으로 쓰는 디스코드 봇을 직접 만들어 운영했습니다. 키워드 매칭 우선(비용 0) + LLM 폴백의 2단 응답, 자료에 없는 내용은 지어내지 않고 '운영진 문의' 안내, 미답변 질문 일일 리포트로 지식을 보강하되 반영 여부는 사람이 판단. 한 달간 229건(사용자 53명)을 응대했고 80.8%가 키워드 즉답, 미응답은 0건이었습니다.",
@@ -228,12 +228,12 @@ export const careerDetailSections: CareerDetailSection[] = [
           "Enforcing 'no edits after deadline' needed a checking tool, but I judged that participants would struggle to accept verdicts handed down by a tool. We agreed on graded criteria for each kind of violation before the sweep, and the tool only produced evidence.",
       },
       {
-        text: "현장에서 쓰는 도구라 기능을 늘리기 전에 되돌릴 수 없는 사고부터 막았습니다. 롤백 없는 결과 공개, 네트워크 백업 모드, 동표일 때 사람이 판정하는 규칙을 먼저 넣었고, 덕분에 본선 당일 운영진이 콘솔을 믿고 진행할 수 있었습니다.",
+        text: "현장 도구는 기능을 늘리기 전에 되돌릴 수 없는 사고부터 막아야 한다고 판단했습니다. 롤백 없는 결과 공개, 네트워크 백업 모드, 동표 시 사람이 판정하는 규칙을 먼저 넣었고, 이 안전장치 덕분에 본선 당일 운영진이 안정적으로 진행할 수 있었습니다.",
         textEn:
           "For a live-event tool, I decided to close the irreversible situations before adding features: no-rollback reveals, a network backup mode, ties delegated to humans. Those safeguards are what let the crew run finals day with confidence.",
       },
       {
-        text: "가이드, FAQ, 봇, 문의 채널에서 같은 질문에 다른 답이 나가곤 했습니다. 기준 문서를 하나로 정하고 나머지가 그 내용을 가져다 쓰게 하자 이런 일이 줄었습니다.",
+        text: "가이드·FAQ·봇·문의 채널마다 같은 질문에 다른 답이 나가는 문제가 있었습니다. 기준 문서를 하나로 정하고 나머지 채널이 이를 참조하도록 하자, 답변이 엇갈리는 일이 줄었습니다.",
         textEn:
           "The guide, FAQ, bot, and inquiry channels were really one system. Designating a single source of truth and making everything else reuse it reduced the 'same question, different answer' failure.",
       },
@@ -339,13 +339,13 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "현업 회계담당자 인터뷰에서 시간이 가장 많이 드는 일은 결제 뒤에 손으로 쓰는 전표였습니다. 결제할 때 사용자를 식별하면 전표를 따로 쓸 필요가 없어서 결제 화면보다 결제 데이터를 먼저 설계했고, 그 결과 정산이 8단계에서 3단계로 줄었습니다.",
+        text: "현업 회계담당자 인터뷰에서 가장 큰 병목은 결제 이후 수기로 작성하는 전표라는 점을 확인했습니다. 결제 시점에 사용자를 식별하면 전표를 따로 작성할 필요가 없어 결제 화면보다 결제 데이터 설계를 먼저 진행했고, 그 결과 정산이 8단계에서 3단계로 줄었습니다.",
         textEn:
           "Interviews with working accountants showed the biggest cost sits in the vouchers written by hand after each payment. Identifying the user at the moment of payment removes the voucher entirely, so I moved the design's starting point from the payment screen to the payment data, and that decision took reconciliation from 8 steps to 3.",
       },
       // TODO(상현): 심사 때 실제 받았던 질문이 기억나면 한 줄 추가하면 더 진짜같아짐
       {
-        text: "심사에서 가장 많은 질문을 받은 부분은 기업 구독과 거래 수수료를 합친 수익 모델이었습니다. B2B 서비스는 기술보다 돈이 어떻게 들어오는지를 먼저 설명해야 한다는 걸 이때 알았습니다.",
+        text: "심사에서 가장 많은 질문을 받은 부분은 기업 구독과 거래 수수료를 합친 수익 모델이었습니다. B2B 서비스에서는 기술보다 수익 구조를 먼저 설명해야 한다는 것을 알게 된 계기였습니다.",
         textEn:
           "The part judges asked about most was the revenue model that combines an enterprise subscription with transaction fees. That is when I decided that in B2B, showing how money actually moves comes before technical novelty.",
       },
@@ -389,7 +389,7 @@ export const careerDetailSections: CareerDetailSection[] = [
               "Planned an AI feature that analyzes user's current location, spending patterns, and category preferences to recommend personalized merchants.",
           },
           {
-            text: "Figma로 전체 UI/UX를 설계하고, 소상공인은 가게를 알리고 사용자는 혜택을 받는 흐름을 설계했습니다.",
+            text: "Figma로 전체 UI/UX를 설계하고, 소상공인 홍보와 사용자 혜택이 함께 이뤄지는 서비스 흐름을 설계했습니다.",
             textEn:
               "Designed the full UI/UX in Figma and structured the service to simultaneously achieve local small business promotion and user benefits.",
           },
@@ -416,12 +416,12 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "추천 정확도를 올리는 일보다 추천을 보고 실제로 가게에 가게 만드는 화면이 더 어려웠습니다. 사용자가 편하다고 느끼는지는 알고리즘보다 가맹점이 한눈에 보이는 화면에 달려 있었습니다.",
+        text: "추천 정확도를 높이는 것보다, 추천 결과가 실제 방문으로 이어지도록 화면을 만드는 일이 더 어려웠습니다. 사용성은 알고리즘보다 가맹점 정보가 한눈에 들어오는 화면 구성에서 크게 갈렸습니다.",
         textEn:
           "Improving recommendation accuracy was easier than building a screen that makes people actually visit the store. Making merchants legible on the map mattered more than the algorithm.",
       },
       {
-        text: "'지역 경제 활성화'는 정책의 목표였고, 사용자가 궁금한 건 '내 주변 어디서 할인받지?'였습니다. 사용자의 이 질문에 답하는 화면을 만들면 정책 목표도 따라온다는 걸 배운 프로젝트입니다.",
+        text: "'지역 경제 활성화'는 정책의 목표였고, 사용자의 목표는 '내 주변 어디서 할인받지?'였습니다. 사용자의 질문에 답하는 화면을 만들면 그 결과로 정책의 목표도 달성된다는 것을 배운 프로젝트입니다.",
         textEn:
           "'Revitalizing the local economy' is a phrase for judges; for users it was just 'where near me do I get a discount?' Translating macro goals into personal benefits is the planner's job.",
       },
@@ -496,7 +496,7 @@ export const careerDetailSections: CareerDetailSection[] = [
               "Defined the cleaning job lifecycle as a state machine (pending → scheduled → in progress → review → settlement) and derived each screen and its inputs from the states.",
             subItems: [
               {
-                text: "완료 인증에 전·후 사진 최소 5장 규칙을 두어, 청소가 제대로 됐는지 다툼이 생기면 서비스에 남은 사진을 근거로 볼 수 있게 했습니다.",
+                text: "완료 인증에 전·후 사진 최소 5장 규칙을 두어, 청소 상태를 두고 분쟁이 생기면 서비스에 남은 사진을 근거로 확인할 수 있도록 설계했습니다.",
                 textEn:
                   "Completion requires at least 5 before/after photos — a policy that makes the service the custodian of evidence in host-cleaner disputes.",
               },
@@ -519,12 +519,12 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "3인 팀이 k3s를 유지하느라 기능 개발 시간이 줄어들어, 배포 구성을 Docker Compose와 Caddy로 단순화했습니다. 기능을 더하는 것보다 인프라를 팀 크기에 맞게 줄인 쪽이 서비스를 더 안정적으로 만들었습니다.",
+        text: "3인 팀이 k3s를 유지하는 데 시간이 많이 들어 기능 개발이 늦어졌고, 배포 구성을 Docker Compose와 Caddy로 단순화했습니다. 기능을 더하는 것보다 인프라를 팀 크기에 맞게 줄인 쪽이 서비스를 더 안정적으로 만들었습니다.",
         textEn:
           "Ops complexity has to match team size. Keeping k3s running was eating into a three-person team's feature time, so I simplified to Docker Compose and Caddy, and swapping tools stabilized the service more than adding features would have.",
       },
       {
-        text: "기능 목록부터 쓰면 화면 수만 늘어나기 쉽습니다. 청소 작업의 상태 흐름을 먼저 확정하니 필요한 화면과 입력이 추려졌고, 개발·QA 범위도 이 흐름을 기준으로 나눴습니다.",
+        text: "기능 목록부터 쓰면 화면 수만 늘어나기 쉽습니다. 청소 작업의 상태 흐름을 먼저 확정하자 필요한 화면과 입력이 추려졌고, 개발·QA 범위도 이 흐름을 기준으로 나눴습니다.",
         textEn:
           "Write the feature list first and you only multiply screens. Fixing the state flow first distilled the screens and inputs we actually needed — and scope negotiations happened on top of that flow.",
       },
@@ -548,7 +548,7 @@ export const careerDetailSections: CareerDetailSection[] = [
         title: "계좌번호를 손글씨로 적던 습관을 그대로 송금 화면으로 옮겼습니다",
         titleEn: "The habit of jotting account numbers by hand became the transfer screen",
         steps: [
-          { label: "기존 습관", labelEn: "Existing habit", note: "계좌번호를 손글씨로 메모하는, 고령층이 이미 하는 행동을 입력으로 사용", noteEn: "Writing account numbers by hand — something seniors already do, used as input" },
+          { label: "기존 습관", labelEn: "Existing habit", note: "고령층이 이미 하고 있는 계좌번호 손글씨 메모를 입력 수단으로 활용", noteEn: "Writing account numbers by hand — something seniors already do, used as input" },
           { label: "① 촬영", labelEn: "① Capture", tag: "AI-OCR", tagEn: "AI-OCR", note: "CLOVA OCR + Google Vision + 자체 파인튜닝 모델의 가중 투표로 인식", noteEn: "Weighted vote of CLOVA OCR, Google Vision, and our fine-tuned model" },
           { label: "② 확인", labelEn: "② Confirm", tag: "사람 확인 1", tagEn: "Human check 1", note: "인식된 수취인·계좌·금액을 큰 글씨로 본인이 확인", noteEn: "The user checks the recognized payee, account, and amount in large type" },
           { label: "③ 승인", labelEn: "③ Approve", tag: "사람 확인 2", tagEn: "Human check 2", note: "송금이 실행되기 전에 가족이 한 번 더 확인하는 2단계 인증", noteEn: "A family member confirms once more before the transfer runs" },
@@ -634,12 +634,12 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "시니어에게 새 사용법을 가르치는 대신, 계좌번호를 손글씨로 메모하던 습관을 그대로 송금 입력으로 썼습니다. 새 조작을 익히는 것 자체가 시니어에게는 부담이라고 봤습니다.",
+        text: "시니어에게 새로운 사용법을 가르치는 대신, 계좌번호를 손글씨로 메모하던 습관을 그대로 송금 입력으로 활용했습니다. 새로운 조작을 익히는 것 자체가 시니어에게는 부담이라고 판단했습니다.",
         textEn:
           "Instead of teaching seniors a new way, I turned their habit of jotting account numbers by hand into the interface. I judged that carrying a familiar behavior onto the screen asks far less of seniors than teaching them new controls.",
       },
       {
-        text: "OCR 인식률에는 한계가 있다는 전제에서 설계를 시작했습니다. 인식 결과를 큰 글씨로 재확인하는 단계를 넣고 앙상블로 보정했습니다. 인식이 틀려도 잘못된 송금으로 이어지지 않아야 시니어가 믿고 쓸 수 있다고 봤습니다.",
+        text: "OCR 인식률에는 한계가 있다는 전제에서 설계를 시작했습니다. 인식 결과를 큰 글씨로 재확인하는 단계를 넣고 앙상블로 보정했습니다. 인식이 틀리더라도 잘못된 송금으로 이어지지 않아야 시니어가 안심하고 쓸 수 있다고 판단했습니다.",
         textEn:
           "The design started from the premise that OCR has an error rate: an oversized confirmation step for the recognized number, plus ensemble correction. I judged that a confirmation step which stops a misread from becoming a wrong transfer is what builds trust in a financial service.",
       },
@@ -793,7 +793,7 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "회사에는 저처럼 비전공자인 동료가 많았고, '배포'나 'API' 같은 말을 어려워하는 분이 많았습니다. AI에게 물어보려 해도 기본 흐름을 모르면 무엇을 물어야 할지부터 막힙니다. 멋쟁이사자처럼 인턴 기간에 기획·제작·강의를 단독으로 맡았습니다. (2026.07 ~ 2026.08)",
+        text: "회사에는 저처럼 비전공자인 동료가 많았고, 이분들에게 '배포'·'API' 같은 용어는 여전히 어려웠습니다. AI에게 질문하더라도 기본 흐름을 알아야 무엇을 물을지 정할 수 있습니다. 멋쟁이사자처럼 인턴 기간에 기획·제작·강의를 단독으로 맡았습니다. (2026.07 ~ 2026.08)",
         textEn:
           "Many colleagues were non-developers like me, and words like 'deploy' and 'API' were still hard for them. You can ask AI anything now — but without the basic flow, you don't know what to ask. During my LIKELION internship I planned, built, and taught the course on my own. (Jul – Aug 2026)",
       },
@@ -914,7 +914,7 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "사회적 가치와 수익 모델을 따로 설명하지 않고, 임팩트 지표와 수익 모델을 같은 슬라이드에 올렸습니다. 그렇게 바꾼 뒤 심사위원 반응이 달라졌습니다.",
+        text: "사회적 가치와 수익 모델을 따로 설명하지 않고 임팩트 지표와 수익 모델을 한 슬라이드에 함께 제시하자, 심사위원의 반응이 달라졌습니다.",
         textEn:
           "I judged that social value alone earns sympathy and revenue alone sounds cold. When the impact metrics and the revenue model shared one slide, the judges' response changed.",
       },
@@ -936,7 +936,7 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     background: [
       {
-        text: "마취는 사고가 나면 생명이 위험해지는 고위험 의료행위인데, 사고 상당수가 마취 비전문의 시술 환경에서 발생합니다. 전문 마취과 의사의 부족과 높은 이탈률이 근본 원인입니다.",
+        text: "마취는 사고가 생명과 직결되는 고위험 의료행위인데, 사고 상당수가 마취 비전문의 시술 환경에서 발생합니다. 전문 마취과 의사의 부족과 높은 이탈률이 근본 원인입니다.",
         textEn:
           "Anesthesia is a high-risk procedure where incidents directly threaten lives — and a large share of incidents occur in settings without anesthesia specialists. A chronic shortage and high turnover of anesthesiologists is the structural root cause.",
         subItems: [
@@ -1105,19 +1105,19 @@ export const careerDetailSections: CareerDetailSection[] = [
           "Won campus Ideathon Grand Prize — our own 131-person survey data (93%) proved both the severity of the problem and the business case.",
       },
       {
-        text: "전국 해커톤 2차 예선 진출. 기술 구현 가능성(BERT/GPT fine-tuning, 스크린 오버레이)과 구체적인 수익 모델을 좋게 평가받았습니다.",
+        text: "전국 해커톤 2차 예선 진출. 기술 구현 가능성(BERT/GPT fine-tuning, 스크린 오버레이)과 구체적인 수익 모델로 높은 평가를 받았습니다.",
         textEn:
           "Advanced to 2nd round of national hackathon — technical feasibility (BERT/GPT fine-tuning, screen overlay) and specificity of the revenue model received high marks from judges.",
       },
     ],
     lessons: [
       {
-        text: "131명 설문에서 나온 '93%가 약관을 읽지 않는다'는 수치를 발표의 출발점으로 삼았습니다. 문제가 얼마나 큰지는 말로 설명하기보다 설문 숫자로 보여 주는 편이 분명하다고 봤습니다.",
+        text: "131명 설문에서 나온 '93%가 약관을 읽지 않는다'는 수치를 발표의 출발점으로 삼았습니다. 문제의 크기는 주장보다 설문 수치로 보여줄 때 더 분명하게 전달된다고 판단했습니다.",
         textEn:
           "We built the pitch on one figure from our 131-person survey: '93% don't read the terms.' I judged that survey data shows the size of a problem to judges more clearly than any claim.",
       },
       {
-        text: "'왜 지금까지 이런 서비스가 없었지?'를 따져 보는 과정에서 더 많이 배웠습니다. 법률 해석 리스크와 약관 텍스트 접근성이라는 이유가 있었고, 이 이유에 하나씩 답할 수 있어야 시장이 비어 있다고 말할 수 있었습니다.",
+        text: "'왜 지금까지 이런 서비스가 없었을까'를 검토하는 과정에서 더 많이 배웠습니다. 법률 해석 리스크와 약관 텍스트 접근성이라는 이유가 있었고, 이 이유에 하나씩 답할 수 있어야 빈 시장이라고 말할 수 있었습니다.",
         textEn:
           "Digging into 'why doesn't this exist yet?' taught us more. There were reasons (legal-interpretation risk, access to terms text) — and only after rebutting each one could we call it a blue ocean.",
       },
@@ -1261,7 +1261,7 @@ export const careerDetailSections: CareerDetailSection[] = [
               "Planned a service structure where AI proposes personalized career roadmaps and job strategies based on user-inputted experience, competencies, and interests.",
             subItems: [
               {
-                text: "AI 멘토와의 대화형 인터페이스를 설계하여 분석 결과를 표로만 보여 주는 대신 멘토와 대화하듯 결과를 받는 UX를 기획했습니다.",
+                text: "AI 멘토와의 대화형 인터페이스를 설계하여, 분석 결과를 나열하는 대신 대화 속에서 결과를 전달하는 UX를 기획했습니다.",
                 textEn:
                   "Designed a conversational interface with an AI mentor so the guidance reads as a natural mentoring conversation instead of a rigid analytical report.",
               },
@@ -1384,12 +1384,12 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "STT가 답변을 텍스트로 바꾸는 데 몇 초씩 걸렸습니다. 기술로 더 줄이기 어려운 시간이라, 기다리는 동안 타이머와 진행 표시를 보여 줘 멈춘 것처럼 느껴지지 않게 했습니다.",
+        text: "STT가 답변을 텍스트로 바꾸는 데 몇 초씩 걸렸습니다. 기술로 줄이기 어려운 시간이어서, 대기 중에는 타이머와 진행 표시를 보여 주어 화면이 멈춘 것처럼 느껴지지 않도록 했습니다.",
         textEn:
           "STT took seconds to transcribe each answer — time we couldn't shrink with tech. So we filled the silence with a timer and progress cues. This was my first practice in accepting a technical limit and wrapping it in UX.",
       },
       {
-        text: "GPT fine-tuning 범위를 놓고 개발팀과 계속 조율했습니다. 만들고 싶은 질문 생성 수준과 기한 안에 가능한 범위 사이에서 범위를 정하는 게 PM으로서 가장 많이 한 일이었습니다.",
+        text: "GPT fine-tuning 범위를 놓고 개발팀과 계속 조율했습니다. 목표로 한 질문 생성 수준과 기한 안에 구현 가능한 범위를 조율하는 것이 PM으로서 가장 많이 한 일이었습니다.",
         textEn:
           "We kept negotiating the GPT fine-tuning scope with the dev team. Cutting scope between 'ideal question generation' and 'what ships on time' — that was the real substance of the PM role.",
       },
@@ -1629,7 +1629,7 @@ export const careerDetailSections: CareerDetailSection[] = [
           "Building on the Diabetes Association's food exchange table meant we could answer 'why is this calculation right?' In healthcare, the source is the trust.",
       },
       {
-        text: "식품교환표는 그대로 보여 주면 쓰기 어렵습니다. 그래서 키·몸무게만 입력하면 개인 교환표를 자동으로 만들고 식단까지 추천하도록, 복잡한 계산을 화면 뒤로 옮겼습니다.",
+        text: "식품교환표를 그대로 보여주면 사용자가 활용하기 어렵습니다. 그래서 키·몸무게만 입력하면 개인 교환표를 자동으로 만들고 식단까지 추천하도록, 복잡한 계산은 화면 뒤에서 처리했습니다.",
         textEn:
           "Show the raw exchange table and nobody can use it. We hid the steps: enter height/weight, auto-generate a personal table, then recommend meals. Hiding domain knowledge behind UX was the core lesson.",
       },
@@ -1720,7 +1720,7 @@ export const careerDetailSections: CareerDetailSection[] = [
           "We opened with HIRA statistics on spinal disc cases surging among young people, then introduced the idea. I judged that leading with the statistic makes the idea read as the answer to a real problem.",
       },
       {
-        text: "16일 안에 시장조사부터 프로토타입까지 끝내려면 무엇을 뺄지부터 정해야 했습니다. 6인 팀에서 우선순위를 정하고 팀원을 설득하는 일을 PM으로서 처음 제대로 해 본 프로젝트입니다.",
+        text: "16일 안에 시장조사부터 프로토타입까지 마치려면 무엇을 뺄지부터 정해야 했습니다. 6인 팀에서 우선순위를 정하고 팀원을 설득하는 PM 역할을 처음 경험한 프로젝트입니다.",
         textEn:
           "Getting from market research to prototype in 16 days was all about what to drop. Setting priorities and persuading a six-person team — my first taste of what PM work actually is.",
       },
@@ -1769,7 +1769,7 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     lessons: [
       {
-        text: "기간이 짧아서 기능을 줄이는 데 집중했습니다. 처음 그린 화면 흐름에서 곁가지를 계속 덜어 냈고, 남은 흐름을 끝까지 완성해 미니프로젝트 최우수상을 받았습니다.",
+        text: "짧은 기간 안에 완성도를 높이기 위해 기능을 줄이는 데 집중했습니다. 처음 그린 화면 흐름에서 부가 기능을 덜어 내고 핵심 흐름을 끝까지 완성해, 미니프로젝트 최우수상을 받았습니다.",
         textEn:
           "The way to reach polish in a short period was cutting features. I kept pruning branches off the initial flow, and the simplicity that remained is what won the top prize.",
       },
