@@ -561,9 +561,9 @@ export const careerDetailSections: CareerDetailSection[] = [
         titleEn: "PM",
         items: [
           {
-            text: "5인 팀(사업기획·UI/UX 팀원 4명)의 PM으로 범위와 우선순위를 조율했습니다. 기획안 v0.5 · PRD · 기능명세서 · 유저플로우를 작성하고, 기능을 P0·P1·P2로 나눠 3일 안에 만들 범위를 정했습니다. 크롤링·결제·순위표·거리 기준 동선 최적화는 범위에서 뺐습니다.",
+            text: "5인 팀(사업기획·UI/UX 팀원 4명)의 PM으로 기획·풀스택 개발·배포를 리드했습니다. 기획안 v0.5 · PRD · 기능명세서 · 유저플로우를 작성하고, 기능을 P0·P1·P2로 나눠 3일 안에 만들 범위를 정했습니다. 크롤링·결제·순위표·거리 기준 동선 최적화는 범위에서 뺐습니다.",
             textEn:
-              "As PM of a 5-person team (four teammates on business planning and UI/UX), coordinated scope and priorities. Wrote the plan v0.5, PRD, functional spec, and user flow, and split features into P0/P1/P2 to fix a three-day scope. Crawling, payments, rankings, and distance-based route optimization were left out.",
+              "As PM of a 5-person team (four teammates on business planning and UI/UX), led planning, full-stack development, and deployment. Wrote the plan v0.5, PRD, functional spec, and user flow, and split features into P0/P1/P2 to fix a three-day scope. Crawling, payments, rankings, and distance-based route optimization were left out.",
           },
           {
             text: "공개 자료를 다시 확인해 경쟁 서비스에 이미 영어 페이지와 코스 기능이 있다는 점을 반영하고, 차별점을 여행 날짜·예약 조건에 맞는 행사 선택과 방문 조건 설명, 일정 조정으로 좁혔습니다.",
