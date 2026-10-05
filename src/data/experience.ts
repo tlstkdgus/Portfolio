@@ -47,8 +47,8 @@ export const experiences: Experience[] = [
   {
     company: "SSAFY (삼성 청년 SW·AI 아카데미)",
     companyEn: "SSAFY (Samsung SW·AI Academy For Youth)",
-    role: "15기 수료",
-    roleEn: "15th Cohort — Completed",
+    role: "15기 중도 퇴소",
+    roleEn: "15th Cohort (Left Early)",
     team: "비전공 Java 트랙",
     teamEn: "Non-CS Java Track",
     period: "2026.01. ~ 2026.04.",
@@ -56,11 +56,11 @@ export const experiences: Experience[] = [
     startDate: "2026-01",
     endDate: "2026-04",
     description: [
-      "알고리즘·Java 백엔드 중심의 비전공 Java 트랙 교육 과정 수료",
+      "알고리즘·Java 백엔드 중심의 비전공 Java 트랙 교육 과정 이수, 2026년 4월 멋쟁이사자처럼 인턴 입사로 중도 퇴소",
       "실전 프로젝트 기반 학습으로 프로덕트 관점과 개발 역량을 함께 보강",
     ],
     descriptionEn: [
-      "Completed the Non-CS Java track — algorithms, data structures, and Java backend development",
+      "Studied algorithms, data structures, and Java backend development in the Non-CS Java track; left in April 2026 to join LIKELION as an intern",
       "Strengthened both product mindset and development skills through project-based learning",
     ],
     tags: ["Java", "Algorithm", "Backend"],
