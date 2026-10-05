@@ -57,20 +57,20 @@ export const projects: Project[] = [
     rolesEn: ["PM", "Ops"],
     repo: "https://github.com/tlstkdgus/animal-league",
     goals: [
-      "참가자·심사위원·파트너의 이해가 충돌하는 지점마다 규칙이 필요했습니다. 심사 기준, 제출 요건, 수료 기준, 위반 처리까지 — 정책으로 풀어야 하는 문제였습니다",
-      "314팀이 제출한 562개 레포의 '마감 후 수정 금지' 검증과 2,000명 앞 실시간 토너먼트 진행은 수작업으로 불가능했습니다. 없는 도구는 직접 만들어야 했습니다",
+      "참가자·심사위원·파트너의 이해가 충돌하는 지점마다 규칙이 필요했습니다. 심사 기준, 제출 요건, 수료 기준, 위반 처리를 하나씩 정책으로 정해야 했습니다",
+      "314팀이 제출한 562개 레포의 '마감 후 수정 금지' 검증과 2,000명 앞 실시간 토너먼트 진행은 수작업으로는 할 수 없어서, 필요한 도구를 직접 만들었습니다",
     ],
     goalsEn: [
       "Every point where participants, judges, and partners collided needed a rule — judging criteria, submission requirements, completion standards, violation handling",
       "Verifying 562 repos from 314 teams against a 'no edits after deadline' rule, and running a live tournament in front of 2,000 people, was impossible by hand — the missing tools had to be built",
     ],
     contents: [
-      "심사 정책 공동 설계 — 3단계 퍼널(서류 60팀 → 트랙 피칭 8팀 → 토너먼트 1팀), 공통 심사 기준 100점 배점, 제출 항목과 심사 기준의 1:1 연계, 공정성 규칙(대본 낭독 0점 · 기기 통일 · 랜덤 추첨)",
-      "제출물 무결성 검사 도구 check.py 직접 제작(Claude 활용) — 562개 레포 전 브랜치의 마감 후 커밋·force-push·비공개 전환 전수 검사",
-      "본선 토너먼트 콘솔 'ANIMAL LEAGUE' 직접 제작·운영 — 스크린·심사·운영 3화면(Next.js · Supabase), 무대 연출과 음향팀·MC 큐시트 조율 포함",
-      "FAQ 디스코드 봇 직접 제작·운영 — FAQ 78문항 기반, 키워드 우선 + LLM 폴백 2단 응답, 미답변 일일 리포트 개선 루프",
+      "심사 정책 공동 설계: 3단계 퍼널(서류 60팀 → 트랙 피칭 8팀 → 토너먼트 1팀), 공통 심사 기준 100점 배점, 제출 항목과 심사 기준의 1:1 연계, 공정성 규칙(대본 낭독 0점 · 기기 통일 · 랜덤 추첨)",
+      "제출물 무결성 검사 도구 check.py 직접 제작(Claude 활용): 562개 레포 전 브랜치의 마감 후 커밋·force-push·비공개 전환 전수 검사",
+      "본선 토너먼트 콘솔 'ANIMAL LEAGUE' 직접 제작·운영: 스크린·심사·운영 3화면(Next.js · Supabase), 무대 연출과 음향팀·MC 큐시트 조율 포함",
+      "FAQ 디스코드 봇 직접 제작·운영: FAQ 78문항 기반, 키워드 우선 + LLM 폴백 2단 응답, 미답변 일일 리포트 개선 루프",
       "참가자 가이드 공동 작성(참가자 여정 순서로 목차 설계, 날짜별 변경 이력 관리), 파트너 툴 8개 지원 정책 운영 및 OpenAI 영문 커뮤니케이션(크레딧 지급 · 심사위원 섭외)",
-      "사전 기획 공동 참여 — 해커톤 플랫폼 기능명세서 2개(중앙·연합: As-Is→To-Be 정리, 5단계 권한 매트릭스, 팀빌딩·승인 워크플로우) 작성 후 개발(AXP)·디자인(브디랩) 핸드오프, 워밍업 세션 3회(문제 발견 → MVP 범위 → AI 실전 개발) 커리큘럼 설계",
+      "사전 기획 공동 참여: 해커톤 플랫폼 기능명세서 2개(중앙·연합: As-Is→To-Be 정리, 5단계 권한 매트릭스, 팀빌딩·승인 워크플로우) 작성 후 개발(AXP)·디자인(브디랩) 핸드오프, 워밍업 세션 3회(문제 발견 → MVP 범위 → AI 실전 개발) 커리큘럼 설계",
     ],
     contentsEn: [
       "Co-designed judging policy — 3-stage funnel (docs → track pitching → tournament), a 100-point common rubric, 1:1 mapping between submission items and judging criteria, and fairness rules (script-reading scores zero, uniform devices, random draw)",
@@ -81,9 +81,9 @@ export const projects: Project[] = [
       "Co-planned the pre-event work — two platform feature specs (central & inter-university: As-Is→To-Be structure, 5-level permission matrix, team-building and approval workflows) handed off to dev (AXP) and design (BD Lab), plus a 3-part warm-up curriculum (problem discovery → MVP scoping → hands-on AI development)",
     ],
     decisions: [
-      "도구는 근거만 제시하고 판정은 운영진이 — 위반 성격별 차등 기준(기능 수정 실격 / README 수정 감점 / 마감 직후 커밋 정상참작)을 검사 전에 합의",
-      "콘솔은 '되돌릴 수 없는 현장'을 전제로 설계 — 심사위원 명단제(코드 유출에도 가짜 표 차단), 결과 공개 롤백 없음, 네트워크가 끊겨도 운영자 입력만으로 진행되는 백업 모드",
-      "동표 시 시스템은 경고만 하고 판정은 사전 합의 규칙으로 사람이 — 도구와 사람의 역할 분리",
+      "검사 도구는 근거만 보여 주고 판정은 운영진이 하도록 분리, 위반 성격별 차등 기준(기능 수정 실격 / README 수정 감점 / 마감 직후 커밋 정상참작)은 검사 전에 합의",
+      "현장에서는 실수를 되돌릴 수 없어서 콘솔에 안전장치부터 넣음: 심사위원 명단제(코드가 유출돼도 가짜 표 차단), 결과 공개 후 롤백 없음, 네트워크가 끊겨도 운영자 입력만으로 진행되는 백업 모드",
+      "동표가 나오면 시스템은 경고만 띄우고, 판정은 미리 합의한 규칙에 따라 운영진이 결정",
     ],
     decisionsEn: [
       "The tool presents evidence only; humans decide — graded violation criteria (code changes = disqualification / README edits = deduction / just-past-deadline commits = leniency) agreed before scanning",
@@ -91,10 +91,10 @@ export const projects: Project[] = [
       "On a tie the system only warns; a pre-agreed rule and a human decide — separating the tool's job from people's",
     ],
     results: [
-      "562개 레포 전수 검사로 위반 5팀 적발 — 차등 기준에 따라 2팀 실격, 나머지 감점·정상참작 처리",
-      "본선 토너먼트(8팀 · 심사위원 5명)를 직접 만든 콘솔로 진행 완료 — 콘솔 조작이 무대 스크린에 반영되는 시간 실측 2.2초",
-      "FAQ 봇으로 한 달간 질문 229건 응대(사용자 53명) — 80.8%를 키워드 즉답으로 처리(API 비용 0), 미응답 0건 — 자료에 없는 내용은 지어내지 않는 무허구 정책",
-      "멋쟁이사자처럼 브랜드 디자인 랩이 'ANIMAL LEAGUE'를 Behance 케이스로 공개 — 공동작업자로 등재",
+      "562개 레포 전수 검사로 위반 5팀 적발, 차등 기준에 따라 2팀 실격, 나머지 감점·정상참작 처리",
+      "본선 토너먼트(8팀 · 심사위원 5명)를 직접 만든 콘솔로 진행, 콘솔 조작이 무대 스크린에 반영되기까지 실측 2.2초",
+      "FAQ 봇으로 한 달간 질문 229건 응대(사용자 53명). 80.8%를 키워드로 즉답(API 비용 0), 미응답 0건이며, 자료에 없는 내용은 답을 지어내지 않고 운영진 문의로 안내",
+      "멋쟁이사자처럼 브랜드 디자인 랩이 'ANIMAL LEAGUE'를 Behance 케이스로 공개, 공동작업자로 등재",
     ],
     resultsEn: [
       "Full sweep of 562 repos caught 5 violating teams — 2 disqualified under the graded criteria, the rest handled with deductions or leniency",
@@ -131,15 +131,15 @@ export const projects: Project[] = [
     url: "https://likelion-dev-site.vercel.app",
     repo: "https://github.com/tlstkdgus/likelion-dev-site",
     goals: [
-      "회사에는 저처럼 비전공자인 동료가 많았고, 그분들에게 '배포'·'API' 같은 말이 여전히 어렵다는 걸 알게 됐습니다. AI에게 물어보면 답이 나오는 시대지만, 기본 흐름을 모르면 무엇을 물어야 할지 모릅니다",
+      "회사에는 저처럼 비전공자인 동료가 많았고, '배포'나 'API' 같은 말을 어려워하는 분이 많았습니다. AI에게 물어보려 해도 기본 흐름을 모르면 무엇을 물어야 할지부터 막힙니다",
     ],
     goalsEn: [
       "Many colleagues were non-developers like me, and words like 'deploy' and 'API' were still hard for them. In the age of asking AI anything, you still can't ask a good question without knowing the basic flow",
     ],
     contents: [
-      "점심시간 분량 6회 커리큘럼을 직접 설계하고 주 1회, 6주간 직접 강의 — 소프트웨어가 동작하는 방식 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드",
+      "점심시간 분량 6회 커리큘럼을 직접 설계하고 주 1회, 6주간 직접 강의: 소프트웨어가 동작하는 방식 · 개발 용어 · Git과 GitHub · 협업 커뮤니케이션 · AI와 바이브 코딩 · AI 트렌드",
       "모든 개념을 식당 비유 하나로 통일 (홀=프론트엔드, 주방=백엔드, 냉장고=DB, 주문서=API)",
-      "교육용 웹사이트 직접 제작(React · TypeScript · Vite) — SVG 개념 도식 14개, 브라우저에서 바로 동작하는 라이브 실습(로그인 요청 왕복, Git 협업 시뮬레이터 등), 용어 사전 51개",
+      "교육용 웹사이트 직접 제작(React · TypeScript · Vite): SVG 개념 도식 14개, 브라우저에서 바로 동작하는 라이브 실습(로그인 요청 왕복, Git 협업 시뮬레이터 등), 용어 사전 51개",
     ],
     contentsEn: [
       "Designed a 6-session lunchtime curriculum and taught it weekly for 6 weeks — software structure, dev vocabulary, Git & GitHub, collaboration communication, AI & vibe coding, AI trends",
@@ -147,8 +147,8 @@ export const projects: Project[] = [
       "Built the companion website myself (React · TypeScript · Vite) — 14 SVG concept diagrams, live in-browser demos (login round-trip, Git collaboration simulator), and a 51-term glossary",
     ],
     decisions: [
-      "코드를 가르치지 않기로 결정 — 목표를 개발자와 대화할 수 있는 수준으로 좁혀 점심시간 6회에 담았습니다",
-      "설치·계정 없이 브라우저에서 바로 동작하는 실습만 — 밥 먹으면서 듣는 환경을 전제로 설계",
+      "코드는 가르치지 않기로 하고, 목표를 개발자와 대화할 수 있는 수준으로 좁혀 점심시간 6회에 담음",
+      "밥 먹으면서 듣는 강의라, 설치나 계정 없이 브라우저에서 바로 되는 실습만 넣음",
     ],
     decisionsEn: [
       "Decided not to teach code — narrowed the goal to being able to talk with developers, so it fits in six lunch breaks",
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
-      "직원은 지출보고서 한 건에 20분을 쓰고, 회계담당자는 월 100건 이상을 처리합니다. 무기명 법인카드 정산에 기업당 연간 약 1,000시간·8천만 원이 사라집니다",
+      "직원은 지출보고서 한 건에 20분을 쓰고, 회계담당자는 월 100건 이상을 처리합니다. 무기명 법인카드 정산에 기업당 연간 약 1,000시간·8천만 원이 들어갑니다",
       "누가 썼는지 기록되지 않는 카드라서, 지출 내역을 사람이 일일이 맞춰야 한다는 점이 문제였습니다",
     ],
     goalsEn: [
@@ -199,7 +199,7 @@ export const projects: Project[] = [
     ],
     contents: [
       "현업 회계담당자 인터뷰로 Pain Point를 발굴하고 솔루션 재정의",
-      "Flow ID 기반 익명 태깅 시스템 아이디어 도출, 사용자 여정 맵핑·화면 정보 설계(IA) — 업무 프로세스를 8단계에서 3단계로 단축",
+      "Flow ID 기반 익명 태깅 시스템 아이디어 도출, 사용자 여정 맵핑·화면 정보 설계(IA), 업무 프로세스를 8단계에서 3단계로 단축",
       "React 기반 실시간 대시보드 및 FIDO2 API 연동 생체인증 결제 시스템 개발",
       "3개 유효 시장 분석으로 시장 규모 산정, FINNECT IR 발표 담당",
     ],
@@ -252,8 +252,8 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드", "디자인"],
     rolesEn: ["PM", "Frontend", "Design"],
     goals: [
-      "외주로 맡은 프로젝트입니다. 에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들고 있습니다",
-      "해커톤처럼 만들고 끝나는 게 아니라, 실제 사용자를 받는 서비스로 운영하는 것이 목표",
+      "외주로 맡은 프로젝트입니다. 에어비앤비 호스트는 믿을 만한 청소 인력을 구하기 어렵고, 청소자는 일감을 안정적으로 받기 어렵습니다. 이 둘을 연결하는 매칭 서비스를 만들었습니다",
+      "실제 사용자를 받을 수 있는 수준까지 만들어 배포하는 것이 목표",
     ],
     goalsEn: [
       "Productize the full cleaning operation flow — from request to completion — connecting Airbnb hosts with cleaners",
@@ -281,7 +281,7 @@ export const projects: Project[] = [
     ],
     results: [
       "GitHub Actions 자동 배포로 rumiclean.com에 배포한 뒤 외주를 마무리했습니다(토스 결제 연동 전, 실사용자 없음)",
-      "기획, 디자인, 개발, 배포, QA까지 서비스의 전 과정을 처음으로 '운영'해보고 있는 프로젝트",
+      "기획부터 디자인, 개발, 배포, QA까지 서비스 전 과정을 처음으로 직접 맡아 본 프로젝트",
     ],
     resultsEn: [
       "Deployed to rumiclean.com with GitHub Actions auto-deployment, then wrapped up the client engagement (before Toss payments; no real users)",
@@ -326,7 +326,7 @@ export const projects: Project[] = [
       "경기도 39만 건 가맹점 데이터 전수 분석으로 추천 알고리즘 방향 확정",
       "사용자 위치 반경 + 소비 카테고리 기반 AI 가맹점 추천 기능 설계 및 구현",
       "React + TypeScript + Tailwind CSS 기반 반응형 UI 개발 (위치 기반 지도, AI 추천 리스트, 카테고리 필터)",
-      "멋쟁이사자처럼 13기 중앙해커톤 제출작 — 6인 팀에서 PM·프론트엔드·디자인 담당",
+      "멋쟁이사자처럼 13기 중앙해커톤 제출작, 6인 팀에서 PM·프론트엔드·디자인 담당",
     ],
     contentsEn: [
       "Analyzed all ~390K Gyeonggi merchant records to set the recommendation direction",
@@ -375,10 +375,10 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
-      "고령층의 모바일뱅킹 이용률은 53.4%로, 비고령층(95%)의 절반 수준입니다. 복잡한 입력 단계가 고령층을 모바일 금융 밖으로 밀어내고 있습니다",
+      "60대 이상의 모바일금융 이용률은 53.8%로 20~40대(95% 이상)에 크게 못 미칩니다(한국은행, 2024). 계좌번호·금액·수취인을 차례로 입력해야 하는 단계가 고령층에게 특히 어렵습니다",
     ],
     goalsEn: [
-      "Mobile banking usage among seniors is 53.4% — barely half the 95% of everyone else. Complex input flows push seniors out of mobile finance",
+      "Mobile finance usage among people in their 60s and older is 53.8%, far below the 95%+ of people in their 20s to 40s (Bank of Korea, 2024). Typing in the account number, amount, and payee step by step is especially hard for seniors",
     ],
     contents: [
       "손으로 쓴 메모를 촬영하면 AI-OCR이 인식하고, 가족 승인을 거쳐 송금이 완료되는 '입력 제거' UX 플로우 설계 (촬영 → 확인 → 승인 3단계)",
@@ -461,7 +461,7 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
-      "국내 은둔형 청년은 54만 명, 그중 80% 이상이 벗어나고 싶어 합니다. 하지만 대면 중심의 지원 프로그램은 정작 이들에게 닿지 않습니다",
+      "국내 은둔형 청년은 54만 명, 그중 80% 이상이 벗어나고 싶어 합니다. 하지만 지원 프로그램이 대부분 대면이라, 정작 밖에 나오기 어려운 청년들은 참여하기 어렵습니다",
     ],
     goalsEn: [
       "Korea has 540,000 socially isolated youth, and over 80% want a way out — but in-person support programs rarely reach them",
@@ -471,7 +471,7 @@ export const projects: Project[] = [
       "AI 취업 컨설팅, 외부 기관 연계, 일간 뉴스레터 등 사회 참여 훈련 기능 개발",
       "구독 모델(사회 적응 6,900원 / 사회 참여 9,900원) 및 3단계 확장 전략 수립",
       "React 기반 40개 페이지 UI 구현, Spring Boot 백엔드 연동, 카카오맵 API 연동",
-      "GBT학부 캡스톤 3인 팀 프로젝트 — 기획·디자인·프론트엔드 담당",
+      "GBT학부 캡스톤 3인 팀 프로젝트, 기획·디자인·프론트엔드 담당",
     ],
     contentsEn: [
       "Designed social adaptation training features: text simulation, AI role-play chat, and user matching dialogue",
@@ -544,7 +544,7 @@ export const projects: Project[] = [
     results: [
       "GRAFFITI 2025 AI Startup 해커톤 참가 (KAIST ICISTS 주최)",
       "의료 AI 규제 환경(FDA/CE) 기반 현실적 사업화 전략 수립",
-      "2025 1학기 HUFStudy 최우수상 — 한국외대 교육혁신단 (NeuroSight · RZi 활동 기반)",
+      "2025 1학기 HUFStudy 최우수상 (한국외대 교육혁신단, NeuroSight · RZi 활동 기반)",
     ],
     resultsEn: [
       "Participated in GRAFFITI 2025 AI Startup Hackathon (hosted by KAIST ICISTS)",
@@ -625,7 +625,7 @@ export const projects: Project[] = [
     roles: ["PM", "프론트엔드"],
     rolesEn: ["PM", "Frontend"],
     goals: [
-      "취업 준비생이 겪는 '직무 선택의 불확실성'을 AI가 구조적으로 해소하는 맞춤형 커리어 멘토링 서비스 기획",
+      "어떤 직무가 맞는지 정하지 못한 취업 준비생에게 AI가 직무별 적합도와 준비 순서를 알려 주는 커리어 멘토링 서비스 기획",
       "강점·경험·목표를 입력하면 AI가 직무별 적합도를 분석하고 커리어 로드맵을 제시하는 대화형 흐름 설계",
     ],
     goalsEn: [
@@ -740,7 +740,7 @@ export const projects: Project[] = [
     results: [
       "Next.js 15 + PWA 기반 종합 쇼핑 도우미 서비스 해커톤 기간 내 완성 배포",
       "OCR·AI 추천·Google Maps 경로안내를 단일 앱으로 통합한 실사용 MVP 완성 (K-HTML 해커톤 수료)",
-      "2025 1학기 HUFStudy 최우수상 — 한국외대 교육혁신단 (NeuroSight · RZi 활동 기반)",
+      "2025 1학기 HUFStudy 최우수상 (한국외대 교육혁신단, NeuroSight · RZi 활동 기반)",
     ],
     resultsEn: [
       "Shipped a comprehensive Next.js 15 PWA shopping assistant within the hackathon period",
@@ -769,7 +769,7 @@ export const projects: Project[] = [
     roles: ["PM"],
     rolesEn: ["PM"],
     goals: [
-      "가구 구매 후 '실제 공간과의 불일치'로 발생하는 반품·실패 경험을 AR 시뮬레이션으로 사전에 해결하는 플랫폼 기획",
+      "가구를 산 뒤 방에 맞지 않아 반품하는 일을 줄이려고, 사기 전에 AR로 내 방에 놓아 보는 플랫폼 기획",
       "사용자의 공간 치수·취향 데이터를 AI가 분석해 개인화 추천까지 이어지는 통합 UX 설계",
     ],
     goalsEn: [
@@ -779,7 +779,7 @@ export const projects: Project[] = [
     contents: [
       "AR 기반 실공간 가구 시각화 기능 설계 (공간 치수 인식 → 3D 가구 배치 → 색상·소재 커스터마이징) 및 서비스 IA 구성",
       "사용자 공간·취향 데이터 기반 AI 추천 알고리즘 기획 및 추천 결과 화면 설계",
-      "HUFS H-UP 진로탐색학점제 기획 담당 — 문제 정의부터 프로덕트 설계까지 주도",
+      "HUFS H-UP 진로탐색학점제 기획 담당, 문제 정의부터 프로덕트 설계까지 주도",
     ],
     contentsEn: [
       "Designed AR furniture visualization (space measurement → 3D placement → color/material customization) and structured the service IA",
@@ -914,7 +914,7 @@ export const projects: Project[] = [
     ],
     contents: [
       "시각장애인 점자 교육 문제 구조 분석, 학습 단계별 콘텐츠 설계 및 수익 모델 수립 (구독·기관 파트너십 기반)",
-      "HUFS 창업캠프 IR 피칭 경진대회 발표 담당 — 사업성·임팩트·기술 실현 가능성 3축 중심으로 스토리 구성",
+      "HUFS 창업캠프 IR 피칭 경진대회 발표 담당, 사업성·임팩트·기술 실현 가능성을 중심으로 발표 흐름 구성",
     ],
     contentsEn: [
       "Analyzed Braille education problem structure; designed step-by-step learning content and revenue model (subscription + institutional partnership)",
