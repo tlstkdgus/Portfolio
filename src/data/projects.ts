@@ -34,10 +34,10 @@ export interface Project {
 
 // Other projects 노출 (§G-6, 2026-09-24): 앞의 6개만 펼쳐 두고 나머지는 '그 외 프로젝트' 접기 안에 둔다.
 // 15개가 한 번에 펼쳐져 있어 대표가 아닌 작업까지 같은 무게로 읽혔다. 데이터와 상세 페이지는 모두 유지한다.
-export const otherProjectsShown = ["songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
+export const otherProjectsShown = ["ultspot", "songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
 // 표지 썸네일이 있는 프로젝트(2026-09-25). public/projects/<id>/thumb-{ko,en}.jpg, 원본 design/thumbnails/.
 // 대표 4개는 selected.ts의 thumb를 쓴다. 목록 행과 상세 캐러셀 첫 장에 나온다.
-export const projectThumbs = ["songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
+export const projectThumbs = ["ultspot", "songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
 export const thumbSrc = (id: string, locale: string) => `/projects/${id}/thumb-${locale === "ko" ? "ko" : "en"}.jpg`;
 export const otherProjectsFolded = ["connect", "hai", "ainterview", "rzi", "artliving", "mealdang", "huriup", "16play"];
 
@@ -360,6 +360,68 @@ export const projects: Project[] = [
       "/projects/ywave/04.png",
       "/projects/ywave/05.png",
       "/projects/ywave/06.png",
+    ],
+  },
+  {
+    // 원티드 AI 챔피언십 2026 출품작 (2026-10-06 추가). 기간은 저장소 커밋 기준: 첫 커밋 2026-09-16,
+    // 9/20 제출 후 9/28까지 고도화. 커밋 266개, 태스크 78개(docs/tasks). 팀 구성은 확인 후 채울 것.
+    title: "ULTSPOT",
+    caseId: "ultspot",
+    titleEn: "ULTSPOT",
+    subtitle: "외국인 K팝 팬을 위한 덕질 여행 플래너",
+    subtitleEn: "A K-pop fan trip planner for visitors to Korea",
+    period: "2026.09.",
+    periodEn: "Sep 2026",
+    url: "https://ultspot.vercel.app",
+    repo: "https://github.com/tlstkdgus/ULTSPOT",
+    roles: ["기획", "개발", "배포"],
+    rolesEn: ["Planning", "Development", "Deployment"],
+    goals: [
+      "생일카페·팝업 정보는 한국어 공지와 포스터 이미지로만 올라와, 해외 팬은 가고 싶은 곳을 알아도 자기 여행 날짜 안에서 갈 수 있는 일정으로 만들기 어려웠습니다",
+      "해외 팬 커뮤니티에는 영어로 검색하면 행사가 나오지 않는다는 질문과, 음료만 사면 되는지·굿즈가 판매인지 증정인지 묻는 질문이 반복해서 올라와 있었습니다",
+    ],
+    goalsEn: [
+      "Birthday cafes and pop-ups are announced only in Korean posts and poster images, so overseas fans who know where they want to go still struggle to fit it into the dates they are actually in Seoul",
+      "Overseas fan communities keep asking why English searches turn up no events, and whether you just buy a drink or whether the goods are sold or given away",
+    ],
+    contents: [
+      "최애 고르기 → SPOT 고르기 → 기간 정하기 → 일정 받기의 4단계 흐름 설계, 아티스트 243팀·명과 검수한 장소 12곳 연결, 직접 추가하는 행사는 카카오 장소 검색으로 좌표까지 입력",
+      "운영시간이 확인된 곳만 편성하고 이동시간은 카카오 길찾기로 계산, 확인하지 못한 구간은 '미확인 · 계획용 여유'로 따로 표시",
+      "일정 사이 1시간 이상 빈 구간에 주변 식사·카페·관광 추천을 넣고, 한국관광공사 TourAPI로 영업시간·휴무일·사진을 붙여 '일정에 넣기'로 확정",
+      "기획안 v0.5 · PRD · 기능명세서 · 유저플로우를 작성하고, 78개 태스크로 나눠 AI 코딩 에이전트와 병렬로 개발 · 4개 언어 UI · 3개 화면 폭 E2E 검증까지 마쳐 배포",
+    ],
+    contentsEn: [
+      "Designed a 4-step flow (pick your bias → pick spots → set dates → get the itinerary), linking 243 artists and 12 verified places; fan-added events get coordinates through Kakao place search",
+      "Only places with confirmed opening hours are scheduled, travel time comes from Kakao directions, and unmeasured legs are labeled 'unconfirmed · planning buffer'",
+      "Gaps of an hour or more are filled with nearby food, cafe, and sightseeing suggestions carrying Korea Tourism Organization hours, closing days, and photos, kept with one 'Add to plan' tap",
+      "Wrote the plan, PRD, functional spec, and user flow, split the build into 78 tasks run in parallel with AI coding agents, and shipped with 4-language UI and E2E checks at three screen widths",
+    ],
+    decisions: [
+      "영업시간·이동시간·빈 시간 계산은 정해진 코드가 하고, AI는 주변 후보의 취향 순위만 매기게 나눴습니다. 같은 입력이면 같은 일정이 나오고, 모르는 영업시간은 지어내지 않고 '미확인'으로 보여줍니다",
+      "제출까지 3일이라 기능을 P0·P1·P2로 나누고 크롤링·결제·순위표·거리 기준 동선 최적화는 뺐습니다. 가입 없이 핵심 흐름 전체를 체험하도록 했습니다",
+      "가상 행사로 시연하는 대신, 실제 장소와 직접 입력한 행사로 일정을 만들고 저장하는 비회원 플래너로 제출했습니다",
+    ],
+    decisionsEn: [
+      "Hours, travel time, and gap math run in deterministic code; AI only ranks nearby candidates by taste. The same input gives the same plan, and unknown hours show as 'unconfirmed' instead of being invented",
+      "With three days to the deadline, features were split into P0/P1/P2 and crawling, payments, rankings, and distance-based route optimization were cut. The whole core flow works without sign-up",
+      "Instead of demoing with fictional events, submitted a working guest planner that builds and saves plans from real places and user-entered events",
+    ],
+    results: [
+      "원티드 AI 챔피언십 2026 제출, ultspot.vercel.app에 배포 (9/16~9/28 커밋 266개 · 태스크 78개)",
+      "추천 모델 평가 합성 사례 30건 30/30 일치(응답 중간값 0.54초), UI 접근성 감사 17/20",
+    ],
+    resultsEn: [
+      "Submitted to the Wanted AI Championship 2026 and shipped at ultspot.vercel.app (266 commits and 78 tasks, Sep 16–28)",
+      "Recommendation model matched 30/30 synthetic test cases (median 0.54s); UI accessibility audit scored 17/20",
+    ],
+    tags: ["Next.js", "Supabase", "Kakao Maps", "TourAPI", "LLM", "i18n"],
+    image: "/projects/ultspot/01.png",
+    images: [
+      "/projects/ultspot/01.png",
+      "/projects/ultspot/02.png",
+      "/projects/ultspot/03.png",
+      "/projects/ultspot/04.png",
+      "/projects/ultspot/05.png",
     ],
   },
   {

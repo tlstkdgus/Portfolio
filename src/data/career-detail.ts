@@ -532,6 +532,81 @@ export const careerDetailSections: CareerDetailSection[] = [
   },
 
   {
+    id: "ultspot",
+    title: "외국인 K팝 팬을 위한 덕질 여행 플래너 — ULTSPOT",
+    titleEn: "A K-pop Fan Trip Planner for Visitors to Korea — ULTSPOT",
+    // 원티드 AI 챔피언십 2026 제출 화면(저장소 docs/submission). 회고(lessons)는 본인 작성 후 채울 것
+    // 01(표지)은 thumb-ko/en.jpg로 캐러셀 첫 장에 들어가므로 02부터
+    images: [
+      "/projects/ultspot/02.png",
+      "/projects/ultspot/03.png",
+      "/projects/ultspot/04.png",
+      "/projects/ultspot/05.png",
+    ],
+    background: [
+      {
+        text: "생일카페·팝업 정보는 한국어 공지와 포스터 이미지로 올라오고, 3~5일만 열리는 행사가 상설 장소와 겹칩니다. 해외 팬은 가고 싶은 곳을 알아도 자기 여행 날짜 안에서 갈 수 있는 일정으로 만들기 어려웠습니다.",
+        textEn:
+          "Birthday cafes and pop-ups are posted in Korean text and poster images, and events that run only three to five days overlap with permanent spots. Overseas fans who know where they want to go still struggle to turn it into a plan that fits their travel dates.",
+      },
+      {
+        text: "해외 팬 커뮤니티에서 영어로 검색하면 행사가 나오지 않는다는 질문, 음료만 사면 되는지·굿즈가 판매인지 증정인지 묻는 질문을 확인했고, 한국관광공사도 생일카페를 해외 팬이 한국에서 경험하는 팬 문화로 소개하고 있었습니다. 원티드 AI 챔피언십 2026 마감까지 3일 안에 이 흐름을 실제로 동작하는 서비스로 만드는 것이 목표였습니다.",
+        textEn:
+          "Fan communities showed repeated questions about English searches returning no events and whether you just buy a drink or the goods are sold or given away, and the Korea Tourism Organization itself introduces birthday cafes as a fan culture international visitors experience. The goal was to ship this as a working service within three days for the Wanted AI Championship 2026.",
+      },
+    ],
+    role: [
+      {
+        title: "기획",
+        titleEn: "Planning",
+        items: [
+          {
+            text: "기획안 v0.5 · PRD · 기능명세서 · 유저플로우를 작성하고, 기능을 P0·P1·P2로 나눠 3일 안에 만들 범위를 정했습니다. 크롤링·결제·순위표·거리 기준 동선 최적화는 범위에서 뺐습니다.",
+            textEn:
+              "Wrote the plan v0.5, PRD, functional spec, and user flow, and split features into P0/P1/P2 to fix a three-day scope. Crawling, payments, rankings, and distance-based route optimization were left out.",
+          },
+          {
+            text: "공개 자료를 다시 확인해 경쟁 서비스에 이미 영어 페이지와 코스 기능이 있다는 점을 반영하고, 차별점을 여행 날짜·예약 조건에 맞는 행사 선택과 방문 조건 설명, 일정 조정으로 좁혔습니다.",
+            textEn:
+              "Rechecked public sources, acknowledged that competitors already offer English pages and course features, and narrowed the differentiator to picking events that fit travel dates and booking conditions, explaining entry conditions, and adjusting the plan.",
+          },
+        ],
+      },
+      {
+        title: "개발 · 배포",
+        titleEn: "Development & Deployment",
+        items: [
+          {
+            text: "Next.js 16 · Supabase로 4단계 플래너를 만들고 카카오 길찾기 · 한국관광공사 TourAPI · Google 지도를 연동했습니다. 78개 태스크로 나눠 AI 코딩 에이전트와 병렬로 개발하고, 3개 화면 폭 E2E 검사를 통과한 뒤 배포했습니다.",
+            textEn:
+              "Built the 4-step planner on Next.js 16 and Supabase with Kakao directions, the Korea Tourism Organization TourAPI, and Google Maps. Split the work into 78 tasks run in parallel with AI coding agents, and shipped after E2E checks at three screen widths.",
+          },
+          {
+            text: "영업시간·이동시간·빈 시간 계산은 정해진 코드가 하고 AI는 주변 후보의 취향 순위만 매기게 나눴습니다. 같은 입력이면 같은 일정이 나오고, 모르는 영업시간은 '미확인'으로 보여줍니다.",
+            textEn:
+              "Hours, travel time, and gap math run in deterministic code while AI only ranks nearby candidates by taste. The same input gives the same plan, and unknown hours are shown as 'unconfirmed'.",
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        text: "원티드 AI 챔피언십 2026 제출, ultspot.vercel.app 배포 (2026.09.16~09.28 커밋 266개 · 태스크 78개)",
+        textEn: "Submitted to the Wanted AI Championship 2026 and shipped at ultspot.vercel.app (266 commits, 78 tasks, Sep 16–28 2026)",
+      },
+      {
+        text: "아티스트 243팀·명과 검수한 장소 12곳 연결, 한국어·영어 등 4개 언어 UI",
+        textEn: "Linked 243 artists and 12 verified places, with a 4-language UI",
+      },
+      {
+        text: "추천 모델 평가 합성 사례 30건 30/30 일치(응답 중간값 0.54초), UI 접근성 감사 17/20",
+        textEn: "Recommendation model matched 30/30 synthetic test cases (median 0.54s); UI accessibility audit scored 17/20",
+      },
+    ],
+    lessons: [],
+  },
+
+  {
     id: "songeul",
     title: "시니어를 위한 AI-OCR 모바일 뱅킹 — 손글 (SonGeul)",
     titleEn: "Mobile Banking for Seniors, with AI-OCR — SonGeul",
