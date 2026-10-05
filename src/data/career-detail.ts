@@ -535,7 +535,7 @@ export const careerDetailSections: CareerDetailSection[] = [
     id: "ultspot",
     title: "외국인 K팝 팬을 위한 덕질 여행 플래너 — ULTSPOT",
     titleEn: "A K-pop Fan Trip Planner for Visitors to Korea — ULTSPOT",
-    // 원티드 AI 챔피언십 2026 제출 화면(저장소 docs/submission). 회고(lessons)는 본인 작성 후 채울 것
+    // 원티드 AI 챔피언십 2026 제출 화면(저장소 docs/submission). 5인 팀 중 PM·풀스택 개발. 회고(lessons)는 본인 작성 후 채울 것
     // 01(표지)은 thumb-ko/en.jpg로 캐러셀 첫 장에 들어가므로 02부터
     images: [
       "/projects/ultspot/02.png",
@@ -557,13 +557,13 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     role: [
       {
-        title: "기획",
-        titleEn: "Planning",
+        title: "PM",
+        titleEn: "PM",
         items: [
           {
-            text: "기획안 v0.5 · PRD · 기능명세서 · 유저플로우를 작성하고, 기능을 P0·P1·P2로 나눠 3일 안에 만들 범위를 정했습니다. 크롤링·결제·순위표·거리 기준 동선 최적화는 범위에서 뺐습니다.",
+            text: "5인 팀(사업기획·UI/UX 팀원 4명)의 PM으로 범위와 우선순위를 조율했습니다. 기획안 v0.5 · PRD · 기능명세서 · 유저플로우를 작성하고, 기능을 P0·P1·P2로 나눠 3일 안에 만들 범위를 정했습니다. 크롤링·결제·순위표·거리 기준 동선 최적화는 범위에서 뺐습니다.",
             textEn:
-              "Wrote the plan v0.5, PRD, functional spec, and user flow, and split features into P0/P1/P2 to fix a three-day scope. Crawling, payments, rankings, and distance-based route optimization were left out.",
+              "As PM of a 5-person team (four teammates on business planning and UI/UX), coordinated scope and priorities. Wrote the plan v0.5, PRD, functional spec, and user flow, and split features into P0/P1/P2 to fix a three-day scope. Crawling, payments, rankings, and distance-based route optimization were left out.",
           },
           {
             text: "공개 자료를 다시 확인해 경쟁 서비스에 이미 영어 페이지와 코스 기능이 있다는 점을 반영하고, 차별점을 여행 날짜·예약 조건에 맞는 행사 선택과 방문 조건 설명, 일정 조정으로 좁혔습니다.",
@@ -573,13 +573,13 @@ export const careerDetailSections: CareerDetailSection[] = [
         ],
       },
       {
-        title: "개발 · 배포",
-        titleEn: "Development & Deployment",
+        title: "풀스택 개발 · 배포",
+        titleEn: "Full-stack Development & Deployment",
         items: [
           {
-            text: "Next.js 16 · Supabase로 4단계 플래너를 만들고 카카오 길찾기 · 한국관광공사 TourAPI · Google 지도를 연동했습니다. 78개 태스크로 나눠 AI 코딩 에이전트와 병렬로 개발하고, 3개 화면 폭 E2E 검사를 통과한 뒤 배포했습니다.",
+            text: "팀의 개발을 혼자 맡아 Next.js 16 · Supabase로 4단계 플래너를 만들고 카카오 길찾기 · 한국관광공사 TourAPI · Google 지도를 연동했습니다. 78개 태스크로 나눠 AI 코딩 에이전트와 병렬로 개발하고, 3개 화면 폭 E2E 검사를 통과한 뒤 배포했습니다.",
             textEn:
-              "Built the 4-step planner on Next.js 16 and Supabase with Kakao directions, the Korea Tourism Organization TourAPI, and Google Maps. Split the work into 78 tasks run in parallel with AI coding agents, and shipped after E2E checks at three screen widths.",
+              "As the team's only developer, built the 4-step planner on Next.js 16 and Supabase with Kakao directions, the Korea Tourism Organization TourAPI, and Google Maps. Split the work into 78 tasks run in parallel with AI coding agents, and shipped after E2E checks at three screen widths.",
           },
           {
             text: "영업시간·이동시간·빈 시간 계산은 정해진 코드가 하고 AI는 주변 후보의 취향 순위만 매기게 나눴습니다. 같은 입력이면 같은 일정이 나오고, 모르는 영업시간은 '미확인'으로 보여줍니다.",

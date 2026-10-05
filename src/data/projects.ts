@@ -364,7 +364,7 @@ export const projects: Project[] = [
   },
   {
     // 원티드 AI 챔피언십 2026 출품작 (2026-10-06 추가). 기간은 저장소 커밋 기준: 첫 커밋 2026-09-16,
-    // 9/20 제출 후 9/28까지 고도화. 커밋 266개, 태스크 78개(docs/tasks). 팀 구성은 확인 후 채울 것.
+    // 9/20 제출 후 9/28까지 고도화. 커밋 266개, 태스크 78개(docs/tasks). 5인 팀: 본인 PM·풀스택 개발, 팀원 4명 사업기획·UI/UX 등.
     title: "ULTSPOT",
     caseId: "ultspot",
     titleEn: "ULTSPOT",
@@ -374,8 +374,8 @@ export const projects: Project[] = [
     periodEn: "Sep 2026",
     url: "https://ultspot.vercel.app",
     repo: "https://github.com/tlstkdgus/ULTSPOT",
-    roles: ["기획", "개발", "배포"],
-    rolesEn: ["Planning", "Development", "Deployment"],
+    roles: ["PM", "풀스택 개발"],
+    rolesEn: ["PM", "Full-stack Development"],
     goals: [
       "생일카페·팝업 정보는 한국어 공지와 포스터 이미지로만 올라와, 해외 팬은 가고 싶은 곳을 알아도 자기 여행 날짜 안에서 갈 수 있는 일정으로 만들기 어려웠습니다",
       "해외 팬 커뮤니티에는 영어로 검색하면 행사가 나오지 않는다는 질문과, 음료만 사면 되는지·굿즈가 판매인지 증정인지 묻는 질문이 반복해서 올라와 있었습니다",
@@ -388,13 +388,13 @@ export const projects: Project[] = [
       "최애 고르기 → SPOT 고르기 → 기간 정하기 → 일정 받기의 4단계 흐름 설계, 아티스트 243팀·명과 검수한 장소 12곳 연결, 직접 추가하는 행사는 카카오 장소 검색으로 좌표까지 입력",
       "운영시간이 확인된 곳만 편성하고 이동시간은 카카오 길찾기로 계산, 확인하지 못한 구간은 '미확인 · 계획용 여유'로 따로 표시",
       "일정 사이 1시간 이상 빈 구간에 주변 식사·카페·관광 추천을 넣고, 한국관광공사 TourAPI로 영업시간·휴무일·사진을 붙여 '일정에 넣기'로 확정",
-      "기획안 v0.5 · PRD · 기능명세서 · 유저플로우를 작성하고, 78개 태스크로 나눠 AI 코딩 에이전트와 병렬로 개발 · 4개 언어 UI · 3개 화면 폭 E2E 검증까지 마쳐 배포",
+      "5인 팀(사업기획·UI/UX 팀원 4명)에서 PM과 개발을 맡아 기획안 v0.5 · PRD · 기능명세서 · 유저플로우를 작성하고, 78개 태스크로 나눠 AI 코딩 에이전트와 병렬로 혼자 풀스택 개발 · 4개 언어 UI · 3개 화면 폭 E2E 검증까지 마쳐 배포",
     ],
     contentsEn: [
       "Designed a 4-step flow (pick your bias → pick spots → set dates → get the itinerary), linking 243 artists and 12 verified places; fan-added events get coordinates through Kakao place search",
       "Only places with confirmed opening hours are scheduled, travel time comes from Kakao directions, and unmeasured legs are labeled 'unconfirmed · planning buffer'",
       "Gaps of an hour or more are filled with nearby food, cafe, and sightseeing suggestions carrying Korea Tourism Organization hours, closing days, and photos, kept with one 'Add to plan' tap",
-      "Wrote the plan, PRD, functional spec, and user flow, split the build into 78 tasks run in parallel with AI coding agents, and shipped with 4-language UI and E2E checks at three screen widths",
+      "As PM and sole developer on a 5-person team (four teammates on business planning and UI/UX), wrote the plan, PRD, functional spec, and user flow, built the full stack across 78 tasks run in parallel with AI coding agents, and shipped with 4-language UI and E2E checks at three screen widths",
     ],
     decisions: [
       "영업시간·이동시간·빈 시간 계산은 정해진 코드가 하고, AI는 주변 후보의 취향 순위만 매기게 나눴습니다. 같은 입력이면 같은 일정이 나오고, 모르는 영업시간은 지어내지 않고 '미확인'으로 보여줍니다",
