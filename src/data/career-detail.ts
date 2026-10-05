@@ -591,8 +591,12 @@ export const careerDetailSections: CareerDetailSection[] = [
     ],
     results: [
       {
-        text: "원티드 AI 챔피언십 2026 제출, ultspot.vercel.app 배포 (2026.09.16~09.28 커밋 266개 · 태스크 78개)",
-        textEn: "Submitted to the Wanted AI Championship 2026 and shipped at ultspot.vercel.app (266 commits, 78 tasks, Sep 16–28 2026)",
+        text: "원티드 AI 챔피언십 2026 출품, 좋아요 74개로 1,390개 프로젝트 중 52위(상위 3.7%)",
+        textEn: "Wanted AI Championship 2026: ranked 52nd of 1,390 projects with 74 likes (top 3.7%)",
+      },
+      {
+        text: "ultspot.vercel.app 배포 (2026.09.16~09.28 커밋 266개 · 태스크 78개)",
+        textEn: "Shipped at ultspot.vercel.app (266 commits, 78 tasks, Sep 16–28 2026)",
       },
       {
         text: "아티스트 243팀·명과 검수한 장소 12곳 연결, 한국어·영어 등 4개 언어 UI",

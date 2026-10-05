@@ -407,11 +407,13 @@ export const projects: Project[] = [
       "Instead of demoing with fictional events, submitted a working guest planner that builds and saves plans from real places and user-entered events",
     ],
     results: [
-      "원티드 AI 챔피언십 2026 제출, ultspot.vercel.app에 배포 (9/16~9/28 커밋 266개 · 태스크 78개)",
+      "원티드 AI 챔피언십 2026 출품, 좋아요 74개로 1,390개 프로젝트 중 52위(상위 3.7%)",
+      "ultspot.vercel.app 배포 (9/16~9/28 커밋 266개 · 태스크 78개)",
       "추천 모델 평가 합성 사례 30건 30/30 일치(응답 중간값 0.54초), UI 접근성 감사 17/20",
     ],
     resultsEn: [
-      "Submitted to the Wanted AI Championship 2026 and shipped at ultspot.vercel.app (266 commits and 78 tasks, Sep 16–28)",
+      "Wanted AI Championship 2026: ranked 52nd of 1,390 projects with 74 likes (top 3.7%)",
+      "Shipped at ultspot.vercel.app (266 commits and 78 tasks, Sep 16–28)",
       "Recommendation model matched 30/30 synthetic test cases (median 0.54s); UI accessibility audit scored 17/20",
     ],
     tags: ["Next.js", "Supabase", "Kakao Maps", "TourAPI", "LLM", "i18n"],
