@@ -473,10 +473,12 @@ export const projects: Project[] = [
       "The screen says plainly that anyone with the subscription link can see the schedule, and making a new link shuts the old one off at once",
     ],
     results: [
+      "배포 후 8일간 방문자 157명, 그중 로그인해 앱 화면까지 쓴 사용자 30명 이상 (GA4, 2026.10.11~10.18)",
       "next-step-ssh.vercel.app 배포·운영 중 (2026.10.10~10.19 커밋 56개, 1인)",
       "지원 종류 3가지(채용 · 공모전·해커톤 · 시험)와 전형 템플릿 10개, 사람인·잡코리아 등 공고 링크 자동 읽기",
     ],
     resultsEn: [
+      "157 visitors in the first 8 days after launch, 30+ of whom signed in and used the app (GA4, Oct 11–18 2026)",
       "Live at next-step-ssh.vercel.app (56 commits, Oct 10–19 2026, solo)",
       "Three application types (hiring, contests/hackathons, exams), ten step templates, and automatic reading of posting links such as Saramin and JobKorea",
     ],
