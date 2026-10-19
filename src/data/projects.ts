@@ -34,10 +34,10 @@ export interface Project {
 
 // Other projects 노출 (§G-6, 2026-09-24): 앞의 6개만 펼쳐 두고 나머지는 '그 외 프로젝트' 접기 안에 둔다.
 // 15개가 한 번에 펼쳐져 있어 대표가 아닌 작업까지 같은 무게로 읽혔다. 데이터와 상세 페이지는 모두 유지한다.
-export const otherProjectsShown = ["ultspot", "songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
+export const otherProjectsShown = ["nextstep", "ultspot", "songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
 // 표지 썸네일이 있는 프로젝트(2026-09-25). public/projects/<id>/thumb-{ko,en}.jpg, 원본 design/thumbnails/.
 // 대표 4개는 selected.ts의 thumb를 쓴다. 목록 행과 상세 캐러셀 첫 장에 나온다.
-export const projectThumbs = ["ultspot", "songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
+export const projectThumbs = ["nextstep", "ultspot", "songeul", "welcomekit", "devsite", "dotori", "neurosight", "tcp"];
 export const thumbSrc = (id: string, locale: string) => `/projects/${id}/thumb-${locale === "ko" ? "ko" : "en"}.jpg`;
 export const otherProjectsFolded = ["connect", "hai", "ainterview", "rzi", "artliving", "mealdang", "huriup", "16play"];
 
@@ -424,6 +424,69 @@ export const projects: Project[] = [
       "/projects/ultspot/03.png",
       "/projects/ultspot/04.png",
       "/projects/ultspot/05.png",
+    ],
+  },
+  {
+    // 혼자 기획·개발·운영하는 취업 지원 관리 서비스 (2026-10-19 추가). 기간은 저장소 커밋 기준:
+    // 첫 커밋 2026-10-10, 2026-10-19까지 커밋 56개 모두 본인. 화면은 로컬에서 가상 회사 데이터로 띄워 캡처
+    title: "Next Step",
+    caseId: "nextstep",
+    titleEn: "Next Step",
+    subtitle: "공고를 붙여넣으면 마감일·전형이 채워지는 취업 지원 관리 도구",
+    subtitleEn: "A job-application tracker that fills in deadlines and steps from a posting",
+    period: "2026.10.",
+    periodEn: "Oct 2026",
+    url: "https://next-step-ssh.vercel.app",
+    repo: "https://github.com/tlstkdgus/next-step",
+    roles: ["1인 기획·개발·운영"],
+    rolesEn: ["Solo: planning, development, operations"],
+    goals: [
+      "취업 준비를 하면 공고, 마감일, 면접 일정, 자소서, 제출 서류가 메모·캘린더·폴더에 흩어집니다. 회사마다 전형 이름과 단계 수도 달라, 지금 어느 회사가 어느 단계인지 한 화면에서 보기 어려웠습니다",
+      "지원서를 쓸 때마다 같은 학력·경력·자격증을 다시 입력하고, 비슷한 자소서 문항에 예전 답변을 찾아 헤매는 시간이 반복됐습니다",
+    ],
+    goalsEn: [
+      "Job hunting scatters postings, deadlines, interview dates, essays, and submitted files across notes, calendars, and folders. Every company names and counts its steps differently, so it was hard to see which company was at which step on one screen",
+      "Every application meant retyping the same education, career, and certificates, and digging for an old answer to a similar essay question",
+    ],
+    contents: [
+      "캘린더 · 지원 현황(단계별 보드) · 자소서 · 내 정보 4개 화면 설계. 회사마다 다른 전형 이름은 '과제·테스트', '1차 면접'처럼 비슷한 것끼리 한 칸으로 묶고, 통과를 누르면 바로 다음 전형 날짜를 등록하게 이어지도록 함",
+      "공고 링크·이미지·PDF를 넣으면 AI가 회사·직무·마감일·전형·자소서 문항을 찾아 채움. 공고에 직무가 여러 개면 어느 직무인지 먼저 묻고, 지원서 PDF에서 찾은 이력은 바뀔 내용을 항목별로 보여 준 뒤 확인해야 저장",
+      "채용뿐 아니라 공모전·해커톤과 자격증·어학 시험도 같은 흐름으로 관리하도록 지원 종류 3가지와 전형 템플릿 10개 구성",
+      "다른 회사에 쓴 비슷한 자소서 문항 답변을 찾아 보여 주고, 일정은 구글·iPhone 캘린더에 구독 링크로 연결",
+      "가입 동의 기록, 개인정보 처리방침·이용약관, 회원 탈퇴, 회원별·서비스 전체 AI 사용 한도까지 직접 정해 공개 서비스로 운영",
+    ],
+    contentsEn: [
+      "Designed four screens: calendar, application board, essays, and profile. Differently named steps are grouped into shared columns like 'Assignment/Test' and '1st interview', and marking a step passed leads straight into dating the next one",
+      "Paste a posting link, image, or PDF and AI fills in the company, role, deadline, steps, and essay questions. If a posting lists several roles it asks which one first, and history found in an application PDF is shown item by item and saved only after confirmation",
+      "Beyond hiring, contests/hackathons and certificate/language exams run through the same flow, with three application types and ten step templates",
+      "Surfaces answers you wrote to similar essay questions for other companies, and connects the schedule to Google or iPhone Calendar through a subscription link",
+      "Runs as a public service with recorded sign-up consent, a privacy policy and terms, account deletion, and per-user and service-wide AI usage limits",
+    ],
+    decisions: [
+      "AI는 공고와 지원서에서 정보를 찾아 '제안'만 하고, 저장은 사용자가 확인한 뒤에만 되게 했습니다. 이미 입력한 이력과 이름이 비슷하면 새로 추가하지 않고 빈칸만 채우도록 보여 줍니다",
+      "공고 추출은 빠르고 저렴한 모델, 지원서 전체를 옮겨 적는 일은 정확한 모델로 나눴습니다. 회원별 하루·한 달 한도와 전체 하루 합계 상한을 두어 가입자가 늘어도 API 비용이 정해진 선을 넘지 않게 했습니다",
+      "구독 링크를 아는 사람은 누구나 일정을 볼 수 있다는 점을 화면에 그대로 적고, 링크를 새로 만들면 이전 링크가 바로 막히게 했습니다",
+    ],
+    decisionsEn: [
+      "AI only proposes what it finds in postings and applications; nothing is saved until the user confirms. When an item looks like one already entered, it fills only the blanks instead of adding a duplicate",
+      "Posting extraction runs on a fast, cheap model and copying a whole application runs on a more accurate one. Per-user daily and monthly limits plus a service-wide daily cap keep the API bill under a fixed line however many people sign up",
+      "The screen says plainly that anyone with the subscription link can see the schedule, and making a new link shuts the old one off at once",
+    ],
+    results: [
+      "next-step-ssh.vercel.app 배포·운영 중 (2026.10.10~10.19 커밋 56개, 1인)",
+      "지원 종류 3가지(채용 · 공모전·해커톤 · 시험)와 전형 템플릿 10개, 사람인·잡코리아 등 공고 링크 자동 읽기",
+    ],
+    resultsEn: [
+      "Live at next-step-ssh.vercel.app (56 commits, Oct 10–19 2026, solo)",
+      "Three application types (hiring, contests/hackathons, exams), ten step templates, and automatic reading of posting links such as Saramin and JobKorea",
+    ],
+    tags: ["JavaScript", "Supabase", "Vercel Functions", "Claude API", "PWA"],
+    image: "/projects/nextstep/02.png",
+    images: [
+      "/projects/nextstep/02.png",
+      "/projects/nextstep/03.png",
+      "/projects/nextstep/04.png",
+      "/projects/nextstep/01.png",
     ],
   },
   {
