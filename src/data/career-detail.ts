@@ -611,6 +611,99 @@ export const careerDetailSections: CareerDetailSection[] = [
   },
 
   {
+    id: "nextstep",
+    title: "공고를 붙여넣으면 채워지는 취업 지원 관리 도구 — Next Step",
+    titleEn: "A Job-Application Tracker That Fills Itself from Postings — Next Step",
+    // 로컬에서 가상 회사 데이터로 띄워 캡처 (design/thumbnails/others.html 주석). 표지는 thumb-ko/en.jpg
+    images: [
+      "/projects/nextstep/02.png",
+      "/projects/nextstep/03.png",
+      "/projects/nextstep/04.png",
+      "/projects/nextstep/01.png",
+    ],
+    background: [
+      {
+        text: "취업 준비를 하면 공고, 마감일, 면접 일정, 자소서, 제출 서류가 메모·캘린더·폴더에 흩어집니다. 회사마다 전형 이름과 단계 수가 달라 지금 어느 회사가 어느 단계인지 한눈에 보기 어렵고, 지원서마다 같은 이력을 다시 입력해야 했습니다.",
+        textEn:
+          "Job hunting scatters postings, deadlines, interview dates, essays, and submitted files across notes, calendars, and folders. Every company names and counts its steps differently, so it was hard to see who was at which step, and every application meant retyping the same history.",
+      },
+      {
+        text: "열흘 동안 혼자 기획·개발·배포한 뒤 회원가입을 열어 공개 서비스로 운영하고 있습니다.",
+        textEn:
+          "I planned, built, and shipped it alone over ten days, then opened sign-up and now run it as a public service.",
+      },
+    ],
+    role: [
+      {
+        title: "기획",
+        titleEn: "Planning",
+        items: [
+          {
+            text: "캘린더 · 지원 현황 · 자소서 · 내 정보 4개 화면으로 나눴습니다. 회사마다 다른 전형 이름은 '과제·테스트', '1차 면접', '2차·최종 면접', '처우·입사'처럼 비슷한 것끼리 한 칸으로 묶어 보드로 보여 주고, 통과를 누르면 바로 다음 전형 날짜를 등록하게 이어지도록 했습니다.",
+            textEn:
+              "Split the service into four screens: calendar, applications, essays, and profile. Differently named steps are grouped into shared board columns such as 'Assignment/Test', '1st interview', '2nd/final interview', and 'Offer/Onboarding', and marking a step passed leads straight into dating the next one.",
+          },
+          {
+            text: "채용 다음으로 공모전·해커톤과 자격증·어학 시험도 같은 방식으로 관리하도록 지원 종류를 3가지로 넓히고 전형 템플릿 10개를 만들었습니다. 접수 단계는 '통과' 대신 '완료'로 보이게 했습니다.",
+            textEn:
+              "After hiring, I widened it so contests, hackathons, and certificate/language exams run the same way, with three application types and ten step templates. Sign-up steps show 'Done' instead of 'Passed'.",
+          },
+        ],
+      },
+      {
+        title: "AI 자동 채우기",
+        titleEn: "AI Auto-fill",
+        items: [
+          {
+            text: "공고 링크·이미지·PDF를 넣으면 회사·직무·마감일·전형·자소서 문항을, 지원서 PDF를 넣으면 학력·경력·자격증·수상과 자소서 답변을 찾아 채웁니다. 공고에 직무가 여러 개면 어느 직무인지 먼저 묻습니다.",
+            textEn:
+              "A posting link, image, or PDF fills in the company, role, deadline, steps, and essay questions; an application PDF fills in education, career, certificates, awards, and essay answers. If a posting lists several roles, it asks which one first.",
+          },
+          {
+            text: "AI가 찾은 이력은 바로 저장하지 않고, 바뀔 내용을 항목별로 보여 준 뒤 확인해야 저장되게 했습니다. 'SQLD'와 'SQL 개발자 (SQLD)'처럼 이미 있는 항목과 이름이 비슷하면 새로 추가하지 않고 빈칸만 채웁니다.",
+            textEn:
+              "History found by AI is not saved directly: the changes are listed item by item and saved only after confirmation. When a name looks like an existing item, such as 'SQLD' and 'SQL Developer (SQLD)', it fills only the blanks instead of adding a duplicate.",
+          },
+        ],
+      },
+      {
+        title: "운영",
+        titleEn: "Operations",
+        items: [
+          {
+            text: "가입은 이용약관·개인정보 수집에 각각 동의해야 되고, 동의 일시와 문서 버전을 기록합니다. 개인정보 처리방침에는 데이터 저장 위치(일본 도쿄 리전)와 국외 이전을 공개하고, 회원 탈퇴 시 파일과 기록을 함께 지웁니다.",
+            textEn:
+              "Sign-up requires separate consent to the terms and to data collection, recording the time and document version. The privacy policy discloses where data is stored (Tokyo region) and the overseas transfer, and deleting an account removes its files and records too.",
+          },
+          {
+            text: "AI 기능에는 회원별 한도(하루 공고 20회·지원서 5회, 한 달 100회)와 서비스 전체 하루 합계 상한을 두어, 가입자가 늘어도 API 비용이 정해진 선을 넘지 않게 했습니다.",
+            textEn:
+              "AI features carry per-user limits (20 postings and 5 applications a day, 100 a month) and a service-wide daily cap, so the API bill stays under a fixed line however many people sign up.",
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        // GA4 보고서 개요 CSV (2026-10-19 본인 제공). 수집은 10/11부터. 앱 화면 사용자는 화면별 활성 사용자 중 최대인 캘린더(30명) 기준이라 '이상'
+        text: "배포 후 8일간 방문자 157명, 그중 로그인해 앱 화면까지 쓴 사용자 30명 이상 (GA4, 2026.10.11~10.18). 출시 이튿날부터 8일 동안 매일 재방문 사용자가 있었습니다(하루 2~6명).",
+        textEn:
+          "157 visitors in the first 8 days after launch, 30+ of whom signed in and used the app (GA4, Oct 11–18 2026). Returning users came back every day for eight days from day two (2–6 a day).",
+      },
+      {
+        text: "next-step-ssh.vercel.app 배포·운영 중 (2026.10.10~10.19 커밋 56개, 1인)",
+        textEn: "Live at next-step-ssh.vercel.app (56 commits, Oct 10–19 2026, solo)",
+      },
+      {
+        text: "지원 종류 3가지(채용 · 공모전·해커톤 · 시험), 전형 템플릿 10개, 사람인·잡코리아 등 공고 링크 자동 읽기, 구글·iPhone 캘린더 구독",
+        textEn:
+          "Three application types (hiring, contests/hackathons, exams), ten step templates, automatic reading of posting links such as Saramin and JobKorea, and Google/iPhone Calendar subscription",
+      },
+    ],
+    lessons: [],
+  },
+
+  {
     id: "songeul",
     title: "시니어를 위한 AI-OCR 모바일 뱅킹 — 손글 (SonGeul)",
     titleEn: "Mobile Banking for Seniors, with AI-OCR — SonGeul",
